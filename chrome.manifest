@@ -1,0 +1,34 @@
+content googlebarlite chrome/content/
+overlay chrome://browser/content/browser.xul	chrome://googlebarlite/content/googlebarlite.xul
+
+skin	googlebarlite	classic/1.0	chrome/skin/classic/
+style	chrome://browser/content/browser.xul	chrome://googlebarlite/skin/gbl_overlay.css
+style	chrome://global/content/customizeToolbar.xul	chrome://googlebarlite/skin/gbl_overlay.css
+
+skin	googlebarlite	Noia2f	chrome/skin/noia2f/
+style	chrome://browser/content/browser.xul	chrome://googlebarlite/skin/gbl_overlay.css
+style	chrome://global/content/customizeToolbar.xul	chrome://googlebarlite/skin/gbl_overlay.css
+
+skin	googlebarlite	Qute	chrome/skin/qute/
+style	chrome://browser/content/browser.xul	chrome://googlebarlite/skin/gbl_overlay.css
+style	chrome://global/content/customizeToolbar.xul	chrome://googlebarlite/skin/gbl_overlay.css
+
+locale	googlebarlite	en-US	chrome/locale/en-US/
+locale	googlebarlite	ca-AD	chrome/locale/ca-AD/
+locale	googlebarlite	cs-CZ	chrome/locale/cs-CZ/
+locale	googlebarlite	da-DK	chrome/locale/da-DK/
+locale	googlebarlite	de-DE	chrome/locale/de-DE/
+locale	googlebarlite	el-GR	chrome/locale/el-GR/
+locale	googlebarlite	es-ES	chrome/locale/es-ES/
+locale	googlebarlite	fr-FR	chrome/locale/fr-FR/
+locale	googlebarlite	hr-HR	chrome/locale/hr-HR/
+locale	googlebarlite	it-IT	chrome/locale/it-IT/
+locale	googlebarlite	ja-JP	chrome/locale/ja-JP/
+locale	googlebarlite	nl-NL	chrome/locale/nl-NL/
+locale	googlebarlite	pl-PL	chrome/locale/pl-PL/
+locale	googlebarlite	pt-BR	chrome/locale/pt-BR/
+locale	googlebarlite	ru-RU	chrome/locale/ru-RU/
+locale	googlebarlite	sk-SK	chrome/locale/sk-SK/
+locale	googlebarlite	tr-TR	chrome/locale/tr-TR/
+locale	googlebarlite	zh-CN	chrome/locale/zh-CN/
+locale	googlebarlite	zh-TW	chrome/locale/zh-TW/

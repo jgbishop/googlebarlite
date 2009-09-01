@@ -1,0 +1,335 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://googlebarlite/skin/gbl_overlay.css" type="text/css"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://googlebarlite/locale/googlebarlite.dtd">
+
+<overlay id="GBL-Overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<script src="chrome://global/content/nsDragAndDrop.js"/>
+<script src="chrome://global/content/nsTransferable.js"/>
+<script type="application/x-javascript" src="chrome://googlebarlite/content/googlebarlite.js"/>
+<script type="application/x-javascript">
+	window.addEventListener("load", GBL_Init, false);
+	window.addEventListener("resize", GBL_Resize, false);
+	window.addEventListener("unload", GBL_RemoveListener, false);
+</script>
+
+<stringbundleset id="stringbundleset">
+	<stringbundle id="GBL-String-Bundle" src="chrome://googlebarlite/locale/googlebarlite.properties" />
+</stringbundleset>
+
+<commandset id="mainCommandSet">
+	<command id="GBL-Command-PasteAndSearch" oncommand="GBL_PasteAndSearch()" />
+</commandset>
+
+<window id="main-window">
+	<keyset id="GBL-KeySet">
+		<key id="GBL-Focus-Key" key="K" modifiers="accel,shift" oncommand="GBL_SetFocus(event);" />
+	</keyset>
+</window>
+
+<popup id="contentAreaContextMenu">
+	<menuseparator id="GBL-Context-Separator" />
+	<menu id="GBL-Context-Menu" label="&gblite.name;" accesskey="&gblite.ak.name;">
+		<menupopup onpopupshowing="GBL_UpdateContextMenu()">
+		
+			<menuitem id="GBL-Context-Web" label="&gblite.context.web;" accesskey="&gblite.context.ak.web;"
+					  oncommand="GBL_PrepareSelectedSearch(event, 'web')" />
+					  
+			<menuitem id="GBL-Context-Site" label="&gblite.context.site;" accesskey="&gblite.context.ak.site;"
+					  oncommand="GBL_PrepareSelectedSearch(event, 'site')" />
+					  
+			<menuitem id="GBL-Context-Images" label="&gblite.context.images;" accesskey="&gblite.context.ak.images;"
+					  oncommand="GBL_PrepareSelectedSearch(event, 'images')" />
+					  
+			<menuitem id="GBL-Context-Video" label="&gblite.context.video;" accesskey="&gblite.context.ak.video;"
+					  oncommand="GBL_PrepareSelectedSearch(event, 'video')" />
+
+			<menuitem id="GBL-Context-Groups" label="&gblite.context.groups;" accesskey="&gblite.context.ak.groups;"
+					  oncommand="GBL_PrepareSelectedSearch(event, 'groups')" />
+					  
+			<menuitem id="GBL-Context-Maps" label="&gblite.context.maps;" accesskey="&gblite.context.ak.maps;"
+					  oncommand="GBL_PrepareSelectedSearch(event, 'maps')" />
+					  
+			<menuitem id="GBL-Context-Answers" label="&gblite.context.answers;" accesskey="&gblite.context.ak.answers;"
+					  oncommand="GBL_PrepareSelectedSearch(event, 'answers')" />
+					  
+			<menuseparator id="GBL-Context-SubSeparator" />
+			
+			<menuitem id="GBL-Context-Backward" label="&gblite.context.backwardlinks;" accesskey="&gblite.context.ak.backwardlinks;"
+					  oncommand="GBL_Search('', 'backwards', true, false)" />
+					  
+			<menuitem id="GBL-Context-Cached" label="&gblite.context.cached;" accesskey="&gblite.context.ak.cached;"
+					  oncommand="GBL_PrepareCachedSearch('cached')" />
+					  
+			<menuitem id="GBL-Context-CachedLink" label="&gblite.context.cachedlink;" accesskey="&gblite.context.ak.cachedlink;"
+					  oncommand="GBL_PrepareCachedSearch('cachedlink')" />
+					  
+			<menuitem id="GBL-Context-Similar" label="&gblite.context.similar;" accesskey="&gblite.context.ak.similar;"
+					  oncommand="GBL_Search('', 'similar', true, false)" />
+					  
+			<menuitem id="GBL-Context-Translate" label="&gblite.context.translate;" accesskey="&gblite.context.ak.translate;"
+					  oncommand="GBL_Search('', 'translate', true, false)" />
+					  
+		</menupopup>
+	</menu>
+</popup>
+
+<toolbarpalette id="BrowserToolbarPalette">
+	<toolbarbutton id="GBL-TB-Toggle-Toolbar" tooltiptext="Toggle Googlebar Lite Toolbar" class="toolbarbutton-1" label="&gblite.name;" oncommand="GBL_ToggleToolbar();" />
+	
+	<toolbaritem id="GBL-Toolbar-MainItem" flex="1" title="&gblite.name;" class="chromeclass-toolbar-additional">
+		<stack id="GBL-Stack" flex="1" style="min-width: 0; width: 0;">
+		
+			<toolbaritem class="GBL-Toolbar-Items" flex="1" style="min-width: 0; width: 0;">
+			
+				<toolbaritem flex="0">
+					<toolbarbutton id="GBL-TB-MainMenu" class="GBL-Toolbar-Button-NoLabel" type="menu" tooltiptext="&gblite.tt.mainmenu;">
+									
+					<menupopup id="GBL-MainMenu-Popup">
+						<menuitem label="&gblite.mainmenu.label.homepage;" accesskey="&gblite.mainmenu.ak.homepage;"
+								  oncommand="GBL_PrepareMainMenu(event, 'web')" onclick="checkForMiddleClick(this, event);" />
+						
+						<menu label="&gblite.mainmenu.label.googlelinks;" accesskey="&gblite.mainmenu.ak.googlelinks;">
+						<menupopup id="GBL-MainMenu-Links-Popup">
+							<menuitem label="&gblite.mainmenu.label.images;" accesskey="&gblite.mainmenu.ak.images;"
+									  oncommand="GBL_PrepareMainMenu(event, 'images')" onclick="checkForMiddleClick(this, event);" />
+									  
+							<menuitem label="&gblite.mainmenu.label.video;" accesskey="&gblite.mainmenu.ak.video;"
+									  oncommand="GBL_PrepareMainMenu(event, 'video')" onclick="checkForMiddleClick(this, event);" />
+							
+							<menuitem label="&gblite.mainmenu.label.news;" accesskey="&gblite.mainmenu.ak.news;"
+									  oncommand="GBL_PrepareMainMenu(event, 'news')" onclick="checkForMiddleClick(this, event);" />
+									  
+							<menuitem label="&gblite.mainmenu.label.maps;" accesskey="&gblite.mainmenu.ak.maps;"
+									  oncommand="GBL_PrepareMainMenu(event, 'maps')" onclick="checkForMiddleClick(this, event);" />
+
+							<menuitem label="&gblite.mainmenu.label.shopping;" accesskey="&gblite.mainmenu.ak.shopping;"
+									  oncommand="GBL_PrepareMainMenu(event, 'shopping')" onclick="checkForMiddleClick(this, event);" />
+									  
+							<menuitem label="&gblite.mainmenu.label.groups;" accesskey="&gblite.mainmenu.ak.groups;"
+									  oncommand="GBL_PrepareMainMenu(event, 'groups')" onclick="checkForMiddleClick(this, event);" />
+									  
+							<menuitem label="&gblite.mainmenu.label.blog;" accesskey="&gblite.mainmenu.ak.blog;"
+									  oncommand="GBL_PrepareMainMenu(event, 'blog')" onclick="checkForMiddleClick(this, event);" />
+									  
+							<menuitem label="&gblite.mainmenu.label.book;" accesskey="&gblite.mainmenu.ak.book;"
+									  oncommand="GBL_PrepareMainMenu(event, 'book')" onclick="checkForMiddleClick(this, event);" />
+
+							<menuitem label="&gblite.mainmenu.label.finance;" accesskey="&gblite.mainmenu.ak.finance;"
+									  oncommand="GBL_PrepareMainMenu(event, 'finance')" onclick="checkForMiddleClick(this, event);" />
+									  
+							<menuitem label="&gblite.mainmenu.label.scholar;" accesskey="&gblite.mainmenu.ak.scholar;"
+									  oncommand="GBL_PrepareMainMenu(event, 'scholar')" onclick="checkForMiddleClick(this, event);" />
+									  
+							<menuseparator/>
+							
+							<menuitem label="&gblite.mainmenu.label.gmail;" accesskey="&gblite.mainmenu.ak.gmail;"
+									  oncommand="GBL_PrepareMainMenu(event, 'gmail')" onclick="checkForMiddleClick(this, event);" />
+									  
+							<menuitem label="&gblite.mainmenu.label.advanced;" accesskey="&gblite.mainmenu.ak.advanced;"
+									  oncommand="GBL_PrepareMainMenu(event, 'advanced')" onclick="checkForMiddleClick(this, event);" />
+									  
+						</menupopup>
+						</menu>
+						
+						<menuseparator/>
+						
+						<menuitem label="&gblite.mainmenu.label.searchprefs;" accesskey="&gblite.mainmenu.ak.searchprefs;"
+								  oncommand="GBL_PrepareMainMenu(event, 'searchprefs')" onclick="checkForMiddleClick(this, event);" />
+								  
+						<menuitem label="&gblite.mainmenu.label.languagetools;" accesskey="&gblite.mainmenu.ak.languagetools;"
+								  oncommand="GBL_PrepareMainMenu(event, 'languagetools')" onclick="checkForMiddleClick(this, event);" />
+						
+						<menuseparator/>
+						
+						<menuitem label="&gblite.mainmenu.label.options;" accesskey="&gblite.mainmenu.ak.options;"
+								  oncommand="GBL_OpenOptions()" />
+								  
+						<menuitem label="&gblite.mainmenu.label.clearhistory;" accesskey="&gblite.mainmenu.ak.clearhistory;"
+								  oncommand="GBL_ClearHistoryPrompt()" />
+						
+						<menuseparator/>
+						
+						<menuitem label="&gblite.mainmenu.label.help;" accesskey="&gblite.mainmenu.ak.help;" oncommand="GBL_Help()" />
+						<menuitem label="&gblite.mainmenu.label.about;" accesskey="&gblite.mainmenu.ak.about;" oncommand="GBL_About()" />								  
+					</menupopup>
+					</toolbarbutton>
+				</toolbaritem>
+				
+				<toolbaritem id="GBL-SearchBox-TBItem" persist="width" align="center">
+				<textbox id="GBL-SearchBox" type="autocomplete" autocompletesearch="form-history"
+						 autocompletesearchparam="GBL-Search-History" ontextentered="GBL_SearchBoxTextEntered(param);"
+						 completedefaultindex="false" disableautocomplete="false"
+						 onfocus="GBL_SearchBoxFocusHandler(event, this);"
+						 onclick="GBL_SearchBoxClickHandler(event, this);"
+						 onmousedown="GBL_SearchBoxMouseDownHandler(event, this);"
+						 oninput="GBL_TermsHaveUpdated();"
+						 enablehistory="true" flex="1" minwidth="100" width="175" />
+				</toolbaritem>
+				
+				<splitter id="GBL-ResizeSplitter" state="open" collapse="none" resizebefore="closest" resizeafter="farthest"
+						  hidden="false" tooltiptext="&gblite.tt.splitter;" onmouseup="GBL_Resize()">
+				<vbox id="GBL-ResizeBar" />
+				</splitter>
+				
+				<toolbaritem id="GBL-Buttons" flex="0" pack="start">
+				<toolbarbutton id="GBL-TB-Combined" class="GBL-Toolbar-Button" type="menu-button" tooltiptext="&gblite.tt.combined;"
+								collapsed="false" persist="searchType" oncommand="GBL_CombinedSearch(event)"
+								onclick="checkForMiddleClick(this, event);" searchType="web">
+					<menupopup id="GBL-TB-Combined-Popup">
+						<menuitem id="GBL-TB-Combined-Web" label="&gblite.searchtype.web;"
+									class="menuitem-iconic GBL-MenuItem-Iconic"
+									oncommand="GBL_UpdateCombinedSearch(event, 'web'); event.stopPropagation();"
+									onclick="checkForMiddleClick(this, event); event.stopPropagation();" />
+									
+						<menuitem id="GBL-TB-Combined-Lucky" label="&gblite.searchtype.lucky;"
+									class="menuitem-iconic GBL-MenuItem-Iconic"
+									oncommand="GBL_UpdateCombinedSearch(event, 'lucky'); event.stopPropagation();"
+									onclick="checkForMiddleClick(this,event); event.stopPropagation();" />
+								  
+						<menuitem id="GBL-TB-Combined-Site" label="&gblite.searchtype.site;"
+									class="menuitem-iconic GBL-MenuItem-Iconic"
+									oncommand="GBL_UpdateCombinedSearch(event, 'site'); event.stopPropagation();"
+									onclick="checkForMiddleClick(this, event); event.stopPropagation();" />
+								  
+						<menuitem id="GBL-TB-Combined-Images" label="&gblite.searchtype.image;"
+									class="menuitem-iconic GBL-MenuItem-Iconic"
+									oncommand="GBL_UpdateCombinedSearch(event, 'images'); event.stopPropagation();"
+									onclick="checkForMiddleClick(this, event); event.stopPropagation();" />
+								  
+						<menuitem id="GBL-TB-Combined-Video" label="&gblite.searchtype.video;"
+									class="menuitem-iconic GBL-MenuItem-Iconic"
+									oncommand="GBL_UpdateCombinedSearch(event, 'video'); event.stopPropagation();"
+									onclick="checkForMiddleClick(this, event); event.stopPropagation();" />
+									
+						<menuitem id="GBL-TB-Combined-News" label="&gblite.searchtype.news;"
+									class="menuitem-iconic GBL-MenuItem-Iconic"
+									oncommand="GBL_UpdateCombinedSearch(event, 'news'); event.stopPropagation();"
+									onclick="checkForMiddleClick(this, event); event.stopPropagation();" />
+								  
+						<menuitem id="GBL-TB-Combined-Maps" label="&gblite.searchtype.maps;"
+									class="menuitem-iconic GBL-MenuItem-Iconic"
+									oncommand="GBL_UpdateCombinedSearch(event, 'maps'); event.stopPropagation();"
+									onclick="checkForMiddleClick(this, event); event.stopPropagation();" />
+									
+						<menuitem id="GBL-TB-Combined-Shopping" label="&gblite.searchtype.shopping;"
+									class="menuitem-iconic GBL-MenuItem-Iconic"
+									oncommand="GBL_UpdateCombinedSearch(event, 'shopping'); event.stopPropagation();"
+									onclick="checkForMiddleClick(this, event); event.stopPropagation();" />
+
+						<menuitem id="GBL-TB-Combined-Groups" label="&gblite.searchtype.group;"
+									class="menuitem-iconic GBL-MenuItem-Iconic"
+									oncommand="GBL_UpdateCombinedSearch(event, 'groups'); event.stopPropagation();"
+									onclick="checkForMiddleClick(this, event); event.stopPropagation();" />
+								  
+						<menuitem id="GBL-TB-Combined-Blog" label="&gblite.searchtype.blog;"
+									class="menuitem-iconic GBL-MenuItem-Iconic"
+									oncommand="GBL_UpdateCombinedSearch(event, 'blog'); event.stopPropagation();"
+									onclick="checkForMiddleClick(this, event); event.stopPropagation();" />
+									
+						<menuitem id="GBL-TB-Combined-Book" label="&gblite.searchtype.book;"
+									class="menuitem-iconic GBL-MenuItem-Iconic"
+									oncommand="GBL_UpdateCombinedSearch(event, 'book'); event.stopPropagation();"
+									onclick="checkForMiddleClick(this, event); event.stopPropagation();" />
+								  
+						<menuitem id="GBL-TB-Combined-Finance" label="&gblite.searchtype.finance;"
+									class="menuitem-iconic GBL-MenuItem-Iconic"
+									oncommand="GBL_UpdateCombinedSearch(event, 'finance'); event.stopPropagation();"
+									onclick="checkForMiddleClick(this, event); event.stopPropagation();" />
+
+						<menuitem id="GBL-TB-Combined-Scholar" label="&gblite.searchtype.scholar;"
+									class="menuitem-iconic GBL-MenuItem-Iconic"
+									oncommand="GBL_UpdateCombinedSearch(event, 'scholar'); event.stopPropagation();"
+									onclick="checkForMiddleClick(this, event); event.stopPropagation();" />
+									
+						<menuitem id="GBL-TB-Combined-Answers" label="&gblite.searchtype.answers;"
+									class="menuitem-iconic GBL-MenuItem-Iconic"
+									oncommand="GBL_UpdateCombinedSearch(event, 'answers'); event.stopPropagation();"
+									onclick="checkForMiddleClick(this, event); event.stopPropagation();" />
+					</menupopup>
+				</toolbarbutton>
+				
+				<toolbarseparator id="GBL-TB-Sep1" />
+				
+				<toolbarbutton id="GBL-TB-Web" class="GBL-Toolbar-Button-NoLabel" tooltiptext="&gblite.tt.web;" collapsed="true"
+								oncommand="GBL_PrepareSearch(event, 'web')" onclick="checkForMiddleClick(this, event);" />
+								
+				<toolbarbutton id="GBL-TB-Lucky" class="GBL-Toolbar-Button-NoLabel" tooltiptext="&gblite.tt.lucky;" collapsed="true"
+								oncommand="GBL_PrepareSearch(event, 'lucky')" onclick="checkForMiddleClick(this, event);" />
+							   
+				<toolbarbutton id="GBL-TB-Site" class="GBL-Toolbar-Button-NoLabel" tooltiptext="&gblite.tt.site;" collapsed="true"
+								oncommand="GBL_PrepareSearch(event, 'site')" onclick="checkForMiddleClick(this, event);" />
+							   
+				<toolbarbutton id="GBL-TB-Images" class="GBL-Toolbar-Button-NoLabel" tooltiptext="&gblite.tt.image;" collapsed="true"
+								oncommand="GBL_PrepareSearch(event, 'images')" onclick="checkForMiddleClick(this, event);" />
+								
+				<toolbarbutton id="GBL-TB-Video" class="GBL-Toolbar-Button-NoLabel" tooltiptext="&gblite.tt.video;" collapsed="true"
+								oncommand="GBL_PrepareSearch(event, 'video')" onclick="checkForMiddleClick(this, event);" />
+				
+				<toolbarbutton id="GBL-TB-News" class="GBL-Toolbar-Button-NoLabel" tooltiptext="&gblite.tt.news;" collapsed="true"
+								oncommand="GBL_PrepareSearch(event, 'news')" onclick="checkForMiddleClick(this, event);" />
+				
+				<toolbarbutton id="GBL-TB-Maps" class="GBL-Toolbar-Button-NoLabel" tooltiptext="&gblite.tt.maps;" collapsed="true"
+								oncommand="GBL_PrepareSearch(event, 'maps')" onclick="checkForMiddleClick(this, event);" />
+
+				<toolbarbutton id="GBL-TB-Shopping" class="GBL-Toolbar-Button-NoLabel" tooltiptext="&gblite.tt.shopping;" collapsed="true"
+								oncommand="GBL_PrepareSearch(event, 'shopping')" onclick="checkForMiddleClick(this, event);" />
+								
+				<toolbarbutton id="GBL-TB-Groups" class="GBL-Toolbar-Button-NoLabel" tooltiptext="&gblite.tt.group;" collapsed="true"
+								oncommand="GBL_PrepareSearch(event, 'groups')" onclick="checkForMiddleClick(this, event);" />
+							   
+				<toolbarbutton id="GBL-TB-Blog" class="GBL-Toolbar-Button-NoLabel" tooltiptext="&gblite.tt.blog;" collapsed="true"
+								oncommand="GBL_PrepareSearch(event, 'blog')" onclick="checkForMiddleClick(this, event);" />
+				
+				<toolbarbutton id="GBL-TB-Book" class="GBL-Toolbar-Button-NoLabel" tooltiptext="&gblite.tt.book;" collapsed="true"
+								oncommand="GBL_PrepareSearch(event, 'book')" onclick="checkForMiddleClick(this, event);" />
+				
+				<toolbarbutton id="GBL-TB-Finance" class="GBL-Toolbar-Button-NoLabel" tooltiptext="&gblite.tt.finance;" collapsed="true"
+								oncommand="GBL_PrepareSearch(event, 'finance')" onclick="checkForMiddleClick(this, event);" />
+
+				<toolbarbutton id="GBL-TB-Scholar" class="GBL-Toolbar-Button-NoLabel" tooltiptext="&gblite.tt.scholar;" collapsed="true"
+								oncommand="GBL_PrepareSearch(event, 'scholar')" onclick="checkForMiddleClick(this, event);" />
+				
+				<toolbarbutton id="GBL-TB-Answers" class="GBL-Toolbar-Button-NoLabel" tooltiptext="&gblite.tt.answers;" collapsed="true"
+								oncommand="GBL_PrepareSearch(event, 'answers')" onclick="checkForMiddleClick(this, event);" />
+				
+				<toolbarseparator id="GBL-TB-Sep2" />
+				
+				<toolbarbutton id="GBL-TB-UpButton" class="GBL-Toolbar-Button" tooltiptext="&gblite.tt.up;" collapsed="false"
+								type="menu-button" oncommand="GBL_Up(event, '')" onclick="checkForMiddleClick(this, event);">
+					<menupopup id="GBL-TB-UpMenu" />
+				</toolbarbutton>
+								
+				<toolbarbutton id="GBL-TB-Highlighter" class="GBL-Toolbar-Button" tooltiptext="&gblite.tt.highlighter;" collapsed="false"
+								disabled="true" oncommand="GBL_ToggleHighlighting()" />
+								
+				<toolbarseparator id="GBL-TB-Sep3" />
+				</toolbaritem>
+				
+				<toolbaritem id="GBL-TB-SearchWordArea" pack="start" flex="1">
+					<toolbaritem id="GBL-TB-SearchWordsContainer" collapsed="false" />
+					
+					<toolbarspring />
+					
+					<toolbarbutton id="GBL-Overflow-Button" class="GBL-Toolbar-Button" collapsed="true" mousethrough="never"
+								   tooltiptext="&gblite.tt.overflow;" type="menu">
+						<menupopup id="GBL-Overflow-Menu" onpopupshowing="GBL_UpdateOverflowMenu()" />
+					</toolbarbutton>
+				</toolbaritem>
+			</toolbaritem>
+			
+			<toolbarbutton id="GBL-TB-Customize" class="GBL-Toolbar-Customize GBL-Toolbar-Button" label="&gblite.name;" mousethrough="never" />
+			
+		</stack>
+	</toolbaritem>
+</toolbarpalette>
+
+<toolbox id="navigator-toolbox">
+	<toolbar id="GBL-Toolbar" accesskey="&gblite.ak.name;" class="chromeclass-toolbar" collapsed="false" context="toolbar-context-menu"
+			 customizable="true" defaultset="GBL-Toolbar-MainItem" hidden="false" iconsize="small" persist="collapsed hidden"
+			 toolbarname="&gblite.toolbar.name;" />
+</toolbox>
+
+</overlay>
+

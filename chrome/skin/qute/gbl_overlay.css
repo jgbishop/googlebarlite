@@ -1,0 +1,20 @@
+/* Import the base style rules */
+@import url("chrome://googlebarlite/content/base_skin/base_rules.css");
+
+/* Custom, skin specific rules */
+toolbarbutton.GBL-TB-SearchWordButton,
+toolbarbutton.GBL-Toolbar-Button-NoLabel,
+toolbarbutton.GBL-Toolbar-Button,
+toolbarbutton.GBL-Toolbar-Button > .toolbarbutton-menubutton-button {
+	margin: 0;
+	padding: 3px;
+}
+
+toolbarbutton.GBL-Toolbar-Button[checked="true"] { padding: 4px 2px 2px 4px !important; }
+
+toolbarbutton.GBL-TB-SearchWordButton > .toolbarbutton-icon,
+toolbarbutton.GBL-Toolbar-Button-NoLabel > .toolbarbutton-icon,
+toolbarbutton.GBL-Toolbar-Button > .toolbarbutton-icon,
+toolbarbutton.GBL-Toolbar-Button > .toolbarbutton-menubutton-button > .toolbarbutton-icon {
+	margin-right: 5px;
+}

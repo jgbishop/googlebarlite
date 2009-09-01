@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://googlebarlite/content/base_skin/about.css" type="text/css"?>
+
+<!DOCTYPE dialog [
+<!ENTITY % GBLiteMainDTD SYSTEM "chrome://googlebarlite/locale/googlebarlite.dtd">
+%GBLiteMainDTD;
+<!ENTITY % GBLiteAboutDTD SYSTEM "chrome://googlebarlite/content/about.dtd">
+%GBLiteAboutDTD;
+]>
+
+<dialog buttons="accept" id="GBL-About" title="&gblite.about.title;"
+		xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<script type="application/x-javascript" src="chrome://googlebarlite/content/about.js"/>
+
+<vbox>
+	<vbox align="center" flex="1">
+		<label id="GBL-About-Name" crop="right" value="&gblite.name;"/>
+		<label id="GBL-About-Version" crop="right" value="Version 4.7.2"/>
+	</vbox>
+	
+	<groupbox>
+		<grid>
+			<columns>
+				<column />
+				<column />
+			</columns>
+			
+			<rows>
+				<row>
+					<label value="&gblite.about.createdby;" class="strong" />
+					<label value="Jonah Bishop" class="link" onclick="GBL_OpenAboutLink('jonah');" tooltiptext="http://www.borngeek.com/about/"/>
+				</row>
+				
+				<row>
+					<label value="&gblite.about.ontheweb;" class="strong" />
+					<label value="&gblite.about.visithomepage;" class="link" onclick="GBL_OpenAboutLink('homepage');" tooltiptext="http://www.borngeek.com/firefox/googlebarlite/" />
+				</row>
+				
+				<row>
+					<spacer />
+					<label value="&gblite.about.visitdocumentation;" class="link" onclick="GBL_OpenAboutLink('doc');" tooltiptext="http://www.borngeek.com/firefox/googlebarlite/doc/" />
+				</row>
+			</rows>
+		</grid>
+	</groupbox>
+
+	<groupbox>
+		<caption label="&gblite.about.translators;" />
+		<listbox rows="5">
+			<listhead>
+				<listheader label="&gblite.about.locale;" />
+				<listheader label="&gblite.about.translator;" />
+			</listhead>
+			
+			<listcols>
+				<listcol class="colone" />
+				<listcol flex="1" />
+			</listcols>
+			
+			<listitem>
+				<listcell label="ca-AD" />
+				<listcell label="&gblite.tx.caad;" />
+			</listitem>
+			<listitem>
+				<listcell label="cs-CZ" />
+				<listcell label="&gblite.tx.cscz;" />
+			</listitem>
+			<listitem>
+				<listcell label="da-DK" />
+				<listcell label="&gblite.tx.dadk;" />
+			</listitem>
+			<listitem>
+				<listcell label="de-DE" />
+				<listcell label="&gblite.tx.dede;" />
+			</listitem>
+			<listitem>
+				<listcell label="el-GR" />
+				<listcell label="&gblite.tx.elgr;" />
+			</listitem>
+			<listitem>
+				<listcell label="es-ES" />
+				<listcell label="&gblite.tx.eses;" />
+			</listitem>
+			<listitem>
+				<listcell label="fr-FR" />
+				<listcell label="&gblite.tx.frfr;" />
+			</listitem>
+			<listitem>
+				<listcell label="hr-HR" />
+				<listcell label="&gblite.tx.hrhr;" />
+			</listitem>
+			<listitem>
+				<listcell label="it-IT" />
+				<listcell label="&gblite.tx.itit;" />
+			</listitem>
+			<listitem>
+				<listcell label="ja-JP" />
+				<listcell label="&gblite.tx.jajp;" />
+			</listitem>
+			<listitem>
+				<listcell label="nl-NL" />
+				<listcell label="&gblite.tx.nlnl;" />
+			</listitem>
+			<listitem>
+				<listcell label="pl-PL" />
+				<listcell label="&gblite.tx.plpl;" />
+			</listitem>
+			<listitem>
+				<listcell label="pt-BR" />
+				<listcell label="&gblite.tx.ptbr;" />
+			</listitem>
+			<listitem>
+				<listcell label="ru-RU" />
+				<listcell label="&gblite.tx.ruru;" />
+			</listitem>
+			<listitem>
+				<listcell label="sk-SK" />
+				<listcell label="&gblite.tx.sksk;" />
+			</listitem>
+			<listitem>
+				<listcell label="tr-TR" />
+				<listcell label="&gblite.tx.trtr;" />
+			</listitem>
+			<listitem>
+				<listcell label="zh-CN" />
+				<listcell label="&gblite.tx.zhcn;" />
+			</listitem>
+			<listitem>
+				<listcell label="zh-TW" />
+				<listcell label="&gblite.tx.zhtw;" />
+			</listitem>
+		</listbox>
+	</groupbox>
+
+	<groupbox>
+		<caption label="&gblite.about.disclaimer;" />
+		<description>&gblite.about.disclaimerinfo;</description>
+	</groupbox>
+</vbox>
+</dialog>

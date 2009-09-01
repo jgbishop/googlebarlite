@@ -1,0 +1,158 @@
+<!--  ########## GENERAL ##########  -->
+<!ENTITY gblite.name "Googlebar Lite">
+<!ENTITY gblite.toolbar.name "Googlebar Lite Toolbar">
+<!ENTITY gblite.ak.name "G">
+<!ENTITY gblite.searchtype.web "Prohledat server">
+<!ENTITY gblite.searchtype.lucky "Zkusím štěstí">
+<!ENTITY gblite.searchtype.site "Vyhledat stránku">
+<!ENTITY gblite.searchtype.image "Vyhledat obrázky">
+<!ENTITY gblite.searchtype.video "Vyhledat videa">
+<!ENTITY gblite.searchtype.news "Vyhledat zprávy">
+<!ENTITY gblite.searchtype.maps "Vyhledat v mapách">
+<!ENTITY gblite.searchtype.group "Vyhledat ve skupinách">
+<!ENTITY gblite.searchtype.blog "Vyhledat mezi blogy">
+<!ENTITY gblite.searchtype.book "Vyhledat v knihách">
+<!ENTITY gblite.searchtype.scholar "Vyhledat ve Scholar">
+<!ENTITY gblite.searchtype.answers "Vyhledat na Answers.com">
+<!ENTITY gblite.context.web "Vyhledat vybraný text">
+<!ENTITY gblite.context.ak.web "W">
+<!ENTITY gblite.context.site "Vyhledat vybraný text na této stránce">
+<!ENTITY gblite.context.ak.site "S">
+<!ENTITY gblite.context.images "Vyhledat vybraný text v obrázkách">
+<!ENTITY gblite.context.ak.images "I">
+<!ENTITY gblite.context.video "Vyhledat vybraný text ve videích">
+<!ENTITY gblite.context.ak.video "V">
+<!ENTITY gblite.context.groups "Vyhledat vybraný text ve skupinách">
+<!ENTITY gblite.context.ak.groups "G">
+<!ENTITY gblite.context.maps "Vyhledat vybraný text mapách">
+<!ENTITY gblite.context.ak.maps "M">
+<!ENTITY gblite.context.answers "Vyhledat vybraný text na Answers.com">
+<!ENTITY gblite.context.ak.answers "A">
+<!ENTITY gblite.context.backwardlinks "Zpětné odkazy">
+<!ENTITY gblite.context.ak.backwardlinks "B">
+<!ENTITY gblite.context.cached "Cache verze stránky">
+<!ENTITY gblite.context.ak.cached "C">
+<!ENTITY gblite.context.cachedlink "Cache verze odkazu">
+<!ENTITY gblite.context.ak.cachedlink "L">
+<!ENTITY gblite.context.similar "Vyhledat podobné stránky">
+<!ENTITY gblite.context.ak.similar "F">
+<!ENTITY gblite.context.translate "Přeložit do angličtiny">
+<!ENTITY gblite.context.ak.translate "T">
+<!ENTITY gblite.mainmenu.label.homepage "Domovská stránka Google">
+<!ENTITY gblite.mainmenu.ak.homepage "G">
+<!ENTITY gblite.mainmenu.label.googlelinks "Odkazy Google">
+<!ENTITY gblite.mainmenu.ak.googlelinks "d">
+<!ENTITY gblite.mainmenu.label.advanced "Pokročilé vyhledávání">
+<!ENTITY gblite.mainmenu.ak.advanced "A">
+<!ENTITY gblite.mainmenu.label.images "Google obrázky">
+<!ENTITY gblite.mainmenu.ak.images "I">
+<!ENTITY gblite.mainmenu.label.video "Google video">
+<!ENTITY gblite.mainmenu.ak.video "V">
+<!ENTITY gblite.mainmenu.label.news "Google zprávy">
+<!ENTITY gblite.mainmenu.ak.news "N">
+<!ENTITY gblite.mainmenu.label.maps "Google Mapy">
+<!ENTITY gblite.mainmenu.ak.maps "p">
+<!ENTITY gblite.mainmenu.label.groups "Google skupiny">
+<!ENTITY gblite.mainmenu.ak.groups "G">
+<!ENTITY gblite.mainmenu.label.blog "Vyhledávání v Google Blog">
+<!ENTITY gblite.mainmenu.ak.blog "B">
+<!ENTITY gblite.mainmenu.label.book "Vyhledávání v Google Book">
+<!ENTITY gblite.mainmenu.ak.book "k">
+<!ENTITY gblite.mainmenu.label.scholar "Google Scholar">
+<!ENTITY gblite.mainmenu.ak.scholar "S">
+<!ENTITY gblite.mainmenu.label.gmail "Google GMail">
+<!ENTITY gblite.mainmenu.ak.gmail "M">
+<!ENTITY gblite.mainmenu.label.searchprefs "Předvolby vyhledávání">
+<!ENTITY gblite.mainmenu.ak.searchprefs "P">
+<!ENTITY gblite.mainmenu.label.languagetools "Jazykové nástroje">
+<!ENTITY gblite.mainmenu.ak.languagetools "J">
+<!ENTITY gblite.mainmenu.label.options "Možnosti...">
+<!ENTITY gblite.mainmenu.ak.options "M">
+<!ENTITY gblite.mainmenu.label.clearhistory "Vymazat historii hledání">
+<!ENTITY gblite.mainmenu.ak.clearhistory "V">
+<!ENTITY gblite.mainmenu.label.help "Nápověda">
+<!ENTITY gblite.mainmenu.ak.help "N">
+<!ENTITY gblite.mainmenu.label.about "O rozšíření...">
+<!ENTITY gblite.mainmenu.ak.about "O">
+<!ENTITY gblite.tt.mainmenu "Hlavní menu">
+<!ENTITY gblite.tt.combined "Vyhledávání">
+<!ENTITY gblite.tt.web "Prohledat web">
+<!ENTITY gblite.tt.lucky "Automaticky vás odkáže na první nalezenou stránku.">
+<!ENTITY gblite.tt.site "Prohledá tuto stránku">
+<!ENTITY gblite.tt.image "Hledá obrázky na webu">
+<!ENTITY gblite.tt.group "Hledá v Google skupinách">
+<!ENTITY gblite.tt.book "Hledá v knihách">
+<!ENTITY gblite.tt.news "Hledá v novinkách">
+<!ENTITY gblite.tt.blog "Hledá mezi blogy">
+<!ENTITY gblite.tt.video "Hledá Google videa">
+<!ENTITY gblite.tt.maps "Hledá v Google mapách">
+<!ENTITY gblite.tt.scholar "Hledá ve studentských časopisech">
+<!ENTITY gblite.tt.answers "Hledá na Answers.com">
+<!ENTITY gblite.tt.up "O úroveň výš">
+<!ENTITY gblite.tt.highlighter "Přepne zvýraznění vyhledávaných výrazů">
+<!ENTITY gblite.tt.overflow "Vyhledat výrazy (pokračování)">
+<!ENTITY gblite.tt.splitter "Změní velikost vyhledávacího okénka">
+<!--  ########## OPTIONS DIALOG ##########  -->
+<!ENTITY gblite.options.title "Googlebar Lite - Možnosti">
+<!ENTITY gblite.options.tab.general "Hlavní">
+<!ENTITY gblite.options.tab.buttons "Tlačítka toolbaru">
+<!ENTITY gblite.options.tab.searchhistory "Historie hledání">
+<!ENTITY gblite.options.tab.keyboard "Klávesové zkratky">
+<!ENTITY gblite.options.tab.context "Kontextové menu">
+<!ENTITY gblite.options.label.general "Hlavní nastavení">
+<!ENTITY gblite.options.label.sitetouse "Používat Google stránku">
+<!ENTITY gblite.options.label.shortcutrestartwarning "Změna klávesové zkratky vyžaduje restart prohlížeče.">
+<!ENTITY gblite.options.label.searchboxfocus "Přejde do vyhledávacího okénka">
+<!ENTITY gblite.options.label.shortcutprefix "Ctrl + Shift +">
+<!ENTITY gblite.options.label.shiftenter "Shift + Enter">
+<!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter">
+<!ENTITY gblite.options.label.shiftctrlenter "Ctrl + Shift + Enter">
+<!ENTITY gblite.options.label.commonbuttons "Další tlačítka a nastavení">
+<!ENTITY gblite.options.clickselectsall "Kliknutím vybrat předchozí vyhledávaný výraz">
+<!ENTITY gblite.options.searchintab "Otevřít výsledky hledání v novém panelu">
+<!ENTITY gblite.options.remembercombined "Zapamatovat si poslední kombinaci vyhledávací nabídky">
+<!ENTITY gblite.options.searchondragdrop "Text vyhledat automaticky při přetažení do vyhledávacího okénka">
+<!ENTITY gblite.options.warnonformhistory "Varovat pokud je vypnuta historie ve Firefoxu">
+<!ENTITY gblite.options.maintainhistory "Údržba historie hledání">
+<!ENTITY gblite.options.autocomplete "Povolit automatické dokončování">
+<!ENTITY gblite.options.inlinecomplete "Povolit dokončování přímo ve vyhledávacím okénku">
+<!ENTITY gblite.options.autosearchhistory "Automaticky vyhledávat při výberu z historie">
+<!ENTITY gblite.options.ignoreanswers "Ignorovat vyhledávání na Answers.com v historii">
+<!ENTITY gblite.options.prompttoclear "Zeptat se před vymazáním historie hledání">
+<!ENTITY gblite.options.showlabels "Zobrazit popisky tlačítek">
+<!ENTITY gblite.options.showsearchwords "Hledaná slova">
+<!ENTITY gblite.options.showhighlighter "Zvýrazňovač">
+<!ENTITY gblite.options.showup "Jít nahoru">
+<!ENTITY gblite.options.showcombined "Kombinované vyhledávací menu">
+<!ENTITY gblite.options.showcontext "Zobrazit kontextové menu Googlebar Lite">
+<!--  ########## ABOUT DIALOG ##########  -->
+<!ENTITY gblite.about.title "O rozšíření Googlebar Lite">
+<!ENTITY gblite.about.extdesc "Odlehčená verze Google search toolbar pro Firefox">
+<!ENTITY gblite.about.createdby "Vytvořil:">
+<!ENTITY gblite.about.ontheweb "Web:">
+<!ENTITY gblite.about.visithomepage "Domovská stránka Googlebar Lite">
+<!ENTITY gblite.about.visitdocumentation "Dokumentace Googlebar Lite (v angličtině)">
+<!ENTITY gblite.about.disclaimer "Prohlášení">
+<!ENTITY gblite.about.disclaimerinfo "Googlebar Lite není vyvíjen ani podporován Google,Inc.Výrazy &quot;Google&quot;, &quot;Google Toolbar&quot; a &quot;I&apos;m Feeling Lucky&apos; jsou registrované ochrané známky Google, Inc.">
+<!ENTITY gblite.about.translators "Překladatelé">
+<!ENTITY gblite.about.locale "Jazyk">
+<!ENTITY gblite.about.translator "Překladatel">
+<!--  ########## CLEAR HISTORY DIALOG ##########  -->
+<!ENTITY gblite.confirm.title "Vymazat historii hledání">
+<!ENTITY gblite.confirm.label.usure "Opravdu chcete vymazat historii hledání?">
+<!ENTITY gblite.confirm.label.yes "Ano">
+<!ENTITY gblite.confirm.ak.yes "A">
+<!ENTITY gblite.confirm.label.no "Ne">
+<!ENTITY gblite.confirm.ak.no "N">
+<!--  ########## FORM HISTORY DIALOG ##########  -->
+<!ENTITY gblite.formhistory.title "Googlebar Lite: Upozornění na histori">
+<!ENTITY gblite.formhistory.warninginfo "Googlebar Lite zjistil, že se snažíte zaznamenávat historii hledání, ale možnost historii formulářů je ve Firefoxu momentálně zakázaná. Historie formulářů musí být povolena, aby Googlebar Lite mohl historii zaznamenávat.">
+<!ENTITY gblite.formhistory.prompt "Co chcete udělat?">
+<!ENTITY gblite.formhistory.donotdisplay "Nezobrazovat dialog znovu">
+<!ENTITY gblite.formhistory.ak.donotdisplay "N">
+<!ENTITY gblite.formhistory.enableformhistory "Povolit historii formulářů">
+<!ENTITY gblite.formhistory.ak.enableformhistory "P">
+<!ENTITY gblite.formhistory.disablesearchhistory "Zakázat historii formulářů">
+<!ENTITY gblite.formhistory.ak.disablesearchhistory "Z">
+<!ENTITY gblite.formhistory.cancel "Storno">
+<!ENTITY gblite.formhistory.ak.cancel "S">

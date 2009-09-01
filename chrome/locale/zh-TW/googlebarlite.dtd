@@ -1,0 +1,158 @@
+<!--  ########## GENERAL ##########  -->
+<!ENTITY gblite.name "Googlebar Lite">
+<!ENTITY gblite.toolbar.name "Googlebar Lite 工具列">
+<!ENTITY gblite.ak.name "G">
+<!ENTITY gblite.searchtype.web "網頁搜尋">
+<!ENTITY gblite.searchtype.lucky "好手氣">
+<!ENTITY gblite.searchtype.site "網站搜尋">
+<!ENTITY gblite.searchtype.image "圖片搜尋">
+<!ENTITY gblite.searchtype.video "影片搜尋">
+<!ENTITY gblite.searchtype.news "新聞搜尋">
+<!ENTITY gblite.searchtype.maps "Google 地圖搜尋">
+<!ENTITY gblite.searchtype.group "網上論壇搜尋">
+<!ENTITY gblite.searchtype.blog "網誌搜尋">
+<!ENTITY gblite.searchtype.book "書籍搜尋">
+<!ENTITY gblite.searchtype.scholar "Scholar 搜尋(學生)">
+<!ENTITY gblite.searchtype.answers "Answers.com 搜尋">
+<!ENTITY gblite.context.web "搜尋已選取文字的網頁(W)">
+<!ENTITY gblite.context.ak.web "W">
+<!ENTITY gblite.context.site "搜尋已選取文字的網站(S)">
+<!ENTITY gblite.context.ak.site "S">
+<!ENTITY gblite.context.images "搜尋已選取文字的圖片(I)">
+<!ENTITY gblite.context.ak.images "I">
+<!ENTITY gblite.context.video "搜尋已選取文字的影片(V)">
+<!ENTITY gblite.context.ak.video "V">
+<!ENTITY gblite.context.groups "搜尋已選取文字的網上論壇(G)">
+<!ENTITY gblite.context.ak.groups "G">
+<!ENTITY gblite.context.maps "搜尋已選取文字的 Google 地圖(M)">
+<!ENTITY gblite.context.ak.maps "M">
+<!ENTITY gblite.context.answers "搜尋已選取文字於 Answers.com">
+<!ENTITY gblite.context.ak.answers "A">
+<!ENTITY gblite.context.backwardlinks "回溯鏈結(B)">
+<!ENTITY gblite.context.ak.backwardlinks "B">
+<!ENTITY gblite.context.cached "本頁的頁庫存檔(C)">
+<!ENTITY gblite.context.ak.cached "C">
+<!ENTITY gblite.context.cachedlink "此鏈結的頁庫存檔(L)">
+<!ENTITY gblite.context.ak.cachedlink "L">
+<!ENTITY gblite.context.similar "尋找類似網頁(S)">
+<!ENTITY gblite.context.ak.similar "S">
+<!ENTITY gblite.context.translate "翻譯成英文(T)">
+<!ENTITY gblite.context.ak.translate "T">
+<!ENTITY gblite.mainmenu.label.homepage "Google 首頁">
+<!ENTITY gblite.mainmenu.ak.homepage "G">
+<!ENTITY gblite.mainmenu.label.googlelinks "Google 鏈結(L)">
+<!ENTITY gblite.mainmenu.ak.googlelinks "L">
+<!ENTITY gblite.mainmenu.label.advanced "Google 進階搜尋(A)">
+<!ENTITY gblite.mainmenu.ak.advanced "A">
+<!ENTITY gblite.mainmenu.label.images "Google 圖片(I)">
+<!ENTITY gblite.mainmenu.ak.images "I">
+<!ENTITY gblite.mainmenu.label.video "Google 影片(V)">
+<!ENTITY gblite.mainmenu.ak.video "V">
+<!ENTITY gblite.mainmenu.label.news "Google 新聞(N)">
+<!ENTITY gblite.mainmenu.ak.news "N">
+<!ENTITY gblite.mainmenu.label.maps "Google 地圖(P)">
+<!ENTITY gblite.mainmenu.ak.maps "P">
+<!ENTITY gblite.mainmenu.label.groups "Google 網上論壇(G)">
+<!ENTITY gblite.mainmenu.ak.groups "G">
+<!ENTITY gblite.mainmenu.label.blog "Google 網誌搜尋(B)">
+<!ENTITY gblite.mainmenu.ak.blog "B">
+<!ENTITY gblite.mainmenu.label.book "Google 書籍搜尋(K)">
+<!ENTITY gblite.mainmenu.ak.book "K">
+<!ENTITY gblite.mainmenu.label.scholar "Google Scholar 學生">
+<!ENTITY gblite.mainmenu.ak.scholar "S">
+<!ENTITY gblite.mainmenu.label.gmail "Google Gmail 信箱(M)">
+<!ENTITY gblite.mainmenu.ak.gmail "M">
+<!ENTITY gblite.mainmenu.label.searchprefs "使用偏好(P)">
+<!ENTITY gblite.mainmenu.ak.searchprefs "P">
+<!ENTITY gblite.mainmenu.label.languagetools "語言選項(T)">
+<!ENTITY gblite.mainmenu.ak.languagetools "T">
+<!ENTITY gblite.mainmenu.label.options "選項...(O)">
+<!ENTITY gblite.mainmenu.ak.options "O">
+<!ENTITY gblite.mainmenu.label.clearhistory "清除搜尋記錄(C)">
+<!ENTITY gblite.mainmenu.ak.clearhistory "C">
+<!ENTITY gblite.mainmenu.label.help "幫助(H)">
+<!ENTITY gblite.mainmenu.ak.help "H">
+<!ENTITY gblite.mainmenu.label.about "關於...(A)">
+<!ENTITY gblite.mainmenu.ak.about "A">
+<!ENTITY gblite.tt.mainmenu "Google Lite 主選單">
+<!ENTITY gblite.tt.combined "Googlebar Lite 搜尋">
+<!ENTITY gblite.tt.web "搜尋網頁">
+<!ENTITY gblite.tt.lucky "執行好手氣搜尋">
+<!ENTITY gblite.tt.site "搜尋本站">
+<!ENTITY gblite.tt.image "搜尋網頁的圖片">
+<!ENTITY gblite.tt.group "搜尋 Google 網上論壇">
+<!ENTITY gblite.tt.book "搜尋書籍">
+<!ENTITY gblite.tt.news "搜尋新聞">
+<!ENTITY gblite.tt.blog "搜尋網誌">
+<!ENTITY gblite.tt.video "搜尋 Google 影片">
+<!ENTITY gblite.tt.maps "搜尋 Google 地圖">
+<!ENTITY gblite.tt.scholar "搜尋學生論文">
+<!ENTITY gblite.tt.answers "搜尋 Answers.com">
+<!ENTITY gblite.tt.up "到網站的上一層">
+<!ENTITY gblite.tt.highlighter "切換此網頁上搜尋字詞的標記">
+<!ENTITY gblite.tt.overflow "搜尋字詞 (繼續)">
+<!ENTITY gblite.tt.splitter "調整搜尋框的大小">
+<!--  ########## OPTIONS DIALOG ##########  -->
+<!ENTITY gblite.options.title "Googlebar Lite 選項">
+<!ENTITY gblite.options.tab.general "一般">
+<!ENTITY gblite.options.tab.buttons "工具列按鈕">
+<!ENTITY gblite.options.tab.searchhistory "搜尋記錄">
+<!ENTITY gblite.options.tab.keyboard "鍵盤快捷鍵">
+<!ENTITY gblite.options.tab.context "右鍵選單">
+<!ENTITY gblite.options.label.general "一般設定">
+<!ENTITY gblite.options.label.sitetouse "使用的 Google 網站：">
+<!ENTITY gblite.options.label.shortcutrestartwarning "變更搜尋框焦點快捷鍵需要重新啟動Firefox.">
+<!ENTITY gblite.options.label.searchboxfocus "設定搜尋框焦點">
+<!ENTITY gblite.options.label.shortcutprefix "Ctrl + Shift +">
+<!ENTITY gblite.options.label.shiftenter "Shift + Enter 執行">
+<!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter 執行">
+<!ENTITY gblite.options.label.shiftctrlenter "Shift + Ctrl + Enter 執行">
+<!ENTITY gblite.options.label.commonbuttons "一般設定 / 普通按鈕">
+<!ENTITY gblite.options.clickselectsall "單擊搜尋框即可選取全部搜尋字詞">
+<!ENTITY gblite.options.searchintab "在新分頁開啟搜尋結果 (如果需要)">
+<!ENTITY gblite.options.remembercombined "記住最後一次從下拉式選單按鈕所選取的搜尋類型">
+<!ENTITY gblite.options.searchondragdrop "拖放字詞時自動搜尋">
+<!ENTITY gblite.options.warnonformhistory "當 Firefox 內的表單記錄被停用時，請提醒我">
+<!ENTITY gblite.options.maintainhistory "保留搜尋記錄">
+<!ENTITY gblite.options.autocomplete "啟用自動完成">
+<!ENTITY gblite.options.inlinecomplete "使用內嵌完成">
+<!ENTITY gblite.options.autosearchhistory "當您從搜尋記錄中選取項目時便自動搜尋">
+<!ENTITY gblite.options.ignoreanswers "忽略記錄內的 Answers.com 搜尋">
+<!ENTITY gblite.options.prompttoclear "清除搜尋記錄之前，先詢問">
+<!ENTITY gblite.options.showlabels "顯示按鈕文字">
+<!ENTITY gblite.options.showsearchwords "尋字鈕">
+<!ENTITY gblite.options.showhighlighter "標記鈕">
+<!ENTITY gblite.options.showup "上層">
+<!ENTITY gblite.options.showcombined "下拉式搜尋選單">
+<!ENTITY gblite.options.showcontext "顯示 Googlebar Lite 快顯功能表">
+<!--  ########## ABOUT DIALOG ##########  -->
+<!ENTITY gblite.about.title "關於 Googlebar Lite">
+<!ENTITY gblite.about.extdesc "用於 Firefox 的輕量級 Google 搜尋工具列。">
+<!ENTITY gblite.about.createdby "原創作者:">
+<!ENTITY gblite.about.ontheweb "網站資訊:">
+<!ENTITY gblite.about.visithomepage "Googlebar Lite 首頁">
+<!ENTITY gblite.about.visitdocumentation "Googlebar Lite 文件">
+<!ENTITY gblite.about.disclaimer "免責聲明:">
+<!ENTITY gblite.about.disclaimerinfo "Googlebar Lite 不是 Google, Inc. 開發，也沒有 Google, Inc. 的支持。Google 品牌的「Google」、「Google Toolbar」、與「好手氣」，皆是 Google, Inc. 的註冊商標。">
+<!ENTITY gblite.about.translators "翻譯作者群">
+<!ENTITY gblite.about.locale "語文版">
+<!ENTITY gblite.about.translator "翻譯作者">
+<!--  ########## CLEAR HISTORY DIALOG ##########  -->
+<!ENTITY gblite.confirm.title "清除搜尋記錄">
+<!ENTITY gblite.confirm.label.usure "確定要清除搜尋記錄嗎？">
+<!ENTITY gblite.confirm.label.yes "是(Y)">
+<!ENTITY gblite.confirm.ak.yes "Y">
+<!ENTITY gblite.confirm.label.no "否(N)">
+<!ENTITY gblite.confirm.ak.no "N">
+<!--  ########## FORM HISTORY DIALOG ##########  -->
+<!ENTITY gblite.formhistory.title "Googlebar Lite: 搜尋記錄警告">
+<!ENTITY gblite.formhistory.warninginfo "Googlebar Lite 偵測到您想要保留搜尋記錄，但 Firefox 選項內的表單記錄現在被停用了。您必須啟用 Firefox 的表單記錄，Googlebar Lite 才能保留搜尋記錄。">
+<!ENTITY gblite.formhistory.prompt "您想要怎麼做呢？">
+<!ENTITY gblite.formhistory.donotdisplay "不要再顯示這個對話框(D)">
+<!ENTITY gblite.formhistory.ak.donotdisplay "D">
+<!ENTITY gblite.formhistory.enableformhistory "啟用表單記錄(E)">
+<!ENTITY gblite.formhistory.ak.enableformhistory "E">
+<!ENTITY gblite.formhistory.disablesearchhistory "停用搜尋記錄(S)">
+<!ENTITY gblite.formhistory.ak.disablesearchhistory "S">
+<!ENTITY gblite.formhistory.cancel "取消(C)">
+<!ENTITY gblite.formhistory.ak.cancel "C">

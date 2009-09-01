@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+    <Description about="urn:mozilla:install-manifest">
+	
+	<em:aboutURL>chrome://googlebarlite/content/about.xul</em:aboutURL>
+	<em:creator>Jonah Bishop</em:creator>
+	<em:homepageURL>http://www.borngeek.com/firefox/googlebarlite/</em:homepageURL>
+	<em:id>{79c50f9a-2ffe-4ee0-8a37-fae4f5dacd4f}</em:id>
+	<em:iconURL>chrome://googlebarlite/content/base_skin/logo.png</em:iconURL>
+	<em:name>Googlebar Lite</em:name>
+	<em:optionsURL>chrome://googlebarlite/content/options.xul</em:optionsURL>
+	<em:version>4.7.2</em:version>
+
+	<em:updateURL>http://www.borngeek.com/downloads/update.rdf</em:updateURL>
+	
+	<em:updateKey>MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDGkg9sX+Kp21vK9HrG0us
+	DFKpnQW0RIiMYK7Dzjdn6rcTCZYOH2ZbL2YPtjf5fW/GkAgH2BhxftMsG/RoAI7/IF5oIUMeB
+	zEM+dv7Lh9blMYTU2UNGR6zJQrzWFnYWUwxPCPEFn1bWer0sHofoSVGh11ExAe/AZcV/j8qFW
+	YO+AQIDAQAB</em:updateKey>
+	
+	<em:targetApplication>
+		<Description>
+			<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+			<em:minVersion>2.0</em:minVersion>
+			<em:maxVersion>3.5.*</em:maxVersion>
+		</Description>
+	</em:targetApplication>
+	
+	</Description>
+	
+</RDF>
+

@@ -1,0 +1,158 @@
+<!--  ########## GENERAL ##########  -->
+<!ENTITY gblite.name "Googlebar Lite">
+<!ENTITY gblite.toolbar.name "Μπάρα του Googlebar Lite">
+<!ENTITY gblite.ak.name "G">
+<!ENTITY gblite.searchtype.web "Αναζήτηση στον Ιστό">
+<!ENTITY gblite.searchtype.lucky "Αισθάνομαι Τυχερός">
+<!ENTITY gblite.searchtype.site "Αναζήτηση Ιστοσελίδας">
+<!ENTITY gblite.searchtype.image "Αναζήτηση Εικόνων">
+<!ENTITY gblite.searchtype.video "Αναζήτηση Βίντεο">
+<!ENTITY gblite.searchtype.news "Αναζήτηση Νέων">
+<!ENTITY gblite.searchtype.maps "Αναζήτηση στο Google Maps">
+<!ENTITY gblite.searchtype.group "Αναζήτηση Ομάδων">
+<!ENTITY gblite.searchtype.blog "Blog Search">
+<!ENTITY gblite.searchtype.book "Book Search">
+<!ENTITY gblite.searchtype.scholar "Αναζήτηση στο Scholar">
+<!ENTITY gblite.searchtype.answers "Άναζήτηση στο Answers.com">
+<!ENTITY gblite.context.web "Αναζήτηση στον Ιστό για το Επιλεγμένο Κείμενο">
+<!ENTITY gblite.context.ak.web "Ι">
+<!ENTITY gblite.context.site "Αναζήτηση στην Ιστοσελίδα για το Επιλεγμένο Κείμενο">
+<!ENTITY gblite.context.ak.site "σ">
+<!ENTITY gblite.context.images "Αναζήτηση στις Εικόνες για το Επιλεγμένο Κείμενο">
+<!ENTITY gblite.context.ak.images "κ">
+<!ENTITY gblite.context.video "Αναζήτηση στα Βίντεο για το Επιλεγμένο Κείμενο">
+<!ENTITY gblite.context.ak.video "Β">
+<!ENTITY gblite.context.groups "Αναζήτηση στις Ομάδες για το Επιλεγμένο Κείμενο">
+<!ENTITY gblite.context.ak.groups "μ">
+<!ENTITY gblite.context.maps "Αναζήτηση στο Google Maps για το Επιλεγμένο Κείμενο">
+<!ENTITY gblite.context.ak.maps "p">
+<!ENTITY gblite.context.answers "Αναζήτηση στο Answers.com για το Επιλεγμένο Κείμενο">
+<!ENTITY gblite.context.ak.answers "n">
+<!ENTITY gblite.context.backwardlinks "Προηγούμενοι Σύνδεσμοι">
+<!ENTITY gblite.context.ak.backwardlinks "Σ">
+<!ENTITY gblite.context.cached "Προεπισκόπηση Σελίδας">
+<!ENTITY gblite.context.ak.cached "ε">
+<!ENTITY gblite.context.cachedlink "Προεπισκόπηση Συνδέσμου">
+<!ENTITY gblite.context.ak.cachedlink "Σ">
+<!ENTITY gblite.context.similar "Παρόμοιες Σελίδες">
+<!ENTITY gblite.context.ak.similar "λ">
+<!ENTITY gblite.context.translate "Μετάφραση στα Αγγλικά">
+<!ENTITY gblite.context.ak.translate "Μ">
+<!ENTITY gblite.mainmenu.label.homepage "Αρχική Σελίδα του Google">
+<!ENTITY gblite.mainmenu.ak.homepage "G">
+<!ENTITY gblite.mainmenu.label.googlelinks "Σύνδεσμοι Google">
+<!ENTITY gblite.mainmenu.ak.googlelinks "l">
+<!ENTITY gblite.mainmenu.label.advanced "Σύνθετη Αναζήτηση">
+<!ENTITY gblite.mainmenu.ak.advanced "θ">
+<!ENTITY gblite.mainmenu.label.images "Εικόνες στο Google">
+<!ENTITY gblite.mainmenu.ak.images "κ">
+<!ENTITY gblite.mainmenu.label.video "Βίντεο στο Google">
+<!ENTITY gblite.mainmenu.ak.video "Β">
+<!ENTITY gblite.mainmenu.label.news "Νέα στο Google">
+<!ENTITY gblite.mainmenu.ak.news "Ν">
+<!ENTITY gblite.mainmenu.label.maps "Google Maps">
+<!ENTITY gblite.mainmenu.ak.maps "s">
+<!ENTITY gblite.mainmenu.label.groups "Ομάδες στο Google">
+<!ENTITY gblite.mainmenu.ak.groups "Ο">
+<!ENTITY gblite.mainmenu.label.blog "Google Blog Search">
+<!ENTITY gblite.mainmenu.ak.blog "B">
+<!ENTITY gblite.mainmenu.label.book "Google Book Search">
+<!ENTITY gblite.mainmenu.ak.book "k">
+<!ENTITY gblite.mainmenu.label.scholar "Google Scholar">
+<!ENTITY gblite.mainmenu.ak.scholar "S">
+<!ENTITY gblite.mainmenu.label.gmail "Google GMail">
+<!ENTITY gblite.mainmenu.ak.gmail "M">
+<!ENTITY gblite.mainmenu.label.searchprefs "Προτιμήσεις Αναζήτησης">
+<!ENTITY gblite.mainmenu.ak.searchprefs "Π">
+<!ENTITY gblite.mainmenu.label.languagetools "Γλωσσικά Εργαλεία">
+<!ENTITY gblite.mainmenu.ak.languagetools "Γ">
+<!ENTITY gblite.mainmenu.label.options "Επιλογές...">
+<!ENTITY gblite.mainmenu.ak.options "Ε">
+<!ENTITY gblite.mainmenu.label.clearhistory "Καθαρισμός Ιστορικού Αναζήτησης">
+<!ENTITY gblite.mainmenu.ak.clearhistory "Κ">
+<!ENTITY gblite.mainmenu.label.help "Βοήθεια">
+<!ENTITY gblite.mainmenu.ak.help "Β">
+<!ENTITY gblite.mainmenu.label.about "Σχετικά...">
+<!ENTITY gblite.mainmenu.ak.about "Σ">
+<!ENTITY gblite.tt.mainmenu "Κύριο Μενού του Googlebar Lite">
+<!ENTITY gblite.tt.combined "Αναζητήσεις στο Googlebar Lite">
+<!ENTITY gblite.tt.web "Αναζήτηση στον ιστό">
+<!ENTITY gblite.tt.lucky "Εκτέλεση αναζήτησης &apos;Αισθάνομαι Τυχερός&apos;">
+<!ENTITY gblite.tt.site "Αναζήτηση στην ιστοσελίδα">
+<!ENTITY gblite.tt.image "Αναζήτηση στον ιστό για εικόνες">
+<!ENTITY gblite.tt.group "Αναζήτηση Ομάδων">
+<!ENTITY gblite.tt.book "Search books">
+<!ENTITY gblite.tt.news "Αναζήτηση νέων">
+<!ENTITY gblite.tt.blog "Search blogs">
+<!ENTITY gblite.tt.video "Αναζήτηση Βίνετο">
+<!ENTITY gblite.tt.maps "Αναζήτηση Google Maps">
+<!ENTITY gblite.tt.scholar "Αναζήτηση ακαδημαϊκών εργασιών">
+<!ENTITY gblite.tt.answers "Αναζήτηση στο Answers.com">
+<!ENTITY gblite.tt.up "Ένα επίπεδο πάνω">
+<!ENTITY gblite.tt.highlighter "Κλείδωμα μαρκαρίσματος των όρων αναζήτησης σε αυτήν τη σελίδα">
+<!ENTITY gblite.tt.overflow "Όροι Αναζήτησης (Συνεχίζεται)">
+<!ENTITY gblite.tt.splitter "Αλλαγή Μεγέθους του Πεδίου Αναζήτησης">
+<!--  ########## OPTIONS DIALOG ##########  -->
+<!ENTITY gblite.options.title "Επιλογές του Googlebar Lite">
+<!ENTITY gblite.options.tab.general "Γενικά">
+<!ENTITY gblite.options.tab.buttons "Κουμπιά Μπάρας">
+<!ENTITY gblite.options.tab.searchhistory "Ιστορικό Αναζήτησης">
+<!ENTITY gblite.options.tab.keyboard "Συντομεύσεις Πληκτρολογίου">
+<!ENTITY gblite.options.tab.context "Μενού Περιεχομένων">
+<!ENTITY gblite.options.label.general "Γενικές Ρυθμίσεις">
+<!ENTITY gblite.options.label.sitetouse "Ιστοσελίδα του Google προς χρήση:">
+<!ENTITY gblite.options.label.shortcutrestartwarning "Η αλλαγή της συντόμευσης για την εστίαση στο πεδίο αναζήτησης απαιτεί επανεκκίνηση του προγράμματος περιήγησης.">
+<!ENTITY gblite.options.label.searchboxfocus "Ορισμός Εστίασης Πεδίου Αναζήτησης">
+<!ENTITY gblite.options.label.shortcutprefix "Ctrl + Shift +">
+<!ENTITY gblite.options.label.shiftenter "Shift + Enter εκτελεί το α">
+<!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter εκτελεί το α">
+<!ENTITY gblite.options.label.shiftctrlenter "Ctrl + Shift + Enter εκτελεί το α">
+<!ENTITY gblite.options.label.commonbuttons "Κοινές Ρυθμίσεις Κουμπιών Μπάρας">
+<!ENTITY gblite.options.clickselectsall "Με μονό κλικ στο πεδίο αναζήτησης επιλέγονται όλοι οι όροι αναζήτησης">
+<!ENTITY gblite.options.searchintab "Άνοιγμα αποτελεσμάτων αναζήτησης σε νέα καρτέλα (εάν είναι απαραίτητο)">
+<!ENTITY gblite.options.remembercombined "Απομνημόνευση του τελευταίου τύπου σύνθετης αναζήτησης">
+<!ENTITY gblite.options.searchondragdrop "Αυτόματη αναζήτηση στο σύρσιμο και την εναπόθεση">
+<!ENTITY gblite.options.warnonformhistory "Ειδοποίηση όταν το ιστορικό φόρμας είναι απενεργοποιημένη στο Firefox">
+<!ENTITY gblite.options.maintainhistory "Διατήρηση ιστορικού αναζήτησης">
+<!ENTITY gblite.options.autocomplete "Ενεργοποίηση αυτο-συμπλήρωσης">
+<!ENTITY gblite.options.inlinecomplete "Χρήση συμπλήρωσης μέσα στη γραμμή">
+<!ENTITY gblite.options.autosearchhistory "Αυτόματη αναζήτηση στην περίπτωση επιλογής από το ιστορικό αναζήτησης">
+<!ENTITY gblite.options.ignoreanswers "Παράβλεψη αναζητήσεων του Answers.com στο ιστορικό">
+<!ENTITY gblite.options.prompttoclear "Ερώτηση πριν τον καθαρισμό του ιστορικού αναζήτησης">
+<!ENTITY gblite.options.showlabels "Εμφάνιση κειμένου επεξήγησης κουμπιών (μόνο επιλεκτικό κείμενο)">
+<!ENTITY gblite.options.showsearchwords "Λέξεις Αναζήτησης">
+<!ENTITY gblite.options.showhighlighter "Μαρκάρισμα">
+<!ENTITY gblite.options.showup "Πάνω">
+<!ENTITY gblite.options.showcombined "Μενού Σύνθετης Αναζήτησης">
+<!ENTITY gblite.options.showcontext "Εμφάνιση μενού περιεχομένων Googlebar Lite">
+<!--  ########## ABOUT DIALOG ##########  -->
+<!ENTITY gblite.about.title "Σχετικά με το Googlebar Lite">
+<!ENTITY gblite.about.extdesc "Μία μικρή σε απαιτήσεις πόρων μπάρα αναζήτησης για το Firefox.">
+<!ENTITY gblite.about.createdby "Δημιουργία:">
+<!ENTITY gblite.about.ontheweb "Στον Ιστό:">
+<!ENTITY gblite.about.visithomepage "Αρχική Σελίδα Googlebar Lite">
+<!ENTITY gblite.about.visitdocumentation "Τεκμηρίωση Googlebar Lite">
+<!ENTITY gblite.about.disclaimer "Αποποίηση Ευθύνης">
+<!ENTITY gblite.about.disclaimerinfo "Το Googlebar Lite δεν αναπτύχθηκε ούτε υποστηρίζεται από την Google Inc. Οι όροι &apos;Google&apos;, &apos;Μπάρα Google&apos; και &apos;Αισθάνομαι Τυχερός&apos; είναι σήματα κατατεθέντα της Google Inc.">
+<!ENTITY gblite.about.translators "Μεταφραστές">
+<!ENTITY gblite.about.locale "Τοποθεσία">
+<!ENTITY gblite.about.translator "Μεταφραστής">
+<!--  ########## CLEAR HISTORY DIALOG ##########  -->
+<!ENTITY gblite.confirm.title "Καθαρισμός Ιστορικού Αναζήτησης">
+<!ENTITY gblite.confirm.label.usure "Καθαρισμός ιστορικού αναζήτησης;">
+<!ENTITY gblite.confirm.label.yes "Ναι">
+<!ENTITY gblite.confirm.ak.yes "Ν">
+<!ENTITY gblite.confirm.label.no "Όχι">
+<!ENTITY gblite.confirm.ak.no "Ό">
+<!--  ########## FORM HISTORY DIALOG ##########  -->
+<!ENTITY gblite.formhistory.title "Googlebar Lite: Προειδοποίηση Ιστορικού">
+<!ENTITY gblite.formhistory.warninginfo "Το Googlebar Lite εντόπισε ότι θέλετε να διατηρήσετε ένα ιστορικό αναζήτησης αλλά η επιλογή ιστορικού φόρμας στο Firefox είναι απενεργοποιημένη. Το ιστορικό φόρμας πρέπει να είναι ενεργοποιημένο για τη διατήρηση του ιστορικού αναζητήσεων από το Googlebar Lite.">
+<!ENTITY gblite.formhistory.prompt "Τι θέλετε να κάνετε;">
+<!ENTITY gblite.formhistory.donotdisplay "Να μην εμφανιστεί αυτό το μήνυμα ξανά">
+<!ENTITY gblite.formhistory.ak.donotdisplay "N">
+<!ENTITY gblite.formhistory.enableformhistory "Ενεργοποίηση Ιστορικού Φόρμας">
+<!ENTITY gblite.formhistory.ak.enableformhistory "Ε">
+<!ENTITY gblite.formhistory.disablesearchhistory "Απενεργοποίηση Ιστορικού Αναζήτησης">
+<!ENTITY gblite.formhistory.ak.disablesearchhistory "Ι">
+<!ENTITY gblite.formhistory.cancel "Ακύρωση">
+<!ENTITY gblite.formhistory.ak.cancel "Α">

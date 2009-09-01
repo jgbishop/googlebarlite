@@ -1,0 +1,41 @@
+Googlebar Lite Licensing Information
+
+Thanks for trying out the Googlebar Lite extension for Firefox. By using
+this extension, you agree to be bound by the following terms and
+conditions.
+
+1. Non-Commercial Use Only
+Googlebar Lite is a freely available extension for the Firefox web browser,
+and is available for your non-commercial use only. You may use it at work or
+home to search for anything you want. You may not, under any circumstances,
+sell Googlebar Lite or any works derived from it (with some exception; see
+the source code usage section below for further detail).
+
+2. Source Code Usage
+The source code to Googlebar Lite is freely available, and may be used as
+an example of Firefox extension development. Source code reuse is allowed,
+provided that:
+
+	a. The extension GUID used by Googlebar Lite is not used in your custom
+	extension.
+	
+	b. Function names are stripped of the "GBL_" prefix (used to uniquely
+	identify Googlebar Lite's JavaScript functions).
+	
+	c. Global variable names are stripped of the "GBL_" prefix.
+	
+	d. The name "Googlebar Lite" is not used.
+	
+Should you wish to sell a Firefox extension that is based on Googlebar
+Lite's source code, you must first obtain approval from the author, Jonah
+Bishop. You may reach the extension author through this contact form on
+the web: http://www.borngeek.com/contact/
+
+Citing Googlebar Lite as a source for your extension's source code is
+encouraged, but is not required.
+
+3. Disclaimer
+The author of Googlebar Lite, Jonah Bishop, is not responsible for any
+harm resulting from your use of Googlebar Lite. This extension is provided
+"as is" without any warranties whatsoever. By using Googlebar Lite, you are
+solely responsible for any data loss or damages to your computer.

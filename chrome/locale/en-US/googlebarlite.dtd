@@ -1,0 +1,170 @@
+<!-- ########## GENERAL ########## -->
+<!ENTITY gblite.name "Googlebar Lite">
+<!ENTITY gblite.toolbar.name "Googlebar Lite Toolbar">
+<!ENTITY gblite.ak.name "G">
+<!ENTITY gblite.searchtype.web "Web Search">
+<!ENTITY gblite.searchtype.lucky "I'm Feeling Lucky">
+<!ENTITY gblite.searchtype.site "Site Search">
+<!ENTITY gblite.searchtype.image "Images Search">
+<!ENTITY gblite.searchtype.video "Video Search">
+<!ENTITY gblite.searchtype.news "News Search">
+<!ENTITY gblite.searchtype.maps "Google Maps Search">
+<!ENTITY gblite.searchtype.shopping "Product Search">
+<!ENTITY gblite.searchtype.group "Groups Search">
+<!ENTITY gblite.searchtype.blog "Blog Search">
+<!ENTITY gblite.searchtype.book "Book Search">
+<!ENTITY gblite.searchtype.finance "Finance Search">
+<!ENTITY gblite.searchtype.scholar "Scholar Search">
+<!ENTITY gblite.searchtype.answers "Answers.com Search">
+<!ENTITY gblite.context.web "Search Web for Selected Text">
+<!ENTITY gblite.context.ak.web "W">
+<!ENTITY gblite.context.site "Search This Site for Selected Text">
+<!ENTITY gblite.context.ak.site "S">
+<!ENTITY gblite.context.images "Search Images for Selected Text">
+<!ENTITY gblite.context.ak.images "I">
+<!ENTITY gblite.context.video "Search Videos for Selected Text">
+<!ENTITY gblite.context.ak.video "V">
+<!ENTITY gblite.context.groups "Search Groups for Selected Text">
+<!ENTITY gblite.context.ak.groups "G">
+<!ENTITY gblite.context.maps "Search Google Maps for Selected Text">
+<!ENTITY gblite.context.ak.maps "M">
+<!ENTITY gblite.context.answers "Search Answers.com for Selected Text">
+<!ENTITY gblite.context.ak.answers "A">
+<!ENTITY gblite.context.backwardlinks "Backward Links">
+<!ENTITY gblite.context.ak.backwardlinks "B">
+<!ENTITY gblite.context.cached "Cached Snapshot of This Page">
+<!ENTITY gblite.context.ak.cached "C">
+<!ENTITY gblite.context.cachedlink "Cached Snapshot of This Link">
+<!ENTITY gblite.context.ak.cachedlink "L">
+<!ENTITY gblite.context.similar "Find Similar Pages">
+<!ENTITY gblite.context.ak.similar "F">
+<!ENTITY gblite.context.translate "Translate into English">
+<!ENTITY gblite.context.ak.translate "T">
+<!ENTITY gblite.mainmenu.label.homepage "Google Home Page">
+<!ENTITY gblite.mainmenu.ak.homepage "G">
+<!ENTITY gblite.mainmenu.label.googlelinks "Google Links">
+<!ENTITY gblite.mainmenu.ak.googlelinks "L">
+<!ENTITY gblite.mainmenu.label.advanced "Advanced Search">
+<!ENTITY gblite.mainmenu.ak.advanced "A">
+<!ENTITY gblite.mainmenu.label.images "Google Images">
+<!ENTITY gblite.mainmenu.ak.images "I">
+<!ENTITY gblite.mainmenu.label.video "Google Video">
+<!ENTITY gblite.mainmenu.ak.video "V">
+<!ENTITY gblite.mainmenu.label.news "Google News">
+<!ENTITY gblite.mainmenu.ak.news "N">
+<!ENTITY gblite.mainmenu.label.maps "Google Maps">
+<!ENTITY gblite.mainmenu.ak.maps "p">
+<!ENTITY gblite.mainmenu.label.shopping "Google Product Search">
+<!ENTITY gblite.mainmenu.ak.shopping "r">
+<!ENTITY gblite.mainmenu.label.groups "Google Groups">
+<!ENTITY gblite.mainmenu.ak.groups "G">
+<!ENTITY gblite.mainmenu.label.blog "Google Blog Search">
+<!ENTITY gblite.mainmenu.ak.blog "B">
+<!ENTITY gblite.mainmenu.label.book "Google Book Search">
+<!ENTITY gblite.mainmenu.ak.book "k">
+<!ENTITY gblite.mainmenu.label.finance "Google Finance">
+<!ENTITY gblite.mainmenu.ak.finance "F">
+<!ENTITY gblite.mainmenu.label.scholar "Google Scholar">
+<!ENTITY gblite.mainmenu.ak.scholar "S">
+<!ENTITY gblite.mainmenu.label.gmail "Google GMail">
+<!ENTITY gblite.mainmenu.ak.gmail "M">
+<!ENTITY gblite.mainmenu.label.searchprefs "Search Preferences">
+<!ENTITY gblite.mainmenu.ak.searchprefs "P">
+<!ENTITY gblite.mainmenu.label.languagetools "Language Tools">
+<!ENTITY gblite.mainmenu.ak.languagetools "T">
+<!ENTITY gblite.mainmenu.label.options "Options...">
+<!ENTITY gblite.mainmenu.ak.options "O">
+<!ENTITY gblite.mainmenu.label.clearhistory "Clear Search History">
+<!ENTITY gblite.mainmenu.ak.clearhistory "C">
+<!ENTITY gblite.mainmenu.label.help "Help">
+<!ENTITY gblite.mainmenu.ak.help "H">
+<!ENTITY gblite.mainmenu.label.about "About...">
+<!ENTITY gblite.mainmenu.ak.about "A">
+<!ENTITY gblite.tt.mainmenu "Googlebar Lite Main Menu">
+<!ENTITY gblite.tt.combined "Googlebar Lite Searches">
+<!ENTITY gblite.tt.web "Search the web">
+<!ENTITY gblite.tt.lucky "Perform an I'm Feeling Lucky search">
+<!ENTITY gblite.tt.site "Search this site">
+<!ENTITY gblite.tt.image "Search for images on the web">
+<!ENTITY gblite.tt.shopping "Search products">
+<!ENTITY gblite.tt.group "Search Google Groups">
+<!ENTITY gblite.tt.book "Search books">
+<!ENTITY gblite.tt.news "Search news stories">
+<!ENTITY gblite.tt.blog "Search blogs">
+<!ENTITY gblite.tt.finance "Search finance">
+<!ENTITY gblite.tt.video "Search Google Video">
+<!ENTITY gblite.tt.maps "Search Google Maps">
+<!ENTITY gblite.tt.scholar "Search scholarly papers">
+<!ENTITY gblite.tt.answers "Search Answers.com">
+<!ENTITY gblite.tt.up "Go up one level">
+<!ENTITY gblite.tt.highlighter "Toggle highlighting of search terms on this page">
+<!ENTITY gblite.tt.overflow "Search Terms (Continued)">
+<!ENTITY gblite.tt.splitter "Resize the Search Box">
+
+<!-- ########## OPTIONS DIALOG ########## -->
+<!ENTITY gblite.options.title "Googlebar Lite Options">
+<!ENTITY gblite.options.tab.general "General">
+<!ENTITY gblite.options.tab.buttons "Toolbar Buttons">
+<!ENTITY gblite.options.tab.searchhistory "Search History">
+<!ENTITY gblite.options.tab.keyboard "Keyboard Shortcuts">
+<!ENTITY gblite.options.tab.context "Context Menu">
+<!ENTITY gblite.options.label.general "General Settings">
+<!ENTITY gblite.options.label.sitetouse "Google site to use:">
+<!ENTITY gblite.options.label.shortcutrestartwarning "Changing the search box focus shortcut requires a restart of the browser.">
+<!ENTITY gblite.options.label.searchboxfocus "Set Search Box Focus">
+<!ENTITY gblite.options.label.shortcutprefix "Ctrl + Shift +">
+<!ENTITY gblite.options.label.shiftenter "Shift + Enter performs a">
+<!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter performs a">
+<!ENTITY gblite.options.label.shiftctrlenter "Ctrl + Shift + Enter performs a">
+<!ENTITY gblite.options.label.commonbuttons "Common Toolbar Buttons and Settings">
+<!ENTITY gblite.options.clickselectsall "Single click in search box selects all search terms">
+<!ENTITY gblite.options.searchintab "Open search results in a new tab (if necessary)">
+<!ENTITY gblite.options.remembercombined "Remember last combined-menu search type">
+<!ENTITY gblite.options.searchondragdrop "Automatically search on drag and drop">
+<!ENTITY gblite.options.warnonformhistory "Warn me when form history is disabled in Firefox">
+<!ENTITY gblite.options.maintainhistory "Maintain a search history">
+<!ENTITY gblite.options.autocomplete "Enable auto-completion">
+<!ENTITY gblite.options.inlinecomplete "Use inline completion">
+<!ENTITY gblite.options.autosearchhistory "Automatically search when you select from the search history">
+<!ENTITY gblite.options.ignoreanswers "Ignore Answers.com searches in history">
+<!ENTITY gblite.options.prompttoclear "Ask before clearing search history">
+<!ENTITY gblite.options.showlabels "Show button labels (selective text only)">
+<!ENTITY gblite.options.showsearchwords "Search Words">
+<!ENTITY gblite.options.showhighlighter "Highlighter">
+<!ENTITY gblite.options.showup "Go Up">
+<!ENTITY gblite.options.showcombined "Combined Search Menu">
+<!ENTITY gblite.options.showcontext "Show Googlebar Lite context menu">
+
+<!-- ########## ABOUT DIALOG ########## -->
+<!ENTITY gblite.about.title "About Googlebar Lite">
+<!ENTITY gblite.about.extdesc "A light-weight Google search toolbar for Firefox.">
+<!ENTITY gblite.about.createdby "Created By:">
+<!ENTITY gblite.about.ontheweb "On the Web:">
+<!ENTITY gblite.about.visithomepage "Googlebar Lite Home Page">
+<!ENTITY gblite.about.visitdocumentation "Googlebar Lite Documentation">
+<!ENTITY gblite.about.disclaimer "Disclaimer">
+<!ENTITY gblite.about.disclaimerinfo "Googlebar Lite is neither developed by nor supported by Google, Inc. The terms 'Google', 'Google Toolbar', and 'I'm Feeling Lucky' are registered trademarks of Google, Inc.">
+<!ENTITY gblite.about.translators "Translators">
+<!ENTITY gblite.about.locale "Locale">
+<!ENTITY gblite.about.translator "Translator">
+
+<!-- ########## CLEAR HISTORY DIALOG ########## -->
+<!ENTITY gblite.confirm.title "Clear Search History">
+<!ENTITY gblite.confirm.label.usure "Are you sure you want to clear the search history?">
+<!ENTITY gblite.confirm.label.yes "Yes">
+<!ENTITY gblite.confirm.ak.yes "Y">
+<!ENTITY gblite.confirm.label.no "No">
+<!ENTITY gblite.confirm.ak.no "N">
+
+<!-- ########## FORM HISTORY DIALOG ########## -->
+<!ENTITY gblite.formhistory.title "Googlebar Lite: History Warning">
+<!ENTITY gblite.formhistory.warninginfo "Googlebar Lite has detected that you want to maintain a search history, but the form history option in Firefox is currently disabled. Form history must be enabled for Googlebar Lite to maintain a search history.">
+<!ENTITY gblite.formhistory.prompt "What would you like to do?">
+<!ENTITY gblite.formhistory.donotdisplay "Do not display this dialog again">
+<!ENTITY gblite.formhistory.ak.donotdisplay "D">
+<!ENTITY gblite.formhistory.enableformhistory "Enable Form History">
+<!ENTITY gblite.formhistory.ak.enableformhistory "E">
+<!ENTITY gblite.formhistory.disablesearchhistory "Disable Search History">
+<!ENTITY gblite.formhistory.ak.disablesearchhistory "S">
+<!ENTITY gblite.formhistory.cancel "Cancel">
+<!ENTITY gblite.formhistory.ak.cancel "C">

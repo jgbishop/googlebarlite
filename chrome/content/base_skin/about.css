@@ -1,0 +1,36 @@
+#GBL-About {
+	background: #FFF !important;
+	width: 32em;
+}
+
+#GBL-About caption {
+	background: #FFF;
+	color: #000;
+	font-weight: bold;
+}
+
+#GBL-About listbox[disabled=true] listitem { color: #000 !important; }
+
+#GBL-About .colone { width: 6em; }
+
+#GBL-About .indented { margin-left: 2em; }
+#GBL-About .link {
+	color: #00F;
+	cursor: pointer;
+	text-decoration: underline;
+}
+#GBL-About .link:hover { color: #F00 !important; }
+#GBL-About .strong { font-weight: bold; }
+
+#GBL-About-Logo { margin-bottom: 0.5em; }
+
+#GBL-About-Name {
+	font-size: large;
+	font-weight: bold;
+}
+
+#GBL-About-Version {
+	color: #666;
+	font-size: small;
+	font-weight: bold;
+}

@@ -1,0 +1,47 @@
+/* Import the base style rules */
+@import url("chrome://googlebarlite/content/base_skin/base_rules.css");
+
+/* Custom, skin specific rules */
+.GBL-Toolbar-Button .toolbarbutton-icon {
+	margin-right: 5px;
+}
+
+.GBL-Toolbar-Button .toolbarbutton-menubutton-dropmarker {
+	margin-left: 0 !important;
+}
+
+#GBL-SearchBox {
+	-moz-appearance: none !important;
+	border: none !important;
+	height: 20px !important;
+	min-height: 22px !important;
+	background: transparent !important;
+}
+
+#GBL-SearchBox > .autocomplete-textbox-container {
+	background-image: url("chrome://browser/skin/icons/leftcap.png") !important;
+	background-position: left center !important;
+	background-repeat: no-repeat !important;
+	background-color: transparent !important;
+}
+
+#GBL-SearchBox .autocomplete-history-dropmarker:active,
+#GBL-SearchBox .autocomplete-history-dropmarker[open="true"]:active {
+	-moz-image-region: rect(32px 16px 48px 0px);
+}
+
+#GBL-SearchBox .autocomplete-history-dropmarker:hover {
+	-moz-image-region: rect(16px 16px 32px 0px);
+}
+
+#GBL-SearchBox > .autocomplete-textbox-container > .textbox-input-box {
+	-moz-appearance: none !important;
+	background-image: url("chrome://browser/skin/icons/textbox.png") !important;
+	background-position: center center !important;
+	background-repeat: repeat-x !important;
+	background-color: transparent !important;
+	border: none !important;
+	height: 22px !important;
+	margin: 0 0 0 10px !important;
+	padding: 0 5px 0 2px !important;
+}

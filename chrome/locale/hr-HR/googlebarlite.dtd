@@ -1,0 +1,158 @@
+<!--  ########## GENERAL ##########  -->
+<!ENTITY gblite.name "Googlebar Lite">
+<!ENTITY gblite.toolbar.name "Googlebar Lite alatna traka">
+<!ENTITY gblite.ak.name "G">
+<!ENTITY gblite.searchtype.web "Web pretraživanje">
+<!ENTITY gblite.searchtype.lucky "Osjećam se sretnim">
+<!ENTITY gblite.searchtype.site "Pretraživanje stranice">
+<!ENTITY gblite.searchtype.image "Pretraživanje slika">
+<!ENTITY gblite.searchtype.video "Pretraživanje videa">
+<!ENTITY gblite.searchtype.news "Pretraživanje vijesti">
+<!ENTITY gblite.searchtype.maps "Pretraživanje Google Mapa">
+<!ENTITY gblite.searchtype.group "Pretraživanje grupa">
+<!ENTITY gblite.searchtype.blog "Blog Search">
+<!ENTITY gblite.searchtype.book "Book Search">
+<!ENTITY gblite.searchtype.scholar "Pretraživanje učenika">
+<!ENTITY gblite.searchtype.answers "Answers.com Pretraživanje">
+<!ENTITY gblite.context.web "Pretraži web za odabrani tekst">
+<!ENTITY gblite.context.ak.web "W">
+<!ENTITY gblite.context.site "Pretraži ovu stranicu za odabrani tekst">
+<!ENTITY gblite.context.ak.site "t">
+<!ENTITY gblite.context.images "Pretraži slike za odabrani tekst">
+<!ENTITY gblite.context.ak.images "s">
+<!ENTITY gblite.context.video "Pretraži video stranice za odabrani tekst">
+<!ENTITY gblite.context.ak.video "d">
+<!ENTITY gblite.context.groups "Pretraži Groupe za odabrani tekst">
+<!ENTITY gblite.context.ak.groups "G">
+<!ENTITY gblite.context.maps "Pretraži Google Mape za odabrani tekst">
+<!ENTITY gblite.context.ak.maps "M">
+<!ENTITY gblite.context.answers "Pretraži Answers.com za odabrani tekst">
+<!ENTITY gblite.context.ak.answers "A">
+<!ENTITY gblite.context.backwardlinks "Povratne poveznice">
+<!ENTITY gblite.context.ak.backwardlinks "r">
+<!ENTITY gblite.context.cached "Privremeno spremljena snimka ove stranice">
+<!ENTITY gblite.context.ak.cached "m">
+<!ENTITY gblite.context.cachedlink "Privremeno spremljena snimka ove poveznice">
+<!ENTITY gblite.context.ak.cachedlink "z">
+<!ENTITY gblite.context.similar "Pronađi slične stranice">
+<!ENTITY gblite.context.ak.similar "s">
+<!ENTITY gblite.context.translate "Prevedi na Engleski">
+<!ENTITY gblite.context.ak.translate "E">
+<!ENTITY gblite.mainmenu.label.homepage "Google početna stranica">
+<!ENTITY gblite.mainmenu.ak.homepage "G">
+<!ENTITY gblite.mainmenu.label.googlelinks "Google poveznice">
+<!ENTITY gblite.mainmenu.ak.googlelinks "z">
+<!ENTITY gblite.mainmenu.label.advanced "Napredno pretraživanje">
+<!ENTITY gblite.mainmenu.ak.advanced "N">
+<!ENTITY gblite.mainmenu.label.images "Google slike">
+<!ENTITY gblite.mainmenu.ak.images "l">
+<!ENTITY gblite.mainmenu.label.video "Google Video">
+<!ENTITY gblite.mainmenu.ak.video "V">
+<!ENTITY gblite.mainmenu.label.news "Google vijesti">
+<!ENTITY gblite.mainmenu.ak.news "j">
+<!ENTITY gblite.mainmenu.label.maps "Google Mape">
+<!ENTITY gblite.mainmenu.ak.maps "p">
+<!ENTITY gblite.mainmenu.label.groups "Google Grupe">
+<!ENTITY gblite.mainmenu.ak.groups "G">
+<!ENTITY gblite.mainmenu.label.blog "Google Blog Search">
+<!ENTITY gblite.mainmenu.ak.blog "B">
+<!ENTITY gblite.mainmenu.label.book "Google Book Search">
+<!ENTITY gblite.mainmenu.ak.book "k">
+<!ENTITY gblite.mainmenu.label.scholar "Google učenici">
+<!ENTITY gblite.mainmenu.ak.scholar "č">
+<!ENTITY gblite.mainmenu.label.gmail "Google GMail">
+<!ENTITY gblite.mainmenu.ak.gmail "M">
+<!ENTITY gblite.mainmenu.label.searchprefs "Postavke pretraživanja">
+<!ENTITY gblite.mainmenu.ak.searchprefs "P">
+<!ENTITY gblite.mainmenu.label.languagetools "Jezični alati">
+<!ENTITY gblite.mainmenu.ak.languagetools "t">
+<!ENTITY gblite.mainmenu.label.options "Opcije...">
+<!ENTITY gblite.mainmenu.ak.options "c">
+<!ENTITY gblite.mainmenu.label.clearhistory "Očisti povijest pretraživanja">
+<!ENTITY gblite.mainmenu.ak.clearhistory "č">
+<!ENTITY gblite.mainmenu.label.help "Pomoć">
+<!ENTITY gblite.mainmenu.ak.help "P">
+<!ENTITY gblite.mainmenu.label.about "O...">
+<!ENTITY gblite.mainmenu.ak.about "O">
+<!ENTITY gblite.tt.mainmenu "Googlebar Lite glavni izbornik">
+<!ENTITY gblite.tt.combined "Googlebar Lite pretraživanja">
+<!ENTITY gblite.tt.web "Pretraži web">
+<!ENTITY gblite.tt.lucky "Izvrši Osjećam se sretnim pretraživanje">
+<!ENTITY gblite.tt.site "Pretraži ovu stranicu">
+<!ENTITY gblite.tt.image "Pretraži za slike na webu">
+<!ENTITY gblite.tt.group "Pretraži Google Grupe">
+<!ENTITY gblite.tt.book "Search books">
+<!ENTITY gblite.tt.news "Pretraži vijesti">
+<!ENTITY gblite.tt.blog "Search blogs">
+<!ENTITY gblite.tt.video "Pretraži Google video">
+<!ENTITY gblite.tt.maps "Pretraži Google Mape">
+<!ENTITY gblite.tt.scholar "Pretraži učeničku dokumentaciju">
+<!ENTITY gblite.tt.answers "Pretraži Answers.com">
+<!ENTITY gblite.tt.up "Idi gore jednu razinu">
+<!ENTITY gblite.tt.highlighter "Mijenjaj isticanje pojmova pretraživanja na ovoj stranici">
+<!ENTITY gblite.tt.overflow "Pojmovi pretraživanja (Nastavak)">
+<!ENTITY gblite.tt.splitter "Promijeni veličinu okvira za pretragu">
+<!--  ########## OPTIONS DIALOG ##########  -->
+<!ENTITY gblite.options.title "Googlebar Lite Opcije">
+<!ENTITY gblite.options.tab.general "Općenito">
+<!ENTITY gblite.options.tab.buttons "Gumbi alatne trake">
+<!ENTITY gblite.options.tab.searchhistory "Povijest pretraživanja">
+<!ENTITY gblite.options.tab.keyboard "Tipkovničke kratice">
+<!ENTITY gblite.options.tab.context "Kontekstni izbornik">
+<!ENTITY gblite.options.label.general "Općenite postavke">
+<!ENTITY gblite.options.label.sitetouse "Goggle stranica koja će se koristiti:">
+<!ENTITY gblite.options.label.shortcutrestartwarning "Promjena tipkovničke kratice za fokusiranje okvira za pretraživanje zahtijeva ponovno pokretanje preglednika.">
+<!ENTITY gblite.options.label.searchboxfocus "Postavi fokus okvira za pretraživanje">
+<!ENTITY gblite.options.label.shortcutprefix "Ctrl + Shift +">
+<!ENTITY gblite.options.label.shiftenter "Shift + Enter izvodi">
+<!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter izvodi">
+<!ENTITY gblite.options.label.shiftctrlenter "Shift + Ctrl + Enter izvodi">
+<!ENTITY gblite.options.label.commonbuttons "Općenite postavke / Obični gumbi">
+<!ENTITY gblite.options.clickselectsall "Jedan klik u okviru pretraživanja odabire sve pojmove pretraživanja">
+<!ENTITY gblite.options.searchintab "Otvori rezultate pretraživanja u novoj kartici (ako je potrebno)">
+<!ENTITY gblite.options.remembercombined "Zapamti zadnji kombinirani izbornik tipa pretraživanja">
+<!ENTITY gblite.options.searchondragdrop "Automatski pretraži nakon povlačenja i ispuštanja">
+<!ENTITY gblite.options.warnonformhistory "Upozori me ako je u Firefoxu onemogućen obrazac povijesti">
+<!ENTITY gblite.options.maintainhistory "Podržavaj povijest pretraživanja">
+<!ENTITY gblite.options.autocomplete "Omogući automatsko dovršavanje">
+<!ENTITY gblite.options.inlinecomplete "Koristi dovršavanje u liniji">
+<!ENTITY gblite.options.autosearchhistory "Automatski pretraži kada odaberete obrazac iz povijesti pretraživanja">
+<!ENTITY gblite.options.ignoreanswers "Ignoriraj Answers.com pretraživanja u povijesti">
+<!ENTITY gblite.options.prompttoclear "Pitaj prije čišćenja povijesti pretraživanja">
+<!ENTITY gblite.options.showlabels "Prikaži natpise gumba (samo selektivni tekst)">
+<!ENTITY gblite.options.showsearchwords "Pretraži riječi">
+<!ENTITY gblite.options.showhighlighter "Isticanje">
+<!ENTITY gblite.options.showup "Idi gore">
+<!ENTITY gblite.options.showcombined "Kombinirani izbornik pretraživanja">
+<!ENTITY gblite.options.showcontext "Prikaži Googlebar Lite kontekstni izbornik">
+<!--  ########## ABOUT DIALOG ##########  -->
+<!ENTITY gblite.about.title "O Googlebar Lite">
+<!ENTITY gblite.about.extdesc "Google alatna traka za pretraživanje lake kategorije za Firefox.">
+<!ENTITY gblite.about.createdby "Kreirao:">
+<!ENTITY gblite.about.ontheweb "Na webu:">
+<!ENTITY gblite.about.visithomepage "Googlebar Lite početna stranica">
+<!ENTITY gblite.about.visitdocumentation "Googlebar Lite Dokumentacija">
+<!ENTITY gblite.about.disclaimer "Izjava o odricanju">
+<!ENTITY gblite.about.disclaimerinfo "Googlebar Lite nije niti razvijen niti podržan od strane Google, Inc. Pojmovi &apos;Google&apos;, &apos;Google alatna traka&apos; i &apos;Osjećam se sretnim&apos; su registrirani zaštitni znaci Google, Inc.">
+<!ENTITY gblite.about.translators "Prevoditelji">
+<!ENTITY gblite.about.locale "Lokalizacije">
+<!ENTITY gblite.about.translator "Prevoditelj">
+<!--  ########## CLEAR HISTORY DIALOG ##########  -->
+<!ENTITY gblite.confirm.title "Očisti povijest pretraživanja">
+<!ENTITY gblite.confirm.label.usure "Sigurni ste da želite obrisati povijest pretraživanja?">
+<!ENTITY gblite.confirm.label.yes "Da">
+<!ENTITY gblite.confirm.ak.yes "D">
+<!ENTITY gblite.confirm.label.no "Ne">
+<!ENTITY gblite.confirm.ak.no "N">
+<!--  ########## FORM HISTORY DIALOG ##########  -->
+<!ENTITY gblite.formhistory.title "Googlebar Lite: Upozorenje povijesti">
+<!ENTITY gblite.formhistory.warninginfo "Googlebar Lite je otkrio da želite podržavati povijest pretraživanja, ali opcija obrasca povijesti u Firefoxu je trenutno onemogućena. Obrazac povijesti mora biti omogućena da bi Googlebar Lite mogao podržavati povijest pretraživanja.">
+<!ENTITY gblite.formhistory.prompt "Što želite učiniti?">
+<!ENTITY gblite.formhistory.donotdisplay "Ne prikazuj više ovaj izbornik">
+<!ENTITY gblite.formhistory.ak.donotdisplay "N">
+<!ENTITY gblite.formhistory.enableformhistory "Omogući obrazac povijesti">
+<!ENTITY gblite.formhistory.ak.enableformhistory "m">
+<!ENTITY gblite.formhistory.disablesearchhistory "Onemogući povijest pretraživanja">
+<!ENTITY gblite.formhistory.ak.disablesearchhistory "n">
+<!ENTITY gblite.formhistory.cancel "Odustani">
+<!ENTITY gblite.formhistory.ak.cancel "O">

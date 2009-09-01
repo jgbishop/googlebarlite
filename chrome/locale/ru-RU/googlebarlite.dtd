@@ -1,0 +1,158 @@
+<!--  ########## GENERAL ##########  -->
+<!ENTITY gblite.name "Упрощенная панель">
+<!ENTITY gblite.toolbar.name "Упрощенная панель поиска Google">
+<!ENTITY gblite.ak.name "G">
+<!ENTITY gblite.searchtype.web "Поиск в Интернет">
+<!ENTITY gblite.searchtype.lucky "Мне повезёт">
+<!ENTITY gblite.searchtype.site "Поиск на этом сайте">
+<!ENTITY gblite.searchtype.image "Поиск картинок">
+<!ENTITY gblite.searchtype.video "Поиск видео">
+<!ENTITY gblite.searchtype.news "Поиск новостей">
+<!ENTITY gblite.searchtype.maps "Поиск по местности">
+<!ENTITY gblite.searchtype.group "Поиск в конференциях Google">
+<!ENTITY gblite.searchtype.blog "Blog Search">
+<!ENTITY gblite.searchtype.book "Book Search">
+<!ENTITY gblite.searchtype.scholar "Поиск учебных документов">
+<!ENTITY gblite.searchtype.answers "Поиск на Answer.com">
+<!ENTITY gblite.context.web "Найти в Интернет соответствия для отмеченного текста">
+<!ENTITY gblite.context.ak.web "И">
+<!ENTITY gblite.context.site "Найти отмеченный текст на этом сайте">
+<!ENTITY gblite.context.ak.site "S">
+<!ENTITY gblite.context.images "Найти картинки, соответствующие отмеченному тексту">
+<!ENTITY gblite.context.ak.images "к">
+<!ENTITY gblite.context.video "Найти видео для отмеченного текста">
+<!ENTITY gblite.context.ak.video "V">
+<!ENTITY gblite.context.groups "Найти в конференциях соответствия для отмеченного текста">
+<!ENTITY gblite.context.ak.groups "г">
+<!ENTITY gblite.context.maps "Найти местность для отмеченного текста">
+<!ENTITY gblite.context.ak.maps "м">
+<!ENTITY gblite.context.answers "Найти на Answers.com соответствия для отмеченного текста">
+<!ENTITY gblite.context.ak.answers "A">
+<!ENTITY gblite.context.backwardlinks "Обратные ссылки">
+<!ENTITY gblite.context.ak.backwardlinks "О">
+<!ENTITY gblite.context.cached "Кэшировать эту страницу">
+<!ENTITY gblite.context.ak.cached "К">
+<!ENTITY gblite.context.cachedlink "Кэшировать эту ссылку">
+<!ENTITY gblite.context.ak.cachedlink "с">
+<!ENTITY gblite.context.similar "Найти похожие страницы">
+<!ENTITY gblite.context.ak.similar "п">
+<!ENTITY gblite.context.translate "Перевести на английский">
+<!ENTITY gblite.context.ak.translate "е">
+<!ENTITY gblite.mainmenu.label.homepage "Основной сайт Google">
+<!ENTITY gblite.mainmenu.ak.homepage "G">
+<!ENTITY gblite.mainmenu.label.googlelinks "Полезные ссылки Google">
+<!ENTITY gblite.mainmenu.ak.googlelinks "с">
+<!ENTITY gblite.mainmenu.label.advanced "Расширенный поиск">
+<!ENTITY gblite.mainmenu.ak.advanced "Р">
+<!ENTITY gblite.mainmenu.label.images "Поиск картинок">
+<!ENTITY gblite.mainmenu.ak.images "к">
+<!ENTITY gblite.mainmenu.label.video "Поиск видео">
+<!ENTITY gblite.mainmenu.ak.video "в">
+<!ENTITY gblite.mainmenu.label.news "Поиск новостей">
+<!ENTITY gblite.mainmenu.ak.news "н">
+<!ENTITY gblite.mainmenu.label.maps "Поиск по местности - Google Maps">
+<!ENTITY gblite.mainmenu.ak.maps "м">
+<!ENTITY gblite.mainmenu.label.groups "Поиск в конференциях">
+<!ENTITY gblite.mainmenu.ak.groups "г">
+<!ENTITY gblite.mainmenu.label.blog "Google Blog Search">
+<!ENTITY gblite.mainmenu.ak.blog "B">
+<!ENTITY gblite.mainmenu.label.book "Google Book Search">
+<!ENTITY gblite.mainmenu.ak.book "k">
+<!ENTITY gblite.mainmenu.label.scholar "Поиск учебных документов">
+<!ENTITY gblite.mainmenu.ak.scholar "S">
+<!ENTITY gblite.mainmenu.label.gmail "Электронная почта - GMail">
+<!ENTITY gblite.mainmenu.ak.gmail "Э">
+<!ENTITY gblite.mainmenu.label.searchprefs "Настройки поиска">
+<!ENTITY gblite.mainmenu.ak.searchprefs "Н">
+<!ENTITY gblite.mainmenu.label.languagetools "Языковые инструменты">
+<!ENTITY gblite.mainmenu.ak.languagetools "Я">
+<!ENTITY gblite.mainmenu.label.options "Опции панели...">
+<!ENTITY gblite.mainmenu.ak.options "О">
+<!ENTITY gblite.mainmenu.label.clearhistory "Очистить историю запросов">
+<!ENTITY gblite.mainmenu.ak.clearhistory "ч">
+<!ENTITY gblite.mainmenu.label.help "Помощь">
+<!ENTITY gblite.mainmenu.ak.help "П">
+<!ENTITY gblite.mainmenu.label.about "Справка...">
+<!ENTITY gblite.mainmenu.ak.about "С">
+<!ENTITY gblite.tt.mainmenu "Меню упрощенной панели Google">
+<!ENTITY gblite.tt.combined "Варианты поиска">
+<!ENTITY gblite.tt.web "Найти в сети">
+<!ENTITY gblite.tt.lucky "Выполнить поиск &quot;Мне повезёт&quot;">
+<!ENTITY gblite.tt.site "Найти на этом сайте">
+<!ENTITY gblite.tt.image "Найти картинки в сети">
+<!ENTITY gblite.tt.group "Найти в конференциях Google">
+<!ENTITY gblite.tt.book "Search books">
+<!ENTITY gblite.tt.news "Найти в новостях">
+<!ENTITY gblite.tt.blog "Search blogs">
+<!ENTITY gblite.tt.video "Найти на сайте Google видео">
+<!ENTITY gblite.tt.maps "Найти местность на Google Maps">
+<!ENTITY gblite.tt.scholar "Найти среди школьных документов">
+<!ENTITY gblite.tt.answers "Найти через Answers.com">
+<!ENTITY gblite.tt.up "Перейти на уровень выше">
+<!ENTITY gblite.tt.highlighter "Включить/отключить подсветку поискового контекста">
+<!ENTITY gblite.tt.overflow "Поисковые контексты (продолжение)">
+<!ENTITY gblite.tt.splitter "Изменить размер поискового поля">
+<!--  ########## OPTIONS DIALOG ##########  -->
+<!ENTITY gblite.options.title "Настройка упрощенной панели Google">
+<!ENTITY gblite.options.tab.general "Основные опции">
+<!ENTITY gblite.options.tab.buttons "Кнопки на панели инструментов">
+<!ENTITY gblite.options.tab.searchhistory "История запросов">
+<!ENTITY gblite.options.tab.keyboard "Клавиатурные сокращения">
+<!ENTITY gblite.options.tab.context "Контекстное меню">
+<!ENTITY gblite.options.label.general "Основные настройки">
+<!ENTITY gblite.options.label.sitetouse "Использовать сайт Google">
+<!ENTITY gblite.options.label.shortcutrestartwarning "Изменение режима активности поля поиска требует перезагрузки приложения">
+<!ENTITY gblite.options.label.searchboxfocus "Установить активным поле поиска">
+<!ENTITY gblite.options.label.shortcutprefix "Ctrl + Shift +">
+<!ENTITY gblite.options.label.shiftenter "по нажатию Shift + Enter запускать">
+<!ENTITY gblite.options.label.ctrlenter "по нажатию Ctrl + Enter запускать">
+<!ENTITY gblite.options.label.shiftctrlenter "по нажатию Shift + Ctrl + Enter запускать">
+<!ENTITY gblite.options.label.commonbuttons "Основные кнопки и настройки">
+<!ENTITY gblite.options.clickselectsall "Отметить вхождения контекста поиска по одиночному клику в поле поиска">
+<!ENTITY gblite.options.searchintab "Открыть результаты поиска в новой вкладке (при необходимости)">
+<!ENTITY gblite.options.remembercombined "Запомнить вариант последнего поиска">
+<!ENTITY gblite.options.searchondragdrop "Начинать поиск сразу после переноса контекста">
+<!ENTITY gblite.options.warnonformhistory "Предупредить об отключении в Firefox сохранения данных форм">
+<!ENTITY gblite.options.maintainhistory "Включить историю запросов">
+<!ENTITY gblite.options.autocomplete "Включить автодополнение">
+<!ENTITY gblite.options.inlinecomplete "Использовать встроенный механизм">
+<!ENTITY gblite.options.autosearchhistory "Запускать поиск автоматически после выбора из истории запросов">
+<!ENTITY gblite.options.ignoreanswers "Игнорировать в истории запросов поиск через Answers.com">
+<!ENTITY gblite.options.prompttoclear "Спрашивать перед удалением истории поисковых запросов">
+<!ENTITY gblite.options.showlabels "Отобразить текст на кнопках панели поиска">
+<!ENTITY gblite.options.showsearchwords "Поисковые слова">
+<!ENTITY gblite.options.showhighlighter "Подсветка">
+<!ENTITY gblite.options.showup "Вверх">
+<!ENTITY gblite.options.showcombined "Меню вариантов поиска">
+<!ENTITY gblite.options.showcontext "Включить упрощенную панель в контекстного меню">
+<!--  ########## ABOUT DIALOG ##########  -->
+<!ENTITY gblite.about.title "Об упрощенной панели Google">
+<!ENTITY gblite.about.extdesc "Упрощенная панель поиска Google для Firefox">
+<!ENTITY gblite.about.createdby "Автор:">
+<!ENTITY gblite.about.ontheweb "В Интернет:">
+<!ENTITY gblite.about.visithomepage "Сайт проекта упрощенной панели Google">
+<!ENTITY gblite.about.visitdocumentation "Документация по упрощенной панели Google">
+<!ENTITY gblite.about.disclaimer "Необходимые оговорки">
+<!ENTITY gblite.about.disclaimerinfo "Упрощенная панель поиска Google не разрабатывалась и не поддерживается компанией Google, Inc.Термины &apos;Google&apos;, &apos;Google Toolbar&apos; и &apos;I&apos;m Feeling Lucky&apos; являются зарегистрированными торговыми марками компании Google, Inc.">
+<!ENTITY gblite.about.translators "Перевод интерфейса">
+<!ENTITY gblite.about.locale "Локаль">
+<!ENTITY gblite.about.translator "Переводчик">
+<!--  ########## CLEAR HISTORY DIALOG ##########  -->
+<!ENTITY gblite.confirm.title "Очистить историю запросов">
+<!ENTITY gblite.confirm.label.usure "Действительно необходимо очистить историю запросов?">
+<!ENTITY gblite.confirm.label.yes "Да">
+<!ENTITY gblite.confirm.ak.yes "Д">
+<!ENTITY gblite.confirm.label.no "Нет">
+<!ENTITY gblite.confirm.ak.no "Н">
+<!--  ########## FORM HISTORY DIALOG ##########  -->
+<!ENTITY gblite.formhistory.title "Googlebar Lite: Предупреждение истории запросов">
+<!ENTITY gblite.formhistory.warninginfo "Для упрощенной панели Google запрошена поддержка истории запросов, но в Firefox в данный момент опция сохранения данных форм отключена. Для обеспечения истории запросов опция сохранения данных форм в Firefox должна быть включена.">
+<!ENTITY gblite.formhistory.prompt "Что cделать?">
+<!ENTITY gblite.formhistory.donotdisplay "Больше не показывать это предупреждение">
+<!ENTITY gblite.formhistory.ak.donotdisplay "о">
+<!ENTITY gblite.formhistory.enableformhistory "Включить сохранение данных форм">
+<!ENTITY gblite.formhistory.ak.enableformhistory "В">
+<!ENTITY gblite.formhistory.disablesearchhistory "Отключить историю запросов">
+<!ENTITY gblite.formhistory.ak.disablesearchhistory "н">
+<!ENTITY gblite.formhistory.cancel "Отмена">
+<!ENTITY gblite.formhistory.ak.cancel "О">

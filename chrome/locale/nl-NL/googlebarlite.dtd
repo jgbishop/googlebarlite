@@ -1,0 +1,158 @@
+<!--   ########## GENERAL ##########   -->
+<!ENTITY gblite.name "Googlebar Lite">
+<!ENTITY gblite.toolbar.name "Googlebar Lite Werkbalk">
+<!ENTITY gblite.ak.name "G">
+<!ENTITY gblite.searchtype.web "Internet">
+<!ENTITY gblite.searchtype.lucky "Ik doe een gok">
+<!ENTITY gblite.searchtype.site "Huidige site">
+<!ENTITY gblite.searchtype.image "Afbeeldingen">
+<!ENTITY gblite.searchtype.video "Video&apos;s">
+<!ENTITY gblite.searchtype.news "Nieuws">
+<!ENTITY gblite.searchtype.maps "Maps">
+<!ENTITY gblite.searchtype.group "Discussiegroepen">
+<!ENTITY gblite.searchtype.blog "Blogs">
+<!ENTITY gblite.searchtype.book "Boeken">
+<!ENTITY gblite.searchtype.scholar "Wetenschap">
+<!ENTITY gblite.searchtype.answers "Answers.com">
+<!ENTITY gblite.context.web "Internet op de geselecteerde tekst doorzoeken">
+<!ENTITY gblite.context.ak.web "I">
+<!ENTITY gblite.context.site "Deze site op de geselecteerde tekst doorzoeken">
+<!ENTITY gblite.context.ak.site "S">
+<!ENTITY gblite.context.images "Afbeeldingen op de geselecteerde tekst doorzoeken">
+<!ENTITY gblite.context.ak.images "A">
+<!ENTITY gblite.context.video "Video&apos;s op de geselecteerde tekst doorzoeken">
+<!ENTITY gblite.context.ak.video "V">
+<!ENTITY gblite.context.groups "Groepen op de geselecteerde tekst doorzoeken">
+<!ENTITY gblite.context.ak.groups "G">
+<!ENTITY gblite.context.maps "Maps op de geselecteerde tekst doorzoeken">
+<!ENTITY gblite.context.ak.maps "M">
+<!ENTITY gblite.context.answers "Answers.com op de geselecteerde tekst doorzoeken">
+<!ENTITY gblite.context.ak.answers "A">
+<!ENTITY gblite.context.backwardlinks "Terug geplaatste koppelingen">
+<!ENTITY gblite.context.ak.backwardlinks "K">
+<!ENTITY gblite.context.cached "Opgeslagen afbeelding van deze pagina">
+<!ENTITY gblite.context.ak.cached "p">
+<!ENTITY gblite.context.cachedlink "Opgeslagen afbeelding van deze koppeling">
+<!ENTITY gblite.context.ak.cachedlink "k">
+<!ENTITY gblite.context.similar "Vergelijkbare pagina&apos;s zoeken">
+<!ENTITY gblite.context.ak.similar "z">
+<!ENTITY gblite.context.translate "Naar Engels vertalen">
+<!ENTITY gblite.context.ak.translate "v">
+<!ENTITY gblite.mainmenu.label.homepage "Google startpagina">
+<!ENTITY gblite.mainmenu.ak.homepage "G">
+<!ENTITY gblite.mainmenu.label.googlelinks "Google koppelingen">
+<!ENTITY gblite.mainmenu.ak.googlelinks "k">
+<!ENTITY gblite.mainmenu.label.advanced "Uitgebreid zoeken">
+<!ENTITY gblite.mainmenu.ak.advanced "U">
+<!ENTITY gblite.mainmenu.label.images "Afbeeldingen">
+<!ENTITY gblite.mainmenu.ak.images "A">
+<!ENTITY gblite.mainmenu.label.video "Video&apos;s">
+<!ENTITY gblite.mainmenu.ak.video "V">
+<!ENTITY gblite.mainmenu.label.news "Nieuws">
+<!ENTITY gblite.mainmenu.ak.news "N">
+<!ENTITY gblite.mainmenu.label.maps "Maps">
+<!ENTITY gblite.mainmenu.ak.maps "p">
+<!ENTITY gblite.mainmenu.label.groups "Discussiegroepen">
+<!ENTITY gblite.mainmenu.ak.groups "D">
+<!ENTITY gblite.mainmenu.label.blog "Blogs">
+<!ENTITY gblite.mainmenu.ak.blog "B">
+<!ENTITY gblite.mainmenu.label.book "Boeken">
+<!ENTITY gblite.mainmenu.ak.book "k">
+<!ENTITY gblite.mainmenu.label.scholar "Wetenschap">
+<!ENTITY gblite.mainmenu.ak.scholar "W">
+<!ENTITY gblite.mainmenu.label.gmail "GMail">
+<!ENTITY gblite.mainmenu.ak.gmail "M">
+<!ENTITY gblite.mainmenu.label.searchprefs "Zoekvoorkeuren">
+<!ENTITY gblite.mainmenu.ak.searchprefs "v">
+<!ENTITY gblite.mainmenu.label.languagetools "Taalhulpmiddelen">
+<!ENTITY gblite.mainmenu.ak.languagetools "T">
+<!ENTITY gblite.mainmenu.label.options "Opties...">
+<!ENTITY gblite.mainmenu.ak.options "O">
+<!ENTITY gblite.mainmenu.label.clearhistory "Zoekgeschiedenis wissen">
+<!ENTITY gblite.mainmenu.ak.clearhistory "w">
+<!ENTITY gblite.mainmenu.label.help "Help">
+<!ENTITY gblite.mainmenu.ak.help "H">
+<!ENTITY gblite.mainmenu.label.about "Over...">
+<!ENTITY gblite.mainmenu.ak.about "O">
+<!ENTITY gblite.tt.mainmenu "Googlebar Lite hoofdmenu">
+<!ENTITY gblite.tt.combined "Googlebar Lite zoekacties">
+<!ENTITY gblite.tt.web "Op internet zoeken">
+<!ENTITY gblite.tt.lucky "Zoeken met &apos;Ik doe een gok&apos;">
+<!ENTITY gblite.tt.site "Op huidige site zoeken">
+<!ENTITY gblite.tt.image "Zoeken naar afbeeldingen op internet">
+<!ENTITY gblite.tt.group "Zoeken in Google discussiegroepen">
+<!ENTITY gblite.tt.book "Zoeken naar boeken">
+<!ENTITY gblite.tt.news "Zoeken naar nieuwsitems">
+<!ENTITY gblite.tt.blog "Zoeken naar blogs">
+<!ENTITY gblite.tt.video "Zoeken op Google Video">
+<!ENTITY gblite.tt.maps "Zoeken op Google Maps">
+<!ENTITY gblite.tt.scholar "Zoeken op Wetenschap">
+<!ENTITY gblite.tt.answers "Zoeken op Answers.com">
+<!ENTITY gblite.tt.up "Bovenliggende map">
+<!ENTITY gblite.tt.highlighter "Markeren van zoekwoorden op deze pagina in- of uitschakelen">
+<!ENTITY gblite.tt.overflow "Zoektermen (Vervolg)">
+<!ENTITY gblite.tt.splitter "Grootte zoekvenster wijzigen">
+<!--   ########## OPTIONS DIALOG ##########   -->
+<!ENTITY gblite.options.title "Googlebar Lite opties">
+<!ENTITY gblite.options.tab.general "Algemeen">
+<!ENTITY gblite.options.tab.buttons "Werkbalkknoppen">
+<!ENTITY gblite.options.tab.searchhistory "Zoekgeschiedenis">
+<!ENTITY gblite.options.tab.keyboard "Sneltoetsen">
+<!ENTITY gblite.options.tab.context "Contextmenu">
+<!ENTITY gblite.options.label.general "Algemene instellingen">
+<!ENTITY gblite.options.label.sitetouse "Te gebruiken Google site:">
+<!ENTITY gblite.options.label.shortcutrestartwarning "Het wijzigen van de zoekvenster activering vereist het opnieuw starten van de browser.">
+<!ENTITY gblite.options.label.searchboxfocus "Zoekvenster actief maken">
+<!ENTITY gblite.options.label.shortcutprefix "Ctrl + Shift +">
+<!ENTITY gblite.options.label.shiftenter "Shift + Enter zoekt in:">
+<!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter zoekt in:">
+<!ENTITY gblite.options.label.shiftctrlenter "Ctrl + Shift + Enter zoekt in:">
+<!ENTITY gblite.options.label.commonbuttons "Algemene werkbalk knoppen en instellingen">
+<!ENTITY gblite.options.clickselectsall "Alle zoektermen selecteren door een enkele klik in het zoekvenster">
+<!ENTITY gblite.options.searchintab "Zoekresultaten in een nieuwe tab openen (indien nodig)">
+<!ENTITY gblite.options.remembercombined "Het laatste gecombineerd-menu zoek type onthouden">
+<!ENTITY gblite.options.searchondragdrop "Automatisch zoeken na slepen/plakken">
+<!ENTITY gblite.options.warnonformhistory "Waarschuwen wanneer &apos;Opgeslagen formulieren&apos; in Firefox is uitgeschakeld">
+<!ENTITY gblite.options.maintainhistory "Zoekgeschiedenis beheren">
+<!ENTITY gblite.options.autocomplete "Auto-aanvullen inschakelen">
+<!ENTITY gblite.options.inlinecomplete "Inline aanvullen gebruiken">
+<!ENTITY gblite.options.autosearchhistory "Automatisch zoeken bij selecteren vanuit de zoekgeschiedenis">
+<!ENTITY gblite.options.ignoreanswers "Answers.com zoekacties in de geschiedenis negeren">
+<!ENTITY gblite.options.prompttoclear "Bevestiging vragen voordat de zoekgeschiedenis gewist wordt">
+<!ENTITY gblite.options.showlabels "Labelsknop weergeven (alleen selectieve tekst)">
+<!ENTITY gblite.options.showsearchwords "Zoekwoorden">
+<!ENTITY gblite.options.showhighlighter "Markerenknop">
+<!ENTITY gblite.options.showup "Ga omhoog">
+<!ENTITY gblite.options.showcombined "Gecombineerd zoekmenu">
+<!ENTITY gblite.options.showcontext "Het Googlebar Lite contextmenu weergeven">
+<!--   ########## ABOUT DIALOG ##########   -->
+<!ENTITY gblite.about.title "Over Googlebar Lite">
+<!ENTITY gblite.about.extdesc "Een lichte versie van de Google-werkbalk voor Firefox.">
+<!ENTITY gblite.about.createdby "Gemaakt door:">
+<!ENTITY gblite.about.ontheweb "Op het web:">
+<!ENTITY gblite.about.visithomepage "Googlebar Lite startpagina">
+<!ENTITY gblite.about.visitdocumentation "Googlebar Lite Documentatie">
+<!ENTITY gblite.about.disclaimer "Disclaimer:">
+<!ENTITY gblite.about.disclaimerinfo "Googlebar Lite is niet ontwikkeld en wordt niet ondersteund door Google, Inc. De termen &apos;Google&apos;, &apos;Google Toolbar&apos;, en &apos;Ik doe een gok&apos; zijn geregistreerde handelsmerken van Google, Inc.">
+<!ENTITY gblite.about.translators "Vertalers">
+<!ENTITY gblite.about.locale "Taal">
+<!ENTITY gblite.about.translator "Vertaler">
+<!--   ########## CLEAR HISTORY DIALOG ##########   -->
+<!ENTITY gblite.confirm.title "Zoekgeschiedenis wissen">
+<!ENTITY gblite.confirm.label.usure "Weet u zeker dat u de zoekgeschiedenis wilt wissen?">
+<!ENTITY gblite.confirm.label.yes "Ja">
+<!ENTITY gblite.confirm.ak.yes "J">
+<!ENTITY gblite.confirm.label.no "Nee">
+<!ENTITY gblite.confirm.ak.no "N">
+<!--   ########## FORM HISTORY DIALOG ##########   -->
+<!ENTITY gblite.formhistory.title "Googlebar Lite: Waarschuwing">
+<!ENTITY gblite.formhistory.warninginfo "Googlebar Lite heeft gedetecteerd dat je de zoekgeschiedenis wilt onthouden, maar de optie Opgeslagen formulieren in Firefox is uitgeschakeld. Opgeslagen formulieren moet worden ingeschakeld om deze optie te kunnen gebruiken.">
+<!ENTITY gblite.formhistory.prompt "Wat wilt u doen?">
+<!ENTITY gblite.formhistory.donotdisplay "Dit venster in het vervolg niet meer weergeven">
+<!ENTITY gblite.formhistory.ak.donotdisplay "D">
+<!ENTITY gblite.formhistory.enableformhistory "Opgeslagen formulieren inschakelen">
+<!ENTITY gblite.formhistory.ak.enableformhistory "i">
+<!ENTITY gblite.formhistory.disablesearchhistory "Opgeslagen formulieren uitschakelen">
+<!ENTITY gblite.formhistory.ak.disablesearchhistory "u">
+<!ENTITY gblite.formhistory.cancel "Annuleren">
+<!ENTITY gblite.formhistory.ak.cancel "A">
