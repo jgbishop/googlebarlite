@@ -9,9 +9,11 @@
 <!ENTITY gblite.searchtype.video "Google Wideo">
 <!ENTITY gblite.searchtype.news "Google News">
 <!ENTITY gblite.searchtype.maps "Mapy Google">
+<!ENTITY gblite.searchtype.shopping "Google Product">
 <!ENTITY gblite.searchtype.group "Grupy dyskusyjne">
 <!ENTITY gblite.searchtype.blog "Blogi Google">
 <!ENTITY gblite.searchtype.book "Książki Google">
+<!ENTITY gblite.searchtype.finance "Google Finance">
 <!ENTITY gblite.searchtype.scholar "Google Scholar">
 <!ENTITY gblite.searchtype.answers "Google Answers">
 <!ENTITY gblite.context.web "Przeszukuj sieć w poszukiwaniu zaznaczonego tekstu">
@@ -52,12 +54,16 @@
 <!ENTITY gblite.mainmenu.ak.news "C">
 <!ENTITY gblite.mainmenu.label.maps "Mapy Google">
 <!ENTITY gblite.mainmenu.ak.maps "p">
+<!ENTITY gblite.mainmenu.label.shopping "Google Product">
+<!ENTITY gblite.mainmenu.ak.shopping "r">
 <!ENTITY gblite.mainmenu.label.groups "Grupy dyskusyjne">
 <!ENTITY gblite.mainmenu.ak.groups "G">
 <!ENTITY gblite.mainmenu.label.blog "Blogi Google">
 <!ENTITY gblite.mainmenu.ak.blog "B">
 <!ENTITY gblite.mainmenu.label.book "Książki Google">
 <!ENTITY gblite.mainmenu.ak.book "K">
+<!ENTITY gblite.mainmenu.label.finance "Google Finance">
+<!ENTITY gblite.mainmenu.ak.finance "F">
 <!ENTITY gblite.mainmenu.label.scholar "Nauka Google">
 <!ENTITY gblite.mainmenu.ak.scholar "N">
 <!ENTITY gblite.mainmenu.label.gmail "Google GMail">
@@ -80,10 +86,12 @@
 <!ENTITY gblite.tt.lucky "Wykonaj wyszukiwanie „Szczęśliwy traf”">
 <!ENTITY gblite.tt.site "Wyszukaj na tej witrynie">
 <!ENTITY gblite.tt.image "Wyszukaj obrazki w sieci">
+<!ENTITY gblite.tt.shopping "Wyszukaj produkty">
 <!ENTITY gblite.tt.group "Wyszukaj w grupach dyskusyjnych">
 <!ENTITY gblite.tt.book "Wyszukaj w książkach">
 <!ENTITY gblite.tt.news "Wyszukaj wiadomości">
 <!ENTITY gblite.tt.blog "Wyszukaj w blogach">
+<!ENTITY gblite.tt.finance "Wyszukaj w Google Finance">
 <!ENTITY gblite.tt.video "Wyszukaj w Google Video">
 <!ENTITY gblite.tt.maps "Wyszukaj w mapach Google">
 <!ENTITY gblite.tt.scholar "Wyszukaj dokumenty naukowe">

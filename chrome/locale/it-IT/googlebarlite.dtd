@@ -9,9 +9,11 @@
 <!ENTITY gblite.searchtype.video "Ricerca Video">
 <!ENTITY gblite.searchtype.news "Ricerca News">
 <!ENTITY gblite.searchtype.maps "Ricerca Google Maps">
+<!ENTITY gblite.searchtype.shopping "Product Search">
 <!ENTITY gblite.searchtype.group "Ricerca Gruppi">
 <!ENTITY gblite.searchtype.blog "Blog Search">
 <!ENTITY gblite.searchtype.book "Book Search">
+<!ENTITY gblite.searchtype.finance "Finance Search">
 <!ENTITY gblite.searchtype.scholar "Ricerca Scholar">
 <!ENTITY gblite.searchtype.answers "Ricerca in Answers.com">
 <!ENTITY gblite.context.web "Cerca nel Web il testo selezionato">
@@ -52,12 +54,16 @@
 <!ENTITY gblite.mainmenu.ak.news "N">
 <!ENTITY gblite.mainmenu.label.maps "Google Maps">
 <!ENTITY gblite.mainmenu.ak.maps "p">
+<!ENTITY gblite.mainmenu.label.shopping "Google Product Search">
+<!ENTITY gblite.mainmenu.ak.shopping "r">
 <!ENTITY gblite.mainmenu.label.groups "Gruppi Google">
 <!ENTITY gblite.mainmenu.ak.groups "G">
 <!ENTITY gblite.mainmenu.label.blog "Google Blog Search">
 <!ENTITY gblite.mainmenu.ak.blog "B">
 <!ENTITY gblite.mainmenu.label.book "Google Book Search">
 <!ENTITY gblite.mainmenu.ak.book "k">
+<!ENTITY gblite.mainmenu.label.finance "Google Finance">
+<!ENTITY gblite.mainmenu.ak.finance "F">
 <!ENTITY gblite.mainmenu.label.scholar "Google Scholar">
 <!ENTITY gblite.mainmenu.ak.scholar "S">
 <!ENTITY gblite.mainmenu.label.gmail "Google GMail">
@@ -80,10 +86,12 @@
 <!ENTITY gblite.tt.lucky "Esegui una ricerca Mi sento fortunato">
 <!ENTITY gblite.tt.site "Cerca nel sito">
 <!ENTITY gblite.tt.image "Ricerca immagini sul Web">
+<!ENTITY gblite.tt.shopping "Search products">
 <!ENTITY gblite.tt.group "Cerca nelle discussioni dei Gruppi di Google">
 <!ENTITY gblite.tt.book "Search books">
 <!ENTITY gblite.tt.news "Visualizza o cerca nel sito Notizie di Google">
 <!ENTITY gblite.tt.blog "Search blogs">
+<!ENTITY gblite.tt.finance "Search finance">
 <!ENTITY gblite.tt.video "Cerca in Google Video">
 <!ENTITY gblite.tt.maps "Cerca su Google Maps">
 <!ENTITY gblite.tt.scholar "Cerca negli articoli accademici">

@@ -9,9 +9,11 @@
 <!ENTITY gblite.searchtype.video "Vyhledat videa">
 <!ENTITY gblite.searchtype.news "Vyhledat zprávy">
 <!ENTITY gblite.searchtype.maps "Vyhledat v mapách">
+<!ENTITY gblite.searchtype.shopping "Product Search">
 <!ENTITY gblite.searchtype.group "Vyhledat ve skupinách">
 <!ENTITY gblite.searchtype.blog "Vyhledat mezi blogy">
 <!ENTITY gblite.searchtype.book "Vyhledat v knihách">
+<!ENTITY gblite.searchtype.finance "Finance Search">
 <!ENTITY gblite.searchtype.scholar "Vyhledat ve Scholar">
 <!ENTITY gblite.searchtype.answers "Vyhledat na Answers.com">
 <!ENTITY gblite.context.web "Vyhledat vybraný text">
@@ -52,12 +54,16 @@
 <!ENTITY gblite.mainmenu.ak.news "N">
 <!ENTITY gblite.mainmenu.label.maps "Google Mapy">
 <!ENTITY gblite.mainmenu.ak.maps "p">
+<!ENTITY gblite.mainmenu.label.shopping "Google Product Search">
+<!ENTITY gblite.mainmenu.ak.shopping "r">
 <!ENTITY gblite.mainmenu.label.groups "Google skupiny">
 <!ENTITY gblite.mainmenu.ak.groups "G">
 <!ENTITY gblite.mainmenu.label.blog "Vyhledávání v Google Blog">
 <!ENTITY gblite.mainmenu.ak.blog "B">
 <!ENTITY gblite.mainmenu.label.book "Vyhledávání v Google Book">
 <!ENTITY gblite.mainmenu.ak.book "k">
+<!ENTITY gblite.mainmenu.label.finance "Google Finance">
+<!ENTITY gblite.mainmenu.ak.finance "F">
 <!ENTITY gblite.mainmenu.label.scholar "Google Scholar">
 <!ENTITY gblite.mainmenu.ak.scholar "S">
 <!ENTITY gblite.mainmenu.label.gmail "Google GMail">
@@ -80,10 +86,12 @@
 <!ENTITY gblite.tt.lucky "Automaticky vás odkáže na první nalezenou stránku.">
 <!ENTITY gblite.tt.site "Prohledá tuto stránku">
 <!ENTITY gblite.tt.image "Hledá obrázky na webu">
+<!ENTITY gblite.tt.shopping "Search products">
 <!ENTITY gblite.tt.group "Hledá v Google skupinách">
 <!ENTITY gblite.tt.book "Hledá v knihách">
 <!ENTITY gblite.tt.news "Hledá v novinkách">
 <!ENTITY gblite.tt.blog "Hledá mezi blogy">
+<!ENTITY gblite.tt.finance "Search finance">
 <!ENTITY gblite.tt.video "Hledá Google videa">
 <!ENTITY gblite.tt.maps "Hledá v Google mapách">
 <!ENTITY gblite.tt.scholar "Hledá ve studentských časopisech">

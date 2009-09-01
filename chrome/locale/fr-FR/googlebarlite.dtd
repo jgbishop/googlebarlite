@@ -5,15 +5,17 @@
 <!ENTITY gblite.searchtype.web "Recherche Web">
 <!ENTITY gblite.searchtype.lucky "J&apos;ai de la chance">
 <!ENTITY gblite.searchtype.site "Recherche de site">
-<!ENTITY gblite.searchtype.image "Recherche Google Images">
-<!ENTITY gblite.searchtype.video "Recherche Google Videos">
-<!ENTITY gblite.searchtype.news "Recherche Google Actualités">
+<!ENTITY gblite.searchtype.image "Recherche d'Images">
+<!ENTITY gblite.searchtype.video "Recherche de Videos">
+<!ENTITY gblite.searchtype.news "Recherche d'Actualités">
 <!ENTITY gblite.searchtype.maps "Recherche Google Maps">
+<!ENTITY gblite.searchtype.shopping "Recherche marchande">
 <!ENTITY gblite.searchtype.group "Recherche Google Groupes">
-<!ENTITY gblite.searchtype.blog "Blog Search">
-<!ENTITY gblite.searchtype.book "Book Search">
-<!ENTITY gblite.searchtype.scholar "Recherche Google Scholar">
-<!ENTITY gblite.searchtype.answers "Recherche Answers.com">
+<!ENTITY gblite.searchtype.blog "Recherche de Blogs">
+<!ENTITY gblite.searchtype.book "Recherche de Livres">
+<!ENTITY gblite.searchtype.finance "Recherche en Bourse">
+<!ENTITY gblite.searchtype.scholar "Recherche Scolaire et scientifiques">
+<!ENTITY gblite.searchtype.answers "Recherche Answers.com (Encyclopédie)">
 <!ENTITY gblite.context.web "Rechercher le texte sélectionné sur le Web">
 <!ENTITY gblite.context.ak.web "W">
 <!ENTITY gblite.context.site "Rechercher le texte sélectionné sur ce site">
@@ -36,7 +38,7 @@
 <!ENTITY gblite.context.ak.cachedlink "L">
 <!ENTITY gblite.context.similar "Trouver des pages similaires">
 <!ENTITY gblite.context.ak.similar "S">
-<!ENTITY gblite.context.translate "Traduire en anglais">
+<!ENTITY gblite.context.translate "Traduire en français">
 <!ENTITY gblite.context.ak.translate "T">
 <!ENTITY gblite.mainmenu.label.homepage "Site Web Google">
 <!ENTITY gblite.mainmenu.ak.homepage "G">
@@ -52,12 +54,16 @@
 <!ENTITY gblite.mainmenu.ak.news "c">
 <!ENTITY gblite.mainmenu.label.maps "Google Maps">
 <!ENTITY gblite.mainmenu.ak.maps "p">
+<!ENTITY gblite.mainmenu.label.shopping "R">
+<!ENTITY gblite.mainmenu.ak.shopping "r">
 <!ENTITY gblite.mainmenu.label.groups "Google Groupes">
 <!ENTITY gblite.mainmenu.ak.groups "G">
 <!ENTITY gblite.mainmenu.label.blog "Google Blog Search">
 <!ENTITY gblite.mainmenu.ak.blog "B">
 <!ENTITY gblite.mainmenu.label.book "Google Book Search">
 <!ENTITY gblite.mainmenu.ak.book "k">
+<!ENTITY gblite.mainmenu.label.finance "Google Finance">
+<!ENTITY gblite.mainmenu.ak.finance "F">
 <!ENTITY gblite.mainmenu.label.scholar "Google Scholar">
 <!ENTITY gblite.mainmenu.ak.scholar "S">
 <!ENTITY gblite.mainmenu.label.gmail "Google GMail">
@@ -80,10 +86,12 @@
 <!ENTITY gblite.tt.lucky "Faire une recherche &apos;J&apos;ai de la chance&apos;">
 <!ENTITY gblite.tt.site "Chercher sur ce site">
 <!ENTITY gblite.tt.image "Chercher des images sur le Web">
+<!ENTITY gblite.tt.shopping "Recherche un produit">
 <!ENTITY gblite.tt.group "Chercher sur Google Groupes">
-<!ENTITY gblite.tt.book "Search books">
+<!ENTITY gblite.tt.book "Chercher un livre">
 <!ENTITY gblite.tt.news "Chercher dans les Actualités">
-<!ENTITY gblite.tt.blog "Search blogs">
+<!ENTITY gblite.tt.blog "Chercher un blog">
+<!ENTITY gblite.tt.finance "Recherche boursière">
 <!ENTITY gblite.tt.video "Chercher sur Google Videos">
 <!ENTITY gblite.tt.maps "Chercher sur Google Maps">
 <!ENTITY gblite.tt.scholar "Chercher documents scolaires">

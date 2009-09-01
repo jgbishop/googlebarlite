@@ -5,13 +5,15 @@
 <!ENTITY gblite.searchtype.web "Cerca a la xarxa">
 <!ENTITY gblite.searchtype.lucky "Segur que tinc sort">
 <!ENTITY gblite.searchtype.site "Cerca al lloc web">
-<!ENTITY gblite.searchtype.image "Cerca d&apos;imatges">
+<!ENTITY gblite.searchtype.image "Cerca d'imatges">
 <!ENTITY gblite.searchtype.video "Cerca Videos">
 <!ENTITY gblite.searchtype.news "Cerca de Noticies">
 <!ENTITY gblite.searchtype.maps "Cerca a Google Maps">
+<!ENTITY gblite.searchtype.shopping "Cerca de Productes">
 <!ENTITY gblite.searchtype.group "Grups de Google">
 <!ENTITY gblite.searchtype.blog "Cerca Blocs">
 <!ENTITY gblite.searchtype.book "Cerca Llibres">
+<!ENTITY gblite.searchtype.finance "Google Finance">
 <!ENTITY gblite.searchtype.scholar "Google Scholar">
 <!ENTITY gblite.searchtype.answers "Cerca a Answers.com">
 <!ENTITY gblite.context.web "Cerca a la xarxa el text seleccionat">
@@ -30,13 +32,13 @@
 <!ENTITY gblite.context.ak.answers "A">
 <!ENTITY gblite.context.backwardlinks "Enllaç cap enrera">
 <!ENTITY gblite.context.ak.backwardlinks "B">
-<!ENTITY gblite.context.cached "Veure la copia de la memòria cau d&apos;aquesta pàgina">
+<!ENTITY gblite.context.cached "Veure la copia de la memòria cau d'aquesta pàgina">
 <!ENTITY gblite.context.ak.cached "C">
-<!ENTITY gblite.context.cachedlink "Foto a la memòria cau d&apos;aquest enllaç">
+<!ENTITY gblite.context.cachedlink "Foto a la memòria cau d'aquest enllaç">
 <!ENTITY gblite.context.ak.cachedlink "L">
 <!ENTITY gblite.context.similar "Cerca pàgines semblants">
 <!ENTITY gblite.context.ak.similar "S">
-<!ENTITY gblite.context.translate "Tradueix a l&apos;Anglès">
+<!ENTITY gblite.context.translate "Tradueix a l'Anglès">
 <!ENTITY gblite.context.ak.translate "T">
 <!ENTITY gblite.mainmenu.label.homepage "Pàgina principal de Google">
 <!ENTITY gblite.mainmenu.ak.homepage "G">
@@ -44,7 +46,7 @@
 <!ENTITY gblite.mainmenu.ak.googlelinks "L">
 <!ENTITY gblite.mainmenu.label.advanced "Cerca avançada">
 <!ENTITY gblite.mainmenu.ak.advanced "A">
-<!ENTITY gblite.mainmenu.label.images "Cerca d&apos;imatges del Google">
+<!ENTITY gblite.mainmenu.label.images "Cerca d'imatges del Google">
 <!ENTITY gblite.mainmenu.ak.images "I">
 <!ENTITY gblite.mainmenu.label.video "Google Video">
 <!ENTITY gblite.mainmenu.ak.video "V">
@@ -52,23 +54,27 @@
 <!ENTITY gblite.mainmenu.ak.news "N">
 <!ENTITY gblite.mainmenu.label.maps "Google Maps">
 <!ENTITY gblite.mainmenu.ak.maps "p">
+<!ENTITY gblite.mainmenu.label.shopping "Cerca de Productes">
+<!ENTITY gblite.mainmenu.ak.shopping "r">
 <!ENTITY gblite.mainmenu.label.groups "Grups de Google">
 <!ENTITY gblite.mainmenu.ak.groups "G">
 <!ENTITY gblite.mainmenu.label.blog "Cerca Blocs a Google">
 <!ENTITY gblite.mainmenu.ak.blog "B">
 <!ENTITY gblite.mainmenu.label.book "Cerca Llibres a Google">
 <!ENTITY gblite.mainmenu.ak.book "L">
+<!ENTITY gblite.mainmenu.label.finance "Google Finance">
+<!ENTITY gblite.mainmenu.ak.finance "F">
 <!ENTITY gblite.mainmenu.label.scholar "Google Scholar">
 <!ENTITY gblite.mainmenu.ak.scholar "S">
 <!ENTITY gblite.mainmenu.label.gmail "Google GMail">
 <!ENTITY gblite.mainmenu.ak.gmail "M">
 <!ENTITY gblite.mainmenu.label.searchprefs "Preferències de Cerca">
 <!ENTITY gblite.mainmenu.ak.searchprefs "P">
-<!ENTITY gblite.mainmenu.label.languagetools "Eines d&apos;Idioma">
+<!ENTITY gblite.mainmenu.label.languagetools "Eines d'Idioma">
 <!ENTITY gblite.mainmenu.ak.languagetools "T">
 <!ENTITY gblite.mainmenu.label.options "Opcions...">
 <!ENTITY gblite.mainmenu.ak.options "O">
-<!ENTITY gblite.mainmenu.label.clearhistory "Netejar l&apos;historial de Cerca">
+<!ENTITY gblite.mainmenu.label.clearhistory "Netejar l'historial de Cerca">
 <!ENTITY gblite.mainmenu.ak.clearhistory "C">
 <!ENTITY gblite.mainmenu.label.help "Ajuda">
 <!ENTITY gblite.mainmenu.ak.help "H">
@@ -80,13 +86,15 @@
 <!ENTITY gblite.tt.lucky "Segur que tinc sort">
 <!ENTITY gblite.tt.site "Cerca a aquest lloc web">
 <!ENTITY gblite.tt.image "Cerca imatges">
+<!ENTITY gblite.tt.shopping "Cerca Productes">
 <!ENTITY gblite.tt.group "Cerca a Grups de Google">
 <!ENTITY gblite.tt.book "Cerca Llibres">
 <!ENTITY gblite.tt.news "Cerca a notícies de Google">
 <!ENTITY gblite.tt.blog "Cerca Blocs">
+<!ENTITY gblite.tt.finance "Cerca Finances">
 <!ENTITY gblite.tt.video "Cerca a Google Video">
 <!ENTITY gblite.tt.maps "Cerca a Google Maps">
-<!ENTITY gblite.tt.scholar "Cerca articles d&apos;estudiants">
+<!ENTITY gblite.tt.scholar "Cerca articles d'estudiants">
 <!ENTITY gblite.tt.answers "Search Answers.com">
 <!ENTITY gblite.tt.up "Puja un nivell">
 <!ENTITY gblite.tt.highlighter "Activa ressaltar termes de cercaen aquesta pàgina">

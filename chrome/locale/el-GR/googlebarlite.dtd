@@ -9,9 +9,11 @@
 <!ENTITY gblite.searchtype.video "Αναζήτηση Βίντεο">
 <!ENTITY gblite.searchtype.news "Αναζήτηση Νέων">
 <!ENTITY gblite.searchtype.maps "Αναζήτηση στο Google Maps">
+<!ENTITY gblite.searchtype.shopping "Product Search">
 <!ENTITY gblite.searchtype.group "Αναζήτηση Ομάδων">
 <!ENTITY gblite.searchtype.blog "Blog Search">
 <!ENTITY gblite.searchtype.book "Book Search">
+<!ENTITY gblite.searchtype.finance "Finance Search">
 <!ENTITY gblite.searchtype.scholar "Αναζήτηση στο Scholar">
 <!ENTITY gblite.searchtype.answers "Άναζήτηση στο Answers.com">
 <!ENTITY gblite.context.web "Αναζήτηση στον Ιστό για το Επιλεγμένο Κείμενο">
@@ -52,12 +54,16 @@
 <!ENTITY gblite.mainmenu.ak.news "Ν">
 <!ENTITY gblite.mainmenu.label.maps "Google Maps">
 <!ENTITY gblite.mainmenu.ak.maps "s">
+<!ENTITY gblite.mainmenu.label.shopping "Google Product Search">
+<!ENTITY gblite.mainmenu.ak.shopping "r">
 <!ENTITY gblite.mainmenu.label.groups "Ομάδες στο Google">
 <!ENTITY gblite.mainmenu.ak.groups "Ο">
 <!ENTITY gblite.mainmenu.label.blog "Google Blog Search">
 <!ENTITY gblite.mainmenu.ak.blog "B">
 <!ENTITY gblite.mainmenu.label.book "Google Book Search">
 <!ENTITY gblite.mainmenu.ak.book "k">
+<!ENTITY gblite.mainmenu.label.finance "Google Finance">
+<!ENTITY gblite.mainmenu.ak.finance "F">
 <!ENTITY gblite.mainmenu.label.scholar "Google Scholar">
 <!ENTITY gblite.mainmenu.ak.scholar "S">
 <!ENTITY gblite.mainmenu.label.gmail "Google GMail">
@@ -80,10 +86,12 @@
 <!ENTITY gblite.tt.lucky "Εκτέλεση αναζήτησης &apos;Αισθάνομαι Τυχερός&apos;">
 <!ENTITY gblite.tt.site "Αναζήτηση στην ιστοσελίδα">
 <!ENTITY gblite.tt.image "Αναζήτηση στον ιστό για εικόνες">
+<!ENTITY gblite.tt.shopping "Search products">
 <!ENTITY gblite.tt.group "Αναζήτηση Ομάδων">
 <!ENTITY gblite.tt.book "Search books">
 <!ENTITY gblite.tt.news "Αναζήτηση νέων">
 <!ENTITY gblite.tt.blog "Search blogs">
+<!ENTITY gblite.tt.finance "Search finance">
 <!ENTITY gblite.tt.video "Αναζήτηση Βίνετο">
 <!ENTITY gblite.tt.maps "Αναζήτηση Google Maps">
 <!ENTITY gblite.tt.scholar "Αναζήτηση ακαδημαϊκών εργασιών">

@@ -9,9 +9,11 @@
 <!ENTITY gblite.searchtype.video "ビデオ検索">
 <!ENTITY gblite.searchtype.news "Google ニュース">
 <!ENTITY gblite.searchtype.maps "Google Maps検索">
+<!ENTITY gblite.searchtype.shopping "製品検索">
 <!ENTITY gblite.searchtype.group "グループ検索">
 <!ENTITY gblite.searchtype.blog "ブログ検索">
 <!ENTITY gblite.searchtype.book "ブック検索">
+<!ENTITY gblite.searchtype.finance "金融検索">
 <!ENTITY gblite.searchtype.scholar "Scholar検索">
 <!ENTITY gblite.searchtype.answers "Answers.com検索">
 <!ENTITY gblite.context.web "選択したテキストでウェブ検索">
@@ -52,12 +54,16 @@
 <!ENTITY gblite.mainmenu.ak.news "N">
 <!ENTITY gblite.mainmenu.label.maps "Google Maps">
 <!ENTITY gblite.mainmenu.ak.maps "p">
+<!ENTITY gblite.mainmenu.label.shopping "Google 製品検索">
+<!ENTITY gblite.mainmenu.ak.shopping "r">
 <!ENTITY gblite.mainmenu.label.groups "Google グループ">
 <!ENTITY gblite.mainmenu.ak.groups "G">
 <!ENTITY gblite.mainmenu.label.blog "Google ブログ検索">
 <!ENTITY gblite.mainmenu.ak.blog "B">
 <!ENTITY gblite.mainmenu.label.book "Google ブック検索">
 <!ENTITY gblite.mainmenu.ak.book "k">
+<!ENTITY gblite.mainmenu.label.finance "Google 金融">
+<!ENTITY gblite.mainmenu.ak.finance "F">
 <!ENTITY gblite.mainmenu.label.scholar "Google Scholar">
 <!ENTITY gblite.mainmenu.ak.scholar "S">
 <!ENTITY gblite.mainmenu.label.gmail "Google GMail">
@@ -80,10 +86,12 @@
 <!ENTITY gblite.tt.lucky "I&apos;m Feeling Luckyを使用する">
 <!ENTITY gblite.tt.site "このサイト内を検索する">
 <!ENTITY gblite.tt.image "ウェブ上のイメージを検索する">
+<!ENTITY gblite.tt.shopping "製品を検索">
 <!ENTITY gblite.tt.group "Google グループで検索する">
 <!ENTITY gblite.tt.book "本を検索する">
 <!ENTITY gblite.tt.news "ニュースを検索する">
 <!ENTITY gblite.tt.blog "ブログを検索する">
+<!ENTITY gblite.tt.finance "金融を検索">
 <!ENTITY gblite.tt.video "Google Videoで検索する">
 <!ENTITY gblite.tt.maps "Google Mapsで検索する">
 <!ENTITY gblite.tt.scholar "scholarly papersで検索する">

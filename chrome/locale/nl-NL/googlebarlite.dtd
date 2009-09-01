@@ -9,9 +9,11 @@
 <!ENTITY gblite.searchtype.video "Video&apos;s">
 <!ENTITY gblite.searchtype.news "Nieuws">
 <!ENTITY gblite.searchtype.maps "Maps">
+<!ENTITY gblite.searchtype.shopping "Producten">
 <!ENTITY gblite.searchtype.group "Discussiegroepen">
 <!ENTITY gblite.searchtype.blog "Blogs">
 <!ENTITY gblite.searchtype.book "Boeken">
+<!ENTITY gblite.searchtype.finance "Financieel">
 <!ENTITY gblite.searchtype.scholar "Wetenschap">
 <!ENTITY gblite.searchtype.answers "Answers.com">
 <!ENTITY gblite.context.web "Internet op de geselecteerde tekst doorzoeken">
@@ -46,18 +48,22 @@
 <!ENTITY gblite.mainmenu.ak.advanced "U">
 <!ENTITY gblite.mainmenu.label.images "Afbeeldingen">
 <!ENTITY gblite.mainmenu.ak.images "A">
-<!ENTITY gblite.mainmenu.label.video "Video&apos;s">
+<!ENTITY gblite.mainmenu.label.video "Video's">
 <!ENTITY gblite.mainmenu.ak.video "V">
 <!ENTITY gblite.mainmenu.label.news "Nieuws">
 <!ENTITY gblite.mainmenu.ak.news "N">
 <!ENTITY gblite.mainmenu.label.maps "Maps">
 <!ENTITY gblite.mainmenu.ak.maps "p">
+<!ENTITY gblite.mainmenu.label.shopping "Producten">
+<!ENTITY gblite.mainmenu.ak.shopping "r">
 <!ENTITY gblite.mainmenu.label.groups "Discussiegroepen">
 <!ENTITY gblite.mainmenu.ak.groups "D">
 <!ENTITY gblite.mainmenu.label.blog "Blogs">
 <!ENTITY gblite.mainmenu.ak.blog "B">
 <!ENTITY gblite.mainmenu.label.book "Boeken">
 <!ENTITY gblite.mainmenu.ak.book "k">
+<!ENTITY gblite.mainmenu.label.finance "Financieel">
+<!ENTITY gblite.mainmenu.ak.finance "f">
 <!ENTITY gblite.mainmenu.label.scholar "Wetenschap">
 <!ENTITY gblite.mainmenu.ak.scholar "W">
 <!ENTITY gblite.mainmenu.label.gmail "GMail">
@@ -77,16 +83,18 @@
 <!ENTITY gblite.tt.mainmenu "Googlebar Lite hoofdmenu">
 <!ENTITY gblite.tt.combined "Googlebar Lite zoekacties">
 <!ENTITY gblite.tt.web "Op internet zoeken">
-<!ENTITY gblite.tt.lucky "Zoeken met &apos;Ik doe een gok&apos;">
+<!ENTITY gblite.tt.lucky "Zoeken met 'Ik doe een gok'">
 <!ENTITY gblite.tt.site "Op huidige site zoeken">
 <!ENTITY gblite.tt.image "Zoeken naar afbeeldingen op internet">
-<!ENTITY gblite.tt.group "Zoeken in Google discussiegroepen">
+<!ENTITY gblite.tt.shopping "Zoeken naar producten">
+<!ENTITY gblite.tt.group "Zoeken naar discussiegroepen">
 <!ENTITY gblite.tt.book "Zoeken naar boeken">
 <!ENTITY gblite.tt.news "Zoeken naar nieuwsitems">
 <!ENTITY gblite.tt.blog "Zoeken naar blogs">
-<!ENTITY gblite.tt.video "Zoeken op Google Video">
-<!ENTITY gblite.tt.maps "Zoeken op Google Maps">
-<!ENTITY gblite.tt.scholar "Zoeken op Wetenschap">
+<!ENTITY gblite.tt.finance "Zoeken naar financieel">
+<!ENTITY gblite.tt.video "Zoeken naar video's">
+<!ENTITY gblite.tt.maps "Zoeken naar kaarten">
+<!ENTITY gblite.tt.scholar "Zoeken naar wetenschap">
 <!ENTITY gblite.tt.answers "Zoeken op Answers.com">
 <!ENTITY gblite.tt.up "Bovenliggende map">
 <!ENTITY gblite.tt.highlighter "Markeren van zoekwoorden op deze pagina in- of uitschakelen">

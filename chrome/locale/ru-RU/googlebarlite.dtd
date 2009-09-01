@@ -9,9 +9,11 @@
 <!ENTITY gblite.searchtype.video "Поиск видео">
 <!ENTITY gblite.searchtype.news "Поиск новостей">
 <!ENTITY gblite.searchtype.maps "Поиск по местности">
+<!ENTITY gblite.searchtype.shopping "Product Search">
 <!ENTITY gblite.searchtype.group "Поиск в конференциях Google">
 <!ENTITY gblite.searchtype.blog "Blog Search">
 <!ENTITY gblite.searchtype.book "Book Search">
+<!ENTITY gblite.searchtype.finance "Finance Search">
 <!ENTITY gblite.searchtype.scholar "Поиск учебных документов">
 <!ENTITY gblite.searchtype.answers "Поиск на Answer.com">
 <!ENTITY gblite.context.web "Найти в Интернет соответствия для отмеченного текста">
@@ -52,12 +54,16 @@
 <!ENTITY gblite.mainmenu.ak.news "н">
 <!ENTITY gblite.mainmenu.label.maps "Поиск по местности - Google Maps">
 <!ENTITY gblite.mainmenu.ak.maps "м">
+<!ENTITY gblite.mainmenu.label.shopping "Google Product Search">
+<!ENTITY gblite.mainmenu.ak.shopping "r">
 <!ENTITY gblite.mainmenu.label.groups "Поиск в конференциях">
 <!ENTITY gblite.mainmenu.ak.groups "г">
 <!ENTITY gblite.mainmenu.label.blog "Google Blog Search">
 <!ENTITY gblite.mainmenu.ak.blog "B">
 <!ENTITY gblite.mainmenu.label.book "Google Book Search">
 <!ENTITY gblite.mainmenu.ak.book "k">
+<!ENTITY gblite.mainmenu.label.finance "Google Finance">
+<!ENTITY gblite.mainmenu.ak.finance "F">
 <!ENTITY gblite.mainmenu.label.scholar "Поиск учебных документов">
 <!ENTITY gblite.mainmenu.ak.scholar "S">
 <!ENTITY gblite.mainmenu.label.gmail "Электронная почта - GMail">
@@ -80,10 +86,12 @@
 <!ENTITY gblite.tt.lucky "Выполнить поиск &quot;Мне повезёт&quot;">
 <!ENTITY gblite.tt.site "Найти на этом сайте">
 <!ENTITY gblite.tt.image "Найти картинки в сети">
+<!ENTITY gblite.tt.shopping "Search products">
 <!ENTITY gblite.tt.group "Найти в конференциях Google">
 <!ENTITY gblite.tt.book "Search books">
 <!ENTITY gblite.tt.news "Найти в новостях">
 <!ENTITY gblite.tt.blog "Search blogs">
+<!ENTITY gblite.tt.finance "Search finance">
 <!ENTITY gblite.tt.video "Найти на сайте Google видео">
 <!ENTITY gblite.tt.maps "Найти местность на Google Maps">
 <!ENTITY gblite.tt.scholar "Найти среди школьных документов">

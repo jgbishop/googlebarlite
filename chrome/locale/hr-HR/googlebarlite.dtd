@@ -9,9 +9,11 @@
 <!ENTITY gblite.searchtype.video "Pretraživanje videa">
 <!ENTITY gblite.searchtype.news "Pretraživanje vijesti">
 <!ENTITY gblite.searchtype.maps "Pretraživanje Google Mapa">
+<!ENTITY gblite.searchtype.shopping "Product Search">
 <!ENTITY gblite.searchtype.group "Pretraživanje grupa">
 <!ENTITY gblite.searchtype.blog "Blog Search">
 <!ENTITY gblite.searchtype.book "Book Search">
+<!ENTITY gblite.searchtype.finance "Finance Search">
 <!ENTITY gblite.searchtype.scholar "Pretraživanje učenika">
 <!ENTITY gblite.searchtype.answers "Answers.com Pretraživanje">
 <!ENTITY gblite.context.web "Pretraži web za odabrani tekst">
@@ -52,12 +54,16 @@
 <!ENTITY gblite.mainmenu.ak.news "j">
 <!ENTITY gblite.mainmenu.label.maps "Google Mape">
 <!ENTITY gblite.mainmenu.ak.maps "p">
+<!ENTITY gblite.mainmenu.label.shopping "Google Product Search">
+<!ENTITY gblite.mainmenu.ak.shopping "r">
 <!ENTITY gblite.mainmenu.label.groups "Google Grupe">
 <!ENTITY gblite.mainmenu.ak.groups "G">
 <!ENTITY gblite.mainmenu.label.blog "Google Blog Search">
 <!ENTITY gblite.mainmenu.ak.blog "B">
 <!ENTITY gblite.mainmenu.label.book "Google Book Search">
 <!ENTITY gblite.mainmenu.ak.book "k">
+<!ENTITY gblite.mainmenu.label.finance "Google Finance">
+<!ENTITY gblite.mainmenu.ak.finance "F">
 <!ENTITY gblite.mainmenu.label.scholar "Google učenici">
 <!ENTITY gblite.mainmenu.ak.scholar "č">
 <!ENTITY gblite.mainmenu.label.gmail "Google GMail">
@@ -80,10 +86,12 @@
 <!ENTITY gblite.tt.lucky "Izvrši Osjećam se sretnim pretraživanje">
 <!ENTITY gblite.tt.site "Pretraži ovu stranicu">
 <!ENTITY gblite.tt.image "Pretraži za slike na webu">
+<!ENTITY gblite.tt.shopping "Search products">
 <!ENTITY gblite.tt.group "Pretraži Google Grupe">
 <!ENTITY gblite.tt.book "Search books">
 <!ENTITY gblite.tt.news "Pretraži vijesti">
 <!ENTITY gblite.tt.blog "Search blogs">
+<!ENTITY gblite.tt.finance "Search finance">
 <!ENTITY gblite.tt.video "Pretraži Google video">
 <!ENTITY gblite.tt.maps "Pretraži Google Mape">
 <!ENTITY gblite.tt.scholar "Pretraži učeničku dokumentaciju">

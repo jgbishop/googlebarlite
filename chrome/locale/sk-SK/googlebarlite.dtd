@@ -9,9 +9,11 @@
 <!ENTITY gblite.searchtype.video "Vyhľadať videá">
 <!ENTITY gblite.searchtype.news "Vyhľadať novinky">
 <!ENTITY gblite.searchtype.maps "Vyhľadať v Mapách Google">
+<!ENTITY gblite.searchtype.shopping "Product Search">
 <!ENTITY gblite.searchtype.group "Vyhľadať skupiny">
 <!ENTITY gblite.searchtype.blog "Blog Search">
 <!ENTITY gblite.searchtype.book "Book Search">
+<!ENTITY gblite.searchtype.finance "Finance Search">
 <!ENTITY gblite.searchtype.scholar "Študentské vyhľadávanie">
 <!ENTITY gblite.searchtype.answers "Vyhľadať na Answers.com">
 <!ENTITY gblite.context.web "Vyhľadať zvolený text na webe">
@@ -52,12 +54,16 @@
 <!ENTITY gblite.mainmenu.ak.news "N">
 <!ENTITY gblite.mainmenu.label.maps "Mapy Google">
 <!ENTITY gblite.mainmenu.ak.maps "p">
+<!ENTITY gblite.mainmenu.label.shopping "Google Product Search">
+<!ENTITY gblite.mainmenu.ak.shopping "r">
 <!ENTITY gblite.mainmenu.label.groups "Google skupiny">
 <!ENTITY gblite.mainmenu.ak.groups "G">
 <!ENTITY gblite.mainmenu.label.blog "Google Blog Search">
 <!ENTITY gblite.mainmenu.ak.blog "B">
 <!ENTITY gblite.mainmenu.label.book "Google Book Search">
 <!ENTITY gblite.mainmenu.ak.book "k">
+<!ENTITY gblite.mainmenu.label.finance "Google Finance">
+<!ENTITY gblite.mainmenu.ak.finance "F">
 <!ENTITY gblite.mainmenu.label.scholar "Google študent">
 <!ENTITY gblite.mainmenu.ak.scholar "t">
 <!ENTITY gblite.mainmenu.label.gmail "Google GMail">
@@ -80,10 +86,12 @@
 <!ENTITY gblite.tt.lucky "Vykonať vyhľadávanie I&apos;m Feeling Lucky">
 <!ENTITY gblite.tt.site "Vyhľadať na tejto stránke">
 <!ENTITY gblite.tt.image "Vyhľadať obrázky na Webe">
+<!ENTITY gblite.tt.shopping "Search products">
 <!ENTITY gblite.tt.group "Vyhľadať v skupinách Google">
 <!ENTITY gblite.tt.book "Search books">
 <!ENTITY gblite.tt.news "Vyhľadať novinky">
 <!ENTITY gblite.tt.blog "Search blogs">
+<!ENTITY gblite.tt.finance "Search finance">
 <!ENTITY gblite.tt.video "Vyhľadať videá cez Google">
 <!ENTITY gblite.tt.maps "Vyhľadať v Mapách Google">
 <!ENTITY gblite.tt.scholar "Vyhľadať študentské časopisy">

@@ -9,9 +9,11 @@
 <!ENTITY gblite.searchtype.video "视频搜索">
 <!ENTITY gblite.searchtype.news "新闻搜索">
 <!ENTITY gblite.searchtype.maps "Google 地图搜索">
+<!ENTITY gblite.searchtype.shopping "Product Search">
 <!ENTITY gblite.searchtype.group "讨论组搜索">
 <!ENTITY gblite.searchtype.blog "Blog Search">
 <!ENTITY gblite.searchtype.book "Book Search">
+<!ENTITY gblite.searchtype.finance "Finance Search">
 <!ENTITY gblite.searchtype.scholar "学术搜索">
 <!ENTITY gblite.searchtype.answers "Answers.com 搜索">
 <!ENTITY gblite.context.web "在网页搜索中查找选中的文字">
@@ -52,12 +54,16 @@
 <!ENTITY gblite.mainmenu.ak.news "N">
 <!ENTITY gblite.mainmenu.label.maps "Google 地图">
 <!ENTITY gblite.mainmenu.ak.maps "P">
+<!ENTITY gblite.mainmenu.label.shopping "Google Product Search">
+<!ENTITY gblite.mainmenu.ak.shopping "r">
 <!ENTITY gblite.mainmenu.label.groups "Google 讨论组">
 <!ENTITY gblite.mainmenu.ak.groups "G">
 <!ENTITY gblite.mainmenu.label.blog "Google Blog Search">
 <!ENTITY gblite.mainmenu.ak.blog "B">
 <!ENTITY gblite.mainmenu.label.book "Google Book Search">
 <!ENTITY gblite.mainmenu.ak.book "k">
+<!ENTITY gblite.mainmenu.label.finance "Google Finance">
+<!ENTITY gblite.mainmenu.ak.finance "F">
 <!ENTITY gblite.mainmenu.label.scholar "Google 学术">
 <!ENTITY gblite.mainmenu.ak.scholar "S">
 <!ENTITY gblite.mainmenu.label.gmail "Google GMail">
@@ -80,10 +86,12 @@
 <!ENTITY gblite.tt.lucky "运行 [手气不错] 搜索">
 <!ENTITY gblite.tt.site "搜索当前网站">
 <!ENTITY gblite.tt.image "在网页中搜索图片">
+<!ENTITY gblite.tt.shopping "Search products">
 <!ENTITY gblite.tt.group "搜索 Google 讨论组">
 <!ENTITY gblite.tt.book "Search books">
 <!ENTITY gblite.tt.news "搜索新闻">
 <!ENTITY gblite.tt.blog "Search blogs">
+<!ENTITY gblite.tt.finance "Search finance">
 <!ENTITY gblite.tt.video "搜索 Google 视频">
 <!ENTITY gblite.tt.maps "搜索 Google 地图">
 <!ENTITY gblite.tt.scholar "搜索学术论文">

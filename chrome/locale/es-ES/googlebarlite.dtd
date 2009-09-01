@@ -9,9 +9,11 @@
 <!ENTITY gblite.searchtype.video "Buscar vídeos">
 <!ENTITY gblite.searchtype.news "Buscar en noticias">
 <!ENTITY gblite.searchtype.maps "Buscar en Mapas de Google">
+<!ENTITY gblite.searchtype.shopping "Buscar productos">
 <!ENTITY gblite.searchtype.group "Buscar en grupos">
 <!ENTITY gblite.searchtype.blog "Buscar en blogs">
 <!ENTITY gblite.searchtype.book "Buscar en Google Libros">
+<!ENTITY gblite.searchtype.finance "Buscar en finanzas">
 <!ENTITY gblite.searchtype.scholar "Buscar en Google Académico">
 <!ENTITY gblite.searchtype.answers "Buscar en Answers.com">
 <!ENTITY gblite.context.web "Buscar el texto seleccionado en la web">
@@ -52,12 +54,16 @@
 <!ENTITY gblite.mainmenu.ak.news "N">
 <!ENTITY gblite.mainmenu.label.maps "Mapas de Google">
 <!ENTITY gblite.mainmenu.ak.maps "p">
+<!ENTITY gblite.mainmenu.label.shopping "Productos de Google">
+<!ENTITY gblite.mainmenu.ak.shopping "r">
 <!ENTITY gblite.mainmenu.label.groups "Grupos de Google">
 <!ENTITY gblite.mainmenu.ak.groups "G">
 <!ENTITY gblite.mainmenu.label.blog "Blogs de Google">
 <!ENTITY gblite.mainmenu.ak.blog "B">
 <!ENTITY gblite.mainmenu.label.book "Libros de Google">
 <!ENTITY gblite.mainmenu.ak.book "L">
+<!ENTITY gblite.mainmenu.label.finance "Google Finanzas">
+<!ENTITY gblite.mainmenu.ak.finance "F">
 <!ENTITY gblite.mainmenu.label.scholar "Google Académico">
 <!ENTITY gblite.mainmenu.ak.scholar "c">
 <!ENTITY gblite.mainmenu.label.gmail "GMail de Google">
@@ -80,10 +86,12 @@
 <!ENTITY gblite.tt.lucky "Hacer una búsqueda «Voy a tener suerte»">
 <!ENTITY gblite.tt.site "Buscar en este sitio">
 <!ENTITY gblite.tt.image "Buscar imágenes en la web">
+<!ENTITY gblite.tt.shopping "Buscar productos con Google">
 <!ENTITY gblite.tt.group "Buscar en grupos de Google">
 <!ENTITY gblite.tt.book "Buscar en Google Libros">
 <!ENTITY gblite.tt.news "Buscar en noticias de Google">
 <!ENTITY gblite.tt.blog "Buscar en blogs">
+<!ENTITY gblite.tt.finance "Buscar en finanzas de Google">
 <!ENTITY gblite.tt.video "Buscar en vídeos de Google">
 <!ENTITY gblite.tt.maps "Buscar en Mapas de Google">
 <!ENTITY gblite.tt.scholar "Buscar artículos en Google Académico">

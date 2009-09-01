@@ -9,9 +9,11 @@
 <!ENTITY gblite.searchtype.video "Video-Suche">
 <!ENTITY gblite.searchtype.news "News-Suche">
 <!ENTITY gblite.searchtype.maps "&quot;Google Maps&quot;-Suche">
+<!ENTITY gblite.searchtype.shopping "Produktsuche">
 <!ENTITY gblite.searchtype.group "Groups-Suche">
 <!ENTITY gblite.searchtype.blog "Blog-Suche">
 <!ENTITY gblite.searchtype.book "Buchsuche">
+<!ENTITY gblite.searchtype.finance "Finanzmarkt-Suche">
 <!ENTITY gblite.searchtype.scholar "Scholar-Suche">
 <!ENTITY gblite.searchtype.answers "Answers.com-Suche">
 <!ENTITY gblite.context.web "Web nach ausgewähltem Text durchsuchen">
@@ -52,12 +54,16 @@
 <!ENTITY gblite.mainmenu.ak.news "N">
 <!ENTITY gblite.mainmenu.label.maps "Google Maps">
 <!ENTITY gblite.mainmenu.ak.maps "p">
+<!ENTITY gblite.mainmenu.label.shopping "Google-Produktsuche">
+<!ENTITY gblite.mainmenu.ak.shopping "r">
 <!ENTITY gblite.mainmenu.label.groups "Google Groups">
 <!ENTITY gblite.mainmenu.ak.groups "G">
 <!ENTITY gblite.mainmenu.label.blog "Google Blog-Suche">
 <!ENTITY gblite.mainmenu.ak.blog "B">
 <!ENTITY gblite.mainmenu.label.book "Google Buchsuche">
 <!ENTITY gblite.mainmenu.ak.book "C">
+<!ENTITY gblite.mainmenu.label.finance "Google-Finanzmarkt">
+<!ENTITY gblite.mainmenu.ak.finance "F">
 <!ENTITY gblite.mainmenu.label.scholar "Google Scholar">
 <!ENTITY gblite.mainmenu.ak.scholar "S">
 <!ENTITY gblite.mainmenu.label.gmail "Google Mail">
@@ -80,10 +86,12 @@
 <!ENTITY gblite.tt.lucky "Suchen und direkt zum besten Ergebnis wechseln">
 <!ENTITY gblite.tt.site "Nur auf der aktuellen Website suchen">
 <!ENTITY gblite.tt.image "Im Internet nach Bildern suchen">
+<!ENTITY gblite.tt.shopping "Im Internet nach Produkten suchen">
 <!ENTITY gblite.tt.group "Innerhalb der Google Groups-Diskussionen suchen">
 <!ENTITY gblite.tt.book "Das Internet nach Büchern durchsuchen">
 <!ENTITY gblite.tt.news "Nachrichtenartikel suchen">
 <!ENTITY gblite.tt.blog "Blogs durchsuchen">
+<!ENTITY gblite.tt.finance "Finanzmärkte durchsuchen">
 <!ENTITY gblite.tt.video "Nach Videos suchen">
 <!ENTITY gblite.tt.maps "Lokale Adressen, Geschäfte und Unternehmen finden">
 <!ENTITY gblite.tt.scholar "Nach wissenschaftlichen Dokumenten suchen">

@@ -9,9 +9,11 @@
 <!ENTITY gblite.searchtype.video "Videosøgning">
 <!ENTITY gblite.searchtype.news "Nyhedssøgning">
 <!ENTITY gblite.searchtype.maps "Google Maps søgning">
+<!ENTITY gblite.searchtype.shopping "Product Search">
 <!ENTITY gblite.searchtype.group "Gruppesøgning">
 <!ENTITY gblite.searchtype.blog "Blog Search">
 <!ENTITY gblite.searchtype.book "Book Search">
+<!ENTITY gblite.searchtype.finance "Finance Search">
 <!ENTITY gblite.searchtype.scholar "Scholar søgning">
 <!ENTITY gblite.searchtype.answers "Answers.com søgning">
 <!ENTITY gblite.context.web "Søg efter den markerede tekst på nettet">
@@ -52,12 +54,16 @@
 <!ENTITY gblite.mainmenu.ak.news "N">
 <!ENTITY gblite.mainmenu.label.maps "Google Maps">
 <!ENTITY gblite.mainmenu.ak.maps "p">
+<!ENTITY gblite.mainmenu.label.shopping "Google Product Search">
+<!ENTITY gblite.mainmenu.ak.shopping "r">
 <!ENTITY gblite.mainmenu.label.groups "Google Grupper">
 <!ENTITY gblite.mainmenu.ak.groups "G">
 <!ENTITY gblite.mainmenu.label.blog "Google Blog Search">
 <!ENTITY gblite.mainmenu.ak.blog "B">
 <!ENTITY gblite.mainmenu.label.book "Google Book Search">
 <!ENTITY gblite.mainmenu.ak.book "k">
+<!ENTITY gblite.mainmenu.label.finance "Google Finance">
+<!ENTITY gblite.mainmenu.ak.finance "F">
 <!ENTITY gblite.mainmenu.label.scholar "Google Scholar">
 <!ENTITY gblite.mainmenu.ak.scholar "S">
 <!ENTITY gblite.mainmenu.label.gmail "Google GMail">
@@ -80,10 +86,12 @@
 <!ENTITY gblite.tt.lucky "Udfør en Jeg føler mig heldig søgning">
 <!ENTITY gblite.tt.site "Søg på sitet">
 <!ENTITY gblite.tt.image "Søg efter billeder">
+<!ENTITY gblite.tt.shopping "Search products">
 <!ENTITY gblite.tt.group "Søg i grupper">
 <!ENTITY gblite.tt.book "Search books">
 <!ENTITY gblite.tt.news "Søg efter nyheder">
 <!ENTITY gblite.tt.blog "Search blogs">
+<!ENTITY gblite.tt.finance "Search finance">
 <!ENTITY gblite.tt.video "Søg i Google Video">
 <!ENTITY gblite.tt.maps "Søg i Google Maps">
 <!ENTITY gblite.tt.scholar "Søg i videnskabelige udgivelser">
