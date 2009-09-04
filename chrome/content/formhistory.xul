@@ -23,10 +23,10 @@
 	<vbox align="center">
 	<hbox>
 		<button label="&gblite.formhistory.enableformhistory;" accesskey="&gblite.formhistory.ak.enableformhistory;"
-				oncommand="opener.GBL_EnableFormHistory(document.getElementById('GBL-DoNotDisplayAgain').checked); self.close();" />
+				oncommand="opener.objGooglebarLite.EnableFormHistory(document.getElementById('GBL-DoNotDisplayAgain').checked); self.close();" />
 				
 		<button label="&gblite.formhistory.disablesearchhistory;" accesskey="&gblite.formhistory.ak.disablesearchhistory;"
-				oncommand="opener.GBL_DisableSearchHistory(document.getElementById('GBL-DoNotDisplayAgain').checked); self.close();" />
+				oncommand="opener.objGooglebarLite.DisableSearchHistory(document.getElementById('GBL-DoNotDisplayAgain').checked); self.close();" />
 				
 		<button label="&gblite.formhistory.cancel;" accesskey="&gblite.formhistory.ak.cancel;" oncommand="self.close();" />
 	</hbox>

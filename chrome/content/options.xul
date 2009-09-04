@@ -9,8 +9,8 @@
 		xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
 		buttons="accept, cancel"
 		orient="vertical"
-        ondialogaccept="GBL_SaveOptions()"
-		onload="GBL_LoadOptions()"
+        ondialogaccept="objGooglebarLiteOptions.SaveOptions()"
+		onload="objGooglebarLiteOptions.LoadOptions()"
 		title="&gblite.options.title;">
 
 <script type="application/x-javascript" src="chrome://googlebarlite/content/googlebarlite.js"/>
@@ -212,10 +212,11 @@
 	
 	<tabpanel id="GBL-OptTab-SearchHistory" orient="vertical">
 		<checkbox id="GBL-Opt-WarnOnFormHistory" label="&gblite.options.warnonformhistory;" />
-		<checkbox id="GBL-Opt-MaintainHistory" label="&gblite.options.maintainhistory;" oncommand="GBL_UpdateSearchHistoryStatus();" />
+		<checkbox id="GBL-Opt-MaintainHistory" label="&gblite.options.maintainhistory;" oncommand="objGooglebarLiteOptions.UpdateSearchHistoryStatus();" />
 		
 			<vbox class="GBL-Indent">
-			<checkbox id="GBL-Opt-EnableAutoComplete" label="&gblite.options.autocomplete;" flex="1" oncommand="GBL_UpdateUseInlineCompleteStatus();" />
+			<checkbox id="GBL-Opt-EnableAutoComplete" label="&gblite.options.autocomplete;" flex="1"
+					  oncommand="objGooglebarLiteOptions.UpdateUseInlineCompleteStatus();" />
 			<checkbox id="GBL-Opt-UseInlineComplete" label="&gblite.options.inlinecomplete;" />
 			<checkbox id="GBL-Opt-AutoSearch" label="&gblite.options.autosearchhistory;" />
 			<checkbox id="GBL-Opt-PromptToClearHistory" label="&gblite.options.prompttoclear;" />

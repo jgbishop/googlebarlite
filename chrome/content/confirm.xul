@@ -6,17 +6,17 @@
 <window title="&gblite.confirm.title;" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
 <vbox align="center" flex="1">
-	<separator orient="vertical" />
+	<separator orient="horizontal" />
 	<label value="&gblite.confirm.label.usure;" />
-	<separator orient="vertical" />
+	<separator orient="horizontal" />
 	<hbox>
 		<button label="&gblite.confirm.label.yes;" accesskey="&gblite.confirm.ak.yes;"
-				onclick="opener.GBL_ClearHistory('true'); self.close();" />
+				onclick="opener.objGooglebarLite.ClearHistory('true'); self.close();" />
 				
 		<button label="&gblite.confirm.label.no;" accesskey="&gblite.confirm.ak.no;" default="true"
-				onclick="opener.GBL_ClearHistory('false'); self.close();" />
+				onclick="opener.objGooglebarLite.ClearHistory('false'); self.close();" />
 	</hbox>
-	<separator orient="vertical" />
+	<separator orient="horizontal" />
 </vbox>
 
 </window>

@@ -31,17 +31,17 @@
 			<rows>
 				<row>
 					<label value="&gblite.about.createdby;" class="strong" />
-					<label value="Jonah Bishop" class="link" onclick="GBL_OpenAboutLink('jonah');" tooltiptext="http://www.borngeek.com/about/"/>
+					<label value="Jonah Bishop" class="link" onclick="objGooglebarLiteAboutDialog.OpenAboutLink('jonah');" tooltiptext="http://www.borngeek.com/about/"/>
 				</row>
 				
 				<row>
 					<label value="&gblite.about.ontheweb;" class="strong" />
-					<label value="&gblite.about.visithomepage;" class="link" onclick="GBL_OpenAboutLink('homepage');" tooltiptext="http://www.borngeek.com/firefox/googlebarlite/" />
+					<label value="&gblite.about.visithomepage;" class="link" onclick="objGooglebarLiteAboutDialog.OpenAboutLink('homepage');" tooltiptext="http://www.borngeek.com/firefox/googlebarlite/" />
 				</row>
 				
 				<row>
 					<spacer />
-					<label value="&gblite.about.visitdocumentation;" class="link" onclick="GBL_OpenAboutLink('doc');" tooltiptext="http://www.borngeek.com/firefox/googlebarlite/doc/" />
+					<label value="&gblite.about.visitdocumentation;" class="link" onclick="objGooglebarLiteAboutDialog.OpenAboutLink('doc');" tooltiptext="http://www.borngeek.com/firefox/googlebarlite/doc/" />
 				</row>
 			</rows>
 		</grid>
