@@ -11,14 +11,14 @@ var objGooglebarLite = {
 	// General preference names
 	PrefName_SiteToUse			: "site_to_use",
 	PrefName_ClickSelectsAll	: "click_selects_all",
-	PrefName_SearchInTab		: "search_in_tab",
+	PrefName_SearchInTab		: "search_in_tab", // Open results in a new tab
 	PrefName_RememberCombined	: "remember_combined",
 	PrefName_SearchOnDragDrop	: "search_on_drag_drop",
 	PrefName_WarnOnFormHistory	: "warn_on_form_history",
 	PrefName_MaintainHistory	: "maintain_history",
 	PrefName_EnableAutoComplete : "enable_auto_complete",
 	PrefName_UseInlineComplete	: "use_inline_complete",
-	PrefName_AutoSearch			: "auto_search",
+	PrefName_AutoSearch			: "auto_search", // Auto search when selecting from history
 	PrefName_PromptToClear		: "prompt_to_clear",
 	PrefName_IgnoreAnswers		: "ignore_answers",
 	
@@ -204,10 +204,7 @@ var objGooglebarLite = {
 							terms = queryParts[q];
 							var searchTerms = objGooglebarLite.GetSearchTerms();
 							if(searchTerms != terms)
-							{
 								objGooglebarLite.SetSearchTerms(terms);
-								objGooglebarLite.TermsHaveUpdated();
-							}
 							break;
 						}
 					}
@@ -254,7 +251,7 @@ var objGooglebarLite = {
 			if(!dropData || !dropData.data || dropData.data == "") { return; }
 			var searchBox = document.getElementById("GBL-SearchBox");
 			if(event.target != searchBox) { return; }
-			objGooglebarLite.DragDropToSearchBox(dropData.data);
+			objGooglebarLite.DragDropToSearchBox(event, dropData.data);
 		}
 	},
 
@@ -335,7 +332,7 @@ var objGooglebarLite = {
 		}
 	},
 
-	AddSearchWordButton: function(term)
+	AddSearchWordButtons: function(term)
 	{
 		var searchWordsContainer = document.getElementById("GBL-TB-SearchWordsContainer");
 		var highlighter = document.getElementById("GBL-TB-Highlighter");
@@ -449,9 +446,8 @@ var objGooglebarLite = {
 	
 		this.FormHistory.removeEntriesForName("GBL-Search-History");
 	
-		this.SetSearchTerms("");		// Clear the search terms box
-		this.ClearSearchWordButtons();	// Clear the search word buttons
-	
+		this.SetSearchTerms(""); // Clear the search terms box and buttons
+        
 		var hb = document.getElementById("GBL-TB-Highlighter");
 	
 		if(hb.checked == true)
@@ -467,19 +463,6 @@ var objGooglebarLite = {
 			window.openDialog("chrome://googlebarlite/content/confirm.xul", "Clear Search History?", "centerscreen,chrome,modal");
 		else
 			this.ClearHistory(true);
-	},
-	
-	ClearSearchWordButtons: function()
-	{
-		var i=0;
-	
-		var searchWordsContainer = document.getElementById("GBL-TB-SearchWordsContainer");
-		for(i=searchWordsContainer.childNodes.length; i > 0; i--)
-			searchWordsContainer.removeChild(searchWordsContainer.childNodes[0]);
-	
-		var overflowMenu = document.getElementById("GBL-Overflow-Menu");
-		for(i=overflowMenu.childNodes.length; i > 0; i--)
-			overflowMenu.removeChild(overflowMenu.childNodes[0]);
 	},
 	
 	CombinedSearch: function(event)
@@ -547,7 +530,7 @@ var objGooglebarLite = {
 		var navtoolbox = document.getElementById("navigator-toolbox");
 		objGooglebarLite.OriginalCustomizeDone = navtoolbox.customizeDone;
 		navtoolbox.customizeDone = objGooglebarLite.BuildFunction(this, objGooglebarLite.ToolboxCustomizeDone);
-	
+
 		var searchbox = document.getElementById("GBL-SearchBox");
 		searchbox.addEventListener("popupshowing", objGooglebarLite.SearchContextOnPopupShowing, true);
 		searchbox.addEventListener("dragdrop", objGooglebarLite.SearchBoxOnDrop, true); // Pre-FF 3.5
@@ -565,7 +548,7 @@ var objGooglebarLite = {
 			this.PrefBranch.setBoolPref(this.PrefName_WarnOnFormHistory, false);
 	},
 	
-	DragDropToSearchBox: function(data)
+	DragDropToSearchBox: function(event, data)
 	{
 		var d = window.content.document;
 		var tempDiv = d.createElement("div");
@@ -574,12 +557,18 @@ var objGooglebarLite = {
 		var searchTerms = this.GetTextContent(tempDiv);
 		searchTerms = searchTerms.replace(/[\r\n]/g, '');
 		searchTerms = this.TrimString(searchTerms);
-	
+
 		this.SetSearchTerms(searchTerms);
-		this.TermsHaveUpdated();
-	
+        
 		if(this.SearchOnDragDrop)
-			this.Search(searchTerms, "web", false, false);
+		{
+			var isEmpty = false;
+			if(searchTerms.length == 0)
+				isEmpty = true;
+
+			var useTab = this.OpenInTab(event, false);
+			this.Search(searchTerms, "web", isEmpty, useTab);
+		}
 	},
 	
 	EnableFormHistory: function(neverShowAgain)
@@ -806,8 +795,7 @@ var objGooglebarLite = {
 			if(window.opener != null)
 			{
 				var osb = window.opener.document.getElementById("GBL-SearchBox");
-				document.getElementById("GBL-SearchBox").value = osb.value;
-				objGooglebarLite.TermsHaveUpdated();
+				objGooglebarLite.SetSearchTerms(osb.value);
 			}
 	
 			setTimeout(objGooglebarLite.ValidateSearchHistorySetting, 50);
@@ -993,7 +981,6 @@ var objGooglebarLite = {
 		if(pastetext.length == 0) return; // Exit if text is empty
 	
 		this.SetSearchTerms(pastetext);
-		this.TermsHaveUpdated();
 	
 		var useTab = false;
 		if(window.content.document.location != "about:blank")
@@ -1017,20 +1004,20 @@ var objGooglebarLite = {
 	
 	PrepareSearch: function(event, searchType)
 	{
-		// Step 1: Determine if we need to open search results in a new tab
-		var useTab = this.OpenInTab(event, false);
-		
-		// Step 2: Check the search type (if necessary)
-		if(searchType == "")
-			searchType = this.GetSearchType(event);
-	
-		// Step 3: Get the search terms
+		// Step 1: Get the search terms
 		var searchTerms = this.TrimString(this.GetSearchTerms());
 		var isEmpty = false;
 	
 		if(searchTerms.length == 0)
 			isEmpty = true;
 	
+		// Step 2: Check the search type (if necessary)
+		if(searchType == "")
+			searchType = this.GetSearchType(event);
+	
+		// Step 3: Determine if we need to open search results in a new tab
+		var useTab = this.OpenInTab(event, false);
+		
 		// Step 4: Perform the search
 		this.Search(searchTerms, searchType, isEmpty, useTab);
 	},
@@ -1088,7 +1075,6 @@ var objGooglebarLite = {
 		// ****************************************
 	
 		this.SetSearchTerms(selection);
-		this.TermsHaveUpdated();
 	
 		// ****************************************
 		// Step 4: Perform the search
@@ -1502,6 +1488,8 @@ var objGooglebarLite = {
 	{
 		var searchbox = document.getElementById("GBL-SearchBox");
 		searchbox.value = terms;
+
+		this.TermsHaveUpdated();
 	},
 
 	SplitTerms: function(searchwords)
@@ -1626,11 +1614,12 @@ var objGooglebarLite = {
 			objGooglebarLite.OptionsHaveUpdated();
 			objGooglebarLite.UpdateUpMenu();
 			
-			// Clear the search words (and buttons) every time (to avoid a weird auto-selection bug with search history)
+			// Clear the search words every time to avoid a weird auto-selection bug with search history
+			// Also clears search word buttons
 			objGooglebarLite.SetSearchTerms("");
-			objGooglebarLite.ClearSearchWordButtons();
-			objGooglebarLite.TermsHaveUpdated();
 		}
+		else if(mainItem && !somethingChanged)
+			objGooglebarLite.SetSearchTerms(""); // Prevent zombie search word buttons from appearing
 	
 		this.objGooglebarLite.OriginalCustomizeDone(somethingChanged);
 	},
@@ -1894,8 +1883,20 @@ var objGooglebarLite = {
 	
 	UpdateSearchWordButtons: function()
 	{
-		this.ClearSearchWordButtons();
-		this.AddSearchWordButton(this.GetSearchTerms());
+		// Step 1: Clear existing search word buttons
+		var i=0;
+	
+		var searchWordsContainer = document.getElementById("GBL-TB-SearchWordsContainer");
+		for(i=searchWordsContainer.childNodes.length; i > 0; i--)
+			searchWordsContainer.removeChild(searchWordsContainer.childNodes[0]);
+	
+		var overflowMenu = document.getElementById("GBL-Overflow-Menu");
+		for(i=overflowMenu.childNodes.length; i > 0; i--)
+			overflowMenu.removeChild(overflowMenu.childNodes[0]);
+
+		// Step 2: Add the new search word buttons
+		var terms = this.GetSearchTerms();
+		this.AddSearchWordButtons(this.GetSearchTerms());
 	},
 
 	UpdateUpMenu: function()
