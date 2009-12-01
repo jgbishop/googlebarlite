@@ -154,14 +154,18 @@
 				</toolbaritem>
 				
 				<toolbaritem id="GBL-SearchBox-TBItem" persist="width" align="center">
-				<textbox id="GBL-SearchBox" type="autocomplete" autocompletesearch="form-history"
-						 autocompletesearchparam="GBL-Search-History" ontextentered="objGooglebarLite.SearchBoxTextEntered(param);"
-						 completedefaultindex="false" disableautocomplete="false"
-						 onfocus="objGooglebarLite.SearchBoxFocusHandler(event, this);"
-						 onclick="objGooglebarLite.SearchBoxClickHandler(event, this);"
-						 onmousedown="objGooglebarLite.SearchBoxMouseDownHandler(event, this);"
-						 oninput="objGooglebarLite.TermsHaveUpdated();"
-						 enablehistory="true" flex="1" minwidth="100" width="175" />
+				<textbox id="GBL-SearchBox"
+						 type="autocomplete"
+						 autocompletesearch="form-history"
+						 autocompletesearchparam="GBL-Search-History"
+						 completedefaultindex="false"
+						 disableautocomplete="false"
+						 ontextentered="objGooglebarLite.SearchBoxTextEntered(param);"
+                         oninput="objGooglebarLite.TermsHaveUpdated();"
+						 enablehistory="true"
+						 flex="1"
+						 minwidth="100"
+						 width="175" />
 				</toolbaritem>
 				
 				<splitter id="GBL-ResizeSplitter" state="open" collapse="none" resizebefore="closest" resizeafter="farthest"

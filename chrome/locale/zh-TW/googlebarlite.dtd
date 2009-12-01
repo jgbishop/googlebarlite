@@ -9,11 +9,11 @@
 <!ENTITY gblite.searchtype.video "影片搜尋">
 <!ENTITY gblite.searchtype.news "新聞搜尋">
 <!ENTITY gblite.searchtype.maps "Google 地圖搜尋">
-<!ENTITY gblite.searchtype.shopping "Product Search">
+<!ENTITY gblite.searchtype.shopping "產品搜尋">
 <!ENTITY gblite.searchtype.group "網上論壇搜尋">
 <!ENTITY gblite.searchtype.blog "網誌搜尋">
 <!ENTITY gblite.searchtype.book "書籍搜尋">
-<!ENTITY gblite.searchtype.finance "Finance Search">
+<!ENTITY gblite.searchtype.finance "財經搜尋">
 <!ENTITY gblite.searchtype.scholar "Scholar 搜尋(學生)">
 <!ENTITY gblite.searchtype.answers "Answers.com 搜尋">
 <!ENTITY gblite.context.web "搜尋已選取文字的網頁(W)">
@@ -54,15 +54,15 @@
 <!ENTITY gblite.mainmenu.ak.news "N">
 <!ENTITY gblite.mainmenu.label.maps "Google 地圖(P)">
 <!ENTITY gblite.mainmenu.ak.maps "P">
-<!ENTITY gblite.mainmenu.label.shopping "Google Product Search">
-<!ENTITY gblite.mainmenu.ak.shopping "r">
+<!ENTITY gblite.mainmenu.label.shopping "Google 產品搜尋(R)">
+<!ENTITY gblite.mainmenu.ak.shopping "R">
 <!ENTITY gblite.mainmenu.label.groups "Google 網上論壇(G)">
 <!ENTITY gblite.mainmenu.ak.groups "G">
 <!ENTITY gblite.mainmenu.label.blog "Google 網誌搜尋(B)">
 <!ENTITY gblite.mainmenu.ak.blog "B">
 <!ENTITY gblite.mainmenu.label.book "Google 書籍搜尋(K)">
 <!ENTITY gblite.mainmenu.ak.book "K">
-<!ENTITY gblite.mainmenu.label.finance "Google Finance">
+<!ENTITY gblite.mainmenu.label.finance "Google 財經(F)">
 <!ENTITY gblite.mainmenu.ak.finance "F">
 <!ENTITY gblite.mainmenu.label.scholar "Google Scholar 學生">
 <!ENTITY gblite.mainmenu.ak.scholar "S">
@@ -86,12 +86,12 @@
 <!ENTITY gblite.tt.lucky "執行好手氣搜尋">
 <!ENTITY gblite.tt.site "搜尋本站">
 <!ENTITY gblite.tt.image "搜尋網頁的圖片">
-<!ENTITY gblite.tt.shopping "Search products">
+<!ENTITY gblite.tt.shopping "搜尋產品">
 <!ENTITY gblite.tt.group "搜尋 Google 網上論壇">
 <!ENTITY gblite.tt.book "搜尋書籍">
 <!ENTITY gblite.tt.news "搜尋新聞">
 <!ENTITY gblite.tt.blog "搜尋網誌">
-<!ENTITY gblite.tt.finance "Search finance">
+<!ENTITY gblite.tt.finance "搜尋財經">
 <!ENTITY gblite.tt.video "搜尋 Google 影片">
 <!ENTITY gblite.tt.maps "搜尋 Google 地圖">
 <!ENTITY gblite.tt.scholar "搜尋學生論文">

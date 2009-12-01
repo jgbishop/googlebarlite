@@ -1,3 +1,64 @@
+function GBL_PrivateBrowsingListener() { this.init(); }
+
+GBL_PrivateBrowsingListener.prototype = {
+	_os: null,
+	_inPrivateBrowsing: false, // whether we are in private browsing mode
+	_watcher: null, // the watcher object
+	
+	init : function ()
+	{
+		this._inited = true;
+		this._os = Components.classes["@mozilla.org/observer-service;1"].getService(Components.interfaces.nsIObserverService);
+		this._os.addObserver(this, "private-browsing", false);
+		this._os.addObserver(this, "quit-application", false);
+		try {
+			var pbs = Components.classes["@mozilla.org/privatebrowsing;1"].getService(Components.interfaces.nsIPrivateBrowsingService);
+			this._inPrivateBrowsing = pbs.privateBrowsingEnabled;
+		} catch(ex) {
+			// ignore exceptions in older versions of Firefox
+		}
+	},
+	
+	observe : function (aSubject, aTopic, aData)
+	{
+		if (aTopic == "private-browsing")
+		{
+			if (aData == "enter")
+			{
+				this._inPrivateBrowsing = true;
+				if (this.watcher && "onEnterPrivateBrowsing" in this._watcher)
+					this.watcher.onEnterPrivateBrowsing();
+			}
+			else if (aData == "exit")
+			{
+				this._inPrivateBrowsing = false;
+				if (this.watcher && "onExitPrivateBrowsing" in this._watcher)
+					this.watcher.onExitPrivateBrowsing();
+			}
+		}
+		else if (aTopic == "quit-application")
+		{
+			this._os.removeObserver(this, "quit-application");
+			this._os.removeObserver(this, "private-browsing");
+		}
+	},
+	
+	get inPrivateBrowsing()
+	{
+		return this._inPrivateBrowsing;
+	},
+	
+	get watcher()
+	{
+		return this._watcher;
+	},
+	
+	set watcher(val)
+	{
+		this._watcher = val;
+	}
+};
+
 var objGooglebarLite = {
 	Clipboard : Components.classes["@mozilla.org/widget/clipboard;1"].createInstance(Components.interfaces.nsIClipboard),
 	ConsoleService : Components.classes['@mozilla.org/consoleservice;1'].getService(Components.interfaces.nsIConsoleService),
@@ -21,9 +82,6 @@ var objGooglebarLite = {
 	PrefName_AutoSearch			: "auto_search", // Auto search when selecting from history
 	PrefName_PromptToClear		: "prompt_to_clear",
 	PrefName_IgnoreAnswers		: "ignore_answers",
-	
-	// Hidden / advanced preference names
-	PrefName_UseSandbox : "use_sandbox",
 	
 	// Toolbar buttons preference names
 	PrefName_TB_ShowLabels	: "buttons.showlabels",
@@ -82,9 +140,6 @@ var objGooglebarLite = {
 	PromptToClear : false,
 	IgnoreAnswers : false,
 	
-	// Hidden / advanced preferences
-	UseSandbox : false,
-	
 	// Toolbar buttons preferences
 	TB_ShowLabels : false,
 	TB_ShowUp : false,
@@ -128,12 +183,10 @@ var objGooglebarLite = {
 	CM_Translate : false,
 
 	// ==================== Misc. Variables ====================
-	IgnoreClick : false,
-	IgnoreFocus : false,
 	LastHighlightedTerms : "",
 	OriginalCustomizeDone : null,
+	PBListener: null,
 	RunOnce : false,
-	TermsSelected : false,
 
 	StylesArray : new Array("-moz-image-region: rect(0px 32px 16px 16px);",
 							"-moz-image-region: rect(0px 48px 16px 32px);",
@@ -777,6 +830,18 @@ var objGooglebarLite = {
 		{
 			objGooglebarLite.RunOnce = true;
 			objGooglebarLite.Transferable.addDataFlavor("text/unicode");
+
+			objGooglebarLite.PBListener = new GBL_PrivateBrowsingListener();
+			objGooglebarLite.PBListener.watcher = {
+				onEnterPrivateBrowsing : function() {
+					// we have just entered private browsing mode!
+				},
+
+				onExitPrivateBrowsing : function() {
+					 // we have just left private browsing mode!
+					 objGooglebarLite.SetSearchTerms("");
+				}
+			};
 	
 			window.getBrowser().addProgressListener(objGooglebarLite.Listener, Components.interfaces.nsIWebProgress.NOTIFY_STATE_DOCUMENT);
 	
@@ -791,7 +856,7 @@ var objGooglebarLite = {
 			objGooglebarLite.UpdateContextMenuVisibility();
 			objGooglebarLite.UpdateSearchBoxSettings();
 			objGooglebarLite.UpdateUpMenu();
-	
+
 			if(window.opener != null)
 			{
 				var osb = window.opener.document.getElementById("GBL-SearchBox");
@@ -819,10 +884,6 @@ var objGooglebarLite = {
 		this.AutoSearch 		= b.getBoolPref(this.PrefName_AutoSearch);
 		this.PromptToClear 		= b.getBoolPref(this.PrefName_PromptToClear);
 		this.IgnoreAnswers 		= b.getBoolPref(this.PrefName_IgnoreAnswers);
-	
-		// Advanced / Hidden preferences
-		if(b.prefHasUserValue(this.PrefName_UseSandbox))
-			this.UseSandbox = b.getBoolPref(this.PrefName_UseSandbox);
 	
 		// Toolbar button preferences
 		this.TB_ShowLabels 		= b.getBoolPref(this.PrefName_TB_ShowLabels);
@@ -1267,8 +1328,8 @@ var objGooglebarLite = {
 		switch(searchType)
 		{
 		case "web":
-			if(isEmpty) { URL = this.BuildSearchURL((this.UseSandbox ? "www2.sandbox" : "www"), "", ""); }
-			else		{ URL = this.BuildSearchURL((this.UseSandbox ? "www2.sandbox" : "www"), "search", searchTerms); }
+			if(isEmpty) { URL = this.BuildSearchURL("www", "", ""); }
+			else		{ URL = this.BuildSearchURL("www", "search", searchTerms); }
 			break;
 	
 		case "lucky":
@@ -1392,32 +1453,6 @@ var objGooglebarLite = {
 		this.LoadURL(URL, useTab);
 	},
 
-	SearchBoxClickHandler: function(aEvent, aElt)
-	{
-		if(!this.IgnoreClick && this.ClickSelectsAll && aElt.selectionStart == aElt.selectionEnd)
-			aElt.select();
-	},
-	
-	SearchBoxFocusHandler: function(aEvent, aElt)
-	{
-		if(this.IgnoreFocus)
-			this.IgnoreFocus = false;
-		else if(this.ClickSelectsAll)
-			aElt.select();
-	},
-	
-	SearchBoxMouseDownHandler: function(aEvent, aElt)
-	{
-		if(aElt.hasAttribute("focused"))
-			this.IgnoreClick = true;
-		else
-		{
-			this.IgnoreFocus = true;
-			this.IgnoreClick = false;
-			aElt.setSelectionRange(0, 0);
-		}
-	},
-	
 	SearchBoxOnDrop: function(event)
 	{
 		nsDragAndDrop.drop(event, objGooglebarLite.SearchObserver);
@@ -1879,6 +1914,8 @@ var objGooglebarLite = {
 			searchBox.setAttribute("completedefaultindex", false);
 			searchBox.setAttribute("disableautocomplete", true);
 		}
+
+		searchBox.clickSelectsAll = this.ClickSelectsAll;
 	},
 	
 	UpdateSearchWordButtons: function()
