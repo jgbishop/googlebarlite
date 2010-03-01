@@ -646,45 +646,52 @@ var objGooglebarLite = {
 			return "";
 	},
 
-	FindInPage: function(term, e)
+	// Reuse the find bar mechanisms in Firefox (we get a bunch of stuff for free that way)
+	// Most of this function's code came from the Google toolbar
+    FindInPage: function(term, e)
 	{
-		/* This is shamelessly taken from Firebird findUtils.js */
-		var found = false;
-		var focusedWindow = window.document.commandDispatcher.focusedWindow;
-		if (!focusedWindow || focusedWindow == window)
-			focusedWindow = window.content;
-		var findInst = getBrowser().webBrowserFind;
-		var findInFrames = findInst.QueryInterface(Components.interfaces.nsIWebBrowserFindInFrames);
-		findInFrames.rootSearchFrame = window.content;
-		findInFrames.currentSearchFrame = focusedWindow;
-		
-		// setup the find instance
-		findInst.searchString = term;
-		findInst.searchFrames = true;
-		findInst.wrapFind = true;
-		
-		if(e)
+		var findBar = document.defaultView.gFindBar;
+		var shiftKey = e.shiftKey;
+		var findObj;
+		var cachedFindTerm;
+
+		if ("_find" in findBar)
 		{
-			findInst.entireWord		= e.altKey;
-			findInst.findBackwards	= e.shiftKey;
-			findInst.matchCase		= e.ctrlKey;
-	
-			if(findInst.entireWord)
-				findInst.searchString  = ' ' + str + ' ';
+			findObj = {
+				find: function(t) {
+					findBar._find(t);
+				},
+				findNext: function() {
+					 findBar._findAgain(false);
+				},
+				findPrevious: function() {
+					 findBar._findAgain(true);
+				}
+			};
+
+			cachedFindTerm = getBrowser().fastFind.searchString;
 		}
-	
-		found = findInst.findNext();
-		
-		var stringBundle = document.getElementById("GBL-String-Bundle");
-		var thisTerm = "\'" + term + "\'";
-	
-		if (!found)
+		else
 		{
-			this.Sound.beep();
-			window.content.status = stringBundle.getFormattedString("GBL_TermNotFound", [thisTerm]);
+			findObj = findBar;
+			cachedFindTerm = getBrowser().findString;
+		}
+
+		if (cachedFindTerm == term)
+		{
+			if(shiftKey)
+				findObj.findPrevious();
+			else
+				findObj.findNext();
+		}
+		else
+		{
+			findObj.find(term);
+			if(shiftKey)
+				findObj.findPrevious();
 		}
 	},
-
+	
 	FixOldPrefs: function()
 	{
 		var temp = "";
