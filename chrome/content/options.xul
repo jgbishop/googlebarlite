@@ -33,6 +33,7 @@
 			<checkbox id="GBL-Opt-SearchInTab" label="&gblite.options.searchintab;" />
 			<checkbox id="GBL-Opt-RememberCombined" label="&gblite.options.remembercombined;" />
 			<checkbox id="GBL-Opt-SearchOnDragDrop" label="&gblite.options.searchondragdrop;" />
+			<checkbox id="GBL-Opt-UseSecureSearch" label="&gblite.options.usesecuresearch;" />
 			
 			<separator class="thin" />
 			

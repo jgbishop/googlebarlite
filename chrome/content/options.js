@@ -10,6 +10,7 @@ var objGooglebarLiteOptions = {
 		document.getElementById("GBL-Opt-SearchInTab").checked 			= b.getBoolPref(oGBL.PrefName_SearchInTab);
 		document.getElementById("GBL-Opt-RememberCombined").checked 	= b.getBoolPref(oGBL.PrefName_RememberCombined);
 		document.getElementById("GBL-Opt-SearchOnDragDrop").checked		= b.getBoolPref(oGBL.PrefName_SearchOnDragDrop);
+		document.getElementById("GBL-Opt-UseSecureSearch").checked		= b.getBoolPref(oGBL.PrefName_UseSecureSearch);
 		document.getElementById("GBL-Opt-WarnOnFormHistory").checked	= b.getBoolPref(oGBL.PrefName_WarnOnFormHistory);
 		document.getElementById("GBL-Opt-MaintainHistory").checked		= b.getBoolPref(oGBL.PrefName_MaintainHistory);
 		document.getElementById("GBL-Opt-EnableAutoComplete").checked	= b.getBoolPref(oGBL.PrefName_EnableAutoComplete);
@@ -86,6 +87,7 @@ var objGooglebarLiteOptions = {
 		b.setBoolPref(oGBL.PrefName_SearchInTab, document.getElementById("GBL-Opt-SearchInTab").checked);
 		b.setBoolPref(oGBL.PrefName_RememberCombined, document.getElementById("GBL-Opt-RememberCombined").checked);
 		b.setBoolPref(oGBL.PrefName_SearchOnDragDrop, document.getElementById("GBL-Opt-SearchOnDragDrop").checked);
+		b.setBoolPref(oGBL.PrefName_UseSecureSearch, document.getElementById("GBL-Opt-UseSecureSearch").checked);
 		b.setBoolPref(oGBL.PrefName_TB_ShowLabels, document.getElementById("GBL-Opt-TB-ShowLabels").checked);
 		b.setBoolPref(oGBL.PrefName_TB_Up, document.getElementById("GBL-Opt-TB-Up").checked);
 		b.setBoolPref(oGBL.PrefName_TB_Highlighter, document.getElementById("GBL-Opt-TB-Highlighter").checked);

@@ -75,6 +75,7 @@ var objGooglebarLite = {
 	PrefName_SearchInTab		: "search_in_tab", // Open results in a new tab
 	PrefName_RememberCombined	: "remember_combined",
 	PrefName_SearchOnDragDrop	: "search_on_drag_drop",
+	PrefName_UseSecureSearch	: "use_secure_search",
 	PrefName_WarnOnFormHistory	: "warn_on_form_history",
 	PrefName_MaintainHistory	: "maintain_history",
 	PrefName_EnableAutoComplete : "enable_auto_complete",
@@ -132,6 +133,7 @@ var objGooglebarLite = {
 	SearchInTab : false,
 	RememberCombined : false,
 	SearchOnDragDrop : false,
+	UseSecureSearch: false,
 	WarnOnFormHistory : false,
 	MaintainHistory : false,
 	EnableAutoComplete : false,
@@ -242,9 +244,10 @@ var objGooglebarLite = {
 				{
 					urlHasHostProperty = false;
 				}
-	
+
 				// Only update the search terms if we're on a Google page
-				if(url != null && urlHasHostProperty == true && url.scheme == "http" && /google/.test(url.host))
+				if(url != null && urlHasHostProperty == true &&
+				   (url.scheme == "http" || url.scheme == "https") && /google/.test(url.host))
 				{
 					// For some reason, the nsIURL "query" property doesn't work on Google search result pages (possibly because of no
 					// file extension in the URL?) So, I wrote my own function to grab the query portion of the URL.
@@ -447,13 +450,20 @@ var objGooglebarLite = {
 		}
 	},
 	
-	BuildSearchURL: function(prefix, restrict, searchTerms)
+	BuildSearchURL: function(prefix, restrict, searchTerms, useSecure)
 	{
 		var u = "";
-		if(this.SiteToUse.length > 0)
-			u = "http://" + prefix + this.SiteToUse.substr(3) + "/" + restrict;
+		var protocol = "";
+
+		if(useSecure != null && useSecure == true)
+			protocol = "https://";
 		else
-			u = "http://" + prefix + ".google.com/" + restrict;
+			protocol = "http://";
+
+		if(this.SiteToUse.length > 0)
+			u = protocol + prefix + this.SiteToUse.substr(3) + "/" + restrict;
+		else
+			u = protocol + prefix + ".google.com/" + restrict;
 	
 		if(searchTerms.length > 0)
 			u += "?q=" + searchTerms + "&ie=UTF-8";
@@ -884,6 +894,7 @@ var objGooglebarLite = {
 		this.SearchInTab		= b.getBoolPref(this.PrefName_SearchInTab);
 		this.RememberCombined	= b.getBoolPref(this.PrefName_RememberCombined);
 		this.SearchOnDragDrop	= b.getBoolPref(this.PrefName_SearchOnDragDrop);
+		this.UseSecureSearch	= b.getBoolPref(this.PrefName_UseSecureSearch);
 		this.WarnOnFormHistory	= b.getBoolPref(this.PrefName_WarnOnFormHistory);
 		this.MaintainHistory	= b.getBoolPref(this.PrefName_MaintainHistory);
 		this.EnableAutoComplete	= b.getBoolPref(this.PrefName_EnableAutoComplete);
@@ -1335,18 +1346,18 @@ var objGooglebarLite = {
 		switch(searchType)
 		{
 		case "web":
-			if(isEmpty) { URL = this.BuildSearchURL("www", "", ""); }
-			else		{ URL = this.BuildSearchURL("www", "search", searchTerms); }
+			if(isEmpty) { URL = this.BuildSearchURL("www", "", "", this.UseSecureSearch); }
+			else		{ URL = this.BuildSearchURL("www", "search", searchTerms, this.UseSecureSearch); }
 			break;
 	
 		case "lucky":
-			if(isEmpty) { URL = this.BuildSearchURL("www", "", ""); }
-			else		{ URL = this.BuildSearchURL("www", "search", searchTerms + "&btnI=I%27m+Feeling+Lucky"); }
+			if(isEmpty) { URL = this.BuildSearchURL("www", "", "", this.UseSecureSearch); }
+			else		{ URL = this.BuildSearchURL("www", "search", searchTerms + "&btnI=I%27m+Feeling+Lucky", this.UseSecureSearch); }
 			break;
 	
 		case "site":
-			if(isEmpty) { URL = this.BuildSearchURL("www", "", ""); }
-			else		{ URL = this.BuildSearchURL("www", "search", "site:" + win.location.hostname + "+" + searchTerms); }
+			if(isEmpty) { URL = this.BuildSearchURL("www", "", "", this.UseSecureSearch); }
+			else		{ URL = this.BuildSearchURL("www", "search", "site:" + win.location.hostname + "+" + searchTerms, this.UseSecureSearch); }
 			break;
 	
 		case "images":
@@ -1355,13 +1366,13 @@ var objGooglebarLite = {
 			break;
 	
 		case "video":
-			if(isEmpty) { URL = this.BuildSearchURL("video", "", ""); }
-			else		{ URL = this.BuildSearchURL("video", "videosearch", searchTerms); }
+			if(isEmpty) { URL = this.BuildSearchURL("video", "", "", this.UseSecureSearch); }
+			else		{ URL = this.BuildSearchURL("video", "videosearch", searchTerms, this.UseSecureSearch); }
 			break;
 	
 		case "news":
-			if(isEmpty) { URL = this.BuildSearchURL("news", "", ""); }
-			else		{ URL = this.BuildSearchURL("news", "news", searchTerms); }
+			if(isEmpty) { URL = this.BuildSearchURL("news", "", "", this.UseSecureSearch); }
+			else		{ URL = this.BuildSearchURL("news", "news", searchTerms, this.UseSecureSearch); }
 			break;
 	
 		case "maps":
@@ -1380,13 +1391,13 @@ var objGooglebarLite = {
 			break;
 	
 		case "blog":
-			if(isEmpty) { URL = this.BuildSearchURL("blogsearch", "blogsearch", ""); }
-			else		{ URL = this.BuildSearchURL("blogsearch", "blogsearch", searchTerms); }
+			if(isEmpty) { URL = this.BuildSearchURL("blogsearch", "blogsearch", "", this.UseSecureSearch); }
+			else		{ URL = this.BuildSearchURL("blogsearch", "blogsearch", searchTerms, this.UseSecureSearch); }
 			break;
 	
 		case "book":
-			if(isEmpty) { URL = this.BuildSearchURL("www", "books", ""); }
-			else		{ URL = this.BuildSearchURL("www", "books", searchTerms); }
+			if(isEmpty) { URL = this.BuildSearchURL("www", "books", "", this.UseSecureSearch); }
+			else		{ URL = this.BuildSearchURL("www", "books", searchTerms, this.UseSecureSearch); }
 			break;
 	
 		case "finance":
