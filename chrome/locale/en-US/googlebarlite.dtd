@@ -2,6 +2,7 @@
 <!ENTITY gblite.name "Googlebar Lite">
 <!ENTITY gblite.toolbar.name "Googlebar Lite Toolbar">
 <!ENTITY gblite.ak.name "G">
+<!ENTITY gblite.toggle.toolbar "Toggle GBL Toolbar">
 <!ENTITY gblite.searchtype.web "Web Search">
 <!ENTITY gblite.searchtype.lucky "I'm Feeling Lucky">
 <!ENTITY gblite.searchtype.site "Site Search">
@@ -121,7 +122,7 @@
 <!ENTITY gblite.options.searchintab "Open search results in a new tab (if necessary)">
 <!ENTITY gblite.options.remembercombined "Remember last combined-menu search type">
 <!ENTITY gblite.options.searchondragdrop "Automatically search on drag and drop">
-<!ENTITY gblite.options.usesecuresearch "Use secure (https) search">
+<!ENTITY gblite.options.usesecuresearch "Use secure search where possible">
 <!ENTITY gblite.options.warnonformhistory "Warn me when form history is disabled in Firefox">
 <!ENTITY gblite.options.maintainhistory "Maintain a search history">
 <!ENTITY gblite.options.autocomplete "Enable auto-completion">

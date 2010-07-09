@@ -410,7 +410,12 @@ var objGooglebarLite = {
 			   thisTerm.search(/^-/) != -1
 			  )
 				continue; // Ignore this term
-	
+
+			// Remove all double quotes
+			thisTerm = thisTerm.replace(/"/g, '');
+			if(thisTerm.length == 0)
+				continue;
+			
 			// Escape all apostrophes to prevent XSS problems
 			var safeTerm = thisTerm.replace(/'/g, "\\'");
 			safeTerm = "\'" + safeTerm + "\'";
@@ -450,23 +455,31 @@ var objGooglebarLite = {
 		}
 	},
 	
-	BuildSearchURL: function(prefix, restrict, searchTerms, useSecure)
+	BuildSearchURL: function(prefix, restrict, searchTerms, useSecure, secureType)
 	{
 		var u = "";
-		var protocol = "";
 
 		if(useSecure != null && useSecure == true)
-			protocol = "https://";
-		else
-			protocol = "http://";
+		{
+			u = "https://encrypted.google.com/";
 
-		if(this.SiteToUse.length > 0)
-			u = protocol + prefix + this.SiteToUse.substr(3) + "/" + restrict;
+			if (searchTerms.length > 0)
+				u += "search?q=" + searchTerms;
+
+			if(secureType != null) {
+				u += "&tbs=" + secureType;
+			}
+		}
 		else
-			u = protocol + prefix + ".google.com/" + restrict;
-	
-		if(searchTerms.length > 0)
-			u += "?q=" + searchTerms + "&ie=UTF-8";
+		{
+			if(this.SiteToUse.length > 0)
+				u = "http://" + prefix + this.SiteToUse.substr(3) + "/" + restrict;
+			else
+				u = "http://" + prefix + ".google.com/" + restrict;
+
+			if(searchTerms.length > 0)
+				u += "?q=" + searchTerms + "&ie=UTF-8";
+		}
 	
 		return u;
 	},
@@ -1367,12 +1380,12 @@ var objGooglebarLite = {
 	
 		case "video":
 			if(isEmpty) { URL = this.BuildSearchURL("video", "", "", this.UseSecureSearch); }
-			else		{ URL = this.BuildSearchURL("video", "videosearch", searchTerms, this.UseSecureSearch); }
+			else		{ URL = this.BuildSearchURL("video", "videosearch", searchTerms, this.UseSecureSearch, "vid:1"); }
 			break;
 	
 		case "news":
 			if(isEmpty) { URL = this.BuildSearchURL("news", "", "", this.UseSecureSearch); }
-			else		{ URL = this.BuildSearchURL("news", "news", searchTerms, this.UseSecureSearch); }
+			else		{ URL = this.BuildSearchURL("news", "news", searchTerms, this.UseSecureSearch, "nws:1"); }
 			break;
 	
 		case "maps":
@@ -1392,12 +1405,12 @@ var objGooglebarLite = {
 	
 		case "blog":
 			if(isEmpty) { URL = this.BuildSearchURL("blogsearch", "blogsearch", "", this.UseSecureSearch); }
-			else		{ URL = this.BuildSearchURL("blogsearch", "blogsearch", searchTerms, this.UseSecureSearch); }
+			else		{ URL = this.BuildSearchURL("blogsearch", "blogsearch", searchTerms, this.UseSecureSearch, "blg:1"); }
 			break;
 	
 		case "book":
 			if(isEmpty) { URL = this.BuildSearchURL("www", "books", "", this.UseSecureSearch); }
-			else		{ URL = this.BuildSearchURL("www", "books", searchTerms, this.UseSecureSearch); }
+			else		{ URL = this.BuildSearchURL("www", "books", searchTerms, this.UseSecureSearch, "bks:1"); }
 			break;
 	
 		case "finance":
@@ -1580,13 +1593,15 @@ var objGooglebarLite = {
 				{
 					inQuotes = true;
 					inWord = true;
+					buffer += "\"";
 				}
 				else
 				{
 					// We're coming out of quotes mode, so push the "word" onto the array and clear the buffer
 					inQuotes = false;
 					inWord = false;
-	
+
+					buffer += "\"";
 					myArray.push(buffer);
 					buffer = "";
 				}

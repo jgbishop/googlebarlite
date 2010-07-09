@@ -72,7 +72,7 @@
 
 <toolbarpalette id="BrowserToolbarPalette">
 	<toolbarbutton id="GBL-TB-Toggle-Toolbar" tooltiptext="Toggle Googlebar Lite Toolbar" class="toolbarbutton-1"
-				   label="&gblite.name;" oncommand="objGooglebarLite.ToggleToolbar();" />
+				   label="&gblite.toggle.toolbar;" oncommand="objGooglebarLite.ToggleToolbar();" />
 	
 	<toolbaritem id="GBL-Toolbar-MainItem" flex="1" title="&gblite.name;" class="chromeclass-toolbar-additional">
 		<stack id="GBL-Stack" flex="1" style="min-width: 0; width: 0;">
