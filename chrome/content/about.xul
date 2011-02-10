@@ -18,7 +18,7 @@
 <vbox>
 	<vbox align="center" flex="1">
 		<label id="GBL-About-Name" crop="right" value="&gblite.name;"/>
-		<label id="GBL-About-Version" crop="right" value="Version 4.7.4"/>
+		<label id="GBL-About-Version" crop="right" value="Version 4.7.5"/>
 	</vbox>
 	
 	<groupbox>

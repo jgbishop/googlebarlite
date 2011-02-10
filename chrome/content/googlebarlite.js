@@ -603,9 +603,9 @@ var objGooglebarLite = {
 	
 	DelayedStartup: function()
 	{
-		var navtoolbox = document.getElementById("navigator-toolbox");
-		objGooglebarLite.OriginalCustomizeDone = navtoolbox.customizeDone;
-		navtoolbox.customizeDone = objGooglebarLite.BuildFunction(this, objGooglebarLite.ToolboxCustomizeDone);
+//  	var navtoolbox = document.getElementById("navigator-toolbox");
+//  	objGooglebarLite.OriginalCustomizeDone = navtoolbox.customizeDone;
+//  	navtoolbox.customizeDone = objGooglebarLite.BuildFunction(this, objGooglebarLite.ToolboxCustomizeDone);
 
 		var searchbox = document.getElementById("GBL-SearchBox");
 		searchbox.addEventListener("popupshowing", objGooglebarLite.SearchContextOnPopupShowing, true);
@@ -622,6 +622,19 @@ var objGooglebarLite = {
 		// Disable the dialog from being displayed if the user asked to do so
 		if(neverShowAgain)
 			this.PrefBranch.setBoolPref(this.PrefName_WarnOnFormHistory, false);
+	},
+
+	DoDebug: function(event)
+	{
+		var searchbox = document.getElementById("GBL-SearchBox");
+
+		var buffer = '';
+		for(var i in searchbox)
+		{
+			buffer += i + ": " + searchbox[i] + "\n";
+		}
+		this.Log(buffer);
+//  	for(var p in obj) { console.log(p, obj[p]) }
 	},
 	
 	DragDropToSearchBox: function(event, data)
@@ -1491,19 +1504,26 @@ var objGooglebarLite = {
 
 	SearchBoxTextEntered: function(aTriggeringEvent)
 	{
+		this.Log("Event: " + aTriggeringEvent);
+
 		// Step 1: Get the search terms
 		var terms = this.TrimString(this.GetSearchTerms());
+		this.Log("Terms: [" + terms + "]");
 		var isEmpty = (terms.length == 0);
 	
 		// Step 2: Do we need to open a new tab?
 		var useTab = this.OpenInTab(aTriggeringEvent, true);
+		this.Log("UseTab: " + useTab);
 	
 		// Step 3: Get the search type
 		var searchType = this.GetSearchType(aTriggeringEvent);
+		this.Log("Search Type: " + searchType);
 	
 		// Step 4: Search
 		if(aTriggeringEvent != null || (aTriggeringEvent == null && this.AutoSearch))
 			this.Search(terms, searchType, isEmpty, useTab);
+		else
+			this.Log("Failed to trigger on event!");
 	},
 
 	SearchContextOnPopupShowing: function(e)
@@ -1663,7 +1683,10 @@ var objGooglebarLite = {
 	ToolboxCustomizeDone: function(somethingChanged)
 	{
 		var mainItem = document.getElementById("GBL-Toolbar-MainItem");
-	
+		
+		objGooglebarLite.Log("mainItem: " + mainItem);
+		objGooglebarLite.Log("somethingChanged: " + somethingChanged);
+
 		// Don't process anything if mainItem is null (the toolbar item has been dragged into the toolbox)
 		if(mainItem && somethingChanged)
 		{
@@ -1688,6 +1711,8 @@ var objGooglebarLite = {
 		}
 		else if(mainItem && !somethingChanged)
 			objGooglebarLite.SetSearchTerms(""); // Prevent zombie search word buttons from appearing
+
+		objGooglebarLite.Log("OriginalCustomizeDone: " + this.objGooglebarLite.OriginalCustomizeDone);
 	
 		this.objGooglebarLite.OriginalCustomizeDone(somethingChanged);
 	},

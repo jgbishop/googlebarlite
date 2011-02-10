@@ -2,6 +2,7 @@
 <!ENTITY gblite.name "Googlebar Lite">
 <!ENTITY gblite.toolbar.name "Googlebar Lite Toolbar">
 <!ENTITY gblite.ak.name "G">
+<!ENTITY gblite.toggle.toolbar "Toggle GBL Toolbar">
 <!ENTITY gblite.searchtype.web "Cerca a la xarxa">
 <!ENTITY gblite.searchtype.lucky "Segur que tinc sort">
 <!ENTITY gblite.searchtype.site "Cerca al lloc web">
@@ -16,6 +17,7 @@
 <!ENTITY gblite.searchtype.finance "Google Finance">
 <!ENTITY gblite.searchtype.scholar "Google Scholar">
 <!ENTITY gblite.searchtype.answers "Cerca a Answers.com">
+<!ENTITY gblite.searchtype.dictionary "Google Dictionary">
 <!ENTITY gblite.context.web "Cerca a la xarxa el text seleccionat">
 <!ENTITY gblite.context.ak.web "W">
 <!ENTITY gblite.context.site "Cerca el text seleccionat a aquest lloc web">
@@ -30,6 +32,8 @@
 <!ENTITY gblite.context.ak.maps "M">
 <!ENTITY gblite.context.answers "Cerca a Answers.comel text seleccionat">
 <!ENTITY gblite.context.ak.answers "A">
+<!ENTITY gblite.context.dictionary "Search Google Dictionary for Selected Text">
+<!ENTITY gblite.context.ak.dictionary "D">
 <!ENTITY gblite.context.backwardlinks "Enllaç cap enrera">
 <!ENTITY gblite.context.ak.backwardlinks "B">
 <!ENTITY gblite.context.cached "Veure la copia de la memòria cau d'aquesta pàgina">
@@ -96,6 +100,7 @@
 <!ENTITY gblite.tt.maps "Cerca a Google Maps">
 <!ENTITY gblite.tt.scholar "Cerca articles d'estudiants">
 <!ENTITY gblite.tt.answers "Search Answers.com">
+<!ENTITY gblite.tt.dictionary "Search Google Dictionary">
 <!ENTITY gblite.tt.up "Puja un nivell">
 <!ENTITY gblite.tt.highlighter "Activa ressaltar termes de cercaen aquesta pàgina">
 <!ENTITY gblite.tt.overflow "Termes de Cerca (Continació)">
@@ -120,12 +125,14 @@
 <!ENTITY gblite.options.searchintab "Obre els resultats de la cerca en una nova pestanya (si necessari)">
 <!ENTITY gblite.options.remembercombined "Recorda l&apos;últim tipus de cerca del menú combinat">
 <!ENTITY gblite.options.searchondragdrop "Cerca automaticament al arrossegar i deixar anar (Drag &amp; Drop)">
+<!ENTITY gblite.options.usesecuresearch "Use secure search where possible">
 <!ENTITY gblite.options.warnonformhistory "Avisa&apos;m quan l&apos;Historial de formularis estigui deshabilitat a Firefox">
 <!ENTITY gblite.options.maintainhistory "Mantenir l&apos;historial de cerca">
 <!ENTITY gblite.options.autocomplete "Habilitar auto-completar">
 <!ENTITY gblite.options.inlinecomplete "Utilitzar completar en linia">
 <!ENTITY gblite.options.autosearchhistory "Cerca automàticament quan selecciones de l&apos;historial de cerca">
 <!ENTITY gblite.options.ignoreanswers "Ignora les cerques a anwers.com">
+<!ENTITY gblite.options.ignoredictionary "Ignore Google Dictionary searches in history">
 <!ENTITY gblite.options.prompttoclear "Demana abans de netejar l&apos;historial">
 <!ENTITY gblite.options.showlabels "Mostra el text a les etiquetes (Només text selectiu)">
 <!ENTITY gblite.options.showsearchwords "Cerca Paraules">

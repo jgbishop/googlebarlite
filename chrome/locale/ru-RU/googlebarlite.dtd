@@ -2,6 +2,7 @@
 <!ENTITY gblite.name "Упрощенная панель">
 <!ENTITY gblite.toolbar.name "Упрощенная панель поиска Google">
 <!ENTITY gblite.ak.name "G">
+<!ENTITY gblite.toggle.toolbar "Toggle GBL Toolbar">
 <!ENTITY gblite.searchtype.web "Поиск в Интернет">
 <!ENTITY gblite.searchtype.lucky "Мне повезёт">
 <!ENTITY gblite.searchtype.site "Поиск на этом сайте">
@@ -16,6 +17,7 @@
 <!ENTITY gblite.searchtype.finance "Поиск по финансам">
 <!ENTITY gblite.searchtype.scholar "Поиск учебных документов">
 <!ENTITY gblite.searchtype.answers "Поиск на Answer.com">
+<!ENTITY gblite.searchtype.dictionary "Google Dictionary">
 <!ENTITY gblite.context.web "Найти в Интернет соответствия для отмеченного текста">
 <!ENTITY gblite.context.ak.web "И">
 <!ENTITY gblite.context.site "Найти отмеченный текст на этом сайте">
@@ -30,6 +32,8 @@
 <!ENTITY gblite.context.ak.maps "м">
 <!ENTITY gblite.context.answers "Найти на Answers.com соответствия для отмеченного текста">
 <!ENTITY gblite.context.ak.answers "A">
+<!ENTITY gblite.context.dictionary "Search Google Dictionary for Selected Text">
+<!ENTITY gblite.context.ak.dictionary "D">
 <!ENTITY gblite.context.backwardlinks "Обратные ссылки">
 <!ENTITY gblite.context.ak.backwardlinks "О">
 <!ENTITY gblite.context.cached "Кэшировать эту страницу">
@@ -96,6 +100,7 @@
 <!ENTITY gblite.tt.maps "Найти местность на Google Maps">
 <!ENTITY gblite.tt.scholar "Найти среди школьных документов">
 <!ENTITY gblite.tt.answers "Найти через Answers.com">
+<!ENTITY gblite.tt.dictionary "Search Google Dictionary">
 <!ENTITY gblite.tt.up "Перейти на уровень выше">
 <!ENTITY gblite.tt.highlighter "Включить/отключить подсветку поискового контекста">
 <!ENTITY gblite.tt.overflow "Поисковые контексты (продолжение)">
@@ -120,12 +125,14 @@
 <!ENTITY gblite.options.searchintab "Открыть результаты поиска в новой вкладке (при необходимости)">
 <!ENTITY gblite.options.remembercombined "Запомнить вариант последнего поиска">
 <!ENTITY gblite.options.searchondragdrop "Начинать поиск сразу после переноса контекста">
+<!ENTITY gblite.options.usesecuresearch "Use secure search where possible">
 <!ENTITY gblite.options.warnonformhistory "Предупредить об отключении в Firefox сохранения данных форм">
 <!ENTITY gblite.options.maintainhistory "Включить историю запросов">
 <!ENTITY gblite.options.autocomplete "Включить автодополнение">
 <!ENTITY gblite.options.inlinecomplete "Использовать встроенный механизм">
 <!ENTITY gblite.options.autosearchhistory "Запускать поиск автоматически после выбора из истории запросов">
 <!ENTITY gblite.options.ignoreanswers "Игнорировать в истории запросов поиск через Answers.com">
+<!ENTITY gblite.options.ignoredictionary "Ignore Google Dictionary searches in history">
 <!ENTITY gblite.options.prompttoclear "Спрашивать перед удалением истории поисковых запросов">
 <!ENTITY gblite.options.showlabels "Отобразить текст на кнопках панели поиска">
 <!ENTITY gblite.options.showsearchwords "Поисковые слова">

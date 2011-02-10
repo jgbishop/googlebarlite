@@ -2,6 +2,7 @@
 <!ENTITY gblite.name "Googlebar Lite">
 <!ENTITY gblite.toolbar.name "Googlebar Lite 工具栏">
 <!ENTITY gblite.ak.name "G">
+<!ENTITY gblite.toggle.toolbar "Toggle GBL Toolbar">
 <!ENTITY gblite.searchtype.web "网页搜索">
 <!ENTITY gblite.searchtype.lucky "手气不错">
 <!ENTITY gblite.searchtype.site "网站搜索">
@@ -16,6 +17,7 @@
 <!ENTITY gblite.searchtype.finance "Finance Search">
 <!ENTITY gblite.searchtype.scholar "学术搜索">
 <!ENTITY gblite.searchtype.answers "Answers.com 搜索">
+<!ENTITY gblite.searchtype.dictionary "Google Dictionary">
 <!ENTITY gblite.context.web "在网页搜索中查找选中的文字">
 <!ENTITY gblite.context.ak.web "W">
 <!ENTITY gblite.context.site "在该站点中查找选中的文字">
@@ -30,6 +32,8 @@
 <!ENTITY gblite.context.ak.maps "M">
 <!ENTITY gblite.context.answers "在 Answers.com 搜索中查找选中的文字">
 <!ENTITY gblite.context.ak.answers "A">
+<!ENTITY gblite.context.dictionary "Search Google Dictionary for Selected Text">
+<!ENTITY gblite.context.ak.dictionary "D">
 <!ENTITY gblite.context.backwardlinks "后退链接">
 <!ENTITY gblite.context.ak.backwardlinks "B">
 <!ENTITY gblite.context.cached "缓存当前页面的截图">
@@ -96,6 +100,7 @@
 <!ENTITY gblite.tt.maps "搜索 Google 地图">
 <!ENTITY gblite.tt.scholar "搜索学术论文">
 <!ENTITY gblite.tt.answers "搜索 Answers.com">
+<!ENTITY gblite.tt.dictionary "Search Google Dictionary">
 <!ENTITY gblite.tt.up "向上一级">
 <!ENTITY gblite.tt.highlighter "开关页面中搜索条目的高亮显示">
 <!ENTITY gblite.tt.overflow "搜索条目 (继续)">
@@ -120,12 +125,14 @@
 <!ENTITY gblite.options.searchintab "在新建标签中打开搜索结果(在有必要的情况下)">
 <!ENTITY gblite.options.remembercombined "记住最后一次组合菜单搜索类型">
 <!ENTITY gblite.options.searchondragdrop "拖拽自动搜索">
+<!ENTITY gblite.options.usesecuresearch "Use secure search where possible">
 <!ENTITY gblite.options.warnonformhistory "在 Firefox [选项] 中禁用 [历史] 时提示我">
 <!ENTITY gblite.options.maintainhistory "保留搜索历史">
 <!ENTITY gblite.options.autocomplete "启用自动完成">
 <!ENTITY gblite.options.inlinecomplete "启用 inline 完成">
 <!ENTITY gblite.options.autosearchhistory "从搜索历史中选择条目后自动开始搜索">
 <!ENTITY gblite.options.ignoreanswers "在搜索历史中忽略 Answers.com 搜索">
+<!ENTITY gblite.options.ignoredictionary "Ignore Google Dictionary searches in history">
 <!ENTITY gblite.options.prompttoclear "清除搜索历史前询问">
 <!ENTITY gblite.options.showlabels "显示按钮标签 (仅对某些文字才显示)">
 <!ENTITY gblite.options.showsearchwords "搜索关键字">

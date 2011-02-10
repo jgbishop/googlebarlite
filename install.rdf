@@ -12,7 +12,7 @@
 	<em:iconURL>chrome://googlebarlite/content/base_skin/logo.png</em:iconURL>
 	<em:name>Googlebar Lite</em:name>
 	<em:optionsURL>chrome://googlebarlite/content/options.xul</em:optionsURL>
-	<em:version>4.7.4</em:version>
+	<em:version>4.7.5</em:version>
 
 	<em:updateURL>http://www.borngeek.com/downloads/update.rdf</em:updateURL>
 	
@@ -25,7 +25,7 @@
 		<Description>
 			<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
 			<em:minVersion>2.0</em:minVersion>
-			<em:maxVersion>3.6.*</em:maxVersion>
+			<em:maxVersion>4.0.*</em:maxVersion>
 		</Description>
 	</em:targetApplication>
 	

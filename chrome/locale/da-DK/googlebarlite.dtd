@@ -2,6 +2,7 @@
 <!ENTITY gblite.name "Googlebar Lite">
 <!ENTITY gblite.toolbar.name "Googlebar Lite værktøjslinje">
 <!ENTITY gblite.ak.name "G">
+<!ENTITY gblite.toggle.toolbar "Toggle GBL Toolbar">
 <!ENTITY gblite.searchtype.web "Netsøgning">
 <!ENTITY gblite.searchtype.lucky "Jeg føler mig heldig">
 <!ENTITY gblite.searchtype.site "Søg på websiden">
@@ -16,6 +17,7 @@
 <!ENTITY gblite.searchtype.finance "Finance Search">
 <!ENTITY gblite.searchtype.scholar "Scholar søgning">
 <!ENTITY gblite.searchtype.answers "Answers.com søgning">
+<!ENTITY gblite.searchtype.dictionary "Google Dictionary">
 <!ENTITY gblite.context.web "Søg efter den markerede tekst på nettet">
 <!ENTITY gblite.context.ak.web "W">
 <!ENTITY gblite.context.site "Søg dette site for markeret tekst">
@@ -30,6 +32,8 @@
 <!ENTITY gblite.context.ak.maps "M">
 <!ENTITY gblite.context.answers "Søg i Answers.com efter den markerede tekst">
 <!ENTITY gblite.context.ak.answers "A">
+<!ENTITY gblite.context.dictionary "Search Google Dictionary for Selected Text">
+<!ENTITY gblite.context.ak.dictionary "D">
 <!ENTITY gblite.context.backwardlinks "Find links til siden">
 <!ENTITY gblite.context.ak.backwardlinks "F">
 <!ENTITY gblite.context.cached "Vis cached version af denne side">
@@ -96,6 +100,7 @@
 <!ENTITY gblite.tt.maps "Søg i Google Maps">
 <!ENTITY gblite.tt.scholar "Søg i videnskabelige udgivelser">
 <!ENTITY gblite.tt.answers "Søg i Answers.com">
+<!ENTITY gblite.tt.dictionary "Search Google Dictionary">
 <!ENTITY gblite.tt.up "Gå et niveau op">
 <!ENTITY gblite.tt.highlighter "Fremhæv søgeord på denne side">
 <!ENTITY gblite.tt.overflow "Søgebetingelser (fortsat)">
@@ -120,12 +125,14 @@
 <!ENTITY gblite.options.searchintab "Åbn søgeresultat i nyt faneblad (hvis nødvendigt)">
 <!ENTITY gblite.options.remembercombined "Husk seneste kombinerede søgemenu type">
 <!ENTITY gblite.options.searchondragdrop "Søg automatisk ved træk-og-slip">
+<!ENTITY gblite.options.usesecuresearch "Use secure search where possible">
 <!ENTITY gblite.options.warnonformhistory "Advar mig når formularhistorik er slået fra i Firefox">
 <!ENTITY gblite.options.maintainhistory "Bevar en søgehistorik">
 <!ENTITY gblite.options.autocomplete "Aktiver auto-udfyldelse">
 <!ENTITY gblite.options.inlinecomplete "Brug intern udfyldelse">
 <!ENTITY gblite.options.autosearchhistory "Udfør automatisk søgning ved valg fra søgelisten">
 <!ENTITY gblite.options.ignoreanswers "Udelad Answers.com søgninger i søgehistorien">
+<!ENTITY gblite.options.ignoredictionary "Ignore Google Dictionary searches in history">
 <!ENTITY gblite.options.prompttoclear "Spørg inden søgelisten slettes">
 <!ENTITY gblite.options.showlabels "Vis knapteksterne (kun udvalgte tekster)">
 <!ENTITY gblite.options.showsearchwords "Søg efter ord">

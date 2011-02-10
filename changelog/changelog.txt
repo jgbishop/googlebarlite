@@ -4,6 +4,8 @@
 [4.7.5]
 + Added an option to enable secure search (where possible)
 + Gave the "toggle toolbar" button a more descriptive name
++ Enabled support for Firefox 4.0.*.
++ Various locale updates.
 + Bug Fix: Search terms now update properly on secure search result pages
 + Bug Fix: Terms appearing in double quotes, which have a minus sign as the first character, are no longer hidden in the search word buttons
 

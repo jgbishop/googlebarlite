@@ -2,6 +2,7 @@
 <!ENTITY gblite.name "Googlebar Lite">
 <!ENTITY gblite.toolbar.name "Panel nástrojov Googlebar Lite">
 <!ENTITY gblite.ak.name "G">
+<!ENTITY gblite.toggle.toolbar "Toggle GBL Toolbar">
 <!ENTITY gblite.searchtype.web "Vyhľadať na webe">
 <!ENTITY gblite.searchtype.lucky "I&apos;m Feeling Lucky">
 <!ENTITY gblite.searchtype.site "Vyhľadať stránku">
@@ -16,6 +17,7 @@
 <!ENTITY gblite.searchtype.finance "Finance Search">
 <!ENTITY gblite.searchtype.scholar "Študentské vyhľadávanie">
 <!ENTITY gblite.searchtype.answers "Vyhľadať na Answers.com">
+<!ENTITY gblite.searchtype.dictionary "Google Dictionary">
 <!ENTITY gblite.context.web "Vyhľadať zvolený text na webe">
 <!ENTITY gblite.context.ak.web "W">
 <!ENTITY gblite.context.site "Vyhľadať vybraný text na stránke">
@@ -30,6 +32,8 @@
 <!ENTITY gblite.context.ak.maps "M">
 <!ENTITY gblite.context.answers "Vyhľadať zvolený text na Answers.com">
 <!ENTITY gblite.context.ak.answers "A">
+<!ENTITY gblite.context.dictionary "Search Google Dictionary for Selected Text">
+<!ENTITY gblite.context.ak.dictionary "D">
 <!ENTITY gblite.context.backwardlinks "Vrátiť odkazy">
 <!ENTITY gblite.context.ak.backwardlinks "B">
 <!ENTITY gblite.context.cached "Snímka tejto stránky z vyrovnávacej pamäte">
@@ -96,6 +100,7 @@
 <!ENTITY gblite.tt.maps "Vyhľadať v Mapách Google">
 <!ENTITY gblite.tt.scholar "Vyhľadať študentské časopisy">
 <!ENTITY gblite.tt.answers "Vyhľadať na Answers.com">
+<!ENTITY gblite.tt.dictionary "Search Google Dictionary">
 <!ENTITY gblite.tt.up "Prejsť o úroveň vyššie">
 <!ENTITY gblite.tt.highlighter "Prepnúť zvýraznenie hľadaných výrazov na tejto stránke">
 <!ENTITY gblite.tt.overflow "Vyhľadať výrazy (pokračovanie)">
@@ -120,12 +125,14 @@
 <!ENTITY gblite.options.searchintab "Otvoriť výsledky vyhľadávania na novej karte">
 <!ENTITY gblite.options.remembercombined "Zapamätať si poslednú kombináciu ponuky vyhľadávania">
 <!ENTITY gblite.options.searchondragdrop "Automaticky vyhľadať po pretiahnutí">
+<!ENTITY gblite.options.usesecuresearch "Use secure search where possible">
 <!ENTITY gblite.options.warnonformhistory "Upozorniť ma keď je zapamätanie si histórie formulárov vo Firefoxe zakázané">
 <!ENTITY gblite.options.maintainhistory "Zaznamenávať históriu vyhľadávania">
 <!ENTITY gblite.options.autocomplete "Povoliť automatické dokončovanie">
 <!ENTITY gblite.options.inlinecomplete "Povoliť dokončovanie priamo v riadku s hľadaným textom">
 <!ENTITY gblite.options.autosearchhistory "Automaticky vyhľadať po zvolení z histórie vyhľadávania">
 <!ENTITY gblite.options.ignoreanswers "V histórii ignorovať vyhľadávania na Answers.com">
+<!ENTITY gblite.options.ignoredictionary "Ignore Google Dictionary searches in history">
 <!ENTITY gblite.options.prompttoclear "Opýtať sa pred vymazaním histórie vyhľadávania">
 <!ENTITY gblite.options.showlabels "Zobraziť popisy tlačidiel">
 <!ENTITY gblite.options.showsearchwords "Vyhľadať slová">

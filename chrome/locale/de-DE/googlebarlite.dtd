@@ -2,6 +2,7 @@
 <!ENTITY gblite.name "Googlebar Lite">
 <!ENTITY gblite.toolbar.name "&quot;Googlebar Lite&quot;-Symbolleiste">
 <!ENTITY gblite.ak.name "G">
+<!ENTITY gblite.toggle.toolbar "Toggle GBL Toolbar">
 <!ENTITY gblite.searchtype.web "Web-Suche">
 <!ENTITY gblite.searchtype.lucky "Auf gut Glück!">
 <!ENTITY gblite.searchtype.site "Website-Suche">
@@ -16,6 +17,7 @@
 <!ENTITY gblite.searchtype.finance "Finanzmarkt-Suche">
 <!ENTITY gblite.searchtype.scholar "Scholar-Suche">
 <!ENTITY gblite.searchtype.answers "Answers.com-Suche">
+<!ENTITY gblite.searchtype.dictionary "Google Dictionary">
 <!ENTITY gblite.context.web "Web nach ausgewähltem Text durchsuchen">
 <!ENTITY gblite.context.ak.web "W">
 <!ENTITY gblite.context.site "Diese Site nach ausgewähltem Text durchsuchen">
@@ -30,6 +32,8 @@
 <!ENTITY gblite.context.ak.maps "M">
 <!ENTITY gblite.context.answers "Answers.com nach ausgewähltem Text durchsuchen">
 <!ENTITY gblite.context.ak.answers "A">
+<!ENTITY gblite.context.dictionary "Search Google Dictionary for Selected Text">
+<!ENTITY gblite.context.ak.dictionary "D">
 <!ENTITY gblite.context.backwardlinks "&quot;Links zu Ihnen&quot;-Suche">
 <!ENTITY gblite.context.ak.backwardlinks "L">
 <!ENTITY gblite.context.cached "Diese Seite aus dem Google-Cache laden">
@@ -96,6 +100,7 @@
 <!ENTITY gblite.tt.maps "Lokale Adressen, Geschäfte und Unternehmen finden">
 <!ENTITY gblite.tt.scholar "Nach wissenschaftlichen Dokumenten suchen">
 <!ENTITY gblite.tt.answers "Answers.com-Suche">
+<!ENTITY gblite.tt.dictionary "Search Google Dictionary">
 <!ENTITY gblite.tt.up "Auf dieser Website eine Ebene aufwärts">
 <!ENTITY gblite.tt.highlighter "Hervorhebung der Suchbegriffe auf dieser Seite umschalten">
 <!ENTITY gblite.tt.overflow "Suchbegriffe (Fortsetzung)">
@@ -120,12 +125,14 @@
 <!ENTITY gblite.options.searchintab "Suchergebnisse (wenn erforderlich) in einem neuen Tab öffnen">
 <!ENTITY gblite.options.remembercombined "An die letzte Suche aus dem kombinierten Suchmenü erinnern">
 <!ENTITY gblite.options.searchondragdrop "Bei &quot;Drag and Drop&quot; automatisch Suchen">
+<!ENTITY gblite.options.usesecuresearch "Use secure search where possible">
 <!ENTITY gblite.options.warnonformhistory "Warnen, wenn die Option zum Speichern von Formulardaten im Firefox deaktiviert ist">
 <!ENTITY gblite.options.maintainhistory "Such-Chronik pflegen">
 <!ENTITY gblite.options.autocomplete "Auto-Vervollständigen aktivieren">
 <!ENTITY gblite.options.inlinecomplete "Inline-Vervollständigung verwenden">
 <!ENTITY gblite.options.autosearchhistory "Automatisch suchen, wenn aus der Chronik gewählt wird">
 <!ENTITY gblite.options.ignoreanswers "Suchanfragen bei Answers.com nicht in der Such-Chronik speichern">
+<!ENTITY gblite.options.ignoredictionary "Ignore Google Dictionary searches in history">
 <!ENTITY gblite.options.prompttoclear "Vor dem Löschen der Chronik nachfragen">
 <!ENTITY gblite.options.showlabels "Schaltflächen-Beschriftung anzeigen (nur vorgewählter Text)">
 <!ENTITY gblite.options.showsearchwords "Suchbegriffe">

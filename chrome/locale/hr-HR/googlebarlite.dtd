@@ -2,6 +2,7 @@
 <!ENTITY gblite.name "Googlebar Lite">
 <!ENTITY gblite.toolbar.name "Googlebar Lite alatna traka">
 <!ENTITY gblite.ak.name "G">
+<!ENTITY gblite.toggle.toolbar "Toggle GBL Toolbar">
 <!ENTITY gblite.searchtype.web "Web pretraživanje">
 <!ENTITY gblite.searchtype.lucky "Osjećam se sretnim">
 <!ENTITY gblite.searchtype.site "Pretraživanje stranice">
@@ -16,6 +17,7 @@
 <!ENTITY gblite.searchtype.finance "Finance Search">
 <!ENTITY gblite.searchtype.scholar "Pretraživanje učenika">
 <!ENTITY gblite.searchtype.answers "Answers.com Pretraživanje">
+<!ENTITY gblite.searchtype.dictionary "Google Dictionary">
 <!ENTITY gblite.context.web "Pretraži web za odabrani tekst">
 <!ENTITY gblite.context.ak.web "W">
 <!ENTITY gblite.context.site "Pretraži ovu stranicu za odabrani tekst">
@@ -30,6 +32,8 @@
 <!ENTITY gblite.context.ak.maps "M">
 <!ENTITY gblite.context.answers "Pretraži Answers.com za odabrani tekst">
 <!ENTITY gblite.context.ak.answers "A">
+<!ENTITY gblite.context.dictionary "Search Google Dictionary for Selected Text">
+<!ENTITY gblite.context.ak.dictionary "D">
 <!ENTITY gblite.context.backwardlinks "Povratne poveznice">
 <!ENTITY gblite.context.ak.backwardlinks "r">
 <!ENTITY gblite.context.cached "Privremeno spremljena snimka ove stranice">
@@ -96,6 +100,7 @@
 <!ENTITY gblite.tt.maps "Pretraži Google Mape">
 <!ENTITY gblite.tt.scholar "Pretraži učeničku dokumentaciju">
 <!ENTITY gblite.tt.answers "Pretraži Answers.com">
+<!ENTITY gblite.tt.dictionary "Search Google Dictionary">
 <!ENTITY gblite.tt.up "Idi gore jednu razinu">
 <!ENTITY gblite.tt.highlighter "Mijenjaj isticanje pojmova pretraživanja na ovoj stranici">
 <!ENTITY gblite.tt.overflow "Pojmovi pretraživanja (Nastavak)">
@@ -120,12 +125,14 @@
 <!ENTITY gblite.options.searchintab "Otvori rezultate pretraživanja u novoj kartici (ako je potrebno)">
 <!ENTITY gblite.options.remembercombined "Zapamti zadnji kombinirani izbornik tipa pretraživanja">
 <!ENTITY gblite.options.searchondragdrop "Automatski pretraži nakon povlačenja i ispuštanja">
+<!ENTITY gblite.options.usesecuresearch "Use secure search where possible">
 <!ENTITY gblite.options.warnonformhistory "Upozori me ako je u Firefoxu onemogućen obrazac povijesti">
 <!ENTITY gblite.options.maintainhistory "Podržavaj povijest pretraživanja">
 <!ENTITY gblite.options.autocomplete "Omogući automatsko dovršavanje">
 <!ENTITY gblite.options.inlinecomplete "Koristi dovršavanje u liniji">
 <!ENTITY gblite.options.autosearchhistory "Automatski pretraži kada odaberete obrazac iz povijesti pretraživanja">
 <!ENTITY gblite.options.ignoreanswers "Ignoriraj Answers.com pretraživanja u povijesti">
+<!ENTITY gblite.options.ignoredictionary "Ignore Google Dictionary searches in history">
 <!ENTITY gblite.options.prompttoclear "Pitaj prije čišćenja povijesti pretraživanja">
 <!ENTITY gblite.options.showlabels "Prikaži natpise gumba (samo selektivni tekst)">
 <!ENTITY gblite.options.showsearchwords "Pretraži riječi">

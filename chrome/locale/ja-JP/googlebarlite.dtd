@@ -2,6 +2,7 @@
 <!ENTITY gblite.name "Googlebar Lite">
 <!ENTITY gblite.toolbar.name "Googlebar Liteツールバー">
 <!ENTITY gblite.ak.name "G">
+<!ENTITY gblite.toggle.toolbar "Toggle GBL Toolbar">
 <!ENTITY gblite.searchtype.web "ウェブ検索">
 <!ENTITY gblite.searchtype.lucky "I&apos;m Feeling Lucky">
 <!ENTITY gblite.searchtype.site "サイト内検索">
@@ -16,6 +17,7 @@
 <!ENTITY gblite.searchtype.finance "金融検索">
 <!ENTITY gblite.searchtype.scholar "Scholar検索">
 <!ENTITY gblite.searchtype.answers "Answers.com検索">
+<!ENTITY gblite.searchtype.dictionary "Google Dictionary">
 <!ENTITY gblite.context.web "選択したテキストでウェブ検索">
 <!ENTITY gblite.context.ak.web "W">
 <!ENTITY gblite.context.site "選択したテキストでサイト内検索">
@@ -30,6 +32,8 @@
 <!ENTITY gblite.context.ak.maps "M">
 <!ENTITY gblite.context.answers "選択したテキストでAnswers.com検索">
 <!ENTITY gblite.context.ak.answers "A">
+<!ENTITY gblite.context.dictionary "Search Google Dictionary for Selected Text">
+<!ENTITY gblite.context.ak.dictionary "D">
 <!ENTITY gblite.context.backwardlinks "リンクしているページ">
 <!ENTITY gblite.context.ak.backwardlinks "B">
 <!ENTITY gblite.context.cached "このページのキャッシュ">
@@ -96,6 +100,7 @@
 <!ENTITY gblite.tt.maps "Google Mapsで検索する">
 <!ENTITY gblite.tt.scholar "scholarly papersで検索する">
 <!ENTITY gblite.tt.answers "Answers.comで検索する">
+<!ENTITY gblite.tt.dictionary "Search Google Dictionary">
 <!ENTITY gblite.tt.up "ひとつ上の階層に上がる">
 <!ENTITY gblite.tt.highlighter "検索単語がこのページ上で使われている箇所のハイライトを切り替える">
 <!ENTITY gblite.tt.overflow "検索単語(続き)">
@@ -120,12 +125,14 @@
 <!ENTITY gblite.options.searchintab "検索結果を新しいタブで開く(必要があれば)">
 <!ENTITY gblite.options.remembercombined "最後に使った連結検索メニューを記憶する">
 <!ENTITY gblite.options.searchondragdrop "ドラッグ&amp;ドロップで自動的に探索">
+<!ENTITY gblite.options.usesecuresearch "Use secure search where possible">
 <!ENTITY gblite.options.warnonformhistory "Firefoxでフォームの入力履歴が無効になっている時は警告する">
 <!ENTITY gblite.options.maintainhistory "検索履歴を保持する">
 <!ENTITY gblite.options.autocomplete "自動補完を有効にする">
 <!ENTITY gblite.options.inlinecomplete "インライン補完を使用する">
 <!ENTITY gblite.options.autosearchhistory "検索履歴から選択した時、自動的に検索を始める">
 <!ENTITY gblite.options.ignoreanswers "Answers.comで検索した履歴は保存しない">
+<!ENTITY gblite.options.ignoredictionary "Ignore Google Dictionary searches in history">
 <!ENTITY gblite.options.prompttoclear "検索履歴をクリアする前に確認する">
 <!ENTITY gblite.options.showlabels "ボタンのラベルを表示する(選択されたボタンのみ)">
 <!ENTITY gblite.options.showsearchwords "検索単語">

@@ -2,6 +2,7 @@
 <!ENTITY gblite.name "Googlebar Lite">
 <!ENTITY gblite.toolbar.name "Μπάρα του Googlebar Lite">
 <!ENTITY gblite.ak.name "G">
+<!ENTITY gblite.toggle.toolbar "Toggle GBL Toolbar">
 <!ENTITY gblite.searchtype.web "Αναζήτηση στον Ιστό">
 <!ENTITY gblite.searchtype.lucky "Αισθάνομαι Τυχερός">
 <!ENTITY gblite.searchtype.site "Αναζήτηση Ιστοσελίδας">
@@ -16,6 +17,7 @@
 <!ENTITY gblite.searchtype.finance "Finance Search">
 <!ENTITY gblite.searchtype.scholar "Αναζήτηση στο Scholar">
 <!ENTITY gblite.searchtype.answers "Άναζήτηση στο Answers.com">
+<!ENTITY gblite.searchtype.dictionary "Google Dictionary">
 <!ENTITY gblite.context.web "Αναζήτηση στον Ιστό για το Επιλεγμένο Κείμενο">
 <!ENTITY gblite.context.ak.web "Ι">
 <!ENTITY gblite.context.site "Αναζήτηση στην Ιστοσελίδα για το Επιλεγμένο Κείμενο">
@@ -30,6 +32,8 @@
 <!ENTITY gblite.context.ak.maps "p">
 <!ENTITY gblite.context.answers "Αναζήτηση στο Answers.com για το Επιλεγμένο Κείμενο">
 <!ENTITY gblite.context.ak.answers "n">
+<!ENTITY gblite.context.dictionary "Search Google Dictionary for Selected Text">
+<!ENTITY gblite.context.ak.dictionary "D">
 <!ENTITY gblite.context.backwardlinks "Προηγούμενοι Σύνδεσμοι">
 <!ENTITY gblite.context.ak.backwardlinks "Σ">
 <!ENTITY gblite.context.cached "Προεπισκόπηση Σελίδας">
@@ -96,6 +100,7 @@
 <!ENTITY gblite.tt.maps "Αναζήτηση Google Maps">
 <!ENTITY gblite.tt.scholar "Αναζήτηση ακαδημαϊκών εργασιών">
 <!ENTITY gblite.tt.answers "Αναζήτηση στο Answers.com">
+<!ENTITY gblite.tt.dictionary "Search Google Dictionary">
 <!ENTITY gblite.tt.up "Ένα επίπεδο πάνω">
 <!ENTITY gblite.tt.highlighter "Κλείδωμα μαρκαρίσματος των όρων αναζήτησης σε αυτήν τη σελίδα">
 <!ENTITY gblite.tt.overflow "Όροι Αναζήτησης (Συνεχίζεται)">
@@ -120,12 +125,14 @@
 <!ENTITY gblite.options.searchintab "Άνοιγμα αποτελεσμάτων αναζήτησης σε νέα καρτέλα (εάν είναι απαραίτητο)">
 <!ENTITY gblite.options.remembercombined "Απομνημόνευση του τελευταίου τύπου σύνθετης αναζήτησης">
 <!ENTITY gblite.options.searchondragdrop "Αυτόματη αναζήτηση στο σύρσιμο και την εναπόθεση">
+<!ENTITY gblite.options.usesecuresearch "Use secure search where possible">
 <!ENTITY gblite.options.warnonformhistory "Ειδοποίηση όταν το ιστορικό φόρμας είναι απενεργοποιημένη στο Firefox">
 <!ENTITY gblite.options.maintainhistory "Διατήρηση ιστορικού αναζήτησης">
 <!ENTITY gblite.options.autocomplete "Ενεργοποίηση αυτο-συμπλήρωσης">
 <!ENTITY gblite.options.inlinecomplete "Χρήση συμπλήρωσης μέσα στη γραμμή">
 <!ENTITY gblite.options.autosearchhistory "Αυτόματη αναζήτηση στην περίπτωση επιλογής από το ιστορικό αναζήτησης">
 <!ENTITY gblite.options.ignoreanswers "Παράβλεψη αναζητήσεων του Answers.com στο ιστορικό">
+<!ENTITY gblite.options.ignoredictionary "Ignore Google Dictionary searches in history">
 <!ENTITY gblite.options.prompttoclear "Ερώτηση πριν τον καθαρισμό του ιστορικού αναζήτησης">
 <!ENTITY gblite.options.showlabels "Εμφάνιση κειμένου επεξήγησης κουμπιών (μόνο επιλεκτικό κείμενο)">
 <!ENTITY gblite.options.showsearchwords "Λέξεις Αναζήτησης">

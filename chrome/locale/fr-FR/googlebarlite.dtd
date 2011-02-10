@@ -2,6 +2,7 @@
 <!ENTITY gblite.name "Googlebar Lite">
 <!ENTITY gblite.toolbar.name "Barre d&apos;outils Googlebar Lite">
 <!ENTITY gblite.ak.name "G">
+<!ENTITY gblite.toggle.toolbar "Toggle GBL Toolbar">
 <!ENTITY gblite.searchtype.web "Recherche Web">
 <!ENTITY gblite.searchtype.lucky "J&apos;ai de la chance">
 <!ENTITY gblite.searchtype.site "Recherche de site">
@@ -16,6 +17,7 @@
 <!ENTITY gblite.searchtype.finance "Recherche en Bourse">
 <!ENTITY gblite.searchtype.scholar "Recherche Scolaire et scientifiques">
 <!ENTITY gblite.searchtype.answers "Recherche Answers.com (Encyclopédie)">
+<!ENTITY gblite.searchtype.dictionary "Google Dictionary">
 <!ENTITY gblite.context.web "Rechercher le texte sélectionné sur le Web">
 <!ENTITY gblite.context.ak.web "W">
 <!ENTITY gblite.context.site "Rechercher le texte sélectionné sur ce site">
@@ -30,6 +32,8 @@
 <!ENTITY gblite.context.ak.maps "M">
 <!ENTITY gblite.context.answers "Rechercher le texte sélectionné sur Answers.com">
 <!ENTITY gblite.context.ak.answers "A">
+<!ENTITY gblite.context.dictionary "Search Google Dictionary for Selected Text">
+<!ENTITY gblite.context.ak.dictionary "D">
 <!ENTITY gblite.context.backwardlinks "Liens précédents">
 <!ENTITY gblite.context.ak.backwardlinks "r">
 <!ENTITY gblite.context.cached "Copie de cette page dans le cache">
@@ -96,6 +100,7 @@
 <!ENTITY gblite.tt.maps "Chercher sur Google Maps">
 <!ENTITY gblite.tt.scholar "Chercher documents scolaires">
 <!ENTITY gblite.tt.answers "Chercher sur Answers.com">
+<!ENTITY gblite.tt.dictionary "Search Google Dictionary">
 <!ENTITY gblite.tt.up "Remonter d&apos;un niveau">
 <!ENTITY gblite.tt.highlighter "Activer/désactiver le surlignage des termes recherchés sur cette page">
 <!ENTITY gblite.tt.overflow "Termes recherchés (suite)">
@@ -120,12 +125,14 @@
 <!ENTITY gblite.options.searchintab "Afficher les résultats de recherche dans un nouvel onglet (si nécessaire)">
 <!ENTITY gblite.options.remembercombined "Conserver le dernier type de recherche mixte">
 <!ENTITY gblite.options.searchondragdrop "Chercher automatiquement sur copier-coller">
+<!ENTITY gblite.options.usesecuresearch "Use secure search where possible">
 <!ENTITY gblite.options.warnonformhistory "Prévenez-moi si l&apos;historique des formulaires est désactivé dans Firefox">
 <!ENTITY gblite.options.maintainhistory "Conserver l&apos;historique des recherches">
 <!ENTITY gblite.options.autocomplete "Activer l&apos;affichage de l&apos;historique du texte saisi">
 <!ENTITY gblite.options.inlinecomplete "Compléter automatiquement le texte saisi">
 <!ENTITY gblite.options.autosearchhistory "Chercher automatiquement lorsque vous sélectionnez un élément   de l&apos;historique des recherches">
 <!ENTITY gblite.options.ignoreanswers "Ignorer les résultats de Answers.com dans l&apos;historique">
+<!ENTITY gblite.options.ignoredictionary "Ignore Google Dictionary searches in history">
 <!ENTITY gblite.options.prompttoclear "Demander confirmation avant de supprimer l&apos;historique des recherches">
 <!ENTITY gblite.options.showlabels "Afficher les étiquettes des boutons (texte sélectif uniquement)">
 <!ENTITY gblite.options.showsearchwords "Termes de recherche">

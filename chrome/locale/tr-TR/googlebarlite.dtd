@@ -2,6 +2,7 @@
 <!ENTITY gblite.name "Googlebar Lite">
 <!ENTITY gblite.toolbar.name "Googlebar Lite Araç Çubuğu">
 <!ENTITY gblite.ak.name "G">
+<!ENTITY gblite.toggle.toolbar "Toggle GBL Toolbar">
 <!ENTITY gblite.searchtype.web "Web Araması">
 <!ENTITY gblite.searchtype.lucky "Kendimi Şanslı Hissediyorum!">
 <!ENTITY gblite.searchtype.site "Site Ara">
@@ -16,6 +17,7 @@
 <!ENTITY gblite.searchtype.finance "Finance Search">
 <!ENTITY gblite.searchtype.scholar "Akademik Arama">
 <!ENTITY gblite.searchtype.answers "Answers.com Arama">
+<!ENTITY gblite.searchtype.dictionary "Google Dictionary">
 <!ENTITY gblite.context.web "Seçili Metni İnternette Ara">
 <!ENTITY gblite.context.ak.web "W">
 <!ENTITY gblite.context.site "Seçili Metin İçin Bu Siteyi Ara">
@@ -30,6 +32,8 @@
 <!ENTITY gblite.context.ak.maps "M">
 <!ENTITY gblite.context.answers "Seçili Metni Answers.com&apos;da Ara">
 <!ENTITY gblite.context.ak.answers "A">
+<!ENTITY gblite.context.dictionary "Search Google Dictionary for Selected Text">
+<!ENTITY gblite.context.ak.dictionary "D">
 <!ENTITY gblite.context.backwardlinks "Geriye Dönük Bağlantılar">
 <!ENTITY gblite.context.ak.backwardlinks "B">
 <!ENTITY gblite.context.cached "Bu Sayfanın Önyüklenmiş Görüntüsü">
@@ -96,6 +100,7 @@
 <!ENTITY gblite.tt.maps "Google Haritalarda ara">
 <!ENTITY gblite.tt.scholar "Akademik sayfaları ara">
 <!ENTITY gblite.tt.answers "Answers.com&apos;da Ara">
+<!ENTITY gblite.tt.dictionary "Search Google Dictionary">
 <!ENTITY gblite.tt.up "Bir seviye yukarı çık">
 <!ENTITY gblite.tt.highlighter "Bu sayfada terimlerin vurgulanması özelliğini aç">
 <!ENTITY gblite.tt.overflow "Terimleri Ara (Devam Eden)">
@@ -120,12 +125,14 @@
 <!ENTITY gblite.options.searchintab "Arama sonuçlarını yeni bir sekmede aç (gerekliyse)">
 <!ENTITY gblite.options.remembercombined "En son birleştirilmiş menü arama türünü hatırla">
 <!ENTITY gblite.options.searchondragdrop "Sürükle ve bırakta otomatik ara">
+<!ENTITY gblite.options.usesecuresearch "Use secure search where possible">
 <!ENTITY gblite.options.warnonformhistory "Firafox&apos;ta form geçmişi devre dışı olduğunda beni uyar">
 <!ENTITY gblite.options.maintainhistory "Arama geçmişini sakla">
 <!ENTITY gblite.options.autocomplete "Otomatik tamamlamayı etkinleştir">
 <!ENTITY gblite.options.inlinecomplete "Satır içi tamamlamayı kullan">
 <!ENTITY gblite.options.autosearchhistory "Arama geçmişinden seçildiğinde otomatik olarak ara">
 <!ENTITY gblite.options.ignoreanswers "Answers.com aramalarını geçmişe dahil etme">
+<!ENTITY gblite.options.ignoredictionary "Ignore Google Dictionary searches in history">
 <!ENTITY gblite.options.prompttoclear "Arama geçmişini silmeden önce sor">
 <!ENTITY gblite.options.showlabels "Düğme etiketlerini göster (yalnızca seçilebilir metin)">
 <!ENTITY gblite.options.showsearchwords "Sözcükleri Ara">
