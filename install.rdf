@@ -9,10 +9,10 @@
 	<em:creator>Jonah Bishop</em:creator>
 	<em:homepageURL>http://www.borngeek.com/firefox/googlebarlite/</em:homepageURL>
 	<em:id>{79c50f9a-2ffe-4ee0-8a37-fae4f5dacd4f}</em:id>
-	<em:iconURL>chrome://googlebarlite/content/base_skin/logo.png</em:iconURL>
+	<em:iconURL>chrome://googlebarlite/skin/logo.png</em:iconURL>
 	<em:name>Googlebar Lite</em:name>
 	<em:optionsURL>chrome://googlebarlite/content/options.xul</em:optionsURL>
-	<em:version>4.7.5</em:version>
+	<em:version>4.7.6</em:version>
 
 	<em:updateURL>http://www.borngeek.com/downloads/update.rdf</em:updateURL>
 	

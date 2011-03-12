@@ -85,7 +85,6 @@
 					<menupopup id="GBL-MainMenu-Popup">
 						<menuitem label="&gblite.mainmenu.label.homepage;" accesskey="&gblite.mainmenu.ak.homepage;"
 								  oncommand="objGooglebarLite.PrepareMainMenu(event, 'web')" onclick="checkForMiddleClick(this, event);" />
-						<menuitem label="Debug" oncommand="objGooglebarLite.DoDebug(event)" />
 						
 						<menu label="&gblite.mainmenu.label.googlelinks;" accesskey="&gblite.mainmenu.ak.googlelinks;">
 						<menupopup id="GBL-MainMenu-Links-Popup">
@@ -154,20 +153,20 @@
 					</toolbarbutton>
 				</toolbaritem>
 				
-				<toolbaritem id="GBL-SearchBox-TBItem" persist="width" align="center">
+				<hbox id="GBL-SearchBox-Container" persist="width" align="center">
 				<textbox id="GBL-SearchBox"
 					type="autocomplete"
 					autocompletesearch="form-history"
 					autocompletesearchparam="GBL-Search-History"
 					completedefaultindex="false"
 					disableautocomplete="false"
-					ontextentered="objGooglebarLite.Log('Got it!'); objGooglebarLite.SearchBoxTextEntered(param);"
+					ontextentered="objGooglebarLite.SearchBoxTextEntered(param);"
 					oninput="objGooglebarLite.TermsHaveUpdated();"
 					enablehistory="true"
 					flex="1"
 					minwidth="100"
 					width="175" />
-				</toolbaritem>
+				</hbox>
 				
 				<splitter id="GBL-ResizeSplitter" state="open" collapse="none" resizebefore="closest" resizeafter="farthest"
 						  hidden="false" tooltiptext="&gblite.tt.splitter;" onmouseup="objGooglebarLite.Resize()">
@@ -309,11 +308,11 @@
 				</toolbaritem>
 				
 				<toolbaritem id="GBL-TB-SearchWordArea" pack="start" flex="1">
-					<toolbaritem id="GBL-TB-SearchWordsContainer" collapsed="false" />
+					<toolbaritem id="GBL-TB-SearchWordsContainer" />
 					
 					<toolbarspring />
 					
-					<toolbarbutton id="GBL-Overflow-Button" class="GBL-Toolbar-Button" collapsed="true" mousethrough="never"
+					<toolbarbutton id="GBL-Overflow-Button" class="GBL-Toolbar-Button" collapsed="false" mousethrough="never"
 								   tooltiptext="&gblite.tt.overflow;" type="menu">
 						<menupopup id="GBL-Overflow-Menu" onpopupshowing="objGooglebarLite.UpdateOverflowMenu()" />
 					</toolbarbutton>

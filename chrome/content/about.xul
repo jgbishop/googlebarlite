@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
-<?xml-stylesheet href="chrome://googlebarlite/content/base_skin/about.css" type="text/css"?>
+<?xml-stylesheet href="chrome://googlebarlite/skin/about.css" type="text/css"?>
 
 <!DOCTYPE dialog [
 <!ENTITY % GBLiteMainDTD SYSTEM "chrome://googlebarlite/locale/googlebarlite.dtd">
@@ -18,7 +18,7 @@
 <vbox>
 	<vbox align="center" flex="1">
 		<label id="GBL-About-Name" crop="right" value="&gblite.name;"/>
-		<label id="GBL-About-Version" crop="right" value="Version 4.7.5"/>
+		<label id="GBL-About-Version" crop="right" value="Version 4.7.6"/>
 	</vbox>
 	
 	<groupbox>

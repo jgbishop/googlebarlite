@@ -187,6 +187,7 @@ var objGooglebarLite = {
 	// ==================== Misc. Variables ====================
 	LastHighlightedTerms : "",
 	OriginalCustomizeDone : null,
+	OverflowButtonWidth : 0,
 	PBListener: null,
 	RunOnce : false,
 
@@ -399,16 +400,16 @@ var objGooglebarLite = {
 		var searchTerms = this.SplitTerms(term);
 		var tempButton;
 		var tempMenuItem;
+
+		var operators = Array("allinanchor:", "allintext:", "allintitle:", "allinurl:", "cache:", 
+							  "define:", "filetype:", "id:", "inanchor:", "info:", "intext:",
+							  "intitle:", "inurl:", "link:", "phonebook:", "related:", "site:", "OR");
 	
 		for(var i=0; i<searchTerms.length; i++)
 		{
 			var thisTerm = searchTerms[i];
-	
-			if(
-			   thisTerm.search(/^(?:site|cache|link|related|info|filetype|safesearch|allintitle|intitle|allinurl|inurl):/) != -1 ||
-			   thisTerm.search(/^OR$/) != -1 ||
-			   thisTerm.search(/^-/) != -1
-			  )
+
+			if(operators.indexOf(thisTerm) != -1 || thisTerm.charAt(0) == "-")
 				continue; // Ignore this term
 
 			// Remove all double quotes
@@ -603,9 +604,9 @@ var objGooglebarLite = {
 	
 	DelayedStartup: function()
 	{
-//  	var navtoolbox = document.getElementById("navigator-toolbox");
-//  	objGooglebarLite.OriginalCustomizeDone = navtoolbox.customizeDone;
-//  	navtoolbox.customizeDone = objGooglebarLite.BuildFunction(this, objGooglebarLite.ToolboxCustomizeDone);
+		var navtoolbox = document.getElementById("navigator-toolbox");
+		objGooglebarLite.OriginalCustomizeDone = navtoolbox.customizeDone;
+		navtoolbox.customizeDone = objGooglebarLite.BuildFunction(this, objGooglebarLite.ToolboxCustomizeDone);
 
 		var searchbox = document.getElementById("GBL-SearchBox");
 		searchbox.addEventListener("popupshowing", objGooglebarLite.SearchContextOnPopupShowing, true);
@@ -624,19 +625,6 @@ var objGooglebarLite = {
 			this.PrefBranch.setBoolPref(this.PrefName_WarnOnFormHistory, false);
 	},
 
-	DoDebug: function(event)
-	{
-		var searchbox = document.getElementById("GBL-SearchBox");
-
-		var buffer = '';
-		for(var i in searchbox)
-		{
-			buffer += i + ": " + searchbox[i] + "\n";
-		}
-		this.Log(buffer);
-//  	for(var p in obj) { console.log(p, obj[p]) }
-	},
-	
 	DragDropToSearchBox: function(event, data)
 	{
 		var d = window.content.document;
@@ -887,6 +875,10 @@ var objGooglebarLite = {
 			};
 	
 			window.getBrowser().addProgressListener(objGooglebarLite.Listener, Components.interfaces.nsIWebProgress.NOTIFY_STATE_DOCUMENT);
+
+			var chevron = document.getElementById("GBL-Overflow-Button");
+			objGooglebarLite.OverflowButtonWidth = chevron.boxObject.width;
+			chevron.collapsed = true; // Initalize the overflow button to a hidden state
 	
 			setTimeout(objGooglebarLite.DelayedStartup, 50); // Needs to happen after Firefox's delayedStartup()
 	
@@ -1319,15 +1311,9 @@ var objGooglebarLite = {
 		if(!buttons || !objGooglebarLite.TB_ShowSearchWords)
 			return;
 	
-		var overflowMenu = document.getElementById("GBL-Overflow-Menu");
 		var chevron = document.getElementById("GBL-Overflow-Button");
-		var chevronWidth = 0;
-		chevron.collapsed = false;
-		chevronWidth = chevron.boxObject.width;
-		chevron.collapsed = true;
-	
 		var available = window.innerWidth;
-	
+
 		// Sizing issue hack (taken from patch for bug 266737)
 		if(available == 0)
 			window.addEventListener('focus', objGooglebarLite.Resize, false);
@@ -1340,7 +1326,7 @@ var objGooglebarLite = {
 			button.collapsed = overflowed;
 	
 			var offset = button.boxObject.x;
-			if(offset + button.boxObject.width + chevronWidth > available)
+			if(offset + button.boxObject.width + objGooglebarLite.OverflowButtonWidth > available)
 			{
 				overflowed = true;
 				// This button doesn't fit, so show it in the menu and hide it in the toolbar.
@@ -1350,6 +1336,10 @@ var objGooglebarLite = {
 					chevron.collapsed = false;
 			}
 		}
+
+		// If we never overflowed, make sure the overflow button is hidden from view
+		if(overflowed = false)
+			chevron.collapsed = true;
 	},
 
 	Search: function(searchTerms, searchType, isEmpty, useTab)
@@ -1444,11 +1434,11 @@ var objGooglebarLite = {
 	
 		// The following cases are only accessible through the context menu
 		case "backwards":
-			URL = this.BuildSearchURL("www", "search", "link:" + win.location.href);
+			URL = this.BuildSearchURL("www", "search", "link:" + encodeURIComponent(win.location.href));
 			break;
 	
 		case "cached":
-			URL = this.BuildSearchURL("www", "search", "cache:" + win.location.href);
+			URL = this.BuildSearchURL("www", "search", "cache:" + encodeURIComponent(win.location.href));
 			break;
 	
 		case "cachedlink":
@@ -1456,12 +1446,12 @@ var objGooglebarLite = {
 			break;
 	
 		case "similar":
-			URL = this.BuildSearchURL("www", "search", "related:" + win.location.href);
+			URL = this.BuildSearchURL("www", "search", "related:" + encodeURIComponent(win.location.href));
 			break;
 	
 		case "translate":
 			// Only uses .com (no country customization)
-			URL = "http://translate.google.com/translate?u=" + win.location.href;
+			URL = "http://translate.google.com/translate?u=" + encodeURIComponent(win.location.href);
 			break;
 	
 		// The following cases are only accessible through items on the GBL main menu
@@ -1504,26 +1494,19 @@ var objGooglebarLite = {
 
 	SearchBoxTextEntered: function(aTriggeringEvent)
 	{
-		this.Log("Event: " + aTriggeringEvent);
-
 		// Step 1: Get the search terms
 		var terms = this.TrimString(this.GetSearchTerms());
-		this.Log("Terms: [" + terms + "]");
 		var isEmpty = (terms.length == 0);
 	
 		// Step 2: Do we need to open a new tab?
 		var useTab = this.OpenInTab(aTriggeringEvent, true);
-		this.Log("UseTab: " + useTab);
 	
 		// Step 3: Get the search type
 		var searchType = this.GetSearchType(aTriggeringEvent);
-		this.Log("Search Type: " + searchType);
 	
 		// Step 4: Search
 		if(aTriggeringEvent != null || (aTriggeringEvent == null && this.AutoSearch))
 			this.Search(terms, searchType, isEmpty, useTab);
-		else
-			this.Log("Failed to trigger on event!");
 	},
 
 	SearchContextOnPopupShowing: function(e)
@@ -1629,6 +1612,9 @@ var objGooglebarLite = {
 	
 			case ',':
 				break; // Ignore commas (regardless of where they are)
+
+			case '|':
+				break; // Ignore pipe
 	
 			case '+':
 			case '~':
@@ -1684,9 +1670,6 @@ var objGooglebarLite = {
 	{
 		var mainItem = document.getElementById("GBL-Toolbar-MainItem");
 		
-		objGooglebarLite.Log("mainItem: " + mainItem);
-		objGooglebarLite.Log("somethingChanged: " + somethingChanged);
-
 		// Don't process anything if mainItem is null (the toolbar item has been dragged into the toolbox)
 		if(mainItem && somethingChanged)
 		{
@@ -1712,8 +1695,6 @@ var objGooglebarLite = {
 		else if(mainItem && !somethingChanged)
 			objGooglebarLite.SetSearchTerms(""); // Prevent zombie search word buttons from appearing
 
-		objGooglebarLite.Log("OriginalCustomizeDone: " + this.objGooglebarLite.OriginalCustomizeDone);
-	
 		this.objGooglebarLite.OriginalCustomizeDone(somethingChanged);
 	},
 	

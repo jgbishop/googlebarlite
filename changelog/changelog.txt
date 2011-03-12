@@ -1,6 +1,17 @@
 //***************
 //Version History
 //***************
+[4.7.6]
++ Improved styling in a few places.
++ Removed the style rules for the Qute and Noia themes.
++ Bug Fix: Corrected a resize issue that was causing a phantom chrome element to appear in Firefox 4.
++ Bug Fix: URLs passed as a part of several context menu search types are now wrapped in encodeURIComponent() calls, preventing certain URLs from failing to load.
++ Bug Fix: Altered the XUL markup around the search box to fix some styling issues.
++ Bug Fix: Added several missing search operators to the word search button filter.
++ Bug Fix: Search word buttons are no longer created for the pipe character.
+
+--
+
 [4.7.5]
 + Added an option to enable secure search (where possible)
 + Gave the "toggle toolbar" button a more descriptive name
