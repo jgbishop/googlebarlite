@@ -403,13 +403,23 @@ var objGooglebarLite = {
 
 		var operators = Array("allinanchor:", "allintext:", "allintitle:", "allinurl:", "cache:", 
 							  "define:", "filetype:", "id:", "inanchor:", "info:", "intext:",
-							  "intitle:", "inurl:", "link:", "phonebook:", "related:", "site:", "OR");
+							  "intitle:", "inurl:", "link:", "phonebook:", "related:", "site:");
 	
 		for(var i=0; i<searchTerms.length; i++)
 		{
 			var thisTerm = searchTerms[i];
+			var containsOperator = false;
 
-			if(operators.indexOf(thisTerm) != -1 || thisTerm.charAt(0) == "-")
+			for(var j=0; j<operators.length; j++)
+			{
+				if(thisTerm.toLowerCase().indexOf(operators[j]) != -1)
+				{
+					containsOperator = true;
+					break;
+				}
+			}
+
+			if(containsOperator == true || thisTerm.toLowerCase() == "or" || thisTerm.charAt(0) == "-")
 				continue; // Ignore this term
 
 			// Remove all double quotes

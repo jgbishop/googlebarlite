@@ -1,6 +1,12 @@
 //***************
 //Version History
 //***************
+
+[4.7.7]
++ Bug Fix: Corrected a few parsing issues in the search word button filter which were introduced in 4.7.6.
+
+--
+
 [4.7.6]
 + Improved styling in a few places.
 + Removed the style rules for the Qute and Noia themes.
