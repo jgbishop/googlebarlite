@@ -16,7 +16,6 @@
 <!ENTITY gblite.searchtype.book "Book Search">
 <!ENTITY gblite.searchtype.finance "Finance Search">
 <!ENTITY gblite.searchtype.scholar "Scholar Search">
-<!ENTITY gblite.searchtype.answers "Answers.com Search">
 <!ENTITY gblite.searchtype.dictionary "Google Dictionary">
 <!ENTITY gblite.context.web "Search Web for Selected Text">
 <!ENTITY gblite.context.ak.web "W">
@@ -30,8 +29,6 @@
 <!ENTITY gblite.context.ak.groups "G">
 <!ENTITY gblite.context.maps "Search Google Maps for Selected Text">
 <!ENTITY gblite.context.ak.maps "M">
-<!ENTITY gblite.context.answers "Search Answers.com for Selected Text">
-<!ENTITY gblite.context.ak.answers "A">
 <!ENTITY gblite.context.dictionary "Search Google Dictionary for Selected Text">
 <!ENTITY gblite.context.ak.dictionary "D">
 <!ENTITY gblite.context.backwardlinks "Backward Links">
@@ -99,7 +96,6 @@
 <!ENTITY gblite.tt.video "Search Google Video">
 <!ENTITY gblite.tt.maps "Search Google Maps">
 <!ENTITY gblite.tt.scholar "Search scholarly papers">
-<!ENTITY gblite.tt.answers "Search Answers.com">
 <!ENTITY gblite.tt.dictionary "Search Google Dictionary">
 <!ENTITY gblite.tt.up "Go up one level">
 <!ENTITY gblite.tt.highlighter "Toggle highlighting of search terms on this page">
@@ -132,7 +128,6 @@
 <!ENTITY gblite.options.autocomplete "Enable auto-completion">
 <!ENTITY gblite.options.inlinecomplete "Use inline completion">
 <!ENTITY gblite.options.autosearchhistory "Automatically search when you select from the search history">
-<!ENTITY gblite.options.ignoreanswers "Ignore Answers.com searches in history">
 <!ENTITY gblite.options.ignoredictionary "Ignore Google Dictionary searches in history">
 <!ENTITY gblite.options.prompttoclear "Ask before clearing search history">
 <!ENTITY gblite.options.showlabels "Show button labels (selective text only)">

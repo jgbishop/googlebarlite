@@ -2,47 +2,44 @@
 <!ENTITY gblite.name "Googlebar Lite">
 <!ENTITY gblite.toolbar.name "Googlebar Lite værktøjslinje">
 <!ENTITY gblite.ak.name "G">
-<!ENTITY gblite.toggle.toolbar "Toggle GBL Toolbar">
-<!ENTITY gblite.searchtype.web "Netsøgning">
-<!ENTITY gblite.searchtype.lucky "Jeg føler mig heldig">
-<!ENTITY gblite.searchtype.site "Søg på websiden">
+<!ENTITY gblite.toggle.toolbar "Vis/Skjul GBL værktøjslinje">
+<!ENTITY gblite.searchtype.web "Søg på nettet">
+<!ENTITY gblite.searchtype.lucky "Jeg prøver lykken">
+<!ENTITY gblite.searchtype.site "Søg på websted">
 <!ENTITY gblite.searchtype.image "Billedsøgning">
 <!ENTITY gblite.searchtype.video "Videosøgning">
 <!ENTITY gblite.searchtype.news "Nyhedssøgning">
-<!ENTITY gblite.searchtype.maps "Google Maps søgning">
-<!ENTITY gblite.searchtype.shopping "Product Search">
+<!ENTITY gblite.searchtype.maps "Google Maps-søgning">
+<!ENTITY gblite.searchtype.shopping "Produktsøgning">
 <!ENTITY gblite.searchtype.group "Gruppesøgning">
-<!ENTITY gblite.searchtype.blog "Blog Search">
-<!ENTITY gblite.searchtype.book "Book Search">
-<!ENTITY gblite.searchtype.finance "Finance Search">
-<!ENTITY gblite.searchtype.scholar "Scholar søgning">
-<!ENTITY gblite.searchtype.answers "Answers.com søgning">
-<!ENTITY gblite.searchtype.dictionary "Google Dictionary">
-<!ENTITY gblite.context.web "Søg efter den markerede tekst på nettet">
-<!ENTITY gblite.context.ak.web "W">
-<!ENTITY gblite.context.site "Søg dette site for markeret tekst">
-<!ENTITY gblite.context.ak.site "S">
-<!ENTITY gblite.context.images "Søg med den markerede tekst efter billeder">
+<!ENTITY gblite.searchtype.blog "Blogsøgning">
+<!ENTITY gblite.searchtype.book "Bogsøgning">
+<!ENTITY gblite.searchtype.finance "Finanssøgning">
+<!ENTITY gblite.searchtype.scholar "Scholar-søgning">
+<!ENTITY gblite.searchtype.dictionary "Google Ordbog">
+<!ENTITY gblite.context.web "Søg på nettet efter den markerede tekst">
+<!ENTITY gblite.context.ak.web "ø">
+<!ENTITY gblite.context.site "Søg på dette websted efter den markerede tekst">
+<!ENTITY gblite.context.ak.site "w">
+<!ENTITY gblite.context.images "Søg i Google Billeder efter den markerede tekst">
 <!ENTITY gblite.context.ak.images "B">
-<!ENTITY gblite.context.video "Søg videoer for markeret tekst">
+<!ENTITY gblite.context.video "Søg i Google Videos efter den markeret tekst">
 <!ENTITY gblite.context.ak.video "v">
-<!ENTITY gblite.context.groups "Søg med den markerede tekst efter grupper">
+<!ENTITY gblite.context.groups "Søg i Google Grupper efter den markerede tekst">
 <!ENTITY gblite.context.ak.groups "G">
-<!ENTITY gblite.context.maps "Søg i Google Maps efter den valgte tekst">
+<!ENTITY gblite.context.maps "Søg i Google Maps efter den markerede tekst">
 <!ENTITY gblite.context.ak.maps "M">
-<!ENTITY gblite.context.answers "Søg i Answers.com efter den markerede tekst">
-<!ENTITY gblite.context.ak.answers "A">
-<!ENTITY gblite.context.dictionary "Search Google Dictionary for Selected Text">
-<!ENTITY gblite.context.ak.dictionary "D">
+<!ENTITY gblite.context.dictionary "Søg i Google Ordbog efter den markerede tekst">
+<!ENTITY gblite.context.ak.dictionary "o">
 <!ENTITY gblite.context.backwardlinks "Find links til siden">
 <!ENTITY gblite.context.ak.backwardlinks "F">
-<!ENTITY gblite.context.cached "Vis cached version af denne side">
+<!ENTITY gblite.context.cached "Øjebliksbillede af side i cache">
 <!ENTITY gblite.context.ak.cached "c">
-<!ENTITY gblite.context.cachedlink "Se miniaturer af skærmbillede">
-<!ENTITY gblite.context.ak.cachedlink "a">
+<!ENTITY gblite.context.cachedlink "Øjebliksbillede af link i cache">
+<!ENTITY gblite.context.ak.cachedlink "l">
 <!ENTITY gblite.context.similar "Find lignende sider">
-<!ENTITY gblite.context.ak.similar "s">
-<!ENTITY gblite.context.translate "Oversæt til engelsk">
+<!ENTITY gblite.context.ak.similar "n">
+<!ENTITY gblite.context.translate "Oversæt til dansk">
 <!ENTITY gblite.context.ak.translate "O">
 <!ENTITY gblite.mainmenu.label.homepage "Gå til Google">
 <!ENTITY gblite.mainmenu.ak.homepage "G">
@@ -50,7 +47,7 @@
 <!ENTITY gblite.mainmenu.ak.googlelinks "L">
 <!ENTITY gblite.mainmenu.label.advanced "Avanceret søgning">
 <!ENTITY gblite.mainmenu.ak.advanced "A">
-<!ENTITY gblite.mainmenu.label.images "Google Billedsøgning">
+<!ENTITY gblite.mainmenu.label.images "Google Billeder">
 <!ENTITY gblite.mainmenu.ak.images "I">
 <!ENTITY gblite.mainmenu.label.video "Google Video">
 <!ENTITY gblite.mainmenu.ak.video "V">
@@ -58,88 +55,86 @@
 <!ENTITY gblite.mainmenu.ak.news "N">
 <!ENTITY gblite.mainmenu.label.maps "Google Maps">
 <!ENTITY gblite.mainmenu.ak.maps "p">
-<!ENTITY gblite.mainmenu.label.shopping "Google Product Search">
+<!ENTITY gblite.mainmenu.label.shopping "Google Produktsøgning">
 <!ENTITY gblite.mainmenu.ak.shopping "r">
 <!ENTITY gblite.mainmenu.label.groups "Google Grupper">
 <!ENTITY gblite.mainmenu.ak.groups "G">
-<!ENTITY gblite.mainmenu.label.blog "Google Blog Search">
+<!ENTITY gblite.mainmenu.label.blog "Google Blogsøgning">
 <!ENTITY gblite.mainmenu.ak.blog "B">
-<!ENTITY gblite.mainmenu.label.book "Google Book Search">
-<!ENTITY gblite.mainmenu.ak.book "k">
-<!ENTITY gblite.mainmenu.label.finance "Google Finance">
+<!ENTITY gblite.mainmenu.label.book "Google Bogsøgning">
+<!ENTITY gblite.mainmenu.ak.book "o">
+<!ENTITY gblite.mainmenu.label.finance "Google Finans">
 <!ENTITY gblite.mainmenu.ak.finance "F">
 <!ENTITY gblite.mainmenu.label.scholar "Google Scholar">
 <!ENTITY gblite.mainmenu.ak.scholar "S">
-<!ENTITY gblite.mainmenu.label.gmail "Google GMail">
-<!ENTITY gblite.mainmenu.ak.gmail "M">
+<!ENTITY gblite.mainmenu.label.gmail "Google Gmail">
+<!ENTITY gblite.mainmenu.ak.gmail "m">
 <!ENTITY gblite.mainmenu.label.searchprefs "Søgeindstillinger">
-<!ENTITY gblite.mainmenu.ak.searchprefs "P">
+<!ENTITY gblite.mainmenu.ak.searchprefs "ø">
 <!ENTITY gblite.mainmenu.label.languagetools "Sprogværktøjer">
-<!ENTITY gblite.mainmenu.ak.languagetools "T">
-<!ENTITY gblite.mainmenu.label.options "Indstillinger for værktøjslinjen...">
-<!ENTITY gblite.mainmenu.ak.options "V">
-<!ENTITY gblite.mainmenu.label.clearhistory "Slet søgeordslisten">
+<!ENTITY gblite.mainmenu.ak.languagetools "p">
+<!ENTITY gblite.mainmenu.label.options "Indstillinger…">
+<!ENTITY gblite.mainmenu.ak.options "I">
+<!ENTITY gblite.mainmenu.label.clearhistory "Slet søgehistorik">
 <!ENTITY gblite.mainmenu.ak.clearhistory "S">
 <!ENTITY gblite.mainmenu.label.help "Hjælp">
 <!ENTITY gblite.mainmenu.ak.help "H">
-<!ENTITY gblite.mainmenu.label.about "Om...">
+<!ENTITY gblite.mainmenu.label.about "Om…">
 <!ENTITY gblite.mainmenu.ak.about "O">
 <!ENTITY gblite.tt.mainmenu "Googlebar Lite hovedmenu">
 <!ENTITY gblite.tt.combined "Googlebar Lite søgninger">
 <!ENTITY gblite.tt.web "Søg på nettet">
-<!ENTITY gblite.tt.lucky "Udfør en Jeg føler mig heldig søgning">
-<!ENTITY gblite.tt.site "Søg på sitet">
-<!ENTITY gblite.tt.image "Søg efter billeder">
-<!ENTITY gblite.tt.shopping "Search products">
-<!ENTITY gblite.tt.group "Søg i grupper">
-<!ENTITY gblite.tt.book "Search books">
-<!ENTITY gblite.tt.news "Søg efter nyheder">
-<!ENTITY gblite.tt.blog "Search blogs">
-<!ENTITY gblite.tt.finance "Search finance">
+<!ENTITY gblite.tt.lucky "Udfør en Jeg prøver lykken">
+<!ENTITY gblite.tt.site "Søg på dette websted">
+<!ENTITY gblite.tt.image "Søg efter billeder på nettet">
+<!ENTITY gblite.tt.shopping "Søg efter produkter">
+<!ENTITY gblite.tt.group "Søg i Google Grupper">
+<!ENTITY gblite.tt.book "Søg i Google Bøger">
+<!ENTITY gblite.tt.news "Søg i Google Nyheder">
+<!ENTITY gblite.tt.blog "Søg i Blogs">
+<!ENTITY gblite.tt.finance "Søg i Google Finance">
 <!ENTITY gblite.tt.video "Søg i Google Video">
 <!ENTITY gblite.tt.maps "Søg i Google Maps">
 <!ENTITY gblite.tt.scholar "Søg i videnskabelige udgivelser">
-<!ENTITY gblite.tt.answers "Søg i Answers.com">
-<!ENTITY gblite.tt.dictionary "Search Google Dictionary">
+<!ENTITY gblite.tt.dictionary "Søg i Google Ordbog">
 <!ENTITY gblite.tt.up "Gå et niveau op">
 <!ENTITY gblite.tt.highlighter "Fremhæv søgeord på denne side">
-<!ENTITY gblite.tt.overflow "Søgebetingelser (fortsat)">
+<!ENTITY gblite.tt.overflow "Søgeord (fortsat)">
 <!ENTITY gblite.tt.splitter "Ændr søgeboksens størrelse">
 <!--  ########## OPTIONS DIALOG ##########  -->
 <!ENTITY gblite.options.title "Googlebar Lite indstillinger">
 <!ENTITY gblite.options.tab.general "Generelt">
 <!ENTITY gblite.options.tab.buttons "Knapper">
-<!ENTITY gblite.options.tab.searchhistory "Søgeordsliste">
+<!ENTITY gblite.options.tab.searchhistory "Søgehistorik">
 <!ENTITY gblite.options.tab.keyboard "Tastaturgenveje">
-<!ENTITY gblite.options.tab.context "Højreklik menu">
+<!ENTITY gblite.options.tab.context "Genvejsmenu">
 <!ENTITY gblite.options.label.general "Generelle indstillinger">
-<!ENTITY gblite.options.label.sitetouse "Googleside der bruges:">
+<!ENTITY gblite.options.label.sitetouse "Brug Google-websted:">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Ændring af tastaturgenvejen for søgefeltet kræver genstart af browseren.">
 <!ENTITY gblite.options.label.searchboxfocus "Sæt søgeboks-fokus">
 <!ENTITY gblite.options.label.shortcutprefix "Ctrl + Skift +">
 <!ENTITY gblite.options.label.shiftenter "Skift + Enter udfører en">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter udfører en">
 <!ENTITY gblite.options.label.shiftctrlenter "Ctrl + Skift + Enter udfører en">
-<!ENTITY gblite.options.label.commonbuttons "Generelle værktøjslinje-knapper og indstillinger">
-<!ENTITY gblite.options.clickselectsall "Enkeltklik i søgeboksen for at vælge alle søgeord">
+<!ENTITY gblite.options.label.commonbuttons "Generelle værktøjslinjeknapper og indstillinger">
+<!ENTITY gblite.options.clickselectsall "Enkeltklik i søgeboksen vælger alle søgeord">
 <!ENTITY gblite.options.searchintab "Åbn søgeresultat i nyt faneblad (hvis nødvendigt)">
-<!ENTITY gblite.options.remembercombined "Husk seneste kombinerede søgemenu type">
+<!ENTITY gblite.options.remembercombined "Husk seneste søgetype i den kombinerede søgemenu">
 <!ENTITY gblite.options.searchondragdrop "Søg automatisk ved træk-og-slip">
-<!ENTITY gblite.options.usesecuresearch "Use secure search where possible">
+<!ENTITY gblite.options.usesecuresearch "Brug sikker søgning hvor det er muligt">
 <!ENTITY gblite.options.warnonformhistory "Advar mig når formularhistorik er slået fra i Firefox">
-<!ENTITY gblite.options.maintainhistory "Bevar en søgehistorik">
+<!ENTITY gblite.options.maintainhistory "Vedligehold en søgehistorik">
 <!ENTITY gblite.options.autocomplete "Aktiver auto-udfyldelse">
 <!ENTITY gblite.options.inlinecomplete "Brug intern udfyldelse">
-<!ENTITY gblite.options.autosearchhistory "Udfør automatisk søgning ved valg fra søgelisten">
-<!ENTITY gblite.options.ignoreanswers "Udelad Answers.com søgninger i søgehistorien">
-<!ENTITY gblite.options.ignoredictionary "Ignore Google Dictionary searches in history">
-<!ENTITY gblite.options.prompttoclear "Spørg inden søgelisten slettes">
+<!ENTITY gblite.options.autosearchhistory "Udfør automatisk søgning når du vælger fra søgehistorikken">
+<!ENTITY gblite.options.ignoredictionary "Ignorer Google ordbogsøgninger i historikken">
+<!ENTITY gblite.options.prompttoclear "Spørg inden søgehistorikken slettes">
 <!ENTITY gblite.options.showlabels "Vis knapteksterne (kun udvalgte tekster)">
 <!ENTITY gblite.options.showsearchwords "Søg efter ord">
 <!ENTITY gblite.options.showhighlighter "Fremhæv">
 <!ENTITY gblite.options.showup "Et niveau op">
 <!ENTITY gblite.options.showcombined "Kombineret søgemenu">
-<!ENTITY gblite.options.showcontext "Vis Googlebar Lites højreklik menu">
+<!ENTITY gblite.options.showcontext "Vis Googlebar Lites genvejsmenu">
 <!--  ########## ABOUT DIALOG ##########  -->
 <!ENTITY gblite.about.title "Om Googlebar Lite">
 <!ENTITY gblite.about.extdesc "En letvægts Google-værktøjslinje til Firefox.">
@@ -148,20 +143,20 @@
 <!ENTITY gblite.about.visithomepage "Googlebar Lites hjemmeside">
 <!ENTITY gblite.about.visitdocumentation "Googlebar Lite dokumentation">
 <!ENTITY gblite.about.disclaimer "Forbehold:">
-<!ENTITY gblite.about.disclaimerinfo "Googlebar Lite er hverken udviklet af eller støttet af Google, Inc. Udtrykkene &apos;Google&apos;, &apos;Google Toolbar&apos;, og &apos;Jeg føler mig heldig&apos; er registrerede varemærker for Google, Inc.">
+<!ENTITY gblite.about.disclaimerinfo "Googlebar Lite er hverken udviklet af eller støttet af Google, Inc. Udtrykkene 'Google', 'Google Toolbar', og 'Jeg prøver lykken' er registrerede varemærker for Google, Inc.">
 <!ENTITY gblite.about.translators "Oversættere:">
 <!ENTITY gblite.about.locale "Sprog">
 <!ENTITY gblite.about.translator "Oversætter">
 <!--  ########## CLEAR HISTORY DIALOG ##########  -->
-<!ENTITY gblite.confirm.title "Slet søgeordslisten">
-<!ENTITY gblite.confirm.label.usure "Er du sikker på at du vil slette søgeordslisten?">
+<!ENTITY gblite.confirm.title "Ryd søgehistorikken">
+<!ENTITY gblite.confirm.label.usure "Er du sikker på at du vil rydde søgehistorikken?">
 <!ENTITY gblite.confirm.label.yes "Ja">
 <!ENTITY gblite.confirm.ak.yes "J">
 <!ENTITY gblite.confirm.label.no "Nej">
 <!ENTITY gblite.confirm.ak.no "N">
 <!--  ########## FORM HISTORY DIALOG ##########  -->
-<!ENTITY gblite.formhistory.title "Googlebar Lite: Historik Advarsel">
-<!ENTITY gblite.formhistory.warninginfo "Googlebar Lite har registreret at du ønsker at opretholde en søge-historik, men formularhistorik-indstillingen i Firefox er i øjeblikket slået fra. Formularhistorik skal være slået til for at Googlebar Lite kan vedligeholde en søgehistorik.">
+<!ENTITY gblite.formhistory.title "Googlebar Lite: Advarsel om historik">
+<!ENTITY gblite.formhistory.warninginfo "Googlebar Lite har registreret at du ønsker at vedligeholde en søgehistorik, men indstillingerne for formularhistorik i Firefox er i øjeblikket slået fra. Formularhistorik skal være slået til for at Googlebar Lite kan vedligeholde en søgehistorik.">
 <!ENTITY gblite.formhistory.prompt "Hvad vil du gøre?">
 <!ENTITY gblite.formhistory.donotdisplay "Vis ikke denne dialogboks igen">
 <!ENTITY gblite.formhistory.ak.donotdisplay "V">

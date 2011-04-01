@@ -16,7 +16,6 @@
 <!ENTITY gblite.searchtype.book "Book Search">
 <!ENTITY gblite.searchtype.finance "Finance Search">
 <!ENTITY gblite.searchtype.scholar "Αναζήτηση στο Scholar">
-<!ENTITY gblite.searchtype.answers "Άναζήτηση στο Answers.com">
 <!ENTITY gblite.searchtype.dictionary "Google Dictionary">
 <!ENTITY gblite.context.web "Αναζήτηση στον Ιστό για το Επιλεγμένο Κείμενο">
 <!ENTITY gblite.context.ak.web "Ι">
@@ -30,8 +29,6 @@
 <!ENTITY gblite.context.ak.groups "μ">
 <!ENTITY gblite.context.maps "Αναζήτηση στο Google Maps για το Επιλεγμένο Κείμενο">
 <!ENTITY gblite.context.ak.maps "p">
-<!ENTITY gblite.context.answers "Αναζήτηση στο Answers.com για το Επιλεγμένο Κείμενο">
-<!ENTITY gblite.context.ak.answers "n">
 <!ENTITY gblite.context.dictionary "Search Google Dictionary for Selected Text">
 <!ENTITY gblite.context.ak.dictionary "D">
 <!ENTITY gblite.context.backwardlinks "Προηγούμενοι Σύνδεσμοι">
@@ -99,7 +96,6 @@
 <!ENTITY gblite.tt.video "Αναζήτηση Βίνετο">
 <!ENTITY gblite.tt.maps "Αναζήτηση Google Maps">
 <!ENTITY gblite.tt.scholar "Αναζήτηση ακαδημαϊκών εργασιών">
-<!ENTITY gblite.tt.answers "Αναζήτηση στο Answers.com">
 <!ENTITY gblite.tt.dictionary "Search Google Dictionary">
 <!ENTITY gblite.tt.up "Ένα επίπεδο πάνω">
 <!ENTITY gblite.tt.highlighter "Κλείδωμα μαρκαρίσματος των όρων αναζήτησης σε αυτήν τη σελίδα">
@@ -131,7 +127,6 @@
 <!ENTITY gblite.options.autocomplete "Ενεργοποίηση αυτο-συμπλήρωσης">
 <!ENTITY gblite.options.inlinecomplete "Χρήση συμπλήρωσης μέσα στη γραμμή">
 <!ENTITY gblite.options.autosearchhistory "Αυτόματη αναζήτηση στην περίπτωση επιλογής από το ιστορικό αναζήτησης">
-<!ENTITY gblite.options.ignoreanswers "Παράβλεψη αναζητήσεων του Answers.com στο ιστορικό">
 <!ENTITY gblite.options.ignoredictionary "Ignore Google Dictionary searches in history">
 <!ENTITY gblite.options.prompttoclear "Ερώτηση πριν τον καθαρισμό του ιστορικού αναζήτησης">
 <!ENTITY gblite.options.showlabels "Εμφάνιση κειμένου επεξήγησης κουμπιών (μόνο επιλεκτικό κείμενο)">

@@ -16,7 +16,6 @@
 <!ENTITY gblite.searchtype.book "Book Search">
 <!ENTITY gblite.searchtype.finance "Finance Search">
 <!ENTITY gblite.searchtype.scholar "Pretraživanje učenika">
-<!ENTITY gblite.searchtype.answers "Answers.com Pretraživanje">
 <!ENTITY gblite.searchtype.dictionary "Google Dictionary">
 <!ENTITY gblite.context.web "Pretraži web za odabrani tekst">
 <!ENTITY gblite.context.ak.web "W">
@@ -30,8 +29,6 @@
 <!ENTITY gblite.context.ak.groups "G">
 <!ENTITY gblite.context.maps "Pretraži Google Mape za odabrani tekst">
 <!ENTITY gblite.context.ak.maps "M">
-<!ENTITY gblite.context.answers "Pretraži Answers.com za odabrani tekst">
-<!ENTITY gblite.context.ak.answers "A">
 <!ENTITY gblite.context.dictionary "Search Google Dictionary for Selected Text">
 <!ENTITY gblite.context.ak.dictionary "D">
 <!ENTITY gblite.context.backwardlinks "Povratne poveznice">
@@ -99,7 +96,6 @@
 <!ENTITY gblite.tt.video "Pretraži Google video">
 <!ENTITY gblite.tt.maps "Pretraži Google Mape">
 <!ENTITY gblite.tt.scholar "Pretraži učeničku dokumentaciju">
-<!ENTITY gblite.tt.answers "Pretraži Answers.com">
 <!ENTITY gblite.tt.dictionary "Search Google Dictionary">
 <!ENTITY gblite.tt.up "Idi gore jednu razinu">
 <!ENTITY gblite.tt.highlighter "Mijenjaj isticanje pojmova pretraživanja na ovoj stranici">
@@ -131,7 +127,6 @@
 <!ENTITY gblite.options.autocomplete "Omogući automatsko dovršavanje">
 <!ENTITY gblite.options.inlinecomplete "Koristi dovršavanje u liniji">
 <!ENTITY gblite.options.autosearchhistory "Automatski pretraži kada odaberete obrazac iz povijesti pretraživanja">
-<!ENTITY gblite.options.ignoreanswers "Ignoriraj Answers.com pretraživanja u povijesti">
 <!ENTITY gblite.options.ignoredictionary "Ignore Google Dictionary searches in history">
 <!ENTITY gblite.options.prompttoclear "Pitaj prije čišćenja povijesti pretraživanja">
 <!ENTITY gblite.options.showlabels "Prikaži natpise gumba (samo selektivni tekst)">

@@ -16,7 +16,6 @@
 <!ENTITY gblite.searchtype.book "Book Search">
 <!ENTITY gblite.searchtype.finance "Finance Search">
 <!ENTITY gblite.searchtype.scholar "Študentské vyhľadávanie">
-<!ENTITY gblite.searchtype.answers "Vyhľadať na Answers.com">
 <!ENTITY gblite.searchtype.dictionary "Google Dictionary">
 <!ENTITY gblite.context.web "Vyhľadať zvolený text na webe">
 <!ENTITY gblite.context.ak.web "W">
@@ -30,8 +29,6 @@
 <!ENTITY gblite.context.ak.groups "G">
 <!ENTITY gblite.context.maps "Vyhľadať vybraný text v Mapách Google">
 <!ENTITY gblite.context.ak.maps "M">
-<!ENTITY gblite.context.answers "Vyhľadať zvolený text na Answers.com">
-<!ENTITY gblite.context.ak.answers "A">
 <!ENTITY gblite.context.dictionary "Search Google Dictionary for Selected Text">
 <!ENTITY gblite.context.ak.dictionary "D">
 <!ENTITY gblite.context.backwardlinks "Vrátiť odkazy">
@@ -99,7 +96,6 @@
 <!ENTITY gblite.tt.video "Vyhľadať videá cez Google">
 <!ENTITY gblite.tt.maps "Vyhľadať v Mapách Google">
 <!ENTITY gblite.tt.scholar "Vyhľadať študentské časopisy">
-<!ENTITY gblite.tt.answers "Vyhľadať na Answers.com">
 <!ENTITY gblite.tt.dictionary "Search Google Dictionary">
 <!ENTITY gblite.tt.up "Prejsť o úroveň vyššie">
 <!ENTITY gblite.tt.highlighter "Prepnúť zvýraznenie hľadaných výrazov na tejto stránke">
@@ -131,7 +127,6 @@
 <!ENTITY gblite.options.autocomplete "Povoliť automatické dokončovanie">
 <!ENTITY gblite.options.inlinecomplete "Povoliť dokončovanie priamo v riadku s hľadaným textom">
 <!ENTITY gblite.options.autosearchhistory "Automaticky vyhľadať po zvolení z histórie vyhľadávania">
-<!ENTITY gblite.options.ignoreanswers "V histórii ignorovať vyhľadávania na Answers.com">
 <!ENTITY gblite.options.ignoredictionary "Ignore Google Dictionary searches in history">
 <!ENTITY gblite.options.prompttoclear "Opýtať sa pred vymazaním histórie vyhľadávania">
 <!ENTITY gblite.options.showlabels "Zobraziť popisy tlačidiel">

@@ -2,7 +2,7 @@
 <!ENTITY gblite.name "Googlebar Lite">
 <!ENTITY gblite.toolbar.name "Barra de herramientas Googlebar Lite">
 <!ENTITY gblite.ak.name "G">
-<!ENTITY gblite.toggle.toolbar "Toggle GBL Toolbar">
+<!ENTITY gblite.toggle.toolbar "(Des)activar barra de GBL">
 <!ENTITY gblite.searchtype.web "Buscar en la web">
 <!ENTITY gblite.searchtype.lucky "Voy a tener suerte">
 <!ENTITY gblite.searchtype.site "Buscar en este sitio">
@@ -16,8 +16,7 @@
 <!ENTITY gblite.searchtype.book "Buscar en Google Libros">
 <!ENTITY gblite.searchtype.finance "Buscar en finanzas">
 <!ENTITY gblite.searchtype.scholar "Buscar en Google Académico">
-<!ENTITY gblite.searchtype.answers "Buscar en Answers.com">
-<!ENTITY gblite.searchtype.dictionary "Google Dictionary">
+<!ENTITY gblite.searchtype.dictionary "Diccionario de Google">
 <!ENTITY gblite.context.web "Buscar el texto seleccionado en la web">
 <!ENTITY gblite.context.ak.web "w">
 <!ENTITY gblite.context.site "Buscar el texto seleccionado en este sitio">
@@ -30,9 +29,7 @@
 <!ENTITY gblite.context.ak.groups "G">
 <!ENTITY gblite.context.maps "Buscar el texto seleccionado en Mapas de Google">
 <!ENTITY gblite.context.ak.maps "M">
-<!ENTITY gblite.context.answers "Buscar el texto seleccionado en Answers.com">
-<!ENTITY gblite.context.ak.answers "A">
-<!ENTITY gblite.context.dictionary "Search Google Dictionary for Selected Text">
+<!ENTITY gblite.context.dictionary "Buscar el texto seleccionado en Diccionario de Google">
 <!ENTITY gblite.context.ak.dictionary "D">
 <!ENTITY gblite.context.backwardlinks "Enlaces hacia atrás">
 <!ENTITY gblite.context.ak.backwardlinks "E">
@@ -99,8 +96,7 @@
 <!ENTITY gblite.tt.video "Buscar en vídeos de Google">
 <!ENTITY gblite.tt.maps "Buscar en Mapas de Google">
 <!ENTITY gblite.tt.scholar "Buscar artículos en Google Académico">
-<!ENTITY gblite.tt.answers "Buscar en Answers.com">
-<!ENTITY gblite.tt.dictionary "Search Google Dictionary">
+<!ENTITY gblite.tt.dictionary "Buscar en Diccionario de Google">
 <!ENTITY gblite.tt.up "Subir un nivel">
 <!ENTITY gblite.tt.highlighter "Resaltar o no en esta página los términos buscados">
 <!ENTITY gblite.tt.overflow "Términos buscados (continuación)">
@@ -125,14 +121,13 @@
 <!ENTITY gblite.options.searchintab "Mostrar resultados en una pestaña nueva (si es preciso)">
 <!ENTITY gblite.options.remembercombined "Recordar el tipo de la última búsqueda del menú combinado">
 <!ENTITY gblite.options.searchondragdrop "Buscar automáticamente al arrastrar y soltar">
-<!ENTITY gblite.options.usesecuresearch "Use secure search where possible">
+<!ENTITY gblite.options.usesecuresearch "Usar búsqueda segura si es posible">
 <!ENTITY gblite.options.warnonformhistory "Avisarme si el historial de formularios está desactivado en Firefox">
 <!ENTITY gblite.options.maintainhistory "Mantener un historial de búsquedas">
 <!ENTITY gblite.options.autocomplete "Autocompletar activado">
 <!ENTITY gblite.options.inlinecomplete "Completar en línea activado">
 <!ENTITY gblite.options.autosearchhistory "Buscar automáticamente cuando se elija desde el historial de búsqueda">
-<!ENTITY gblite.options.ignoreanswers "Ignorar búsquedas de Answers.com en el historial">
-<!ENTITY gblite.options.ignoredictionary "Ignore Google Dictionary searches in history">
+<!ENTITY gblite.options.ignoredictionary "Ignorar búsquedas de Diccionario de Google en el historial">
 <!ENTITY gblite.options.prompttoclear "Preguntar antes de borrar el historial de búsquedas">
 <!ENTITY gblite.options.showlabels "Mostrar etiquetas de los botones (sólo texto selectivo)">
 <!ENTITY gblite.options.showsearchwords "Términos buscados">

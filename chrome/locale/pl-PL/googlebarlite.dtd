@@ -16,7 +16,6 @@
 <!ENTITY gblite.searchtype.book "Książki Google">
 <!ENTITY gblite.searchtype.finance "Google Finance">
 <!ENTITY gblite.searchtype.scholar "Google Scholar">
-<!ENTITY gblite.searchtype.answers "Google Answers">
 <!ENTITY gblite.searchtype.dictionary "Google Dictionary">
 <!ENTITY gblite.context.web "Przeszukuj sieć w poszukiwaniu zaznaczonego tekstu">
 <!ENTITY gblite.context.ak.web "S">
@@ -30,8 +29,6 @@
 <!ENTITY gblite.context.ak.groups "G">
 <!ENTITY gblite.context.maps "Przeszukuj mapy Google w poszukiwaniu zaznaczonego tekstu">
 <!ENTITY gblite.context.ak.maps "M">
-<!ENTITY gblite.context.answers "Przeszukuj Answers.com w poszukiwaniu zaznaczonego tekstu">
-<!ENTITY gblite.context.ak.answers "A">
 <!ENTITY gblite.context.dictionary "Search Google Dictionary for Selected Text">
 <!ENTITY gblite.context.ak.dictionary "D">
 <!ENTITY gblite.context.backwardlinks "Wyświetl odnośniki wsteczne">
@@ -99,7 +96,6 @@
 <!ENTITY gblite.tt.video "Wyszukaj w Google Video">
 <!ENTITY gblite.tt.maps "Wyszukaj w mapach Google">
 <!ENTITY gblite.tt.scholar "Wyszukaj dokumenty naukowe">
-<!ENTITY gblite.tt.answers "Wyszukaj w Answers.com">
 <!ENTITY gblite.tt.dictionary "Search Google Dictionary">
 <!ENTITY gblite.tt.up "Przejdź poziom do góry">
 <!ENTITY gblite.tt.highlighter "Włącz/Wyłącz wyróżnianie wyników na tej stronie">
@@ -131,7 +127,6 @@
 <!ENTITY gblite.options.autocomplete "Włącz autouzupełnianie">
 <!ENTITY gblite.options.inlinecomplete "Uzupełniaj w wierszu">
 <!ENTITY gblite.options.autosearchhistory "Automatycznie rozpoczynaj wyszukiwanie, gdy element zostanie wybrany z historii">
-<!ENTITY gblite.options.ignoreanswers "Pomijaj w historii wyszukiwanie w Answers.com">
 <!ENTITY gblite.options.ignoredictionary "Ignore Google Dictionary searches in history">
 <!ENTITY gblite.options.prompttoclear "Ostrzegaj przed czyszczeniem historii wyszukiwania">
 <!ENTITY gblite.options.showlabels "Wyświetlaj etykiety przycisków">

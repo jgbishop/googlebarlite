@@ -46,8 +46,8 @@
 			<menuitem id="GBL-Context-Maps" label="&gblite.context.maps;" accesskey="&gblite.context.ak.maps;"
 					  oncommand="objGooglebarLite.PrepareSelectedSearch(event, 'maps')" />
 					  
-			<menuitem id="GBL-Context-Answers" label="&gblite.context.answers;" accesskey="&gblite.context.ak.answers;"
-					  oncommand="objGooglebarLite.PrepareSelectedSearch(event, 'answers')" />
+			<menuitem id="GBL-Context-Dictionary" label="&gblite.context.dictionary;" accesskey="&gblite.context.ak.dictionary;"
+					  oncommand="objGooglebarLite.PrepareSelectedSearch(event, 'dictionary')" />
 					  
 			<menuseparator id="GBL-Context-SubSeparator" />
 			
@@ -243,9 +243,9 @@
 									oncommand="objGooglebarLite.UpdateCombinedSearch(event, 'scholar'); event.stopPropagation();"
 									onclick="checkForMiddleClick(this, event); event.stopPropagation();" />
 									
-						<menuitem id="GBL-TB-Combined-Answers" label="&gblite.searchtype.answers;"
+						<menuitem id="GBL-TB-Combined-Dictionary" label="&gblite.searchtype.dictionary;"
 									class="menuitem-iconic GBL-MenuItem-Iconic"
-									oncommand="objGooglebarLite.UpdateCombinedSearch(event, 'answers'); event.stopPropagation();"
+									oncommand="objGooglebarLite.UpdateCombinedSearch(event, 'dictionary'); event.stopPropagation();"
 									onclick="checkForMiddleClick(this, event); event.stopPropagation();" />
 					</menupopup>
 				</toolbarbutton>
@@ -291,8 +291,8 @@
 				<toolbarbutton id="GBL-TB-Scholar" class="GBL-Toolbar-Button-NoLabel" tooltiptext="&gblite.tt.scholar;" collapsed="true"
 								oncommand="objGooglebarLite.PrepareSearch(event, 'scholar')" onclick="checkForMiddleClick(this, event);" />
 				
-				<toolbarbutton id="GBL-TB-Answers" class="GBL-Toolbar-Button-NoLabel" tooltiptext="&gblite.tt.answers;" collapsed="true"
-								oncommand="objGooglebarLite.PrepareSearch(event, 'answers')" onclick="checkForMiddleClick(this, event);" />
+				<toolbarbutton id="GBL-TB-Dictionary" class="GBL-Toolbar-Button-NoLabel" tooltiptext="&gblite.tt.dictionary;" collapsed="true"
+								oncommand="objGooglebarLite.PrepareSearch(event, 'dictionary')" onclick="checkForMiddleClick(this, event);" />
 				
 				<toolbarseparator id="GBL-TB-Sep2" />
 				

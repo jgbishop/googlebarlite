@@ -11,7 +11,7 @@ pref("googlebar_lite.enable_auto_complete", true);
 pref("googlebar_lite.use_inline_complete", false);
 pref("googlebar_lite.auto_search", false);
 pref("googlebar_lite.prompt_to_clear", true);
-pref("googlebar_lite.ignore_answers", false);
+pref("googlebar_lite.ignore_dictionary", false);
 
 // Toolbar Buttons
 pref("googlebar_lite.buttons.showlabels", true);
@@ -32,7 +32,7 @@ pref("googlebar_lite.buttons.blog", false);
 pref("googlebar_lite.buttons.book", false);
 pref("googlebar_lite.buttons.finance", false);
 pref("googlebar_lite.buttons.scholar", false);
-pref("googlebar_lite.buttons.answers", false);
+pref("googlebar_lite.buttons.dictionary", false);
 
 // Keyboard shortcuts
 pref("googlebar_lite.focus_key", "K");
@@ -48,7 +48,7 @@ pref("googlebar_lite.context.images", false);
 pref("googlebar_lite.context.video", false);
 pref("googlebar_lite.context.groups", false);
 pref("googlebar_lite.context.maps", false);
-pref("googlebar_lite.context.answers", true);
+pref("googlebar_lite.context.dictionary", true);
 pref("googlebar_lite.context.backward", true);
 pref("googlebar_lite.context.cached", true);
 pref("googlebar_lite.context.cachedlink", true);

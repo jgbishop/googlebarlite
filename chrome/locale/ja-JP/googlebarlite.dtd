@@ -2,22 +2,21 @@
 <!ENTITY gblite.name "Googlebar Lite">
 <!ENTITY gblite.toolbar.name "Googlebar Liteツールバー">
 <!ENTITY gblite.ak.name "G">
-<!ENTITY gblite.toggle.toolbar "Toggle GBL Toolbar">
+<!ENTITY gblite.toggle.toolbar "GBLツールバーの切り替え">
 <!ENTITY gblite.searchtype.web "ウェブ検索">
-<!ENTITY gblite.searchtype.lucky "I&apos;m Feeling Lucky">
+<!ENTITY gblite.searchtype.lucky "I'm Feeling Lucky">
 <!ENTITY gblite.searchtype.site "サイト内検索">
-<!ENTITY gblite.searchtype.image "Google 画像検索">
+<!ENTITY gblite.searchtype.image "画像検索">
 <!ENTITY gblite.searchtype.video "ビデオ検索">
-<!ENTITY gblite.searchtype.news "Google ニュース">
-<!ENTITY gblite.searchtype.maps "Google Maps検索">
+<!ENTITY gblite.searchtype.news "ニュース検索">
+<!ENTITY gblite.searchtype.maps "地図検索">
 <!ENTITY gblite.searchtype.shopping "製品検索">
 <!ENTITY gblite.searchtype.group "グループ検索">
 <!ENTITY gblite.searchtype.blog "ブログ検索">
 <!ENTITY gblite.searchtype.book "ブック検索">
 <!ENTITY gblite.searchtype.finance "金融検索">
 <!ENTITY gblite.searchtype.scholar "Scholar検索">
-<!ENTITY gblite.searchtype.answers "Answers.com検索">
-<!ENTITY gblite.searchtype.dictionary "Google Dictionary">
+<!ENTITY gblite.searchtype.dictionary "Google辞書">
 <!ENTITY gblite.context.web "選択したテキストでウェブ検索">
 <!ENTITY gblite.context.ak.web "W">
 <!ENTITY gblite.context.site "選択したテキストでサイト内検索">
@@ -28,11 +27,9 @@
 <!ENTITY gblite.context.ak.video "V">
 <!ENTITY gblite.context.groups "選択したテキストでグループ検索">
 <!ENTITY gblite.context.ak.groups "G">
-<!ENTITY gblite.context.maps "選択したテキストでGoogleMaps検索">
+<!ENTITY gblite.context.maps "選択したテキストで地図検索">
 <!ENTITY gblite.context.ak.maps "M">
-<!ENTITY gblite.context.answers "選択したテキストでAnswers.com検索">
-<!ENTITY gblite.context.ak.answers "A">
-<!ENTITY gblite.context.dictionary "Search Google Dictionary for Selected Text">
+<!ENTITY gblite.context.dictionary "選択したテキストでGoogle辞書検索">
 <!ENTITY gblite.context.ak.dictionary "D">
 <!ENTITY gblite.context.backwardlinks "リンクしているページ">
 <!ENTITY gblite.context.ak.backwardlinks "B">
@@ -42,35 +39,35 @@
 <!ENTITY gblite.context.ak.cachedlink "a">
 <!ENTITY gblite.context.similar "関連したページ">
 <!ENTITY gblite.context.ak.similar "S">
-<!ENTITY gblite.context.translate "英語に翻訳">
+<!ENTITY gblite.context.translate "日本語に翻訳">
 <!ENTITY gblite.context.ak.translate "T">
 <!ENTITY gblite.mainmenu.label.homepage "Googleホームページ">
 <!ENTITY gblite.mainmenu.ak.homepage "G">
 <!ENTITY gblite.mainmenu.label.googlelinks "Googleリンク">
 <!ENTITY gblite.mainmenu.ak.googlelinks "L">
-<!ENTITY gblite.mainmenu.label.advanced "高度な検索">
+<!ENTITY gblite.mainmenu.label.advanced "検索オプション">
 <!ENTITY gblite.mainmenu.ak.advanced "A">
-<!ENTITY gblite.mainmenu.label.images "Google 画像">
+<!ENTITY gblite.mainmenu.label.images "Google 画像検索">
 <!ENTITY gblite.mainmenu.ak.images "I">
 <!ENTITY gblite.mainmenu.label.video "Google ビデオ">
 <!ENTITY gblite.mainmenu.ak.video "V">
 <!ENTITY gblite.mainmenu.label.news "Google　ニュース">
 <!ENTITY gblite.mainmenu.ak.news "N">
-<!ENTITY gblite.mainmenu.label.maps "Google Maps">
+<!ENTITY gblite.mainmenu.label.maps "Google マップ">
 <!ENTITY gblite.mainmenu.ak.maps "p">
-<!ENTITY gblite.mainmenu.label.shopping "Google 製品検索">
+<!ENTITY gblite.mainmenu.label.shopping "Google ショッピング">
 <!ENTITY gblite.mainmenu.ak.shopping "r">
 <!ENTITY gblite.mainmenu.label.groups "Google グループ">
 <!ENTITY gblite.mainmenu.ak.groups "G">
 <!ENTITY gblite.mainmenu.label.blog "Google ブログ検索">
 <!ENTITY gblite.mainmenu.ak.blog "B">
-<!ENTITY gblite.mainmenu.label.book "Google ブック検索">
+<!ENTITY gblite.mainmenu.label.book "Google ブックス">
 <!ENTITY gblite.mainmenu.ak.book "k">
-<!ENTITY gblite.mainmenu.label.finance "Google 金融">
+<!ENTITY gblite.mainmenu.label.finance "Google Finance">
 <!ENTITY gblite.mainmenu.ak.finance "F">
 <!ENTITY gblite.mainmenu.label.scholar "Google Scholar">
 <!ENTITY gblite.mainmenu.ak.scholar "S">
-<!ENTITY gblite.mainmenu.label.gmail "Google GMail">
+<!ENTITY gblite.mainmenu.label.gmail "GMail">
 <!ENTITY gblite.mainmenu.ak.gmail "L">
 <!ENTITY gblite.mainmenu.label.searchprefs "表示設定">
 <!ENTITY gblite.mainmenu.ak.searchprefs "P">
@@ -87,20 +84,19 @@
 <!ENTITY gblite.tt.mainmenu "Googlebar Liteメインメニュー">
 <!ENTITY gblite.tt.combined "Googlebar Lite連結検索メニュー">
 <!ENTITY gblite.tt.web "ウェブを検索する">
-<!ENTITY gblite.tt.lucky "I&apos;m Feeling Luckyを使用する">
+<!ENTITY gblite.tt.lucky "I'm Feeling Luckyを使用する">
 <!ENTITY gblite.tt.site "このサイト内を検索する">
-<!ENTITY gblite.tt.image "ウェブ上のイメージを検索する">
-<!ENTITY gblite.tt.shopping "製品を検索">
-<!ENTITY gblite.tt.group "Google グループで検索する">
+<!ENTITY gblite.tt.image "ウェブ上の画像を検索する">
+<!ENTITY gblite.tt.shopping "製品を検索する">
+<!ENTITY gblite.tt.group "Google グループを検索する">
 <!ENTITY gblite.tt.book "本を検索する">
 <!ENTITY gblite.tt.news "ニュースを検索する">
 <!ENTITY gblite.tt.blog "ブログを検索する">
-<!ENTITY gblite.tt.finance "金融を検索">
-<!ENTITY gblite.tt.video "Google Videoで検索する">
-<!ENTITY gblite.tt.maps "Google Mapsで検索する">
-<!ENTITY gblite.tt.scholar "scholarly papersで検索する">
-<!ENTITY gblite.tt.answers "Answers.comで検索する">
-<!ENTITY gblite.tt.dictionary "Search Google Dictionary">
+<!ENTITY gblite.tt.finance "金融を検索する">
+<!ENTITY gblite.tt.video "Google ビデオを検索する">
+<!ENTITY gblite.tt.maps "Google マップを検索する">
+<!ENTITY gblite.tt.scholar "scholarly papersを検索する">
+<!ENTITY gblite.tt.dictionary "Google辞書を検索する">
 <!ENTITY gblite.tt.up "ひとつ上の階層に上がる">
 <!ENTITY gblite.tt.highlighter "検索単語がこのページ上で使われている箇所のハイライトを切り替える">
 <!ENTITY gblite.tt.overflow "検索単語(続き)">
@@ -122,17 +118,16 @@
 <!ENTITY gblite.options.label.shiftctrlenter "Shift + Ctrl + Enter">
 <!ENTITY gblite.options.label.commonbuttons "一般設定 / 主要ボタン">
 <!ENTITY gblite.options.clickselectsall "検索ボックスをクリックした時、すべての検索単語を選択する">
-<!ENTITY gblite.options.searchintab "検索結果を新しいタブで開く(必要があれば)">
-<!ENTITY gblite.options.remembercombined "最後に使った連結検索メニューを記憶する">
-<!ENTITY gblite.options.searchondragdrop "ドラッグ&amp;ドロップで自動的に探索">
-<!ENTITY gblite.options.usesecuresearch "Use secure search where possible">
+<!ENTITY gblite.options.searchintab "検索結果を新しいタブで開く">
+<!ENTITY gblite.options.remembercombined "最後に使った検索メニューを記憶する">
+<!ENTITY gblite.options.searchondragdrop "ドラッグ&amp;ドロップで自動的に検索">
+<!ENTITY gblite.options.usesecuresearch "可能な限りセキュアな検索を使用">
 <!ENTITY gblite.options.warnonformhistory "Firefoxでフォームの入力履歴が無効になっている時は警告する">
 <!ENTITY gblite.options.maintainhistory "検索履歴を保持する">
 <!ENTITY gblite.options.autocomplete "自動補完を有効にする">
 <!ENTITY gblite.options.inlinecomplete "インライン補完を使用する">
 <!ENTITY gblite.options.autosearchhistory "検索履歴から選択した時、自動的に検索を始める">
-<!ENTITY gblite.options.ignoreanswers "Answers.comで検索した履歴は保存しない">
-<!ENTITY gblite.options.ignoredictionary "Ignore Google Dictionary searches in history">
+<!ENTITY gblite.options.ignoredictionary "履歴のGoogle辞書検索を無視する">
 <!ENTITY gblite.options.prompttoclear "検索履歴をクリアする前に確認する">
 <!ENTITY gblite.options.showlabels "ボタンのラベルを表示する(選択されたボタンのみ)">
 <!ENTITY gblite.options.showsearchwords "検索単語">
@@ -142,11 +137,11 @@
 <!ENTITY gblite.options.showcontext "コンテキストメニューにGooglebar Liteを表示する">
 <!--  ########## ABOUT DIALOG ##########  -->
 <!ENTITY gblite.about.title "Googlebar Liteについて">
-<!ENTITY gblite.about.extdesc "Firefox用ライトウェイトGoogle検索ツールバー">
+<!ENTITY gblite.about.extdesc "Firefox用の軽量Google検索ツールバー">
 <!ENTITY gblite.about.createdby "作者:">
-<!ENTITY gblite.about.ontheweb "ウェブ上:">
+<!ENTITY gblite.about.ontheweb "ホームページ等:">
 <!ENTITY gblite.about.visithomepage "Googlebar Liteホームページ">
-<!ENTITY gblite.about.visitdocumentation "Googlebar Liteのドキュメンテーション">
+<!ENTITY gblite.about.visitdocumentation "Googlebar Liteのドキュメント">
 <!ENTITY gblite.about.disclaimer "免責事項:">
 <!ENTITY gblite.about.disclaimerinfo "Googlebar LiteはGoogle, Inc.が開発やサポートを行っているものではありません。Google、Google Toolbar、およびI&apos;m Feeling Luckyは、Google, Inc.の登録商標です。">
 <!ENTITY gblite.about.translators "翻訳者たち">

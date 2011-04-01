@@ -109,9 +109,9 @@ toolbar[iconsize="small"] #GBL-TB-Toggle-Toolbar {
 #GBL-TB-Combined-Scholar,
 #GBL-TB-Scholar							{ -moz-image-region: rect(0px 208px 16px 192px); }
 
-#GBL-TB-Combined[searchType="answers"],
-#GBL-TB-Combined-Answers,
-#GBL-TB-Answers							{ -moz-image-region: rect(0px 224px 16px 208px); }
+#GBL-TB-Combined[searchType="dictionary"],
+#GBL-TB-Combined-Dictionary,
+#GBL-TB-Dictionary						{ -moz-image-region: rect(0px 224px 16px 208px); }
 
 #GBL-TB-Combined[searchType="shopping"],
 #GBL-TB-Combined-Shopping,

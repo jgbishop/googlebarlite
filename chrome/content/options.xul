@@ -205,7 +205,7 @@
 				
 				<row>
 					<checkbox id="GBL-Opt-TB-Maps" label="&gblite.searchtype.maps;" />
-					<checkbox id="GBL-Opt-TB-Answers" label="&gblite.searchtype.answers;" />
+					<checkbox id="GBL-Opt-TB-Dictionary" label="&gblite.searchtype.dictionary;" />
 				</row>
 			</rows>
 		</grid>
@@ -221,7 +221,7 @@
 			<checkbox id="GBL-Opt-UseInlineComplete" label="&gblite.options.inlinecomplete;" />
 			<checkbox id="GBL-Opt-AutoSearch" label="&gblite.options.autosearchhistory;" />
 			<checkbox id="GBL-Opt-PromptToClearHistory" label="&gblite.options.prompttoclear;" />
-			<checkbox id="GBL-Opt-IgnoreAnswers" label="&gblite.options.ignoreanswers;" />
+			<checkbox id="GBL-Opt-IgnoreDictionary" label="&gblite.options.ignoredictionary;" />
 			</vbox>
 	</tabpanel>
 	
@@ -251,7 +251,7 @@
 					<menuitem label="&gblite.searchtype.book;" value="book" />
 					<menuitem label="&gblite.searchtype.finance;" value="finance" />
 					<menuitem label="&gblite.searchtype.scholar;" value="scholar" />
-					<menuitem label="&gblite.searchtype.answers;" value="answers" />
+					<menuitem label="&gblite.searchtype.dictionary;" value="dictionary" />
 					</menupopup>
 				</menulist>
 			</row>
@@ -272,7 +272,7 @@
 					<menuitem label="&gblite.searchtype.book;" value="book" />
 					<menuitem label="&gblite.searchtype.finance;" value="finance" />
 					<menuitem label="&gblite.searchtype.scholar;" value="scholar" />
-					<menuitem label="&gblite.searchtype.answers;" value="answers" />
+					<menuitem label="&gblite.searchtype.dictionary;" value="dictionary" />
 					</menupopup>
 				</menulist>
 			</row>
@@ -293,7 +293,7 @@
 					<menuitem label="&gblite.searchtype.book;" value="book" />
 					<menuitem label="&gblite.searchtype.finance;" value="finance" />
 					<menuitem label="&gblite.searchtype.scholar;" value="scholar" />
-					<menuitem label="&gblite.searchtype.answers;" value="answers" />
+					<menuitem label="&gblite.searchtype.dictionary;" value="dictionary" />
 					</menupopup>
 				</menulist>
 			</row>
@@ -324,7 +324,7 @@
 				<checkbox id="GBL-Opt-CM-Video" label="&gblite.context.video;" />
 				<checkbox id="GBL-Opt-CM-Maps" label="&gblite.context.maps;" />
 				<checkbox id="GBL-Opt-CM-Groups" label="&gblite.context.groups;" />
-				<checkbox id="GBL-Opt-CM-Answers" label="&gblite.context.answers;" />
+				<checkbox id="GBL-Opt-CM-Dictionary" label="&gblite.context.dictionary;" />
 			</vbox>
 			
 			<vbox>

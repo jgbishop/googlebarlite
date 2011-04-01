@@ -82,7 +82,7 @@ var objGooglebarLite = {
 	PrefName_UseInlineComplete	: "use_inline_complete",
 	PrefName_AutoSearch			: "auto_search", // Auto search when selecting from history
 	PrefName_PromptToClear		: "prompt_to_clear",
-	PrefName_IgnoreAnswers		: "ignore_answers",
+	PrefName_IgnoreDictionary	: "ignore_dictionary",
 	
 	// Toolbar buttons preference names
 	PrefName_TB_ShowLabels	: "buttons.showlabels",
@@ -103,7 +103,7 @@ var objGooglebarLite = {
 	PrefName_TB_Book		: "buttons.book",
 	PrefName_TB_Finance		: "buttons.finance",
 	PrefName_TB_Scholar		: "buttons.scholar",
-	PrefName_TB_Answers		: "buttons.answers",
+	PrefName_TB_Dictionary	: "buttons.dictionary",
 	
 	// Keyboard shortcuts preference names
 	PrefName_FocusKey			: "focus_key",
@@ -119,7 +119,7 @@ var objGooglebarLite = {
 	PrefName_CM_Video		: "context.video",
 	PrefName_CM_Groups		: "context.groups",
 	PrefName_CM_Maps		: "context.maps",
-	PrefName_CM_Answers		: "context.answers",
+	PrefName_CM_Dictionary	: "context.dictionary",
 	PrefName_CM_Backward	: "context.backward",
 	PrefName_CM_Cached		: "context.cached",
 	PrefName_CM_CachedLink	: "context.cachedlink",
@@ -140,7 +140,7 @@ var objGooglebarLite = {
 	UseInlineComplete : false,
 	AutoSearch : false,
 	PromptToClear : false,
-	IgnoreAnswers : false,
+	IgnoreDictionary : false,
 	
 	// Toolbar buttons preferences
 	TB_ShowLabels : false,
@@ -161,7 +161,7 @@ var objGooglebarLite = {
 	TB_ShowBook : false,
 	TB_ShowFinance : false,
 	TB_ShowScholar : false,
-	TB_ShowAnswers : false,
+	TB_ShowDictionary : false,
 	
 	// Keyboard shortcut preferences
 	FocusKey : "",
@@ -177,7 +177,7 @@ var objGooglebarLite = {
 	CM_Video : false,
 	CM_Groups : false,
 	CM_Maps : false,
-	CM_Answers : false,
+	CM_Dictionary : false,
 	CM_Backward : false,
 	CM_Cached : false,
 	CM_CachedLink : false,
@@ -309,6 +309,7 @@ var objGooglebarLite = {
 			var searchBox = document.getElementById("GBL-SearchBox");
 			if(event.target != searchBox) { return; }
 			objGooglebarLite.DragDropToSearchBox(event, dropData.data);
+			event.preventDefault();
 		}
 	},
 
@@ -393,7 +394,6 @@ var objGooglebarLite = {
 	{
 		var searchWordsContainer = document.getElementById("GBL-TB-SearchWordsContainer");
 		var highlighter = document.getElementById("GBL-TB-Highlighter");
-		var overflowButton = document.getElementById("GBL-Overflow-Button");
 		var overflowMenu = document.getElementById("GBL-Overflow-Menu");
 		var stringBundle = document.getElementById("GBL-String-Bundle");
 	
@@ -729,86 +729,53 @@ var objGooglebarLite = {
 	FixOldPrefs: function()
 	{
 		var temp = "";
-	
-		var oldName = "buttons.dictionary";
+		var oldName = "";
+
+		oldName = "buttons.answers";
 		if(this.PrefBranch.prefHasUserValue(oldName))
 		{
 			temp = this.PrefBranch.getBoolPref(oldName);
-			this.PrefBranch.setBoolPref(this.PrefName_TB_Answers, temp);
-			this.TB_ShowAnswers = temp;
+			this.PrefBranch.setBoolPref(this.PrefName_TB_Dictionary, temp);
+			this.TB_ShowDictionary = temp;
+
+			try {
+				this.PrefBranch.clearUserPref(oldName);
+			} catch (e) {}
+		}
+	
+		oldName = "ignore_answers";
+		if(this.PrefBranch.prefHasUserValue(oldName))
+		{
+			temp = this.PrefBranch.getBoolPref(oldName);
+			this.PrefBranch.setBoolPref(this.PrefName_IgnoreDictionary, temp);
+			this.IgnoreDictionary = temp;
 	
 			try {
 				this.PrefBranch.clearUserPref(oldName);
 			} catch (e) {}
 		}
 	
-		oldName = "ignore_definitions";
+		oldName = "context.answers";
 		if(this.PrefBranch.prefHasUserValue(oldName))
 		{
 			temp = this.PrefBranch.getBoolPref(oldName);
-			this.PrefBranch.setBoolPref(this.PrefName_IgnoreAnswers, temp);
-			this.IgnoreAnswers = temp;
-	
-			try {
-				this.PrefBranch.clearUserPref(oldName);
-			} catch (e) {}
-		}
-	
-		oldName = "context.define";
-		if(this.PrefBranch.prefHasUserValue(oldName))
-		{
-			temp = this.PrefBranch.getBoolPref(oldName);
-			this.PrefBranch.setBoolPref(this.PrefName_CM_Answers, temp);
-			this.CM_Answers = temp;
+			this.PrefBranch.setBoolPref(this.PrefName_CM_Dictionary, temp);
+			this.CM_Dictionary = temp;
 	
 			try {
 				this.PrefBranch.clearUsedPref(oldName);
 			} catch (e) {}
 		}
 	
-		oldName = "search_history";
-		if(this.PrefBranch.prefHasUserValue(oldName))
-		{
-			var history = this.PrefBranch.getComplexValue(oldName, Components.interfaces.nsISupportsString).data;
-			var historyArray = new Array();
-			historyArray = history.split("||");
-	
-			for(var i=0; i<historyArray.length; i++)
-			{
-				if(historyArray[i] != "")
-					this.FormHistory.addEntry("GBL-Search-History", historyArray[i]);
-			}
-	
-			try {
-				this.PrefBranch.clearUserPref(oldName);
-			} catch(e) {}
-		}
-	
-		oldName = "max_history_size";
-		if(this.PrefBranch.prefHasUserValue(oldName))
-		{
-			try {
-				this.PrefBranch.clearUserPref(oldName);
-			} catch(e) {}
-		}
-	
-		oldName = "preserve_history";
-		if(this.PrefBranch.prefHasUserValue(oldName))
-		{
-			try {
-				this.PrefBranch.clearUserPref(oldName);
-			} catch(e) {}
-		}
-	
 		// Since we have already loaded preferences, let's check for invalid values
-		if(this.ShiftSearch == "dictionary" || this.ShiftSearch == "thesaurus")
-			this.ShiftSearch = "answers";
+		if(this.ShiftSearch == "answers")
+			this.ShiftSearch = "dictionary";
 	
-		if(this.CtrlSearch == "dictionary" || this.CtrlSearch == "thesaurus")
-			this.CtrlSearch = "answers";
+		if(this.CtrlSearch == "answers")
+			this.CtrlSearch = "dictionary";
 	
-		if(this.ShiftCtrlSearch == "dictionary" || this.ShiftCtrlSearch == "thesaurus")
-			this.ShiftCtrlSearch = "answers";
+		if(this.ShiftCtrlSearch == "answers")
+			this.ShiftCtrlSearch = "dictionary";
 	},
 
 	GetSearchTerms: function()
@@ -929,7 +896,7 @@ var objGooglebarLite = {
 		this.UseInlineComplete	= b.getBoolPref(this.PrefName_UseInlineComplete);
 		this.AutoSearch 		= b.getBoolPref(this.PrefName_AutoSearch);
 		this.PromptToClear 		= b.getBoolPref(this.PrefName_PromptToClear);
-		this.IgnoreAnswers 		= b.getBoolPref(this.PrefName_IgnoreAnswers);
+		this.IgnoreDictionary	= b.getBoolPref(this.PrefName_IgnoreDictionary);
 	
 		// Toolbar button preferences
 		this.TB_ShowLabels 		= b.getBoolPref(this.PrefName_TB_ShowLabels);
@@ -950,7 +917,7 @@ var objGooglebarLite = {
 		this.TB_ShowBook 		= b.getBoolPref(this.PrefName_TB_Book);
 		this.TB_ShowFinance		= b.getBoolPref(this.PrefName_TB_Finance);
 		this.TB_ShowScholar		= b.getBoolPref(this.PrefName_TB_Scholar);
-		this.TB_ShowAnswers 	= b.getBoolPref(this.PrefName_TB_Answers);
+		this.TB_ShowDictionary 	= b.getBoolPref(this.PrefName_TB_Dictionary);
 	
 		// Search modifiers preferences
 		this.FocusKey			= b.getCharPref(this.PrefName_FocusKey);
@@ -966,7 +933,7 @@ var objGooglebarLite = {
 		this.CM_Video			= b.getBoolPref(this.PrefName_CM_Video);
 		this.CM_Groups 			= b.getBoolPref(this.PrefName_CM_Groups);
 		this.CM_Maps 			= b.getBoolPref(this.PrefName_CM_Maps);
-		this.CM_Answers 		= b.getBoolPref(this.PrefName_CM_Answers);
+		this.CM_Dictionary 		= b.getBoolPref(this.PrefName_CM_Dictionary);
 		this.CM_Backward 		= b.getBoolPref(this.PrefName_CM_Backward);
 		this.CM_Cached 			= b.getBoolPref(this.PrefName_CM_Cached);
 		this.CM_CachedLink 		= b.getBoolPref(this.PrefName_CM_CachedLink);
@@ -1329,7 +1296,7 @@ var objGooglebarLite = {
 			window.addEventListener('focus', objGooglebarLite.Resize, false);
 	
 		var overflowed = false;
-	
+
 		for(var i=0; i<buttons.childNodes.length; i++)
 		{
 			var button = buttons.childNodes[i];
@@ -1348,7 +1315,7 @@ var objGooglebarLite = {
 		}
 
 		// If we never overflowed, make sure the overflow button is hidden from view
-		if(overflowed = false)
+		if(overflowed == false)
 			chevron.collapsed = true;
 	},
 
@@ -1357,7 +1324,7 @@ var objGooglebarLite = {
 		var win = window.content.document;
 		var URL = "";
 		var originalTerms = searchTerms;
-		var canIgnore = false;	// True if doing an Answers.com search
+		var canIgnore = false;	// True if doing a dictionary search
 	
 		// ****************************************
 		// Step 1: Convert the search terms into a URI capable string
@@ -1436,10 +1403,10 @@ var objGooglebarLite = {
 			else		{ URL = this.BuildSearchURL("scholar", "scholar", searchTerms); }
 			break;
 	
-		case "answers":
+		case "dictionary":
 			canIgnore = true;
-			if(isEmpty) { URL = "http://www.answers.com/"; }
-			else		{ URL = "http://www.answers.com/" + searchTerms + "?gwp=13"; }
+			if(isEmpty) { URL = this.BuildSearchURL("www", "dictionary", ""); }
+			else		{ URL = this.BuildSearchURL("www", "dictionary", searchTerms + "&langpair=en|en"); }
 			break;
 	
 		// The following cases are only accessible through the context menu
@@ -1487,7 +1454,7 @@ var objGooglebarLite = {
 		// Step 3: Add terms to search history
 		// ****************************************
 	
-		if(this.MaintainHistory && !isEmpty && !(canIgnore && this.IgnoreAnswers))
+		if(this.MaintainHistory && !isEmpty && !(canIgnore && this.IgnoreDictionary))
 			this.FormHistory.addEntry("GBL-Search-History", originalTerms);
 	
 		// ****************************************
@@ -1567,7 +1534,6 @@ var objGooglebarLite = {
 	{
 		var searchbox = document.getElementById("GBL-SearchBox");
 		searchbox.value = terms;
-
 		this.TermsHaveUpdated();
 	},
 
@@ -1755,7 +1721,7 @@ var objGooglebarLite = {
 		var TB_Book			= document.getElementById("GBL-TB-Book");
 		var TB_Finance		= document.getElementById("GBL-TB-Finance");
 		var TB_Scholar		= document.getElementById("GBL-TB-Scholar");
-		var TB_Answers		= document.getElementById("GBL-TB-Answers");
+		var TB_Dictionary	= document.getElementById("GBL-TB-Dictionary");
 		var TB_Up			= document.getElementById("GBL-TB-UpButton");
 		var TB_Highlighter	= document.getElementById("GBL-TB-Highlighter");
 		var TB_SWContainer	= document.getElementById("GBL-TB-SearchWordsContainer");
@@ -1780,7 +1746,7 @@ var objGooglebarLite = {
 		TB_Book.setAttribute("collapsed", !this.TB_ShowBook);
 		TB_Finance.setAttribute("collapsed", !this.TB_ShowFinance);
 		TB_Scholar.setAttribute("collapsed", !this.TB_ShowScholar);
-		TB_Answers.setAttribute("collapsed", !this.TB_ShowAnswers);
+		TB_Dictionary.setAttribute("collapsed", !this.TB_ShowDictionary);
 		
 		TB_Up.setAttribute("collapsed", !this.TB_ShowUp);
 		TB_Highlighter.setAttribute("collapsed", !this.TB_ShowHighlighter);
@@ -1788,14 +1754,16 @@ var objGooglebarLite = {
 	
 		// Update the separators on the toolbar
 		// Set hidden (not collapsed) on the separators since collapsed elements don't have their margins collapsed (bug #90616)
-		TB_Sep1.setAttribute("hidden", !this.TB_ShowCombined);
-		TB_Sep2.setAttribute("hidden", !(this.TB_ShowWeb || this.TB_ShowLucky || this.TB_ShowSite ||
-										 this.TB_ShowImages || this.TB_ShowVideo || this.TB_ShowNews ||
-										 this.TB_ShowMaps || this.TB_ShowGroups || this.TB_ShowBlog ||
-										 this.TB_ShowBook || this.TB_ShowScholar || this.TB_ShowAnswers ||
-										 this.TB_ShowFinance || this.TB_ShowShopping)); 
-	
-		TB_Sep3.setAttribute("hidden", !(this.TB_ShowUp || this.TB_ShowHighlighter));
+		var s1visible = this.TB_ShowCombined;
+		var s2visible = (this.TB_ShowWeb || this.TB_ShowLucky || this.TB_ShowSite || this.TB_ShowImages || this.TB_ShowVideo || this.TB_ShowNews ||
+							   this.TB_ShowMaps || this.TB_ShowGroups || this.TB_ShowBlog || this.TB_ShowBook || this.TB_ShowScholar || this.TB_ShowDictionary ||
+								this.TB_ShowFinance || this.TB_ShowShopping);
+		var s3visible = (this.TB_ShowUp || this.TB_ShowHighlighter);
+		var s4visible = this.TB_ShowSearchWords;
+
+		TB_Sep1.setAttribute("hidden", !(s1visible && (s2visible || s3visible || s4visible)));
+		TB_Sep2.setAttribute("hidden", !(s2visible && (s3visible || s4visible)));
+		TB_Sep3.setAttribute("hidden", !(s3visible && s4visible));
 		
 		// Reset the button icon if the remember combined search type option is turned off
 		if(this.RememberCombined == false)
@@ -1837,7 +1805,7 @@ var objGooglebarLite = {
 		var conVideo = document.getElementById("GBL-Context-Video");
 		var conGroups = document.getElementById("GBL-Context-Groups");
 		var conMaps = document.getElementById("GBL-Context-Maps");
-		var conAnswers = document.getElementById("GBL-Context-Answers");
+		var conDictionary = document.getElementById("GBL-Context-Dictionary");
 		var conBackward = document.getElementById("GBL-Context-Backward");
 		var conCached = document.getElementById("GBL-Context-Cached");
 		var conCachedLink = document.getElementById("GBL-Context-CachedLink");
@@ -1852,7 +1820,7 @@ var objGooglebarLite = {
 		conVideo.setAttribute("collapsed", !this.CM_Video);
 		conGroups.setAttribute("collapsed", !this.CM_Groups);
 		conMaps.setAttribute("collapsed", !this.CM_Maps);
-		conAnswers.setAttribute("collapsed", !this.CM_Answers);
+		conDictionary.setAttribute("collapsed", !this.CM_Dictionary);
 		conBackward.setAttribute("collapsed", !this.CM_Backward);
 		conCached.setAttribute("collapsed", !this.CM_Cached);
 		conCachedLink.setAttribute("collapsed", !this.CM_CachedLink);
@@ -1862,7 +1830,7 @@ var objGooglebarLite = {
 		// Deal with the separator
 		conSubSep.setAttribute("hidden", !(this.CM_Web || this.CM_Site || this.CM_Images ||
 										   this.CM_Video || this.CM_Groups || this.CM_Maps || 
-										   this.CM_Answers) || 
+										   this.CM_Dictionary) || 
 							   !(this.CM_Backward || this.CM_Cached || this.CM_CachedLink || 
 								 this.CM_Similar || this.CM_Translate));
 	
@@ -1886,7 +1854,7 @@ var objGooglebarLite = {
 			conVideo.setAttribute("disabled", "true");
 			conGroups.setAttribute("disabled", "true");
 			conMaps.setAttribute("disabled", "true");
-			conAnswers.setAttribute("disabled", "true");
+			conDictionary.setAttribute("disabled", "true");
 		}
 		else
 		{
@@ -1896,7 +1864,7 @@ var objGooglebarLite = {
 			conVideo.setAttribute("disabled", "false");
 			conGroups.setAttribute("disabled", "false");
 			conMaps.setAttribute("disabled", "false");
-			conAnswers.setAttribute("disabled", "false");
+			conDictionary.setAttribute("disabled", "false");
 		}
 	
 		// Update all of the web-page specific menu items

@@ -16,7 +16,6 @@
 <!ENTITY gblite.searchtype.book "Book Search">
 <!ENTITY gblite.searchtype.finance "Поиск по финансам">
 <!ENTITY gblite.searchtype.scholar "Поиск учебных документов">
-<!ENTITY gblite.searchtype.answers "Поиск на Answer.com">
 <!ENTITY gblite.searchtype.dictionary "Google Dictionary">
 <!ENTITY gblite.context.web "Найти в Интернет соответствия для отмеченного текста">
 <!ENTITY gblite.context.ak.web "И">
@@ -30,8 +29,6 @@
 <!ENTITY gblite.context.ak.groups "г">
 <!ENTITY gblite.context.maps "Найти местность для отмеченного текста">
 <!ENTITY gblite.context.ak.maps "м">
-<!ENTITY gblite.context.answers "Найти на Answers.com соответствия для отмеченного текста">
-<!ENTITY gblite.context.ak.answers "A">
 <!ENTITY gblite.context.dictionary "Search Google Dictionary for Selected Text">
 <!ENTITY gblite.context.ak.dictionary "D">
 <!ENTITY gblite.context.backwardlinks "Обратные ссылки">
@@ -99,7 +96,6 @@
 <!ENTITY gblite.tt.video "Найти на сайте Google видео">
 <!ENTITY gblite.tt.maps "Найти местность на Google Maps">
 <!ENTITY gblite.tt.scholar "Найти среди школьных документов">
-<!ENTITY gblite.tt.answers "Найти через Answers.com">
 <!ENTITY gblite.tt.dictionary "Search Google Dictionary">
 <!ENTITY gblite.tt.up "Перейти на уровень выше">
 <!ENTITY gblite.tt.highlighter "Включить/отключить подсветку поискового контекста">
@@ -131,7 +127,6 @@
 <!ENTITY gblite.options.autocomplete "Включить автодополнение">
 <!ENTITY gblite.options.inlinecomplete "Использовать встроенный механизм">
 <!ENTITY gblite.options.autosearchhistory "Запускать поиск автоматически после выбора из истории запросов">
-<!ENTITY gblite.options.ignoreanswers "Игнорировать в истории запросов поиск через Answers.com">
 <!ENTITY gblite.options.ignoredictionary "Ignore Google Dictionary searches in history">
 <!ENTITY gblite.options.prompttoclear "Спрашивать перед удалением истории поисковых запросов">
 <!ENTITY gblite.options.showlabels "Отобразить текст на кнопках панели поиска">

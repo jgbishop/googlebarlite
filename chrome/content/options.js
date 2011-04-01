@@ -17,7 +17,7 @@ var objGooglebarLiteOptions = {
 		document.getElementById("GBL-Opt-UseInlineComplete").checked	= b.getBoolPref(oGBL.PrefName_UseInlineComplete);
 		document.getElementById("GBL-Opt-AutoSearch").checked 			= b.getBoolPref(oGBL.PrefName_AutoSearch);
 		document.getElementById("GBL-Opt-PromptToClearHistory").checked = b.getBoolPref(oGBL.PrefName_PromptToClear);
-		document.getElementById("GBL-Opt-IgnoreAnswers").checked 		= b.getBoolPref(oGBL.PrefName_IgnoreAnswers);
+		document.getElementById("GBL-Opt-IgnoreDictionary").checked 	= b.getBoolPref(oGBL.PrefName_IgnoreDictionary);
 
 		// Toolbar buttons
 		document.getElementById("GBL-Opt-TB-ShowLabels").checked 	= b.getBoolPref(oGBL.PrefName_TB_ShowLabels);
@@ -38,7 +38,7 @@ var objGooglebarLiteOptions = {
 		document.getElementById("GBL-Opt-TB-Book").checked 			= b.getBoolPref(oGBL.PrefName_TB_Book);
 		document.getElementById("GBL-Opt-TB-Finance").checked		= b.getBoolPref(oGBL.PrefName_TB_Finance);
 		document.getElementById("GBL-Opt-TB-Scholar").checked		= b.getBoolPref(oGBL.PrefName_TB_Scholar);
-		document.getElementById("GBL-Opt-TB-Answers").checked		= b.getBoolPref(oGBL.PrefName_TB_Answers);
+		document.getElementById("GBL-Opt-TB-Dictionary").checked	= b.getBoolPref(oGBL.PrefName_TB_Dictionary);
 
 		// Search modifiers
 		document.getElementById("GBL-Opt-SearchBoxFocusKey").value	= b.getCharPref(oGBL.PrefName_FocusKey);
@@ -54,7 +54,7 @@ var objGooglebarLiteOptions = {
 		document.getElementById("GBL-Opt-CM-Video").checked			= b.getBoolPref(oGBL.PrefName_CM_Video);
 		document.getElementById("GBL-Opt-CM-Groups").checked 		= b.getBoolPref(oGBL.PrefName_CM_Groups);
 		document.getElementById("GBL-Opt-CM-Maps").checked			= b.getBoolPref(oGBL.PrefName_CM_Maps);
-		document.getElementById("GBL-Opt-CM-Answers").checked 		= b.getBoolPref(oGBL.PrefName_CM_Answers);
+		document.getElementById("GBL-Opt-CM-Dictionary").checked 	= b.getBoolPref(oGBL.PrefName_CM_Dictionary);
 		document.getElementById("GBL-Opt-CM-Backward").checked 		= b.getBoolPref(oGBL.PrefName_CM_Backward);
 		document.getElementById("GBL-Opt-CM-Cached").checked 		= b.getBoolPref(oGBL.PrefName_CM_Cached);
 		document.getElementById("GBL-Opt-CM-CachedLink").checked	= b.getBoolPref(oGBL.PrefName_CM_CachedLink);
@@ -108,7 +108,7 @@ var objGooglebarLiteOptions = {
 		b.setBoolPref(oGBL.PrefName_TB_Book, document.getElementById("GBL-Opt-TB-Book").checked);
 		b.setBoolPref(oGBL.PrefName_TB_Finance, document.getElementById("GBL-Opt-TB-Finance").checked);
 		b.setBoolPref(oGBL.PrefName_TB_Scholar, document.getElementById("GBL-Opt-TB-Scholar").checked);
-		b.setBoolPref(oGBL.PrefName_TB_Answers, document.getElementById("GBL-Opt-TB-Answers").checked);
+		b.setBoolPref(oGBL.PrefName_TB_Dictionary, document.getElementById("GBL-Opt-TB-Dictionary").checked);
 
 		// Search history
 		b.setBoolPref(oGBL.PrefName_WarnOnFormHistory, document.getElementById("GBL-Opt-WarnOnFormHistory").checked);
@@ -117,7 +117,7 @@ var objGooglebarLiteOptions = {
 		b.setBoolPref(oGBL.PrefName_UseInlineComplete, document.getElementById("GBL-Opt-UseInlineComplete").checked);
 		b.setBoolPref(oGBL.PrefName_AutoSearch, document.getElementById("GBL-Opt-AutoSearch").checked);
 		b.setBoolPref(oGBL.PrefName_PromptToClear, document.getElementById("GBL-Opt-PromptToClearHistory").checked);
-		b.setBoolPref(oGBL.PrefName_IgnoreAnswers, document.getElementById("GBL-Opt-IgnoreAnswers").checked);
+		b.setBoolPref(oGBL.PrefName_IgnoreDictionary, document.getElementById("GBL-Opt-IgnoreDictionary").checked);
 
 		// Keyboard shortcuts
 		b.setCharPref(oGBL.PrefName_FocusKey, document.getElementById("GBL-Opt-SearchBoxFocusKey").value);
@@ -133,7 +133,7 @@ var objGooglebarLiteOptions = {
 		b.setBoolPref(oGBL.PrefName_CM_Video, document.getElementById("GBL-Opt-CM-Video").checked);
 		b.setBoolPref(oGBL.PrefName_CM_Groups, document.getElementById("GBL-Opt-CM-Groups").checked);
 		b.setBoolPref(oGBL.PrefName_CM_Maps, document.getElementById("GBL-Opt-CM-Maps").checked);
-		b.setBoolPref(oGBL.PrefName_CM_Answers, document.getElementById("GBL-Opt-CM-Answers").checked);
+		b.setBoolPref(oGBL.PrefName_CM_Dictionary, document.getElementById("GBL-Opt-CM-Dictionary").checked);
 		b.setBoolPref(oGBL.PrefName_CM_Backward, document.getElementById("GBL-Opt-CM-Backward").checked);
 		b.setBoolPref(oGBL.PrefName_CM_Cached, document.getElementById("GBL-Opt-CM-Cached").checked);
 		b.setBoolPref(oGBL.PrefName_CM_CachedLink, document.getElementById("GBL-Opt-CM-CachedLink").checked);
@@ -175,7 +175,7 @@ var objGooglebarLiteOptions = {
 			document.getElementById("GBL-Opt-UseInlineComplete").disabled = disabled;
 		document.getElementById("GBL-Opt-AutoSearch").disabled = disabled;
 		document.getElementById("GBL-Opt-PromptToClearHistory").disabled = disabled;
-		document.getElementById("GBL-Opt-IgnoreAnswers").disabled = disabled;
+		document.getElementById("GBL-Opt-IgnoreDictionary").disabled = disabled;
 	}
 };
 

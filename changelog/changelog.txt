@@ -2,6 +2,14 @@
 //Version History
 //***************
 
+[4.7.8]
++ Replaced Answers.com search type with Google Dictionary (English dictionary only for now)
++ Bug Fix: Dragging and dropping text should no longer result in duplicated text
++ Bug Fix: Fixed broken logic used to show and hide the search word overflow button
++ Bug Fix: Improved the logic for displaying toolbar separators
+
+--
+
 [4.7.7]
 + Bug Fix: Corrected a few parsing issues in the search word button filter which were introduced in 4.7.6.
 

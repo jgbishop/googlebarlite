@@ -16,7 +16,6 @@
 <!ENTITY gblite.searchtype.book "Book Search">
 <!ENTITY gblite.searchtype.finance "Finance Search">
 <!ENTITY gblite.searchtype.scholar "Akademik Arama">
-<!ENTITY gblite.searchtype.answers "Answers.com Arama">
 <!ENTITY gblite.searchtype.dictionary "Google Dictionary">
 <!ENTITY gblite.context.web "Seçili Metni İnternette Ara">
 <!ENTITY gblite.context.ak.web "W">
@@ -30,8 +29,6 @@
 <!ENTITY gblite.context.ak.groups "G">
 <!ENTITY gblite.context.maps "Seçili metni Google Haritalarda ara">
 <!ENTITY gblite.context.ak.maps "M">
-<!ENTITY gblite.context.answers "Seçili Metni Answers.com&apos;da Ara">
-<!ENTITY gblite.context.ak.answers "A">
 <!ENTITY gblite.context.dictionary "Search Google Dictionary for Selected Text">
 <!ENTITY gblite.context.ak.dictionary "D">
 <!ENTITY gblite.context.backwardlinks "Geriye Dönük Bağlantılar">
@@ -99,7 +96,6 @@
 <!ENTITY gblite.tt.video "Goohle Video&apos;yu ara">
 <!ENTITY gblite.tt.maps "Google Haritalarda ara">
 <!ENTITY gblite.tt.scholar "Akademik sayfaları ara">
-<!ENTITY gblite.tt.answers "Answers.com&apos;da Ara">
 <!ENTITY gblite.tt.dictionary "Search Google Dictionary">
 <!ENTITY gblite.tt.up "Bir seviye yukarı çık">
 <!ENTITY gblite.tt.highlighter "Bu sayfada terimlerin vurgulanması özelliğini aç">
@@ -131,7 +127,6 @@
 <!ENTITY gblite.options.autocomplete "Otomatik tamamlamayı etkinleştir">
 <!ENTITY gblite.options.inlinecomplete "Satır içi tamamlamayı kullan">
 <!ENTITY gblite.options.autosearchhistory "Arama geçmişinden seçildiğinde otomatik olarak ara">
-<!ENTITY gblite.options.ignoreanswers "Answers.com aramalarını geçmişe dahil etme">
 <!ENTITY gblite.options.ignoredictionary "Ignore Google Dictionary searches in history">
 <!ENTITY gblite.options.prompttoclear "Arama geçmişini silmeden önce sor">
 <!ENTITY gblite.options.showlabels "Düğme etiketlerini göster (yalnızca seçilebilir metin)">

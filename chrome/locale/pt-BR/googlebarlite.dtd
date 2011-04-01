@@ -16,7 +16,6 @@
 <!ENTITY gblite.searchtype.book "Book Search">
 <!ENTITY gblite.searchtype.finance "Finance Search">
 <!ENTITY gblite.searchtype.scholar "Pesquisa Escolar">
-<!ENTITY gblite.searchtype.answers "Pesquisa do Answers.com">
 <!ENTITY gblite.searchtype.dictionary "Google Dictionary">
 <!ENTITY gblite.context.web "Pesquisar a web pelo texto selecionado">
 <!ENTITY gblite.context.ak.web "W">
@@ -30,8 +29,6 @@
 <!ENTITY gblite.context.ak.groups "g">
 <!ENTITY gblite.context.maps "Pesquisar Google Maps pelo texto selecionado">
 <!ENTITY gblite.context.ak.maps "m">
-<!ENTITY gblite.context.answers "Pesquisar Answers.com pelo texto selecionado">
-<!ENTITY gblite.context.ak.answers "A">
 <!ENTITY gblite.context.dictionary "Search Google Dictionary for Selected Text">
 <!ENTITY gblite.context.ak.dictionary "D">
 <!ENTITY gblite.context.backwardlinks "Links para esta página">
@@ -99,7 +96,6 @@
 <!ENTITY gblite.tt.video "Pesquisar Google Vídeo">
 <!ENTITY gblite.tt.maps "Pesquisar Google Maps">
 <!ENTITY gblite.tt.scholar "Pesquisar artigos acadêmicos">
-<!ENTITY gblite.tt.answers "Pesquisar Answers.com">
 <!ENTITY gblite.tt.dictionary "Search Google Dictionary">
 <!ENTITY gblite.tt.up "Subir um nível">
 <!ENTITY gblite.tt.highlighter "Ativar/desativar destaque de termos de pesquisa nesta página">
@@ -131,7 +127,6 @@
 <!ENTITY gblite.options.autocomplete "Habilitar auto-complemento">
 <!ENTITY gblite.options.inlinecomplete "Utilizar complemento inline">
 <!ENTITY gblite.options.autosearchhistory "Pesquisar automaticamente quando você selecionar no histórico de pesquisas">
-<!ENTITY gblite.options.ignoreanswers "Ignorar pesquisas do Answers.com no histórico">
 <!ENTITY gblite.options.ignoredictionary "Ignore Google Dictionary searches in history">
 <!ENTITY gblite.options.prompttoclear "Perguntar antes de limpar o histórico de pesquisas">
 <!ENTITY gblite.options.showlabels "Exibir rótulos dos botões (apenas texto seletivo)">
