@@ -69,11 +69,11 @@
 				<listcell label="&gblite.tx.cscz;" />
 			</listitem>
 			<listitem>
-				<listcell label="da-DK" />
+				<listcell label="da" />
 				<listcell label="&gblite.tx.dadk;" />
 			</listitem>
 			<listitem>
-				<listcell label="de-DE" />
+				<listcell label="de" />
 				<listcell label="&gblite.tx.dede;" />
 			</listitem>
 			<listitem>
@@ -85,7 +85,7 @@
 				<listcell label="&gblite.tx.eses;" />
 			</listitem>
 			<listitem>
-				<listcell label="fr-FR" />
+				<listcell label="fr" />
 				<listcell label="&gblite.tx.frfr;" />
 			</listitem>
 			<listitem>
@@ -101,7 +101,7 @@
 				<listcell label="&gblite.tx.jajp;" />
 			</listitem>
 			<listitem>
-				<listcell label="nl-NL" />
+				<listcell label="nl" />
 				<listcell label="&gblite.tx.nlnl;" />
 			</listitem>
 			<listitem>
