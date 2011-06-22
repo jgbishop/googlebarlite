@@ -35,7 +35,7 @@ pref("googlebar_lite.buttons.scholar", false);
 pref("googlebar_lite.buttons.dictionary", false);
 
 // Keyboard shortcuts
-pref("googlebar_lite.focus_key", "K");
+pref("googlebar_lite.focus_key", "S");
 pref("googlebar_lite.shift_search", "site");
 pref("googlebar_lite.ctrl_search", "images");
 pref("googlebar_lite.shift_ctrl_search", "groups");

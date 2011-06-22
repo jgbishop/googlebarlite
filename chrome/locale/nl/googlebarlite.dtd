@@ -7,7 +7,7 @@
 <!ENTITY gblite.searchtype.lucky "Ik doe een gok">
 <!ENTITY gblite.searchtype.site "Huidige site">
 <!ENTITY gblite.searchtype.image "Afbeeldingen">
-<!ENTITY gblite.searchtype.video "Video&apos;s">
+<!ENTITY gblite.searchtype.video "Video's">
 <!ENTITY gblite.searchtype.news "Nieuws">
 <!ENTITY gblite.searchtype.maps "Maps">
 <!ENTITY gblite.searchtype.shopping "Producten">
@@ -16,19 +16,22 @@
 <!ENTITY gblite.searchtype.book "Boeken">
 <!ENTITY gblite.searchtype.finance "Financieel">
 <!ENTITY gblite.searchtype.scholar "Wetenschap">
-<!ENTITY gblite.searchtype.dictionary "Google Woordenboek">
+<!ENTITY gblite.searchtype.answers "Answers.com">
+<!ENTITY gblite.searchtype.dictionary "Woordenboek">
 <!ENTITY gblite.context.web "Internet op de geselecteerde tekst doorzoeken">
 <!ENTITY gblite.context.ak.web "I">
 <!ENTITY gblite.context.site "Deze site op de geselecteerde tekst doorzoeken">
 <!ENTITY gblite.context.ak.site "S">
 <!ENTITY gblite.context.images "Afbeeldingen op de geselecteerde tekst doorzoeken">
 <!ENTITY gblite.context.ak.images "A">
-<!ENTITY gblite.context.video "Video&apos;s op de geselecteerde tekst doorzoeken">
+<!ENTITY gblite.context.video "Video's op de geselecteerde tekst doorzoeken">
 <!ENTITY gblite.context.ak.video "V">
 <!ENTITY gblite.context.groups "Groepen op de geselecteerde tekst doorzoeken">
 <!ENTITY gblite.context.ak.groups "G">
 <!ENTITY gblite.context.maps "Maps op de geselecteerde tekst doorzoeken">
 <!ENTITY gblite.context.ak.maps "M">
+<!ENTITY gblite.context.answers "Answers.com op de geselecteerde tekst doorzoeken">
+<!ENTITY gblite.context.ak.answers "A">
 <!ENTITY gblite.context.dictionary "Google woordenboek doorzoeken op geselecteerde tekst">
 <!ENTITY gblite.context.ak.dictionary "W">
 <!ENTITY gblite.context.backwardlinks "Terug geplaatste koppelingen">
@@ -37,7 +40,7 @@
 <!ENTITY gblite.context.ak.cached "p">
 <!ENTITY gblite.context.cachedlink "Opgeslagen afbeelding van deze koppeling">
 <!ENTITY gblite.context.ak.cachedlink "k">
-<!ENTITY gblite.context.similar "Vergelijkbare pagina&apos;s zoeken">
+<!ENTITY gblite.context.similar "Vergelijkbare pagina's zoeken">
 <!ENTITY gblite.context.ak.similar "z">
 <!ENTITY gblite.context.translate "Naar Engels vertalen">
 <!ENTITY gblite.context.ak.translate "v">
@@ -96,6 +99,7 @@
 <!ENTITY gblite.tt.video "Zoeken naar video's">
 <!ENTITY gblite.tt.maps "Zoeken naar kaarten">
 <!ENTITY gblite.tt.scholar "Zoeken naar wetenschap">
+<!ENTITY gblite.tt.answers "Zoeken op Answers.com">
 <!ENTITY gblite.tt.dictionary "Google Woordenboek doorzoeken">
 <!ENTITY gblite.tt.up "Bovenliggende map">
 <!ENTITY gblite.tt.highlighter "Markeren van zoekwoorden op deze pagina in- of uitschakelen">
@@ -127,6 +131,7 @@
 <!ENTITY gblite.options.autocomplete "Auto-aanvullen inschakelen">
 <!ENTITY gblite.options.inlinecomplete "Inline aanvullen gebruiken">
 <!ENTITY gblite.options.autosearchhistory "Automatisch zoeken bij selecteren vanuit de zoekgeschiedenis">
+<!ENTITY gblite.options.ignoreanswers "Answers.com zoekacties in de geschiedenis negeren">
 <!ENTITY gblite.options.ignoredictionary "Google Woordenboek zoekopdrachten in geschiedenis negeren">
 <!ENTITY gblite.options.prompttoclear "Bevestiging vragen voordat de zoekgeschiedenis gewist wordt">
 <!ENTITY gblite.options.showlabels "Labelsknop weergeven (alleen selectieve tekst)">

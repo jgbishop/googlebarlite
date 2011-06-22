@@ -1,6 +1,15 @@
 //***************
 //Version History
 //***************
+[4.7.9]
++ Changed the default keyboard shortcut for setting search box focus to Ctrl+Shift+S (was Ctrl+Shift+K)
++ Added support for Firefox 5 and 6
++ Added a new Estonian translation (et-EE)
++ Various locale updates
++ Relaxed the importance of style rules in the Googlebar Lite stylesheet
++ Bug Fix: Search terms surrounded by double quotes are now highlighted properly
+
+--
 
 [4.7.8]
 + Replaced Answers.com search type with Google Dictionary (English dictionary only for now)

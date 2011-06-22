@@ -2,49 +2,27 @@
 .GBL-Toolbar-Button,
 .GBL-Toolbar-Button-NoLabel { list-style-image: url("chrome://googlebarlite/skin/buttonsheet.png"); }
 
-.GBL-Toolbar-Button-NoLabel { -moz-box-orient: vertical; }
-.GBL-Toolbar-Button-NoLabel .toolbarbutton-icon { margin-left: 2px; margin-right: 2px; }
-.GBL-Toolbar-Button-NoLabel .toolbarbutton-text { display: none !important; }
-
-.GBL-Toolbar-Button-NoLabel[type="menu"] { -moz-box-orient: horizontal; }
-.GBL-Toolbar-Button-NoLabel[type="menu"] .toolbarbutton-icon { margin-left: 0; margin-right: 5px; }
+	.GBL-Toolbar-Button-NoLabel { -moz-box-orient: vertical; }
+	.GBL-Toolbar-Button-NoLabel .toolbarbutton-icon { margin-left: 2px; margin-right: 2px; }
+	.GBL-Toolbar-Button-NoLabel .toolbarbutton-text { display: none; }
+	.GBL-Toolbar-Button-NoLabel[type="menu"] { -moz-box-orient: horizontal; }
+	.GBL-Toolbar-Button-NoLabel[type="menu"] .toolbarbutton-icon { margin-left: 0; margin-right: 5px; }
 
 .GBL-TB-SearchWordButton .toolbarbutton-text,
-.GBL-Toolbar-Button .toolbarbutton-text { display: -moz-box !important; }
+.GBL-Toolbar-Button .toolbarbutton-text { display: -moz-box; }
 
-toolbar[mode="text"] .GBL-Toolbar-Button .toolbarbutton-icon { display: -moz-box !important; }
-toolbar[mode="text"] .GBL-Toolbar-Button-NoLabel .toolbarbutton-icon { display: -moz-box !important; }
-toolbar[mode="text"] .GBL-Toolbar-Button-NoLabel .toolbarbutton-text { display: none !important; }
+toolbar[mode="text"] .GBL-Toolbar-Button .toolbarbutton-icon { display: -moz-box; }
+toolbar[mode="text"] .GBL-Toolbar-Button-NoLabel .toolbarbutton-icon { display: -moz-box; }
+toolbar[mode="text"] .GBL-Toolbar-Button-NoLabel .toolbarbutton-text { display: none; }
 
 .GBL-Toolbar-Customize {
 	display: none;
-	max-width: 10em !important;
+	max-width: 10em;
 }
 
-toolbar[mode="icons"] .GBL-Toolbar-Customize { min-width: 20px; }
-
-.GBL-Toolbar-Customize .toolbarbutton-text { text-align: left !important; }
-
-#palette-box #wrapper-GBL-Toolbar-MainItem .toolbarpaletteitem-box {
-	height: 32px;
-	width: 32px;
-	background-image: url("chrome://googlebarlite/skin/logo.png");
-}
-
-toolbarpaletteitem[place="toolbar"] .GBL-Toolbar-Customize { display: -moz-box; }
-
-#palette-box .GBL-Toolbar-Items,
-toolbarpaletteitem[place="toolbar"] .GBL-Toolbar-Items { display: none; }
-
-#GBL-TB-Toggle-Toolbar {
-	-moz-image-region: rect(0px 24px 24px 0px) !important;
-	list-style-image: url("chrome://googlebarlite/skin/toggle_large.png");
-}
-
-toolbar[iconsize="small"] #GBL-TB-Toggle-Toolbar {
-	-moz-image-region: rect(0px 16px 16px 0px) !important;
-	list-style-image: url("chrome://googlebarlite/skin/toggle_small.png");
-}
+	.GBL-Toolbar-Customize .toolbarbutton-text { text-align: left; }
+	toolbar[mode="icons"] .GBL-Toolbar-Customize { min-width: 20px; }
+	toolbarpaletteitem[place="toolbar"] .GBL-Toolbar-Customize { display: -moz-box; }
 
 #GBL-SearchBox {
 	min-height: 22px;
@@ -58,8 +36,19 @@ toolbar[iconsize="small"] #GBL-TB-Toggle-Toolbar {
 
 }
 
+#GBL-ResizeBar {
+	background-image: url("chrome://googlebarlite/skin/gripper.png");
+	min-height: 20px;
+	min-width: 3px;
+}
+
+#GBL-ResizeSplitter {
+	background: transparent;
+	border: none;
+}
+
 #GBL-TB-Customize,
-#GBL-TB-MainMenu						{ -moz-image-region: rect(0px  16px 16px   0px) !important; }
+#GBL-TB-MainMenu						{ -moz-image-region: rect(0px  16px 16px   0px); }
 
 #GBL-TB-Web,
 #GBL-TB-Combined-Web,
@@ -129,19 +118,8 @@ toolbar[iconsize="small"] #GBL-TB-Toggle-Toolbar {
 
 #GBL-TB-Combined > .toolbarbutton-menubutton-button,
 #GBL-TB-UpButton > .toolbarbutton-menubutton-button {
-	-moz-box-orient: horizontal !important;
-	padding: 3px !important;
-}
-
-#GBL-ResizeBar {
-	background-image: url("chrome://googlebarlite/skin/gripper.png");
-	min-height: 20px;
-	min-width: 3px;
-}
-
-#GBL-ResizeSplitter {
-	background: transparent;
-	border: none !important;
+	-moz-box-orient: horizontal;
+	padding: 3px;
 }
 
 .GBL-TB-SearchWordButton {
@@ -149,7 +127,25 @@ toolbar[iconsize="small"] #GBL-TB-Toggle-Toolbar {
 	-moz-image-region: rect(0px 16px 16px 0px);
 }
 
+#palette-box #wrapper-GBL-Toolbar-MainItem .toolbarpaletteitem-box {
+	height: 32px;
+	width: 32px;
+	background-image: url("chrome://googlebarlite/skin/logo.png");
+}
+
+#palette-box .GBL-Toolbar-Items,
+toolbarpaletteitem[place="toolbar"] .GBL-Toolbar-Items { display: none; }
+
+#GBL-TB-Toggle-Toolbar {
+	-moz-image-region: rect(0px 24px 24px 0px);
+	list-style-image: url("chrome://googlebarlite/skin/toggle_large.png");
+}
+
+toolbar[iconsize="small"] #GBL-TB-Toggle-Toolbar {
+	-moz-image-region: rect(0px 16px 16px 0px);
+	list-style-image: url("chrome://googlebarlite/skin/toggle_small.png");
+}
+
 .GBL-Indent { margin-left: 2em; }
-#GBL-Options tabpanel { background: white !important; color: #000 !important; }
-#GBL-Options caption { background: white !important; color: #000 !important; font-weight: bold; }
+#GBL-Options caption { font-weight: bold; }
 

@@ -19,7 +19,7 @@
 
 <window id="main-window">
 	<keyset id="GBL-KeySet">
-		<key id="GBL-Focus-Key" key="K" modifiers="accel,shift" oncommand="objGooglebarLite.SetFocus(event);" />
+		<key id="GBL-Focus-Key" key="S" modifiers="accel,shift" oncommand="objGooglebarLite.SetFocus(event);" />
 	</keyset>
 </window>
 

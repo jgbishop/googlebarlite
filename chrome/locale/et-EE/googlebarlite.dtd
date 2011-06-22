@@ -1,0 +1,173 @@
+<!-- ########## GENERAL ########## -->
+<!ENTITY gblite.name "Googlebar Lite">
+<!ENTITY gblite.toolbar.name "Googlebar Lite tööriistariba">
+<!ENTITY gblite.ak.name "G">
+<!ENTITY gblite.toggle.toolbar "GBL tööriistariba sisse/välja">
+<!ENTITY gblite.searchtype.web "Veebiotsing">
+<!ENTITY gblite.searchtype.lucky "Ehk mul veab">
+<!ENTITY gblite.searchtype.site "Lehe otsing">
+<!ENTITY gblite.searchtype.image "Pildiotsing">
+<!ENTITY gblite.searchtype.video "Video-otsing">
+<!ENTITY gblite.searchtype.news "Uudisteotsing">
+<!ENTITY gblite.searchtype.maps "Google kaardiotsing">
+<!ENTITY gblite.searchtype.shopping "Tooteotsing">
+<!ENTITY gblite.searchtype.group "Grupiotsing (arutelud)">
+<!ENTITY gblite.searchtype.blog "Blogiotsing">
+<!ENTITY gblite.searchtype.book "Raamatuotsing">
+<!ENTITY gblite.searchtype.finance "Finantsotsing">
+<!ENTITY gblite.searchtype.scholar "Õppeotsing">
+<!ENTITY gblite.searchtype.answers "Answers.com otsing">
+<!ENTITY gblite.searchtype.dictionary "Google sõnastik">
+<!ENTITY gblite.context.web "Otsi veebist märgitud teksti">
+<!ENTITY gblite.context.ak.web "W">
+<!ENTITY gblite.context.site "Otsi sellelt lehelt märgitud teksti">
+<!ENTITY gblite.context.ak.site "S">
+<!ENTITY gblite.context.images "Pildiotsing märgitud tekstile">
+<!ENTITY gblite.context.ak.images "I">
+<!ENTITY gblite.context.video "Video-otsing märgitud tekstile">
+<!ENTITY gblite.context.ak.video "V">
+<!ENTITY gblite.context.groups "Otsi Google gruppidest märgitud teksti">
+<!ENTITY gblite.context.ak.groups "G">
+<!ENTITY gblite.context.maps "Google kaardiotsing märgitud tekstile">
+<!ENTITY gblite.context.ak.maps "M">
+<!ENTITY gblite.context.answers "Answers.com otsing märgitud tekstile">
+<!ENTITY gblite.context.ak.answers "A">
+<!ENTITY gblite.context.dictionary "Otsi Google sõnastikust märgitud teksti">
+<!ENTITY gblite.context.ak.dictionary "D">
+<!ENTITY gblite.context.backwardlinks "Tagasiulatuvad lingid">
+<!ENTITY gblite.context.ak.backwardlinks "B">
+<!ENTITY gblite.context.cached "Puhverdatud väljavõte sellest leheküljest">
+<!ENTITY gblite.context.ak.cached "C">
+<!ENTITY gblite.context.cachedlink "Selle lingi puhverdatud väljavõte">
+<!ENTITY gblite.context.ak.cachedlink "L">
+<!ENTITY gblite.context.similar "Leia sarnased lehed">
+<!ENTITY gblite.context.ak.similar "F">
+<!ENTITY gblite.context.translate "Tõlgi inglise keelde">
+<!ENTITY gblite.context.ak.translate "T">
+<!ENTITY gblite.mainmenu.label.homepage "Google koduleht">
+<!ENTITY gblite.mainmenu.ak.homepage "G">
+<!ENTITY gblite.mainmenu.label.googlelinks "Google lingid">
+<!ENTITY gblite.mainmenu.ak.googlelinks "L">
+<!ENTITY gblite.mainmenu.label.advanced "Täpsem otsing">
+<!ENTITY gblite.mainmenu.ak.advanced "A">
+<!ENTITY gblite.mainmenu.label.images "Google pildid">
+<!ENTITY gblite.mainmenu.ak.images "I">
+<!ENTITY gblite.mainmenu.label.video "Google videod">
+<!ENTITY gblite.mainmenu.ak.video "V">
+<!ENTITY gblite.mainmenu.label.news "Google uudised">
+<!ENTITY gblite.mainmenu.ak.news "N">
+<!ENTITY gblite.mainmenu.label.maps "Google kaardid">
+<!ENTITY gblite.mainmenu.ak.maps "p">
+<!ENTITY gblite.mainmenu.label.shopping "Google tooteotsing">
+<!ENTITY gblite.mainmenu.ak.shopping "r">
+<!ENTITY gblite.mainmenu.label.groups "Google grupid">
+<!ENTITY gblite.mainmenu.ak.groups "G">
+<!ENTITY gblite.mainmenu.label.blog "Google blogiotsing">
+<!ENTITY gblite.mainmenu.ak.blog "B">
+<!ENTITY gblite.mainmenu.label.book "Google raamatuotsing">
+<!ENTITY gblite.mainmenu.ak.book "k">
+<!ENTITY gblite.mainmenu.label.finance "Google finantsotsing">
+<!ENTITY gblite.mainmenu.ak.finance "F">
+<!ENTITY gblite.mainmenu.label.scholar "Google õppeotsing">
+<!ENTITY gblite.mainmenu.ak.scholar "S">
+<!ENTITY gblite.mainmenu.label.gmail "Google GMail">
+<!ENTITY gblite.mainmenu.ak.gmail "M">
+<!ENTITY gblite.mainmenu.label.searchprefs "Otsiseadistused">
+<!ENTITY gblite.mainmenu.ak.searchprefs "P">
+<!ENTITY gblite.mainmenu.label.languagetools "Keeletööriistad">
+<!ENTITY gblite.mainmenu.ak.languagetools "T">
+<!ENTITY gblite.mainmenu.label.options "Sätted...">
+<!ENTITY gblite.mainmenu.ak.options "O">
+<!ENTITY gblite.mainmenu.label.clearhistory "Puhasta otsingute ajalugu">
+<!ENTITY gblite.mainmenu.ak.clearhistory "C">
+<!ENTITY gblite.mainmenu.label.help "Abi">
+<!ENTITY gblite.mainmenu.ak.help "H">
+<!ENTITY gblite.mainmenu.label.about "Asjast...">
+<!ENTITY gblite.mainmenu.ak.about "A">
+<!ENTITY gblite.tt.mainmenu "Googlebar Lite peamenüü">
+<!ENTITY gblite.tt.combined "Googlebar Lite otsingud">
+<!ENTITY gblite.tt.web "Otsi veebist">
+<!ENTITY gblite.tt.lucky "Soorita &quot;ehk mul veab&quot; otsing">
+<!ENTITY gblite.tt.site "Otsi siit lehelt">
+<!ENTITY gblite.tt.image "Otsi pilte">
+<!ENTITY gblite.tt.shopping "Otsi tooteid">
+<!ENTITY gblite.tt.group "Otsi Google gruppe">
+<!ENTITY gblite.tt.book "Otsi raamatuid">
+<!ENTITY gblite.tt.news "Otsi uudiseid">
+<!ENTITY gblite.tt.blog "Otsi blogisid">
+<!ENTITY gblite.tt.finance "Finantsotsing">
+<!ENTITY gblite.tt.video "Otsi Google videosid">
+<!ENTITY gblite.tt.maps "Google kaardiotsing">
+<!ENTITY gblite.tt.scholar "Otsi õppetöösid">
+<!ENTITY gblite.tt.answers "Answers.com otsing">
+<!ENTITY gblite.tt.dictionary "Otsing Google sõnastikust">
+<!ENTITY gblite.tt.up "Mine taseme võrra üles">
+<!ENTITY gblite.tt.highlighter "Näita/peida otsisõnade esiletoomist">
+<!ENTITY gblite.tt.overflow "Otsisõnad (jätkub)">
+<!ENTITY gblite.tt.splitter "Muuda otsingukasti suurust">
+<!-- ########## OPTIONS DIALOG ########## -->
+<!ENTITY gblite.options.title "Googlebar Lite sätted">
+<!ENTITY gblite.options.tab.general "Üldine">
+<!ENTITY gblite.options.tab.buttons "Tööriistariba nupud">
+<!ENTITY gblite.options.tab.searchhistory "Otsiajalugu">
+<!ENTITY gblite.options.tab.keyboard "Kiirklahvid">
+<!ENTITY gblite.options.tab.context "Kontekstimenüü">
+<!ENTITY gblite.options.label.general "Üldsätted">
+<!ENTITY gblite.options.label.sitetouse "Kasutatav Google lehekülg">
+<!ENTITY gblite.options.label.shortcutrestartwarning "Otsingukasti fookuse otsetee muutmine eeldab brauseri taaskäivitamist.">
+<!ENTITY gblite.options.label.searchboxfocus "Määra otsingukasti fookus">
+<!ENTITY gblite.options.label.shortcutprefix "Ctrl + Shift +">
+<!ENTITY gblite.options.label.shiftenter "Shift + Enter sooritab">
+<!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter sooritab">
+<!ENTITY gblite.options.label.shiftctrlenter "Ctrl + Shift + Enter sooritab">
+<!ENTITY gblite.options.label.commonbuttons "Tööriistariba tavanupud ja sätted">
+<!ENTITY gblite.options.clickselectsall "Klikkamine otsingukastil märgistab kõik otsisõnad">
+<!ENTITY gblite.options.searchintab "Ava otsitulemused uuel vahekaardil (kui vaja)">
+<!ENTITY gblite.options.remembercombined "Jäta meelde viimane kombineeritud menüüga otsingutüüp">
+<!ENTITY gblite.options.searchondragdrop "Lohistamisel automaatne otsing">
+<!ENTITY gblite.options.usesecuresearch "Võimaluse korral kasuta turvalist otsingut">
+<!ENTITY gblite.options.warnonformhistory "Hoiata, kui väljade ajalugu on Firefoxis keelatud">
+<!ENTITY gblite.options.maintainhistory "Hoia otsingute ajalugu">
+<!ENTITY gblite.options.autocomplete "Luba automaatne lõpetamine">
+<!ENTITY gblite.options.inlinecomplete "Kasuta inline lõpetamist">
+<!ENTITY gblite.options.autosearchhistory "Otsi automaatselt, kui valite otsingu ajaloost">
+<!ENTITY gblite.options.ignoreanswers "Ignore Answers.com otsinguid ajaloos">
+<!ENTITY gblite.options.ignoredictionary "Ignoreeri Google sõnastiku otsinguid ajaloos">
+<!ENTITY gblite.options.prompttoclear "Teata enne otsingute ajaloo kustutamist">
+<!ENTITY gblite.options.showlabels "Näita nuppude nimesid (valimisel)">
+<!ENTITY gblite.options.showsearchwords "Otsingusõnad">
+<!ENTITY gblite.options.showhighlighter "Marker">
+<!ENTITY gblite.options.showup "Mine üles">
+<!ENTITY gblite.options.showcombined "Kombineeritud otsimenüü">
+<!ENTITY gblite.options.showcontext "Näita Googlebar Lite kontekstimenüüd">
+<!-- ########## ABOUT DIALOG ########## -->
+<!ENTITY gblite.about.title "Mis on Googlebar Lite">
+<!ENTITY gblite.about.extdesc "Lihtne Google'i otsinguriba Firefoxile">
+<!ENTITY gblite.about.createdby "Looja:">
+<!ENTITY gblite.about.ontheweb "Veebis:">
+<!ENTITY gblite.about.visithomepage "Googlebar Lite koduleht">
+<!ENTITY gblite.about.visitdocumentation "Googlebar Lite dokumentatsioon">
+<!ENTITY gblite.about.disclaimer "Tingimused">
+<!ENTITY gblite.about.disclaimerinfo "Google Inc. pole loonud ja ei toeta Googlebar Lite'i, Mõisted &quot;Google&quot;, &quot;Google Toolbar&quot; ja &quot;I'm Feeling Lucky&quot; on Google Inc. registreeritud kaubamärgid.">
+<!ENTITY gblite.about.translators "Tõlkijad">
+<!ENTITY gblite.about.locale "Asukoht">
+<!ENTITY gblite.about.translator "Tõlkija">
+<!-- ########## CLEAR HISTORY DIALOG ########## -->
+<!ENTITY gblite.confirm.title "Tühjenda otsingute ajalugu">
+<!ENTITY gblite.confirm.label.usure "Oled sa kindel, et soovid otsingute ajaloo tühjendada?">
+<!ENTITY gblite.confirm.label.yes "Jah">
+<!ENTITY gblite.confirm.ak.yes "Y">
+<!ENTITY gblite.confirm.label.no "Ei">
+<!ENTITY gblite.confirm.ak.no "N">
+<!-- ########## FORM HISTORY DIALOG ########## -->
+<!ENTITY gblite.formhistory.title "Googlebar Lite: otsingute ajaloo hoiatus">
+<!ENTITY gblite.formhistory.warninginfo "Googlebar Lite avastas, et soovite hoida otsingute ajalugu, kuid Firefoxis on see funktsioon hetkel keelatud. Et ajalugu säilitada, peaks see olema lubatud.">
+<!ENTITY gblite.formhistory.prompt "Mida tahaksid teha?">
+<!ENTITY gblite.formhistory.donotdisplay "Ära näita enam seda dialoogi">
+<!ENTITY gblite.formhistory.ak.donotdisplay "D">
+<!ENTITY gblite.formhistory.enableformhistory "Luba väljade ajalugu">
+<!ENTITY gblite.formhistory.ak.enableformhistory "E">
+<!ENTITY gblite.formhistory.disablesearchhistory "Keela otsingute ajalugu">
+<!ENTITY gblite.formhistory.ak.disablesearchhistory "S">
+<!ENTITY gblite.formhistory.cancel "Tühista">
+<!ENTITY gblite.formhistory.ak.cancel "C">

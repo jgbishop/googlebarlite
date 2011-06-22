@@ -350,6 +350,7 @@ var objGooglebarLite = {
 		for(i=0; i<termsArray.length; i++)
 		{
 			var term = termsArray[i];
+			term = term.replace(/"/g, ''); // Remove any double quotes that may appear in the search term
 			
 			var span = doc.createElement("span");
 			span.setAttribute("style", this.HighlightColors[i%6] + " color: #000; display: inline !important; font-size: inherit !important;");
@@ -1187,6 +1188,7 @@ var objGooglebarLite = {
 		for(i=0; i<termsArray.length; i++)
 		{
 			var term = termsArray[i];
+			term = term.replace(/"/g, ''); // Remove any double quotes that may appear in the search term
 	
 			var searchRange = doc.createRange();
 			searchRange.setStart(body, 0);

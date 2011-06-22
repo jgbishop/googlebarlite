@@ -1,5 +1,5 @@
 #GBL-About {
-	background: #FFF !important;
+	background: #FFF;
 	width: 32em;
 }
 
@@ -9,7 +9,7 @@
 	font-weight: bold;
 }
 
-#GBL-About listbox[disabled=true] listitem { color: #000 !important; }
+#GBL-About listbox[disabled=true] listitem { color: #000; }
 
 #GBL-About .colone { width: 6em; }
 
@@ -19,7 +19,7 @@
 	cursor: pointer;
 	text-decoration: underline;
 }
-#GBL-About .link:hover { color: #F00 !important; }
+#GBL-About .link:hover { color: #F00; }
 #GBL-About .strong { font-weight: bold; }
 
 #GBL-About-Logo { margin-bottom: 0.5em; }
