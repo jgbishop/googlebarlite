@@ -1,6 +1,15 @@
 //***************
 //Version History
 //***************
+[4.7.10]
++ Altered the Google dictionary search since Google has shut down that dedicated service
++ Bumped the maxVersion to 12.* to work around Mozilla's annoying new release schedule
++ Added google.sk to the list of available top-level domains
++ Bug Fix: Corrected an error with the addProgressListener call
++ Bug Fix: Reverted a style rule change that caused search word button labels to disappear in some themes
+
+--
+
 [4.7.9]
 + Changed the default keyboard shortcut for setting search box focus to Ctrl+Shift+S (was Ctrl+Shift+K)
 + Added support for Firefox 5 and 6

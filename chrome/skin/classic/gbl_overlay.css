@@ -11,6 +11,8 @@
 .GBL-TB-SearchWordButton .toolbarbutton-text,
 .GBL-Toolbar-Button .toolbarbutton-text { display: -moz-box; }
 
+toolbar[mode="icons"] .GBL-TB-SearchWordButton .toolbarbutton-text { display: -moz-box !important; } /* Search words should always appear */
+
 toolbar[mode="text"] .GBL-Toolbar-Button .toolbarbutton-icon { display: -moz-box; }
 toolbar[mode="text"] .GBL-Toolbar-Button-NoLabel .toolbarbutton-icon { display: -moz-box; }
 toolbar[mode="text"] .GBL-Toolbar-Button-NoLabel .toolbarbutton-text { display: none; }

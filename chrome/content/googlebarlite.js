@@ -428,15 +428,12 @@ var objGooglebarLite = {
 			if(thisTerm.length == 0)
 				continue;
 			
-			// Escape all apostrophes to prevent XSS problems
-			var safeTerm = thisTerm.replace(/'/g, "\\'");
-			safeTerm = "\'" + safeTerm + "\'";
-	
 			tempButton = document.createElement("toolbarbutton");
 			tempButton.setAttribute("label",  thisTerm);
 			tempButton.setAttribute("collapsed", "false");
 			tempButton.setAttribute("tooltiptext", stringBundle.getFormattedString("GBL_FindNextOccurrence", [thisTerm]));
-			tempButton.setAttribute("oncommand", "objGooglebarLite.FindInPage(" + safeTerm + ", event)");
+//  		tempButton.setAttribute("searchTerm", thisTerm);
+			tempButton.setAttribute("oncommand", "objGooglebarLite.FindInPage(this.getAttribute('label'), event); event.stopPropagation();");
 			tempButton.className = "GBL-TB-SearchWordButton";
 	
 			searchWordsContainer.appendChild(tempButton);
@@ -445,7 +442,8 @@ var objGooglebarLite = {
 			tempMenuItem.setAttribute("label",  thisTerm);
 			tempMenuItem.setAttribute("collapsed", "true");
 			tempMenuItem.setAttribute("tooltiptext", stringBundle.getFormattedString("GBL_FindNextOccurrence", [thisTerm]));
-			tempMenuItem.setAttribute("oncommand", "objGooglebarLite.FindInPage(" + safeTerm + ", event)");
+//  		tempMenuItem.setAttribute("searchTerm", thisTerm);
+			tempMenuItem.setAttribute("oncommand", "objGooglebarLite.FindInPage(this.getAttribute('label'), event); event.stopPropagation();");
 	
 			if(highlighter.checked == true)
 			{
@@ -852,7 +850,7 @@ var objGooglebarLite = {
 				}
 			};
 	
-			window.getBrowser().addProgressListener(objGooglebarLite.Listener, Components.interfaces.nsIWebProgress.NOTIFY_STATE_DOCUMENT);
+			window.getBrowser().addProgressListener(objGooglebarLite.Listener);
 
 			var chevron = document.getElementById("GBL-Overflow-Button");
 			objGooglebarLite.OverflowButtonWidth = chevron.boxObject.width;
@@ -1407,10 +1405,10 @@ var objGooglebarLite = {
 	
 		case "dictionary":
 			canIgnore = true;
-			if(isEmpty) { URL = this.BuildSearchURL("www", "dictionary", ""); }
-			else		{ URL = this.BuildSearchURL("www", "dictionary", searchTerms + "&langpair=en|en"); }
+			if(isEmpty) { URL = this.BuildSearchURL("www", "", ""); }
+			else		{ URL = this.BuildSearchURL("www", "search", searchTerms + "&tbs=dfn:1"); }
 			break;
-	
+			
 		// The following cases are only accessible through the context menu
 		case "backwards":
 			URL = this.BuildSearchURL("www", "search", "link:" + encodeURIComponent(win.location.href));
@@ -1658,7 +1656,7 @@ var objGooglebarLite = {
 			if(objGooglebarLite.RunOnce == false)
 			{
 				objGooglebarLite.RunOnce = true;
-				window.getBrowser().addProgressListener(objGooglebarLite.Listener, Components.interfaces.nsIWebProgress.NOTIFY_STATE_DOCUMENT);
+				window.getBrowser().addProgressListener(objGooglebarLite.Listener);
 				setTimeout(objGooglebarLite.DelayedStartup, 1); // Needs to happen after Firefox's delayedStartup()
 			}
 	
@@ -1998,7 +1996,7 @@ var objGooglebarLite = {
 	
 			tempItem = document.createElement("menuitem");
 			tempItem.setAttribute("label", currentPath);
-			tempItem.setAttribute("oncommand", "objGooglebarLite.Up(event, '" + currentPath + "'); event.stopPropagation();");
+			tempItem.setAttribute("oncommand", "objGooglebarLite.Up(event, this.getAttribute('label')); event.stopPropagation();");
 			tempItem.setAttribute("onclick", "checkForMiddleClick(this, event); event.stopPropagation();");
 			upMenu.appendChild(tempItem);
 	
@@ -2019,7 +2017,7 @@ var objGooglebarLite = {
 			topHost += "/";
 			tempItem = document.createElement("menuitem");
 			tempItem.setAttribute("label", topHost);
-			tempItem.setAttribute("oncommand", "objGooglebarLite.Up(event, '" + topHost + "'); event.stopPropagation();");
+			tempItem.setAttribute("oncommand", "objGooglebarLite.Up(event, this.getAttribute('label')); event.stopPropagation();");
 			tempItem.setAttribute("onclick", "checkForMiddleClick(this, event); event.stopPropagation();");
 			upMenu.appendChild(tempItem);
 		}
