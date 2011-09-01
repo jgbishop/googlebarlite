@@ -39,7 +39,7 @@
 <!ENTITY gblite.context.ak.cachedlink "L">
 <!ENTITY gblite.context.similar "Find Similar Pages">
 <!ENTITY gblite.context.ak.similar "F">
-<!ENTITY gblite.context.translate "Translate into English">
+<!ENTITY gblite.context.translate "Translate Page into English">
 <!ENTITY gblite.context.ak.translate "T">
 <!ENTITY gblite.mainmenu.label.homepage "Google Home Page">
 <!ENTITY gblite.mainmenu.ak.homepage "G">

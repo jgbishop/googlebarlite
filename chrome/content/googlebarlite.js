@@ -1612,6 +1612,13 @@ var objGooglebarLite = {
 
 	TermsHaveUpdated: function()
 	{
+		// TODO: Add the search menu item
+		// TODO: Make sure this works
+		if(this.TrimString(this.GetSearchTerms()) == "")
+			document.getElementById("GBL-TB-Dictionary").setAttribute("disabled", true);
+		else
+			document.getElementById("GBL-TB-Dictionary").setAttribute("disabled", false);
+
 		this.UpdateSearchWordButtons();
 		this.CheckHighlighting();
 	},
