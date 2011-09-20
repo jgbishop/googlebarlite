@@ -60,12 +60,8 @@ GBL_PrivateBrowsingListener.prototype = {
 };
 
 var objGooglebarLite = {
-	Clipboard : Components.classes["@mozilla.org/widget/clipboard;1"].createInstance(Components.interfaces.nsIClipboard),
-	ConsoleService : Components.classes['@mozilla.org/consoleservice;1'].getService(Components.interfaces.nsIConsoleService),
-	Finder : Components.classes['@mozilla.org/embedcomp/rangefind;1'].createInstance().QueryInterface(Components.interfaces.nsIFind),
 	FormHistory : Components.classes["@mozilla.org/satchel/form-history;1"].getService(Components.interfaces.nsIFormHistory2 || Components.interfaces.nsIFormHistory),
 	PrefBranch : Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("googlebar_lite."),
-	Sound : Components.classes["@mozilla.org/sound;1"].createInstance(Components.interfaces.nsISound),
 	Transferable : Components.classes["@mozilla.org/widget/transferable;1"].createInstance(Components.interfaces.nsITransferable),
 	
 	// ==================== Preference Names ====================
@@ -315,7 +311,8 @@ var objGooglebarLite = {
 
 	Log: function(aMessage)
 	{
-		this.ConsoleService.logStringMessage('Googlebar_Lite: ' + aMessage);
+		var consoleService = Components.classes['@mozilla.org/consoleservice;1'].getService(Components.interfaces.nsIConsoleService);
+		consoleService.logStringMessage('Googlebar_Lite: ' + aMessage);
 	},
 	
 	About: function()
@@ -345,15 +342,10 @@ var objGooglebarLite = {
 		var termsArray = this.SplitTerms(terms);
 		this.LastHighlightedTerms = terms; // Back up the highlighted terms
 	
-		var count = body.childNodes.length;
-	
 		for(i=0; i<termsArray.length; i++)
 		{
 			var term = termsArray[i];
 			term = term.replace(/"/g, ''); // Remove any double quotes that may appear in the search term
-			
-			this.Log("Highlighting Term: " + term);
-			this.Log(" - ChildNodes Count: " + body.childNodes.length);
 			
 			var span = doc.createElement("span");
 			span.setAttribute("style", this.HighlightColors[i%6] + " color: #000; display: inline !important; font-size: inherit !important;");
@@ -361,16 +353,6 @@ var objGooglebarLite = {
 	
 			var searchRange = doc.createRange(); // Create the search range
 			searchRange.selectNodeContents(body); // Set our search range to everything in the body element
-//  		searchRange.setStart(body, 0);
-//  		searchRange.setEnd(body, count);
-	
-//  		var start = doc.createRange();
-//  		start.setStart(body, 0);
-//  		start.setEnd(body, 0);
-
-//  		var end = doc.createRange();
-//  		end.setStart(body, count);
-//  		end.setEnd(body, count);
 			
 			var start = searchRange.cloneRange(); // Set a start point
 			start.collapse(true); // Collapse to the beginning
@@ -378,72 +360,34 @@ var objGooglebarLite = {
 			var end = searchRange.cloneRange(); // Set a start point
 			end.collapse(false); // Collapse to the end
 			
-			// TODO: Create the finder instance on the fly (do the same in RemoveHighlighting)
+			// Create the finder instance on the fly
+			var finder = Components.classes['@mozilla.org/embedcomp/rangefind;1']
+				.createInstance(Components.interfaces.nsIFind);
 	
 			var result = null;
-			var _debugCounter = 0; // TODO: Remove me
-			while( (result = this.Finder.Find(term, searchRange, start, end)) )
+			while( (result = finder.Find(term, searchRange, start, end)) )
 			{
 				var hilitenode = span.cloneNode(true);
-	
-//  			var startContainer = result.startContainer;
-//  			var startOffset = result.startOffset;
-//  			var endOffset = result.endOffset;
-//
-				_debugCounter++;
-				this.Log("HIT #" + _debugCounter);
-//  			this.Log(" - Start offset: " + startOffset);
-//  			this.Log(" - End offset:   " + endOffset);
-				
 				result.surroundContents(hilitenode);
-//  			start.setStart(startContainer, endOffset);
-//  			start.setStartAfter(startContainer);
-				start = result;
+				
+				start = result; // Pick up right after our first hit
 				start.collapse(false); // Collapse this range to its end point
 				
 				// Workaround for bug https://bugzilla.mozilla.org/show_bug.cgi?id=488427
 				// (forcing a FlushPendingNotifications call)
 				body.offsetWidth;
-				
-//  			start.setStart(hilitenode, 0);
-				
-//  			var resultContents = result.extractContents(); // Grab the word out of the search result
-//  			var before = startContainer.splitText(startOffset); // Grab everything before our search result
-//  			var parent = before.parentNode; // Get the parent node
-
-//  			hilitenode.appendChild(resultContents); // Put the word into our hilite span
-//  			var nnode = parent.insertBefore(hilitenode, before);
-				
-//  			start.setStart(nnode, nnode.childNodes.length);
-//  			start.setStart(startContainer, endOffset);
-	
-//  			this.Log(" - hilitenode.childNodes.length: " + hilitenode.childNodes.length);
-//  			start = hilitenode.ownerDocument.createRange();
-//  			start.setStart(hilitenode, hilitenode.childNodes.length);
-//  			start.setEnd(hilitenode, hilitenode.childNodes.length);
-				
-//  			this.Log(" - nnode.childNodes.length: " + nnode.childNodes.length);
-//  			start = nnode.ownerDocument.createRange();
-//  			start.setStart(nnode, nnode.childNodes.length);
-//  			start.setEnd(nnode, nnode.childNodes.length);
-				
-				if(_debugCounter == 5)
-				{
-					this.Log("########## ERROR: Hit our limit! ##########");
-					break;
-				}
 			}
 		}
 	},
 
-	AddSearchWordButtons: function(term)
+	AddSearchWordButtons: function(inString)
 	{
 		var searchWordsContainer = document.getElementById("GBL-TB-SearchWordsContainer");
 		var highlighter = document.getElementById("GBL-TB-Highlighter");
 		var overflowMenu = document.getElementById("GBL-Overflow-Menu");
 		var stringBundle = document.getElementById("GBL-String-Bundle");
 	
-		var searchTerms = this.SplitTerms(term);
+		var searchTerms = this.SplitTerms(inString);
 		var tempButton;
 		var tempMenuItem;
 
@@ -477,7 +421,6 @@ var objGooglebarLite = {
 			tempButton.setAttribute("label",  thisTerm);
 			tempButton.setAttribute("collapsed", "false");
 			tempButton.setAttribute("tooltiptext", stringBundle.getFormattedString("GBL_FindNextOccurrence", [thisTerm]));
-//  		tempButton.setAttribute("searchTerm", thisTerm);
 			tempButton.setAttribute("oncommand", "objGooglebarLite.FindInPage(this.getAttribute('label'), event); event.stopPropagation();");
 			tempButton.className = "GBL-TB-SearchWordButton";
 	
@@ -487,7 +430,6 @@ var objGooglebarLite = {
 			tempMenuItem.setAttribute("label",  thisTerm);
 			tempMenuItem.setAttribute("collapsed", "true");
 			tempMenuItem.setAttribute("tooltiptext", stringBundle.getFormattedString("GBL_FindNextOccurrence", [thisTerm]));
-//  		tempMenuItem.setAttribute("searchTerm", thisTerm);
 			tempMenuItem.setAttribute("oncommand", "objGooglebarLite.FindInPage(this.getAttribute('label'), event); event.stopPropagation();");
 	
 			if(highlighter.checked == true)
@@ -557,17 +499,6 @@ var objGooglebarLite = {
 		// If the button container is too large, resize it appropriately
 		if(actualWidth < reportedWidth)
 			c.setAttribute("width", actualWidth);
-	},
-
-	CheckHighlighting: function()
-	{
-		var hbutton = document.getElementById("GBL-TB-Highlighter");
-		
-		var searchWordsContainer = document.getElementById("GBL-TB-SearchWordsContainer");
-		if(searchWordsContainer.childNodes.length > 0)
-			hbutton.setAttribute("disabled", false);
-		else
-			hbutton.setAttribute("disabled", true);
 	},
 
 	ClearHistory: function(flag)
@@ -716,6 +647,7 @@ var objGooglebarLite = {
 
 	ExtractQuery: function(url)
 	{
+		// TODO: Make the AJAX style query higher priority than the regular query
 		if (/^[^?]+?\?(.*)/.test(url))
 			return RegExp.$1;
 		else if(/^[^#]+?#([^#]+)/.test(url)) // Test for an AJAX-style query if we didn't see the normal one
@@ -1083,7 +1015,8 @@ var objGooglebarLite = {
 
 	PasteAndSearch: function()
 	{
-		this.Clipboard.getData(this.Transferable, this.Clipboard.kGlobalClipboard);
+		var clipboard = Components.classes["@mozilla.org/widget/clipboard;1"].createInstance(Components.interfaces.nsIClipboard);
+		clipboard.getData(this.Transferable, clipboard.kGlobalClipboard);
 		
 		var str = new Object();
 		var strLength = new Object();
@@ -1224,7 +1157,6 @@ var objGooglebarLite = {
 		var body = doc.body;
 		if(!body) return;
 	
-		var count = body.childNodes.length;
 		var terms = this.LastHighlightedTerms; // Restore the previously backed up highlighted terms
 		var termsArray = this.SplitTerms(terms);
 	
@@ -1234,21 +1166,22 @@ var objGooglebarLite = {
 			term = term.replace(/"/g, ''); // Remove any double quotes that may appear in the search term
 	
 			var searchRange = doc.createRange();
-			searchRange.setStart(body, 0);
-			searchRange.setEnd(body, count);
-	
-			var startPt = doc.createRange();
-			startPt.setStart(body, 0);
-			startPt.setEnd(body, 0);
-	
-			var endPt = doc.createRange();
-			endPt.setStart(body, count);
-			endPt.setEnd(body, count);
-	
-			var retRange = null;
-			while((retRange = this.Finder.Find(term, searchRange, startPt, endPt)))
+			searchRange.selectNodeContents(body);
+			
+			var startPt = searchRange.cloneRange();
+			startPt.collapse(true);
+			
+			var endPt = searchRange.cloneRange();
+			endPt.collapse(false);
+			
+			// Create the finder instance on the fly
+			var finder = Components.classes['@mozilla.org/embedcomp/rangefind;1']
+				.createInstance(Components.interfaces.nsIFind);
+			
+			var result = null;
+			while((result = finder.Find(term, searchRange, startPt, endPt)))
 			{
-				var startContainer = retRange.startContainer;
+				var startContainer = result.startContainer;
 				var elem = null;
 				try { elem = startContainer.parentNode; } catch (e) { }
 				if(elem)
@@ -1269,7 +1202,7 @@ var objGooglebarLite = {
 							docfrag.appendChild(child);
 						}
 	
-						startPt = doc.createRange();
+						startPt = doc.createRange(); // TODO: Needed?
 						startPt.setStartAfter(elem);
 	
 						parent.removeChild(elem);
@@ -1294,7 +1227,7 @@ var objGooglebarLite = {
 										docfrag.appendChild(child);
 									}
 	
-									startPt = doc.createRange();
+									startPt = doc.createRange(); // TODO: Needed?
 									startPt.setStartAfter(elem);
 	
 									parent.removeChild(elem);
@@ -1303,17 +1236,17 @@ var objGooglebarLite = {
 								}
 							}
 						} catch(e) {}
-						startPt = doc.createRange();
-						startPt.setStart(retRange.endContainer, retRange.endOffset);
+						startPt = doc.createRange(); // TODO: Needed?
+						startPt.setStart(result.endContainer, result.endOffset);
 					}
 				}
 				else
 				{
-					startPt = doc.createRange();
-					startPt.setStart(retRange.endContainer, retRange.endOffset);
+					startPt = doc.createRange(); // TODO: Needed?
+					startPt.setStart(result.endContainer, result.endOffset);
 				}
 	
-				startPt.collapse(true);
+				startPt.collapse(true); // TODO: Should this be false?
 			}
 		}
 	},
@@ -1657,16 +1590,21 @@ var objGooglebarLite = {
 
 	TermsHaveUpdated: function()
 	{
-		// TODO: Add the search menu item
-		// TODO: Make sure this works
 		// TODO: Add a grayed out icon for the dictionary search, and the appropriate style rules
 		if(this.TrimString(this.GetSearchTerms()) == "")
+		{
 			document.getElementById("GBL-TB-Dictionary").setAttribute("disabled", "true");
+			document.getElementById("GBL-TB-Combined-Dictionary").setAttribute("disabled", "true");
+			document.getElementById("GBL-TB-Highlighter").setAttribute("disabled", "true");
+		}
 		else
+		{
 			document.getElementById("GBL-TB-Dictionary").setAttribute("disabled", "false");
+			document.getElementById("GBL-TB-Combined-Dictionary").setAttribute("disabled", "false");
+			document.getElementById("GBL-TB-Highlighter").setAttribute("disabled", "false");
+		}
 
 		this.UpdateSearchWordButtons();
-		this.CheckHighlighting();
 	},
 	
 	ToggleHighlighting: function()
@@ -1991,18 +1929,29 @@ var objGooglebarLite = {
 	UpdateSearchWordButtons: function()
 	{
 		// Step 1: Clear existing search word buttons
-		var i=0;
+		var i=0; // TODO: If the following changes work, remove this
 	
+		// TODO: Make sure the following change works
 		var searchWordsContainer = document.getElementById("GBL-TB-SearchWordsContainer");
-		for(i=searchWordsContainer.childNodes.length; i > 0; i--)
-			searchWordsContainer.removeChild(searchWordsContainer.childNodes[0]);
+		while(searchWordsContainer.hasChildNodes())
+		{
+			searchWordsContainers.removeChild(searchWordsContainer.lastChild);
+		}
+		
+//  	for(i=searchWordsContainer.childNodes.length; i > 0; i--)
+//  		searchWordsContainer.removeChild(searchWordsContainer.childNodes[0]);
 	
+		// TODO: Make sure the following change works
 		var overflowMenu = document.getElementById("GBL-Overflow-Menu");
-		for(i=overflowMenu.childNodes.length; i > 0; i--)
-			overflowMenu.removeChild(overflowMenu.childNodes[0]);
+		while(overflowMenu.hasChildNodes())
+		{
+			overflowMenu.removeChild(overflowMenu.lastChild);
+		}
+		
+//  	for(i=overflowMenu.childNodes.length; i > 0; i--)
+//  		overflowMenu.removeChild(overflowMenu.childNodes[0]);
 
 		// Step 2: Add the new search word buttons
-		var terms = this.GetSearchTerms();
 		this.AddSearchWordButtons(this.GetSearchTerms());
 	},
 
@@ -2056,8 +2005,8 @@ var objGooglebarLite = {
 			currentPath = "";
 		}
 	
-		var host = addressArray[2];
-		var hostArray = host.split(".");
+//  	var host = addressArray[2]; // TODO: Make sure getting rid of this was ok
+		var hostArray = addressArray[2].split(".");
 	
 		if(hostArray.length >= 3 && (addressArray[0] == "http:" || addressArray[0] == "https:") && hostArray[0] != "www")
 		{
