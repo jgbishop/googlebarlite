@@ -352,41 +352,86 @@ var objGooglebarLite = {
 			var term = termsArray[i];
 			term = term.replace(/"/g, ''); // Remove any double quotes that may appear in the search term
 			
+			this.Log("Highlighting Term: " + term);
+			this.Log(" - ChildNodes Count: " + body.childNodes.length);
+			
 			var span = doc.createElement("span");
 			span.setAttribute("style", this.HighlightColors[i%6] + " color: #000; display: inline !important; font-size: inherit !important;");
 			span.setAttribute("class", "GBL-Highlighted");
 	
-			var searchRange = doc.createRange();
-			searchRange.setStart(body, 0);
-			searchRange.setEnd(body, count);
+			var searchRange = doc.createRange(); // Create the search range
+			searchRange.selectNodeContents(body); // Set our search range to everything in the body element
+//  		searchRange.setStart(body, 0);
+//  		searchRange.setEnd(body, count);
 	
-			var start = doc.createRange();
-			start.setStart(body, 0);
-			start.setEnd(body, 0);
-	
-			var end = doc.createRange();
-			end.setStart(body, count);
-			end.setEnd(body, count);
+//  		var start = doc.createRange();
+//  		start.setStart(body, 0);
+//  		start.setEnd(body, 0);
+
+//  		var end = doc.createRange();
+//  		end.setStart(body, count);
+//  		end.setEnd(body, count);
+			
+			var start = searchRange.cloneRange(); // Set a start point
+			start.collapse(true); // Collapse to the beginning
+			
+			var end = searchRange.cloneRange(); // Set a start point
+			end.collapse(false); // Collapse to the end
+			
+			// TODO: Create the finder instance on the fly (do the same in RemoveHighlighting)
 	
 			var result = null;
+			var _debugCounter = 0; // TODO: Remove me
 			while( (result = this.Finder.Find(term, searchRange, start, end)) )
 			{
-				var surround = span.cloneNode(true);
+				var hilitenode = span.cloneNode(true);
 	
-				var startContainer = result.startContainer;
-				var startOffset = result.startOffset;
-				var endOffset = result.endOffset;
+//  			var startContainer = result.startContainer;
+//  			var startOffset = result.startOffset;
+//  			var endOffset = result.endOffset;
+//
+				_debugCounter++;
+				this.Log("HIT #" + _debugCounter);
+//  			this.Log(" - Start offset: " + startOffset);
+//  			this.Log(" - End offset:   " + endOffset);
+				
+				result.surroundContents(hilitenode);
+//  			start.setStart(startContainer, endOffset);
+//  			start.setStartAfter(startContainer);
+				start = result;
+				start.collapse(false); // Collapse this range to its end point
+				
+				// Workaround for bug https://bugzilla.mozilla.org/show_bug.cgi?id=488427
+				// (forcing a FlushPendingNotifications call)
+				body.offsetWidth;
+				
+//  			start.setStart(hilitenode, 0);
+				
+//  			var resultContents = result.extractContents(); // Grab the word out of the search result
+//  			var before = startContainer.splitText(startOffset); // Grab everything before our search result
+//  			var parent = before.parentNode; // Get the parent node
+
+//  			hilitenode.appendChild(resultContents); // Put the word into our hilite span
+//  			var nnode = parent.insertBefore(hilitenode, before);
+				
+//  			start.setStart(nnode, nnode.childNodes.length);
+//  			start.setStart(startContainer, endOffset);
 	
-				var docfrag = result.extractContents();
-				var before = startContainer.splitText(startOffset);
-				var parent = before.parentNode;
-	
-				surround.appendChild(docfrag);
-				parent.insertBefore(surround, before);
-	
-				start = surround.ownerDocument.createRange();
-				start.setStart(surround, surround.childNodes.length);
-				start.setEnd(surround, surround.childNodes.length);
+//  			this.Log(" - hilitenode.childNodes.length: " + hilitenode.childNodes.length);
+//  			start = hilitenode.ownerDocument.createRange();
+//  			start.setStart(hilitenode, hilitenode.childNodes.length);
+//  			start.setEnd(hilitenode, hilitenode.childNodes.length);
+				
+//  			this.Log(" - nnode.childNodes.length: " + nnode.childNodes.length);
+//  			start = nnode.ownerDocument.createRange();
+//  			start.setStart(nnode, nnode.childNodes.length);
+//  			start.setEnd(nnode, nnode.childNodes.length);
+				
+				if(_debugCounter == 5)
+				{
+					this.Log("########## ERROR: Hit our limit! ##########");
+					break;
+				}
 			}
 		}
 	},
@@ -1614,10 +1659,11 @@ var objGooglebarLite = {
 	{
 		// TODO: Add the search menu item
 		// TODO: Make sure this works
+		// TODO: Add a grayed out icon for the dictionary search, and the appropriate style rules
 		if(this.TrimString(this.GetSearchTerms()) == "")
-			document.getElementById("GBL-TB-Dictionary").setAttribute("disabled", true);
+			document.getElementById("GBL-TB-Dictionary").setAttribute("disabled", "true");
 		else
-			document.getElementById("GBL-TB-Dictionary").setAttribute("disabled", false);
+			document.getElementById("GBL-TB-Dictionary").setAttribute("disabled", "false");
 
 		this.UpdateSearchWordButtons();
 		this.CheckHighlighting();

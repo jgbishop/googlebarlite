@@ -3,8 +3,9 @@
 //***************
 [4.7.11]
 + Added google.com.eg to the list of available top-level domains
-+ Updated the menuitem label for the translate command
 + The Google dictionary search button and menuitem are now disabled when the search box is empty
++ Updated the menuitem label for the translate command
++ Bug Fix: Corrected a number of issues with the search term highlighting feature
 
 --
 
