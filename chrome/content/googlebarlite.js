@@ -844,6 +844,7 @@ var objGooglebarLite = {
 			objGooglebarLite.UpdateContextMenuVisibility();
 			objGooglebarLite.UpdateSearchBoxSettings();
 			objGooglebarLite.UpdateUpMenu();
+			objGooglebarLite.TermsHaveUpdated();
 
 			if(window.opener != null)
 			{
@@ -1202,7 +1203,6 @@ var objGooglebarLite = {
 							docfrag.appendChild(child);
 						}
 	
-						startPt = doc.createRange(); // TODO: Needed?
 						startPt.setStartAfter(elem);
 	
 						parent.removeChild(elem);
@@ -1227,7 +1227,6 @@ var objGooglebarLite = {
 										docfrag.appendChild(child);
 									}
 	
-									startPt = doc.createRange(); // TODO: Needed?
 									startPt.setStartAfter(elem);
 	
 									parent.removeChild(elem);
@@ -1236,17 +1235,16 @@ var objGooglebarLite = {
 								}
 							}
 						} catch(e) {}
-						startPt = doc.createRange(); // TODO: Needed?
+						
 						startPt.setStart(result.endContainer, result.endOffset);
 					}
 				}
 				else
 				{
-					startPt = doc.createRange(); // TODO: Needed?
 					startPt.setStart(result.endContainer, result.endOffset);
 				}
 	
-				startPt.collapse(true); // TODO: Should this be false?
+				startPt.collapse(true);
 			}
 		}
 	},
@@ -1590,8 +1588,7 @@ var objGooglebarLite = {
 
 	TermsHaveUpdated: function()
 	{
-		// TODO: Add a grayed out icon for the dictionary search, and the appropriate style rules
-		if(this.TrimString(this.GetSearchTerms()) == "")
+		if(this.TrimString(this.GetSearchTerms()) === "")
 		{
 			document.getElementById("GBL-TB-Dictionary").setAttribute("disabled", "true");
 			document.getElementById("GBL-TB-Combined-Dictionary").setAttribute("disabled", "true");
@@ -1929,28 +1926,18 @@ var objGooglebarLite = {
 	UpdateSearchWordButtons: function()
 	{
 		// Step 1: Clear existing search word buttons
-		var i=0; // TODO: If the following changes work, remove this
-	
-		// TODO: Make sure the following change works
 		var searchWordsContainer = document.getElementById("GBL-TB-SearchWordsContainer");
 		while(searchWordsContainer.hasChildNodes())
 		{
-			searchWordsContainers.removeChild(searchWordsContainer.lastChild);
+			searchWordsContainer.removeChild(searchWordsContainer.lastChild);
 		}
 		
-//  	for(i=searchWordsContainer.childNodes.length; i > 0; i--)
-//  		searchWordsContainer.removeChild(searchWordsContainer.childNodes[0]);
-	
-		// TODO: Make sure the following change works
 		var overflowMenu = document.getElementById("GBL-Overflow-Menu");
 		while(overflowMenu.hasChildNodes())
 		{
 			overflowMenu.removeChild(overflowMenu.lastChild);
 		}
 		
-//  	for(i=overflowMenu.childNodes.length; i > 0; i--)
-//  		overflowMenu.removeChild(overflowMenu.childNodes[0]);
-
 		// Step 2: Add the new search word buttons
 		this.AddSearchWordButtons(this.GetSearchTerms());
 	},
@@ -2005,7 +1992,6 @@ var objGooglebarLite = {
 			currentPath = "";
 		}
 	
-//  	var host = addressArray[2]; // TODO: Make sure getting rid of this was ok
 		var hostArray = addressArray[2].split(".");
 	
 		if(hostArray.length >= 3 && (addressArray[0] == "http:" || addressArray[0] == "https:") && hostArray[0] != "www")

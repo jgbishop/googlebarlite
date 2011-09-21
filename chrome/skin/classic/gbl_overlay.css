@@ -84,39 +84,42 @@ toolbar[mode="text"] .GBL-Toolbar-Button-NoLabel .toolbarbutton-text { display: 
 #GBL-TB-Combined-Maps,
 #GBL-TB-Maps							{ -moz-image-region: rect(0px 144px 16px 128px); }
 
+#GBL-TB-Combined[searchType="shopping"],
+#GBL-TB-Combined-Shopping,
+#GBL-TB-Shopping							{ -moz-image-region: rect(0px 160px 16px 144px); }
+
 #GBL-TB-Combined[searchType="groups"],
 #GBL-TB-Combined-Groups,
-#GBL-TB-Groups							{ -moz-image-region: rect(0px 160px 16px 144px); }
+#GBL-TB-Groups							{ -moz-image-region: rect(0px 176px 16px 160px); }
 
 #GBL-TB-Combined[searchType="blog"],
 #GBL-TB-Combined-Blog,
-#GBL-TB-Blog							{ -moz-image-region: rect(0px 176px 16px 160px); }
+#GBL-TB-Blog							{ -moz-image-region: rect(16px 16px 32px 0px); }
 
 #GBL-TB-Combined[searchType="book"],
 #GBL-TB-Combined-Book,
-#GBL-TB-Book							{ -moz-image-region: rect(0px 192px 16px 176px); }
-
-#GBL-TB-Combined[searchType="scholar"],
-#GBL-TB-Combined-Scholar,
-#GBL-TB-Scholar							{ -moz-image-region: rect(0px 208px 16px 192px); }
-
-#GBL-TB-Combined[searchType="dictionary"],
-#GBL-TB-Combined-Dictionary,
-#GBL-TB-Dictionary						{ -moz-image-region: rect(0px 224px 16px 208px); }
-
-#GBL-TB-Combined[searchType="shopping"],
-#GBL-TB-Combined-Shopping,
-#GBL-TB-Shopping							{ -moz-image-region: rect(0px 320px 16px 304px); }
+#GBL-TB-Book							{ -moz-image-region: rect(16px 32px 32px 16px); }
 
 #GBL-TB-Combined[searchType="finance"],
 #GBL-TB-Combined-Finance,
-#GBL-TB-Finance							{ -moz-image-region: rect(0px 336px 16px 320px); }
+#GBL-TB-Finance							{ -moz-image-region: rect(16px 48px 32px 32px); }
 
-#GBL-TB-UpButton						{ -moz-image-region: rect(0px 240px 16px 224px); }
-#GBL-TB-UpButton[disabled="true"]		{ -moz-image-region: rect(0px 256px 16px 240px); }
-#GBL-TB-Highlighter						{ -moz-image-region: rect(0px 272px 16px 256px); }
-#GBL-TB-Highlighter[disabled="true"]	{ -moz-image-region: rect(0px 288px 16px 272px); }
-#GBL-Overflow-Button 					{ -moz-image-region: rect(0px 304px 16px 288px); }
+#GBL-TB-Combined[searchType="scholar"],
+#GBL-TB-Combined-Scholar,
+#GBL-TB-Scholar							{ -moz-image-region: rect(16px 64px 32px 48px); }
+
+#GBL-TB-Combined[searchType="dictionary"],
+#GBL-TB-Combined-Dictionary,
+#GBL-TB-Dictionary						{ -moz-image-region: rect(16px 80px 32px 64px); }
+
+#GBL-TB-Combined-Dictionary[disabled="true"],
+#GBL-TB-Dictionary[disabled="true"]		{ -moz-image-region: rect(16px 96px 32px 80px); }
+
+#GBL-TB-UpButton						{ -moz-image-region: rect(16px 112px 32px 96px); }
+#GBL-TB-UpButton[disabled="true"]		{ -moz-image-region: rect(16px 128px 32px 112px); }
+#GBL-TB-Highlighter						{ -moz-image-region: rect(16px 144px 32px 128px); }
+#GBL-TB-Highlighter[disabled="true"]	{ -moz-image-region: rect(16px 160px 32px 144px); }
+#GBL-Overflow-Button 					{ -moz-image-region: rect(16px 176px 32px 160px); }
 
 #GBL-TB-Combined > .toolbarbutton-menubutton-button,
 #GBL-TB-UpButton > .toolbarbutton-menubutton-button {
