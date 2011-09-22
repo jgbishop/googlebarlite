@@ -4,7 +4,8 @@
 [4.7.11]
 + Added google.com.eg to the list of available top-level domains
 + The Google dictionary search button and menu item are now disabled when the search box is empty
-+ Updated the menu item label for the translate command
++ AJAX-style queries (on Google search result pages) are now given higher priority than normal GET-style queries
++ Updated the menu item label for the translate context menu command
 + Converted a few component instances into a lazy-load approach, which should improve startup speeds
 + Removed a few unused variables and one unused interface instance
 + Bug Fix: Corrected a number of issues with the search term highlighting feature

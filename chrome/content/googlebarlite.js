@@ -647,10 +647,10 @@ var objGooglebarLite = {
 
 	ExtractQuery: function(url)
 	{
-		// TODO: Make the AJAX style query higher priority than the regular query
-		if (/^[^?]+?\?(.*)/.test(url))
+		// Test for the AJAX-style query first (Google apparently gives it higher priority)
+		if(/^[^#]+?#([^#]+)/.test(url))
 			return RegExp.$1;
-		else if(/^[^#]+?#([^#]+)/.test(url)) // Test for an AJAX-style query if we didn't see the normal one
+		else if (/^[^?]+?\?(.*)/.test(url)) // Test for the "normal-style" query
 			return RegExp.$1;
 		else
 			return "";
