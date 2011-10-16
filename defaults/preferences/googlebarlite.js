@@ -4,6 +4,7 @@ pref("googlebar_lite.click_selects_all", true);
 pref("googlebar_lite.search_in_tab", false);
 pref("googlebar_lite.remember_combined", false);
 pref("googlebar_lite.search_on_drag_drop", false);
+pref("googlebar_lite.disable_auto_correct", false);
 pref("googlebar_lite.use_secure_search", false);
 pref("googlebar_lite.maintain_history", true);
 pref("googlebar_lite.warn_on_form_history", true);

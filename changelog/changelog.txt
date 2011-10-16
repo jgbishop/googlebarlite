@@ -1,6 +1,12 @@
 //***************
 //Version History
 //***************
+[4.7.12]
++ Added a new option allowing users to disable Google search auto-correct
++ Reorganized a few of the options dialogs
+
+--
+
 [4.7.11]
 + Added google.com.eg to the list of available top-level domains
 + The Google dictionary search button and menu item are now disabled when the search box is empty

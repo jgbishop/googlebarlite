@@ -33,6 +33,7 @@
 			<checkbox id="GBL-Opt-SearchInTab" label="&gblite.options.searchintab;" />
 			<checkbox id="GBL-Opt-RememberCombined" label="&gblite.options.remembercombined;" />
 			<checkbox id="GBL-Opt-SearchOnDragDrop" label="&gblite.options.searchondragdrop;" />
+			<checkbox id="GBL-Opt-DisableAutoCorrect" label="&gblite.options.disableautocorrect;" />
 			<checkbox id="GBL-Opt-UseSecureSearch" label="&gblite.options.usesecuresearch;" />
 			
 			<separator class="thin" />
@@ -138,7 +139,50 @@
 				</menulist>
 			</hbox>
 		</groupbox>
-		
+	</tabpanel>
+	
+	<tabpanel id="GBL-OptTab-Buttons" orient="vertical">
+		<groupbox orient="vertical">
+			<caption label="&gblite.options.label.searchbuttons;" />
+			<grid flex="1">
+				<columns>
+					<column flex="1" />
+					<column flex="1" />
+				</columns>
+				
+				<rows>
+					<row>
+						<checkbox id="GBL-Opt-TB-Combined" label="&gblite.options.showcombined;" />
+						<checkbox id="GBL-Opt-TB-Video" label="&gblite.searchtype.video;" />
+						<checkbox id="GBL-Opt-TB-Blog" label="&gblite.searchtype.blog;" />
+					</row>
+					
+					<row>
+						<checkbox id="GBL-Opt-TB-WebSearch" label="&gblite.searchtype.web;" />
+						<checkbox id="GBL-Opt-TB-News" label="&gblite.searchtype.news;" />
+						<checkbox id="GBL-Opt-TB-Book" label="&gblite.searchtype.book;" />
+					</row>
+					
+					<row>
+						<checkbox id="GBL-Opt-TB-Lucky" label="&gblite.searchtype.lucky;" />
+						<checkbox id="GBL-Opt-TB-Maps" label="&gblite.searchtype.maps;" />
+						<checkbox id="GBL-Opt-TB-Finance" label="&gblite.searchtype.finance;" />
+					</row>
+					
+					<row>
+						<checkbox id="GBL-Opt-TB-Site" label="&gblite.searchtype.site;" />
+						<checkbox id="GBL-Opt-TB-Shopping" label="&gblite.searchtype.shopping;" />
+						<checkbox id="GBL-Opt-TB-Scholar" label="&gblite.searchtype.scholar;" />
+					</row>
+					
+					<row>
+						<checkbox id="GBL-Opt-TB-Images" label="&gblite.searchtype.image;" />
+						<checkbox id="GBL-Opt-TB-Groups" label="&gblite.searchtype.group;" />
+						<checkbox id="GBL-Opt-TB-Dictionary" label="&gblite.searchtype.dictionary;" />
+					</row>
+				</rows>
+			</grid>
+		</groupbox>
 		<groupbox orient="vertical">
 			<caption label="&gblite.options.label.commonbuttons;" />
 			
@@ -160,57 +204,6 @@
 				</rows>
 			</grid>
 		</groupbox>
-	</tabpanel>
-	
-	<tabpanel id="GBL-OptTab-Buttons" orient="vertical">
-		<grid flex="1">
-			<columns>
-				<column flex="1" />
-				<column flex="1" />
-			</columns>
-			
-			<rows>
-				<row>
-					<checkbox id="GBL-Opt-TB-Combined" label="&gblite.options.showcombined;" />
-					<spacer flex="1" />
-				</row>
-				
-				<row>
-					<checkbox id="GBL-Opt-TB-WebSearch" label="&gblite.searchtype.web;" />
-					<checkbox id="GBL-Opt-TB-Shopping" label="&gblite.searchtype.shopping;" />
-				</row>
-				
-				<row>
-					<checkbox id="GBL-Opt-TB-Lucky" label="&gblite.searchtype.lucky;" />
-					<checkbox id="GBL-Opt-TB-Groups" label="&gblite.searchtype.group;" />
-				</row>
-				
-				<row>
-					<checkbox id="GBL-Opt-TB-Site" label="&gblite.searchtype.site;" />
-					<checkbox id="GBL-Opt-TB-Blog" label="&gblite.searchtype.blog;" />
-				</row>
-				
-				<row>
-					<checkbox id="GBL-Opt-TB-Images" label="&gblite.searchtype.image;" />
-					<checkbox id="GBL-Opt-TB-Book" label="&gblite.searchtype.book;" />
-				</row>
-				
-				<row>
-					<checkbox id="GBL-Opt-TB-Video" label="&gblite.searchtype.video;" />
-					<checkbox id="GBL-Opt-TB-Finance" label="&gblite.searchtype.finance;" />
-				</row>
-				
-				<row>
-					<checkbox id="GBL-Opt-TB-News" label="&gblite.searchtype.news;" />
-					<checkbox id="GBL-Opt-TB-Scholar" label="&gblite.searchtype.scholar;" />
-				</row>
-				
-				<row>
-					<checkbox id="GBL-Opt-TB-Maps" label="&gblite.searchtype.maps;" />
-					<checkbox id="GBL-Opt-TB-Dictionary" label="&gblite.searchtype.dictionary;" />
-				</row>
-			</rows>
-		</grid>
 	</tabpanel>
 	
 	<tabpanel id="GBL-OptTab-SearchHistory" orient="vertical">

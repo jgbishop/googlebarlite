@@ -71,6 +71,7 @@ var objGooglebarLite = {
 	PrefName_SearchInTab		: "search_in_tab", // Open results in a new tab
 	PrefName_RememberCombined	: "remember_combined",
 	PrefName_SearchOnDragDrop	: "search_on_drag_drop",
+	PrefName_DisableAutoCorrect : "disable_auto_correct",
 	PrefName_UseSecureSearch	: "use_secure_search",
 	PrefName_WarnOnFormHistory	: "warn_on_form_history",
 	PrefName_MaintainHistory	: "maintain_history",
@@ -129,6 +130,7 @@ var objGooglebarLite = {
 	SearchInTab : false,
 	RememberCombined : false,
 	SearchOnDragDrop : false,
+	DisableAutoCorrect : false,
 	UseSecureSearch: false,
 	WarnOnFormHistory : false,
 	MaintainHistory : false,
@@ -461,10 +463,13 @@ var objGooglebarLite = {
 			u = "https://encrypted.google.com/";
 
 			if (searchTerms.length > 0)
+			{
 				u += "search?q=" + searchTerms;
-
-			if(secureType != null) {
-				u += "&tbs=" + secureType;
+				if(this.DisableAutoCorrect == true)
+					u += "&nfpr=1";
+				
+				if(secureType != null)
+					u += "&tbs=" + secureType;
 			}
 		}
 		else
@@ -475,9 +480,13 @@ var objGooglebarLite = {
 				u = "http://" + prefix + ".google.com/" + restrict;
 
 			if(searchTerms.length > 0)
+			{
 				u += "?q=" + searchTerms + "&ie=UTF-8";
+				if(this.DisableAutoCorrect == true)
+					u += "&nfpr=1";
+			}
 		}
-	
+			
 		return u;
 	},
 	
@@ -833,7 +842,7 @@ var objGooglebarLite = {
 			objGooglebarLite.OverflowButtonWidth = chevron.boxObject.width;
 			chevron.collapsed = true; // Initalize the overflow button to a hidden state
 	
-			setTimeout(objGooglebarLite.DelayedStartup, 50); // Needs to happen after Firefox's delayedStartup()
+			setTimeout(function(){objGooglebarLite.DelayedStartup();}, 50); // Needs to happen after Firefox's delayedStartup()
 	
 			// Load the preferences that are stored
 			objGooglebarLite.LoadPrefs();
@@ -852,7 +861,7 @@ var objGooglebarLite = {
 				objGooglebarLite.SetSearchTerms(osb.value);
 			}
 	
-			setTimeout(objGooglebarLite.ValidateSearchHistorySetting, 50);
+			setTimeout(function(){objGooglebarLite.ValidateSearchHistorySetting();}, 50);
 		}
 	},
 
@@ -866,6 +875,7 @@ var objGooglebarLite = {
 		this.SearchInTab		= b.getBoolPref(this.PrefName_SearchInTab);
 		this.RememberCombined	= b.getBoolPref(this.PrefName_RememberCombined);
 		this.SearchOnDragDrop	= b.getBoolPref(this.PrefName_SearchOnDragDrop);
+		this.DisableAutoCorrect = b.getBoolPref(this.PrefName_DisableAutoCorrect);
 		this.UseSecureSearch	= b.getBoolPref(this.PrefName_UseSecureSearch);
 		this.WarnOnFormHistory	= b.getBoolPref(this.PrefName_WarnOnFormHistory);
 		this.MaintainHistory	= b.getBoolPref(this.PrefName_MaintainHistory);
@@ -1645,7 +1655,7 @@ var objGooglebarLite = {
 			{
 				objGooglebarLite.RunOnce = true;
 				window.getBrowser().addProgressListener(objGooglebarLite.Listener);
-				setTimeout(objGooglebarLite.DelayedStartup, 1); // Needs to happen after Firefox's delayedStartup()
+				setTimeout(function(){objGooglebarLite.DelayedStartup();}, 1); // Needs to happen after Firefox's delayedStartup()
 			}
 	
 			// Do some generic initialization
@@ -1659,7 +1669,7 @@ var objGooglebarLite = {
 		else if(mainItem && !somethingChanged)
 			objGooglebarLite.SetSearchTerms(""); // Prevent zombie search word buttons from appearing
 
-		this.objGooglebarLite.OriginalCustomizeDone(somethingChanged);
+		objGooglebarLite.OriginalCustomizeDone(somethingChanged);
 	},
 	
 	TrimString: function(string)
