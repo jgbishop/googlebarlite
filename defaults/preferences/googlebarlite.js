@@ -1,60 +1,64 @@
 // General Options
-pref("googlebar_lite.site_to_use", "chrome://googlebarlite/locale/googlebarlite.properties");
-pref("googlebar_lite.click_selects_all", true);
-pref("googlebar_lite.search_in_tab", false);
-pref("googlebar_lite.remember_combined", false);
-pref("googlebar_lite.search_on_drag_drop", false);
-pref("googlebar_lite.disable_auto_correct", false);
-pref("googlebar_lite.use_secure_search", false);
-pref("googlebar_lite.maintain_history", true);
-pref("googlebar_lite.warn_on_form_history", true);
-pref("googlebar_lite.enable_auto_complete", true);
-pref("googlebar_lite.use_inline_complete", false);
-pref("googlebar_lite.auto_search", false);
-pref("googlebar_lite.prompt_to_clear", true);
-pref("googlebar_lite.ignore_dictionary", false);
+pref("extensions.googlebarlite.site_to_use", "chrome://googlebarlite/locale/googlebarlite.properties");
+pref("extensions.googlebarlite.click_selects_all", true);
+pref("extensions.googlebarlite.search_in_tab", false);
+pref("extensions.googlebarlite.remember_combined", false);
+pref("extensions.googlebarlite.search_on_drag_drop", false);
+pref("extensions.googlebarlite.disable_auto_correct", false);
+pref("extensions.googlebarlite.use_secure_search", false);
 
 // Toolbar Buttons
-pref("googlebar_lite.buttons.showlabels", true);
-pref("googlebar_lite.buttons.up", true);
-pref("googlebar_lite.buttons.highlighter", true);
-pref("googlebar_lite.buttons.searchwords", true);
-pref("googlebar_lite.buttons.combined", true);
-pref("googlebar_lite.buttons.web", false);
-pref("googlebar_lite.buttons.lucky", false);
-pref("googlebar_lite.buttons.site", false);
-pref("googlebar_lite.buttons.images", false);
-pref("googlebar_lite.buttons.video", false);
-pref("googlebar_lite.buttons.news", false);
-pref("googlebar_lite.buttons.maps", false);
-pref("googlebar_lite.buttons.shopping", false);
-pref("googlebar_lite.buttons.groups", false);
-pref("googlebar_lite.buttons.blog", false);
-pref("googlebar_lite.buttons.book", false);
-pref("googlebar_lite.buttons.finance", false);
-pref("googlebar_lite.buttons.scholar", false);
-pref("googlebar_lite.buttons.dictionary", false);
+pref("extensions.googlebarlite.buttons.showlabels", true);
+pref("extensions.googlebarlite.buttons.up", true);
+pref("extensions.googlebarlite.buttons.highlighter", true);
+pref("extensions.googlebarlite.buttons.searchwords", true);
+pref("extensions.googlebarlite.buttons.combined", true);
+pref("extensions.googlebarlite.buttons.web", false);
+pref("extensions.googlebarlite.buttons.lucky", false);
+pref("extensions.googlebarlite.buttons.site", false);
+pref("extensions.googlebarlite.buttons.images", false);
+pref("extensions.googlebarlite.buttons.video", false);
+pref("extensions.googlebarlite.buttons.news", false);
+pref("extensions.googlebarlite.buttons.maps", false);
+pref("extensions.googlebarlite.buttons.shopping", false);
+pref("extensions.googlebarlite.buttons.groups", false);
+pref("extensions.googlebarlite.buttons.blog", false);
+pref("extensions.googlebarlite.buttons.book", false);
+pref("extensions.googlebarlite.buttons.finance", false);
+pref("extensions.googlebarlite.buttons.scholar", false);
+pref("extensions.googlebarlite.buttons.dictionary", false);
+
+// Search history
+pref("extensions.googlebarlite.warn_on_form_history", true);
+pref("extensions.googlebarlite.maintain_history", true);
+pref("extensions.googlebarlite.enable_auto_complete", true);
+pref("extensions.googlebarlite.use_inline_complete", false);
+pref("extensions.googlebarlite.auto_search", false);
+pref("extensions.googlebarlite.prompt_to_clear", true);
+pref("extensions.googlebarlite.ignore_dictionary", false);
 
 // Keyboard shortcuts
-pref("googlebar_lite.focus_key", "S");
-pref("googlebar_lite.shift_search", "site");
-pref("googlebar_lite.ctrl_search", "images");
-pref("googlebar_lite.shift_ctrl_search", "groups");
+pref("extensions.googlebarlite.focus_key", "S");
+pref("extensions.googlebarlite.shift_search", "site");
+pref("extensions.googlebarlite.ctrl_search", "images");
+pref("extensions.googlebarlite.shift_ctrl_search", "groups");
 
 // Context Menu
-pref("googlebar_lite.context.showcontext", true);
-pref("googlebar_lite.context.web", false);
-pref("googlebar_lite.context.site", false);
-pref("googlebar_lite.context.images", false);
-pref("googlebar_lite.context.video", false);
-pref("googlebar_lite.context.groups", false);
-pref("googlebar_lite.context.maps", false);
-pref("googlebar_lite.context.dictionary", true);
-pref("googlebar_lite.context.backward", true);
-pref("googlebar_lite.context.cached", true);
-pref("googlebar_lite.context.cachedlink", true);
-pref("googlebar_lite.context.similar", true);
-pref("googlebar_lite.context.translate", true);
+pref("extensions.googlebarlite.context.showcontext", true);
+pref("extensions.googlebarlite.context.web", true);
+pref("extensions.googlebarlite.context.site", false);
+pref("extensions.googlebarlite.context.images", false);
+pref("extensions.googlebarlite.context.video", false);
+pref("extensions.googlebarlite.context.groups", false);
+pref("extensions.googlebarlite.context.maps", false);
+pref("extensions.googlebarlite.context.dictionary", true);
+pref("extensions.googlebarlite.context.backward", true);
+pref("extensions.googlebarlite.context.cached", true);
+pref("extensions.googlebarlite.context.cachedlink", true);
+pref("extensions.googlebarlite.context.similar", true);
+pref("extensions.googlebarlite.context.translate", true);
 
+// Miscellaneous
+pref("extensions.googlebarlite.prefs_version", 2);
 pref("extensions.{79c50f9a-2ffe-4ee0-8a37-fae4f5dacd4f}.description", "chrome://googlebarlite/locale/googlebarlite.properties");
 

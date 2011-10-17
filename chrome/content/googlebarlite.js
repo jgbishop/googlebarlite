@@ -61,132 +61,197 @@ GBL_PrivateBrowsingListener.prototype = {
 
 var objGooglebarLite = {
 	FormHistory : Components.classes["@mozilla.org/satchel/form-history;1"].getService(Components.interfaces.nsIFormHistory2 || Components.interfaces.nsIFormHistory),
-	PrefBranch : Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("googlebar_lite."),
+	PrefBranch : Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("extensions.googlebarlite."),
 	Transferable : Components.classes["@mozilla.org/widget/transferable;1"].createInstance(Components.interfaces.nsITransferable),
+	
+	Prefs : {
+		// General
+		SiteToUse : { name: "site_to_use", value: "", type: "complex"},
+		ClickSelectsAll : { name: "click_selects_all", value: false},
+		SearchInTab : { name: "search_in_tab", value: false}, // Open results in a new tab
+		RememberCombined : { name: "remember_combined", value: false},
+		SearchOnDragDrop : { name: "search_on_drag_drop", value: false},
+		DisableAutoCorrect : { name: "disable_auto_correct", value: false},
+		UseSecureSearch : { name: "use_secure_search", value: false},
+		
+		// Search history
+		WarnOnFormHistory : { name: "warn_on_form_history", value: false},
+		MaintainHistory : { name: "maintain_history", value: false},
+		EnableAutoComplete : { name: "enable_auto_complete", value: false},
+		UseInlineComplete : { name: "use_inline_complete", value: false},
+		AutoSearch : { name: "auto_search", value: false}, // Auto search when selecting from history
+		PromptToClear : { name: "prompt_to_clear", value: false},
+		IgnoreDictionary : { name: "ignore_dictionary", value: false},
+		
+		// Toolbar buttons
+		TB_ShowLabels : { name: "buttons.showlabels", value: false},
+		TB_Up : { name: "buttons.up", value: false},
+		TB_Highlighter : { name: "buttons.highlighter", value: false},
+		TB_SearchWords : { name: "buttons.searchwords", value: false},
+		TB_Combined : { name: "buttons.combined", value: false},
+		TB_Web : { name: "buttons.web", value: false},
+		TB_Lucky : { name: "buttons.lucky", value: false},
+		TB_Site : { name: "buttons.site", value: false},
+		TB_Images : { name: "buttons.images", value: false},
+		TB_Video : { name: "buttons.video", value: false},
+		TB_News : { name: "buttons.news", value: false},
+		TB_Maps : { name: "buttons.maps", value: false},
+		TB_Shopping : { name: "buttons.shopping", value: false},
+		TB_Groups : { name: "buttons.groups", value: false},
+		TB_Blog : { name: "buttons.blog", value: false},
+		TB_Book : { name: "buttons.book", value: false},
+		TB_Finance : { name: "buttons.finance", value: false},
+		TB_Scholar : { name: "buttons.scholar", value: false},
+		TB_Dictionary : { name: "buttons.dictionary", value: false},
+		
+		// Keyboard shortcuts
+		FocusKey : { name: "focus_key", value: "", type: "string"},
+		ShiftSearch : { name: "shift_search", value: "", type: "string"},
+		CtrlSearch : { name: "ctrl_search", value: "", type: "string"},
+		ShiftCtrlSearch : { name: "shift_ctrl_search", value: "", type: "string"},
+		
+		// Context menu
+		CM_ShowContext : { name: "context.showcontext", value: false},
+		CM_Web : { name: "context.web", value: false},
+		CM_Site : { name: "context.site", value: false},
+		CM_Images : { name: "context.images", value: false},
+		CM_Video : { name: "context.video", value: false},
+		CM_Groups : { name: "context.groups", value: false},
+		CM_Maps : { name: "context.maps", value: false},
+		CM_Dictionary : { name: "context.dictionary", value: false},
+		CM_Backward : { name: "context.backward", value: false},
+		CM_Cached : { name: "context.cached", value: false},
+		CM_CachedLink : { name: "context.cachedlink", value: false},
+		CM_Similar : { name: "context.similar", value: false},
+		CM_Translate : { name: "context.translate", value: false},
+	},
 	
 	// ==================== Preference Names ====================
 	// General preference names
-	PrefName_SiteToUse			: "site_to_use",
-	PrefName_ClickSelectsAll	: "click_selects_all",
-	PrefName_SearchInTab		: "search_in_tab", // Open results in a new tab
-	PrefName_RememberCombined	: "remember_combined",
-	PrefName_SearchOnDragDrop	: "search_on_drag_drop",
-	PrefName_DisableAutoCorrect : "disable_auto_correct",
-	PrefName_UseSecureSearch	: "use_secure_search",
-	PrefName_WarnOnFormHistory	: "warn_on_form_history",
-	PrefName_MaintainHistory	: "maintain_history",
-	PrefName_EnableAutoComplete : "enable_auto_complete",
-	PrefName_UseInlineComplete	: "use_inline_complete",
-	PrefName_AutoSearch			: "auto_search", // Auto search when selecting from history
-	PrefName_PromptToClear		: "prompt_to_clear",
-	PrefName_IgnoreDictionary	: "ignore_dictionary",
+//  PrefName_SiteToUse			: "site_to_use",
+//  PrefName_ClickSelectsAll	: "click_selects_all",
+//  PrefName_SearchInTab		: "search_in_tab", // Open results in a new tab
+//  PrefName_RememberCombined	: "remember_combined",
+//  PrefName_SearchOnDragDrop	: "search_on_drag_drop",
+//  PrefName_DisableAutoCorrect : "disable_auto_correct",
+//  PrefName_UseSecureSearch	: "use_secure_search",
+//  PrefName_WarnOnFormHistory	: "warn_on_form_history",
+//  PrefName_MaintainHistory	: "maintain_history",
+//  PrefName_EnableAutoComplete : "enable_auto_complete",
+//  PrefName_UseInlineComplete	: "use_inline_complete",
+//  PrefName_AutoSearch			: "auto_search", // Auto search when selecting from history
+//  PrefName_PromptToClear		: "prompt_to_clear",
+//  PrefName_IgnoreDictionary	: "ignore_dictionary",
 	
 	// Toolbar buttons preference names
-	PrefName_TB_ShowLabels	: "buttons.showlabels",
-	PrefName_TB_Up			: "buttons.up",
-	PrefName_TB_Highlighter : "buttons.highlighter",
-	PrefName_TB_SearchWords	: "buttons.searchwords",
-	PrefName_TB_Combined	: "buttons.combined",
-	PrefName_TB_Web			: "buttons.web",
-	PrefName_TB_Lucky		: "buttons.lucky",
-	PrefName_TB_Site		: "buttons.site",
-	PrefName_TB_Images		: "buttons.images",
-	PrefName_TB_Video		: "buttons.video",
-	PrefName_TB_News		: "buttons.news",
-	PrefName_TB_Maps		: "buttons.maps",
-	PrefName_TB_Shopping	: "buttons.shopping",
-	PrefName_TB_Groups		: "buttons.groups",
-	PrefName_TB_Blog		: "buttons.blog",
-	PrefName_TB_Book		: "buttons.book",
-	PrefName_TB_Finance		: "buttons.finance",
-	PrefName_TB_Scholar		: "buttons.scholar",
-	PrefName_TB_Dictionary	: "buttons.dictionary",
+//  PrefName_TB_ShowLabels	: "buttons.showlabels",
+//  PrefName_TB_Up			: "buttons.up",
+//  PrefName_TB_Highlighter : "buttons.highlighter",
+//  PrefName_TB_SearchWords	: "buttons.searchwords",
+//  PrefName_TB_Combined	: "buttons.combined",
+//  PrefName_TB_Web			: "buttons.web",
+//  PrefName_TB_Lucky		: "buttons.lucky",
+//  PrefName_TB_Site		: "buttons.site",
+//  PrefName_TB_Images		: "buttons.images",
+//  PrefName_TB_Video		: "buttons.video",
+//  PrefName_TB_News		: "buttons.news",
+//  PrefName_TB_Maps		: "buttons.maps",
+//  PrefName_TB_Shopping	: "buttons.shopping",
+//  PrefName_TB_Groups		: "buttons.groups",
+//  PrefName_TB_Blog		: "buttons.blog",
+//  PrefName_TB_Book		: "buttons.book",
+//  PrefName_TB_Finance		: "buttons.finance",
+//  PrefName_TB_Scholar		: "buttons.scholar",
+//  PrefName_TB_Dictionary	: "buttons.dictionary",
 	
 	// Keyboard shortcuts preference names
-	PrefName_FocusKey			: "focus_key",
-	PrefName_ShiftSearch		: "shift_search",
-	PrefName_CtrlSearch			: "ctrl_search",
-	PrefName_ShiftCtrlSearch	: "shift_ctrl_search",
+//  PrefName_FocusKey			: "focus_key",
+//  PrefName_ShiftSearch		: "shift_search",
+//  PrefName_CtrlSearch			: "ctrl_search",
+//  PrefName_ShiftCtrlSearch	: "shift_ctrl_search",
 	
 	// Context menu preference names
-	PrefName_CM_ShowContext	: "context.showcontext",
-	PrefName_CM_Web			: "context.web",
-	PrefName_CM_Site		: "context.site",
-	PrefName_CM_Images		: "context.images",
-	PrefName_CM_Video		: "context.video",
-	PrefName_CM_Groups		: "context.groups",
-	PrefName_CM_Maps		: "context.maps",
-	PrefName_CM_Dictionary	: "context.dictionary",
-	PrefName_CM_Backward	: "context.backward",
-	PrefName_CM_Cached		: "context.cached",
-	PrefName_CM_CachedLink	: "context.cachedlink",
-	PrefName_CM_Similar		: "context.similar",
-	PrefName_CM_Translate	: "context.translate",
+//  PrefName_CM_ShowContext	: "context.showcontext",
+//  PrefName_CM_Web			: "context.web",
+//  PrefName_CM_Site		: "context.site",
+//  PrefName_CM_Images		: "context.images",
+//  PrefName_CM_Video		: "context.video",
+//  PrefName_CM_Groups		: "context.groups",
+//  PrefName_CM_Maps		: "context.maps",
+//  PrefName_CM_Dictionary	: "context.dictionary",
+//  PrefName_CM_Backward	: "context.backward",
+//  PrefName_CM_Cached		: "context.cached",
+//  PrefName_CM_CachedLink	: "context.cachedlink",
+//  PrefName_CM_Similar		: "context.similar",
+//  PrefName_CM_Translate	: "context.translate",
 	
 	// ==================== Preference Values ====================
 	// General preferences
-	SiteToUse : "",
-	ClickSelectsAll : false,
-	SearchInTab : false,
-	RememberCombined : false,
-	SearchOnDragDrop : false,
-	DisableAutoCorrect : false,
-	UseSecureSearch: false,
-	WarnOnFormHistory : false,
-	MaintainHistory : false,
-	EnableAutoComplete : false,
-	UseInlineComplete : false,
-	AutoSearch : false,
-	PromptToClear : false,
-	IgnoreDictionary : false,
+//  SiteToUse : "",
+//  ClickSelectsAll : false,
+//  SearchInTab : false,
+//  RememberCombined : false,
+//  SearchOnDragDrop : false,
+//  DisableAutoCorrect : false,
+//  UseSecureSearch: false,
+//  WarnOnFormHistory : false,
+//  MaintainHistory : false,
+//  EnableAutoComplete : false,
+//  UseInlineComplete : false,
+//  AutoSearch : false,
+//  PromptToClear : false,
+//  IgnoreDictionary : false,
 	
 	// Toolbar buttons preferences
-	TB_ShowLabels : false,
-	TB_ShowUp : false,
-	TB_ShowHighlighter : false,
-	TB_ShowSearchWords : false,
-	TB_ShowCombined : false,
-	TB_ShowWeb : false,
-	TB_ShowLucky : false,
-	TB_ShowSite : false,
-	TB_ShowImages : false,
-	TB_ShowVideo : false,
-	TB_ShowNews : false,
-	TB_ShowMaps : false,
-	TB_ShowShopping : false,
-	TB_ShowGroups : false,
-	TB_ShowBlog : false,
-	TB_ShowBook : false,
-	TB_ShowFinance : false,
-	TB_ShowScholar : false,
-	TB_ShowDictionary : false,
+//  TB_ShowLabels : false,
+//  TB_ShowUp : false,
+//  TB_ShowHighlighter : false,
+//  TB_ShowSearchWords : false,
+//  TB_ShowCombined : false,
+//  TB_ShowWeb : false,
+//  TB_ShowLucky : false,
+//  TB_ShowSite : false,
+//  TB_ShowImages : false,
+//  TB_ShowVideo : false,
+//  TB_ShowNews : false,
+//  TB_ShowMaps : false,
+//  TB_ShowShopping : false,
+//  TB_ShowGroups : false,
+//  TB_ShowBlog : false,
+//  TB_ShowBook : false,
+//  TB_ShowFinance : false,
+//  TB_ShowScholar : false,
+//  TB_ShowDictionary : false,
 	
 	// Keyboard shortcut preferences
-	FocusKey : "",
-	ShiftSearch : "",
-	CtrlSearch : "",
-	ShiftCtrlSearch : "",
+//  FocusKey : "",
+//  ShiftSearch : "",
+//  CtrlSearch : "",
+//  ShiftCtrlSearch : "",
 
 	// Context menu preferences
-	CM_ShowContext : false,
-	CM_Web : false,
-	CM_Site : false,
-	CM_Images : false,
-	CM_Video : false,
-	CM_Groups : false,
-	CM_Maps : false,
-	CM_Dictionary : false,
-	CM_Backward : false,
-	CM_Cached : false,
-	CM_CachedLink : false,
-	CM_Similar : false,
-	CM_Translate : false,
+//  CM_ShowContext : false,
+//  CM_Web : false,
+//  CM_Site : false,
+//  CM_Images : false,
+//  CM_Video : false,
+//  CM_Groups : false,
+//  CM_Maps : false,
+//  CM_Dictionary : false,
+//  CM_Backward : false,
+//  CM_Cached : false,
+//  CM_CachedLink : false,
+//  CM_Similar : false,
+//  CM_Translate : false,
 
 	// ==================== Misc. Variables ====================
+	HighlightColors : new Array("background: #FF0;", "background: #0FF;", "background: #0F0;",
+								"background: #F0F;", "background: orange;", "background: dodgerblue;"),
+
 	LastHighlightedTerms : "",
 	OriginalCustomizeDone : null,
 	OverflowButtonWidth : 0,
-	PBListener: null,
+	PrivateBrowsingListener: null,
 	RunOnce : false,
 
 	StylesArray : new Array("-moz-image-region: rect(0px 32px 16px 16px);",
@@ -196,30 +261,26 @@ var objGooglebarLite = {
 							"-moz-image-region: rect(0px 96px 16px 80px);",
 							"-moz-image-region: rect(0px 112px 16px 96px);"),
 
-	HighlightColors : new Array("background: #FF0;", "background: #0FF;", "background: #0F0;",
-								"background: #F0F;", "background: orange;", "background: dodgerblue;"),
-
-	Listener : {
+	ProgressListener : {
 		QueryInterface: function(aIID)
 		{
 			if (aIID.equals(Components.interfaces.nsIWebProgressListener) ||
-			aIID.equals(Components.interfaces.nsISupportsWeakReference) ||
-			aIID.equals(Components.interfaces.nsISupports))
-			return this;
+				aIID.equals(Components.interfaces.nsISupportsWeakReference) ||
+				aIID.equals(Components.interfaces.nsISupports))
+				return this;
 			throw Components.results.NS_NOINTERFACE;
 		},
 	
 		onProgressChange: function (aWebProgress, aRequest, aCurSelfProgress, aMaxSelfProgress, aCurTotalProgress, aMaxTotalProgress) {},
-		onStatusChange: function(aWebProgress, aRequest, aStatus, aMessage) {},
 		onSecurityChange: function(aWebProgress, aRequest, aState) {},
-		onLinkIconAvailable: function(a) {},
+		onStatusChange: function(aWebProgress, aRequest, aStatus, aMessage) {},
+		onLinkIconAvailable: function(a) {}, // TODO: NEEDED?
 		
 		onStateChange: function (aWebProgress, aRequest, aStateFlags, aStatus)
 		{
 			if(aStateFlags & Components.interfaces.nsIWebProgressListener.STATE_STOP)
 			{
-				var hbutton = document.getElementById("GBL-TB-Highlighter");
-				if(hbutton.checked == true)
+				if(document.getElementById("GBL-TB-Highlighter").checked == true)
 					objGooglebarLite.AddHighlighting(null);
 			}
 		},
@@ -611,12 +672,12 @@ var objGooglebarLite = {
 	DisableSearchHistory: function(neverShowAgain)
 	{
 		// Disable the Googlebar Lite search history option and make sure we update the search box
-		this.PrefBranch.setBoolPref(this.PrefName_MaintainHistory, false);
+		this.PrefBranch.setBoolPref(this.Prefs.MaintainHistory.name, false);
 		this.UpdateSearchBoxSettings();
 	
 		// Disable the dialog from being displayed if the user asked to do so
 		if(neverShowAgain)
-			this.PrefBranch.setBoolPref(this.PrefName_WarnOnFormHistory, false);
+			this.PrefBranch.setBoolPref(this.Prefs.WarnOnFormHistory.name, false);
 	},
 
 	DragDropToSearchBox: function(event, data)
@@ -651,7 +712,7 @@ var objGooglebarLite = {
 	
 		// Disable the dialog from being displayed if the user asked to do so
 		if(neverShowAgain)
-			this.PrefBranch.setBoolPref(this.PrefName_WarnOnFormHistory, false);
+			this.PrefBranch.setBoolPref(this.Prefs.WarnOnFormHistory.name, false);
 	},
 
 	ExtractQuery: function(url)
@@ -711,58 +772,6 @@ var objGooglebarLite = {
 		}
 	},
 	
-	FixOldPrefs: function()
-	{
-		var temp = "";
-		var oldName = "";
-
-		oldName = "buttons.answers";
-		if(this.PrefBranch.prefHasUserValue(oldName))
-		{
-			temp = this.PrefBranch.getBoolPref(oldName);
-			this.PrefBranch.setBoolPref(this.PrefName_TB_Dictionary, temp);
-			this.TB_ShowDictionary = temp;
-
-			try {
-				this.PrefBranch.clearUserPref(oldName);
-			} catch (e) {}
-		}
-	
-		oldName = "ignore_answers";
-		if(this.PrefBranch.prefHasUserValue(oldName))
-		{
-			temp = this.PrefBranch.getBoolPref(oldName);
-			this.PrefBranch.setBoolPref(this.PrefName_IgnoreDictionary, temp);
-			this.IgnoreDictionary = temp;
-	
-			try {
-				this.PrefBranch.clearUserPref(oldName);
-			} catch (e) {}
-		}
-	
-		oldName = "context.answers";
-		if(this.PrefBranch.prefHasUserValue(oldName))
-		{
-			temp = this.PrefBranch.getBoolPref(oldName);
-			this.PrefBranch.setBoolPref(this.PrefName_CM_Dictionary, temp);
-			this.CM_Dictionary = temp;
-	
-			try {
-				this.PrefBranch.clearUsedPref(oldName);
-			} catch (e) {}
-		}
-	
-		// Since we have already loaded preferences, let's check for invalid values
-		if(this.ShiftSearch == "answers")
-			this.ShiftSearch = "dictionary";
-	
-		if(this.CtrlSearch == "answers")
-			this.CtrlSearch = "dictionary";
-	
-		if(this.ShiftCtrlSearch == "answers")
-			this.ShiftCtrlSearch = "dictionary";
-	},
-
 	GetSearchTerms: function()
 	{
 		return document.getElementById("GBL-SearchBox").value;
@@ -824,8 +833,8 @@ var objGooglebarLite = {
 			objGooglebarLite.RunOnce = true;
 			objGooglebarLite.Transferable.addDataFlavor("text/unicode");
 
-			objGooglebarLite.PBListener = new GBL_PrivateBrowsingListener();
-			objGooglebarLite.PBListener.watcher = {
+			objGooglebarLite.PrivateBrowsingListener = new GBL_PrivateBrowsingListener();
+			objGooglebarLite.PrivateBrowsingListener.watcher = {
 				onEnterPrivateBrowsing : function() {
 					// we have just entered private browsing mode!
 				},
@@ -836,18 +845,19 @@ var objGooglebarLite = {
 				}
 			};
 	
-			window.getBrowser().addProgressListener(objGooglebarLite.Listener);
+			window.getBrowser().addProgressListener(objGooglebarLite.ProgressListener);
 
 			var chevron = document.getElementById("GBL-Overflow-Button");
 			objGooglebarLite.OverflowButtonWidth = chevron.boxObject.width;
 			chevron.collapsed = true; // Initalize the overflow button to a hidden state
 	
 			setTimeout(function(){objGooglebarLite.DelayedStartup();}, 50); // Needs to happen after Firefox's delayedStartup()
+			
+			if(objGooglebarLite.PrefBranch.prefHasUserValue("prefs_version") == false)
+				objGooglebarLite.MigratePrefs(); // Migrate old preferences
+			
+			objGooglebarLite.LoadPrefs(); // Load stored preferences
 	
-			// Load the preferences that are stored
-			objGooglebarLite.LoadPrefs();
-	
-			objGooglebarLite.FixOldPrefs(); // Clean up deprecated preferences
 			objGooglebarLite.ConfigureKeyboardShortcuts();
 			objGooglebarLite.UpdateButtons();
 			objGooglebarLite.UpdateContextMenuVisibility();
@@ -867,66 +877,82 @@ var objGooglebarLite = {
 
 	LoadPrefs: function()
 	{
-		var b = this.PrefBranch;
-	
-		// General Preferences
-		this.SiteToUse			= b.getComplexValue(this.PrefName_SiteToUse, Components.interfaces.nsIPrefLocalizedString).data;
-		this.ClickSelectsAll	= b.getBoolPref(this.PrefName_ClickSelectsAll);
-		this.SearchInTab		= b.getBoolPref(this.PrefName_SearchInTab);
-		this.RememberCombined	= b.getBoolPref(this.PrefName_RememberCombined);
-		this.SearchOnDragDrop	= b.getBoolPref(this.PrefName_SearchOnDragDrop);
-		this.DisableAutoCorrect = b.getBoolPref(this.PrefName_DisableAutoCorrect);
-		this.UseSecureSearch	= b.getBoolPref(this.PrefName_UseSecureSearch);
-		this.WarnOnFormHistory	= b.getBoolPref(this.PrefName_WarnOnFormHistory);
-		this.MaintainHistory	= b.getBoolPref(this.PrefName_MaintainHistory);
-		this.EnableAutoComplete	= b.getBoolPref(this.PrefName_EnableAutoComplete);
-		this.UseInlineComplete	= b.getBoolPref(this.PrefName_UseInlineComplete);
-		this.AutoSearch 		= b.getBoolPref(this.PrefName_AutoSearch);
-		this.PromptToClear 		= b.getBoolPref(this.PrefName_PromptToClear);
-		this.IgnoreDictionary	= b.getBoolPref(this.PrefName_IgnoreDictionary);
-	
-		// Toolbar button preferences
-		this.TB_ShowLabels 		= b.getBoolPref(this.PrefName_TB_ShowLabels);
-		this.TB_ShowUp 			= b.getBoolPref(this.PrefName_TB_Up);
-		this.TB_ShowHighlighter = b.getBoolPref(this.PrefName_TB_Highlighter);
-		this.TB_ShowSearchWords = b.getBoolPref(this.PrefName_TB_SearchWords);
-		this.TB_ShowCombined 	= b.getBoolPref(this.PrefName_TB_Combined);
-		this.TB_ShowWeb 		= b.getBoolPref(this.PrefName_TB_Web);
-		this.TB_ShowLucky 		= b.getBoolPref(this.PrefName_TB_Lucky);
-		this.TB_ShowSite 		= b.getBoolPref(this.PrefName_TB_Site);
-		this.TB_ShowImages 		= b.getBoolPref(this.PrefName_TB_Images);
-		this.TB_ShowVideo 		= b.getBoolPref(this.PrefName_TB_Video);
-		this.TB_ShowNews 		= b.getBoolPref(this.PrefName_TB_News);
-		this.TB_ShowMaps 		= b.getBoolPref(this.PrefName_TB_Maps);
-		this.TB_ShowShopping	= b.getBoolPref(this.PrefName_TB_Shopping);
-		this.TB_ShowGroups 		= b.getBoolPref(this.PrefName_TB_Groups);
-		this.TB_ShowBlog 		= b.getBoolPref(this.PrefName_TB_Blog);
-		this.TB_ShowBook 		= b.getBoolPref(this.PrefName_TB_Book);
-		this.TB_ShowFinance		= b.getBoolPref(this.PrefName_TB_Finance);
-		this.TB_ShowScholar		= b.getBoolPref(this.PrefName_TB_Scholar);
-		this.TB_ShowDictionary 	= b.getBoolPref(this.PrefName_TB_Dictionary);
-	
-		// Search modifiers preferences
-		this.FocusKey			= b.getCharPref(this.PrefName_FocusKey);
-		this.ShiftSearch 		= b.getCharPref(this.PrefName_ShiftSearch);
-		this.CtrlSearch 		= b.getCharPref(this.PrefName_CtrlSearch);
-		this.ShiftCtrlSearch 	= b.getCharPref(this.PrefName_ShiftCtrlSearch);
-	
-		// Context menu preferences
-		this.CM_ShowContext 	= b.getBoolPref(this.PrefName_CM_ShowContext);
-		this.CM_Web 			= b.getBoolPref(this.PrefName_CM_Web);
-		this.CM_Site			= b.getBoolPref(this.PrefName_CM_Site);
-		this.CM_Images 			= b.getBoolPref(this.PrefName_CM_Images);
-		this.CM_Video			= b.getBoolPref(this.PrefName_CM_Video);
-		this.CM_Groups 			= b.getBoolPref(this.PrefName_CM_Groups);
-		this.CM_Maps 			= b.getBoolPref(this.PrefName_CM_Maps);
-		this.CM_Dictionary 		= b.getBoolPref(this.PrefName_CM_Dictionary);
-		this.CM_Backward 		= b.getBoolPref(this.PrefName_CM_Backward);
-		this.CM_Cached 			= b.getBoolPref(this.PrefName_CM_Cached);
-		this.CM_CachedLink 		= b.getBoolPref(this.PrefName_CM_CachedLink);
-		this.CM_Similar 		= b.getBoolPref(this.PrefName_CM_Similar);
-		this.CM_Translate 		= b.getBoolPref(this.PrefName_CM_Translate);
+		for (var p in this.Prefs)
+		{
+			if(type in p)
+			{
+				if(p.type == "string")
+					p.value = this.PrefBranch.getCharPref(p.name);
+				else if(p.type == "complex")
+					p.value = this.PrefBranch.getComplexValue(p.name, Components.interfaces.nsIPrefLocalizedString).data;
+			}
+			else
+				p.value = this.PrefBranch.getBoolPref(p.name);
+		}
 	},
+	
+//  OldLoadPrefs: function()
+//  {
+//  	var b = this.PrefBranch;
+//
+//  	// General Preferences
+//  	this.SiteToUse			= b.getComplexValue(this.PrefName_SiteToUse, Components.interfaces.nsIPrefLocalizedString).data;
+//  	this.ClickSelectsAll	= b.getBoolPref(this.PrefName_ClickSelectsAll);
+//  	this.SearchInTab		= b.getBoolPref(this.PrefName_SearchInTab);
+//  	this.RememberCombined	= b.getBoolPref(this.PrefName_RememberCombined);
+//  	this.SearchOnDragDrop	= b.getBoolPref(this.PrefName_SearchOnDragDrop);
+//  	this.DisableAutoCorrect = b.getBoolPref(this.PrefName_DisableAutoCorrect);
+//  	this.UseSecureSearch	= b.getBoolPref(this.PrefName_UseSecureSearch);
+//  	this.WarnOnFormHistory	= b.getBoolPref(this.PrefName_WarnOnFormHistory);
+//  	this.MaintainHistory	= b.getBoolPref(this.PrefName_MaintainHistory);
+//  	this.EnableAutoComplete	= b.getBoolPref(this.PrefName_EnableAutoComplete);
+//  	this.UseInlineComplete	= b.getBoolPref(this.PrefName_UseInlineComplete);
+//  	this.AutoSearch 		= b.getBoolPref(this.PrefName_AutoSearch);
+//  	this.PromptToClear 		= b.getBoolPref(this.PrefName_PromptToClear);
+//  	this.IgnoreDictionary	= b.getBoolPref(this.PrefName_IgnoreDictionary);
+//
+//  	// Toolbar button preferences
+//  	this.TB_ShowLabels 		= b.getBoolPref(this.PrefName_TB_ShowLabels);
+//  	this.TB_ShowUp 			= b.getBoolPref(this.PrefName_TB_Up);
+//  	this.TB_ShowHighlighter = b.getBoolPref(this.PrefName_TB_Highlighter);
+//  	this.TB_ShowSearchWords = b.getBoolPref(this.PrefName_TB_SearchWords);
+//  	this.TB_ShowCombined 	= b.getBoolPref(this.PrefName_TB_Combined);
+//  	this.TB_ShowWeb 		= b.getBoolPref(this.PrefName_TB_Web);
+//  	this.TB_ShowLucky 		= b.getBoolPref(this.PrefName_TB_Lucky);
+//  	this.TB_ShowSite 		= b.getBoolPref(this.PrefName_TB_Site);
+//  	this.TB_ShowImages 		= b.getBoolPref(this.PrefName_TB_Images);
+//  	this.TB_ShowVideo 		= b.getBoolPref(this.PrefName_TB_Video);
+//  	this.TB_ShowNews 		= b.getBoolPref(this.PrefName_TB_News);
+//  	this.TB_ShowMaps 		= b.getBoolPref(this.PrefName_TB_Maps);
+//  	this.TB_ShowShopping	= b.getBoolPref(this.PrefName_TB_Shopping);
+//  	this.TB_ShowGroups 		= b.getBoolPref(this.PrefName_TB_Groups);
+//  	this.TB_ShowBlog 		= b.getBoolPref(this.PrefName_TB_Blog);
+//  	this.TB_ShowBook 		= b.getBoolPref(this.PrefName_TB_Book);
+//  	this.TB_ShowFinance		= b.getBoolPref(this.PrefName_TB_Finance);
+//  	this.TB_ShowScholar		= b.getBoolPref(this.PrefName_TB_Scholar);
+//  	this.TB_ShowDictionary 	= b.getBoolPref(this.PrefName_TB_Dictionary);
+//
+//  	// Search modifiers preferences
+//  	this.FocusKey			= b.getCharPref(this.PrefName_FocusKey);
+//  	this.ShiftSearch 		= b.getCharPref(this.PrefName_ShiftSearch);
+//  	this.CtrlSearch 		= b.getCharPref(this.PrefName_CtrlSearch);
+//  	this.ShiftCtrlSearch 	= b.getCharPref(this.PrefName_ShiftCtrlSearch);
+//
+//  	// Context menu preferences
+//  	this.CM_ShowContext 	= b.getBoolPref(this.PrefName_CM_ShowContext);
+//  	this.CM_Web 			= b.getBoolPref(this.PrefName_CM_Web);
+//  	this.CM_Site			= b.getBoolPref(this.PrefName_CM_Site);
+//  	this.CM_Images 			= b.getBoolPref(this.PrefName_CM_Images);
+//  	this.CM_Video			= b.getBoolPref(this.PrefName_CM_Video);
+//  	this.CM_Groups 			= b.getBoolPref(this.PrefName_CM_Groups);
+//  	this.CM_Maps 			= b.getBoolPref(this.PrefName_CM_Maps);
+//  	this.CM_Dictionary 		= b.getBoolPref(this.PrefName_CM_Dictionary);
+//  	this.CM_Backward 		= b.getBoolPref(this.PrefName_CM_Backward);
+//  	this.CM_Cached 			= b.getBoolPref(this.PrefName_CM_Cached);
+//  	this.CM_CachedLink 		= b.getBoolPref(this.PrefName_CM_CachedLink);
+//  	this.CM_Similar 		= b.getBoolPref(this.PrefName_CM_Similar);
+//  	this.CM_Translate 		= b.getBoolPref(this.PrefName_CM_Translate);
+//  },
 	
 	LoadURL: function(url, openTab)
 	{
@@ -947,6 +973,62 @@ var objGooglebarLite = {
 		var safeTerm = encodeURIComponent(term);
 		safeTerm = safeTerm.replace(/\'/g, '%27');
 		return safeTerm;
+	},
+	
+	MigratePrefs: function()
+	{
+		var oldBranch = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("googlebar_lite.");
+		
+		for(var p in this.Prefs)
+		{
+			this.Log("Migrating " + p.name);
+			if(oldBranch.prefHasUserValue(p.name))
+			{
+				if(type in p)
+				{
+					if(p.type == "string")
+					{
+						this.Log(" - String preference");
+						var temp = oldBranch.getCharPref(p.name);
+						this.PrefBranch.setCharPref(p.name, temp);
+						try {
+							this.PrefBranch.clearUserPref(p.name); // Clean up the old preference
+						} catch (e) {}
+					}
+					else if(p.type == "complex")
+					{
+						this.Log(" - Complex preference");
+						var temp = oldBranch.getComplexValue(p.name, Components.interfaces.nsIPrefLocalizedString).data;
+						
+						try {
+							var pls = Components.classes["@mozilla.org/pref-localizedstring;1"].createInstance(Components.interfaces.nsIPrefLocalizedString);
+							pls.data = temp;
+							this.PrefBranch.setComplexValue(p.name, Components.interfaces.nsIPrefLocalizedString, pls);
+						} catch (e) {
+							this.Log("Caught exception trying to migrate complex preference!");
+							this.Log(" - Preference: " + p.name);
+							this.Log(" - Exception: " + e);
+						}
+						
+						try {
+							this.PrefBranch.clearUserPref(p.name); // Clean up the old preference
+						} catch (e) {}
+					}
+					else
+					{
+						// TODO: Error?
+					}
+				}
+				else
+				{
+					var temp = oldBranch.getBoolPref(p.name); // Get the old preference
+					this.PrefBranch.setBoolPref(p.name, temp); // Move it to the new location
+					try {
+						this.PrefBranch.clearUserPref(p.name); // Clean up the old preference
+					} catch (e) {}
+				}
+			}
+		}
 	},
 	
 	OpenInTab: function(aEvent, allowAltKey)
@@ -977,7 +1059,8 @@ var objGooglebarLite = {
 
 	OpenOptions: function()
 	{
-		window.openDialog("chrome://googlebarlite/content/options.xul", "Googlebar Lite Options", "centerscreen,chrome,modal");
+//  	window.openDialog("chrome://googlebarlite/content/options.xul", "Googlebar Lite Options", "centerscreen,chrome,modal");
+		window.openDialog("chrome://googlebarlite/content/prefs.xul", "Googlebar Lite Options", "centerscreen,chrome,modal");
 	},
 	
 	OptionsHaveUpdated: function()
@@ -1259,11 +1342,6 @@ var objGooglebarLite = {
 		}
 	},
 
-	RemoveListener: function()
-	{
-		window.getBrowser().removeProgressListener(objGooglebarLite.Listener);
-	},
-
 	Resize: function(event)
 	{
 		// Sizing issue hack (taken from patch for bug 266737)
@@ -1523,6 +1601,21 @@ var objGooglebarLite = {
 		this.TermsHaveUpdated();
 	},
 
+	Shutdown: function()
+	{
+		var searchbox = document.getElementById("GBL-SearchBox");
+		searchbox.removeEventListener('popupshowing', objGooglebarLite.SearchContextOnPopupShowing, true);
+		searchbox.removeEventListener('dragdrop', objGooglebarLite.SearchBoxOnDrop, true);
+		searchbox.removeEventListener('drop', objGooglebarLite.SearchBoxOnDrop, true);
+		
+		window.getBrowser().removeProgressListener(objGooglebarLite.ProgressListener);
+		
+		window.removeEventListener('focus', objGooglebarLite.Resize, false);
+		window.removeEventListener('load', objGooglebarLite.Init, false);
+		window.removeEventListener('resize', objGooglebarLite.Resize, false);
+		window.removeEventListener('unload', objGooglebarLite.Shutdown, false);
+	},
+
 	SplitTerms: function(searchwords)
 	{
 		var string = this.TrimString(searchwords);
@@ -1654,7 +1747,7 @@ var objGooglebarLite = {
 			if(objGooglebarLite.RunOnce == false)
 			{
 				objGooglebarLite.RunOnce = true;
-				window.getBrowser().addProgressListener(objGooglebarLite.Listener);
+				window.getBrowser().addProgressListener(objGooglebarLite.ProgressListener);
 				setTimeout(function(){objGooglebarLite.DelayedStartup();}, 1); // Needs to happen after Firefox's delayedStartup()
 			}
 	
@@ -2033,7 +2126,7 @@ var objGooglebarLite = {
 			var b = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("browser.");
 	
 			// Only case we care about is where form history is disabled, and search history is enabled
-			if(b.getBoolPref("formfill.enable") == false && this.PrefBranch.getBoolPref(this.PrefName_MaintainHistory) == true)
+			if(b.getBoolPref("formfill.enable") == false && this.PrefBranch.getBoolPref(this.Prefs.MaintainHistory.name) == true)
 				window.openDialog("chrome://googlebarlite/content/formhistory.xul", 
 								  "Warning: Form History", "centerscreen,chrome,modal");
 		}
@@ -2042,5 +2135,5 @@ var objGooglebarLite = {
 
 window.addEventListener('load', objGooglebarLite.Init, false);
 window.addEventListener('resize', objGooglebarLite.Resize, false);
-window.addEventListener('unload', objGooglebarLite.RemoveListener, false);
+window.addEventListener('unload', objGooglebarLite.Shutdown, false);
 

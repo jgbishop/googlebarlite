@@ -1,9 +1,11 @@
 //***************
 //Version History
 //***************
-[4.7.12]
+[4.8.0]
 + Added a new option allowing users to disable Google search auto-correct
-+ Reorganized a few of the options dialogs
++ Redesigned the options dialog
++ Extension options have been moved to the appropriate "extensions." branch
++ Bug Fix: Several registered event listeners that being removed on shutdown
 
 --
 
