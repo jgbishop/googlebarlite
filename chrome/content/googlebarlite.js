@@ -1620,6 +1620,17 @@ var objGooglebarLite = {
 		window.removeEventListener('unload', objGooglebarLite.Shutdown, false);
 	},
 
+	SplitCurrentURL: function()
+	{
+		var currentAddress = window.content.document.location.href;
+	
+		// Trim off the trailing slash if there is one
+		if(currentAddress.charAt(currentAddress.length - 1) == "/")
+			currentAddress = currentAddress.substring(0, currentAddress.length - 1);
+	
+		return currentAddress.split("/");
+	},
+	
 	SplitTerms: function(searchwords)
 	{
 		var string = this.TrimString(searchwords);
@@ -1785,19 +1796,30 @@ var objGooglebarLite = {
 
 	Up: function(event, path)
 	{
-		// TODO: Rewrite this function
-//  	var useTab = this.OpenInTab(event, false);
-//
-//  	// Path is empty if the user clicks the up button
-//  	if(path == "")
-//  	{
+		var useTab = this.OpenInTab(event, false);
+
+		// Path is empty if the user clicks the up button
+		if(path == "")
+		{
+			var addressArray = this.SplitCurrentURL();
+			var target = addressArray.slice(0, addressArray.length - 1).join("/") + "/";
+			this.Log("Target: " + target);
+//  		if(addressArray.length == 3)
+//  		{
+//  			var hostArray = addressArray[2].split(".");
+//  			if(hostArray.length >= 3 && () && hostArray[0] != "www")
+//  			{
+//  			}
+//  		}
+			// TODO: Finish me
+			
 //  		var upMenu = document.getElementById("GBL-TB-UpMenu");
 //
 //  		if(upMenu && upMenu.childNodes.length > 0)
 //  			this.LoadURL(upMenu.childNodes.item(0).getAttribute("label"), useTab);
-//  	}
-//  	else
-//  		this.LoadURL(path, useTab);
+		}
+		else
+			this.LoadURL(path, useTab);
 	},
 
 	UpdateButtons: function()
@@ -2054,18 +2076,11 @@ var objGooglebarLite = {
 
 	UpdateUpButton: function()
 	{
-		var currentAddress = window.content.document.location.href;
-		
-		// Trim off the trailing slash if there is one
-		if(currentAddress.charAt(currentAddress.length - 1) == "/")
-			currentAddress = currentAddress.substring(0, currentAddress.length - 1);
-		
-		var addressArray = currentAddress.split("/");
+		var addressArray = this.SplitCurrentURL();
 		
 		if(addressArray.length < 3)
 		{
 			document.getElementById("GBL-TB-UpButton").setAttribute("disabled", true);
-			return;
 		}
 		else if(addressArray.length == 3)
 		{
@@ -2081,20 +2096,11 @@ var objGooglebarLite = {
 	
 	UpdateUpMenu: function()
 	{
-		var currentAddress = window.content.document.location.href;
-	
-		// Trim off the trailing slash if there is one
-		if(currentAddress.charAt(currentAddress.length - 1) == "/")
-			currentAddress = currentAddress.substring(0, currentAddress.length - 1);
-	
-		var addressArray = currentAddress.split("/");
+		var addressArray = this.SplitCurrentURL();
 	
 		// Bail out if the addressArray is less than 3 in size (since it does not fit the xxx://yyy model)
 		if(addressArray.length < 3)
-		{
-			document.getElementById("GBL-TB-UpButton").setAttribute("disabled", true);
 			return;
-		}
 	
 		// Clean up what's currently in the up menu
 		var upMenu = document.getElementById("GBL-TB-UpMenu");
@@ -2137,11 +2143,6 @@ var objGooglebarLite = {
 			tempItem.setAttribute("onclick", "checkForMiddleClick(this, event); event.stopPropagation();");
 			upMenu.appendChild(tempItem);
 		}
-	
-		if(upMenu.childNodes.length > 0)
-			document.getElementById("GBL-TB-UpButton").setAttribute("disabled", false);
-		else
-			document.getElementById("GBL-TB-UpButton").setAttribute("disabled", true);
 	},
 
 	ValidateSearchHistorySetting: function()
