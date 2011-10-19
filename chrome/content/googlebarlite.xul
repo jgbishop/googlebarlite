@@ -298,7 +298,7 @@
 				
 				<toolbarbutton id="GBL-TB-UpButton" class="GBL-Toolbar-Button" tooltiptext="&gblite.tt.up;" collapsed="false"
 								type="menu-button" oncommand="objGooglebarLite.Up(event, '')" onclick="checkForMiddleClick(this, event);">
-					<menupopup id="GBL-TB-UpMenu" />
+					<menupopup id="GBL-TB-UpMenu" onpopupshowing="objGooglebarLite.UpdateUpMenu()" />
 				</toolbarbutton>
 								
 				<toolbarbutton id="GBL-TB-Highlighter" class="GBL-Toolbar-Button" tooltiptext="&gblite.tt.highlighter;" collapsed="false"
