@@ -60,9 +60,9 @@ GBL_PrivateBrowsingListener.prototype = {
 };
 
 var objGooglebarLite = {
-	FormHistory : Components.classes["@mozilla.org/satchel/form-history;1"].getService(Components.interfaces.nsIFormHistory2 || Components.interfaces.nsIFormHistory),
-	PrefBranch : Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("extensions.googlebarlite."),
-	Transferable : Components.classes["@mozilla.org/widget/transferable;1"].createInstance(Components.interfaces.nsITransferable),
+	FormHistory: Components.classes["@mozilla.org/satchel/form-history;1"].getService(Components.interfaces.nsIFormHistory2 || Components.interfaces.nsIFormHistory),
+	PrefBranch: Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("extensions.googlebarlite."),
+	Transferable: Components.classes["@mozilla.org/widget/transferable;1"].createInstance(Components.interfaces.nsITransferable),
 	
 	Prefs: {
 		// General
@@ -124,6 +124,56 @@ var objGooglebarLite = {
 		CM_CachedLink: { name: "context.cachedlink", value: false},
 		CM_Similar: { name: "context.similar", value: false},
 		CM_Translate: { name: "context.translate", value: false}
+	},
+	
+	PrefObserver: {
+//  	_branch: null,
+		
+		register: function() {
+//  		this._branch = Components.classes["@mozilla.org/preferences-service;1"].
+//  			getService(Components.interfaces.nsIPrefService).getBranch("extensions.googlebarlite.");
+//  		this._branch.QueryInterface(Components.interfaces.nsIPrefBranch2);
+//  		this._branch.addObserver("", this, false);
+			objGooglebarLite.PrefBranch.QueryInterface(Components.interfaces.nsIPrefBranch2);
+			objGooglebarLite.PrefBranch.addObserver("", this, false);
+		},
+		
+		unregister: function() {
+			if(!objGooglebarLite.PrefBranch) return;
+			objGooglebarLite.PrefBranch.removeObserver("", this);
+		},
+		
+		observe: function(subject, topic, data) {
+			if(topic != "nsPref:changed") return;
+			
+			objGooglebarLite.Log("Firing PrefObserver::observe() - Data: (" + data + ")");
+			
+			// Update the preference value in our Prefs object
+			for(var pid in objGooglebarLite.Prefs)
+			{
+				var p = objGooglebarLite.Prefs[pid];
+				if(p.name == data)
+				{
+					// We found the preference we need to update
+					if(p.hasOwnProperty("type"))
+					{
+						if(p.type == "string")
+							p.value = objGooglebarLite.PrefBranch.getCharPref(p.name);
+						else if(p.type == "complex")
+							p.value = objGooglebarLite.PrefBranch.getComplexValue(p.name, Components.interfaces.nsIPrefLocalizedString).data;
+					}
+					else
+						p.value = objGooglebarLite.PrefBranch.getBoolPref(p.name);
+					
+					break; // Done with the loop
+				}
+			}
+			
+			switch(data)
+			{
+			case 
+			}
+		}
 	},
 	
 	// ==================== Preference Names ====================
@@ -245,23 +295,23 @@ var objGooglebarLite = {
 //  CM_Translate : false,
 
 	// ==================== Misc. Variables ====================
-	HighlightColors : new Array("background: #FF0;", "background: #0FF;", "background: #0F0;",
+	HighlightColors: new Array("background: #FF0;", "background: #0FF;", "background: #0F0;",
 								"background: #F0F;", "background: orange;", "background: dodgerblue;"),
 
-	LastHighlightedTerms : "",
-	OriginalCustomizeDone : null,
-	OverflowButtonWidth : 0,
+	LastHighlightedTerms: "",
+	OriginalCustomizeDone: null,
+	OverflowButtonWidth: 0,
 	PrivateBrowsingListener: null,
-	RunOnce : false,
+	RunOnce: false,
 
-	StylesArray : new Array("-moz-image-region: rect(0px 32px 16px 16px);",
+	StylesArray: new Array("-moz-image-region: rect(0px 32px 16px 16px);",
 							"-moz-image-region: rect(0px 48px 16px 32px);",
 							"-moz-image-region: rect(0px 64px 16px 48px);",
 							"-moz-image-region: rect(0px 80px 16px 64px);",
 							"-moz-image-region: rect(0px 96px 16px 80px);",
 							"-moz-image-region: rect(0px 112px 16px 96px);"),
 
-	ProgressListener : {
+	ProgressListener: {
 		QueryInterface: function(aIID)
 		{
 			if (aIID.equals(Components.interfaces.nsIWebProgressListener) ||
@@ -1802,21 +1852,28 @@ var objGooglebarLite = {
 		if(path == "")
 		{
 			var addressArray = this.SplitCurrentURL();
-			var target = addressArray.slice(0, addressArray.length - 1).join("/") + "/";
-			this.Log("Target: " + target);
-//  		if(addressArray.length == 3)
-//  		{
-//  			var hostArray = addressArray[2].split(".");
-//  			if(hostArray.length >= 3 && () && hostArray[0] != "www")
-//  			{
-//  			}
-//  		}
-			// TODO: Finish me
-			
-//  		var upMenu = document.getElementById("GBL-TB-UpMenu");
-//
-//  		if(upMenu && upMenu.childNodes.length > 0)
-//  			this.LoadURL(upMenu.childNodes.item(0).getAttribute("label"), useTab);
+			if(addressArray.length > 3)
+			{
+				var target = addressArray.slice(0, addressArray.length - 1).join("/") + "/";
+				this.Log("Target: " + target); // TODO: Remove me
+				this.LoadURL(target, useTab);
+			}
+			else if(addressArray.length == 3)
+			{
+				var hostArray = addressArray[2].split(".");
+				if(hostArray.length >= 3 && (addressArray[0] == "http:" || addressArray[0] == "https:") && hostArray[0] != "www")
+				{
+					var topHost = addressArray[0] + "//www";
+					for(i=1; i<hostArray.length; i++)
+					{
+						topHost += "." + hostArray[i];
+					}
+
+					topHost += "/";
+					this.Log("Top Host: " + topHost); // TODO: Remove me
+					this.LoadURL(topHost, useTab);
+				}
+			}
 		}
 		else
 			this.LoadURL(path, useTab);
