@@ -384,7 +384,8 @@ var objGooglebarLite = {
 				//  3. The URL scheme is neither 'http' nor 'https'
 				//  4. The URL does not contain 'google' in its host
 	
-				if (url == null || urlHasHostProperty == false || !(/https?/.test(url.scheme)) || /google/.test(url.host))
+				// TODO: Make sure inserted ^ works for .scheme test
+				if (url == null || urlHasHostProperty == false || !(/^https?/.test(url.scheme)) || /google/.test(url.host))
 				{
 					searchSiteButton.setAttribute("disabled", true);
 					searchSiteMenuItem.setAttribute("disabled", true);
@@ -415,8 +416,7 @@ var objGooglebarLite = {
 		onDrop: function(event, dropData, session)
 		{
 			if(!dropData || !dropData.data || dropData.data == "") { return; }
-			var searchBox = document.getElementById("GBL-SearchBox");
-			if(event.target != searchBox) { return; }
+			if(event.target != document.getElementById("GBL-SearchBox")) { return; }
 			objGooglebarLite.DragDropToSearchBox(event, dropData.data);
 			event.preventDefault();
 		}
@@ -676,17 +676,20 @@ var objGooglebarLite = {
 	
 	ConvertTermsToURI: function(terms)
 	{
-		var termArray = new Array();
-		termArray = terms.split(" ");
-		var result = "";
-	
-		for(var i=0; i<termArray.length; i++)
-		{
-			if(i > 0) { result += "+"; }
-			result += this.MakeSafe(termArray[i]);
-		}
-	
-		return result;
+		// TODO: Make sure this works
+		var termArray = terms.split(" ");
+		termArray.forEach(this.MakeSafe);
+		return termArray.join("+");
+		
+//  	var result = "";
+//
+//  	for(var i=0; i<termArray.length; i++)
+//  	{
+//  		if(i > 0) { result += "+"; }
+//  		result += this.MakeSafe(termArray[i]);
+//  	}
+//
+//  	return result;
 	},
 
 	ConvertToURL: function(url)
@@ -890,6 +893,8 @@ var objGooglebarLite = {
 					 objGooglebarLite.SetSearchTerms("");
 				}
 			};
+			
+			objGooglebarLite.PrefObserver.register();
 	
 			window.getBrowser().addProgressListener(objGooglebarLite.ProgressListener);
 
@@ -1018,9 +1023,9 @@ var objGooglebarLite = {
 		}
 	},
 
-	MakeSafe: function(term)
+	MakeSafe: function(element, index, array)
 	{
-		var safeTerm = encodeURIComponent(term);
+		var safeTerm = encodeURIComponent(element);
 		safeTerm = safeTerm.replace(/\'/g, '%27');
 		return safeTerm;
 	},
@@ -1066,10 +1071,6 @@ var objGooglebarLite = {
 							oldBranch.clearUserPref(p.name); // Clean up the old preference
 						} catch (e) {}
 					}
-					else
-					{
-						// TODO: Error?
-					}
 				}
 				else
 				{
@@ -1094,18 +1095,13 @@ var objGooglebarLite = {
 		if(window.content.document.location != "about:blank" && this.Prefs.SearchInTab.value)
 			return true;
 	
-		var alt = aEvent.altKey;
-		var ctrl = aEvent.ctrlKey;
-		var middle = false;
-		if(aEvent.button && aEvent.button == 1)
-			middle = true;
-	
 		// Only the search box passes in a true value for allowAltKey. This prevents a Ctrl+Enter search from the
 		// search box from opening a custom search in a new tab.
 		if(allowAltKey)
-			return alt;
+			return aEvent.altKey;
 	
-		if(ctrl || middle)
+		// If we saw the CTRL key or a middle click, return true
+		if(aEvent.ctrlKey || (aEvent.button && aEvent.button == 1))
 			return true;
 	
 		return false;
@@ -1119,6 +1115,7 @@ var objGooglebarLite = {
 	
 	OptionsHaveUpdated: function()
 	{
+		// TODO: This function can eventually go away
 		this.LoadPrefs(); // Update our globals based on what got stored
 	
 		// Remove any highlighting that might be present (but only if the button is being hidden)
@@ -1650,13 +1647,14 @@ var objGooglebarLite = {
 
 	SetSearchTerms: function(terms)
 	{
-		var searchbox = document.getElementById("GBL-SearchBox");
-		searchbox.value = terms;
+		document.getElementById("GBL-SearchBox").value = terms;
 		this.TermsHaveUpdated();
 	},
 
 	Shutdown: function()
 	{
+		objGooglebarLite.PrefsObserver.unregister();
+		
 		var searchbox = document.getElementById("GBL-SearchBox");
 		searchbox.removeEventListener('popupshowing', objGooglebarLite.SearchContextOnPopupShowing, true);
 		searchbox.removeEventListener('dragdrop', objGooglebarLite.SearchBoxOnDrop, true);
@@ -2071,11 +2069,8 @@ var objGooglebarLite = {
 
 	UpdateContextMenuVisibility: function()
 	{
-		var conMenu = document.getElementById("GBL-Context-Menu");
-		var conSep = document.getElementById("GBL-Context-Separator");
-	
-		conMenu.setAttribute("collapsed", !this.Prefs.CM_ShowContext.value);
-		conSep.setAttribute("hidden", !this.Prefs.CM_ShowContext.value);
+		document.getElementById("GBL-Context-Menu").setAttribute("collapsed", !this.Prefs.CM_ShowContext.value);
+		document.getElementById("GBL-Context-Separator").setAttribute("hidden", !this.Prefs.CM_ShowContext.value);
 	},
 	
 	UpdateOverflowMenu: function()
