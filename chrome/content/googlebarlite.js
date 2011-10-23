@@ -127,13 +127,7 @@ var objGooglebarLite = {
 	},
 	
 	PrefObserver: {
-//  	_branch: null,
-		
 		register: function() {
-//  		this._branch = Components.classes["@mozilla.org/preferences-service;1"].
-//  			getService(Components.interfaces.nsIPrefService).getBranch("extensions.googlebarlite.");
-//  		this._branch.QueryInterface(Components.interfaces.nsIPrefBranch2);
-//  		this._branch.addObserver("", this, false);
 			objGooglebarLite.PrefBranch.QueryInterface(Components.interfaces.nsIPrefBranch2);
 			objGooglebarLite.PrefBranch.addObserver("", this, false);
 		},
@@ -169,132 +163,13 @@ var objGooglebarLite = {
 				}
 			}
 			
-			switch(data)
-			{
-			case 
-			}
+//  		switch(data)
+//  		{
+//  		case
+//  		}
 		}
 	},
 	
-	// ==================== Preference Names ====================
-	// General preference names
-//  PrefName_SiteToUse			: "site_to_use",
-//  PrefName_ClickSelectsAll	: "click_selects_all",
-//  PrefName_SearchInTab		: "search_in_tab", // Open results in a new tab
-//  PrefName_RememberCombined	: "remember_combined",
-//  PrefName_SearchOnDragDrop	: "search_on_drag_drop",
-//  PrefName_DisableAutoCorrect : "disable_auto_correct",
-//  PrefName_UseSecureSearch	: "use_secure_search",
-//  PrefName_WarnOnFormHistory	: "warn_on_form_history",
-//  PrefName_MaintainHistory	: "maintain_history",
-//  PrefName_EnableAutoComplete : "enable_auto_complete",
-//  PrefName_UseInlineComplete	: "use_inline_complete",
-//  PrefName_AutoSearch			: "auto_search", // Auto search when selecting from history
-//  PrefName_PromptToClear		: "prompt_to_clear",
-//  PrefName_IgnoreDictionary	: "ignore_dictionary",
-	
-	// Toolbar buttons preference names
-//  PrefName_TB_ShowLabels	: "buttons.showlabels",
-//  PrefName_TB_Up			: "buttons.up",
-//  PrefName_TB_Highlighter : "buttons.highlighter",
-//  PrefName_TB_SearchWords	: "buttons.searchwords",
-//  PrefName_TB_Combined	: "buttons.combined",
-//  PrefName_TB_Web			: "buttons.web",
-//  PrefName_TB_Lucky		: "buttons.lucky",
-//  PrefName_TB_Site		: "buttons.site",
-//  PrefName_TB_Images		: "buttons.images",
-//  PrefName_TB_Video		: "buttons.video",
-//  PrefName_TB_News		: "buttons.news",
-//  PrefName_TB_Maps		: "buttons.maps",
-//  PrefName_TB_Shopping	: "buttons.shopping",
-//  PrefName_TB_Groups		: "buttons.groups",
-//  PrefName_TB_Blog		: "buttons.blog",
-//  PrefName_TB_Book		: "buttons.book",
-//  PrefName_TB_Finance		: "buttons.finance",
-//  PrefName_TB_Scholar		: "buttons.scholar",
-//  PrefName_TB_Dictionary	: "buttons.dictionary",
-	
-	// Keyboard shortcuts preference names
-//  PrefName_FocusKey			: "focus_key",
-//  PrefName_ShiftSearch		: "shift_search",
-//  PrefName_CtrlSearch			: "ctrl_search",
-//  PrefName_ShiftCtrlSearch	: "shift_ctrl_search",
-	
-	// Context menu preference names
-//  PrefName_CM_ShowContext	: "context.showcontext",
-//  PrefName_CM_Web			: "context.web",
-//  PrefName_CM_Site		: "context.site",
-//  PrefName_CM_Images		: "context.images",
-//  PrefName_CM_Video		: "context.video",
-//  PrefName_CM_Groups		: "context.groups",
-//  PrefName_CM_Maps		: "context.maps",
-//  PrefName_CM_Dictionary	: "context.dictionary",
-//  PrefName_CM_Backward	: "context.backward",
-//  PrefName_CM_Cached		: "context.cached",
-//  PrefName_CM_CachedLink	: "context.cachedlink",
-//  PrefName_CM_Similar		: "context.similar",
-//  PrefName_CM_Translate	: "context.translate",
-	
-	// ==================== Preference Values ====================
-	// General preferences
-//  SiteToUse : "",
-//  ClickSelectsAll : false,
-//  SearchInTab : false,
-//  RememberCombined : false,
-//  SearchOnDragDrop : false,
-//  DisableAutoCorrect : false,
-//  UseSecureSearch: false,
-//  WarnOnFormHistory : false,
-//  MaintainHistory : false,
-//  EnableAutoComplete : false,
-//  UseInlineComplete : false,
-//  AutoSearch : false,
-//  PromptToClear : false,
-//  IgnoreDictionary : false,
-	
-	// Toolbar buttons preferences
-//  TB_ShowLabels : false,
-//  TB_ShowUp : false,
-//  TB_ShowHighlighter : false,
-//  TB_ShowSearchWords : false,
-//  TB_ShowCombined : false,
-//  TB_ShowWeb : false,
-//  TB_ShowLucky : false,
-//  TB_ShowSite : false,
-//  TB_ShowImages : false,
-//  TB_ShowVideo : false,
-//  TB_ShowNews : false,
-//  TB_ShowMaps : false,
-//  TB_ShowShopping : false,
-//  TB_ShowGroups : false,
-//  TB_ShowBlog : false,
-//  TB_ShowBook : false,
-//  TB_ShowFinance : false,
-//  TB_ShowScholar : false,
-//  TB_ShowDictionary : false,
-	
-	// Keyboard shortcut preferences
-//  FocusKey : "",
-//  ShiftSearch : "",
-//  CtrlSearch : "",
-//  ShiftCtrlSearch : "",
-
-	// Context menu preferences
-//  CM_ShowContext : false,
-//  CM_Web : false,
-//  CM_Site : false,
-//  CM_Images : false,
-//  CM_Video : false,
-//  CM_Groups : false,
-//  CM_Maps : false,
-//  CM_Dictionary : false,
-//  CM_Backward : false,
-//  CM_Cached : false,
-//  CM_CachedLink : false,
-//  CM_Similar : false,
-//  CM_Translate : false,
-
-	// ==================== Misc. Variables ====================
 	HighlightColors: new Array("background: #FF0;", "background: #0FF;", "background: #0F0;",
 								"background: #F0F;", "background: orange;", "background: dodgerblue;"),
 
@@ -397,7 +272,6 @@ var objGooglebarLite = {
 				}
 	
 				objGooglebarLite.UpdateUpButton();
-//  			objGooglebarLite.UpdateUpMenu();
 			}
 		}
 	},
@@ -676,20 +550,9 @@ var objGooglebarLite = {
 	
 	ConvertTermsToURI: function(terms)
 	{
-		// TODO: Make sure this works
 		var termArray = terms.split(" ");
 		termArray.forEach(this.MakeSafe);
 		return termArray.join("+");
-		
-//  	var result = "";
-//
-//  	for(var i=0; i<termArray.length; i++)
-//  	{
-//  		if(i > 0) { result += "+"; }
-//  		result += this.MakeSafe(termArray[i]);
-//  	}
-//
-//  	return result;
 	},
 
 	ConvertToURL: function(url)
@@ -945,69 +808,6 @@ var objGooglebarLite = {
 				p.value = this.PrefBranch.getBoolPref(p.name);
 		}
 	},
-	
-//  OldLoadPrefs: function()
-//  {
-//  	var b = this.PrefBranch;
-//
-//  	// General Preferences
-//  	this.SiteToUse			= b.getComplexValue(this.PrefName_SiteToUse, Components.interfaces.nsIPrefLocalizedString).data;
-//  	this.ClickSelectsAll	= b.getBoolPref(this.PrefName_ClickSelectsAll);
-//  	this.SearchInTab		= b.getBoolPref(this.PrefName_SearchInTab);
-//  	this.RememberCombined	= b.getBoolPref(this.PrefName_RememberCombined);
-//  	this.SearchOnDragDrop	= b.getBoolPref(this.PrefName_SearchOnDragDrop);
-//  	this.DisableAutoCorrect = b.getBoolPref(this.PrefName_DisableAutoCorrect);
-//  	this.Prefs.UseSecureSearch.value	= b.getBoolPref(this.PrefName_UseSecureSearch);
-//  	this.WarnOnFormHistory	= b.getBoolPref(this.PrefName_WarnOnFormHistory);
-//  	this.MaintainHistory	= b.getBoolPref(this.PrefName_MaintainHistory);
-//  	this.EnableAutoComplete	= b.getBoolPref(this.PrefName_EnableAutoComplete);
-//  	this.UseInlineComplete	= b.getBoolPref(this.PrefName_UseInlineComplete);
-//  	this.AutoSearch 		= b.getBoolPref(this.PrefName_AutoSearch);
-//  	this.PromptToClear 		= b.getBoolPref(this.PrefName_PromptToClear);
-//  	this.IgnoreDictionary	= b.getBoolPref(this.PrefName_IgnoreDictionary);
-//
-//  	// Toolbar button preferences
-//  	this.TB_ShowLabels 		= b.getBoolPref(this.PrefName_TB_ShowLabels);
-//  	this.TB_ShowUp 			= b.getBoolPref(this.PrefName_TB_Up);
-//  	this.TB_ShowHighlighter = b.getBoolPref(this.PrefName_TB_Highlighter);
-//  	this.TB_ShowSearchWords = b.getBoolPref(this.PrefName_TB_SearchWords);
-//  	this.TB_ShowCombined 	= b.getBoolPref(this.PrefName_TB_Combined);
-//  	this.TB_ShowWeb 		= b.getBoolPref(this.PrefName_TB_Web);
-//  	this.TB_ShowLucky 		= b.getBoolPref(this.PrefName_TB_Lucky);
-//  	this.TB_ShowSite 		= b.getBoolPref(this.PrefName_TB_Site);
-//  	this.TB_ShowImages 		= b.getBoolPref(this.PrefName_TB_Images);
-//  	this.TB_ShowVideo 		= b.getBoolPref(this.PrefName_TB_Video);
-//  	this.TB_ShowNews 		= b.getBoolPref(this.PrefName_TB_News);
-//  	this.TB_ShowMaps 		= b.getBoolPref(this.PrefName_TB_Maps);
-//  	this.TB_ShowShopping	= b.getBoolPref(this.PrefName_TB_Shopping);
-//  	this.TB_ShowGroups 		= b.getBoolPref(this.PrefName_TB_Groups);
-//  	this.TB_ShowBlog 		= b.getBoolPref(this.PrefName_TB_Blog);
-//  	this.TB_ShowBook 		= b.getBoolPref(this.PrefName_TB_Book);
-//  	this.TB_ShowFinance		= b.getBoolPref(this.PrefName_TB_Finance);
-//  	this.TB_ShowScholar		= b.getBoolPref(this.PrefName_TB_Scholar);
-//  	this.TB_ShowDictionary 	= b.getBoolPref(this.PrefName_TB_Dictionary);
-//
-//  	// Search modifiers preferences
-//  	this.FocusKey			= b.getCharPref(this.PrefName_FocusKey);
-//  	this.ShiftSearch 		= b.getCharPref(this.PrefName_ShiftSearch);
-//  	this.CtrlSearch 		= b.getCharPref(this.PrefName_CtrlSearch);
-//  	this.ShiftCtrlSearch 	= b.getCharPref(this.PrefName_ShiftCtrlSearch);
-//
-//  	// Context menu preferences
-//  	this.CM_ShowContext 	= b.getBoolPref(this.PrefName_CM_ShowContext);
-//  	this.CM_Web 			= b.getBoolPref(this.PrefName_CM_Web);
-//  	this.CM_Site			= b.getBoolPref(this.PrefName_CM_Site);
-//  	this.CM_Images 			= b.getBoolPref(this.PrefName_CM_Images);
-//  	this.CM_Video			= b.getBoolPref(this.PrefName_CM_Video);
-//  	this.CM_Groups 			= b.getBoolPref(this.PrefName_CM_Groups);
-//  	this.CM_Maps 			= b.getBoolPref(this.PrefName_CM_Maps);
-//  	this.CM_Dictionary 		= b.getBoolPref(this.PrefName_CM_Dictionary);
-//  	this.CM_Backward 		= b.getBoolPref(this.PrefName_CM_Backward);
-//  	this.CM_Cached 			= b.getBoolPref(this.PrefName_CM_Cached);
-//  	this.CM_CachedLink 		= b.getBoolPref(this.PrefName_CM_CachedLink);
-//  	this.CM_Similar 		= b.getBoolPref(this.PrefName_CM_Similar);
-//  	this.CM_Translate 		= b.getBoolPref(this.PrefName_CM_Translate);
-//  },
 	
 	LoadURL: function(url, openTab)
 	{
@@ -1653,7 +1453,7 @@ var objGooglebarLite = {
 
 	Shutdown: function()
 	{
-		objGooglebarLite.PrefsObserver.unregister();
+		objGooglebarLite.PrefObserver.unregister();
 		
 		var searchbox = document.getElementById("GBL-SearchBox");
 		searchbox.removeEventListener('popupshowing', objGooglebarLite.SearchContextOnPopupShowing, true);
