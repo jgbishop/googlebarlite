@@ -85,24 +85,24 @@ var objGooglebarLite = {
 		
 		// Toolbar buttons
 		TB_ShowLabels: { name: "buttons.showlabels", value: false},
-		TB_ShowUp: { name: "buttons.up", value: false},
-		TB_ShowHighlighter: { name: "buttons.highlighter", value: false},
-		TB_ShowSearchWords: { name: "buttons.searchwords", value: false},
-		TB_ShowCombined: { name: "buttons.combined", value: false},
-		TB_ShowWeb: { name: "buttons.web", value: false},
-		TB_ShowLucky: { name: "buttons.lucky", value: false},
-		TB_ShowSite: { name: "buttons.site", value: false},
-		TB_ShowImages: { name: "buttons.images", value: false},
-		TB_ShowVideo: { name: "buttons.video", value: false},
-		TB_ShowNews: { name: "buttons.news", value: false},
-		TB_ShowMaps: { name: "buttons.maps", value: false},
-		TB_ShowShopping: { name: "buttons.shopping", value: false},
-		TB_ShowGroups: { name: "buttons.groups", value: false},
-		TB_ShowBlog: { name: "buttons.blog", value: false},
-		TB_ShowBook: { name: "buttons.book", value: false},
-		TB_ShowFinance: { name: "buttons.finance", value: false},
-		TB_ShowScholar: { name: "buttons.scholar", value: false},
-		TB_ShowDictionary: { name: "buttons.dictionary", value: false},
+		TB_ShowUp: { name: "buttons.up", value: false, xulid: "GBL-TB-UpButton"},
+		TB_ShowHighlighter: { name: "buttons.highlighter", value: false, xulid: "GBL-TB-Highlighter"},
+		TB_ShowSearchWords: { name: "buttons.searchwords", value: false, xulid: "GBL-TB-SearchWordsContainer"},
+		TB_ShowCombined: { name: "buttons.combined", value: false, xulid: "GBL-TB-Combined"},
+		TB_ShowWeb: { name: "buttons.web", value: false, xulid: "GBL-TB-Web"},
+		TB_ShowLucky: { name: "buttons.lucky", value: false, xulid: "GBL-TB-Lucky"},
+		TB_ShowSite: { name: "buttons.site", value: false, xulid: "GBL-TB-Site"},
+		TB_ShowImages: { name: "buttons.images", value: false, xulid: "GBL-TB-Images"},
+		TB_ShowVideo: { name: "buttons.video", value: false, xulid: "GBL-TB-Video"},
+		TB_ShowNews: { name: "buttons.news", value: false, xulid: "GBL-TB-News"},
+		TB_ShowMaps: { name: "buttons.maps", value: false, xulid: "GBL-TB-Maps"},
+		TB_ShowShopping: { name: "buttons.shopping", value: false, xulid: "GBL-TB-Shopping"},
+		TB_ShowGroups: { name: "buttons.groups", value: false, xulid: "GBL-TB-Groups"},
+		TB_ShowBlog: { name: "buttons.blog", value: false, xulid: "GBL-TB-Blog"},
+		TB_ShowBook: { name: "buttons.book", value: false, xulid: "GBL-TB-Book"},
+		TB_ShowFinance: { name: "buttons.finance", value: false, xulid: "GBL-TB-Finance"},
+		TB_ShowScholar: { name: "buttons.scholar", value: false, xulid: "GBL-TB-Scholar"},
+		TB_ShowDictionary: { name: "buttons.dictionary", value: false, xulid: "GBL-TB-Dictionary"},
 		
 		// Keyboard shortcuts
 		FocusKey: { name: "focus_key", value: "", type: "string"},
@@ -142,6 +142,9 @@ var objGooglebarLite = {
 			
 			objGooglebarLite.Log("Firing PrefObserver::observe() - Data: (" + data + ")");
 			
+			var prefID = null;
+			var prefValue = null;
+			
 			// Update the preference value in our Prefs object
 			for(var pid in objGooglebarLite.Prefs)
 			{
@@ -159,14 +162,59 @@ var objGooglebarLite = {
 					else
 						p.value = objGooglebarLite.PrefBranch.getBoolPref(p.name);
 					
+					prefID = pid;
+					prefValue = p.value;
 					break; // Done with the loop
 				}
 			}
 			
-//  		switch(data)
-//  		{
-//  		case
-//  		}
+			var prefs = objGooglebarLite.Prefs;
+			
+//  		objGooglebarLite.Log(" - prefID = " + prefID);
+//  		objGooglebarLite.Log(" - prefValue = " + prefValue);
+			
+			if(data.indexOf("buttons.") != -1)
+			{
+//  			objGooglebarLite.Log(" - Found 'buttons.' in data = " + data);
+				
+				var p = prefs[prefID];
+				if(p.hasOwnProperty("xulid"))
+				{
+//  				objGooglebarLite.Log(" - Changing button state");
+//  				objGooglebarLite.Log(" - XULID = " + p.xulid);
+					document.getElementById(p.xulid).setAttribute("collapsed", !prefValue); // Toggle the physical XUL element's state
+				}
+				
+				switch(data)
+				{
+				case prefs.TB_ShowLabels.name:
+					var stringBundle = document.getElementById("GBL-String-Bundle");
+					document.getElementById(prefs.TB_ShowCombined.xulid).setAttribute("label", (prefValue == true ? stringBundle.getString("GBL_TB_Combined_Label") : ""));
+					document.getElementById(prefs.TB_ShowUp.xulid).setAttribute("label", (prefValue == true ? stringBundle.getString("GBL_TB_Up_Label") : ""));
+					document.getElementById(prefs.TB_ShowHighlighter.xulid).setAttribute("label", (prefValue == true ? stringBundle.getString("GBL_TB_Highlighter_Label") : ""));
+					break;
+					
+				case prefs.TB_ShowHighlighter.name:
+					var hb = document.getElementById(prefs.TB_ShowHighlighter.xulid);
+//  				objGooglebarLite(" - Highlighter object ID = " + hb);
+					if(hb.checked == true && prefValue == false)
+					{
+						hb.checked = false;
+						objGooglebarLite.RemoveHighlighting(null);
+						objGooglebarLite.LastHighlightedTerms = "";
+						objGooglebarLite.UpdateSearchWordButtons();
+					}
+					break;
+
+				case prefs.TB_ShowCombined.name:
+					if(prefValue == false) document.getElementById(prefs.TB_ShowCombined.xulid).setAttribute("searchType", "web");
+					break;
+				}
+				
+	//  		objGooglebarLite.UpdateButtons(); // TODO: Replace me
+				objGooglebarLite.CheckButtonContainer();
+				objGooglebarLite.Resize(null); // Fake a resize to overflow properly
+			}
 		}
 	},
 	
