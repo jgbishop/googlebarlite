@@ -170,18 +170,18 @@ var objGooglebarLite = {
 			
 			var prefs = objGooglebarLite.Prefs;
 			
-//  		objGooglebarLite.Log(" - prefID = " + prefID);
-//  		objGooglebarLite.Log(" - prefValue = " + prefValue);
+			objGooglebarLite.Log(" - prefID = " + prefID);
+			objGooglebarLite.Log(" - prefValue = " + prefValue);
 			
 			if(data.indexOf("buttons.") != -1)
 			{
 //  			objGooglebarLite.Log(" - Found 'buttons.' in data = " + data);
 				
 				var p = prefs[prefID];
-				if(p.hasOwnProperty("xulid"))
+				if(prefs[prefID].hasOwnProperty("xulid"))
 				{
-//  				objGooglebarLite.Log(" - Changing button state");
-//  				objGooglebarLite.Log(" - XULID = " + p.xulid);
+					objGooglebarLite.Log(" - Changing button state");
+					objGooglebarLite.Log(" - XULID = " + p.xulid);
 					document.getElementById(p.xulid).setAttribute("collapsed", !prefValue); // Toggle the physical XUL element's state
 				}
 				
@@ -221,11 +221,11 @@ var objGooglebarLite = {
 	HighlightColors: new Array("background: #FF0;", "background: #0FF;", "background: #0F0;",
 								"background: #F0F;", "background: orange;", "background: dodgerblue;"),
 
+	Initialized: false,
 	LastHighlightedTerms: "",
 	OriginalCustomizeDone: null,
 	OverflowButtonWidth: 0,
 	PrivateBrowsingListener: null,
-	RunOnce: false,
 
 	StylesArray: new Array("-moz-image-region: rect(0px 32px 16px 16px);",
 							"-moz-image-region: rect(0px 48px 16px 32px);",
@@ -783,63 +783,6 @@ var objGooglebarLite = {
 		getBrowser().selectedTab = newTab;
 	},
 
-	Init: function()
-	{
-		var mainItem = document.getElementById("GBL-Toolbar-MainItem");
-	
-		// Only initialize if the main toolbar item is present
-		if(mainItem && objGooglebarLite.RunOnce == false)
-		{
-			objGooglebarLite.RunOnce = true;
-			objGooglebarLite.Transferable.addDataFlavor("text/unicode");
-			
-			objGooglebarLite.PrivateBrowsingListener = new GBL_PrivateBrowsingListener();
-			objGooglebarLite.PrivateBrowsingListener.watcher = {
-				onEnterPrivateBrowsing : function() {
-					// we have just entered private browsing mode!
-				},
-
-				onExitPrivateBrowsing : function() {
-					 // we have just left private browsing mode!
-					 objGooglebarLite.SetSearchTerms("");
-				}
-			};
-			
-			objGooglebarLite.PrefObserver.register();
-	
-			window.getBrowser().addProgressListener(objGooglebarLite.ProgressListener);
-
-			var chevron = document.getElementById("GBL-Overflow-Button");
-			objGooglebarLite.OverflowButtonWidth = chevron.boxObject.width;
-			chevron.collapsed = true; // Initalize the overflow button to a hidden state
-	
-			setTimeout(function(){objGooglebarLite.DelayedStartup();}, 50); // Needs to happen after Firefox's delayedStartup()
-			
-			if(objGooglebarLite.PrefBranch.prefHasUserValue("prefs_version") == false)
-			{
-				objGooglebarLite.MigratePrefs(); // Migrate old preferences
-				objGooglebarLite.PrefBranch.setIntPref("prefs_version", 2);
-			}
-			
-			objGooglebarLite.LoadPrefs(); // Load stored preferences
-	
-			objGooglebarLite.ConfigureKeyboardShortcuts();
-			objGooglebarLite.UpdateButtons();
-			objGooglebarLite.UpdateContextMenuVisibility();
-			objGooglebarLite.UpdateSearchBoxSettings();
-			objGooglebarLite.UpdateUpMenu();
-			objGooglebarLite.TermsHaveUpdated();
-
-			if(window.opener != null)
-			{
-				var osb = window.opener.document.getElementById("GBL-SearchBox");
-				objGooglebarLite.SetSearchTerms(osb.value);
-			}
-	
-			setTimeout(function(){objGooglebarLite.ValidateSearchHistorySetting();}, 50);
-		}
-	},
-
 	LoadPrefs: function()
 	{
 		for (var pid in this.Prefs)
@@ -961,6 +904,7 @@ var objGooglebarLite = {
 		window.openDialog("chrome://googlebarlite/content/prefs.xul", "Googlebar Lite Options", "centerscreen,chrome,modal,toolbar");
 	},
 	
+/*
 	OptionsHaveUpdated: function()
 	{
 		// TODO: This function can eventually go away
@@ -984,7 +928,8 @@ var objGooglebarLite = {
 	
 		this.ValidateSearchHistorySetting();
 	},
-
+*/
+	
 	ParseQueryString: function(query)
 	{
 		var pieces = {};
@@ -1511,7 +1456,7 @@ var objGooglebarLite = {
 		window.getBrowser().removeProgressListener(objGooglebarLite.ProgressListener);
 		
 		window.removeEventListener('focus', objGooglebarLite.Resize, false);
-		window.removeEventListener('load', objGooglebarLite.Init, false);
+		window.removeEventListener('load', objGooglebarLite.Startup, false);
 		window.removeEventListener('resize', objGooglebarLite.Resize, false);
 		window.removeEventListener('unload', objGooglebarLite.Shutdown, false);
 	},
@@ -1600,6 +1545,55 @@ var objGooglebarLite = {
 		return myArray;
 	},
 
+	Startup: function()
+	{
+		// Only initialize if the main toolbar item is present
+		if(document.getElementById("GBL-Toolbar-MainItem") && objGooglebarLite.Initialized == false)
+		{
+			objGooglebarLite.Initialized = true;
+			objGooglebarLite.Transferable.addDataFlavor("text/unicode");
+			
+			objGooglebarLite.PrivateBrowsingListener = new GBL_PrivateBrowsingListener();
+			objGooglebarLite.PrivateBrowsingListener.watcher = {
+				onEnterPrivateBrowsing : function() {},
+				onExitPrivateBrowsing : function() { objGooglebarLite.SetSearchTerms(""); }
+			};
+			
+			objGooglebarLite.PrefObserver.register();
+	
+			window.getBrowser().addProgressListener(objGooglebarLite.ProgressListener);
+
+			var chevron = document.getElementById("GBL-Overflow-Button");
+			objGooglebarLite.OverflowButtonWidth = chevron.boxObject.width;
+			chevron.collapsed = true; // Initalize the overflow button to a hidden state
+	
+			setTimeout(function(){objGooglebarLite.DelayedStartup();}, 50); // Needs to happen after Firefox's delayedStartup()
+			
+			if(objGooglebarLite.PrefBranch.prefHasUserValue("prefs_version") == false)
+			{
+				objGooglebarLite.MigratePrefs(); // Migrate old preferences
+				objGooglebarLite.PrefBranch.setIntPref("prefs_version", 2);
+			}
+			
+			objGooglebarLite.LoadPrefs(); // Load stored preferences
+	
+			objGooglebarLite.ConfigureKeyboardShortcuts();
+			objGooglebarLite.UpdateButtons();
+			objGooglebarLite.UpdateContextMenuVisibility();
+			objGooglebarLite.UpdateSearchBoxSettings();
+			objGooglebarLite.UpdateUpMenu();
+			objGooglebarLite.TermsHaveUpdated();
+
+			if(window.opener != null)
+			{
+				var osb = window.opener.document.getElementById("GBL-SearchBox");
+				objGooglebarLite.SetSearchTerms(osb.value);
+			}
+	
+			setTimeout(function(){objGooglebarLite.ValidateSearchHistorySetting();}, 50);
+		}
+	},
+
 	TermsHaveUpdated: function()
 	{
 		if(this.TrimString(this.GetSearchTerms()) === "")
@@ -1655,9 +1649,9 @@ var objGooglebarLite = {
 			// since we don't know the state from which the user is coming
 	
 			// Do "first time" initialization if necessary
-			if(objGooglebarLite.RunOnce == false)
+			if(objGooglebarLite.Initialized == false)
 			{
-				objGooglebarLite.RunOnce = true;
+				objGooglebarLite.Initialized = true;
 				window.getBrowser().addProgressListener(objGooglebarLite.ProgressListener);
 				setTimeout(function(){objGooglebarLite.DelayedStartup();}, 1); // Needs to happen after Firefox's delayedStartup()
 			}
@@ -2059,7 +2053,7 @@ var objGooglebarLite = {
 	}
 };
 
-window.addEventListener('load', objGooglebarLite.Init, false);
+window.addEventListener('load', objGooglebarLite.Startup, false);
 window.addEventListener('resize', objGooglebarLite.Resize, false);
 window.addEventListener('unload', objGooglebarLite.Shutdown, false);
 
