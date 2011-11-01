@@ -2,12 +2,13 @@
 //Version History
 //***************
 [4.8.0]
++ Completely redesigned the options interface and the underlying code
 + Added a new option allowing users to disable Google search auto-correct
-+ Redesigned the options dialog
 + Extension options have been moved to the appropriate "extensions." branch
 + Menu items within the up button are no longer updated on every page load, improving performance
 + Minor performance improvements
 + Bug Fix: Several registered event listeners were not being removed on shutdown
++ Bug Fix: Secure searches no longer point to the old "beta" secure search website
 
 --
 

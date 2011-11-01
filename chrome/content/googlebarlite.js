@@ -493,7 +493,7 @@ var objGooglebarLite = {
 
 		if(useSecure != null && useSecure == true)
 		{
-			u = "https://encrypted.google.com/";
+			u = "https://www.google.com/";
 
 			if (searchTerms.length > 0)
 			{
