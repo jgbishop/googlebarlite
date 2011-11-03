@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
 <?xml-stylesheet href="chrome://mozapps/skin/pref/pref.css" type="text/css"?>
+<?xml-stylesheet href="chrome://googlebarlite/skin/gbl_overlay.css" type="text/css"?>
 <!DOCTYPE dialog SYSTEM "chrome://googlebarlite/locale/googlebarlite.dtd" >
 
 <prefwindow xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
