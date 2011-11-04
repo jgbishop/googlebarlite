@@ -108,7 +108,6 @@
 <!ENTITY gblite.options.tab.searchhistory "Povijest pretraživanja">
 <!ENTITY gblite.options.tab.keyboard "Tipkovničke kratice">
 <!ENTITY gblite.options.tab.context "Kontekstni izbornik">
-<!ENTITY gblite.options.label.general "Općenite postavke">
 <!ENTITY gblite.options.label.sitetouse "Goggle stranica koja će se koristiti:">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Promjena tipkovničke kratice za fokusiranje okvira za pretraživanje zahtijeva ponovno pokretanje preglednika.">
 <!ENTITY gblite.options.label.searchboxfocus "Postavi fokus okvira za pretraživanje">

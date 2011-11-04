@@ -108,7 +108,6 @@
 <!ENTITY gblite.options.tab.searchhistory "搜索历史">
 <!ENTITY gblite.options.tab.keyboard "键盘快捷键">
 <!ENTITY gblite.options.tab.context "右键菜单">
-<!ENTITY gblite.options.label.general "常规设置">
 <!ENTITY gblite.options.label.sitetouse "Google 站点使用:">
 <!ENTITY gblite.options.label.shortcutrestartwarning "改变搜索栏焦点设置需要重启浏览器">
 <!ENTITY gblite.options.label.searchboxfocus "设置搜索栏焦点">

@@ -108,7 +108,6 @@
 <!ENTITY gblite.options.tab.searchhistory "Cronologia ricerche">
 <!ENTITY gblite.options.tab.keyboard "Scorciatoie da tastiera">
 <!ENTITY gblite.options.tab.context "Menu contestuale">
-<!ENTITY gblite.options.label.general "Impostazioni generali">
 <!ENTITY gblite.options.label.sitetouse "Sito di Google da utilizzare:">
 <!ENTITY gblite.options.label.shortcutrestartwarning "La modifica della scorciatoia per spostare il fuoco sulla casella di ricerca richiede il riavvio del browser.">
 <!ENTITY gblite.options.label.searchboxfocus "Sposta il fuoco sulla casella di ricerca">

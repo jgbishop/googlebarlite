@@ -108,7 +108,6 @@
 <!ENTITY gblite.options.tab.searchhistory "Historial de Cerca">
 <!ENTITY gblite.options.tab.keyboard "Dreceres amb el teclat">
 <!ENTITY gblite.options.tab.context "Menú contextual">
-<!ENTITY gblite.options.label.general "Ajustaments Generals">
 <!ENTITY gblite.options.label.sitetouse "Pàgina de Google a utilitzar">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Canviar el focus de la capsa de Cerca requereix reiniciar el navegador">
 <!ENTITY gblite.options.label.searchboxfocus "Configura el focus de la Capsa de Cerca">

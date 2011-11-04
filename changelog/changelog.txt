@@ -6,7 +6,9 @@
 + Added a new option allowing users to disable Google search auto-correct
 + Extension options have been moved to the appropriate "extensions." branch
 + Menu items within the up button are no longer updated on every page load, improving performance
-+ Minor performance improvements
++ Choices in the search term auto-completion popup menu can now be navigated through with the Tab key
++ Several minor performance improvements
++ Bug Fix: Search terms no longer disappear from the search box when searching over a secure connection
 + Bug Fix: Several registered event listeners were not being removed on shutdown
 + Bug Fix: Secure searches no longer point to the old "beta" secure search website
 

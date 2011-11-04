@@ -108,7 +108,6 @@
 <!ENTITY gblite.options.tab.searchhistory "搜尋記錄">
 <!ENTITY gblite.options.tab.keyboard "鍵盤快捷鍵">
 <!ENTITY gblite.options.tab.context "右鍵選單">
-<!ENTITY gblite.options.label.general "一般設定">
 <!ENTITY gblite.options.label.sitetouse "使用的 Google 網站：">
 <!ENTITY gblite.options.label.shortcutrestartwarning "變更搜尋框焦點快捷鍵需要重新啟動Firefox.">
 <!ENTITY gblite.options.label.searchboxfocus "設定搜尋框焦點">

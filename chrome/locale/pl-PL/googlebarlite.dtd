@@ -108,7 +108,6 @@
 <!ENTITY gblite.options.tab.searchhistory "Historia wyszukiwania">
 <!ENTITY gblite.options.tab.keyboard "Skróty klawiaturowe">
 <!ENTITY gblite.options.tab.context "Menu kontekstowe">
-<!ENTITY gblite.options.label.general "Ustawienia ogólne">
 <!ENTITY gblite.options.label.sitetouse "Domyślna strona Google:">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Zmiana skrótu zostanie zastosowana po ponownym uruchomieniu przeglądarki.">
 <!ENTITY gblite.options.label.searchboxfocus "Uaktywniaj pole szukania skrótem:">

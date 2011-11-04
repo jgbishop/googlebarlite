@@ -112,7 +112,6 @@
 <!ENTITY gblite.options.tab.searchhistory "Otsiajalugu">
 <!ENTITY gblite.options.tab.keyboard "Kiirklahvid">
 <!ENTITY gblite.options.tab.context "Kontekstimenüü">
-<!ENTITY gblite.options.label.general "Üldsätted">
 <!ENTITY gblite.options.label.sitetouse "Kasutatav Google lehekülg">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Otsingukasti fookuse otsetee muutmine eeldab brauseri taaskäivitamist.">
 <!ENTITY gblite.options.label.searchboxfocus "Määra otsingukasti fookus">

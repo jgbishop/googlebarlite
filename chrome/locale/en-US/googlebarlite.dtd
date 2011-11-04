@@ -109,7 +109,6 @@
 <!ENTITY gblite.options.tab.searchhistory "Search History">
 <!ENTITY gblite.options.tab.keyboard "Keyboard Shortcuts">
 <!ENTITY gblite.options.tab.context "Context Menu">
-<!ENTITY gblite.options.label.general "General Settings">
 <!ENTITY gblite.options.label.sitetouse "Google site to use:">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Changing the search box focus shortcut requires a restart of the browser.">
 <!ENTITY gblite.options.label.searchboxfocus "Set Search Box Focus">

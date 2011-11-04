@@ -17,6 +17,8 @@
 	<command id="GBL-Command-PasteAndSearch" oncommand="objGooglebarLite.PasteAndSearch()" />
 </commandset>
 
+<panel id="GBL-PopupAutoComplete" noautofocus="true" hidden="true" />
+
 <window id="main-window">
 	<keyset id="GBL-KeySet">
 		<key id="GBL-Focus-Key" key="S" modifiers="accel,shift" oncommand="objGooglebarLite.SetFocus(event);" />
@@ -158,11 +160,14 @@
 					type="autocomplete"
 					autocompletesearch="form-history"
 					autocompletesearchparam="GBL-Search-History"
+					autocompletepopup="GBL-PopupAutoComplete"
 					completedefaultindex="false"
+					completeselectedindex="true"
 					disableautocomplete="false"
 					ontextentered="objGooglebarLite.SearchBoxTextEntered(param);"
 					oninput="objGooglebarLite.TermsHaveUpdated();"
 					enablehistory="true"
+					tabscrolling="true"
 					flex="1"
 					minwidth="100"
 					width="175" />

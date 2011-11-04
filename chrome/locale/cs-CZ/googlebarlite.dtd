@@ -108,7 +108,6 @@
 <!ENTITY gblite.options.tab.searchhistory "Historie hledání">
 <!ENTITY gblite.options.tab.keyboard "Klávesové zkratky">
 <!ENTITY gblite.options.tab.context "Kontextové menu">
-<!ENTITY gblite.options.label.general "Hlavní nastavení">
 <!ENTITY gblite.options.label.sitetouse "Používat Google stránku">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Změna klávesové zkratky vyžaduje restart prohlížeče.">
 <!ENTITY gblite.options.label.searchboxfocus "Přejde do vyhledávacího okénka">

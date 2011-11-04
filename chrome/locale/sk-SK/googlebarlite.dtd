@@ -108,7 +108,6 @@
 <!ENTITY gblite.options.tab.searchhistory "História vyhľadávania">
 <!ENTITY gblite.options.tab.keyboard "Klávesové skratky">
 <!ENTITY gblite.options.tab.context "Kontextová ponuka">
-<!ENTITY gblite.options.label.general "Všeobecné nastavenia">
 <!ENTITY gblite.options.label.sitetouse "Použiť stránku Google:">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Zmena skratky pre záber vyhľadávacieho poľa vyžaduje reštart prehliadača">
 <!ENTITY gblite.options.label.searchboxfocus "Nastaviť záber vyhľadávacieho poľa">

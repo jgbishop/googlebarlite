@@ -5,7 +5,11 @@
 <!DOCTYPE dialog SYSTEM "chrome://googlebarlite/locale/googlebarlite.dtd" >
 
 <prefwindow xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
-		id="GBL-PrefWindow" buttons="accept,cancel" title="&gblite.options.title;">
+		id="GBL-PrefWindow" buttons="accept,cancel" title="&gblite.options.title;"
+		onload="objGooglebarLitePrefs.InitUI();">
+		
+	<script type="application/x-javascript" src="chrome://googlebarlite/content/prefs.js"/>
+	
 	<prefpane id="GBL-PrefPane-General" label="&gblite.options.tab.general;">
 		<preferences>
 			<preference id="GBL-Pref-ClickSelectsAll" name="extensions.googlebarlite.click_selects_all" type="bool" />
@@ -17,118 +21,115 @@
 			<preference id="GBL-Pref-SiteToUse" name="extensions.googlebarlite.site_to_use" type="string" />
 		</preferences>
 		
-		<groupbox>
-			<caption label="&gblite.options.label.general;"/>
-			<checkbox id="GBL-Opt-ClickSelectsAll" label="&gblite.options.clickselectsall;" preference="GBL-Pref-ClickSelectsAll" />
-			<checkbox id="GBL-Opt-SearchInTab" label="&gblite.options.searchintab;" preference="GBL-Pref-SearchInTab" />
-			<checkbox id="GBL-Opt-RememberCombined" label="&gblite.options.remembercombined;" preference="GBL-Pref-RememberCombined" />
-			<checkbox id="GBL-Opt-SearchOnDragDrop" label="&gblite.options.searchondragdrop;" preference="GBL-Pref-SearchDragDrop" />
-			<checkbox id="GBL-Opt-DisableAutoCorrect" label="&gblite.options.disableautocorrect;" preference="GBL-Pref-DisableAutoCorrect" />
-			<checkbox id="GBL-Opt-UseSecureSearch" label="&gblite.options.usesecuresearch;" preference="GBL-Pref-UseSecureSearch" />
-			
-			<separator class="thin" />
-			
-			<hbox align="center">
-				<label value="&gblite.options.label.sitetouse;" />
-				<menulist id="GBL-Opt-SiteToUse" preference="GBL-Pref-SiteToUse">
-					<menupopup>
-						<menuitem label="google.com" value="google.com" />
-						<menuitem label="google.ae" value="google.ae" />
-						<menuitem label="google.com.ar" value="google.com.ar" />
-						<menuitem label="google.as" value="google.as" />
-						<menuitem label="google.at" value="google.at" />
-						<menuitem label="google.com.au" value="google.com.au" />
-						<menuitem label="google.az" value="google.az" />
-						<menuitem label="google.be" value="google.be" />
-						<menuitem label="google.bi" value="google.bi" />
-						<menuitem label="google.com.br" value="google.com.br" />
-						<menuitem label="google.ca" value="google.ca" />
-						<menuitem label="google.cd" value="google.cd" />
-						<menuitem label="google.cg" value="google.cg" />
-						<menuitem label="google.ch" value="google.ch" />
-						<menuitem label="google.cl" value="google.cl" />
-						<menuitem label="google.cn" value="google.cn" />
-						<menuitem label="google.com.co" value="google.com.co" />
-						<menuitem label="google.co.cr" value="google.co.cr" />
-						<menuitem label="google.com.cu" value="google.com.cu" />
-						<menuitem label="google.de" value="google.de" />
-						<menuitem label="google.dj" value="google.dj" />
-						<menuitem label="google.dk" value="google.dk" />
-						<menuitem label="google.com.do" value="google.com.do" />
-						<menuitem label="google.com.eg" value="google.com.eg" />
-						<menuitem label="google.es" value="google.es" />
-						<menuitem label="google.fi" value="google.fi" />
-						<menuitem label="google.com.fj" value="google.com.fj" />
-						<menuitem label="google.fm" value="google.fm" />
-						<menuitem label="google.fr" value="google.fr" />
-						<menuitem label="google.gg" value="google.gg" />
-						<menuitem label="google.gl" value="google.gl" />
-						<menuitem label="google.gm" value="google.gm" />
-						<menuitem label="google.com.gr" value="google.com.gr" />
-						<menuitem label="google.com.hk" value="google.com.hk" />
-						<menuitem label="google.hn" value="google.hn" />
-						<menuitem label="google.hr" value="google.hr" />
-						<menuitem label="google.co.hu" value="google.co.hu" />
-						<menuitem label="google.ie" value="google.ie" />
-						<menuitem label="google.co.il" value="google.co.il" />
-						<menuitem label="google.co.in" value="google.co.in" />
-						<menuitem label="google.it" value="google.it" />
-						<menuitem label="google.co.je" value="google.co.je" />
-						<menuitem label="google.co.jp" value="google.co.jp" />
-						<menuitem label="google.co.kr" value="google.co.kr" />
-						<menuitem label="google.kz" value="google.kz" />
-						<menuitem label="google.li" value="google.li" />
-						<menuitem label="google.co.ls" value="google.co.ls" />
-						<menuitem label="google.lt" value="google.lt" />
-						<menuitem label="google.lu" value="google.lu" />
-						<menuitem label="google.lv" value="google.lv" />
-						<menuitem label="google.com.ly" value="google.com.ly" />
-						<menuitem label="google.ms" value="google.ms" />
-						<menuitem label="google.com.mt" value="google.com.mt" />
-						<menuitem label="google.mu" value="google.mu" />
-						<menuitem label="google.mw" value="google.mw" />
-						<menuitem label="google.com.mx" value="google.com.mx" />
-						<menuitem label="google.com.my" value="google.com.my" />
-						<menuitem label="google.com.nf" value="google.com.nf" />
-						<menuitem label="google.com.ni" value="google.com.ni" />
-						<menuitem label="google.nl" value="google.nl" />
-						<menuitem label="google.no" value="google.no" />
-						<menuitem label="google.com.np" value="google.com.np" />
-						<menuitem label="google.co.nz" value="google.co.nz" />
-						<menuitem label="google.com.pa" value="google.com.pa" />
-						<menuitem label="google.com.pe" value="google.com.pe" />
-						<menuitem label="google.com.ph" value="google.com.ph" />
-						<menuitem label="google.com.pk" value="google.com.pk" />
-						<menuitem label="google.pl" value="google.pl" />
-						<menuitem label="google.pn" value="google.pn" />
-						<menuitem label="google.com.pr" value="google.com.pr" />
-						<menuitem label="google.pt" value="google.pt" />
-						<menuitem label="google.com.py" value="google.com.py" />
-						<menuitem label="google.ro" value="google.ro" />
-						<menuitem label="google.ru" value="google.ru" />
-						<menuitem label="google.rw" value="google.rw" />
-						<menuitem label="google.se" value="google.se" />
-						<menuitem label="google.com.sg" value="google.com.sg" />
-						<menuitem label="google.sh" value="google.sh" />
-						<menuitem label="google.sk" value="google.sk" />
-						<menuitem label="google.sm" value="google.sm" />
-						<menuitem label="google.com.sv" value="google.com.sv" />
-						<menuitem label="google.co.th" value="google.co.th" />
-						<menuitem label="google.com.tr" value="google.com.tr" />
-						<menuitem label="google.com.tw" value="google.com.tw" />
-						<menuitem label="google.com.ua" value="google.com.ua" />
-						<menuitem label="google.co.uk" value="google.co.uk" />
-						<menuitem label="google.com.uy" value="google.com.uy" />
-						<menuitem label="google.uz" value="google.uz" />
-						<menuitem label="google.com.vc" value="google.com.vc" />
-						<menuitem label="google.co.ve" value="google.co.ve" />
-						<menuitem label="google.vg" value="google.vg" />
-						<menuitem label="google.com.vn" value="google.com.vn" />
-						<menuitem label="google.co.za" value="google.co.za" />
-					</menupopup>
-				</menulist>
-			</hbox>
-		</groupbox>
+		<checkbox id="GBL-Opt-ClickSelectsAll" label="&gblite.options.clickselectsall;" preference="GBL-Pref-ClickSelectsAll" />
+		<checkbox id="GBL-Opt-SearchInTab" label="&gblite.options.searchintab;" preference="GBL-Pref-SearchInTab" />
+		<checkbox id="GBL-Opt-RememberCombined" label="&gblite.options.remembercombined;" preference="GBL-Pref-RememberCombined" />
+		<checkbox id="GBL-Opt-SearchOnDragDrop" label="&gblite.options.searchondragdrop;" preference="GBL-Pref-SearchDragDrop" />
+		<checkbox id="GBL-Opt-DisableAutoCorrect" label="&gblite.options.disableautocorrect;" preference="GBL-Pref-DisableAutoCorrect" />
+		<checkbox id="GBL-Opt-UseSecureSearch" label="&gblite.options.usesecuresearch;" preference="GBL-Pref-UseSecureSearch" />
+		
+		<separator class="thin" />
+		
+		<hbox align="center">
+			<label value="&gblite.options.label.sitetouse;" />
+			<menulist id="GBL-Opt-SiteToUse" preference="GBL-Pref-SiteToUse">
+				<menupopup>
+					<menuitem label="google.com" value="google.com" />
+					<menuitem label="google.ae" value="google.ae" />
+					<menuitem label="google.com.ar" value="google.com.ar" />
+					<menuitem label="google.as" value="google.as" />
+					<menuitem label="google.at" value="google.at" />
+					<menuitem label="google.com.au" value="google.com.au" />
+					<menuitem label="google.az" value="google.az" />
+					<menuitem label="google.be" value="google.be" />
+					<menuitem label="google.bi" value="google.bi" />
+					<menuitem label="google.com.br" value="google.com.br" />
+					<menuitem label="google.ca" value="google.ca" />
+					<menuitem label="google.cd" value="google.cd" />
+					<menuitem label="google.cg" value="google.cg" />
+					<menuitem label="google.ch" value="google.ch" />
+					<menuitem label="google.cl" value="google.cl" />
+					<menuitem label="google.cn" value="google.cn" />
+					<menuitem label="google.com.co" value="google.com.co" />
+					<menuitem label="google.co.cr" value="google.co.cr" />
+					<menuitem label="google.com.cu" value="google.com.cu" />
+					<menuitem label="google.de" value="google.de" />
+					<menuitem label="google.dj" value="google.dj" />
+					<menuitem label="google.dk" value="google.dk" />
+					<menuitem label="google.com.do" value="google.com.do" />
+					<menuitem label="google.com.eg" value="google.com.eg" />
+					<menuitem label="google.es" value="google.es" />
+					<menuitem label="google.fi" value="google.fi" />
+					<menuitem label="google.com.fj" value="google.com.fj" />
+					<menuitem label="google.fm" value="google.fm" />
+					<menuitem label="google.fr" value="google.fr" />
+					<menuitem label="google.gg" value="google.gg" />
+					<menuitem label="google.gl" value="google.gl" />
+					<menuitem label="google.gm" value="google.gm" />
+					<menuitem label="google.com.gr" value="google.com.gr" />
+					<menuitem label="google.com.hk" value="google.com.hk" />
+					<menuitem label="google.hn" value="google.hn" />
+					<menuitem label="google.hr" value="google.hr" />
+					<menuitem label="google.co.hu" value="google.co.hu" />
+					<menuitem label="google.ie" value="google.ie" />
+					<menuitem label="google.co.il" value="google.co.il" />
+					<menuitem label="google.co.in" value="google.co.in" />
+					<menuitem label="google.it" value="google.it" />
+					<menuitem label="google.co.je" value="google.co.je" />
+					<menuitem label="google.co.jp" value="google.co.jp" />
+					<menuitem label="google.co.kr" value="google.co.kr" />
+					<menuitem label="google.kz" value="google.kz" />
+					<menuitem label="google.li" value="google.li" />
+					<menuitem label="google.co.ls" value="google.co.ls" />
+					<menuitem label="google.lt" value="google.lt" />
+					<menuitem label="google.lu" value="google.lu" />
+					<menuitem label="google.lv" value="google.lv" />
+					<menuitem label="google.com.ly" value="google.com.ly" />
+					<menuitem label="google.ms" value="google.ms" />
+					<menuitem label="google.com.mt" value="google.com.mt" />
+					<menuitem label="google.mu" value="google.mu" />
+					<menuitem label="google.mw" value="google.mw" />
+					<menuitem label="google.com.mx" value="google.com.mx" />
+					<menuitem label="google.com.my" value="google.com.my" />
+					<menuitem label="google.com.nf" value="google.com.nf" />
+					<menuitem label="google.com.ni" value="google.com.ni" />
+					<menuitem label="google.nl" value="google.nl" />
+					<menuitem label="google.no" value="google.no" />
+					<menuitem label="google.com.np" value="google.com.np" />
+					<menuitem label="google.co.nz" value="google.co.nz" />
+					<menuitem label="google.com.pa" value="google.com.pa" />
+					<menuitem label="google.com.pe" value="google.com.pe" />
+					<menuitem label="google.com.ph" value="google.com.ph" />
+					<menuitem label="google.com.pk" value="google.com.pk" />
+					<menuitem label="google.pl" value="google.pl" />
+					<menuitem label="google.pn" value="google.pn" />
+					<menuitem label="google.com.pr" value="google.com.pr" />
+					<menuitem label="google.pt" value="google.pt" />
+					<menuitem label="google.com.py" value="google.com.py" />
+					<menuitem label="google.ro" value="google.ro" />
+					<menuitem label="google.ru" value="google.ru" />
+					<menuitem label="google.rw" value="google.rw" />
+					<menuitem label="google.se" value="google.se" />
+					<menuitem label="google.com.sg" value="google.com.sg" />
+					<menuitem label="google.sh" value="google.sh" />
+					<menuitem label="google.sk" value="google.sk" />
+					<menuitem label="google.sm" value="google.sm" />
+					<menuitem label="google.com.sv" value="google.com.sv" />
+					<menuitem label="google.co.th" value="google.co.th" />
+					<menuitem label="google.com.tr" value="google.com.tr" />
+					<menuitem label="google.com.tw" value="google.com.tw" />
+					<menuitem label="google.com.ua" value="google.com.ua" />
+					<menuitem label="google.co.uk" value="google.co.uk" />
+					<menuitem label="google.com.uy" value="google.com.uy" />
+					<menuitem label="google.uz" value="google.uz" />
+					<menuitem label="google.com.vc" value="google.com.vc" />
+					<menuitem label="google.co.ve" value="google.co.ve" />
+					<menuitem label="google.vg" value="google.vg" />
+					<menuitem label="google.com.vn" value="google.com.vn" />
+					<menuitem label="google.co.za" value="google.co.za" />
+				</menupopup>
+			</menulist>
+		</hbox>
 	</prefpane>
 	
 	<prefpane id="GBL-PrefPane-Buttons" label="&gblite.options.tab.buttons;">
@@ -231,11 +232,11 @@
 		
 		<checkbox id="GBL-Opt-WarnOnFormHistory" label="&gblite.options.warnonformhistory;" preference="GBL-Pref-WarnOnFormHistory" />
 		<checkbox id="GBL-Opt-MaintainHistory" label="&gblite.options.maintainhistory;" preference="GBL-Pref-MaintainHistory"
-				  oncommand="objGooglebarLiteOptions.UpdateSearchHistoryStatus();" />
+				  oncommand="objGooglebarLitePrefs.UpdateSearchHistoryStatus();" />
 		
 		<vbox class="GBL-Indent">
 			<checkbox id="GBL-Opt-EnableAutoComplete" label="&gblite.options.autocomplete;" flex="1" preference="GBL-Pref-EnableAutoComplete"
-					  oncommand="objGooglebarLiteOptions.UpdateUseInlineCompleteStatus();" />
+					  oncommand="objGooglebarLitePrefs.UpdateUseInlineCompleteStatus();" />
 			<checkbox id="GBL-Opt-UseInlineComplete" label="&gblite.options.inlinecomplete;" preference="GBL-Pref-UseInlineComplete" />
 			<checkbox id="GBL-Opt-AutoSearch" label="&gblite.options.autosearchhistory;" preference="GBL-Pref-AutoSearch" />
 			<checkbox id="GBL-Opt-PromptToClearHistory" label="&gblite.options.prompttoclear;" preference="GBL-Pref-PromptToClear" />
@@ -353,7 +354,8 @@
 			<preference id="GBL-Pref-CM-Translate" name="extensions.googlebarlite.context.translate" type="bool" />
 		</preferences>
 		
-		<checkbox id="GBL-Opt-CM-ShowContext" label="&gblite.options.showcontext;" preference="GBL-Pref-CM-ShowContext" />
+		<checkbox id="GBL-Opt-CM-ShowContext" label="&gblite.options.showcontext;" preference="GBL-Pref-CM-ShowContext" 
+					oncommand="objGooglebarLitePrefs.UpdateShowContextMenuStatus();"/>
 		<separator class="thin" />
 		<hbox>
 			<vbox>

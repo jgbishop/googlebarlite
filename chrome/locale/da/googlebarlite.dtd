@@ -108,7 +108,6 @@
 <!ENTITY gblite.options.tab.searchhistory "Søgehistorik">
 <!ENTITY gblite.options.tab.keyboard "Tastaturgenveje">
 <!ENTITY gblite.options.tab.context "Genvejsmenu">
-<!ENTITY gblite.options.label.general "Generelle indstillinger">
 <!ENTITY gblite.options.label.sitetouse "Brug Google-websted:">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Ændring af tastaturgenvejen for søgefeltet kræver genstart af browseren.">
 <!ENTITY gblite.options.label.searchboxfocus "Sæt søgeboks-fokus">

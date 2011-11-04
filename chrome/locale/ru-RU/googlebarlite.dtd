@@ -108,7 +108,6 @@
 <!ENTITY gblite.options.tab.searchhistory "История запросов">
 <!ENTITY gblite.options.tab.keyboard "Клавиатурные сокращения">
 <!ENTITY gblite.options.tab.context "Контекстное меню">
-<!ENTITY gblite.options.label.general "Основные настройки">
 <!ENTITY gblite.options.label.sitetouse "Использовать сайт Google">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Изменение режима активности поля поиска требует перезагрузки приложения">
 <!ENTITY gblite.options.label.searchboxfocus "Установить активным поле поиска">

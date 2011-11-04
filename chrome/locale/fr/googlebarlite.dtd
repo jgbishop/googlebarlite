@@ -108,7 +108,6 @@
 <!ENTITY gblite.options.tab.searchhistory "Historique des recherches">
 <!ENTITY gblite.options.tab.keyboard "Raccourcis clavier">
 <!ENTITY gblite.options.tab.context "Menu contextuel">
-<!ENTITY gblite.options.label.general "Paramètres généraux">
 <!ENTITY gblite.options.label.sitetouse "Utiliser le site Google:">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Un changement du raccourci de la mise à l&apos;avant de la boîte de recherche nécessite un redémarrage du navigateur.">
 <!ENTITY gblite.options.label.searchboxfocus "Activer la mise à l&apos;avant de la boîte de recherche">

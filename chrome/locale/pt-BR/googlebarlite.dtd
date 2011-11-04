@@ -108,7 +108,6 @@
 <!ENTITY gblite.options.tab.searchhistory "Histórico de pesquisas">
 <!ENTITY gblite.options.tab.keyboard "Atalhos de teclado">
 <!ENTITY gblite.options.tab.context "Menu de contexto">
-<!ENTITY gblite.options.label.general "Configurações gerais">
 <!ENTITY gblite.options.label.sitetouse "Site do Google a ser utilizado:">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Modificar a tecla de atalho para foco na caixa de pesquisa requer uma reinicialização do navegador.">
 <!ENTITY gblite.options.label.searchboxfocus "Dar foco à caixa de pesquisa">

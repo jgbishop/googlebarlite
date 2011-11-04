@@ -108,7 +108,6 @@
 <!ENTITY gblite.options.tab.searchhistory "Such-Chronik">
 <!ENTITY gblite.options.tab.keyboard "Tastaturkürzel">
 <!ENTITY gblite.options.tab.context "Kontextmenü">
-<!ENTITY gblite.options.label.general "Allgemeine Einstellungen">
 <!ENTITY gblite.options.label.sitetouse "Google-Website verwenden:">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Ändern des Tastaturkürzels zum Fokussieren der Suchleiste erfordert einen Neustart des Browsers.">
 <!ENTITY gblite.options.label.searchboxfocus "Suchleiste fokussieren">

@@ -112,7 +112,6 @@
 <!ENTITY gblite.options.tab.searchhistory "Zoekgeschiedenis">
 <!ENTITY gblite.options.tab.keyboard "Sneltoetsen">
 <!ENTITY gblite.options.tab.context "Contextmenu">
-<!ENTITY gblite.options.label.general "Algemene instellingen">
 <!ENTITY gblite.options.label.sitetouse "Te gebruiken Google site:">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Het wijzigen van de zoekvenster activering vereist het opnieuw starten van de browser.">
 <!ENTITY gblite.options.label.searchboxfocus "Zoekvenster actief maken">

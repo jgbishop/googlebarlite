@@ -108,7 +108,6 @@
 <!ENTITY gblite.options.tab.searchhistory "Ιστορικό Αναζήτησης">
 <!ENTITY gblite.options.tab.keyboard "Συντομεύσεις Πληκτρολογίου">
 <!ENTITY gblite.options.tab.context "Μενού Περιεχομένων">
-<!ENTITY gblite.options.label.general "Γενικές Ρυθμίσεις">
 <!ENTITY gblite.options.label.sitetouse "Ιστοσελίδα του Google προς χρήση:">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Η αλλαγή της συντόμευσης για την εστίαση στο πεδίο αναζήτησης απαιτεί επανεκκίνηση του προγράμματος περιήγησης.">
 <!ENTITY gblite.options.label.searchboxfocus "Ορισμός Εστίασης Πεδίου Αναζήτησης">

@@ -108,7 +108,6 @@
 <!ENTITY gblite.options.tab.searchhistory "検索履歴">
 <!ENTITY gblite.options.tab.keyboard "キーボードショートカット">
 <!ENTITY gblite.options.tab.context "コンテキストメニュー">
-<!ENTITY gblite.options.label.general "一般設定">
 <!ENTITY gblite.options.label.sitetouse "使用するグーグルサイト:">
 <!ENTITY gblite.options.label.shortcutrestartwarning "検索ボックスへのフォーカスのショートカットを変更するには再起動する必要があります">
 <!ENTITY gblite.options.label.searchboxfocus "検索ボックスにフォーカスする">

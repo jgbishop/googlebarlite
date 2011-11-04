@@ -108,7 +108,6 @@
 <!ENTITY gblite.options.tab.searchhistory "Arama Geçmişi">
 <!ENTITY gblite.options.tab.keyboard "Klavye Kısayolları">
 <!ENTITY gblite.options.tab.context "Bağlam Menüsü">
-<!ENTITY gblite.options.label.general "Genel Ayarlar">
 <!ENTITY gblite.options.label.sitetouse "Kullanılacak Google Sitesi:">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Arama kutusu odağının değiştirilmesi tarayıcıyı yeniden başlatmayı gerektirir.">
 <!ENTITY gblite.options.label.searchboxfocus "Arama Kutusu Odağını Ayarla">
