@@ -115,11 +115,13 @@
 <!ENTITY gblite.options.label.shiftenter "Shift + Enter fa">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter fa">
 <!ENTITY gblite.options.label.shiftctrlenter "Shift + Ctrl + Enter fa">
+<!ENTITY gblite.options.label.searchbuttons "Botons de Cerca">
 <!ENTITY gblite.options.label.commonbuttons "Ajustaments Generals / Buttons comuns">
 <!ENTITY gblite.options.clickselectsall "Un sol click selecciona tots els termes de cerca">
 <!ENTITY gblite.options.searchintab "Obre els resultats de la cerca en una nova pestanya (si necessari)">
 <!ENTITY gblite.options.remembercombined "Recorda l&apos;últim tipus de cerca del menú combinat">
 <!ENTITY gblite.options.searchondragdrop "Cerca automaticament al arrossegar i deixar anar (Drag &amp; Drop)">
+<!ENTITY gblite.options.disableautocorrect "Desactiva la autocorrecció de Google">
 <!ENTITY gblite.options.usesecuresearch "Use secure search where possible">
 <!ENTITY gblite.options.warnonformhistory "Avisa&apos;m quan l&apos;Historial de formularis estigui deshabilitat a Firefox">
 <!ENTITY gblite.options.maintainhistory "Mantenir l&apos;historial de cerca">

@@ -115,11 +115,13 @@
 <!ENTITY gblite.options.label.shiftenter "Mayús. + Enter hace">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter hace">
 <!ENTITY gblite.options.label.shiftctrlenter "Mayús. + Ctrl + Enter hace">
+<!ENTITY gblite.options.label.searchbuttons "Botones de búsqueda">
 <!ENTITY gblite.options.label.commonbuttons "Opciones generales / Botones comunes">
 <!ENTITY gblite.options.clickselectsall "Un clic sencillo en la caja de búsqueda selecciona todos sus términos">
 <!ENTITY gblite.options.searchintab "Mostrar resultados en una pestaña nueva (si es preciso)">
 <!ENTITY gblite.options.remembercombined "Recordar el tipo de la última búsqueda del menú combinado">
 <!ENTITY gblite.options.searchondragdrop "Buscar automáticamente al arrastrar y soltar">
+<!ENTITY gblite.options.disableautocorrect "Desactivar la autocorrección en búsquedas de Google">
 <!ENTITY gblite.options.usesecuresearch "Usar búsqueda segura si es posible">
 <!ENTITY gblite.options.warnonformhistory "Avisarme si el historial de formularios está desactivado en Firefox">
 <!ENTITY gblite.options.maintainhistory "Mantener un historial de búsquedas">

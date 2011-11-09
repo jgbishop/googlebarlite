@@ -18,10 +18,10 @@ locale	googlebarlite	hr-HR	chrome/locale/hr-HR/
 locale	googlebarlite	it-IT	chrome/locale/it-IT/
 locale	googlebarlite	ja-JP	chrome/locale/ja-JP/
 locale	googlebarlite	nl	chrome/locale/nl/
-locale	googlebarlite	pl-PL	chrome/locale/pl-PL/
+locale	googlebarlite	pl	chrome/locale/pl/
 locale	googlebarlite	pt-BR	chrome/locale/pt-BR/
 locale	googlebarlite	ru-RU	chrome/locale/ru-RU/
 locale	googlebarlite	sk-SK	chrome/locale/sk-SK/
-locale	googlebarlite	tr-TR	chrome/locale/tr-TR/
+locale	googlebarlite	tr	chrome/locale/tr/
 locale	googlebarlite	zh-CN	chrome/locale/zh-CN/
 locale	googlebarlite	zh-TW	chrome/locale/zh-TW/

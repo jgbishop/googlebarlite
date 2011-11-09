@@ -8,9 +8,13 @@
 + Menu items within the up button are no longer updated on every page load, improving performance
 + Choices in the search term auto-completion popup menu can now be navigated through with the Tab key
 + Several minor performance improvements
++ The minimum supported Firefox version has been changed from 2.0 to 3.6
++ The maximum supported Firefox version has been changed to 15.*
++ Various locale updates
 + Bug Fix: Search terms no longer disappear from the search box when searching over a secure connection
 + Bug Fix: Several registered event listeners were not being removed on shutdown
 + Bug Fix: Secure searches no longer point to the old "beta" secure search website
++ Bug Fix: Corrected a minor bug in the Catalan (ca-AD) locale that affected the Google search site URL
 
 --
 

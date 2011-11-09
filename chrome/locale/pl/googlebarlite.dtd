@@ -2,7 +2,7 @@
 <!ENTITY gblite.name "Googlebar Lite">
 <!ENTITY gblite.toolbar.name "Pasek narzędzi Googlebar Lite">
 <!ENTITY gblite.ak.name "G">
-<!ENTITY gblite.toggle.toolbar "Toggle GBL Toolbar">
+<!ENTITY gblite.toggle.toolbar "Włącz/wyłącz pasek narzędzi GBL">
 <!ENTITY gblite.searchtype.web "Szukaj w sieci">
 <!ENTITY gblite.searchtype.lucky "Szczęśliwy traf">
 <!ENTITY gblite.searchtype.site "Szukaj na tej witrynie">
@@ -16,21 +16,21 @@
 <!ENTITY gblite.searchtype.book "Książki Google">
 <!ENTITY gblite.searchtype.finance "Google Finance">
 <!ENTITY gblite.searchtype.scholar "Google Scholar">
-<!ENTITY gblite.searchtype.dictionary "Google Dictionary">
-<!ENTITY gblite.context.web "Przeszukuj sieć w poszukiwaniu zaznaczonego tekstu">
+<!ENTITY gblite.searchtype.dictionary "Słownik Google">
+<!ENTITY gblite.context.web "Znajdź zaznaczony tekst w sieci">
 <!ENTITY gblite.context.ak.web "S">
-<!ENTITY gblite.context.site "Przeszukuj tę witrynę w poszukiwaniu zaznaczonego tekstu">
+<!ENTITY gblite.context.site "Znajdź zaznaczony tekst na tej witrynie">
 <!ENTITY gblite.context.ak.site "W">
-<!ENTITY gblite.context.images "Przeszukuj grafikę Google w poszukiwaniu zaznaczonego tekstu">
+<!ENTITY gblite.context.images "Znajdź zaznaczony tekst w grafice Google">
 <!ENTITY gblite.context.ak.images "O">
-<!ENTITY gblite.context.video "Przeszukuj Google wideo w poszukiwaniu zaznaczonego tekstu">
+<!ENTITY gblite.context.video "Znajdź zaznaczony tekst w Google wideo">
 <!ENTITY gblite.context.ak.video "D">
-<!ENTITY gblite.context.groups "Przeszukuj grupy dyskusyjne w poszukiwaniu zaznaczonego tekstu">
+<!ENTITY gblite.context.groups "Znajdź zaznaczony tekst w grupach dyskusyjnych">
 <!ENTITY gblite.context.ak.groups "G">
-<!ENTITY gblite.context.maps "Przeszukuj mapy Google w poszukiwaniu zaznaczonego tekstu">
+<!ENTITY gblite.context.maps "Znajdź zaznaczony tekst w mapach Google">
 <!ENTITY gblite.context.ak.maps "M">
-<!ENTITY gblite.context.dictionary "Search Google Dictionary for Selected Text">
-<!ENTITY gblite.context.ak.dictionary "D">
+<!ENTITY gblite.context.dictionary "Znajdź zaznaczony tekst w słowniku Google">
+<!ENTITY gblite.context.ak.dictionary "S">
 <!ENTITY gblite.context.backwardlinks "Wyświetl odnośniki wsteczne">
 <!ENTITY gblite.context.ak.backwardlinks "O">
 <!ENTITY gblite.context.cached "Wyświetl kopię tej strony z pamięci podręcznej">
@@ -96,7 +96,7 @@
 <!ENTITY gblite.tt.video "Wyszukaj w Google Video">
 <!ENTITY gblite.tt.maps "Wyszukaj w mapach Google">
 <!ENTITY gblite.tt.scholar "Wyszukaj dokumenty naukowe">
-<!ENTITY gblite.tt.dictionary "Search Google Dictionary">
+<!ENTITY gblite.tt.dictionary "Przeszukaj słownik Google">
 <!ENTITY gblite.tt.up "Przejdź poziom do góry">
 <!ENTITY gblite.tt.highlighter "Włącz/Wyłącz wyróżnianie wyników na tej stronie">
 <!ENTITY gblite.tt.overflow "Szukaj wyrażeń (kontynuacja)">
@@ -115,25 +115,27 @@
 <!ENTITY gblite.options.label.shiftenter "Shift + Enter wywołuje">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter wywołuje">
 <!ENTITY gblite.options.label.shiftctrlenter "Ctrl + Shift + Enter wywołuje">
+<!ENTITY gblite.options.label.searchbuttons "Przyciski wyszukiwania">
 <!ENTITY gblite.options.label.commonbuttons "Wyświetlaj na pasku narzędzi i w ustawieniach przyciski:">
 <!ENTITY gblite.options.clickselectsall "Kliknięcie w pasku szukania zaznacza wszystkie szukane frazy">
 <!ENTITY gblite.options.searchintab "Otwieraj wyniki szukania w nowej karcie (jeśli jest to niezbędne)">
 <!ENTITY gblite.options.remembercombined "Zapamiętuj ostatni typ menu wyszukiwania">
 <!ENTITY gblite.options.searchondragdrop "Automatycznie wyszukuj po przeciągnięciu i upuszczeniu">
-<!ENTITY gblite.options.usesecuresearch "Use secure search where possible">
+<!ENTITY gblite.options.disableautocorrect "Wyłącz automatyczną korektę wyszukiwania">
+<!ENTITY gblite.options.usesecuresearch "Używaj bezpiecznego wyszukiwania, jeśli jest możliwe">
 <!ENTITY gblite.options.warnonformhistory "Powiadamiaj, gdy w Firefoksie jest wyłączona historia">
 <!ENTITY gblite.options.maintainhistory "Zachowuj historię wyszukiwania">
 <!ENTITY gblite.options.autocomplete "Włącz autouzupełnianie">
 <!ENTITY gblite.options.inlinecomplete "Uzupełniaj w wierszu">
 <!ENTITY gblite.options.autosearchhistory "Automatycznie rozpoczynaj wyszukiwanie, gdy element zostanie wybrany z historii">
-<!ENTITY gblite.options.ignoredictionary "Ignore Google Dictionary searches in history">
+<!ENTITY gblite.options.ignoredictionary "Pomijaj  w historii wyszukiwania słownika Google">
 <!ENTITY gblite.options.prompttoclear "Ostrzegaj przed czyszczeniem historii wyszukiwania">
 <!ENTITY gblite.options.showlabels "Wyświetlaj etykiety przycisków">
 <!ENTITY gblite.options.showsearchwords "Szukany tekst">
 <!ENTITY gblite.options.showhighlighter "Wyróżnij">
 <!ENTITY gblite.options.showup "W górę">
 <!ENTITY gblite.options.showcombined "Zgrupowane menu wyszukiwania">
-<!ENTITY gblite.options.showcontext "Wyświetlaj menu kontekstowe Googlebar Lite a w nim poniższe elementy">
+<!ENTITY gblite.options.showcontext "Wyświetlaj menu kontekstowe Googlebar Lite, a w nim poniższe elementy">
 <!--    -->
 <!ENTITY gblite.about.title "Googlebar Lite – informacje">
 <!ENTITY gblite.about.extdesc "Prosty pasek narzędzi wyszukiwania Google dla Firefoksa.">
@@ -142,7 +144,7 @@
 <!ENTITY gblite.about.visithomepage "Strona domowa Googlebar Lite">
 <!ENTITY gblite.about.visitdocumentation "Googlebar Lite – dokumentacja">
 <!ENTITY gblite.about.disclaimer "Oświadczenie">
-<!ENTITY gblite.about.disclaimerinfo "Autorzy tego rozszerzenia nie są w żadnym przypadku stowarzyszeni z Google Inc. Nazwa „Google”, logo Google, „Google toolbar”, i  wyszukiwanie „I&apos;m feeling lucky” są zarejestrowanymi znakami towarowymi Google Inc.">
+<!ENTITY gblite.about.disclaimerinfo "Autorzy tego rozszerzenia nie są w żadnym przypadku stowarzyszeni z Google Inc. Nazwa „Google”, logo Google, „Google toolbar”, i  wyszukiwanie „I'm feeling lucky” są zarejestrowanymi znakami towarowymi Google Inc.">
 <!ENTITY gblite.about.translators "Tłumaczenia">
 <!ENTITY gblite.about.locale "Lokalizacja">
 <!ENTITY gblite.about.translator "Tłumacz">
@@ -161,7 +163,7 @@
 <!ENTITY gblite.formhistory.ak.donotdisplay "n">
 <!ENTITY gblite.formhistory.enableformhistory "Włącz zapamiętywanie historii">
 <!ENTITY gblite.formhistory.ak.enableformhistory "w">
-<!ENTITY gblite.formhistory.disablesearchhistory "Wyłącz zapamiętywanie historii wyszukiwania">
+<!ENTITY gblite.formhistory.disablesearchhistory "Wyłącz zapamiętywanie historii">
 <!ENTITY gblite.formhistory.ak.disablesearchhistory "z">
 <!ENTITY gblite.formhistory.cancel "Anuluj">
 <!ENTITY gblite.formhistory.ak.cancel "A">

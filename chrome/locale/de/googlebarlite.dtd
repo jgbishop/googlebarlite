@@ -115,11 +115,13 @@
 <!ENTITY gblite.options.label.shiftenter "Umschalt + Eingabe startet eine">
 <!ENTITY gblite.options.label.ctrlenter "Strg + Eingabe startet eine">
 <!ENTITY gblite.options.label.shiftctrlenter "Umschalt + Strg + Eingabe startet eine">
+<!ENTITY gblite.options.label.searchbuttons "Such-Anbieter">
 <!ENTITY gblite.options.label.commonbuttons "Allgemeine Schaltflächen-Einstellungen">
 <!ENTITY gblite.options.clickselectsall "Einfacher Klick in die Suchleiste wählt alle Suchbegriffe aus">
 <!ENTITY gblite.options.searchintab "Suchergebnisse (wenn erforderlich) in einem neuen Tab öffnen">
 <!ENTITY gblite.options.remembercombined "An die letzte Suche aus dem kombinierten Suchmenü erinnern">
 <!ENTITY gblite.options.searchondragdrop "Bei &quot;Drag and Drop&quot; automatisch Suchen">
+<!ENTITY gblite.options.disableautocorrect "Automatische Korrektur der Google-Suche deaktivieren">
 <!ENTITY gblite.options.usesecuresearch "Sichere Suche verwenden wenn möglich">
 <!ENTITY gblite.options.warnonformhistory "Warnen, wenn die Option zum Speichern von Formulardaten im Firefox deaktiviert ist">
 <!ENTITY gblite.options.maintainhistory "Such-Chronik pflegen">

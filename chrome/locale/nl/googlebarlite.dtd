@@ -16,7 +16,6 @@
 <!ENTITY gblite.searchtype.book "Boeken">
 <!ENTITY gblite.searchtype.finance "Financieel">
 <!ENTITY gblite.searchtype.scholar "Wetenschap">
-<!ENTITY gblite.searchtype.answers "Answers.com">
 <!ENTITY gblite.searchtype.dictionary "Woordenboek">
 <!ENTITY gblite.context.web "Internet op de geselecteerde tekst doorzoeken">
 <!ENTITY gblite.context.ak.web "I">
@@ -30,8 +29,6 @@
 <!ENTITY gblite.context.ak.groups "G">
 <!ENTITY gblite.context.maps "Maps op de geselecteerde tekst doorzoeken">
 <!ENTITY gblite.context.ak.maps "M">
-<!ENTITY gblite.context.answers "Answers.com op de geselecteerde tekst doorzoeken">
-<!ENTITY gblite.context.ak.answers "A">
 <!ENTITY gblite.context.dictionary "Google woordenboek doorzoeken op geselecteerde tekst">
 <!ENTITY gblite.context.ak.dictionary "W">
 <!ENTITY gblite.context.backwardlinks "Terug geplaatste koppelingen">
@@ -99,7 +96,6 @@
 <!ENTITY gblite.tt.video "Zoeken naar video's">
 <!ENTITY gblite.tt.maps "Zoeken naar kaarten">
 <!ENTITY gblite.tt.scholar "Zoeken naar wetenschap">
-<!ENTITY gblite.tt.answers "Zoeken op Answers.com">
 <!ENTITY gblite.tt.dictionary "Google Woordenboek doorzoeken">
 <!ENTITY gblite.tt.up "Bovenliggende map">
 <!ENTITY gblite.tt.highlighter "Markeren van zoekwoorden op deze pagina in- of uitschakelen">
@@ -119,18 +115,19 @@
 <!ENTITY gblite.options.label.shiftenter "Shift + Enter zoekt in:">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter zoekt in:">
 <!ENTITY gblite.options.label.shiftctrlenter "Ctrl + Shift + Enter zoekt in:">
+<!ENTITY gblite.options.label.searchbuttons "Zoek knoppen">
 <!ENTITY gblite.options.label.commonbuttons "Algemene werkbalk knoppen en instellingen">
 <!ENTITY gblite.options.clickselectsall "Alle zoektermen selecteren door een enkele klik in het zoekvenster">
 <!ENTITY gblite.options.searchintab "Zoekresultaten in een nieuwe tab openen (indien nodig)">
 <!ENTITY gblite.options.remembercombined "Het laatste gecombineerd-menu zoek type onthouden">
 <!ENTITY gblite.options.searchondragdrop "Automatisch zoeken na slepen/plakken">
+<!ENTITY gblite.options.disableautocorrect "Google zoeken AutoCorrect uitschakelen">
 <!ENTITY gblite.options.usesecuresearch "Waar mogelijk beveiligd zoeken gebruiken">
 <!ENTITY gblite.options.warnonformhistory "Waarschuwen wanneer &apos;Opgeslagen formulieren&apos; in Firefox is uitgeschakeld">
 <!ENTITY gblite.options.maintainhistory "Zoekgeschiedenis beheren">
 <!ENTITY gblite.options.autocomplete "Auto-aanvullen inschakelen">
 <!ENTITY gblite.options.inlinecomplete "Inline aanvullen gebruiken">
 <!ENTITY gblite.options.autosearchhistory "Automatisch zoeken bij selecteren vanuit de zoekgeschiedenis">
-<!ENTITY gblite.options.ignoreanswers "Answers.com zoekacties in de geschiedenis negeren">
 <!ENTITY gblite.options.ignoredictionary "Google Woordenboek zoekopdrachten in geschiedenis negeren">
 <!ENTITY gblite.options.prompttoclear "Bevestiging vragen voordat de zoekgeschiedenis gewist wordt">
 <!ENTITY gblite.options.showlabels "Labelsknop weergeven (alleen selectieve tekst)">
