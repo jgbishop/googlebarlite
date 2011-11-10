@@ -290,20 +290,16 @@ var objGooglebarLite = {
 					else if(queryParts.hasOwnProperty("q"))
 						terms = queryParts["q"];
 					
-					// If the following conditions are true, we should probably do nothing (stupid forwarding trick from Google)
+					// If all of the following conditions are true, don't change the search terms (stupid forwarding trick from Google)
 					// 1. User was previously on https google query
 					// 2. User is now on http google query
 					// 3. Query string is empty
 					// 4. Parameter "esrc=s" is present
-					if(objGooglebarLite.PreviouslyOnSecureSearchPage == true && 
+					if(! (objGooglebarLite.PreviouslyOnSecureSearchPage == true && 
 					   url.scheme == "http" && 
 					   queryParts.hasOwnProperty("esrc") &&
 					   queryParts["esrc"] == "s" &&
-					   terms == "")
-					{
-						objGooglebarLite.Log("DEBUG: Caught the https redirection trick! Leaving search terms alone.");
-					}
-					else
+					   terms == ""))
 					{
 						if(objGooglebarLite.GetSearchTerms() != terms)
 							objGooglebarLite.SetSearchTerms(terms);
