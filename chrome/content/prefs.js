@@ -24,8 +24,6 @@ var objGooglebarLitePrefs = {
 	UpdateShowContextMenuStatus: function() {
 		var disabled = ! document.getElementById("GBL-Opt-CM-ShowContext").checked;
 		
-		objGooglebarLite.Log("Disabled = " + disabled);
-		
 		document.getElementById("GBL-Opt-CM-Web").disabled = disabled;
 		document.getElementById("GBL-Opt-CM-Site").disabled = disabled;
 		document.getElementById("GBL-Opt-CM-Images").disabled = disabled;
