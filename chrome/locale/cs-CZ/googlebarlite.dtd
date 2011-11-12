@@ -115,11 +115,13 @@
 <!ENTITY gblite.options.label.shiftenter "Shift + Enter">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter">
 <!ENTITY gblite.options.label.shiftctrlenter "Ctrl + Shift + Enter">
+<!ENTITY gblite.options.label.searchbuttons "Search Buttons">
 <!ENTITY gblite.options.label.commonbuttons "Další tlačítka a nastavení">
 <!ENTITY gblite.options.clickselectsall "Kliknutím vybrat předchozí vyhledávaný výraz">
 <!ENTITY gblite.options.searchintab "Otevřít výsledky hledání v novém panelu">
 <!ENTITY gblite.options.remembercombined "Zapamatovat si poslední kombinaci vyhledávací nabídky">
 <!ENTITY gblite.options.searchondragdrop "Text vyhledat automaticky při přetažení do vyhledávacího okénka">
+<!ENTITY gblite.options.disableautocorrect "Disable Google search autocorrect">
 <!ENTITY gblite.options.usesecuresearch "Použít bezpečné vyhledávání pokud je to možné">
 <!ENTITY gblite.options.warnonformhistory "Varovat pokud je vypnuta historie ve Firefoxu">
 <!ENTITY gblite.options.maintainhistory "Údržba historie hledání">

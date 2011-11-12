@@ -115,11 +115,13 @@
 <!ENTITY gblite.options.label.shiftenter "Shift + Enter şunu yapar:">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter şunu yapar:">
 <!ENTITY gblite.options.label.shiftctrlenter "Shift + Ctrl + Enter şunu yapar:">
+<!ENTITY gblite.options.label.searchbuttons "Search Buttons">
 <!ENTITY gblite.options.label.commonbuttons "Genel Ayarlar/ Sık Kullanılan Düğmeler">
 <!ENTITY gblite.options.clickselectsall "Arama kutusunda tek tıklama tüm arama terimlerini seçer">
 <!ENTITY gblite.options.searchintab "Arama sonuçlarını yeni bir sekmede aç (gerekliyse)">
 <!ENTITY gblite.options.remembercombined "En son birleştirilmiş menü arama türünü hatırla">
 <!ENTITY gblite.options.searchondragdrop "Sürükle ve bırakta otomatik ara">
+<!ENTITY gblite.options.disableautocorrect "Disable Google search autocorrect">
 <!ENTITY gblite.options.usesecuresearch "Use secure search where possible">
 <!ENTITY gblite.options.warnonformhistory "Firafox&apos;ta form geçmişi devre dışı olduğunda beni uyar">
 <!ENTITY gblite.options.maintainhistory "Arama geçmişini sakla">

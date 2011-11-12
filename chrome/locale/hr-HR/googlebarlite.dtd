@@ -115,11 +115,13 @@
 <!ENTITY gblite.options.label.shiftenter "Shift + Enter izvodi">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter izvodi">
 <!ENTITY gblite.options.label.shiftctrlenter "Shift + Ctrl + Enter izvodi">
+<!ENTITY gblite.options.label.searchbuttons "Search Buttons">
 <!ENTITY gblite.options.label.commonbuttons "Općenite postavke / Obični gumbi">
 <!ENTITY gblite.options.clickselectsall "Jedan klik u okviru pretraživanja odabire sve pojmove pretraživanja">
 <!ENTITY gblite.options.searchintab "Otvori rezultate pretraživanja u novoj kartici (ako je potrebno)">
 <!ENTITY gblite.options.remembercombined "Zapamti zadnji kombinirani izbornik tipa pretraživanja">
 <!ENTITY gblite.options.searchondragdrop "Automatski pretraži nakon povlačenja i ispuštanja">
+<!ENTITY gblite.options.disableautocorrect "Disable Google search autocorrect">
 <!ENTITY gblite.options.usesecuresearch "Use secure search where possible">
 <!ENTITY gblite.options.warnonformhistory "Upozori me ako je u Firefoxu onemogućen obrazac povijesti">
 <!ENTITY gblite.options.maintainhistory "Podržavaj povijest pretraživanja">

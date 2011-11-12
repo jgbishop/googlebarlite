@@ -115,11 +115,13 @@
 <!ENTITY gblite.options.label.shiftenter "по нажатию Shift + Enter запускать">
 <!ENTITY gblite.options.label.ctrlenter "по нажатию Ctrl + Enter запускать">
 <!ENTITY gblite.options.label.shiftctrlenter "по нажатию Shift + Ctrl + Enter запускать">
+<!ENTITY gblite.options.label.searchbuttons "Search Buttons">
 <!ENTITY gblite.options.label.commonbuttons "Основные кнопки и настройки">
 <!ENTITY gblite.options.clickselectsall "Отметить вхождения контекста поиска по одиночному клику в поле поиска">
 <!ENTITY gblite.options.searchintab "Открыть результаты поиска в новой вкладке (при необходимости)">
 <!ENTITY gblite.options.remembercombined "Запомнить вариант последнего поиска">
 <!ENTITY gblite.options.searchondragdrop "Начинать поиск сразу после переноса контекста">
+<!ENTITY gblite.options.disableautocorrect "Disable Google search autocorrect">
 <!ENTITY gblite.options.usesecuresearch "Use secure search where possible">
 <!ENTITY gblite.options.warnonformhistory "Предупредить об отключении в Firefox сохранения данных форм">
 <!ENTITY gblite.options.maintainhistory "Включить историю запросов">

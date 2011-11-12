@@ -115,11 +115,13 @@
 <!ENTITY gblite.options.label.shiftenter "Maj + Entrée produisent une">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Entrée produisent une">
 <!ENTITY gblite.options.label.shiftctrlenter "Maj + Ctrl + Entrée produisent une">
+<!ENTITY gblite.options.label.searchbuttons "Search Buttons">
 <!ENTITY gblite.options.label.commonbuttons "Paramètres généraux / Boutons communs">
 <!ENTITY gblite.options.clickselectsall "Un simple clic sur la boîte de recherche sélectionne tous les termes recherchés">
 <!ENTITY gblite.options.searchintab "Afficher les résultats de recherche dans un nouvel onglet (si nécessaire)">
 <!ENTITY gblite.options.remembercombined "Conserver le dernier type de recherche mixte">
 <!ENTITY gblite.options.searchondragdrop "Chercher automatiquement sur copier-coller">
+<!ENTITY gblite.options.disableautocorrect "Disable Google search autocorrect">
 <!ENTITY gblite.options.usesecuresearch "Utiliser la recherche sécurisée si possible">
 <!ENTITY gblite.options.warnonformhistory "Prévenez-moi si l&apos;historique des formulaires est désactivé dans Firefox">
 <!ENTITY gblite.options.maintainhistory "Conserver l&apos;historique des recherches">

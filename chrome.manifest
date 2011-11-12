@@ -15,8 +15,9 @@ locale	googlebarlite	es-ES	chrome/locale/es-ES/
 locale	googlebarlite	et-EE	chrome/locale/et-EE/
 locale	googlebarlite	fr	chrome/locale/fr/
 locale	googlebarlite	hr-HR	chrome/locale/hr-HR/
-locale	googlebarlite	it-IT	chrome/locale/it-IT/
+locale	googlebarlite	it	chrome/locale/it/
 locale	googlebarlite	ja-JP	chrome/locale/ja-JP/
+locale	googlebarlite	nb-NO	chrome/locale/nb-NO/
 locale	googlebarlite	nl	chrome/locale/nl/
 locale	googlebarlite	pl	chrome/locale/pl/
 locale	googlebarlite	pt-BR	chrome/locale/pt-BR/

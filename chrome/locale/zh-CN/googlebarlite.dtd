@@ -115,11 +115,13 @@
 <!ENTITY gblite.options.label.shiftenter "Shift + Enter 执行">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter 执行">
 <!ENTITY gblite.options.label.shiftctrlenter "Shift + Ctrl + Enter 执行">
+<!ENTITY gblite.options.label.searchbuttons "Search Buttons">
 <!ENTITY gblite.options.label.commonbuttons "常规设置/普通按钮">
 <!ENTITY gblite.options.clickselectsall "在搜索框中单击选择全部搜索条目">
 <!ENTITY gblite.options.searchintab "在新建标签中打开搜索结果(在有必要的情况下)">
 <!ENTITY gblite.options.remembercombined "记住最后一次组合菜单搜索类型">
 <!ENTITY gblite.options.searchondragdrop "拖拽自动搜索">
+<!ENTITY gblite.options.disableautocorrect "Disable Google search autocorrect">
 <!ENTITY gblite.options.usesecuresearch "Use secure search where possible">
 <!ENTITY gblite.options.warnonformhistory "在 Firefox [选项] 中禁用 [历史] 时提示我">
 <!ENTITY gblite.options.maintainhistory "保留搜索历史">

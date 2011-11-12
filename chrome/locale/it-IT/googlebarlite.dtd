@@ -115,11 +115,13 @@
 <!ENTITY gblite.options.label.shiftenter "Maiuscolo + Invio per eseguire">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Invio per eseguire">
 <!ENTITY gblite.options.label.shiftctrlenter "Maiuscolo + Ctrl + Invio per eseguire">
+<!ENTITY gblite.options.label.searchbuttons "Search Buttons">
 <!ENTITY gblite.options.label.commonbuttons "Pulsanti comuni">
 <!ENTITY gblite.options.clickselectsall "Un clic nel campo di ricerca seleziona tutti i termini">
 <!ENTITY gblite.options.searchintab "Apri i risultati della ricerca in una nuova scheda (se necessario)">
 <!ENTITY gblite.options.remembercombined "Ricorda ultimo tipo di ricerca dal menu a discesa">
 <!ENTITY gblite.options.searchondragdrop "Ricerca automatica con trascinamento e rilascio">
+<!ENTITY gblite.options.disableautocorrect "Disable Google search autocorrect">
 <!ENTITY gblite.options.usesecuresearch "Use secure search where possible">
 <!ENTITY gblite.options.warnonformhistory "Avvisami quando la cronologia dei moduli è disattivata in Firefox">
 <!ENTITY gblite.options.maintainhistory "Crea una cronologia delle ricerche">

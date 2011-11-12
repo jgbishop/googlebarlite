@@ -16,7 +16,6 @@
 <!ENTITY gblite.searchtype.book "Raamatuotsing">
 <!ENTITY gblite.searchtype.finance "Finantsotsing">
 <!ENTITY gblite.searchtype.scholar "Õppeotsing">
-<!ENTITY gblite.searchtype.answers "Answers.com otsing">
 <!ENTITY gblite.searchtype.dictionary "Google sõnastik">
 <!ENTITY gblite.context.web "Otsi veebist märgitud teksti">
 <!ENTITY gblite.context.ak.web "W">
@@ -30,8 +29,6 @@
 <!ENTITY gblite.context.ak.groups "G">
 <!ENTITY gblite.context.maps "Google kaardiotsing märgitud tekstile">
 <!ENTITY gblite.context.ak.maps "M">
-<!ENTITY gblite.context.answers "Answers.com otsing märgitud tekstile">
-<!ENTITY gblite.context.ak.answers "A">
 <!ENTITY gblite.context.dictionary "Otsi Google sõnastikust märgitud teksti">
 <!ENTITY gblite.context.ak.dictionary "D">
 <!ENTITY gblite.context.backwardlinks "Tagasiulatuvad lingid">
@@ -99,7 +96,6 @@
 <!ENTITY gblite.tt.video "Otsi Google videosid">
 <!ENTITY gblite.tt.maps "Google kaardiotsing">
 <!ENTITY gblite.tt.scholar "Otsi õppetöösid">
-<!ENTITY gblite.tt.answers "Answers.com otsing">
 <!ENTITY gblite.tt.dictionary "Otsing Google sõnastikust">
 <!ENTITY gblite.tt.up "Mine taseme võrra üles">
 <!ENTITY gblite.tt.highlighter "Näita/peida otsisõnade esiletoomist">
@@ -119,18 +115,19 @@
 <!ENTITY gblite.options.label.shiftenter "Shift + Enter sooritab">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter sooritab">
 <!ENTITY gblite.options.label.shiftctrlenter "Ctrl + Shift + Enter sooritab">
+<!ENTITY gblite.options.label.searchbuttons "Search Buttons">
 <!ENTITY gblite.options.label.commonbuttons "Tööriistariba tavanupud ja sätted">
 <!ENTITY gblite.options.clickselectsall "Klikkamine otsingukastil märgistab kõik otsisõnad">
 <!ENTITY gblite.options.searchintab "Ava otsitulemused uuel vahekaardil (kui vaja)">
 <!ENTITY gblite.options.remembercombined "Jäta meelde viimane kombineeritud menüüga otsingutüüp">
 <!ENTITY gblite.options.searchondragdrop "Lohistamisel automaatne otsing">
+<!ENTITY gblite.options.disableautocorrect "Disable Google search autocorrect">
 <!ENTITY gblite.options.usesecuresearch "Võimaluse korral kasuta turvalist otsingut">
 <!ENTITY gblite.options.warnonformhistory "Hoiata, kui väljade ajalugu on Firefoxis keelatud">
 <!ENTITY gblite.options.maintainhistory "Hoia otsingute ajalugu">
 <!ENTITY gblite.options.autocomplete "Luba automaatne lõpetamine">
 <!ENTITY gblite.options.inlinecomplete "Kasuta inline lõpetamist">
 <!ENTITY gblite.options.autosearchhistory "Otsi automaatselt, kui valite otsingu ajaloost">
-<!ENTITY gblite.options.ignoreanswers "Ignore Answers.com otsinguid ajaloos">
 <!ENTITY gblite.options.ignoredictionary "Ignoreeri Google sõnastiku otsinguid ajaloos">
 <!ENTITY gblite.options.prompttoclear "Teata enne otsingute ajaloo kustutamist">
 <!ENTITY gblite.options.showlabels "Näita nuppude nimesid (valimisel)">

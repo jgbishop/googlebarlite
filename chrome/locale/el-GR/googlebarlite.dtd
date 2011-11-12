@@ -115,11 +115,13 @@
 <!ENTITY gblite.options.label.shiftenter "Shift + Enter εκτελεί το α">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter εκτελεί το α">
 <!ENTITY gblite.options.label.shiftctrlenter "Ctrl + Shift + Enter εκτελεί το α">
+<!ENTITY gblite.options.label.searchbuttons "Search Buttons">
 <!ENTITY gblite.options.label.commonbuttons "Κοινές Ρυθμίσεις Κουμπιών Μπάρας">
 <!ENTITY gblite.options.clickselectsall "Με μονό κλικ στο πεδίο αναζήτησης επιλέγονται όλοι οι όροι αναζήτησης">
 <!ENTITY gblite.options.searchintab "Άνοιγμα αποτελεσμάτων αναζήτησης σε νέα καρτέλα (εάν είναι απαραίτητο)">
 <!ENTITY gblite.options.remembercombined "Απομνημόνευση του τελευταίου τύπου σύνθετης αναζήτησης">
 <!ENTITY gblite.options.searchondragdrop "Αυτόματη αναζήτηση στο σύρσιμο και την εναπόθεση">
+<!ENTITY gblite.options.disableautocorrect "Disable Google search autocorrect">
 <!ENTITY gblite.options.usesecuresearch "Use secure search where possible">
 <!ENTITY gblite.options.warnonformhistory "Ειδοποίηση όταν το ιστορικό φόρμας είναι απενεργοποιημένη στο Firefox">
 <!ENTITY gblite.options.maintainhistory "Διατήρηση ιστορικού αναζήτησης">

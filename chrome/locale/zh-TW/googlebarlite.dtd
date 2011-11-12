@@ -2,7 +2,7 @@
 <!ENTITY gblite.name "Googlebar Lite">
 <!ENTITY gblite.toolbar.name "Googlebar Lite 工具列">
 <!ENTITY gblite.ak.name "G">
-<!ENTITY gblite.toggle.toolbar "Toggle GBL Toolbar">
+<!ENTITY gblite.toggle.toolbar "切擙 GBL 工具列">
 <!ENTITY gblite.searchtype.web "網頁搜尋">
 <!ENTITY gblite.searchtype.lucky "好手氣">
 <!ENTITY gblite.searchtype.site "網站搜尋">
@@ -16,7 +16,7 @@
 <!ENTITY gblite.searchtype.book "書籍搜尋">
 <!ENTITY gblite.searchtype.finance "財經搜尋">
 <!ENTITY gblite.searchtype.scholar "Scholar 搜尋(學生)">
-<!ENTITY gblite.searchtype.dictionary "Google Dictionary">
+<!ENTITY gblite.searchtype.dictionary "Google 字典">
 <!ENTITY gblite.context.web "搜尋已選取文字的網頁(W)">
 <!ENTITY gblite.context.ak.web "W">
 <!ENTITY gblite.context.site "搜尋已選取文字的網站(S)">
@@ -29,7 +29,7 @@
 <!ENTITY gblite.context.ak.groups "G">
 <!ENTITY gblite.context.maps "搜尋已選取文字的 Google 地圖(M)">
 <!ENTITY gblite.context.ak.maps "M">
-<!ENTITY gblite.context.dictionary "Search Google Dictionary for Selected Text">
+<!ENTITY gblite.context.dictionary "搜尋已選取文字的 Google 字典(D)">
 <!ENTITY gblite.context.ak.dictionary "D">
 <!ENTITY gblite.context.backwardlinks "回溯鏈結(B)">
 <!ENTITY gblite.context.ak.backwardlinks "B">
@@ -96,7 +96,7 @@
 <!ENTITY gblite.tt.video "搜尋 Google 影片">
 <!ENTITY gblite.tt.maps "搜尋 Google 地圖">
 <!ENTITY gblite.tt.scholar "搜尋學生論文">
-<!ENTITY gblite.tt.dictionary "Search Google Dictionary">
+<!ENTITY gblite.tt.dictionary "搜尋 Google 字典">
 <!ENTITY gblite.tt.up "到網站的上一層">
 <!ENTITY gblite.tt.highlighter "切換此網頁上搜尋字詞的標記">
 <!ENTITY gblite.tt.overflow "搜尋字詞 (繼續)">
@@ -115,18 +115,20 @@
 <!ENTITY gblite.options.label.shiftenter "Shift + Enter 執行">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter 執行">
 <!ENTITY gblite.options.label.shiftctrlenter "Shift + Ctrl + Enter 執行">
+<!ENTITY gblite.options.label.searchbuttons "搜尋按鈕">
 <!ENTITY gblite.options.label.commonbuttons "一般設定 / 普通按鈕">
 <!ENTITY gblite.options.clickselectsall "單擊搜尋框即可選取全部搜尋字詞">
 <!ENTITY gblite.options.searchintab "在新分頁開啟搜尋結果 (如果需要)">
 <!ENTITY gblite.options.remembercombined "記住最後一次從下拉式選單按鈕所選取的搜尋類型">
 <!ENTITY gblite.options.searchondragdrop "拖放字詞時自動搜尋">
-<!ENTITY gblite.options.usesecuresearch "Use secure search where possible">
+<!ENTITY gblite.options.disableautocorrect "停用Google的搜尋自動更正">
+<!ENTITY gblite.options.usesecuresearch "盡可能使用安全搜尋">
 <!ENTITY gblite.options.warnonformhistory "當 Firefox 內的表單記錄被停用時，請提醒我">
 <!ENTITY gblite.options.maintainhistory "保留搜尋記錄">
 <!ENTITY gblite.options.autocomplete "啟用自動完成">
 <!ENTITY gblite.options.inlinecomplete "使用內嵌完成">
 <!ENTITY gblite.options.autosearchhistory "當您從搜尋記錄中選取項目時便自動搜尋">
-<!ENTITY gblite.options.ignoredictionary "Ignore Google Dictionary searches in history">
+<!ENTITY gblite.options.ignoredictionary "忽略 Google 字典的歷史紀錄">
 <!ENTITY gblite.options.prompttoclear "清除搜尋記錄之前，先詢問">
 <!ENTITY gblite.options.showlabels "顯示按鈕文字">
 <!ENTITY gblite.options.showsearchwords "尋字鈕">
