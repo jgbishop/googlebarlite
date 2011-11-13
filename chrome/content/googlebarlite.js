@@ -261,7 +261,7 @@ var objGooglebarLite = {
 		{
 			if (aLocation)
 			{
-				var terms = "";
+				var terms = null;
 				var url = objGooglebarLite.ConvertToURL(aLocation.spec);
 				
 				var urlHasHostProperty = null;
@@ -277,8 +277,8 @@ var objGooglebarLite = {
 					urlHasHostProperty = false;
 				}
 
-				// Only update the search terms if we're on a Google page
-				if(url != null && urlHasHostProperty == true && /^https?/.test(url.scheme) && /google/.test(url.host))
+				// Only update the search terms if we're on a Google page (URL host must match "google.")
+				if(url != null && urlHasHostProperty == true && /^https?/.test(url.scheme) && /google\./.test(url.host))
 				{
 					// For some reason, the nsIURL "query" property doesn't work on Google search result pages (possibly because of no
 					// file extension in the URL?) So, I wrote my own function to grab the query portion of the URL.
@@ -290,25 +290,28 @@ var objGooglebarLite = {
 					else if(queryParts.hasOwnProperty("q"))
 						terms = queryParts["q"];
 					
-					// If all of the following conditions are true, don't change the search terms (stupid forwarding trick from Google)
-					// 1. User was previously on https google query
-					// 2. User is now on http google query
-					// 3. Query string is empty
-					// 4. Parameter "esrc=s" is present
-					if(! (objGooglebarLite.PreviouslyOnSecureSearchPage == true && 
-					   url.scheme == "http" && 
-					   queryParts.hasOwnProperty("esrc") &&
-					   queryParts["esrc"] == "s" &&
-					   terms == ""))
+					if(terms != null)
 					{
-						if(objGooglebarLite.GetSearchTerms() != terms)
-							objGooglebarLite.SetSearchTerms(terms);
+						// If all of the following conditions are true, don't change the search terms (stupid forwarding trick from Google)
+						// 1. User was previously on https google query
+						// 2. User is now on http google query
+						// 3. Query string is empty
+						// 4. Parameter "esrc=s" is present
+						if(! (objGooglebarLite.PreviouslyOnSecureSearchPage == true && 
+						   url.scheme == "http" && 
+						   queryParts.hasOwnProperty("esrc") &&
+						   queryParts["esrc"] == "s" &&
+						   terms == ""))
+						{
+							if(objGooglebarLite.GetSearchTerms() != terms)
+								objGooglebarLite.SetSearchTerms(terms);
+						}
+						
+						if(url.scheme == "https")
+							objGooglebarLite.PreviouslyOnSecureSearchPage = true;
+						else
+							objGooglebarLite.PreviouslyOnSecureSearchPage = false;
 					}
-					
-					if(url.scheme == "https")
-						objGooglebarLite.PreviouslyOnSecureSearchPage = true;
-					else
-						objGooglebarLite.PreviouslyOnSecureSearchPage = false;
 				}
 	
 				var searchSiteButton = document.getElementById("GBL-TB-Site");
@@ -651,7 +654,6 @@ var objGooglebarLite = {
 
 		var searchbox = document.getElementById("GBL-SearchBox");
 		searchbox.addEventListener("popupshowing", objGooglebarLite.SearchContextOnPopupShowing, true);
-		searchbox.addEventListener("dragdrop", objGooglebarLite.SearchBoxOnDrop, true); // Pre-FF 3.5
 		searchbox.addEventListener("drop", objGooglebarLite.SearchBoxOnDrop, true); // FF 3.5+
 		
 		objGooglebarLite.ValidateSearchHistorySetting();
@@ -1467,7 +1469,6 @@ var objGooglebarLite = {
 		
 		var searchbox = document.getElementById("GBL-SearchBox");
 		searchbox.removeEventListener('popupshowing', objGooglebarLite.SearchContextOnPopupShowing, true);
-		searchbox.removeEventListener('dragdrop', objGooglebarLite.SearchBoxOnDrop, true);
 		searchbox.removeEventListener('drop', objGooglebarLite.SearchBoxOnDrop, true);
 		
 		window.getBrowser().removeProgressListener(objGooglebarLite.ProgressListener);
@@ -1584,7 +1585,6 @@ var objGooglebarLite = {
 			objGooglebarLite.OverflowButtonWidth = chevron.boxObject.width;
 			chevron.collapsed = true; // Initalize the overflow button to a hidden state
 	
-			
 			if(objGooglebarLite.PrefBranch.prefHasUserValue("prefs_version") == false)
 			{
 				objGooglebarLite.MigratePrefs(); // Migrate old preferences
@@ -1670,16 +1670,8 @@ var objGooglebarLite = {
 	
 			// Do "first time" initialization if necessary
 			if(objGooglebarLite.Initialized == false)
-			{
-				objGooglebarLite.Initialized = true;
-				window.getBrowser().addProgressListener(objGooglebarLite.ProgressListener);
-				setTimeout(function(){objGooglebarLite.DelayedStartup();}, 1); // Needs to happen after Firefox's delayedStartup()
-			}
+				objGooglebarLite.Startup(); // Initialize the toolbar
 	
-			// Do some generic initialization
-			objGooglebarLite.OptionsHaveUpdated();
-			objGooglebarLite.UpdateUpMenu();
-			
 			// Clear the search words every time to avoid a weird auto-selection bug with search history
 			// Also clears search word buttons
 			objGooglebarLite.SetSearchTerms("");

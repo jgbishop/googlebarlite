@@ -1,6 +1,13 @@
 //***************
 //Version History
 //***************
+[4.8.1]
++ Bug Fix: Search terms should no longer mysteriously disappear
++ Bug Fix: The "Site to Use" menu in the Googlebar Lite options dialog is now initialized properly in Linux
++ Bug Fix: Removed several obsolete function calls that were throwing warnings after customizing the toolbar
+
+--
+
 [4.8.0]
 + Completely redesigned the options interface and the underlying code
 + Added a new option allowing users to disable Google search auto-correct
