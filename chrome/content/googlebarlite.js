@@ -628,7 +628,10 @@ var objGooglebarLite = {
 	ConvertTermsToURI: function(terms)
 	{
 		var termArray = terms.split(" ");
-		termArray.forEach(this.MakeSafe);
+		for(var i=0; i<termArray.length; i++)
+		{
+			termArray[i] = this.MakeSafe(termArray[i]);
+		}
 		return termArray.join("+");
 	},
 
@@ -858,8 +861,11 @@ var objGooglebarLite = {
 	{
 		if(openTab)
 		{
-			var newTab = getBrowser().addTab(url);
-			getBrowser().selectedTab = newTab;
+			// TODO: Should we do this? Does it screw up any & chars?
+			// We have to call encodeURI, because the default character set for addTab sometimes
+			// appears to be Windows-1252, not UTF-8. Calling encodeURI seems to fix this problem.
+//  		getBrowser().selectedTab = getBrowser().addTab(encodeURI(url));
+			getBrowser().selectedTab = getBrowser().addTab(url);
 		}
 		else
 		{
@@ -1015,7 +1021,7 @@ var objGooglebarLite = {
 		// Step 1: Get the search terms
 		var searchTerms = this.TrimString(this.GetSearchTerms());
 		var isEmpty = false;
-	
+		
 		if(searchTerms.length == 0)
 			isEmpty = true;
 	
@@ -1258,7 +1264,7 @@ var objGooglebarLite = {
 		// ****************************************
 		if(isEmpty == false)
 			searchTerms = this.ConvertTermsToURI(searchTerms);
-	
+		
 		// ****************************************
 		// Step 2: Switch on the search type
 		// ****************************************
