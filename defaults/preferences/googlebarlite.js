@@ -59,6 +59,5 @@ pref("extensions.googlebarlite.context.similar", true);
 pref("extensions.googlebarlite.context.translate", true);
 
 // Miscellaneous
-pref("extensions.googlebarlite.prefs_version", 2);
 pref("extensions.{79c50f9a-2ffe-4ee0-8a37-fae4f5dacd4f}.description", "chrome://googlebarlite/locale/googlebarlite.properties");
 

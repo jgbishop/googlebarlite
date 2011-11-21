@@ -14,9 +14,7 @@ GBL_PrivateBrowsingListener.prototype = {
 		try {
 			var pbs = Components.classes["@mozilla.org/privatebrowsing;1"].getService(Components.interfaces.nsIPrivateBrowsingService);
 			this._inPrivateBrowsing = pbs.privateBrowsingEnabled;
-		} catch(ex) {
-			// ignore exceptions in older versions of Firefox
-		}
+		} catch(ex) { } // ignore exceptions in older versions of Firefox
 	},
 	
 	observe : function (aSubject, aTopic, aData)
@@ -222,10 +220,10 @@ var objGooglebarLite = {
 
 	Initialized: false,
 	LastHighlightedTerms: "",
-	OriginalCustomizeDone: null,
 	OverflowButtonWidth: 0,
 	PreviouslyOnSecureSearchPage: false,
 	PrivateBrowsingListener: null,
+	ToolbarPresent: false,
 
 	StylesArray: new Array("-moz-image-region: rect(0px 32px 16px 16px);",
 							"-moz-image-region: rect(0px 48px 16px 32px);",
@@ -493,14 +491,6 @@ var objGooglebarLite = {
 	
 		this.Resize(null); // Fake a resize to overflow properly
 	},
-
-	BuildFunction: function(obj, method)
-	{
-		return function()
-		{
-			return method.apply(obj, arguments);
-		}
-	},
 	
 	BuildSearchURL: function(prefix, restrict, searchTerms, useSecure, secureType)
 	{
@@ -649,12 +639,35 @@ var objGooglebarLite = {
 		return null;
 	},
 	
+	CustomizeAfter: function(e)
+	{
+		var theToolbox = e.target;
+		if(objGooglebarLite.ToolbarPresent == false)
+		{
+			// Toolbar was not there previously, but now is
+			objGooglebarLite.Startup();
+			objGooglebarLite.SetSearchTerms(""); // Always clear search terms after customizing the toolbar
+		}
+		else
+		{
+			// Toolbar was previously there, but now is not
+			if(document.getElementById("GBL-Toolbar-Mainitem") == null)
+				objGooglebarLite.Shutdown();
+			else
+				objGooglebarLite.SetSearchTerms(""); // Always clear search terms after customizing the toolbar
+		}
+	},
+	
+	CustomizeBefore: function(e)
+	{
+		if(document.getElementById("GBL-Toolbar-MainItem") == null)
+			objGooglebarLite.ToolbarPresent = false;
+		else
+			objGooglebarLite.ToolbarPresent = true;
+	},
+
 	DelayedStartup: function()
 	{
-		var navtoolbox = document.getElementById("navigator-toolbox");
-		objGooglebarLite.OriginalCustomizeDone = navtoolbox.customizeDone;
-		navtoolbox.customizeDone = objGooglebarLite.BuildFunction(this, objGooglebarLite.ToolboxCustomizeDone);
-
 		var searchbox = document.getElementById("GBL-SearchBox");
 		searchbox.addEventListener("popupshowing", objGooglebarLite.SearchContextOnPopupShowing, true);
 		searchbox.addEventListener("drop", objGooglebarLite.SearchBoxOnDrop, true); // FF 3.5+
@@ -861,10 +874,6 @@ var objGooglebarLite = {
 	{
 		if(openTab)
 		{
-			// TODO: Should we do this? Does it screw up any & chars?
-			// We have to call encodeURI, because the default character set for addTab sometimes
-			// appears to be Windows-1252, not UTF-8. Calling encodeURI seems to fix this problem.
-//  		getBrowser().selectedTab = getBrowser().addTab(encodeURI(url));
 			getBrowser().selectedTab = getBrowser().addTab(url);
 		}
 		else
@@ -1479,6 +1488,8 @@ var objGooglebarLite = {
 		
 		window.getBrowser().removeProgressListener(objGooglebarLite.ProgressListener);
 		
+		window.removeEventListener('aftercustomization', objGooglebarLite.CustomizeAfter, false);
+		window.removeEventListener('beforecustomization', objGooglebarLite.CustomizeBefore, false);
 		window.removeEventListener('focus', objGooglebarLite.Resize, false);
 		window.removeEventListener('load', objGooglebarLite.Startup, false);
 		window.removeEventListener('resize', objGooglebarLite.Resize, false);
@@ -1664,30 +1675,6 @@ var objGooglebarLite = {
 		document.persist("GBL-Toolbar", "collapsed");
 	},
 
-	ToolboxCustomizeDone: function(somethingChanged)
-	{
-		var mainItem = document.getElementById("GBL-Toolbar-MainItem");
-		
-		// Don't process anything if mainItem is null (the toolbar item has been dragged into the toolbox)
-		if(mainItem && somethingChanged)
-		{
-			// We have to do all kinds of initialization in this case,
-			// since we don't know the state from which the user is coming
-	
-			// Do "first time" initialization if necessary
-			if(objGooglebarLite.Initialized == false)
-				objGooglebarLite.Startup(); // Initialize the toolbar
-	
-			// Clear the search words every time to avoid a weird auto-selection bug with search history
-			// Also clears search word buttons
-			objGooglebarLite.SetSearchTerms("");
-		}
-		else if(mainItem && !somethingChanged)
-			objGooglebarLite.SetSearchTerms(""); // Prevent zombie search word buttons from appearing
-
-		objGooglebarLite.OriginalCustomizeDone(somethingChanged);
-	},
-	
 	TrimString: function(string)
 	{
 		if (!string) return "";
@@ -1989,4 +1976,5 @@ var objGooglebarLite = {
 window.addEventListener('load', objGooglebarLite.Startup, false);
 window.addEventListener('resize', objGooglebarLite.Resize, false);
 window.addEventListener('unload', objGooglebarLite.Shutdown, false);
-
+window.addEventListener('aftercustomization', objGooglebarLite.CustomizeAfter, false);
+window.addEventListener('beforecustomization', objGooglebarLite.CustomizeBefore, false);

@@ -1,6 +1,16 @@
 //***************
 //Version History
 //***************
+[4.8.3]
++ The minimum supported Firefox version has been changed from 3.6 to 4.0.
++ Googlebar Lite no longer overrides the built-in toolbar customization function
++ Bug Fix: Googlebar Lite is now initialized properly after adding the main Googlebar Lite toolbar item during toolbar customization
++ Bug Fix: Googlebar Lite is now shut down properly after removing the main Googlebar Lite toolbar item during toolbar customization
++ Bug Fix: Errors should no longer be thrown after removing the main Googlebar Lite toolbar item during toolbar customization
++ Bug Fix: The routine for migrating old preferences should no longer be called on every startup
+
+--
+
 [4.8.2]
 + Bug Fix: Extended characters should no longer get corrupted when searching
 
