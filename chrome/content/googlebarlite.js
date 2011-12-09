@@ -1301,12 +1301,12 @@ var objGooglebarLite = {
 			break;
 	
 		case "video":
-			if(isEmpty) { URL = this.BuildSearchURL("video", "", "", this.Prefs.UseSecureSearch.value); }
+			if(isEmpty) { URL = this.BuildSearchURL("video", "", ""); }
 			else		{ URL = this.BuildSearchURL("video", "videosearch", searchTerms, this.Prefs.UseSecureSearch.value, "vid:1"); }
 			break;
 	
 		case "news":
-			if(isEmpty) { URL = this.BuildSearchURL("news", "", "", this.Prefs.UseSecureSearch.value); }
+			if(isEmpty) { URL = this.BuildSearchURL("news", "", ""); }
 			else		{ URL = this.BuildSearchURL("news", "news", searchTerms, this.Prefs.UseSecureSearch.value, "nws:1"); }
 			break;
 	
@@ -1326,12 +1326,12 @@ var objGooglebarLite = {
 			break;
 	
 		case "blog":
-			if(isEmpty) { URL = this.BuildSearchURL("blogsearch", "blogsearch", "", this.Prefs.UseSecureSearch.value); }
+			if(isEmpty) { URL = this.BuildSearchURL("blogsearch", "blogsearch", ""); }
 			else		{ URL = this.BuildSearchURL("blogsearch", "blogsearch", searchTerms, this.Prefs.UseSecureSearch.value, "blg:1"); }
 			break;
 	
 		case "book":
-			if(isEmpty) { URL = this.BuildSearchURL("www", "books", "", this.Prefs.UseSecureSearch.value); }
+			if(isEmpty) { URL = this.BuildSearchURL("www", "books", ""); }
 			else		{ URL = this.BuildSearchURL("www", "books", searchTerms, this.Prefs.UseSecureSearch.value, "bks:1"); }
 			break;
 	
@@ -1395,7 +1395,7 @@ var objGooglebarLite = {
 		// ****************************************
 		// Step 3: Add terms to search history
 		// ****************************************
-	
+		
 		if(this.Prefs.MaintainHistory.value == true && !isEmpty && !(canIgnore && this.Prefs.IgnoreDictionary.value))
 			this.FormHistory.addEntry("GBL-Search-History", originalTerms);
 	

@@ -8,6 +8,7 @@
 + Bug Fix: Googlebar Lite is now shut down properly after removing the main Googlebar Lite toolbar item during toolbar customization
 + Bug Fix: Errors should no longer be thrown after removing the main Googlebar Lite toolbar item during toolbar customization
 + Bug Fix: The routine for migrating old preferences should no longer be called on every startup
++ Bug Fix: Updated redirection rules for several items in the Google Links menu, as well as when clicking toolbar buttons with no search terms, when the use secure search option is enabled
 
 --
 
