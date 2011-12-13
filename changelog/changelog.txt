@@ -4,11 +4,13 @@
 [4.8.3]
 + The minimum supported Firefox version has been changed from 3.6 to 4.0.
 + Googlebar Lite no longer overrides the built-in toolbar customization function
++ Removed obsolete contents.rdf files from each localization folder, reducing overall file size
 + Bug Fix: Googlebar Lite is now initialized properly after adding the main Googlebar Lite toolbar item during toolbar customization
 + Bug Fix: Googlebar Lite is now shut down properly after removing the main Googlebar Lite toolbar item during toolbar customization
 + Bug Fix: Errors should no longer be thrown after removing the main Googlebar Lite toolbar item during toolbar customization
 + Bug Fix: The routine for migrating old preferences should no longer be called on every startup
 + Bug Fix: Updated redirection rules for several items in the Google Links menu, as well as when clicking toolbar buttons with no search terms, when the use secure search option is enabled
++ Bug Fix: The "site to use" menu item in the Googlebar Lite options dialog should now be properly initialized on new installs
 
 --
 

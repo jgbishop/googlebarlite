@@ -7,7 +7,7 @@
 <prefwindow xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
 		id="GBL-PrefWindow" buttons="accept,cancel" title="&gblite.options.title;"
 		onload="objGooglebarLitePrefs.InitUI();">
-		
+	
 	<script type="application/x-javascript" src="chrome://googlebarlite/content/prefs.js"/>
 	
 	<prefpane id="GBL-PrefPane-General" label="&gblite.options.tab.general;">
@@ -18,7 +18,7 @@
 			<preference id="GBL-Pref-SearchDragDrop" name="extensions.googlebarlite.search_on_drag_drop" type="bool" />
 			<preference id="GBL-Pref-DisableAutoCorrect" name="extensions.googlebarlite.disable_auto_correct" type="bool" />
 			<preference id="GBL-Pref-UseSecureSearch" name="extensions.googlebarlite.use_secure_search" type="bool" />
-			<preference id="GBL-Pref-SiteToUse" name="extensions.googlebarlite.site_to_use" type="unichar" />
+			<preference id="GBL-Pref-SiteToUse" name="extensions.googlebarlite.site_to_use" type="wstring" />
 		</preferences>
 		
 		<checkbox id="GBL-Opt-ClickSelectsAll" label="&gblite.options.clickselectsall;" preference="GBL-Pref-ClickSelectsAll" />
