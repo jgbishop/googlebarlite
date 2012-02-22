@@ -1,8 +1,11 @@
 //***************
 //Version History
 //***************
-[4.8.3]
-+ The minimum supported Firefox version has been changed from 3.6 to 4.0.
+[4.9.0]
++ Native secure search should now work for the following top-level domains: google.co.uk, google.fr, and google.de
++ Secure image searches can now be performed
++ Added google.cz to the list of top-level domains
++ The minimum supported Firefox version has been changed from 3.6 to 4.0
 + Googlebar Lite no longer overrides the built-in toolbar customization function
 + Removed obsolete contents.rdf files from each localization folder, reducing overall file size
 + Bug Fix: Googlebar Lite is now initialized properly after adding the main Googlebar Lite toolbar item during toolbar customization

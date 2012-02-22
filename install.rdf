@@ -12,7 +12,7 @@
 	<em:iconURL>chrome://googlebarlite/skin/logo.png</em:iconURL>
 	<em:name>Googlebar Lite</em:name>
 	<em:optionsURL>chrome://googlebarlite/content/prefs.xul</em:optionsURL>
-	<em:version>4.8.3</em:version>
+	<em:version>4.9.0</em:version>
 
 	<em:updateURL>http://www.borngeek.com/downloads/update.rdf</em:updateURL>
 	

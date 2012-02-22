@@ -224,6 +224,12 @@ var objGooglebarLite = {
 	PreviouslyOnSecureSearchPage: false,
 	PrivateBrowsingListener: null,
 	ToolbarPresent: false,
+	
+	SecureTLDs: {
+		"google.co.uk": 1,
+		"google.de": 1,
+		"google.fr": 1
+	},
 
 	StylesArray: new Array("-moz-image-region: rect(0px 32px 16px 16px);",
 							"-moz-image-region: rect(0px 48px 16px 32px);",
@@ -498,8 +504,11 @@ var objGooglebarLite = {
 
 		if(useSecure != null && useSecure == true)
 		{
-			u = "https://www.google.com/";
-
+			if(this.SecureTLDs.hasOwnProperty(this.Prefs.SiteToUse.value))
+				u = "https://www." + this.Prefs.SiteToUse.value + "/";
+			else
+				u = "https://www.google.com/";
+			
 			if (searchTerms.length > 0)
 			{
 				u += "search?q=" + searchTerms;
@@ -1297,7 +1306,7 @@ var objGooglebarLite = {
 	
 		case "images":
 			if(isEmpty) { URL = this.BuildSearchURL("images", "", ""); }
-			else		{ URL = this.BuildSearchURL("images", "images", searchTerms); }
+			else		{ URL = this.BuildSearchURL("images", "images", searchTerms, this.Prefs.UseSecureSearch.value, "&tbm=isch"); }
 			break;
 	
 		case "video":

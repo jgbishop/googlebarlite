@@ -123,7 +123,7 @@
 <!ENTITY gblite.options.remembercombined "Remember last combined-menu search type">
 <!ENTITY gblite.options.searchondragdrop "Automatically search on drag and drop">
 <!ENTITY gblite.options.disableautocorrect "Disable Google search autocorrect">
-<!ENTITY gblite.options.usesecuresearch "Use secure search where possible">
+<!ENTITY gblite.options.usesecuresearch "Use secure search where possible (may override site to use setting)">
 <!ENTITY gblite.options.warnonformhistory "Warn me when form history is disabled in Firefox">
 <!ENTITY gblite.options.maintainhistory "Maintain a search history">
 <!ENTITY gblite.options.autocomplete "Enable auto-completion">
