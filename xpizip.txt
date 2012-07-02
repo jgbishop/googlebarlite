@@ -1,5 +1,5 @@
 chrome.manifest
 install.rdf
 LICENSE.txt
-chrome\googlebarlite.jar
+chrome
 defaults\preferences\googlebarlite.js

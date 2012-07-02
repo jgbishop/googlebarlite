@@ -660,7 +660,7 @@ var objGooglebarLite = {
 		else
 		{
 			// Toolbar was previously there, but now is not
-			if(document.getElementById("GBL-Toolbar-Mainitem") == null)
+			if(document.getElementById("GBL-Toolbar-MainItem") == null)
 				objGooglebarLite.Shutdown();
 			else
 				objGooglebarLite.SetSearchTerms(""); // Always clear search terms after customizing the toolbar

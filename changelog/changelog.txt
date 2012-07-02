@@ -1,6 +1,14 @@
 //***************
 //Version History
 //***************
+[4.9.1]
++ Made a few minor improvements to the installer manifest.
++ Removed the embedded JAR file from within the XPI.
++ Bumped the maxVersion to 20.*.
++ Bug Fix: Corrected an issue that was causing the toolbar to shut down after toolbar customization.
+
+--
+
 [4.9.0]
 + Native secure search should now work for the following top-level domains: google.co.uk, google.fr, and google.de
 + Secure image searches can now be performed
