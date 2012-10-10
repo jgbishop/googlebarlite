@@ -111,7 +111,6 @@
 <!ENTITY gblite.options.label.sitetouse "Sito di Google da utilizzare:">
 <!ENTITY gblite.options.label.shortcutrestartwarning "La modifica della scorciatoia per spostare il fuoco sulla casella di ricerca richiede il riavvio del browser.">
 <!ENTITY gblite.options.label.searchboxfocus "Sposta il fuoco sulla casella di ricerca">
-<!ENTITY gblite.options.label.shortcutprefix "Ctrl + Shift +">
 <!ENTITY gblite.options.label.shiftenter "Maiuscolo + Invio per eseguire">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Invio per eseguire">
 <!ENTITY gblite.options.label.shiftctrlenter "Maiuscolo + Ctrl + Invio per eseguire">

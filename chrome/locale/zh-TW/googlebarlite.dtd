@@ -111,7 +111,6 @@
 <!ENTITY gblite.options.label.sitetouse "使用的 Google 網站：">
 <!ENTITY gblite.options.label.shortcutrestartwarning "變更搜尋框焦點快捷鍵需要重新啟動Firefox.">
 <!ENTITY gblite.options.label.searchboxfocus "設定搜尋框焦點">
-<!ENTITY gblite.options.label.shortcutprefix "Ctrl + Shift +">
 <!ENTITY gblite.options.label.shiftenter "Shift + Enter 執行">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter 執行">
 <!ENTITY gblite.options.label.shiftctrlenter "Shift + Ctrl + Enter 執行">

@@ -1,8 +1,30 @@
 var objGooglebarLitePrefs = {
+	DoValidate: function(event) {
+		if(!this.ShortcutIsValid())
+		{
+			var pw = document.getElementById("GBL-PrefWindow");
+			pw.showPane(document.getElementById("GBL-PrefPane-Keyboard"));
+			event.stopPropagation();
+			return false;
+		}
+	},
+	
 	InitUI: function() {
 		this.UpdateUseInlineCompleteStatus();
 		this.UpdateSearchHistoryStatus();
 		this.UpdateShowContextMenuStatus();
+	},
+	
+	ShortcutIsValid: function() {
+		var ctrl = document.getElementById("GBL-Opt-Shortcut-Ctrl").checked;
+		var alt = document.getElementById("GBL-Opt-Shortcut-Alt").checked;
+		var shift = document.getElementById("GBL-Opt-Shortcut-Shift").checked;
+
+		var key = document.getElementById("GBL-Opt-SearchBoxFocusKey").value;
+		var keyValid = /[a-zA-Z]/.test(key);
+		
+		var isValid = (ctrl || alt || shift) && keyValid;
+		return isValid;
 	},
 	
 	UpdateUseInlineCompleteStatus: function() {
@@ -36,5 +58,14 @@ var objGooglebarLitePrefs = {
 		document.getElementById("GBL-Opt-CM-CachedLink").disabled = disabled;
 		document.getElementById("GBL-Opt-CM-Similar").disabled = disabled;
 		document.getElementById("GBL-Opt-CM-Translate").disabled = disabled;
+	},
+	
+	ValidateKeyboardShortcut: function(event) {
+		var isValid = this.ShortcutIsValid();
+		
+		if(!isValid)
+			event.stopPropagation();
+		
+		document.getElementById("GBL-Opt-Shortcut-Error").hidden = isValid;
 	}
 };

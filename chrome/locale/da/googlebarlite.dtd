@@ -111,7 +111,6 @@
 <!ENTITY gblite.options.label.sitetouse "Brug Google-websted:">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Ændring af tastaturgenvejen for søgefeltet kræver genstart af browseren.">
 <!ENTITY gblite.options.label.searchboxfocus "Sæt søgeboks-fokus">
-<!ENTITY gblite.options.label.shortcutprefix "Ctrl + Skift +">
 <!ENTITY gblite.options.label.shiftenter "Skift + Enter udfører en">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter udfører en">
 <!ENTITY gblite.options.label.shiftctrlenter "Ctrl + Skift + Enter udfører en">

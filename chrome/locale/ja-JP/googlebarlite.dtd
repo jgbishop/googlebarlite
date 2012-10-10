@@ -111,7 +111,6 @@
 <!ENTITY gblite.options.label.sitetouse "使用するグーグルサイト:">
 <!ENTITY gblite.options.label.shortcutrestartwarning "検索ボックスへのフォーカスのショートカットを変更するには再起動する必要があります">
 <!ENTITY gblite.options.label.searchboxfocus "検索ボックスにフォーカスする">
-<!ENTITY gblite.options.label.shortcutprefix "Ctrl + Shift +">
 <!ENTITY gblite.options.label.shiftenter "Shift + Enter">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter">
 <!ENTITY gblite.options.label.shiftctrlenter "Shift + Ctrl + Enter">

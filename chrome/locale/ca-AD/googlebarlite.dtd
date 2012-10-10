@@ -111,7 +111,6 @@
 <!ENTITY gblite.options.label.sitetouse "Pàgina de Google a utilitzar">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Canviar el focus de la capsa de Cerca requereix reiniciar el navegador">
 <!ENTITY gblite.options.label.searchboxfocus "Configura el focus de la Capsa de Cerca">
-<!ENTITY gblite.options.label.shortcutprefix "Ctrl + Shift +">
 <!ENTITY gblite.options.label.shiftenter "Shift + Enter fa">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter fa">
 <!ENTITY gblite.options.label.shiftctrlenter "Shift + Ctrl + Enter fa">

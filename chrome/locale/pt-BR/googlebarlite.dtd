@@ -111,7 +111,6 @@
 <!ENTITY gblite.options.label.sitetouse "Site do Google a ser utilizado:">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Modificar a tecla de atalho para foco na caixa de pesquisa requer uma reinicialização do navegador.">
 <!ENTITY gblite.options.label.searchboxfocus "Dar foco à caixa de pesquisa">
-<!ENTITY gblite.options.label.shortcutprefix "Ctrl + Shift +">
 <!ENTITY gblite.options.label.shiftenter "Shift + Enter executa">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter executa">
 <!ENTITY gblite.options.label.shiftctrlenter "Shift + Ctrl + Enter executa">

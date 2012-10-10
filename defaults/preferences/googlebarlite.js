@@ -41,7 +41,7 @@ pref("extensions.googlebarlite.ignore_dictionary", false);
 pref("extensions.googlebarlite.shortcut_ctrl", true);
 pref("extensions.googlebarlite.shortcut_alt", false);
 pref("extensions.googlebarlite.shortcut_shift", true);
-pref("extensions.googlebarlite.focus_key", "S");
+pref("extensions.googlebarlite.focus_key", "O");
 pref("extensions.googlebarlite.shift_search", "site");
 pref("extensions.googlebarlite.ctrl_search", "images");
 pref("extensions.googlebarlite.shift_ctrl_search", "groups");

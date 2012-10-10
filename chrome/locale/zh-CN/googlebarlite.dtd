@@ -111,7 +111,6 @@
 <!ENTITY gblite.options.label.sitetouse "Google 站点使用:">
 <!ENTITY gblite.options.label.shortcutrestartwarning "改变搜索栏焦点设置需要重启浏览器">
 <!ENTITY gblite.options.label.searchboxfocus "设置搜索栏焦点">
-<!ENTITY gblite.options.label.shortcutprefix "Ctrl + Shift +">
 <!ENTITY gblite.options.label.shiftenter "Shift + Enter 执行">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter 执行">
 <!ENTITY gblite.options.label.shiftctrlenter "Shift + Ctrl + Enter 执行">

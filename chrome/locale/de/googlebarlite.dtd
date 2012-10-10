@@ -111,7 +111,6 @@
 <!ENTITY gblite.options.label.sitetouse "Google-Website verwenden:">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Ändern des Tastaturkürzels zum Fokussieren der Suchleiste erfordert einen Neustart des Browsers.">
 <!ENTITY gblite.options.label.searchboxfocus "Suchleiste fokussieren">
-<!ENTITY gblite.options.label.shortcutprefix "Strg + Umschalt +">
 <!ENTITY gblite.options.label.shiftenter "Umschalt + Eingabe startet eine">
 <!ENTITY gblite.options.label.ctrlenter "Strg + Eingabe startet eine">
 <!ENTITY gblite.options.label.shiftctrlenter "Umschalt + Strg + Eingabe startet eine">

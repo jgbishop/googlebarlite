@@ -111,7 +111,6 @@
 <!ENTITY gblite.options.label.sitetouse "Sitio Google que quieres usar:">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Para cambiar el atajo para el foco de la caja de búsqueda, es preciso reiniciar el navegador">
 <!ENTITY gblite.options.label.searchboxfocus "Establecer el foco en la caja de búsqueda">
-<!ENTITY gblite.options.label.shortcutprefix "Ctrl + Mayús. +">
 <!ENTITY gblite.options.label.shiftenter "Mayús. + Enter hace">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter hace">
 <!ENTITY gblite.options.label.shiftctrlenter "Mayús. + Ctrl + Enter hace">

@@ -111,7 +111,6 @@
 <!ENTITY gblite.options.label.sitetouse "Domyślna strona Google:">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Zmiana skrótu zostanie zastosowana po ponownym uruchomieniu przeglądarki.">
 <!ENTITY gblite.options.label.searchboxfocus "Uaktywniaj pole szukania skrótem:">
-<!ENTITY gblite.options.label.shortcutprefix "Ctrl + Shift +">
 <!ENTITY gblite.options.label.shiftenter "Shift + Enter wywołuje">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter wywołuje">
 <!ENTITY gblite.options.label.shiftctrlenter "Ctrl + Shift + Enter wywołuje">

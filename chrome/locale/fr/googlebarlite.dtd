@@ -111,7 +111,6 @@
 <!ENTITY gblite.options.label.sitetouse "Utiliser le site Google:">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Un changement du raccourci de la mise à l&apos;avant de la boîte de recherche nécessite un redémarrage du navigateur.">
 <!ENTITY gblite.options.label.searchboxfocus "Activer la mise à l&apos;avant de la boîte de recherche">
-<!ENTITY gblite.options.label.shortcutprefix "Ctrl + Maj +">
 <!ENTITY gblite.options.label.shiftenter "Maj + Entrée produisent une">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Entrée produisent une">
 <!ENTITY gblite.options.label.shiftctrlenter "Maj + Ctrl + Entrée produisent une">

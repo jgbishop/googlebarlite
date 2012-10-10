@@ -2,7 +2,9 @@
 //Version History
 //***************
 [4.9.2]
-+ Improved the use of the nsITransferable interface, to support the upcoming changes to private browsing.
++ Improved the customizability of the keyboard shortcut to set search box focus.
++ Changed the default search box focus key from 'S' to 'O' (to avoid a conflict with the new developer bar).
++ Improved the use of the nsITransferable interface, to be compatible with the upcoming changes to private browsing.
 + Bug Fix: A new tab is no longer opened if the user has the "Open search results in a new tab" option checked, and the current tab is on "about:newtab".
 
 --

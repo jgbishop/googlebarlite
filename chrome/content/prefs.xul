@@ -6,9 +6,11 @@
 
 <prefwindow xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
 		id="GBL-PrefWindow" buttons="accept,cancel" title="&gblite.options.title;"
-		onload="objGooglebarLitePrefs.InitUI();">
+		onload="objGooglebarLitePrefs.InitUI();"
+		ondialogaccept="return objGooglebarLitePrefs.DoValidate(event);">
 	
 	<script type="application/x-javascript" src="chrome://googlebarlite/content/prefs.js"/>
+	<script type="application/x-javascript" src="chrome://googlebarlite/content/googlebarlite.js"/>
 	
 	<prefpane id="GBL-PrefPane-General" label="&gblite.options.tab.general;">
 		<preferences>
@@ -333,11 +335,26 @@
 			<row align="center">
 				<label value="&gblite.options.label.searchboxfocus;" />
 				<hbox align="center">
-					<checkbox id="GBL-Opt-Shortcut-Ctrl" label="&gblite.options.label.shortcutctrl;" preference="GBL-Pref-Shortcut-Ctrl" />
-					<checkbox id="GBL-Opt-Shortcut-Alt" label="&gblite.options.label.shortcutalt;" preference="GBL-Pref-Shortcut-Alt" />
-					<checkbox id="GBL-Opt-Shortcut-Shift" label="&gblite.options.label.shortcutshift;" preference="GBL-Pref-Shortcut-Shift" />
-					<textbox id="GBL-Opt-SearchBoxFocusKey" maxlength="1" size="1" preference="GBL-Pref-FocusKey" />
+					<checkbox id="GBL-Opt-Shortcut-Ctrl" label="&gblite.options.label.shortcutctrl;"
+						oncommand="objGooglebarLitePrefs.ValidateKeyboardShortcut(event);" preference="GBL-Pref-Shortcut-Ctrl" />
+					<checkbox id="GBL-Opt-Shortcut-Alt" label="&gblite.options.label.shortcutalt;" 
+						oncommand="objGooglebarLitePrefs.ValidateKeyboardShortcut(event);" preference="GBL-Pref-Shortcut-Alt" />
+					<checkbox id="GBL-Opt-Shortcut-Shift" label="&gblite.options.label.shortcutshift;" 
+						oncommand="objGooglebarLitePrefs.ValidateKeyboardShortcut(event);" preference="GBL-Pref-Shortcut-Shift" />
+					<textbox id="GBL-Opt-SearchBoxFocusKey" maxlength="1" size="1" preference="GBL-Pref-FocusKey" 
+						oninput="objGooglebarLitePrefs.ValidateKeyboardShortcut(event);"
+						onchange="objGooglebarLitePrefs.ValidateKeyboardShortcut(event);" />
+						<!--
+						oninput="if(!objGooglebarLitePrefs.ShortcutIsValid()) event.stopPropagation();"
+						onchange="if(!objGooglebarLitePrefs.ShortcutIsValid()) { event.stopPropagation(); this.focus(); }" />
+						-->
 				</hbox>
+			</row>
+			
+			<row align="center">
+				<spacer />
+				<description id="GBL-Opt-Shortcut-Error" 
+					hidden="true" style="color: #C00; width: 17em;">&gblite.options.label.shortcuterror;</description>
 			</row>
 
 			</rows>

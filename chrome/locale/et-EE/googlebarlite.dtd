@@ -111,7 +111,6 @@
 <!ENTITY gblite.options.label.sitetouse "Kasutatav Google lehekülg">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Otsingukasti fookuse otsetee muutmine eeldab brauseri taaskäivitamist.">
 <!ENTITY gblite.options.label.searchboxfocus "Määra otsingukasti fookus">
-<!ENTITY gblite.options.label.shortcutprefix "Ctrl + Shift +">
 <!ENTITY gblite.options.label.shiftenter "Shift + Enter sooritab">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter sooritab">
 <!ENTITY gblite.options.label.shiftctrlenter "Ctrl + Shift + Enter sooritab">
