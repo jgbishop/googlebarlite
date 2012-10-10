@@ -60,7 +60,7 @@ GBL_PrivateBrowsingListener.prototype = {
 var objGooglebarLite = {
 	FormHistory: Components.classes["@mozilla.org/satchel/form-history;1"].getService(Components.interfaces.nsIFormHistory2 || Components.interfaces.nsIFormHistory),
 	PrefBranch: Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("extensions.googlebarlite."),
-	Transferable: Components.classes["@mozilla.org/widget/transferable;1"].createInstance(Components.interfaces.nsITransferable),
+	Transferable: null, // Now gets set up in the Startup() routine
 	
 	Prefs: {
 		// General
@@ -103,6 +103,9 @@ var objGooglebarLite = {
 		TB_ShowDictionary: { name: "buttons.dictionary", value: false, xulid: "GBL-TB-Dictionary"},
 		
 		// Keyboard shortcuts
+		ShortcutCtrl: { name: "shortcut_ctrl", value: false },
+		ShortcutAlt: { name: "shortcut_alt", value: false },
+		ShortcutShift: { name: "shortcut_shift", value: false },
 		FocusKey: { name: "focus_key", value: "", type: "string"},
 		ShiftSearch: { name: "shift_search", value: "", type: "string"},
 		CtrlSearch: { name: "ctrl_search", value: "", type: "string"},
@@ -611,6 +614,16 @@ var objGooglebarLite = {
 	ConfigureKeyboardShortcuts: function()
 	{
 		var windowEnumeration = Components.classes["@mozilla.org/appshell/window-mediator;1"].getService(Components.interfaces.nsIWindowMediator).getEnumerator("navigator:browser");
+		
+		var modifiers = new Array();
+		if(this.Prefs.ShortcutCtrl.value == true)
+			modifiers.push("accel");
+		
+		if(this.Prefs.ShortcutAlt.value == true)
+			modifiers.push("access");
+		
+		if(this.Prefs.ShortcutShift.value == true)
+			modifiers.push("shift");
 	
 		// Loop through all open windows
 		while(windowEnumeration.hasMoreElements())
@@ -619,6 +632,7 @@ var objGooglebarLite = {
 			if(mainDocument)
 			{
 				var focusKey = mainDocument.getElementById("GBL-Focus-Key");
+				focusKey.setAttribute("modifiers", modifiers.join());
 				focusKey.setAttribute("key", this.Prefs.FocusKey.value);
 			}
 		}
@@ -953,7 +967,9 @@ var objGooglebarLite = {
 			aEvent = { ctrlKey:false, altKey:false, button:0 };
 	
 		// If the search in tab option is checked, and we aren't viewing a blank window, open a new tab regardless
-		if(window.content.document.location != "about:blank" && this.Prefs.SearchInTab.value)
+		if(window.content.document.location != "about:blank" && 
+		   window.content.document.location != "about:newtab" &&
+		   this.Prefs.SearchInTab.value)
 			return true;
 	
 		// Only the search box passes in a true value for allowAltKey. This prevents a Ctrl+Enter search from the
@@ -1015,7 +1031,7 @@ var objGooglebarLite = {
 		this.SetSearchTerms(pastetext);
 	
 		var useTab = false;
-		if(window.content.document.location != "about:blank")
+		if(window.content.document.location != "about:blank" && window.content.document.location != "about:newtab")
 			useTab = this.Prefs.SearchInTab.value;
 	
 		this.Search(pastetext, 'web', false, useTab);
@@ -1058,8 +1074,7 @@ var objGooglebarLite = {
 	{
 		var useTab = false;
 	
-		// Is the "always use tab" option checked? If so, set the useTab flag to true.
-		if(window.content.document.location != "about:blank")
+		if(window.content.document.location != "about:blank" && window.content.document.location != "about:newtab")
 			useTab = this.Prefs.SearchInTab.value;
 		
 		this.Search('', searchType, true, useTab);
@@ -1325,8 +1340,8 @@ var objGooglebarLite = {
 			break;
 	
 		case "shopping":
-			if(isEmpty) { URL = this.BuildSearchURL("www", "products", ""); }
-			else		{ URL = this.BuildSearchURL("www", "products", searchTerms); }
+			if(isEmpty) { URL = this.BuildSearchURL("www", "shopping", ""); }
+			else		{ URL = this.BuildSearchURL("www", "shopping", searchTerms, "&tbm=shop"); }
 			break;
 	
 		case "groups":
@@ -1595,6 +1610,12 @@ var objGooglebarLite = {
 		if(document.getElementById("GBL-Toolbar-MainItem") && objGooglebarLite.Initialized == false)
 		{
 			objGooglebarLite.Initialized = true;
+			
+			if(objGooglebarLite.Transferable == null)
+			{
+				objGooglebarLite.Transferable = Components.classes["@mozilla.org/widget/transferable;1"].createInstance(Components.interfaces.nsITransferable);
+				objGooglebarLite.Transferable.init(null); // New requirement for FF 16
+			}
 			objGooglebarLite.Transferable.addDataFlavor("text/unicode");
 			
 			objGooglebarLite.PrivateBrowsingListener = new GBL_PrivateBrowsingListener();

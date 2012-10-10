@@ -38,6 +38,9 @@ pref("extensions.googlebarlite.prompt_to_clear", true);
 pref("extensions.googlebarlite.ignore_dictionary", false);
 
 // Keyboard shortcuts
+pref("extensions.googlebarlite.shortcut_ctrl", true);
+pref("extensions.googlebarlite.shortcut_alt", false);
+pref("extensions.googlebarlite.shortcut_shift", true);
 pref("extensions.googlebarlite.focus_key", "S");
 pref("extensions.googlebarlite.shift_search", "site");
 pref("extensions.googlebarlite.ctrl_search", "images");

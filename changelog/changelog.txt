@@ -1,6 +1,12 @@
 //***************
 //Version History
 //***************
+[4.9.2]
++ Improved the use of the nsITransferable interface, to support the upcoming changes to private browsing.
++ Bug Fix: A new tab is no longer opened if the user has the "Open search results in a new tab" option checked, and the current tab is on "about:newtab".
+
+--
+
 [4.9.1]
 + Made a few minor improvements to the installer manifest.
 + Removed the embedded JAR file from within the XPI.

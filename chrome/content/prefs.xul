@@ -248,6 +248,9 @@
 	
 	<prefpane id="GBL-PrefPane-Keyboard" label="&gblite.options.tab.keyboard;">
 		<preferences>
+			<preference id="GBL-Pref-Shortcut-Ctrl" name="extensions.googlebarlite.shortcut_ctrl" type="bool" />
+			<preference id="GBL-Pref-Shortcut-Alt" name="extensions.googlebarlite.shortcut_alt" type="bool" />
+			<preference id="GBL-Pref-Shortcut-Shift" name="extensions.googlebarlite.shortcut_shift" type="bool" />
 			<preference id="GBL-Pref-FocusKey" name="extensions.googlebarlite.focus_key" type="string" />
 			<preference id="GBL-Pref-ShiftSearch" name="extensions.googlebarlite.shift_search" type="string" />
 			<preference id="GBL-Pref-CtrlSearch" name="extensions.googlebarlite.ctrl_search" type="string" />
@@ -330,7 +333,9 @@
 			<row align="center">
 				<label value="&gblite.options.label.searchboxfocus;" />
 				<hbox align="center">
-					<label value="&gblite.options.label.shortcutprefix;" />
+					<checkbox id="GBL-Opt-Shortcut-Ctrl" label="&gblite.options.label.shortcutctrl;" preference="GBL-Pref-Shortcut-Ctrl" />
+					<checkbox id="GBL-Opt-Shortcut-Alt" label="&gblite.options.label.shortcutalt;" preference="GBL-Pref-Shortcut-Alt" />
+					<checkbox id="GBL-Opt-Shortcut-Shift" label="&gblite.options.label.shortcutshift;" preference="GBL-Pref-Shortcut-Shift" />
 					<textbox id="GBL-Opt-SearchBoxFocusKey" maxlength="1" size="1" preference="GBL-Pref-FocusKey" />
 				</hbox>
 			</row>
