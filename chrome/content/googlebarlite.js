@@ -60,7 +60,6 @@ GBL_PrivateBrowsingListener.prototype = {
 var objGooglebarLite = {
 	FormHistory: Components.classes["@mozilla.org/satchel/form-history;1"].getService(Components.interfaces.nsIFormHistory2 || Components.interfaces.nsIFormHistory),
 	PrefBranch: Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("extensions.googlebarlite."),
-	Transferable: null, // Now gets set up in the Startup() routine
 	
 	Prefs: {
 		// General
@@ -1012,13 +1011,27 @@ var objGooglebarLite = {
 
 	PasteAndSearch: function()
 	{
+		var trans = Components.classes["@mozilla.org/widget/transferable;1"].createInstance(Components.interfaces.nsITransferable);
+
+		// The init() function was added to FF 16 for upcoming changes to private browsing mode
+		// See https://bugzilla.mozilla.org/show_bug.cgi?id=722872 for more information
+		if('init' in trans)
+		{
+			var privacyContext = document.commandDispatcher.focusedWindow.
+				QueryInterface(Components.interfaces.nsIInterfaceRequestor).
+				getInterface(Components.interfaces.nsIWebNavigation).
+				QueryInterface(Components.interfaces.nsILoadContext);
+			trans.init(privacyContext);
+		}
+		trans.addDataFlavor("text/unicode");
+		
 		var clipboard = Components.classes["@mozilla.org/widget/clipboard;1"].createInstance(Components.interfaces.nsIClipboard);
-		clipboard.getData(this.Transferable, clipboard.kGlobalClipboard);
+		clipboard.getData(trans, clipboard.kGlobalClipboard);
 		
 		var str = new Object();
 		var strLength = new Object();
 		
-		this.Transferable.getTransferData("text/unicode", str, strLength);
+		trans.getTransferData("text/unicode", str, strLength);
 	
 		if(!str) return; // Exit if nothing there
 	
@@ -1610,13 +1623,6 @@ var objGooglebarLite = {
 		if(document.getElementById("GBL-Toolbar-MainItem") && objGooglebarLite.Initialized == false)
 		{
 			objGooglebarLite.Initialized = true;
-			
-			if(objGooglebarLite.Transferable == null)
-			{
-				objGooglebarLite.Transferable = Components.classes["@mozilla.org/widget/transferable;1"].createInstance(Components.interfaces.nsITransferable);
-				objGooglebarLite.Transferable.init(null); // New requirement for FF 16
-			}
-			objGooglebarLite.Transferable.addDataFlavor("text/unicode");
 			
 			objGooglebarLite.PrivateBrowsingListener = new GBL_PrivateBrowsingListener();
 			objGooglebarLite.PrivateBrowsingListener.watcher = {
