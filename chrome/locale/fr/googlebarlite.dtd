@@ -111,6 +111,10 @@
 <!ENTITY gblite.options.label.sitetouse "Utiliser le site Google:">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Un changement du raccourci de la mise à l&apos;avant de la boîte de recherche nécessite un redémarrage du navigateur.">
 <!ENTITY gblite.options.label.searchboxfocus "Activer la mise à l&apos;avant de la boîte de recherche">
+<!ENTITY gblite.options.label.shortcutctrl "Ctrl">
+<!ENTITY gblite.options.label.shortcutalt "Alt">
+<!ENTITY gblite.options.label.shortcutshift "Shift">
+<!ENTITY gblite.options.label.shortcuterror "La combinaison de touche spécifiée est invalide. Sélectionner au moins une touche modificatrice + une lettre.">
 <!ENTITY gblite.options.label.shiftenter "Maj + Entrée produisent une">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Entrée produisent une">
 <!ENTITY gblite.options.label.shiftctrlenter "Maj + Ctrl + Entrée produisent une">

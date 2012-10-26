@@ -111,6 +111,10 @@
 <!ENTITY gblite.options.label.sitetouse "Používat Google stránku">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Změna klávesové zkratky vyžaduje restart prohlížeče.">
 <!ENTITY gblite.options.label.searchboxfocus "Přejde do vyhledávacího okénka">
+<!ENTITY gblite.options.label.shortcutctrl "Ctrl">
+<!ENTITY gblite.options.label.shortcutalt "Alt">
+<!ENTITY gblite.options.label.shortcutshift "Shif">
+<!ENTITY gblite.options.label.shortcuterror "Klávesová zkratka je neplatná. Zvolte nejméně jednu modifikační klávesu a jedno písmeno.">
 <!ENTITY gblite.options.label.shiftenter "Shift + Enter">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter">
 <!ENTITY gblite.options.label.shiftctrlenter "Ctrl + Shift + Enter">

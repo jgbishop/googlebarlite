@@ -111,6 +111,10 @@
 <!ENTITY gblite.options.label.sitetouse "Domyślna strona Google:">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Zmiana skrótu zostanie zastosowana po ponownym uruchomieniu przeglądarki.">
 <!ENTITY gblite.options.label.searchboxfocus "Uaktywniaj pole szukania skrótem:">
+<!ENTITY gblite.options.label.shortcutctrl "Ctrl">
+<!ENTITY gblite.options.label.shortcutalt "Alt">
+<!ENTITY gblite.options.label.shortcutshift "Shift">
+<!ENTITY gblite.options.label.shortcuterror "Wybrany skrót klawiszowy jest niepoprawny. Wybierz przynajmniej jeden klawisz modyfikujący i znak z klawiatury.">
 <!ENTITY gblite.options.label.shiftenter "Shift + Enter wywołuje">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter wywołuje">
 <!ENTITY gblite.options.label.shiftctrlenter "Ctrl + Shift + Enter wywołuje">
