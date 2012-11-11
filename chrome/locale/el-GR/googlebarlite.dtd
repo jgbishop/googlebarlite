@@ -111,6 +111,10 @@
 <!ENTITY gblite.options.label.sitetouse "Ιστοσελίδα του Google προς χρήση:">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Η αλλαγή της συντόμευσης για την εστίαση στο πεδίο αναζήτησης απαιτεί επανεκκίνηση του προγράμματος περιήγησης.">
 <!ENTITY gblite.options.label.searchboxfocus "Ορισμός Εστίασης Πεδίου Αναζήτησης">
+<!ENTITY gblite.options.label.shortcutctrl "Ctrl">
+<!ENTITY gblite.options.label.shortcutalt "Alt">
+<!ENTITY gblite.options.label.shortcutshift "Shift">
+<!ENTITY gblite.options.label.shortcuterror "The specified shortcut combination is invalid. Select at least one modifier key and provide a letter on the keyboard.">
 <!ENTITY gblite.options.label.shiftenter "Shift + Enter εκτελεί το α">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter εκτελεί το α">
 <!ENTITY gblite.options.label.shiftctrlenter "Ctrl + Shift + Enter εκτελεί το α">

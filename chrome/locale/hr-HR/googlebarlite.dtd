@@ -111,6 +111,10 @@
 <!ENTITY gblite.options.label.sitetouse "Goggle stranica koja će se koristiti:">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Promjena tipkovničke kratice za fokusiranje okvira za pretraživanje zahtijeva ponovno pokretanje preglednika.">
 <!ENTITY gblite.options.label.searchboxfocus "Postavi fokus okvira za pretraživanje">
+<!ENTITY gblite.options.label.shortcutctrl "Ctrl">
+<!ENTITY gblite.options.label.shortcutalt "Alt">
+<!ENTITY gblite.options.label.shortcutshift "Shift">
+<!ENTITY gblite.options.label.shortcuterror "The specified shortcut combination is invalid. Select at least one modifier key and provide a letter on the keyboard.">
 <!ENTITY gblite.options.label.shiftenter "Shift + Enter izvodi">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter izvodi">
 <!ENTITY gblite.options.label.shiftctrlenter "Shift + Ctrl + Enter izvodi">

@@ -111,6 +111,10 @@
 <!ENTITY gblite.options.label.sitetouse "Kullanılacak Google Sitesi:">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Arama kutusu odağının değiştirilmesi tarayıcıyı yeniden başlatmayı gerektirir.">
 <!ENTITY gblite.options.label.searchboxfocus "Arama Kutusu Odağını Ayarla">
+<!ENTITY gblite.options.label.shortcutctrl "Ctrl">
+<!ENTITY gblite.options.label.shortcutalt "Alt">
+<!ENTITY gblite.options.label.shortcutshift "Shift">
+<!ENTITY gblite.options.label.shortcuterror "The specified shortcut combination is invalid. Select at least one modifier key and provide a letter on the keyboard.">
 <!ENTITY gblite.options.label.shiftenter "Shift + Enter şunu yapar:">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter şunu yapar:">
 <!ENTITY gblite.options.label.shiftctrlenter "Shift + Ctrl + Enter şunu yapar:">
