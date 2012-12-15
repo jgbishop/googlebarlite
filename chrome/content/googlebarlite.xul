@@ -5,8 +5,6 @@
 
 <overlay id="GBL-Overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
-<script src="chrome://global/content/nsDragAndDrop.js"/>
-<!-- <script src="chrome://global/content/nsTransferable.js"/> -->
 <script type="application/x-javascript" src="chrome://googlebarlite/content/googlebarlite.js"/>
 
 <stringbundleset id="stringbundleset">
@@ -302,7 +300,7 @@
 				<toolbarseparator id="GBL-TB-Sep2" />
 				
 				<toolbarbutton id="GBL-TB-UpButton" class="GBL-Toolbar-Button" tooltiptext="&gblite.tt.up;" collapsed="false"
-								type="menu-button" oncommand="objGooglebarLite.Up(event, '')" onclick="checkForMiddleClick(this, event);">
+								type="menu-button" oncommand="objGooglebarLite.Up('', event)" onclick="checkForMiddleClick(this, event);">
 					<menupopup id="GBL-TB-UpMenu" onpopupshowing="objGooglebarLite.UpdateUpMenu()" />
 				</toolbarbutton>
 								

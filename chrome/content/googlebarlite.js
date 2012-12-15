@@ -345,26 +345,6 @@ var objGooglebarLite = {
 		}
 	},
 
-	SearchObserver:	{
-		getSupportedFlavours: function()
-		{
-			var flavours = new FlavourSet;
-			flavours.appendFlavour("text/html");
-			flavours.appendFlavour("text/unicode");
-			return flavours;
-		},
-	
-		onDragOver: function(event, flavour, session) {},
-	
-		onDrop: function(event, dropData, session)
-		{
-			if(!dropData || !dropData.data || dropData.data == "") { return; }
-			if(event.target != document.getElementById("GBL-SearchBox")) { return; }
-			objGooglebarLite.DragDropToSearchBox(event, dropData.data);
-			event.preventDefault();
-		}
-	},
-
 	Log: function(aMessage)
 	{
 		var consoleService = Components.classes['@mozilla.org/consoleservice;1'].getService(Components.interfaces.nsIConsoleService);
@@ -473,21 +453,32 @@ var objGooglebarLite = {
 			if(thisTerm.length == 0)
 				continue;
 			
-			tempButton = document.createElement("toolbarbutton");
-			tempButton.setAttribute("label",  thisTerm);
-			tempButton.setAttribute("collapsed", "false");
-			tempButton.setAttribute("tooltiptext", stringBundle.getFormattedString("GBL_FindNextOccurrence", [thisTerm]));
-			tempButton.setAttribute("oncommand", "objGooglebarLite.FindInPage(this.getAttribute('label'), event); event.stopPropagation();");
+			tempButton = this.CreateXULElement("toolbarbutton", {
+				'label': thisTerm,
+				'collapsed': false,
+				'tooltiptext': stringBundle.getFormattedString("GBL_FindNextOccurrence", [thisTerm]),
+			});
+			
+			tempButton.addEventListener("command", function(event) {
+				objGooglebarLite.FindInPage(this.getAttribute('label'), event);
+				event.stopPropagation();
+			}, false);
+			
 			tempButton.className = "GBL-TB-SearchWordButton";
 	
 			searchWordsContainer.appendChild(tempButton);
 	
-			tempMenuItem = document.createElement("menuitem");
-			tempMenuItem.setAttribute("label",  thisTerm);
-			tempMenuItem.setAttribute("collapsed", "true");
-			tempMenuItem.setAttribute("tooltiptext", stringBundle.getFormattedString("GBL_FindNextOccurrence", [thisTerm]));
-			tempMenuItem.setAttribute("oncommand", "objGooglebarLite.FindInPage(this.getAttribute('label'), event); event.stopPropagation();");
-	
+			tempMenuItem = this.CreateXULElement("menuitem", {
+				'label': thisTerm,
+				'collapsed': "true",
+				'tooltiptext': stringBundle.getFormattedString("GBL_FindNextOccurrence", [thisTerm])
+			});
+			
+			tempMenuItem.addEventListener("command", function(event) {
+				objGooglebarLite.FindInPage(this.getAttribute('label'), event);
+				event.stopPropagation();
+			}, false);
+			
 			if(highlighter.checked == true)
 			{
 				tempButton.setAttribute("style", this.StylesArray[i%6] + " !important");
@@ -661,6 +652,16 @@ var objGooglebarLite = {
 		return null;
 	},
 	
+	CreateXULElement: function(element, attrs)
+	{
+		var tempItem = document.createElementNS("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul", element);
+		for(a in attrs)
+		{
+			tempItem.setAttribute(a, attrs[a]);
+		}
+		return tempItem;
+	},
+	
 	CustomizeAfter: function(e)
 	{
 		var theToolbox = e.target;
@@ -692,7 +693,7 @@ var objGooglebarLite = {
 	{
 		var searchbox = document.getElementById("GBL-SearchBox");
 		searchbox.addEventListener("popupshowing", objGooglebarLite.SearchContextOnPopupShowing, true);
-		searchbox.addEventListener("drop", objGooglebarLite.SearchBoxOnDrop, true); // FF 3.5+
+		searchbox.addEventListener("drop", objGooglebarLite.DragDropHandler, true);
 		
 		objGooglebarLite.ValidateSearchHistorySetting();
 	},
@@ -707,30 +708,27 @@ var objGooglebarLite = {
 		if(neverShowAgain)
 			this.PrefBranch.setBoolPref(this.Prefs.WarnOnFormHistory.name, false);
 	},
-
-	DragDropToSearchBox: function(event, data)
+	
+	DragDropHandler: function(event)
 	{
-		var d = window.content.document;
-		var tempDiv = d.createElement("div");
-		tempDiv.innerHTML = data;
+		var data = event.dataTransfer.getData("text/plain");
+		data = data.replace(/[\r\n]/g, ' '); // Replace new-lines with a space
+		data = objGooglebarLite.TrimString(data);
 	
-		var searchTerms = this.GetTextContent(tempDiv);
-		searchTerms = searchTerms.replace(/[\r\n]/g, '');
-		searchTerms = this.TrimString(searchTerms);
-
-		this.SetSearchTerms(searchTerms);
-        
-		if(this.Prefs.SearchOnDragDrop.value)
+		if(!data || data == "") { return; } // Bail out if what was dragged is empty
+		
+		objGooglebarLite.SetSearchTerms(data);
+		
+		if(objGooglebarLite.Prefs.SearchOnDragDrop.value)
 		{
-			var isEmpty = false;
-			if(searchTerms.length == 0)
-				isEmpty = true;
-
-			var useTab = this.OpenInTab(event, false);
-			this.Search(searchTerms, "web", isEmpty, useTab);
+			var isEmpty = (data.length == 0);
+			var useTab = objGooglebarLite.OpenInTab(event, false);
+			objGooglebarLite.Search(data, "web", isEmpty, useTab);
 		}
+			
+		event.preventDefault();
 	},
-	
+
 	EnableFormHistory: function(neverShowAgain)
 	{
 		var b = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("browser.");
@@ -894,15 +892,7 @@ var objGooglebarLite = {
 	
 	LoadURL: function(url, openTab)
 	{
-		if(openTab)
-		{
-			getBrowser().selectedTab = getBrowser().addTab(url);
-		}
-		else
-		{
-			window.content.document.location = url;
-			window.content.focus();
-		}
+		openUILinkIn(url, openTab ? "tab" : "current", false, null, null);
 	},
 
 	MakeSafe: function(element, index, array)
@@ -966,9 +956,7 @@ var objGooglebarLite = {
 			aEvent = { ctrlKey:false, altKey:false, button:0 };
 	
 		// If the search in tab option is checked, and we aren't viewing a blank window, open a new tab regardless
-		if(window.content.document.location != "about:blank" && 
-		   window.content.document.location != "about:newtab" &&
-		   this.Prefs.SearchInTab.value)
+		if(this.TabIsBlank() == false && this.Prefs.SearchInTab.value)
 			return true;
 	
 		// Only the search box passes in a true value for allowAltKey. This prevents a Ctrl+Enter search from the
@@ -1044,7 +1032,7 @@ var objGooglebarLite = {
 		this.SetSearchTerms(pastetext);
 	
 		var useTab = false;
-		if(window.content.document.location != "about:blank" && window.content.document.location != "about:newtab")
+		if(this.TabIsBlank() == false)
 			useTab = this.Prefs.SearchInTab.value;
 	
 		this.Search(pastetext, 'web', false, useTab);
@@ -1087,7 +1075,7 @@ var objGooglebarLite = {
 	{
 		var useTab = false;
 	
-		if(window.content.document.location != "about:blank" && window.content.document.location != "about:newtab")
+		if(this.TabIsBlank())
 			useTab = this.Prefs.SearchInTab.value;
 		
 		this.Search('', searchType, true, useTab);
@@ -1443,11 +1431,6 @@ var objGooglebarLite = {
 		this.LoadURL(URL, useTab);
 	},
 
-	SearchBoxOnDrop: function(event)
-	{
-		nsDragAndDrop.drop(event, objGooglebarLite.SearchObserver);
-	},
-
 	SearchBoxTextEntered: function(aTriggeringEvent)
 	{
 		// Step 1: Get the search terms
@@ -1471,17 +1454,18 @@ var objGooglebarLite = {
 		{
 			var stringBundle = document.getElementById("GBL-String-Bundle");
 	
-			var mi = document.createElement("menuitem");
-			mi.setAttribute("id", "GBL-PasteAndSearch");
-			mi.setAttribute("label", stringBundle.getString("GBL_PasteAndSearch_Label"));
-			mi.setAttribute("accesskey", stringBundle.getString("GBL_PasteAndSearch_AK"));
-			mi.setAttribute("command", "GBL-Command-PasteAndSearch");
-	
+			var tempItem = this.CreateXULElement("menuitem", {
+				'id': "GBL-PasteAndSearch",
+				'label': stringBundle.getString("GBL_PasteAndSearch_Label"),
+				'accesskey': stringBundle.getString("GBL_PasteAndSearch_AK"),
+				'command': "GBL-Command-PasteAndSearch"
+			});
+			
 			var items = e.originalTarget.childNodes;
 			for (var i=0; i<items.length; i++) {
 				if(items[i].getAttribute("cmd") == "cmd_paste")
 				{
-					e.originalTarget.insertBefore(mi, items[i+1]);
+					e.originalTarget.insertBefore(tempItem, items[i+1]);
 					break;
 				}
 			}
@@ -1521,7 +1505,7 @@ var objGooglebarLite = {
 		
 		var searchbox = document.getElementById("GBL-SearchBox");
 		searchbox.removeEventListener('popupshowing', objGooglebarLite.SearchContextOnPopupShowing, true);
-		searchbox.removeEventListener('drop', objGooglebarLite.SearchBoxOnDrop, true);
+		searchbox.removeEventListener('drop', objGooglebarLite.DragDropHandler, true);
 		
 		window.getBrowser().removeProgressListener(objGooglebarLite.ProgressListener);
 		
@@ -1658,6 +1642,14 @@ var objGooglebarLite = {
 			setTimeout(function(){objGooglebarLite.DelayedStartup();}, 50); // Needs to happen after Firefox's delayedStartup()
 		}
 	},
+	
+	TabIsBlank: function()
+	{
+		if(window.content.document.location == "about:blank" || window.content.document.location == "about:newtab")
+			return true;
+		else
+			return false;
+	},
 
 	TermsHaveUpdated: function()
 	{
@@ -1715,17 +1707,14 @@ var objGooglebarLite = {
 	{
 		if (!string) return "";
 	
-		// Efficiently replace leading and trailing white space
-		string = string.replace(/^\s+/, '');
-		string = string.replace(/\s+$/, '');
-	
-		// Replace all whitespace runs with a single space
-		string = string.replace(/\s+/g, ' ');
+		string = string.replace(/^\s+/, ''); // Trim leading white space
+		string = string.replace(/\s+$/, ''); // Trim trailing white space
+		string = string.replace(/\s+/g, ' '); // Replace all white space runs with a single space
 	
 		return string;
 	},
 
-	Up: function(event, path)
+	Up: function(path, event)
 	{
 		var useTab = this.OpenInTab(event, false);
 
@@ -1969,10 +1958,18 @@ var objGooglebarLite = {
 		{
 			currentPath = addressArray.slice(0, i).join("/") + "/";
 	
-			tempItem = document.createElement("menuitem");
-			tempItem.setAttribute("label", currentPath);
-			tempItem.setAttribute("oncommand", "objGooglebarLite.Up(event, this.getAttribute('label')); event.stopPropagation();");
-			tempItem.setAttribute("onclick", "checkForMiddleClick(this, event); event.stopPropagation();");
+			tempItem = this.CreateXULElement("menuitem", {'label': currentPath});
+			
+			tempItem.addEventListener("command", function(event) {
+				objGooglebarLite.Up(this.getAttribute('label'), event);
+				event.stopPropagation();
+			}, false);
+			
+			tempItem.addEventListener("click", function(event) {
+				checkForMiddleClick(this, event);
+				event.stopPropagation();
+			}, false);
+
 			upMenu.appendChild(tempItem);
 		}
 	
@@ -1987,10 +1984,19 @@ var objGooglebarLite = {
 			}
 	
 			topHost += "/";
-			tempItem = document.createElement("menuitem");
-			tempItem.setAttribute("label", topHost);
-			tempItem.setAttribute("oncommand", "objGooglebarLite.Up(event, this.getAttribute('label')); event.stopPropagation();");
-			tempItem.setAttribute("onclick", "checkForMiddleClick(this, event); event.stopPropagation();");
+			
+			tempItem = this.CreateXULElement("menuitem", {'label': topHost});
+			
+			tempItem.addEventListener("command", function(event) {
+				objGooglebarLite.Up(this.getAttribute('label'), event);
+				event.stopPropagation();
+			}, false);
+			
+			tempItem.addEventListener("click", function(event) {
+				checkForMiddleClick(this, event);
+				event.stopPropagation();
+			}, false);
+			
 			upMenu.appendChild(tempItem);
 		}
 	},

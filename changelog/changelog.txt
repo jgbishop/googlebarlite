@@ -1,6 +1,15 @@
 //***************
 //Version History
 //***************
+[4.9.4]
++ Simplified the drag and drop implementation code to use the newer, more portable interface.
++ Improved the means by which URLs are loaded.
++ Improved the way dynamic XUL elements are created.
++ The minimum supported Firefox version has been changed from 4.0 to 10.0.
++ Miscellaneous code improvements.
+
+--
+
 [4.9.3]
 + Bug Fix: Corrected a number of locales that were incomplete in the previous release.
 
