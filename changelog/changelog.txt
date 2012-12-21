@@ -5,6 +5,7 @@
 + Simplified the drag and drop implementation code to use the newer, more portable interface.
 + Improved the means by which URLs are loaded.
 + Improved the way dynamic XUL elements are created.
++ Improved the way events are handled for dynamic XUL elements.
 + The minimum supported Firefox version has been changed from 4.0 to 10.0.
 + Miscellaneous code improvements.
 

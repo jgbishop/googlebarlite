@@ -301,7 +301,9 @@
 				
 				<toolbarbutton id="GBL-TB-UpButton" class="GBL-Toolbar-Button" tooltiptext="&gblite.tt.up;" collapsed="false"
 								type="menu-button" oncommand="objGooglebarLite.Up('', event)" onclick="checkForMiddleClick(this, event);">
-					<menupopup id="GBL-TB-UpMenu" onpopupshowing="objGooglebarLite.UpdateUpMenu()" />
+					<menupopup id="GBL-TB-UpMenu" onpopupshowing="objGooglebarLite.UpdateUpMenu()"
+						oncommand="objGooglebarLite.Up(event.target.getAttribute('label'), event); event.stopPropagation();"
+						onclick="checkForMiddleClick(event.target, event); event.stopPropagation();" />
 				</toolbarbutton>
 								
 				<toolbarbutton id="GBL-TB-Highlighter" class="GBL-Toolbar-Button" tooltiptext="&gblite.tt.highlighter;" collapsed="false"
@@ -311,13 +313,15 @@
 				</toolbaritem>
 				
 				<toolbaritem id="GBL-TB-SearchWordArea" pack="start" flex="1">
-					<toolbaritem id="GBL-TB-SearchWordsContainer" />
+					<toolbaritem id="GBL-TB-SearchWordsContainer"
+						oncommand="objGooglebarLite.FindInPage(event.target.getAttribute('label'), event); event.stopPropagation();" />
 					
 					<toolbarspring />
 					
 					<toolbarbutton id="GBL-Overflow-Button" class="GBL-Toolbar-Button" collapsed="false" mousethrough="never"
 								   tooltiptext="&gblite.tt.overflow;" type="menu">
-						<menupopup id="GBL-Overflow-Menu" onpopupshowing="objGooglebarLite.UpdateOverflowMenu()" />
+						<menupopup id="GBL-Overflow-Menu" onpopupshowing="objGooglebarLite.UpdateOverflowMenu()" 
+							oncommand="objGooglebarLite.FindInPage(event.target.getAttribute('label'), event); event.stopPropagation();" />
 					</toolbarbutton>
 				</toolbaritem>
 			</toolbaritem>

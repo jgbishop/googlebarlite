@@ -416,6 +416,12 @@ var objGooglebarLite = {
 		}
 	},
 
+	Test: function(event)
+	{
+		objGooglebarLite.Log("Hit Test");
+		objGooglebarLite.Log(event.target.getAttribute('label'));
+	},
+	
 	AddSearchWordButtons: function(inString)
 	{
 		var searchWordsContainer = document.getElementById("GBL-TB-SearchWordsContainer");
@@ -455,29 +461,16 @@ var objGooglebarLite = {
 			
 			tempButton = this.CreateXULElement("toolbarbutton", {
 				'label': thisTerm,
+				'class': 'GBL-TB-SearchWordButton',
 				'collapsed': false,
 				'tooltiptext': stringBundle.getFormattedString("GBL_FindNextOccurrence", [thisTerm]),
 			});
 			
-			tempButton.addEventListener("command", function(event) {
-				objGooglebarLite.FindInPage(this.getAttribute('label'), event);
-				event.stopPropagation();
-			}, false);
-			
-			tempButton.className = "GBL-TB-SearchWordButton";
-	
-			searchWordsContainer.appendChild(tempButton);
-	
 			tempMenuItem = this.CreateXULElement("menuitem", {
 				'label': thisTerm,
 				'collapsed': "true",
 				'tooltiptext': stringBundle.getFormattedString("GBL_FindNextOccurrence", [thisTerm])
 			});
-			
-			tempMenuItem.addEventListener("command", function(event) {
-				objGooglebarLite.FindInPage(this.getAttribute('label'), event);
-				event.stopPropagation();
-			}, false);
 			
 			if(highlighter.checked == true)
 			{
@@ -485,6 +478,7 @@ var objGooglebarLite = {
 				tempMenuItem.setAttribute("style", this.StylesArray[i%6] + " !important");
 			}
 	
+			searchWordsContainer.appendChild(tempButton);
 			overflowMenu.appendChild(tempMenuItem);
 		}
 	
@@ -1957,20 +1951,7 @@ var objGooglebarLite = {
 		for(i=(addressArray.length - 1); i > endPoint; i--)
 		{
 			currentPath = addressArray.slice(0, i).join("/") + "/";
-	
-			tempItem = this.CreateXULElement("menuitem", {'label': currentPath});
-			
-			tempItem.addEventListener("command", function(event) {
-				objGooglebarLite.Up(this.getAttribute('label'), event);
-				event.stopPropagation();
-			}, false);
-			
-			tempItem.addEventListener("click", function(event) {
-				checkForMiddleClick(this, event);
-				event.stopPropagation();
-			}, false);
-
-			upMenu.appendChild(tempItem);
+			upMenu.appendChild(this.CreateXULElement("menuitem", {'label': currentPath}));
 		}
 	
 		var hostArray = addressArray[2].split(".");
@@ -1984,20 +1965,7 @@ var objGooglebarLite = {
 			}
 	
 			topHost += "/";
-			
-			tempItem = this.CreateXULElement("menuitem", {'label': topHost});
-			
-			tempItem.addEventListener("command", function(event) {
-				objGooglebarLite.Up(this.getAttribute('label'), event);
-				event.stopPropagation();
-			}, false);
-			
-			tempItem.addEventListener("click", function(event) {
-				checkForMiddleClick(this, event);
-				event.stopPropagation();
-			}, false);
-			
-			upMenu.appendChild(tempItem);
+			upMenu.appendChild(this.CreateXULElement("menuitem", {'label': topHost}));
 		}
 	},
 
