@@ -416,12 +416,6 @@ var objGooglebarLite = {
 		}
 	},
 
-	Test: function(event)
-	{
-		objGooglebarLite.Log("Hit Test");
-		objGooglebarLite.Log(event.target.getAttribute('label'));
-	},
-	
 	AddSearchWordButtons: function(inString)
 	{
 		var searchWordsContainer = document.getElementById("GBL-TB-SearchWordsContainer");
@@ -488,7 +482,7 @@ var objGooglebarLite = {
 	BuildSearchURL: function(prefix, restrict, searchTerms, useSecure, secureType)
 	{
 		var u = "";
-
+		
 		if(useSecure != null && useSecure == true)
 		{
 			if(this.SecureTLDs.hasOwnProperty(this.Prefs.SiteToUse.value))
@@ -520,7 +514,7 @@ var objGooglebarLite = {
 					u += "&nfpr=1";
 			}
 		}
-			
+		
 		return u;
 	},
 	
@@ -1326,7 +1320,7 @@ var objGooglebarLite = {
 	
 		case "news":
 			if(isEmpty) { URL = this.BuildSearchURL("news", "", ""); }
-			else		{ URL = this.BuildSearchURL("news", "news", searchTerms, this.Prefs.UseSecureSearch.value, "nws:1"); }
+			else		{ URL = this.BuildSearchURL("news", "search", searchTerms + "&tbm=nws", this.Prefs.UseSecureSearch.value, "nws:1"); }
 			break;
 	
 		case "maps":
@@ -1336,7 +1330,7 @@ var objGooglebarLite = {
 	
 		case "shopping":
 			if(isEmpty) { URL = this.BuildSearchURL("www", "shopping", ""); }
-			else		{ URL = this.BuildSearchURL("www", "shopping", searchTerms, "&tbm=shop"); }
+			else		{ URL = this.BuildSearchURL("www", "search", searchTerms + "&tbm=shop"); }
 			break;
 	
 		case "groups":
@@ -1421,7 +1415,7 @@ var objGooglebarLite = {
 		// ****************************************
 		// Step 4: Perform search
 		// ****************************************
-	
+		
 		this.LoadURL(URL, useTab);
 	},
 
