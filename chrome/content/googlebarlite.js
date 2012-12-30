@@ -1442,7 +1442,7 @@ var objGooglebarLite = {
 		{
 			var stringBundle = document.getElementById("GBL-String-Bundle");
 	
-			var tempItem = this.CreateXULElement("menuitem", {
+			var tempItem = objGooglebarLite.CreateXULElement("menuitem", {
 				'id': "GBL-PasteAndSearch",
 				'label': stringBundle.getString("GBL_PasteAndSearch_Label"),
 				'accesskey': stringBundle.getString("GBL_PasteAndSearch_AK"),
