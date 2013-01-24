@@ -699,10 +699,20 @@ var objGooglebarLite = {
 	
 	DragDropHandler: function(event)
 	{
-		var data = event.dataTransfer.getData("text/plain");
+		var dataType = "text/plain";
+		if(event.dataTransfer.types.contains("text/uri-list"))
+		{
+			// Grab the link text if possible; otherwise fall back to the URL
+			if(event.dataTransfer.types.contains("text/x-moz-url-desc"))
+				dataType = "text/x-moz-url-desc";
+			else
+				dataType = "text/uri-list";
+		}
+		
+		var data = event.dataTransfer.getData(dataType);
 		data = data.replace(/[\r\n]/g, ' '); // Replace new-lines with a space
 		data = objGooglebarLite.TrimString(data);
-	
+		
 		if(!data || data == "") { return; } // Bail out if what was dragged is empty
 		
 		objGooglebarLite.SetSearchTerms(data);
@@ -1319,8 +1329,8 @@ var objGooglebarLite = {
 			break;
 	
 		case "news":
-			if(isEmpty) { URL = this.BuildSearchURL("news", "", ""); }
-			else		{ URL = this.BuildSearchURL("news", "search", searchTerms + "&tbm=nws", this.Prefs.UseSecureSearch.value, "nws:1"); }
+			if(isEmpty) { URL = this.BuildSearchURL("www", "", ""); }
+			else		{ URL = this.BuildSearchURL("www", "search", searchTerms + "&tbm=nws", this.Prefs.UseSecureSearch.value, "nws:1"); }
 			break;
 	
 		case "maps":

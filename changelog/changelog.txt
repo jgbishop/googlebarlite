@@ -1,6 +1,12 @@
 //***************
 //Version History
 //***************
+[4.9.6]
++ Bug Fix: The news search type should no longer result in a "page not found" error
++ Bug Fix: Dragging a link to the search box no longer pastes the URL, but the link text instead
+
+--
+
 [4.9.5]
 + Bug Fix: Corrected a problem that prevented the "Paste and Search" option from appearing in the search box context menu
 
