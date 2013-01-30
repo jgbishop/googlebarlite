@@ -210,6 +210,12 @@ var objGooglebarLite = {
 			{
 				objGooglebarLite.UpdateSearchBoxSettings();
 			}
+			else if(data == prefs.RememberCombined.name)
+			{
+				// Reset the combined search menu if the user disabled the option to remember it
+				if(prefs.RememberCombined.value == false)
+					document.getElementById("GBL-TB-Combined").setAttribute("searchType", "web");
+			}
 			else if(data == prefs.WarnOnFormHistory.name)
 			{
 				objGooglebarLite.ValidateSearchHistorySetting();
@@ -580,13 +586,18 @@ var objGooglebarLite = {
 	
 	CombinedSearch: function(event)
 	{
-		if(this.Prefs.RememberCombined.value == true)
+		var type = "web";
+		
+		if(event.target.nodeName == "menuitem")
 		{
-			var type = document.getElementById("GBL-TB-Combined").getAttribute("searchType");
-			this.PrepareSearch(event, type);
+			type = event.target.getAttribute("searchType"); // Get the type from the menuitem the user selected
+			if(this.Prefs.RememberCombined.value == true) // Update the combined menu if the option is set
+				document.getElementById("GBL-TB-Combined").setAttribute("searchType", type);
 		}
 		else
-			this.PrepareSearch(event, 'web');
+			type = document.getElementById("GBL-TB-Combined").getAttribute("searchType");
+		
+		this.PrepareSearch(event, type);
 	},
 
 	ConfigureKeyboardShortcuts: function()
@@ -719,9 +730,8 @@ var objGooglebarLite = {
 		
 		if(objGooglebarLite.Prefs.SearchOnDragDrop.value)
 		{
-			var isEmpty = (data.length == 0);
 			var useTab = objGooglebarLite.OpenInTab(event, false);
-			objGooglebarLite.Search(data, "web", isEmpty, useTab);
+			objGooglebarLite.Search(data, "web", useTab);
 		}
 			
 		event.preventDefault();
@@ -877,11 +887,15 @@ var objGooglebarLite = {
 					}
 				}
 				else if(p.name == this.Prefs.TB_ShowLabels.name)
-				{
 					this.ToggleButtonLabels(p.value);
-				}
 			}
 		}
+		
+		// If the option to remember the combined search type is disabled, but the default search type is hosed
+		// for some reason, reset it to the default value
+		if(this.Prefs.RememberCombined.value == false &&
+		   document.getElementById("GBL-TB-Combined").getAttribute("searchType") != "web")
+			document.getElementById("GBL-TB-Combined").setAttribute("searchType", "web");
 		
 		this.CheckButtonContainer();
 		this.UpdateContextMenuVisibility();
@@ -1033,7 +1047,7 @@ var objGooglebarLite = {
 		if(this.TabIsBlank() == false)
 			useTab = this.Prefs.SearchInTab.value;
 	
-		this.Search(pastetext, 'web', false, useTab);
+		this.Search(pastetext, 'web', useTab);
 	},
 
 	PrepareMainMenu: function(event, searchType)
@@ -1046,17 +1060,13 @@ var objGooglebarLite = {
 			return;
 		}
 	
-		this.Search('', searchType, true, useTab);
+		this.Search('', searchType, useTab);
 	},
 	
 	PrepareSearch: function(event, searchType)
 	{
 		// Step 1: Get the search terms
 		var searchTerms = this.TrimString(this.GetSearchTerms());
-		var isEmpty = false;
-		
-		if(searchTerms.length == 0)
-			isEmpty = true;
 	
 		// Step 2: Check the search type (if necessary)
 		if(searchType == "")
@@ -1066,7 +1076,7 @@ var objGooglebarLite = {
 		var useTab = this.OpenInTab(event, false);
 		
 		// Step 4: Perform the search
-		this.Search(searchTerms, searchType, isEmpty, useTab);
+		this.Search(searchTerms, searchType, useTab);
 	},
 
 	PrepareCachedSearch: function(searchType)
@@ -1076,7 +1086,7 @@ var objGooglebarLite = {
 		if(this.TabIsBlank())
 			useTab = this.Prefs.SearchInTab.value;
 		
-		this.Search('', searchType, true, useTab);
+		this.Search('', searchType, useTab);
 	},
 
 	PrepareSelectedSearch: function(aEvent, searchType)
@@ -1128,7 +1138,7 @@ var objGooglebarLite = {
 	
 		var useTab = this.OpenInTab(aEvent, false);
 	
-		this.Search(selection, searchType, false, useTab);
+		this.Search(selection, searchType, useTab);
 	},
 	
 	RemoveHighlighting: function(win)
@@ -1284,12 +1294,13 @@ var objGooglebarLite = {
 			chevron.collapsed = true;
 	},
 
-	Search: function(searchTerms, searchType, isEmpty, useTab)
+	Search: function(searchTerms, searchType, useTab)
 	{
 		var win = window.content.document;
 		var URL = "";
 		var originalTerms = searchTerms;
 		var canIgnore = false;	// True if doing a dictionary search
+		var isEmpty = (searchTerms.length == 0);
 	
 		// ****************************************
 		// Step 1: Convert the search terms into a URI capable string
@@ -1329,7 +1340,8 @@ var objGooglebarLite = {
 			break;
 	
 		case "news":
-			if(isEmpty) { URL = this.BuildSearchURL("www", "", ""); }
+			// For some reason, searches prefer the "www" variant to the "news" variant
+			if(isEmpty) { URL = this.BuildSearchURL("news", "", ""); }
 			else		{ URL = this.BuildSearchURL("www", "search", searchTerms + "&tbm=nws", this.Prefs.UseSecureSearch.value, "nws:1"); }
 			break;
 	
@@ -1433,7 +1445,6 @@ var objGooglebarLite = {
 	{
 		// Step 1: Get the search terms
 		var terms = this.TrimString(this.GetSearchTerms());
-		var isEmpty = (terms.length == 0);
 	
 		// Step 2: Do we need to open a new tab?
 		var useTab = this.OpenInTab(aTriggeringEvent, true);
@@ -1443,7 +1454,7 @@ var objGooglebarLite = {
 	
 		// Step 4: Search
 		if(aTriggeringEvent != null || (aTriggeringEvent == null && this.Prefs.AutoSearch.value))
-			this.Search(terms, searchType, isEmpty, useTab);
+			this.Search(terms, searchType, useTab);
 	},
 
 	SearchContextOnPopupShowing: function(e)
@@ -1743,17 +1754,6 @@ var objGooglebarLite = {
 		}
 		else
 			this.LoadURL(path, useTab);
-	},
-
-	UpdateCombinedSearch: function(event, type)
-	{
-		if(this.Prefs.RememberCombined.value == true)
-		{
-			var TB_Combined = document.getElementById("GBL-TB-Combined");
-			TB_Combined.setAttribute("searchType", type);
-		}
-	
-		this.PrepareSearch(event, type);
 	},
 
 	UpdateContextMenu: function()

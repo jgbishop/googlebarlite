@@ -52,7 +52,7 @@
 			<menuseparator id="GBL-Context-SubSeparator" />
 			
 			<menuitem id="GBL-Context-Backward" label="&gblite.context.backwardlinks;" accesskey="&gblite.context.ak.backwardlinks;"
-					  oncommand="objGooglebarLite.Search('', 'backwards', true, false)" />
+					  oncommand="objGooglebarLite.Search('', 'backwards', false)" />
 					  
 			<menuitem id="GBL-Context-Cached" label="&gblite.context.cached;" accesskey="&gblite.context.ak.cached;"
 					  oncommand="objGooglebarLite.PrepareCachedSearch('cached')" />
@@ -61,10 +61,10 @@
 					  oncommand="objGooglebarLite.PrepareCachedSearch('cachedlink')" />
 					  
 			<menuitem id="GBL-Context-Similar" label="&gblite.context.similar;" accesskey="&gblite.context.ak.similar;"
-					  oncommand="objGooglebarLite.Search('', 'similar', true, false)" />
+					  oncommand="objGooglebarLite.Search('', 'similar', false)" />
 					  
 			<menuitem id="GBL-Context-Translate" label="&gblite.context.translate;" accesskey="&gblite.context.ak.translate;"
-					  oncommand="objGooglebarLite.Search('', 'translate', true, false)" />
+					  oncommand="objGooglebarLite.Search('', 'translate', false)" />
 					  
 		</menupopup>
 	</menu>
@@ -87,44 +87,44 @@
 								  oncommand="objGooglebarLite.PrepareMainMenu(event, 'web')" onclick="checkForMiddleClick(this, event);" />
 						
 						<menu label="&gblite.mainmenu.label.googlelinks;" accesskey="&gblite.mainmenu.ak.googlelinks;">
-						<menupopup id="GBL-MainMenu-Links-Popup">
+						<menupopup id="GBL-MainMenu-Links-Popup" onclick="checkForMiddleClick(event.target, event); event.stopPropagation();">
 							<menuitem label="&gblite.mainmenu.label.images;" accesskey="&gblite.mainmenu.ak.images;"
-									  oncommand="objGooglebarLite.PrepareMainMenu(event, 'images')" onclick="checkForMiddleClick(this, event);" />
+									  oncommand="objGooglebarLite.PrepareMainMenu(event, 'images')" />
 									  
 							<menuitem label="&gblite.mainmenu.label.video;" accesskey="&gblite.mainmenu.ak.video;"
-									  oncommand="objGooglebarLite.PrepareMainMenu(event, 'video')" onclick="checkForMiddleClick(this, event);" />
+									  oncommand="objGooglebarLite.PrepareMainMenu(event, 'video')" />
 							
 							<menuitem label="&gblite.mainmenu.label.news;" accesskey="&gblite.mainmenu.ak.news;"
-									  oncommand="objGooglebarLite.PrepareMainMenu(event, 'news')" onclick="checkForMiddleClick(this, event);" />
+									  oncommand="objGooglebarLite.PrepareMainMenu(event, 'news')" />
 									  
 							<menuitem label="&gblite.mainmenu.label.maps;" accesskey="&gblite.mainmenu.ak.maps;"
-									  oncommand="objGooglebarLite.PrepareMainMenu(event, 'maps')" onclick="checkForMiddleClick(this, event);" />
+									  oncommand="objGooglebarLite.PrepareMainMenu(event, 'maps')" />
 
 							<menuitem label="&gblite.mainmenu.label.shopping;" accesskey="&gblite.mainmenu.ak.shopping;"
-									  oncommand="objGooglebarLite.PrepareMainMenu(event, 'shopping')" onclick="checkForMiddleClick(this, event);" />
+									  oncommand="objGooglebarLite.PrepareMainMenu(event, 'shopping')" />
 									  
 							<menuitem label="&gblite.mainmenu.label.groups;" accesskey="&gblite.mainmenu.ak.groups;"
-									  oncommand="objGooglebarLite.PrepareMainMenu(event, 'groups')" onclick="checkForMiddleClick(this, event);" />
+									  oncommand="objGooglebarLite.PrepareMainMenu(event, 'groups')" />
 									  
 							<menuitem label="&gblite.mainmenu.label.blog;" accesskey="&gblite.mainmenu.ak.blog;"
-									  oncommand="objGooglebarLite.PrepareMainMenu(event, 'blog')" onclick="checkForMiddleClick(this, event);" />
+									  oncommand="objGooglebarLite.PrepareMainMenu(event, 'blog')" />
 									  
 							<menuitem label="&gblite.mainmenu.label.book;" accesskey="&gblite.mainmenu.ak.book;"
-									  oncommand="objGooglebarLite.PrepareMainMenu(event, 'book')" onclick="checkForMiddleClick(this, event);" />
+									  oncommand="objGooglebarLite.PrepareMainMenu(event, 'book')" />
 
 							<menuitem label="&gblite.mainmenu.label.finance;" accesskey="&gblite.mainmenu.ak.finance;"
-									  oncommand="objGooglebarLite.PrepareMainMenu(event, 'finance')" onclick="checkForMiddleClick(this, event);" />
+									  oncommand="objGooglebarLite.PrepareMainMenu(event, 'finance')" />
 									  
 							<menuitem label="&gblite.mainmenu.label.scholar;" accesskey="&gblite.mainmenu.ak.scholar;"
-									  oncommand="objGooglebarLite.PrepareMainMenu(event, 'scholar')" onclick="checkForMiddleClick(this, event);" />
+									  oncommand="objGooglebarLite.PrepareMainMenu(event, 'scholar')" />
 									  
 							<menuseparator/>
 							
 							<menuitem label="&gblite.mainmenu.label.gmail;" accesskey="&gblite.mainmenu.ak.gmail;"
-									  oncommand="objGooglebarLite.PrepareMainMenu(event, 'gmail')" onclick="checkForMiddleClick(this, event);" />
+									  oncommand="objGooglebarLite.PrepareMainMenu(event, 'gmail')" />
 									  
 							<menuitem label="&gblite.mainmenu.label.advanced;" accesskey="&gblite.mainmenu.ak.advanced;"
-									  oncommand="objGooglebarLite.PrepareMainMenu(event, 'advanced')" onclick="checkForMiddleClick(this, event);" />
+									  oncommand="objGooglebarLite.PrepareMainMenu(event, 'advanced')" />
 									  
 						</menupopup>
 						</menu>
@@ -180,76 +180,50 @@
 				<toolbarbutton id="GBL-TB-Combined" class="GBL-Toolbar-Button" type="menu-button" tooltiptext="&gblite.tt.combined;"
 								collapsed="false" persist="searchType" oncommand="objGooglebarLite.CombinedSearch(event)"
 								onclick="checkForMiddleClick(this, event);" searchType="web">
-					<menupopup id="GBL-TB-Combined-Popup">
+								
+					<menupopup id="GBL-TB-Combined-Popup" onclick="checkForMiddleClick(event.target, event); event.stopPropagation();"
+								oncommand="objGooglebarLite.CombinedSearch(event); event.stopPropagation();">
 						<menuitem id="GBL-TB-Combined-Web" label="&gblite.searchtype.web;"
-									class="menuitem-iconic GBL-MenuItem-Iconic"
-									oncommand="objGooglebarLite.UpdateCombinedSearch(event, 'web'); event.stopPropagation();"
-									onclick="checkForMiddleClick(this, event); event.stopPropagation();" />
+									class="menuitem-iconic GBL-MenuItem-Iconic" searchType="web" />
 									
 						<menuitem id="GBL-TB-Combined-Lucky" label="&gblite.searchtype.lucky;"
-									class="menuitem-iconic GBL-MenuItem-Iconic"
-									oncommand="objGooglebarLite.UpdateCombinedSearch(event, 'lucky'); event.stopPropagation();"
-									onclick="checkForMiddleClick(this,event); event.stopPropagation();" />
+									class="menuitem-iconic GBL-MenuItem-Iconic" searchType="lucky" />
 								  
 						<menuitem id="GBL-TB-Combined-Site" label="&gblite.searchtype.site;"
-									class="menuitem-iconic GBL-MenuItem-Iconic"
-									oncommand="objGooglebarLite.UpdateCombinedSearch(event, 'site'); event.stopPropagation();"
-									onclick="checkForMiddleClick(this, event); event.stopPropagation();" />
+									class="menuitem-iconic GBL-MenuItem-Iconic" searchType="site" />
 								  
 						<menuitem id="GBL-TB-Combined-Images" label="&gblite.searchtype.image;"
-									class="menuitem-iconic GBL-MenuItem-Iconic"
-									oncommand="objGooglebarLite.UpdateCombinedSearch(event, 'images'); event.stopPropagation();"
-									onclick="checkForMiddleClick(this, event); event.stopPropagation();" />
+									class="menuitem-iconic GBL-MenuItem-Iconic" searchType="images" />
 								  
 						<menuitem id="GBL-TB-Combined-Video" label="&gblite.searchtype.video;"
-									class="menuitem-iconic GBL-MenuItem-Iconic"
-									oncommand="objGooglebarLite.UpdateCombinedSearch(event, 'video'); event.stopPropagation();"
-									onclick="checkForMiddleClick(this, event); event.stopPropagation();" />
+									class="menuitem-iconic GBL-MenuItem-Iconic" searchType="video" />
 									
 						<menuitem id="GBL-TB-Combined-News" label="&gblite.searchtype.news;"
-									class="menuitem-iconic GBL-MenuItem-Iconic"
-									oncommand="objGooglebarLite.UpdateCombinedSearch(event, 'news'); event.stopPropagation();"
-									onclick="checkForMiddleClick(this, event); event.stopPropagation();" />
+									class="menuitem-iconic GBL-MenuItem-Iconic" searchType="news" />
 								  
 						<menuitem id="GBL-TB-Combined-Maps" label="&gblite.searchtype.maps;"
-									class="menuitem-iconic GBL-MenuItem-Iconic"
-									oncommand="objGooglebarLite.UpdateCombinedSearch(event, 'maps'); event.stopPropagation();"
-									onclick="checkForMiddleClick(this, event); event.stopPropagation();" />
+									class="menuitem-iconic GBL-MenuItem-Iconic" searchType="maps" />
 									
 						<menuitem id="GBL-TB-Combined-Shopping" label="&gblite.searchtype.shopping;"
-									class="menuitem-iconic GBL-MenuItem-Iconic"
-									oncommand="objGooglebarLite.UpdateCombinedSearch(event, 'shopping'); event.stopPropagation();"
-									onclick="checkForMiddleClick(this, event); event.stopPropagation();" />
+									class="menuitem-iconic GBL-MenuItem-Iconic" searchType="shopping" />
 
 						<menuitem id="GBL-TB-Combined-Groups" label="&gblite.searchtype.group;"
-									class="menuitem-iconic GBL-MenuItem-Iconic"
-									oncommand="objGooglebarLite.UpdateCombinedSearch(event, 'groups'); event.stopPropagation();"
-									onclick="checkForMiddleClick(this, event); event.stopPropagation();" />
+									class="menuitem-iconic GBL-MenuItem-Iconic" searchType="groups" />
 								  
 						<menuitem id="GBL-TB-Combined-Blog" label="&gblite.searchtype.blog;"
-									class="menuitem-iconic GBL-MenuItem-Iconic"
-									oncommand="objGooglebarLite.UpdateCombinedSearch(event, 'blog'); event.stopPropagation();"
-									onclick="checkForMiddleClick(this, event); event.stopPropagation();" />
+									class="menuitem-iconic GBL-MenuItem-Iconic" searchType="blog" />
 									
 						<menuitem id="GBL-TB-Combined-Book" label="&gblite.searchtype.book;"
-									class="menuitem-iconic GBL-MenuItem-Iconic"
-									oncommand="objGooglebarLite.UpdateCombinedSearch(event, 'book'); event.stopPropagation();"
-									onclick="checkForMiddleClick(this, event); event.stopPropagation();" />
+									class="menuitem-iconic GBL-MenuItem-Iconic" searchType="book" />
 								  
 						<menuitem id="GBL-TB-Combined-Finance" label="&gblite.searchtype.finance;"
-									class="menuitem-iconic GBL-MenuItem-Iconic"
-									oncommand="objGooglebarLite.UpdateCombinedSearch(event, 'finance'); event.stopPropagation();"
-									onclick="checkForMiddleClick(this, event); event.stopPropagation();" />
+									class="menuitem-iconic GBL-MenuItem-Iconic" searchType="finance" />
 
 						<menuitem id="GBL-TB-Combined-Scholar" label="&gblite.searchtype.scholar;"
-									class="menuitem-iconic GBL-MenuItem-Iconic"
-									oncommand="objGooglebarLite.UpdateCombinedSearch(event, 'scholar'); event.stopPropagation();"
-									onclick="checkForMiddleClick(this, event); event.stopPropagation();" />
+									class="menuitem-iconic GBL-MenuItem-Iconic" searchType="scholar" />
 									
 						<menuitem id="GBL-TB-Combined-Dictionary" label="&gblite.searchtype.dictionary;"
-									class="menuitem-iconic GBL-MenuItem-Iconic"
-									oncommand="objGooglebarLite.UpdateCombinedSearch(event, 'dictionary'); event.stopPropagation();"
-									onclick="checkForMiddleClick(this, event); event.stopPropagation();" />
+									class="menuitem-iconic GBL-MenuItem-Iconic" searchType="dictionary" />
 					</menupopup>
 				</toolbarbutton>
 				

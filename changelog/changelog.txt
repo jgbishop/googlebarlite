@@ -1,6 +1,13 @@
 //***************
 //Version History
 //***************
+[4.9.7]
++ Various internal code improvements
++ Bug Fix: Disabling the "Remember last combined-menu search type" option will now reset the combined search button properly
++ Bug Fix: Doing a news search when no search terms are present will now take you to the Google News homepage as intended
+
+--
+
 [4.9.6]
 + Bug Fix: The news search type should no longer result in a "page not found" error
 + Bug Fix: Dragging a link to the search box no longer pastes the URL, but the link text instead
