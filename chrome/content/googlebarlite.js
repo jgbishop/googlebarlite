@@ -315,7 +315,7 @@ var objGooglebarLite = {
 						   queryParts["esrc"] == "s" &&
 						   terms == ""))
 						{
-							if(objGooglebarLite.GetSearchTerms() != terms)
+							if(objGooglebarLite.GetSearchTerms(false) != terms)
 								objGooglebarLite.SetSearchTerms(terms);
 						}
 						
@@ -380,7 +380,7 @@ var objGooglebarLite = {
 		var body = doc.body;
 		if(!body) { return; }
 	
-		var terms = this.TrimString(this.GetSearchTerms());
+		var terms = this.GetSearchTerms();
 		var termsArray = this.SplitTerms(terms);
 		this.LastHighlightedTerms = terms; // Back up the highlighted terms
 	
@@ -806,9 +806,13 @@ var objGooglebarLite = {
 		}
 	},
 	
-	GetSearchTerms: function()
+	GetSearchTerms: function(trimString)
 	{
-		return document.getElementById("GBL-SearchBox").value;
+		var val = document.getElementById("GBL-SearchBox").value;
+		if(typeof trimString === "undefined" || trimString == true) // trimString defaults to true if not available
+			return this.TrimString(val);
+		else
+			return val;
 	},
 	
 	GetSearchType: function(event)
@@ -1066,7 +1070,7 @@ var objGooglebarLite = {
 	PrepareSearch: function(event, searchType)
 	{
 		// Step 1: Get the search terms
-		var searchTerms = this.TrimString(this.GetSearchTerms());
+		var searchTerms = this.GetSearchTerms();
 	
 		// Step 2: Check the search type (if necessary)
 		if(searchType == "")
@@ -1444,7 +1448,7 @@ var objGooglebarLite = {
 	SearchBoxTextEntered: function(aTriggeringEvent)
 	{
 		// Step 1: Get the search terms
-		var terms = this.TrimString(this.GetSearchTerms());
+		var terms = this.GetSearchTerms();
 	
 		// Step 2: Do we need to open a new tab?
 		var useTab = this.OpenInTab(aTriggeringEvent, true);
@@ -1662,7 +1666,7 @@ var objGooglebarLite = {
 
 	TermsHaveUpdated: function()
 	{
-		if(this.TrimString(this.GetSearchTerms()) === "")
+		if(this.GetSearchTerms() === "")
 		{
 			document.getElementById("GBL-TB-Dictionary").setAttribute("disabled", "true");
 			document.getElementById("GBL-TB-Combined-Dictionary").setAttribute("disabled", "true");
