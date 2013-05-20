@@ -1,65 +1,74 @@
-function GBL_PrivateBrowsingListener() { this.init(); }
+// Import the Services module for future use, if we're not in a browser window where it's already loaded
+Components.utils.import('resource://gre/modules/Services.jsm');
 
-GBL_PrivateBrowsingListener.prototype = {
-	_os: null,
-	_inPrivateBrowsing: false, // whether we are in private browsing mode
-	_watcher: null, // the watcher object
-	
-	init : function ()
-	{
-		this._inited = true;
-		this._os = Components.classes["@mozilla.org/observer-service;1"].getService(Components.interfaces.nsIObserverService);
-		this._os.addObserver(this, "private-browsing", false);
-		this._os.addObserver(this, "quit-application", false);
-		try {
-			var pbs = Components.classes["@mozilla.org/privatebrowsing;1"].getService(Components.interfaces.nsIPrivateBrowsingService);
-			this._inPrivateBrowsing = pbs.privateBrowsingEnabled;
-		} catch(ex) { } // ignore exceptions in older versions of Firefox
-	},
-	
-	observe : function (aSubject, aTopic, aData)
-	{
-		if (aTopic == "private-browsing")
-		{
-			if (aData == "enter")
-			{
-				this._inPrivateBrowsing = true;
-				if (this.watcher && "onEnterPrivateBrowsing" in this._watcher)
-					this.watcher.onEnterPrivateBrowsing();
-			}
-			else if (aData == "exit")
-			{
-				this._inPrivateBrowsing = false;
-				if (this.watcher && "onExitPrivateBrowsing" in this._watcher)
-					this.watcher.onExitPrivateBrowsing();
-			}
-		}
-		else if (aTopic == "quit-application")
-		{
-			this._os.removeObserver(this, "quit-application");
-			this._os.removeObserver(this, "private-browsing");
-		}
-	},
-	
-	get inPrivateBrowsing()
-	{
-		return this._inPrivateBrowsing;
-	},
-	
-	get watcher()
-	{
-		return this._watcher;
-	},
-	
-	set watcher(val)
-	{
-		this._watcher = val;
-	}
-};
+//function GBL_PrivateBrowsingListener() { this.init(); }
+
+//GBL_PrivateBrowsingListener.prototype = {
+//    _os: null,
+//    _inPrivateBrowsing: false, // whether we are in private browsing mode
+//    _watcher: null, // the watcher object
+//
+//    init : function ()
+//    {
+//        this._inited = true;
+//        this._os = Components.classes["@mozilla.org/observer-service;1"].getService(Components.interfaces.nsIObserverService);
+//        this._os.addObserver(this, "private-browsing", false);
+//        this._os.addObserver(this, "quit-application", false);
+//        try {
+//            var pbs = Components.classes["@mozilla.org/privatebrowsing;1"].getService(Components.interfaces.nsIPrivateBrowsingService);
+//            this._inPrivateBrowsing = pbs.privateBrowsingEnabled;
+//        } catch(ex) { } // ignore exceptions in older versions of Firefox
+//    },
+//
+//    observe : function (aSubject, aTopic, aData)
+//    {
+//        if (aTopic == "private-browsing")
+//        {
+//            if (aData == "enter")
+//            {
+//                this._inPrivateBrowsing = true;
+//                if (this.watcher && "onEnterPrivateBrowsing" in this._watcher)
+//                    this.watcher.onEnterPrivateBrowsing();
+//            }
+//            else if (aData == "exit")
+//            {
+//                this._inPrivateBrowsing = false;
+//                if (this.watcher && "onExitPrivateBrowsing" in this._watcher)
+//                    this.watcher.onExitPrivateBrowsing();
+//            }
+//        }
+//        else if (aTopic == "quit-application")
+//        {
+//            this._os.removeObserver(this, "quit-application");
+//            this._os.removeObserver(this, "private-browsing");
+//        }
+//    },
+//
+//    get inPrivateBrowsing()
+//    {
+//        return this._inPrivateBrowsing;
+//    },
+//
+//    get watcher()
+//    {
+//        return this._watcher;
+//    },
+//
+//    set watcher(val)
+//    {
+//        this._watcher = val;
+//    }
+//};
 
 var objGooglebarLite = {
 	FormHistory: Components.classes["@mozilla.org/satchel/form-history;1"].getService(Components.interfaces.nsIFormHistory2 || Components.interfaces.nsIFormHistory),
 	PrefBranch: Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("extensions.googlebarlite."),
+	
+	// Create a constructor for the builtin supports-string class
+	nsSupportsString:  Components.Constructor("@mozilla.org/supports-string;1", "nsISupportsString"),
+	
+	// Create a constructor for the builtin transferable class
+	nsTransferable: Components.Constructor("@mozilla.org/widget/transferable;1", "nsITransferable"),
 	
 	Prefs: {
 		// General
@@ -128,7 +137,7 @@ var objGooglebarLite = {
 	
 	PrefObserver: {
 		register: function() {
-			objGooglebarLite.PrefBranch.QueryInterface(Components.interfaces.nsIPrefBranch2);
+			//objGooglebarLite.PrefBranch.QueryInterface(Components.interfaces.nsIPrefBranch);
 			objGooglebarLite.PrefBranch.addObserver("", this, false);
 		},
 		
@@ -230,7 +239,7 @@ var objGooglebarLite = {
 	LastHighlightedTerms: "",
 	OverflowButtonWidth: 0,
 	PreviouslyOnSecureSearchPage: false,
-	PrivateBrowsingListener: null,
+//  PrivateBrowsingListener: null,
 	ToolbarPresent: false,
 	
 	SecureTLDs: {
@@ -389,6 +398,10 @@ var objGooglebarLite = {
 			var term = termsArray[i];
 			term = term.replace(/"/g, ''); // Remove any double quotes that may appear in the search term
 			
+			// Don't highlight the AND or OR logical operators
+			if(term.toLowerCase() == "or" || term.toLowerCase() == "and")
+				continue;
+			
 			var span = doc.createElement("span");
 			span.setAttribute("style", this.HighlightColors[i%6] + " color: #000; display: inline !important; font-size: inherit !important;");
 			span.setAttribute("class", "GBL-Highlighted");
@@ -520,6 +533,8 @@ var objGooglebarLite = {
 					u += "&nfpr=1";
 			}
 		}
+		
+		this.Log("URL: " + u);
 		
 		return u;
 	},
@@ -1015,8 +1030,28 @@ var objGooglebarLite = {
 
 	PasteAndSearch: function()
 	{
+		var trans = this.Transferable();
+		trans.addDataFlavor("text/unicode");
+		Services.clipboard.getData(trans, Services.clipboard.kGlobalClipboard);
+		
+		var str = {};
+		var strLength = {};
+		
+		trans.getTransferData("text/unicode", str, strLength);
+		
+		if(!str) return; // Exit if there's nothing there
+		var pastetext = str.value.QueryInterface(Components.interfaces.nsISupportsString).data;
+		pastetext = this.TrimString(pastetext);
+		
+		if(pastetext.length == 0) return; // Exit if the string is empty after trimming
+		
+		/*trans.addDataFlavor("text/unicode");
+		trans.setTransferData("text/unicode", SupportsString(copytext), copytext.length * 2);
+		 
+		Services.clipboard.setData(trans, null, Services.clipboard.kGlobalClipboard);
 		var trans = Components.classes["@mozilla.org/widget/transferable;1"].createInstance(Components.interfaces.nsITransferable);
 
+		/*
 		// The init() function was added to FF 16 for upcoming changes to private browsing mode
 		// See https://bugzilla.mozilla.org/show_bug.cgi?id=722872 for more information
 		if('init' in trans)
@@ -1044,6 +1079,7 @@ var objGooglebarLite = {
 		pastetext = this.TrimString(pastetext);
 	
 		if(pastetext.length == 0) return; // Exit if text is empty
+		*/
 	
 		this.SetSearchTerms(pastetext);
 	
@@ -1340,7 +1376,7 @@ var objGooglebarLite = {
 	
 		case "video":
 			if(isEmpty) { URL = this.BuildSearchURL("video", "", ""); }
-			else		{ URL = this.BuildSearchURL("video", "videosearch", searchTerms, this.Prefs.UseSecureSearch.value, "vid:1"); }
+			else		{ URL = this.BuildSearchURL("www", "search", searchTerms + "&tbm=vid", this.Prefs.UseSecureSearch.value); }
 			break;
 	
 		case "news":
@@ -1430,13 +1466,33 @@ var objGooglebarLite = {
 			else		{ URL = this.BuildSearchURL("www", "search", searchTerms); }
 			break;
 		}
-	
+		
 		// ****************************************
 		// Step 3: Add terms to search history
 		// ****************************************
 		
 		if(this.Prefs.MaintainHistory.value == true && !isEmpty && !(canIgnore && this.Prefs.IgnoreDictionary.value))
-			this.FormHistory.addEntry("GBL-Search-History", originalTerms);
+		{
+			try {
+				// Firefox 20+
+				Components.utils.import("resource://gre/modules/PrivateBrowsingUtils.jsm");
+				var isSet = PrivateBrowsingUtils.isWindowPrivate(window);
+				if (!PrivateBrowsingUtils.isWindowPrivate(window))
+					this.FormHistory.addEntry("GBL-Search-History", originalTerms);
+			} catch(e) {
+				// pre Firefox 20 (if you do not have access to a doc.
+				// might use doc.hasAttribute("privatebrowsingmode") then instead)
+				try {
+					var inPrivateBrowsing = Components.classes["@mozilla.org/privatebrowsing;1"].
+						getService(Components.interfaces.nsIPrivateBrowsingService).privateBrowsingEnabled;
+					if (!inPrivateBrowsing)
+						this.FormHistory.addEntry("GBL-Search-History", originalTerms);
+				} catch(e) {
+					Components.utils.reportError(e);
+					return;
+				}
+			}
+		}
 	
 		// ****************************************
 		// Step 4: Perform search
@@ -1590,16 +1646,19 @@ var objGooglebarLite = {
 				}
 				break;
 	
-			case ',':
-				break; // Ignore commas (regardless of where they are)
-
-			case '|':
-				break; // Ignore pipe
+			case ',': // Ignore commas (regardless of where they are)
+			case '|': // Ignore pipe
+				break; 
 	
-			case '+':
-			case '~':
+			case '+': // Ignore plus
+			case '~': // Ignore tilde
+			case '(': // Ignore open paren
 				if(inWord == false)
-					break; // Ignore the ~ and + symbols that precede any search words
+					break;
+				
+			case ')': // Ignore close paren
+				if(inWord == true)
+					break;
 	
 			default:
 				if(inWord == false) 
@@ -1621,11 +1680,11 @@ var objGooglebarLite = {
 		{
 			objGooglebarLite.Initialized = true;
 			
-			objGooglebarLite.PrivateBrowsingListener = new GBL_PrivateBrowsingListener();
-			objGooglebarLite.PrivateBrowsingListener.watcher = {
-				onEnterPrivateBrowsing : function() {},
-				onExitPrivateBrowsing : function() { objGooglebarLite.SetSearchTerms(""); }
-			};
+//  		objGooglebarLite.PrivateBrowsingListener = new GBL_PrivateBrowsingListener();
+//  		objGooglebarLite.PrivateBrowsingListener.watcher = {
+//  			onEnterPrivateBrowsing : function() {},
+//  			onExitPrivateBrowsing : function() { objGooglebarLite.SetSearchTerms(""); }
+//  		};
 			
 			objGooglebarLite.PrefObserver.register();
 	
@@ -1656,6 +1715,13 @@ var objGooglebarLite = {
 		}
 	},
 	
+//  SupportsString: function(str)
+//  {
+//  	var res = this.nsSupportsString(); // Create an instance of the supports-string class
+//  	res.data = str; // Store the JavaScript string that we want to wrap in the new nsISupportsString object
+//  	return res;
+//  },
+
 	TabIsBlank: function()
 	{
 		if(window.content.document.location == "about:blank" || window.content.document.location == "about:newtab")
@@ -1714,6 +1780,23 @@ var objGooglebarLite = {
 		var toolbar = document.getElementById("GBL-Toolbar");
 		toolbar.collapsed = !toolbar.collapsed;
 		document.persist("GBL-Toolbar", "collapsed");
+	},
+	
+	// Create a wrapper to construct an nsITransferable instance and set its source to the given window, when necessary
+	Transferable: function(source)
+	{
+		var res = this.nsTransferable();
+		if ('init' in res) {
+			// When passed a Window object, find a suitable provacy context for it.
+			if (source instanceof Ci.nsIDOMWindow)
+				// Note: in Gecko versions >16, you can import the PrivateBrowsingUtils.jsm module
+				// and use PrivateBrowsingUtils.privacyContextFromWindow(sourceWindow) instead
+				source = source.QueryInterface(Ci.nsIInterfaceRequestor)
+							   .getInterface(Ci.nsIWebNavigation);
+	 
+			res.init(source);
+		}
+		return res;
 	},
 
 	TrimString: function(string)
