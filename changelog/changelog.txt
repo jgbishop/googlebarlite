@@ -4,6 +4,7 @@
 [4.9.8]
 + Search terms entered into private browsing windows are no longer saved to the search history
 + The minimum supported Firefox version has been changed to 17.0
++ Bumped the maxVersion to 30.*
 + Removed all private browsing detection and observation logic, since those interfaces have been deprecated
 + Removed the one and only reference to the nsiPrefBranch2 interface, since it has been deprecated
 + Bug Fix: The video search option should no longer result in a 404 page not found error
