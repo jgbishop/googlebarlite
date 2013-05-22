@@ -1,71 +1,9 @@
 // Import the Services module for future use, if we're not in a browser window where it's already loaded
 Components.utils.import('resource://gre/modules/Services.jsm');
 
-//function GBL_PrivateBrowsingListener() { this.init(); }
-
-//GBL_PrivateBrowsingListener.prototype = {
-//    _os: null,
-//    _inPrivateBrowsing: false, // whether we are in private browsing mode
-//    _watcher: null, // the watcher object
-//
-//    init : function ()
-//    {
-//        this._inited = true;
-//        this._os = Components.classes["@mozilla.org/observer-service;1"].getService(Components.interfaces.nsIObserverService);
-//        this._os.addObserver(this, "private-browsing", false);
-//        this._os.addObserver(this, "quit-application", false);
-//        try {
-//            var pbs = Components.classes["@mozilla.org/privatebrowsing;1"].getService(Components.interfaces.nsIPrivateBrowsingService);
-//            this._inPrivateBrowsing = pbs.privateBrowsingEnabled;
-//        } catch(ex) { } // ignore exceptions in older versions of Firefox
-//    },
-//
-//    observe : function (aSubject, aTopic, aData)
-//    {
-//        if (aTopic == "private-browsing")
-//        {
-//            if (aData == "enter")
-//            {
-//                this._inPrivateBrowsing = true;
-//                if (this.watcher && "onEnterPrivateBrowsing" in this._watcher)
-//                    this.watcher.onEnterPrivateBrowsing();
-//            }
-//            else if (aData == "exit")
-//            {
-//                this._inPrivateBrowsing = false;
-//                if (this.watcher && "onExitPrivateBrowsing" in this._watcher)
-//                    this.watcher.onExitPrivateBrowsing();
-//            }
-//        }
-//        else if (aTopic == "quit-application")
-//        {
-//            this._os.removeObserver(this, "quit-application");
-//            this._os.removeObserver(this, "private-browsing");
-//        }
-//    },
-//
-//    get inPrivateBrowsing()
-//    {
-//        return this._inPrivateBrowsing;
-//    },
-//
-//    get watcher()
-//    {
-//        return this._watcher;
-//    },
-//
-//    set watcher(val)
-//    {
-//        this._watcher = val;
-//    }
-//};
-
 var objGooglebarLite = {
 	FormHistory: Components.classes["@mozilla.org/satchel/form-history;1"].getService(Components.interfaces.nsIFormHistory2 || Components.interfaces.nsIFormHistory),
 	PrefBranch: Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("extensions.googlebarlite."),
-	
-	// Create a constructor for the builtin supports-string class
-	nsSupportsString:  Components.Constructor("@mozilla.org/supports-string;1", "nsISupportsString"),
 	
 	// Create a constructor for the builtin transferable class
 	nsTransferable: Components.Constructor("@mozilla.org/widget/transferable;1", "nsITransferable"),
@@ -239,7 +177,6 @@ var objGooglebarLite = {
 	LastHighlightedTerms: "",
 	OverflowButtonWidth: 0,
 	PreviouslyOnSecureSearchPage: false,
-//  PrivateBrowsingListener: null,
 	ToolbarPresent: false,
 	
 	SecureTLDs: {
@@ -533,8 +470,6 @@ var objGooglebarLite = {
 					u += "&nfpr=1";
 			}
 		}
-		
-		this.Log("URL: " + u);
 		
 		return u;
 	},
@@ -1045,42 +980,6 @@ var objGooglebarLite = {
 		
 		if(pastetext.length == 0) return; // Exit if the string is empty after trimming
 		
-		/*trans.addDataFlavor("text/unicode");
-		trans.setTransferData("text/unicode", SupportsString(copytext), copytext.length * 2);
-		 
-		Services.clipboard.setData(trans, null, Services.clipboard.kGlobalClipboard);
-		var trans = Components.classes["@mozilla.org/widget/transferable;1"].createInstance(Components.interfaces.nsITransferable);
-
-		/*
-		// The init() function was added to FF 16 for upcoming changes to private browsing mode
-		// See https://bugzilla.mozilla.org/show_bug.cgi?id=722872 for more information
-		if('init' in trans)
-		{
-			var privacyContext = document.commandDispatcher.focusedWindow.
-				QueryInterface(Components.interfaces.nsIInterfaceRequestor).
-				getInterface(Components.interfaces.nsIWebNavigation).
-				QueryInterface(Components.interfaces.nsILoadContext);
-			trans.init(privacyContext);
-		}
-		trans.addDataFlavor("text/unicode");
-		
-		var clipboard = Components.classes["@mozilla.org/widget/clipboard;1"].createInstance(Components.interfaces.nsIClipboard);
-		clipboard.getData(trans, clipboard.kGlobalClipboard);
-		
-		var str = new Object();
-		var strLength = new Object();
-		
-		trans.getTransferData("text/unicode", str, strLength);
-	
-		if(!str) return; // Exit if nothing there
-	
-		str = str.value.QueryInterface(Components.interfaces.nsISupportsString);
-		var pastetext = str.data.substring(0, strLength.value / 2);
-		pastetext = this.TrimString(pastetext);
-	
-		if(pastetext.length == 0) return; // Exit if text is empty
-		*/
-	
 		this.SetSearchTerms(pastetext);
 	
 		var useTab = false;
@@ -1210,6 +1109,10 @@ var objGooglebarLite = {
 			var term = termsArray[i];
 			term = term.replace(/"/g, ''); // Remove any double quotes that may appear in the search term
 	
+			// Skip the AND or OR logical operators
+			if(term.toLowerCase() == "or" || term.toLowerCase() == "and")
+				continue;
+			
 			var searchRange = doc.createRange();
 			searchRange.selectNodeContents(body);
 			
@@ -1680,12 +1583,6 @@ var objGooglebarLite = {
 		{
 			objGooglebarLite.Initialized = true;
 			
-//  		objGooglebarLite.PrivateBrowsingListener = new GBL_PrivateBrowsingListener();
-//  		objGooglebarLite.PrivateBrowsingListener.watcher = {
-//  			onEnterPrivateBrowsing : function() {},
-//  			onExitPrivateBrowsing : function() { objGooglebarLite.SetSearchTerms(""); }
-//  		};
-			
 			objGooglebarLite.PrefObserver.register();
 	
 			window.getBrowser().addProgressListener(objGooglebarLite.ProgressListener);
@@ -1715,13 +1612,6 @@ var objGooglebarLite = {
 		}
 	},
 	
-//  SupportsString: function(str)
-//  {
-//  	var res = this.nsSupportsString(); // Create an instance of the supports-string class
-//  	res.data = str; // Store the JavaScript string that we want to wrap in the new nsISupportsString object
-//  	return res;
-//  },
-
 	TabIsBlank: function()
 	{
 		if(window.content.document.location == "about:blank" || window.content.document.location == "about:newtab")
