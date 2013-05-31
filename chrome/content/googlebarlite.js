@@ -185,12 +185,12 @@ var objGooglebarLite = {
 		"google.fr": 1
 	},
 
-	StylesArray: new Array("-moz-image-region: rect(0px 32px 16px 16px);",
-							"-moz-image-region: rect(0px 48px 16px 32px);",
-							"-moz-image-region: rect(0px 64px 16px 48px);",
-							"-moz-image-region: rect(0px 80px 16px 64px);",
-							"-moz-image-region: rect(0px 96px 16px 80px);",
-							"-moz-image-region: rect(0px 112px 16px 96px);"),
+	StylesArray: new Array("-moz-image-region: rect(0px 32px 16px 16px)",
+							"-moz-image-region: rect(0px 48px 16px 32px)",
+							"-moz-image-region: rect(0px 64px 16px 48px)",
+							"-moz-image-region: rect(0px 80px 16px 64px)",
+							"-moz-image-region: rect(0px 96px 16px 80px)",
+							"-moz-image-region: rect(0px 112px 16px 96px)"),
 
 	ProgressListener: {
 		QueryInterface: function(aIID)
@@ -424,8 +424,8 @@ var objGooglebarLite = {
 			
 			if(highlighter.checked == true)
 			{
-				tempButton.setAttribute("style", this.StylesArray[i%6] + " !important");
-				tempMenuItem.setAttribute("style", this.StylesArray[i%6] + " !important");
+				tempButton.setAttribute("style", this.StylesArray[i%6] + " !important;");
+				tempMenuItem.setAttribute("style", this.StylesArray[i%6] + " !important;");
 			}
 	
 			searchWordsContainer.appendChild(tempButton);
@@ -604,7 +604,7 @@ var objGooglebarLite = {
 	CreateXULElement: function(element, attrs)
 	{
 		var tempItem = document.createElementNS("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul", element);
-		for(a in attrs)
+		for(var a in attrs)
 		{
 			tempItem.setAttribute(a, attrs[a]);
 		}

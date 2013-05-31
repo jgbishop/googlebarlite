@@ -1,6 +1,12 @@
 //***************
 //Version History
 //***************
+[4.9.9]
++ Bug Fix: Corrected a minor Javascript variable declaration issue
++ Bug Fix: Corrected a styling issue with highlighted search terms
+
+--
+
 [4.9.8]
 + Search terms entered into private browsing windows are no longer saved to the search history
 + The minimum supported Firefox version has been changed to 17.0
