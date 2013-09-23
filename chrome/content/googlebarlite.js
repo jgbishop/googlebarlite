@@ -1326,7 +1326,7 @@ var objGooglebarLite = {
 		case "dictionary":
 			canIgnore = true;
 			if(isEmpty) { URL = this.BuildSearchURL("www", "", ""); }
-			else		{ URL = this.BuildSearchURL("www", "search", searchTerms + "&tbs=dfn:1"); }
+			else		{ URL = this.BuildSearchURL("www", "search", "define: " + searchTerms); }
 			break;
 			
 		// The following cases are only accessible through the context menu

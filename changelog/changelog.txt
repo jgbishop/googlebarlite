@@ -2,6 +2,7 @@
 //Version History
 //***************
 [4.9.9]
++ Bug Fix: The dictionary search feature should work properly again
 + Bug Fix: Corrected a minor Javascript variable declaration issue
 + Bug Fix: Corrected a styling issue with highlighted search terms
 
