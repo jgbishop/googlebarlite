@@ -1,6 +1,12 @@
 //***************
 //Version History
 //***************
+[4.9.10]
++ Simplified a number of service calls using the Services JavaScript module
++ Bug Fix: Word search buttons should now work properly in Firefox 25.0
+
+--
+
 [4.9.9]
 + Bug Fix: The dictionary search feature should work properly again
 + Bug Fix: Corrected a minor Javascript variable declaration issue

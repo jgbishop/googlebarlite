@@ -3,7 +3,7 @@ Components.utils.import('resource://gre/modules/Services.jsm');
 
 var objGooglebarLite = {
 	FormHistory: Components.classes["@mozilla.org/satchel/form-history;1"].getService(Components.interfaces.nsIFormHistory2 || Components.interfaces.nsIFormHistory),
-	PrefBranch: Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("extensions.googlebarlite."),
+	PrefBranch: Services.prefs.getBranch("extensions.googlebarlite."),
 	
 	// Create a constructor for the builtin transferable class
 	nsTransferable: Components.Constructor("@mozilla.org/widget/transferable;1", "nsITransferable"),
@@ -299,8 +299,7 @@ var objGooglebarLite = {
 
 	Log: function(aMessage)
 	{
-		var consoleService = Components.classes['@mozilla.org/consoleservice;1'].getService(Components.interfaces.nsIConsoleService);
-		consoleService.logStringMessage('Googlebar_Lite: ' + aMessage);
+		Services.console.logStringMessage('Googlebar_Lite: ' + aMessage);
 	},
 	
 	About: function()
@@ -552,7 +551,7 @@ var objGooglebarLite = {
 
 	ConfigureKeyboardShortcuts: function()
 	{
-		var windowEnumeration = Components.classes["@mozilla.org/appshell/window-mediator;1"].getService(Components.interfaces.nsIWindowMediator).getEnumerator("navigator:browser");
+		var windowEnumeration = Services.wm.getEnumerator("navigator:browser");
 		
 		var modifiers = new Array();
 		if(this.Prefs.ShortcutCtrl.value == true)
@@ -592,7 +591,7 @@ var objGooglebarLite = {
 		if (typeof url == "string")
 		{
 			try {
-				return Components.classes["@mozilla.org/network/io-service;1"].getService(Components.interfaces.nsIIOService).newURI(url, null, null);
+				return Services.io.newURI(url, null, null);
 			} catch (ex) {
 				return null;
 			}
@@ -689,7 +688,7 @@ var objGooglebarLite = {
 
 	EnableFormHistory: function(neverShowAgain)
 	{
-		var b = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("browser.");
+		var b = Services.prefs.getBranch("browser.");
 	
 		// Enable form history
 		b.setBoolPref("formfill.enable", true);
@@ -722,8 +721,14 @@ var objGooglebarLite = {
 		if ("_find" in findBar)
 		{
 			findObj = {
-				find: function(t) {
+				find: Services.vc.compare(Services.appinfo.version, "25.0") < 0 ?
+				function(t) {
+					// TODO: Remove this function (and the test above) once minVersion > 24
 					findBar._find(t);
+				} :
+				function(t) {
+					// We use this variant for FF 25.0 and up
+					findBar._find(findBar._findField.value = t);
 				},
 				findNext: function() {
 					 findBar._findAgain(false);
@@ -732,8 +737,11 @@ var objGooglebarLite = {
 					 findBar._findAgain(true);
 				}
 			};
-
-			cachedFindTerm = getBrowser().fastFind.searchString;
+			
+			// TODO: Remove this test (and the true portion) once minVersion > 24
+			cachedFindTerm = Services.vc.compare(Services.appinfo.version, "25.0") < 0 ?
+				getBrowser().fastFind.searchString :
+				gFindBar._findField.value;
 		}
 		else
 		{
@@ -870,7 +878,7 @@ var objGooglebarLite = {
 	
 	MigratePrefs: function()
 	{
-		var oldBranch = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("googlebar_lite.");
+		var oldBranch = Services.prefs.getBranch("googlebar_lite.");
 		
 		for(var pid in this.Prefs)
 		{
@@ -1954,7 +1962,7 @@ var objGooglebarLite = {
 	{
 		if(this.Prefs.WarnOnFormHistory.value == true)
 		{
-			var b = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("browser.");
+			var b = Services.prefs.getBranch("browser.");
 	
 			// Only case we care about is where form history is disabled, and search history is enabled
 			if(b.getBoolPref("formfill.enable") == false && this.PrefBranch.getBoolPref(this.Prefs.MaintainHistory.name) == true)

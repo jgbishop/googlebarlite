@@ -1,3 +1,6 @@
+// Import the Services module for future use, if we're not in a browser window where it's already loaded
+Components.utils.import('resource://gre/modules/Services.jsm');
+
 var objGooglebarLiteAboutDialog = {
 	OpenAboutLink: function(type)
 	{
@@ -18,8 +21,7 @@ var objGooglebarLiteAboutDialog = {
 			break;
 		}
 	
-		var windowService = Components.classes["@mozilla.org/appshell/window-mediator;1"].getService(Components.interfaces.nsIWindowMediator);
-		var currentWindow = windowService.getMostRecentWindow("navigator:browser");
+		var currentWindow = Services.wm.getMostRecentWindow("navigator:browser");
 	
 		if(currentWindow)
 		{
