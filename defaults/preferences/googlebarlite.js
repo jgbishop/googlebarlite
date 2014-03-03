@@ -55,10 +55,10 @@ pref("extensions.googlebarlite.context.video", false);
 pref("extensions.googlebarlite.context.groups", false);
 pref("extensions.googlebarlite.context.maps", false);
 pref("extensions.googlebarlite.context.dictionary", true);
-pref("extensions.googlebarlite.context.backward", true);
+pref("extensions.googlebarlite.context.backward", false);
 pref("extensions.googlebarlite.context.cached", true);
 pref("extensions.googlebarlite.context.cachedlink", true);
-pref("extensions.googlebarlite.context.similar", true);
+pref("extensions.googlebarlite.context.similar", false);
 pref("extensions.googlebarlite.context.translate", true);
 
 // Miscellaneous
