@@ -3,8 +3,6 @@ Components.utils.import('resource://gre/modules/Services.jsm');
 Components.utils.import('resource://gre/modules/FormHistory.jsm');
 
 var objGooglebarLite = {
-	// TODO: Replace FormHistory when minVersion > 25
-//  FormHistory: Components.classes["@mozilla.org/satchel/form-history;1"].getService(Components.interfaces.nsIFormHistory2 || Components.interfaces.nsIFormHistory),
 	PrefBranch: Services.prefs.getBranch("extensions.googlebarlite."),
 	
 	// Create a constructor for the builtin transferable class
@@ -514,14 +512,11 @@ var objGooglebarLite = {
 		if(flag == "false")
 			return;
 	
-		// TODO: Replace FormHistory call with the following when minVersion > 25
 		FormHistory.update({ op: "remove", fieldname: "GBL-Search-History" });
-//  	this.FormHistory.removeEntriesForName("GBL-Search-History");
 	
 		this.SetSearchTerms(""); // Clear the search terms box and buttons
         
 		var hb = document.getElementById("GBL-TB-Highlighter");
-	
 		if(hb.checked == true)
 		{
 			hb.checked = false;
@@ -1391,11 +1386,8 @@ var objGooglebarLite = {
 			try {
 				// Firefox 20+
 				Components.utils.import("resource://gre/modules/PrivateBrowsingUtils.jsm");
-				// TODO: Replace FormHistory call below with the following when minVersion > 25
-				// FormHistory.update({op: "add", fieldname: "GBL-Search-History", value: originalTerms});
 				if (!PrivateBrowsingUtils.isWindowPrivate(window))
 					FormHistory.update({op: "add", fieldname: "GBL-Search-History", value: originalTerms});
-//  				this.FormHistory.addEntry("GBL-Search-History", originalTerms);
 			} catch(e) {
 				Components.utils.reportError(e);
 				return;
