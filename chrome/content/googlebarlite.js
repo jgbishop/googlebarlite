@@ -1,8 +1,10 @@
 // Import the Services module for future use, if we're not in a browser window where it's already loaded
 Components.utils.import('resource://gre/modules/Services.jsm');
+Components.utils.import('resource://gre/modules/FormHistory.jsm');
 
 var objGooglebarLite = {
-	FormHistory: Components.classes["@mozilla.org/satchel/form-history;1"].getService(Components.interfaces.nsIFormHistory2 || Components.interfaces.nsIFormHistory),
+	// TODO: Replace FormHistory when minVersion > 25
+//  FormHistory: Components.classes["@mozilla.org/satchel/form-history;1"].getService(Components.interfaces.nsIFormHistory2 || Components.interfaces.nsIFormHistory),
 	PrefBranch: Services.prefs.getBranch("extensions.googlebarlite."),
 	
 	// Create a constructor for the builtin transferable class
@@ -512,7 +514,9 @@ var objGooglebarLite = {
 		if(flag == "false")
 			return;
 	
-		this.FormHistory.removeEntriesForName("GBL-Search-History");
+		// TODO: Replace FormHistory call with the following when minVersion > 25
+		FormHistory.update({ op: "remove", fieldname: "GBL-Search-History" });
+//  	this.FormHistory.removeEntriesForName("GBL-Search-History");
 	
 		this.SetSearchTerms(""); // Clear the search terms box and buttons
         
@@ -1387,21 +1391,14 @@ var objGooglebarLite = {
 			try {
 				// Firefox 20+
 				Components.utils.import("resource://gre/modules/PrivateBrowsingUtils.jsm");
-				var isSet = PrivateBrowsingUtils.isWindowPrivate(window);
+				// TODO: Replace FormHistory call below with the following when minVersion > 25
+				// FormHistory.update({op: "add", fieldname: "GBL-Search-History", value: originalTerms});
 				if (!PrivateBrowsingUtils.isWindowPrivate(window))
-					this.FormHistory.addEntry("GBL-Search-History", originalTerms);
+					FormHistory.update({op: "add", fieldname: "GBL-Search-History", value: originalTerms});
+//  				this.FormHistory.addEntry("GBL-Search-History", originalTerms);
 			} catch(e) {
-				// pre Firefox 20 (if you do not have access to a doc.
-				// might use doc.hasAttribute("privatebrowsingmode") then instead)
-				try {
-					var inPrivateBrowsing = Components.classes["@mozilla.org/privatebrowsing;1"].
-						getService(Components.interfaces.nsIPrivateBrowsingService).privateBrowsingEnabled;
-					if (!inPrivateBrowsing)
-						this.FormHistory.addEntry("GBL-Search-History", originalTerms);
-				} catch(e) {
-					Components.utils.reportError(e);
-					return;
-				}
+				Components.utils.reportError(e);
+				return;
 			}
 		}
 	

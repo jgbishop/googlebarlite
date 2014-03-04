@@ -3,7 +3,9 @@
 //***************
 [4.9.11]
 + Googlebar Lite context menu items can now be middle clicked to open in a new tab
++ Search history is now asynchronous thanks to the FormHistory JavaScript module
 + Changed a few of the default context menu display settings
++ Removed a deprecated means of detecting private browsing
 + Bumped the minVersion to 24.0
 + Bumped the maxVersion to 45.*
 
