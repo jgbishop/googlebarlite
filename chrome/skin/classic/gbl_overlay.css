@@ -1,4 +1,4 @@
-.GBL-MenuItem-Iconic,
+#GBL-TB-Combined-Popup .menuitem-iconic,
 .GBL-Toolbar-Button,
 .GBL-Toolbar-Button-NoLabel { list-style-image: url("chrome://googlebarlite/skin/buttonsheet.png"); }
 
@@ -7,47 +7,6 @@
 	.GBL-Toolbar-Button-NoLabel .toolbarbutton-text { display: none; }
 	.GBL-Toolbar-Button-NoLabel[type="menu"] { -moz-box-orient: horizontal; }
 	.GBL-Toolbar-Button-NoLabel[type="menu"] .toolbarbutton-icon { margin-left: 0; margin-right: 5px; }
-
-.GBL-TB-SearchWordButton .toolbarbutton-text,
-.GBL-Toolbar-Button .toolbarbutton-text { display: -moz-box; }
-
-toolbar[mode="icons"] .GBL-TB-SearchWordButton .toolbarbutton-text { display: -moz-box !important; } /* Search words should always appear */
-
-toolbar[mode="text"] .GBL-Toolbar-Button .toolbarbutton-icon { display: -moz-box; }
-toolbar[mode="text"] .GBL-Toolbar-Button-NoLabel .toolbarbutton-icon { display: -moz-box; }
-toolbar[mode="text"] .GBL-Toolbar-Button-NoLabel .toolbarbutton-text { display: none; }
-
-.GBL-Toolbar-Customize {
-	display: none;
-	max-width: 10em;
-}
-
-	.GBL-Toolbar-Customize .toolbarbutton-text { text-align: left; }
-	toolbar[mode="icons"] .GBL-Toolbar-Customize { min-width: 20px; }
-	toolbarpaletteitem[place="toolbar"] .GBL-Toolbar-Customize { display: -moz-box; }
-
-#GBL-SearchBox {
-	min-height: 22px;
-	-moz-appearance: none;
-	border-width: 1px;
-	border-radius: 4px;
-	-moz-border-top-colors: ThreeDShadow;
-	-moz-border-bottom-colors: ThreeDShadow;
-	-moz-border-right-colors: ThreeDShadow;
-	-moz-border-left-colors: ThreeDShadow;
-
-}
-
-#GBL-ResizeBar {
-	background-image: url("chrome://googlebarlite/skin/gripper.png");
-	min-height: 20px;
-	min-width: 3px;
-}
-
-#GBL-ResizeSplitter {
-	background: transparent;
-	border: none;
-}
 
 #GBL-TB-Customize,
 #GBL-TB-MainMenu						{ -moz-image-region: rect(0px  16px 16px   0px); }
@@ -132,14 +91,24 @@ toolbar[mode="text"] .GBL-Toolbar-Button-NoLabel .toolbarbutton-text { display: 
 	-moz-image-region: rect(0px 16px 16px 0px);
 }
 
-#palette-box #wrapper-GBL-Toolbar-MainItem .toolbarpaletteitem-box {
-	height: 32px;
-	width: 32px;
-	background-image: url("chrome://googlebarlite/skin/logo.png");
-}
+.GBL-TB-SearchWordButton .toolbarbutton-text,
+.GBL-Toolbar-Button .toolbarbutton-text { display: -moz-box; }
 
-#palette-box .GBL-Toolbar-Items,
-toolbarpaletteitem[place="toolbar"] .GBL-Toolbar-Items { display: none; }
+	toolbar[mode="icons"] .GBL-TB-SearchWordButton .toolbarbutton-text { display: -moz-box !important; }
+	toolbar[mode="text"] .GBL-Toolbar-Button .toolbarbutton-icon { display: -moz-box; }
+	toolbar[mode="text"] .GBL-Toolbar-Button-NoLabel .toolbarbutton-icon { display: -moz-box; }
+	toolbar[mode="text"] .GBL-Toolbar-Button-NoLabel .toolbarbutton-text { display: none; }
+
+/*#GBL-SearchBox {
+	border-radius: 3px;
+	border-width: 1px;
+	min-height: 22px;
+	-moz-appearance: none;
+	-moz-border-top-colors: ThreeDShadow;
+	-moz-border-bottom-colors: ThreeDShadow;
+	-moz-border-right-colors: ThreeDShadow;
+	-moz-border-left-colors: ThreeDShadow;
+}*/
 
 #GBL-TB-Toggle-Toolbar {
 	-moz-image-region: rect(0px 24px 24px 0px);
@@ -151,12 +120,33 @@ toolbar[iconsize="small"] #GBL-TB-Toggle-Toolbar {
 	list-style-image: url("chrome://googlebarlite/skin/toggle_small.png");
 }
 
-.GBL-Indent { margin-left: 2em; }
-#GBL-Options caption { font-weight: bold; }
+/* Customization Styles */
+.GBL-Toolbar-Customize {
+	display: none;
+	max-width: 10em;
+}
 
+	.GBL-Toolbar-Customize .toolbarbutton-text { text-align: left; }
+	toolbar[mode="icons"] .GBL-Toolbar-Customize { min-width: 20px; }
+	toolbarpaletteitem[place="toolbar"] .GBL-Toolbar-Customize { display: -moz-box; }
+
+#palette-box .GBL-Toolbar-Items,
+toolbarpaletteitem[place="toolbar"] .GBL-Toolbar-Items { display: none; }
+
+#palette-box #wrapper-GBL-Toolbar-MainItem .toolbarpaletteitem-box {
+	background: url("chrome://googlebarlite/skin/logo.png") no-repeat center center;
+}
+
+/* Preferences Styles */
 #GBL-PrefWindow radio[pane] { list-style-image: url("chrome://googlebarlite/skin/pref_icons.png"); }
 #GBL-PrefWindow radio[pane="GBL-PrefPane-General"] { -moz-image-region: rect(0px 32px 32px 0px); }
 #GBL-PrefWindow radio[pane="GBL-PrefPane-Buttons"] { -moz-image-region: rect(0px 64px 32px 32px); }
 #GBL-PrefWindow radio[pane="GBL-PrefPane-History"] { -moz-image-region: rect(0px 96px 32px 64px); }
 #GBL-PrefWindow radio[pane="GBL-PrefPane-Keyboard"] { -moz-image-region: rect(0px 128px 32px 96px); }
 #GBL-PrefWindow radio[pane="GBL-PrefPane-Context"] { -moz-image-region: rect(0px 160px 32px 128px); }
+.GBL-Indent { margin-left: 2em; }
+
+/*
+#GBL-Options caption { font-weight: bold; }
+*/
+

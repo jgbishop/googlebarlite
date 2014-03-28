@@ -1,3 +1,6 @@
+Components.utils.import('resource://gre/modules/Services.jsm');
+Components.utils.import('resource://googlebarlite/common.js');
+
 var objGooglebarLitePrefs = {
 	DoValidate: function(event) {
 		if(!this.ShortcutIsValid())
@@ -10,6 +13,7 @@ var objGooglebarLitePrefs = {
 	},
 	
 	InitUI: function() {
+		this.UpdateSearchBoxWidthStatus();
 		this.UpdateUseInlineCompleteStatus();
 		this.UpdateSearchHistoryStatus();
 		this.UpdateShowContextMenuStatus();
@@ -25,6 +29,24 @@ var objGooglebarLitePrefs = {
 		
 		var isValid = (ctrl || alt || shift) && keyValid;
 		return isValid;
+	},
+	
+	UpdateSearchBoxWidthStatus: function() {
+		var menu = document.getElementById("GBL-Opt-SearchBoxWidthMenu");
+		var width = GooglebarLiteCommon.Data.Prefs.SearchBoxWidth.value;
+		if(width != 150 && width != 250 && width != 350)
+		{
+			document.getElementById("GBL-Opt-SearchBoxWidth-Custom").value = width;
+			menu.selectedIndex = 3;
+		}
+		
+//		var width = menu.value;
+//
+//		if(width != 150 && width != 250 && width != 350)
+//		{
+//			var cust = document.getElementById("GBL-Opt-SearchBoxWidth-Custom").value = width;
+//			menu.selectedIndex = 3;
+//		}
 	},
 	
 	UpdateUseInlineCompleteStatus: function() {

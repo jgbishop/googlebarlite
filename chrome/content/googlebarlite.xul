@@ -75,10 +75,11 @@
 				   label="&gblite.toggle.toolbar;" oncommand="objGooglebarLite.ToggleToolbar();" />
 	
 	<toolbaritem id="GBL-Toolbar-MainItem" flex="1" title="&gblite.name;" class="chromeclass-toolbar-additional">
-		<stack id="GBL-Stack" flex="1" style="min-width: 0; width: 0;">
-		
-			<toolbaritem class="GBL-Toolbar-Items" flex="1" style="min-width: 0; width: 0;">
+		<stack id="GBL-Stack" flex="1">
 			
+			<toolbarbutton id="GBL-TB-Customize" class="GBL-Toolbar-Customize GBL-Toolbar-Button" label="&gblite.name;" mousethrough="never" />
+		
+			<toolbaritem class="GBL-Toolbar-Items" flex="1">
 				<toolbaritem flex="0">
 					<toolbarbutton id="GBL-TB-MainMenu" class="GBL-Toolbar-Button-NoLabel" type="menu" tooltiptext="&gblite.tt.mainmenu;">
 									
@@ -153,7 +154,7 @@
 					</toolbarbutton>
 				</toolbaritem>
 				
-				<hbox id="GBL-SearchBox-Container" persist="width" align="center">
+				<toolbaritem>
 				<textbox id="GBL-SearchBox"
 					type="autocomplete"
 					autocompletesearch="form-history"
@@ -166,15 +167,8 @@
 					oninput="objGooglebarLite.TermsHaveUpdated();"
 					enablehistory="true"
 					tabscrolling="true"
-					flex="1"
-					minwidth="100"
-					width="175" />
-				</hbox>
-				
-				<splitter id="GBL-ResizeSplitter" state="open" collapse="none" resizebefore="closest" resizeafter="farthest"
-						  hidden="false" tooltiptext="&gblite.tt.splitter;" onmouseup="objGooglebarLite.Resize();">
-				<vbox id="GBL-ResizeBar" />
-				</splitter>
+					flex="1"/>
+				</toolbaritem>
 				
 				<toolbaritem id="GBL-Buttons" flex="0" pack="start">
 				<toolbarbutton id="GBL-TB-Combined" class="GBL-Toolbar-Button" type="menu-button" tooltiptext="&gblite.tt.combined;"
@@ -299,9 +293,6 @@
 					</toolbarbutton>
 				</toolbaritem>
 			</toolbaritem>
-			
-			<toolbarbutton id="GBL-TB-Customize" class="GBL-Toolbar-Customize GBL-Toolbar-Button" label="&gblite.name;" mousethrough="never" />
-			
 		</stack>
 	</toolbaritem>
 </toolbarpalette>
