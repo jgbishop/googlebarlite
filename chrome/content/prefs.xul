@@ -143,13 +143,13 @@
 				</row>
 		
 				<row align="center">
-					<label value="Search box width:" />
+					<label value="&gblite.options.label.searchboxwidth;" />
 					<menulist id="GBL-Opt-SearchBoxWidthMenu" preference="GBL-Pref-SearchBoxWidth">
 						<menupopup>
-							<menuitem label="Narrow" value="150" />
-							<menuitem label="Medium" value="250" />
-							<menuitem label="Wide" value="350" />
-							<menuitem label="Custom" value="275" id="GBL-Opt-SearchBoxWidth-Custom" />
+							<menuitem label="&gblite.options.searchboxwidth.narrow;" value="150" />
+							<menuitem label="&gblite.options.searchboxwidth.medium;" value="250" />
+							<menuitem label="&gblite.options.searchboxwidth.wide;" value="350" />
+							<menuitem label="&gblite.options.searchboxwidth.custom;" value="275" id="GBL-Opt-SearchBoxWidth-Custom" />
 						</menupopup>
 					</menulist>
 				</row>
