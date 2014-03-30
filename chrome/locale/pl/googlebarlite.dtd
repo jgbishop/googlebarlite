@@ -1,4 +1,3 @@
-<!--    -->
 <!ENTITY gblite.name "Googlebar Lite">
 <!ENTITY gblite.toolbar.name "Pasek narzędzi Googlebar Lite">
 <!ENTITY gblite.ak.name "G">
@@ -101,7 +100,6 @@
 <!ENTITY gblite.tt.highlighter "Włącz/Wyłącz wyróżnianie wyników na tej stronie">
 <!ENTITY gblite.tt.overflow "Szukaj wyrażeń (kontynuacja)">
 <!ENTITY gblite.tt.splitter "Zmień wielkość paska wyszukiwania">
-<!--    -->
 <!ENTITY gblite.options.title "Googlebar Lite - ustawienia">
 <!ENTITY gblite.options.tab.general "Ogólne">
 <!ENTITY gblite.options.tab.buttons "Przyciski paska narzędzi">
@@ -109,6 +107,11 @@
 <!ENTITY gblite.options.tab.keyboard "Skróty klawiaturowe">
 <!ENTITY gblite.options.tab.context "Menu kontekstowe">
 <!ENTITY gblite.options.label.sitetouse "Domyślna strona Google:">
+<!ENTITY gblite.options.label.searchboxwidth "Szerokość pola wyszukiwania:">
+<!ENTITY gblite.options.searchboxwidth.narrow "Wąskie">
+<!ENTITY gblite.options.searchboxwidth.medium "Średnie">
+<!ENTITY gblite.options.searchboxwidth.wide "Szerokie">
+<!ENTITY gblite.options.searchboxwidth.custom "Określ">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Zmiana skrótu zostanie zastosowana po ponownym uruchomieniu przeglądarki.">
 <!ENTITY gblite.options.label.searchboxfocus "Uaktywniaj pole szukania skrótem:">
 <!ENTITY gblite.options.label.shortcutctrl "Ctrl">
@@ -139,7 +142,6 @@
 <!ENTITY gblite.options.showup "W górę">
 <!ENTITY gblite.options.showcombined "Zgrupowane menu wyszukiwania">
 <!ENTITY gblite.options.showcontext "Wyświetlaj menu kontekstowe Googlebar Lite, a w nim poniższe elementy">
-<!--    -->
 <!ENTITY gblite.about.title "Googlebar Lite – informacje">
 <!ENTITY gblite.about.extdesc "Prosty pasek narzędzi wyszukiwania Google dla Firefoksa.">
 <!ENTITY gblite.about.createdby "Autor:">
@@ -151,14 +153,12 @@
 <!ENTITY gblite.about.translators "Tłumaczenia">
 <!ENTITY gblite.about.locale "Lokalizacja">
 <!ENTITY gblite.about.translator "Tłumacz">
-<!--    -->
 <!ENTITY gblite.confirm.title "Czyszczenie historii wyszukiwania">
 <!ENTITY gblite.confirm.label.usure "Czy na pewno chcesz wyczyścić historię wyszukiwania?">
 <!ENTITY gblite.confirm.label.yes "Tak">
 <!ENTITY gblite.confirm.ak.yes "T">
 <!ENTITY gblite.confirm.label.no "Nie">
 <!ENTITY gblite.confirm.ak.no "N">
-<!--    -->
 <!ENTITY gblite.formhistory.title "Googlebar Lite - historia">
 <!ENTITY gblite.formhistory.warninginfo "Googlebar Lite wykrył, że chcesz zachować historię wyszukiwania, ale opcja ta jest wyłączona w Firefoksie. Musi być ona włączona, aby Googlebar Lite mógł zapamiętywać historię wyszukiwania.">
 <!ENTITY gblite.formhistory.prompt "Co chcesz zrobić?">
