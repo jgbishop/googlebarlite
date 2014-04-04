@@ -1,4 +1,3 @@
-<!--  ########## GENERAL ##########  -->
 <!ENTITY gblite.name "Googlebar Lite">
 <!ENTITY gblite.toolbar.name "Googlebar Lite Araç Çubuğu">
 <!ENTITY gblite.ak.name "G">
@@ -101,7 +100,6 @@
 <!ENTITY gblite.tt.highlighter "Bu sayfada terimlerin vurgulanması özelliğini aç">
 <!ENTITY gblite.tt.overflow "Terimleri Ara (Devam Eden)">
 <!ENTITY gblite.tt.splitter "Arama Kutusunu Yeniden Boyutlandır">
-<!--  ########## OPTIONS DIALOG ##########  -->
 <!ENTITY gblite.options.title "Googlebar Lite Seçenekleri">
 <!ENTITY gblite.options.tab.general "Genel">
 <!ENTITY gblite.options.tab.buttons "Araç Çubuğu Düğmeleri">
@@ -109,6 +107,11 @@
 <!ENTITY gblite.options.tab.keyboard "Klavye Kısayolları">
 <!ENTITY gblite.options.tab.context "Bağlam Menüsü">
 <!ENTITY gblite.options.label.sitetouse "Kullanılacak Google Sitesi:">
+<!ENTITY gblite.options.label.searchboxwidth "Search box width:">
+<!ENTITY gblite.options.searchboxwidth.narrow "Narrow">
+<!ENTITY gblite.options.searchboxwidth.medium "Medium">
+<!ENTITY gblite.options.searchboxwidth.wide "Wide">
+<!ENTITY gblite.options.searchboxwidth.custom "Custom">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Arama kutusu odağının değiştirilmesi tarayıcıyı yeniden başlatmayı gerektirir.">
 <!ENTITY gblite.options.label.searchboxfocus "Arama Kutusu Odağını Ayarla">
 <!ENTITY gblite.options.label.shortcutctrl "Ctrl">
@@ -139,7 +142,6 @@
 <!ENTITY gblite.options.showup "Yukarı Çık">
 <!ENTITY gblite.options.showcombined "Birleştirilmiş Arama Menüsü">
 <!ENTITY gblite.options.showcontext "Googlebar Lite bağlam menüsünü göster">
-<!--  ########## ABOUT DIALOG ##########  -->
 <!ENTITY gblite.about.title "Googlebar Lite Hakkında">
 <!ENTITY gblite.about.extdesc "Firefox için, hafif ama kullanışlı bir Google araç çubuğu.">
 <!ENTITY gblite.about.createdby "Yaratıcı:">
@@ -151,14 +153,12 @@
 <!ENTITY gblite.about.translators "Çevirmenler">
 <!ENTITY gblite.about.locale "Yer">
 <!ENTITY gblite.about.translator "Çevirmen">
-<!--  ########## CLEAR HISTORY DIALOG ##########  -->
 <!ENTITY gblite.confirm.title "Arama Geçmişini Temizle">
 <!ENTITY gblite.confirm.label.usure "Arama geçmişini temizlemek istediğinizden emin misiniz?">
 <!ENTITY gblite.confirm.label.yes "Evet">
 <!ENTITY gblite.confirm.ak.yes "Y">
 <!ENTITY gblite.confirm.label.no "Hayır">
 <!ENTITY gblite.confirm.ak.no "N">
-<!--  ########## FORM HISTORY DIALOG ##########  -->
 <!ENTITY gblite.formhistory.title "Googlebar Lite: Geçmiş Uyarısı">
 <!ENTITY gblite.formhistory.warninginfo "Googlebar Lite, bir arama geçmişi saklamak istediğinizi algıladı, fakat Firefox&apos;ta form geçmişi seçeneği şu anda devredışıdır. Googlebar Lite&apos;ın bir arama geçmişi saklayabilmesi için form geçmişi etkinleştirilmelidir.">
 <!ENTITY gblite.formhistory.prompt "Ne yapmak istiyorsunuz?">

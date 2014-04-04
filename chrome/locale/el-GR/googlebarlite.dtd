@@ -1,4 +1,3 @@
-<!--  ########## GENERAL ##########  -->
 <!ENTITY gblite.name "Googlebar Lite">
 <!ENTITY gblite.toolbar.name "Μπάρα του Googlebar Lite">
 <!ENTITY gblite.ak.name "G">
@@ -101,7 +100,6 @@
 <!ENTITY gblite.tt.highlighter "Κλείδωμα μαρκαρίσματος των όρων αναζήτησης σε αυτήν τη σελίδα">
 <!ENTITY gblite.tt.overflow "Όροι Αναζήτησης (Συνεχίζεται)">
 <!ENTITY gblite.tt.splitter "Αλλαγή Μεγέθους του Πεδίου Αναζήτησης">
-<!--  ########## OPTIONS DIALOG ##########  -->
 <!ENTITY gblite.options.title "Επιλογές του Googlebar Lite">
 <!ENTITY gblite.options.tab.general "Γενικά">
 <!ENTITY gblite.options.tab.buttons "Κουμπιά Μπάρας">
@@ -109,6 +107,11 @@
 <!ENTITY gblite.options.tab.keyboard "Συντομεύσεις Πληκτρολογίου">
 <!ENTITY gblite.options.tab.context "Μενού Περιεχομένων">
 <!ENTITY gblite.options.label.sitetouse "Ιστοσελίδα του Google προς χρήση:">
+<!ENTITY gblite.options.label.searchboxwidth "Search box width:">
+<!ENTITY gblite.options.searchboxwidth.narrow "Narrow">
+<!ENTITY gblite.options.searchboxwidth.medium "Medium">
+<!ENTITY gblite.options.searchboxwidth.wide "Wide">
+<!ENTITY gblite.options.searchboxwidth.custom "Custom">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Η αλλαγή της συντόμευσης για την εστίαση στο πεδίο αναζήτησης απαιτεί επανεκκίνηση του προγράμματος περιήγησης.">
 <!ENTITY gblite.options.label.searchboxfocus "Ορισμός Εστίασης Πεδίου Αναζήτησης">
 <!ENTITY gblite.options.label.shortcutctrl "Ctrl">
@@ -139,7 +142,6 @@
 <!ENTITY gblite.options.showup "Πάνω">
 <!ENTITY gblite.options.showcombined "Μενού Σύνθετης Αναζήτησης">
 <!ENTITY gblite.options.showcontext "Εμφάνιση μενού περιεχομένων Googlebar Lite">
-<!--  ########## ABOUT DIALOG ##########  -->
 <!ENTITY gblite.about.title "Σχετικά με το Googlebar Lite">
 <!ENTITY gblite.about.extdesc "Μία μικρή σε απαιτήσεις πόρων μπάρα αναζήτησης για το Firefox.">
 <!ENTITY gblite.about.createdby "Δημιουργία:">
@@ -151,14 +153,12 @@
 <!ENTITY gblite.about.translators "Μεταφραστές">
 <!ENTITY gblite.about.locale "Τοποθεσία">
 <!ENTITY gblite.about.translator "Μεταφραστής">
-<!--  ########## CLEAR HISTORY DIALOG ##########  -->
 <!ENTITY gblite.confirm.title "Καθαρισμός Ιστορικού Αναζήτησης">
 <!ENTITY gblite.confirm.label.usure "Καθαρισμός ιστορικού αναζήτησης;">
 <!ENTITY gblite.confirm.label.yes "Ναι">
 <!ENTITY gblite.confirm.ak.yes "Ν">
 <!ENTITY gblite.confirm.label.no "Όχι">
 <!ENTITY gblite.confirm.ak.no "Ό">
-<!--  ########## FORM HISTORY DIALOG ##########  -->
 <!ENTITY gblite.formhistory.title "Googlebar Lite: Προειδοποίηση Ιστορικού">
 <!ENTITY gblite.formhistory.warninginfo "Το Googlebar Lite εντόπισε ότι θέλετε να διατηρήσετε ένα ιστορικό αναζήτησης αλλά η επιλογή ιστορικού φόρμας στο Firefox είναι απενεργοποιημένη. Το ιστορικό φόρμας πρέπει να είναι ενεργοποιημένο για τη διατήρηση του ιστορικού αναζητήσεων από το Googlebar Lite.">
 <!ENTITY gblite.formhistory.prompt "Τι θέλετε να κάνετε;">

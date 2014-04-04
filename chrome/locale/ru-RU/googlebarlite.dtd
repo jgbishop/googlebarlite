@@ -1,4 +1,3 @@
-<!--  ########## GENERAL ##########  -->
 <!ENTITY gblite.name "Упрощенная панель">
 <!ENTITY gblite.toolbar.name "Упрощенная панель поиска Google">
 <!ENTITY gblite.ak.name "G">
@@ -101,7 +100,6 @@
 <!ENTITY gblite.tt.highlighter "Включить/отключить подсветку поискового контекста">
 <!ENTITY gblite.tt.overflow "Поисковые контексты (продолжение)">
 <!ENTITY gblite.tt.splitter "Изменить размер поискового поля">
-<!--  ########## OPTIONS DIALOG ##########  -->
 <!ENTITY gblite.options.title "Настройка упрощенной панели Google">
 <!ENTITY gblite.options.tab.general "Основные опции">
 <!ENTITY gblite.options.tab.buttons "Кнопки на панели инструментов">
@@ -109,6 +107,11 @@
 <!ENTITY gblite.options.tab.keyboard "Клавиатурные сокращения">
 <!ENTITY gblite.options.tab.context "Контекстное меню">
 <!ENTITY gblite.options.label.sitetouse "Использовать сайт Google">
+<!ENTITY gblite.options.label.searchboxwidth "Search box width:">
+<!ENTITY gblite.options.searchboxwidth.narrow "Narrow">
+<!ENTITY gblite.options.searchboxwidth.medium "Medium">
+<!ENTITY gblite.options.searchboxwidth.wide "Wide">
+<!ENTITY gblite.options.searchboxwidth.custom "Custom">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Изменение режима активности поля поиска требует перезагрузки приложения">
 <!ENTITY gblite.options.label.searchboxfocus "Установить активным поле поиска">
 <!ENTITY gblite.options.label.shortcutctrl "Ctrl">
@@ -139,7 +142,6 @@
 <!ENTITY gblite.options.showup "Вверх">
 <!ENTITY gblite.options.showcombined "Меню вариантов поиска">
 <!ENTITY gblite.options.showcontext "Включить упрощенную панель в контекстного меню">
-<!--  ########## ABOUT DIALOG ##########  -->
 <!ENTITY gblite.about.title "Об упрощенной панели Google">
 <!ENTITY gblite.about.extdesc "Упрощенная панель поиска Google для Firefox">
 <!ENTITY gblite.about.createdby "Автор:">
@@ -151,14 +153,12 @@
 <!ENTITY gblite.about.translators "Перевод интерфейса">
 <!ENTITY gblite.about.locale "Локаль">
 <!ENTITY gblite.about.translator "Переводчик">
-<!--  ########## CLEAR HISTORY DIALOG ##########  -->
 <!ENTITY gblite.confirm.title "Очистить историю запросов">
 <!ENTITY gblite.confirm.label.usure "Действительно необходимо очистить историю запросов?">
 <!ENTITY gblite.confirm.label.yes "Да">
 <!ENTITY gblite.confirm.ak.yes "Д">
 <!ENTITY gblite.confirm.label.no "Нет">
 <!ENTITY gblite.confirm.ak.no "Н">
-<!--  ########## FORM HISTORY DIALOG ##########  -->
 <!ENTITY gblite.formhistory.title "Googlebar Lite: Предупреждение истории запросов">
 <!ENTITY gblite.formhistory.warninginfo "Для упрощенной панели Google запрошена поддержка истории запросов, но в Firefox в данный момент опция сохранения данных форм отключена. Для обеспечения истории запросов опция сохранения данных форм в Firefox должна быть включена.">
 <!ENTITY gblite.formhistory.prompt "Что cделать?">

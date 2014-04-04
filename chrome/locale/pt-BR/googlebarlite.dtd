@@ -1,4 +1,3 @@
-<!--  ########## GENERAL ##########  -->
 <!ENTITY gblite.name "Googlebar Lite">
 <!ENTITY gblite.toolbar.name "Barra de Ferramentas do Googlebar Lite">
 <!ENTITY gblite.ak.name "G">
@@ -101,7 +100,6 @@
 <!ENTITY gblite.tt.highlighter "Ativar/desativar destaque de termos de pesquisa nesta página">
 <!ENTITY gblite.tt.overflow "Termos de pesquisa (continuação)">
 <!ENTITY gblite.tt.splitter "Redimensionar a caixa de pesquisa">
-<!--  ########## OPTIONS DIALOG ##########  -->
 <!ENTITY gblite.options.title "Opções do Googlebar Lite">
 <!ENTITY gblite.options.tab.general "Geral">
 <!ENTITY gblite.options.tab.buttons "Botões da barra de ferramentas">
@@ -109,6 +107,11 @@
 <!ENTITY gblite.options.tab.keyboard "Atalhos de teclado">
 <!ENTITY gblite.options.tab.context "Menu de contexto">
 <!ENTITY gblite.options.label.sitetouse "Site do Google a ser utilizado:">
+<!ENTITY gblite.options.label.searchboxwidth "Search box width:">
+<!ENTITY gblite.options.searchboxwidth.narrow "Narrow">
+<!ENTITY gblite.options.searchboxwidth.medium "Medium">
+<!ENTITY gblite.options.searchboxwidth.wide "Wide">
+<!ENTITY gblite.options.searchboxwidth.custom "Custom">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Modificar a tecla de atalho para foco na caixa de pesquisa requer uma reinicialização do navegador.">
 <!ENTITY gblite.options.label.searchboxfocus "Dar foco à caixa de pesquisa">
 <!ENTITY gblite.options.label.shortcutctrl "Ctrl">
@@ -139,7 +142,6 @@
 <!ENTITY gblite.options.showup "Para cima">
 <!ENTITY gblite.options.showcombined "Menu de pesquisas combinadas">
 <!ENTITY gblite.options.showcontext "Exibir menu de contexto do Googlebar Lite">
-<!--  ########## ABOUT DIALOG ##########  -->
 <!ENTITY gblite.about.title "Sobre o Googlebar Lite">
 <!ENTITY gblite.about.extdesc "Uma barra de ferramentas Google de dimensões reduzidas para Firefox.">
 <!ENTITY gblite.about.createdby "Criado por:">
@@ -151,14 +153,12 @@
 <!ENTITY gblite.about.translators "Tradutores">
 <!ENTITY gblite.about.locale "Local">
 <!ENTITY gblite.about.translator "Tradutor">
-<!--  ########## CLEAR HISTORY DIALOG ##########  -->
 <!ENTITY gblite.confirm.title "Limpar histórico de pesquisas">
 <!ENTITY gblite.confirm.label.usure "Tem certeza de que deseja limpar o histórico de pesquisas?">
 <!ENTITY gblite.confirm.label.yes "Sim">
 <!ENTITY gblite.confirm.ak.yes "S">
 <!ENTITY gblite.confirm.label.no "Não">
 <!ENTITY gblite.confirm.ak.no "N">
-<!--  ########## FORM HISTORY DIALOG ##########  -->
 <!ENTITY gblite.formhistory.title "Googlebar Lite: Aviso do histórico">
 <!ENTITY gblite.formhistory.warninginfo "O Googlebar Lite detectou que você deseja manter um histórico de pesquisas, mas a opção histórico de formulários no Firefox está desabilitada. O histórico de formulários precisa ser habilitado para que o Googlebar Lite mantenha um histórico de pesquisas.">
 <!ENTITY gblite.formhistory.prompt "O que você deseja fazer?">

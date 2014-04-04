@@ -1,4 +1,3 @@
-<!--  ########## GENERAL ##########  -->
 <!ENTITY gblite.name "Googlebar Lite">
 <!ENTITY gblite.toolbar.name "Googlebar Lite 工具栏">
 <!ENTITY gblite.ak.name "G">
@@ -101,7 +100,6 @@
 <!ENTITY gblite.tt.highlighter "开关页面中搜索条目的高亮显示">
 <!ENTITY gblite.tt.overflow "搜索条目 (继续)">
 <!ENTITY gblite.tt.splitter "重定义搜索框的大小">
-<!--  ########## OPTIONS DIALOG ##########  -->
 <!ENTITY gblite.options.title "Googlebar Lite 选项">
 <!ENTITY gblite.options.tab.general "常规">
 <!ENTITY gblite.options.tab.buttons "工具栏按钮">
@@ -109,6 +107,11 @@
 <!ENTITY gblite.options.tab.keyboard "键盘快捷键">
 <!ENTITY gblite.options.tab.context "右键菜单">
 <!ENTITY gblite.options.label.sitetouse "Google 站点使用:">
+<!ENTITY gblite.options.label.searchboxwidth "Search box width:">
+<!ENTITY gblite.options.searchboxwidth.narrow "Narrow">
+<!ENTITY gblite.options.searchboxwidth.medium "Medium">
+<!ENTITY gblite.options.searchboxwidth.wide "Wide">
+<!ENTITY gblite.options.searchboxwidth.custom "Custom">
 <!ENTITY gblite.options.label.shortcutrestartwarning "改变搜索栏焦点设置需要重启浏览器">
 <!ENTITY gblite.options.label.searchboxfocus "设置搜索栏焦点">
 <!ENTITY gblite.options.label.shortcutctrl "Ctrl">
@@ -139,7 +142,6 @@
 <!ENTITY gblite.options.showup "向上">
 <!ENTITY gblite.options.showcombined "组合搜索菜单">
 <!ENTITY gblite.options.showcontext "显示 Googlebar Lite 右键菜单">
-<!--  ########## ABOUT DIALOG ##########  -->
 <!ENTITY gblite.about.title "关于 Googlebar Lite">
 <!ENTITY gblite.about.extdesc "一个特别为 Firefox 定制的轻量级 Google 搜索工具栏。">
 <!ENTITY gblite.about.createdby "创建者：">
@@ -151,14 +153,12 @@
 <!ENTITY gblite.about.translators "翻译者">
 <!ENTITY gblite.about.locale "国别">
 <!ENTITY gblite.about.translator "翻译者">
-<!--  ########## CLEAR HISTORY DIALOG ##########  -->
 <!ENTITY gblite.confirm.title "清除搜索历史">
 <!ENTITY gblite.confirm.label.usure "您确定要清除搜索历史吗？">
 <!ENTITY gblite.confirm.label.yes "是">
 <!ENTITY gblite.confirm.ak.yes "Y">
 <!ENTITY gblite.confirm.label.no "否">
 <!ENTITY gblite.confirm.ak.no "N">
-<!--  ########## FORM HISTORY DIALOG ##########  -->
 <!ENTITY gblite.formhistory.title "Googlebar Lite: 历史告警">
 <!ENTITY gblite.formhistory.warninginfo "Googlebar Lite 检测到您想保留搜索历史，但是您 Firefox [选项] 中的 [历史] 已被禁用。[历史] 必须被启用，Googlebar Lite 才能为您保留搜索历史。">
 <!ENTITY gblite.formhistory.prompt "您想怎么做？">

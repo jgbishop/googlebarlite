@@ -1,4 +1,3 @@
-<!-- ########## GENERAL ########## -->
 <!ENTITY gblite.name "Googlebar Lite">
 <!ENTITY gblite.toolbar.name "Googlebar Lite Toolbar">
 <!ENTITY gblite.ak.name "G">
@@ -101,7 +100,6 @@
 <!ENTITY gblite.tt.highlighter "Toggle highlighting of search terms on this page">
 <!ENTITY gblite.tt.overflow "Search Terms (Continued)">
 <!ENTITY gblite.tt.splitter "Resize the Search Box">
-<!-- ########## OPTIONS DIALOG ########## -->
 <!ENTITY gblite.options.title "Googlebar Lite Options">
 <!ENTITY gblite.options.tab.general "General">
 <!ENTITY gblite.options.tab.buttons "Toolbar Buttons">
@@ -109,6 +107,11 @@
 <!ENTITY gblite.options.tab.keyboard "Keyboard Shortcuts">
 <!ENTITY gblite.options.tab.context "Context Menu">
 <!ENTITY gblite.options.label.sitetouse "Google site to use:">
+<!ENTITY gblite.options.label.searchboxwidth "Search box width:">
+<!ENTITY gblite.options.searchboxwidth.narrow "Narrow">
+<!ENTITY gblite.options.searchboxwidth.medium "Medium">
+<!ENTITY gblite.options.searchboxwidth.wide "Wide">
+<!ENTITY gblite.options.searchboxwidth.custom "Custom">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Changing the search box focus shortcut requires a restart of the browser.">
 <!ENTITY gblite.options.label.searchboxfocus "Set Search Box Focus">
 <!ENTITY gblite.options.label.shortcutctrl "Ctrl">
@@ -139,7 +142,6 @@
 <!ENTITY gblite.options.showup "Go Up">
 <!ENTITY gblite.options.showcombined "Combined Search Menu">
 <!ENTITY gblite.options.showcontext "Show Googlebar Lite context menu">
-<!-- ########## ABOUT DIALOG ########## -->
 <!ENTITY gblite.about.title "About Googlebar Lite">
 <!ENTITY gblite.about.extdesc "A light-weight Google search toolbar for Firefox.">
 <!ENTITY gblite.about.createdby "Created By:">
@@ -151,14 +153,12 @@
 <!ENTITY gblite.about.translators "Translators">
 <!ENTITY gblite.about.locale "Locale">
 <!ENTITY gblite.about.translator "Translator">
-<!-- ########## CLEAR HISTORY DIALOG ########## -->
 <!ENTITY gblite.confirm.title "Clear Search History">
 <!ENTITY gblite.confirm.label.usure "Are you sure you want to clear the search history?">
 <!ENTITY gblite.confirm.label.yes "Yes">
 <!ENTITY gblite.confirm.ak.yes "Y">
 <!ENTITY gblite.confirm.label.no "No">
 <!ENTITY gblite.confirm.ak.no "N">
-<!-- ########## FORM HISTORY DIALOG ########## -->
 <!ENTITY gblite.formhistory.title "Googlebar Lite: History Warning">
 <!ENTITY gblite.formhistory.warninginfo "Googlebar Lite has detected that you want to maintain a search history, but the form history option in Firefox is currently disabled. Form history must be enabled for Googlebar Lite to maintain a search history.">
 <!ENTITY gblite.formhistory.prompt "What would you like to do?">
