@@ -1,25 +1,16 @@
-// Import the Services module for future use, if we're not in a browser window where it's already loaded
 Components.utils.import('resource://gre/modules/Services.jsm');
 
 var objGooglebarLiteAboutDialog = {
 	OpenAboutLink: function(type)
 	{
-		var url = "";
-	
-		switch(type)
-		{
-		case 'homepage':
-			url = "http://www.borngeek.com/firefox/googlebarlite/";
-			break;
-	
-		case 'jonah':
-			url = "http://www.borngeek.com/about/";
-			break;
-	
-		case 'doc':
-			url = "http://www.borngeek.com/firefox/googlebarlite/doc/";
-			break;
-		}
+		var url = "http://www.borngeek.com/";
+		
+		if(type == 'homepage')
+			url += 'firefox/googlebarlite/';
+		else if(type == 'jonah')
+			url += 'about/';
+		else if(type == 'doc')
+			url += 'googlebarlite/doc/';
 	
 		var currentWindow = Services.wm.getMostRecentWindow("navigator:browser");
 	
@@ -33,7 +24,6 @@ var objGooglebarLiteAboutDialog = {
 		}
 		else
 			window.open(url);
-	
 	}
 };
 
