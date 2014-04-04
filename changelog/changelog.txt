@@ -4,8 +4,10 @@
 [4.9.12]
 + Removed the search box resize gripper, and replaced it with a new search box width preference
 + Redesigned the way that internal preference data and common functions are stored
-+ Tweaked the internal XUL structure of the toolbar
++ Tweaked the internal XUL structure of the toolbar, specifically changing the way the search box is contained
 + Removed a few deprecated content manifests from the package
++ Simplified the style of the about dialog
++ Removed a few unused style rules
 + Bug Fix: The Googlebar Lite toolbar can now be placed in the new menu panel in Firefox 29+, using a new minimal user interface
 + Bug Fix: The main Googlebar Lite toolbar item now renders correctly when placed into the toolbar palette
 + Bug Fix: Fixed a minor object duplication issue with the preferences dialog

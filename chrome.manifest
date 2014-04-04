@@ -3,6 +3,7 @@ overlay chrome://browser/content/browser.xul	chrome://googlebarlite/content/goog
 resource googlebarlite modules/
 
 skin	googlebarlite	classic/1.0	chrome/skin/classic/
+
 style	chrome://browser/content/browser.xul	chrome://googlebarlite/skin/gbl_overlay.css
 style	chrome://global/content/customizeToolbar.xul	chrome://googlebarlite/skin/gbl_overlay.css
 
