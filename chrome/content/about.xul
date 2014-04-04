@@ -17,8 +17,8 @@
 
 <vbox>
 	<vbox align="center" flex="1">
-		<label id="GBL-About-Name" crop="right" value="&gblite.name;"/>
-		<label id="GBL-About-Version" crop="right" value="Version 4.9.12"/>
+		<label id="GBL-About-Name" crop="right" value="&gblite.name;" />
+		<label id="GBL-About-Version" crop="right" value="Version 4.9.12" class="strong" />
 	</vbox>
 	
 	<groupbox>
@@ -48,7 +48,7 @@
 	</groupbox>
 
 	<groupbox>
-		<caption label="&gblite.about.translators;" />
+		<caption label="&gblite.about.translators;" class="strong" />
 		<listbox rows="5">
 			<listhead>
 				<listheader label="&gblite.about.locale;" />
@@ -140,7 +140,7 @@
 	</groupbox>
 
 	<groupbox>
-		<caption label="&gblite.about.disclaimer;" />
+		<caption label="&gblite.about.disclaimer;" class="strong" />
 		<description>&gblite.about.disclaimerinfo;</description>
 	</groupbox>
 </vbox>
