@@ -1,0 +1,12 @@
+#GBL-SearchBox {
+	-moz-appearance: textfield;
+}
+
+#GBL-SearchBox > .autocomplete-textbox-container {
+	-moz-appearance: none;
+	-moz-box-align: stretch;
+}
+
+#GBL-SearchBox > .autocomplete-history-dropmarker {
+	-moz-appearance: toolbarbutton-dropdown;
+}

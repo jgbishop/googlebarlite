@@ -2,9 +2,10 @@ content googlebarlite chrome/content/
 overlay chrome://browser/content/browser.xul	chrome://googlebarlite/content/googlebarlite.xul
 resource googlebarlite modules/
 
-skin	googlebarlite	classic/1.0	chrome/skin/classic/
+skin	googlebarlite		classic/1.0		chrome/skin/classic/
+skin	googlebarlite-os	classic/1.0		chrome/skin/classic/linux/ os=Linux
 
-style	chrome://browser/content/browser.xul	chrome://googlebarlite/skin/gbl_overlay.css
+# style	chrome://browser/content/browser.xul			chrome://googlebarlite/skin/gbl_overlay.css
 style	chrome://global/content/customizeToolbar.xul	chrome://googlebarlite/skin/gbl_overlay.css
 
 locale	googlebarlite	en-US	chrome/locale/en-US/
