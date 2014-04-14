@@ -1520,7 +1520,7 @@ var objGooglebarLite = {
 			window.getBrowser().addProgressListener(objGooglebarLite.ProgressListener);
 			
 			var chevron = document.getElementById("GBL-Overflow-Button");
-			objGooglebarLite.OverflowButtonWidth = chevron.boxObject.width;
+			objGooglebarLite.OverflowButtonWidth = chevron.getBoundingClientRect().width;
 			chevron.collapsed = true; // Initalize the overflow button to a hidden state
 	
 			if(objGooglebarLite.PrefBranch.prefHasUserValue("prefs_version") == false)

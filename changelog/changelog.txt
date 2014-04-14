@@ -1,6 +1,10 @@
 //***************
 //Version History
 //***************
+[4.9.13]
++ Improved the look and feel of the search box on Windows and Linux
++ Bug Fix: Fixed a minor warning that was appearing in the browser console on startup
+
 [4.9.12]
 + Removed the search box resize gripper, and replaced it with a new search box width preference
 + Redesigned the way that internal preference data and common functions are stored
@@ -166,10 +170,44 @@
 + Bug Fix: Search terms now update properly on secure search result pages
 + Bug Fix: Terms appearing in double quotes, which have a minus sign as the first character, are no longer hidden in the search word buttons
 
-[4.6.10]
+[4.7.4]
++ Bug Fix: Word search should no longer get stuck when the terms appear in a text edit control
+
+[4.7.3]
++ Major code cleanup. The global JavaScript namespace is no longer polluted with all of Googlebar Lite’s variable and function names, and code has been made more efficient in some cases.
++ Search terms are now cleared when exiting private browsing mode
++ Bumped the maxVersion to 3.6.* to support Firefox 3.6 builds
++ The hidden preference for Google’s sandbox search engine has been removed, since Google is no longer offering this sandbox to the public
++ Updated the Russian (ru-RU) locale
++ Updated the Chinese Traditional (zh-TW) locale
++ Updated the Czech (cs-CZ) locale
++ Bug Fix: The “single click in search box selects all search terms” option now uses native Firefox functionality, fixing several auto-selection problems in Linux
++ Bug Fix: Dragging empty text to the search box no longer causes a blank entry to be added to the search history
++ Bug Fix: Dragging text into the search box now opens a new tab if the “open search results in a new tab” and “automatically search on drag and drop” options are both set
++ Bug Fix: Search terms are now cleared properly after customizing the Firefox toolbars
+
+[4.7.2]
++ Added Google Product search support (formally ‘Froogle’ search)
++ Added Google Finance search support
+
+[4.7.1]
++ Support has been added for Google’s new Caffeine search engine, via a hidden preference (set googlebar_lite.use_sandbox to true in about:config). Note that this option currently only works with web searches and not specialized searches (images, groups, etc.).
++ Bug Fix: Drag and drop did not work properly in Firefox 3.5.x
++ Bug Fix: The Up button menu now provides the full range of options for https URLs
++ Bug Fix: Highlighted search terms should no longer cause unwanted line breaks or font-size changes on certain sites
+
+[4.7.0]
 + Blog search support added (replacing Froogle search)
 + Book search support added (replacing Web Directory search)
 + Croatia top-level-domain added (.hr)
++ Bug Fix: AJAX driven search result pages at Google no longer prevent search terms from updating in the Googlebar Lite search box
+
+[4.6.9]
++ Bumped the maxVersion to 3.5.* to support Firefox 3.5 builds
+
+[4.6.8]
++ Bug Fix: The tool-tip suppression code introduced back in version 4.3 has started to cause problems. Occasionally, Googlebar Lite could cause Firefox menus to stop responding. The problematic code has been removed.
++ New Polish (pl-PL) localization.
 
 [4.6.7]
 + Bug Fix: Up-button menu items were not working as intended.

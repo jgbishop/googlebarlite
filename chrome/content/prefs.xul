@@ -146,9 +146,11 @@
 					<label value="&gblite.options.label.searchboxwidth;" />
 					<menulist id="GBL-Opt-SearchBoxWidthMenu" preference="GBL-Pref-SearchBoxWidth">
 						<menupopup>
-							<menuitem label="&gblite.options.searchboxwidth.narrow;" value="150" />
-							<menuitem label="&gblite.options.searchboxwidth.medium;" value="250" />
-							<menuitem label="&gblite.options.searchboxwidth.wide;" value="350" />
+							<menuitem label="150 - &gblite.options.searchboxwidth.narrow;" value="150" />
+							<menuitem label="200" value="200" />
+							<menuitem label="250 - &gblite.options.searchboxwidth.medium;" value="250" />
+							<menuitem label="300" value="300" />
+							<menuitem label="350 - &gblite.options.searchboxwidth.wide;" value="350" />
 							<menuitem label="&gblite.options.searchboxwidth.custom;" value="275" id="GBL-Opt-SearchBoxWidth-Custom" />
 						</menupopup>
 					</menulist>
@@ -365,10 +367,6 @@
 					<textbox id="GBL-Opt-SearchBoxFocusKey" maxlength="1" size="1" preference="GBL-Pref-FocusKey" 
 						oninput="objGooglebarLitePrefs.ValidateKeyboardShortcut(event);"
 						onchange="objGooglebarLitePrefs.ValidateKeyboardShortcut(event);" />
-						<!--
-						oninput="if(!objGooglebarLitePrefs.ShortcutIsValid()) event.stopPropagation();"
-						onchange="if(!objGooglebarLitePrefs.ShortcutIsValid()) { event.stopPropagation(); this.focus(); }" />
-						-->
 				</hbox>
 			</row>
 			

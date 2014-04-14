@@ -1,6 +1,6 @@
 var EXPORTED_SYMBOLS = ["GooglebarLiteCommon"];
 
-Components.utils.import('resource://gre/modules/Services.jsm');
+Components.utils.import('resource://gre/modules/devtools/Console.jsm');
 
 if (typeof(GooglebarLiteCommon) === "undefined")
 {
@@ -78,6 +78,11 @@ GooglebarLiteCommon.Data = {
 GooglebarLiteCommon.Func = {
 	Log: function(aMessage)
 	{
-		Services.console.logStringMessage('Googlebar_Lite: ' + aMessage);
+		console.log('Googlebar_Lite: ' + aMessage);
 	},
+	
+	LogRaw: function(data)
+	{
+		console.log(data);
+	}
 };
