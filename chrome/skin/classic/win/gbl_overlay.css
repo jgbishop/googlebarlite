@@ -1,8 +1,12 @@
+#GBL-SearchBox {
+	-moz-appearance: none;
+	border: 1px solid ThreeDShadow;
+	border-radius: 2px;
+}
+
 @media (-moz-windows-default-theme) {
 	#GBL-SearchBox {
-		-moz-appearance: none;
-		border: 1px solid ThreeDShadow;
-		border-radius: 2px;
+		border-color: rgba(0,0,0,0.32);
 	}
 	
 	#GBL-SearchBox > .autocomplete-textbox-container {
@@ -10,11 +14,11 @@
 	}
 	
 	#GBL-SearchBox:not(:-moz-lwtheme) {
-		border-color: hsla(210,54%,20%,.25) hsla(210,54%,20%,.27) hsla(210,54%,20%,.3);
+		border-color: hsla(210,54%,20%,.35) hsla(210,54%,20%,.37) hsla(210,54%,20%,.4);
 	}
 	
 	#GBL-SearchBox:not(:-moz-lwtheme):not([focused]):hover {
-		border-color: hsla(210,54%,20%,.35) hsla(210,54%,20%,.37) hsla(210,54%,20%,.4);
+		border-color: hsla(210,54%,20%,.45) hsla(210,54%,20%,.47) hsla(210,54%,20%,.5);
 	}
 	
 	#GBL-SearchBox:not(:-moz-lwtheme)[focused] {
