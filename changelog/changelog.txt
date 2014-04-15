@@ -3,6 +3,7 @@
 //***************
 [4.9.13]
 + Improved the look and feel of the search box on Windows and Linux
++ Replaced a custom confirmation dialog with a built-in one from nsIPromptService
 + Bug Fix: Fixed a minor warning that was appearing in the browser console on startup
 
 [4.9.12]

@@ -153,12 +153,6 @@
 <!ENTITY gblite.about.translators "Traductors">
 <!ENTITY gblite.about.locale "Localització">
 <!ENTITY gblite.about.translator "Traductor">
-<!ENTITY gblite.confirm.title "Neteja l&apos;historial de cerca">
-<!ENTITY gblite.confirm.label.usure "Estàs segur que vols netejar l&apos;historial de cerca?">
-<!ENTITY gblite.confirm.label.yes "Si">
-<!ENTITY gblite.confirm.ak.yes "S">
-<!ENTITY gblite.confirm.label.no "No">
-<!ENTITY gblite.confirm.ak.no "N">
 <!ENTITY gblite.formhistory.title "Googlebar Lite: Avis de Historial">
 <!ENTITY gblite.formhistory.warninginfo "Googlebar Lite ha detectat que vols mantenir un historial de cerques, però l&apos;opció d&apos;historial de formularis de Firefox està deshabilitada. L&apos;historial de formularis ha d&apos;estar habilitat per mantenir un historial de cerques.">
 <!ENTITY gblite.formhistory.prompt "Que vols fer?">

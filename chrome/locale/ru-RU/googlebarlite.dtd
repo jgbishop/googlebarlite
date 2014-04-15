@@ -153,12 +153,6 @@
 <!ENTITY gblite.about.translators "Перевод интерфейса">
 <!ENTITY gblite.about.locale "Локаль">
 <!ENTITY gblite.about.translator "Переводчик">
-<!ENTITY gblite.confirm.title "Очистить историю запросов">
-<!ENTITY gblite.confirm.label.usure "Действительно необходимо очистить историю запросов?">
-<!ENTITY gblite.confirm.label.yes "Да">
-<!ENTITY gblite.confirm.ak.yes "Д">
-<!ENTITY gblite.confirm.label.no "Нет">
-<!ENTITY gblite.confirm.ak.no "Н">
 <!ENTITY gblite.formhistory.title "Googlebar Lite: Предупреждение истории запросов">
 <!ENTITY gblite.formhistory.warninginfo "Для упрощенной панели Google запрошена поддержка истории запросов, но в Firefox в данный момент опция сохранения данных форм отключена. Для обеспечения истории запросов опция сохранения данных форм в Firefox должна быть включена.">
 <!ENTITY gblite.formhistory.prompt "Что cделать?">

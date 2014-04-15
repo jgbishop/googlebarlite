@@ -440,11 +440,8 @@ var objGooglebarLite = {
 		document.getElementById("GBL-TB-Sep3").setAttribute("hidden", !(s3visible && s4visible));
 	},
 
-	ClearHistory: function(flag)
+	ClearHistory: function()
 	{
-		if(flag == "false")
-			return;
-	
 		FormHistory.update({ op: "remove", fieldname: "GBL-Search-History" });
 	
 		this.SetSearchTerms(""); // Clear the search terms box and buttons
@@ -460,9 +457,22 @@ var objGooglebarLite = {
 	ClearHistoryPrompt: function()
 	{
 		if(GooglebarLiteCommon.Data.Prefs.PromptToClear.value)
-			window.openDialog("chrome://googlebarlite/content/confirm.xul", "Clear Search History?", "centerscreen,chrome,modal");
+		{
+			var stringBundle = document.getElementById("GBL-String-Bundle");
+			
+			// Prompt the user to see if they want to append to the current list or overwrite it
+			var ps = Components.classes["@mozilla.org/embedcomp/prompt-service;1"].getService(Components.interfaces.nsIPromptService);
+			var rv = ps.confirmEx(window, stringBundle.getString("GBL_HistoryConfirmTitle"),
+								  stringBundle.getString("GBL_HistoryConfirmPrompt"),
+								  ps.BUTTON_TITLE_YES * ps.BUTTON_POS_0 +
+								  ps.BUTTON_TITLE_NO * ps.BUTTON_POS_1 + ps.BUTTON_POS_1_DEFAULT,
+								  null, null, null, null, {});
+			
+			if(rv == 0)
+				this.ClearHistory();
+		}
 		else
-			this.ClearHistory(true);
+			this.ClearHistory();
 	},
 	
 	CombinedSearch: function(event)

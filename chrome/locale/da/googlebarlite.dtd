@@ -153,12 +153,6 @@
 <!ENTITY gblite.about.translators "Oversættere:">
 <!ENTITY gblite.about.locale "Sprog">
 <!ENTITY gblite.about.translator "Oversætter">
-<!ENTITY gblite.confirm.title "Ryd søgehistorikken">
-<!ENTITY gblite.confirm.label.usure "Er du sikker på at du vil rydde søgehistorikken?">
-<!ENTITY gblite.confirm.label.yes "Ja">
-<!ENTITY gblite.confirm.ak.yes "J">
-<!ENTITY gblite.confirm.label.no "Nej">
-<!ENTITY gblite.confirm.ak.no "N">
 <!ENTITY gblite.formhistory.title "Googlebar Lite: Advarsel om historik">
 <!ENTITY gblite.formhistory.warninginfo "Googlebar Lite har registreret at du ønsker at vedligeholde en søgehistorik, men indstillingerne for formularhistorik i Firefox er i øjeblikket slået fra. Formularhistorik skal være slået til for at Googlebar Lite kan vedligeholde en søgehistorik.">
 <!ENTITY gblite.formhistory.prompt "Hvad vil du gøre?">

@@ -153,12 +153,6 @@
 <!ENTITY gblite.about.translators "Překladatelé">
 <!ENTITY gblite.about.locale "Jazyk">
 <!ENTITY gblite.about.translator "Překladatel">
-<!ENTITY gblite.confirm.title "Vymazat historii hledání">
-<!ENTITY gblite.confirm.label.usure "Opravdu chcete vymazat historii hledání?">
-<!ENTITY gblite.confirm.label.yes "Ano">
-<!ENTITY gblite.confirm.ak.yes "A">
-<!ENTITY gblite.confirm.label.no "Ne">
-<!ENTITY gblite.confirm.ak.no "N">
 <!ENTITY gblite.formhistory.title "Googlebar Lite: Upozornění na histori">
 <!ENTITY gblite.formhistory.warninginfo "Googlebar Lite zjistil, že se snažíte zaznamenávat historii hledání, ale možnost historii formulářů je ve Firefoxu momentálně zakázaná. Historie formulářů musí být povolena, aby Googlebar Lite mohl historii zaznamenávat.">
 <!ENTITY gblite.formhistory.prompt "Co chcete udělat?">

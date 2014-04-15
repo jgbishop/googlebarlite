@@ -153,12 +153,6 @@
 <!ENTITY gblite.about.translators "Prevoditelji">
 <!ENTITY gblite.about.locale "Lokalizacije">
 <!ENTITY gblite.about.translator "Prevoditelj">
-<!ENTITY gblite.confirm.title "Očisti povijest pretraživanja">
-<!ENTITY gblite.confirm.label.usure "Sigurni ste da želite obrisati povijest pretraživanja?">
-<!ENTITY gblite.confirm.label.yes "Da">
-<!ENTITY gblite.confirm.ak.yes "D">
-<!ENTITY gblite.confirm.label.no "Ne">
-<!ENTITY gblite.confirm.ak.no "N">
 <!ENTITY gblite.formhistory.title "Googlebar Lite: Upozorenje povijesti">
 <!ENTITY gblite.formhistory.warninginfo "Googlebar Lite je otkrio da želite podržavati povijest pretraživanja, ali opcija obrasca povijesti u Firefoxu je trenutno onemogućena. Obrazac povijesti mora biti omogućena da bi Googlebar Lite mogao podržavati povijest pretraživanja.">
 <!ENTITY gblite.formhistory.prompt "Što želite učiniti?">

@@ -153,12 +153,6 @@
 <!ENTITY gblite.about.translators "Tradutores">
 <!ENTITY gblite.about.locale "Local">
 <!ENTITY gblite.about.translator "Tradutor">
-<!ENTITY gblite.confirm.title "Limpar histórico de pesquisas">
-<!ENTITY gblite.confirm.label.usure "Tem certeza de que deseja limpar o histórico de pesquisas?">
-<!ENTITY gblite.confirm.label.yes "Sim">
-<!ENTITY gblite.confirm.ak.yes "S">
-<!ENTITY gblite.confirm.label.no "Não">
-<!ENTITY gblite.confirm.ak.no "N">
 <!ENTITY gblite.formhistory.title "Googlebar Lite: Aviso do histórico">
 <!ENTITY gblite.formhistory.warninginfo "O Googlebar Lite detectou que você deseja manter um histórico de pesquisas, mas a opção histórico de formulários no Firefox está desabilitada. O histórico de formulários precisa ser habilitado para que o Googlebar Lite mantenha um histórico de pesquisas.">
 <!ENTITY gblite.formhistory.prompt "O que você deseja fazer?">

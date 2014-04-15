@@ -153,12 +153,6 @@
 <!ENTITY gblite.about.translators "Tõlkijad">
 <!ENTITY gblite.about.locale "Asukoht">
 <!ENTITY gblite.about.translator "Tõlkija">
-<!ENTITY gblite.confirm.title "Tühjenda otsingute ajalugu">
-<!ENTITY gblite.confirm.label.usure "Oled sa kindel, et soovid otsingute ajaloo tühjendada?">
-<!ENTITY gblite.confirm.label.yes "Jah">
-<!ENTITY gblite.confirm.ak.yes "Y">
-<!ENTITY gblite.confirm.label.no "Ei">
-<!ENTITY gblite.confirm.ak.no "N">
 <!ENTITY gblite.formhistory.title "Googlebar Lite: otsingute ajaloo hoiatus">
 <!ENTITY gblite.formhistory.warninginfo "Googlebar Lite avastas, et soovite hoida otsingute ajalugu, kuid Firefoxis on see funktsioon hetkel keelatud. Et ajalugu säilitada, peaks see olema lubatud.">
 <!ENTITY gblite.formhistory.prompt "Mida tahaksid teha?">

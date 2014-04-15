@@ -153,12 +153,6 @@
 <!ENTITY gblite.about.translators "Vertalers">
 <!ENTITY gblite.about.locale "Taal">
 <!ENTITY gblite.about.translator "Vertaler">
-<!ENTITY gblite.confirm.title "Zoekgeschiedenis wissen">
-<!ENTITY gblite.confirm.label.usure "Weet u zeker dat u de zoekgeschiedenis wilt wissen?">
-<!ENTITY gblite.confirm.label.yes "Ja">
-<!ENTITY gblite.confirm.ak.yes "J">
-<!ENTITY gblite.confirm.label.no "Nee">
-<!ENTITY gblite.confirm.ak.no "N">
 <!ENTITY gblite.formhistory.title "Googlebar Lite: Waarschuwing">
 <!ENTITY gblite.formhistory.warninginfo "Googlebar Lite heeft gedetecteerd dat je de zoekgeschiedenis wilt onthouden, maar de optie Opgeslagen formulieren in Firefox is uitgeschakeld. Opgeslagen formulieren moet worden ingeschakeld om deze optie te kunnen gebruiken.">
 <!ENTITY gblite.formhistory.prompt "Wat wilt u doen?">

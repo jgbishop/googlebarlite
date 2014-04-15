@@ -153,12 +153,6 @@
 <!ENTITY gblite.about.translators "Translators">
 <!ENTITY gblite.about.locale "Locale">
 <!ENTITY gblite.about.translator "Translator">
-<!ENTITY gblite.confirm.title "Clear Search History">
-<!ENTITY gblite.confirm.label.usure "Are you sure you want to clear the search history?">
-<!ENTITY gblite.confirm.label.yes "Yes">
-<!ENTITY gblite.confirm.ak.yes "Y">
-<!ENTITY gblite.confirm.label.no "No">
-<!ENTITY gblite.confirm.ak.no "N">
 <!ENTITY gblite.formhistory.title "Googlebar Lite: History Warning">
 <!ENTITY gblite.formhistory.warninginfo "Googlebar Lite has detected that you want to maintain a search history, but the form history option in Firefox is currently disabled. Form history must be enabled for Googlebar Lite to maintain a search history.">
 <!ENTITY gblite.formhistory.prompt "What would you like to do?">

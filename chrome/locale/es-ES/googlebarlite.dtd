@@ -153,12 +153,6 @@
 <!ENTITY gblite.about.translators "Traductores">
 <!ENTITY gblite.about.locale "Localización">
 <!ENTITY gblite.about.translator "Traductor">
-<!ENTITY gblite.confirm.title "Borrar el historial de búsqueda">
-<!ENTITY gblite.confirm.label.usure "¿Está seguro de que quiere borrar el historial de búsqueda?">
-<!ENTITY gblite.confirm.label.yes "Sí">
-<!ENTITY gblite.confirm.ak.yes "S">
-<!ENTITY gblite.confirm.label.no "No">
-<!ENTITY gblite.confirm.ak.no "N">
 <!ENTITY gblite.formhistory.title "Googlebar Lite: advertencia de historial">
 <!ENTITY gblite.formhistory.warninginfo "GoogleBar ha detectado que quieres mantener un historial de búsqueda, pero la opción de historial de formularios está desactivada en Firefox. Debes activar esta opción para que GoogleBar pueda mantener un historial de búsqueda.">
 <!ENTITY gblite.formhistory.prompt "¿Qué deseas hacer?">

@@ -153,12 +153,6 @@
 <!ENTITY gblite.about.translators "翻譯作者群">
 <!ENTITY gblite.about.locale "語文版">
 <!ENTITY gblite.about.translator "翻譯作者">
-<!ENTITY gblite.confirm.title "清除搜尋記錄">
-<!ENTITY gblite.confirm.label.usure "確定要清除搜尋記錄嗎？">
-<!ENTITY gblite.confirm.label.yes "是(Y)">
-<!ENTITY gblite.confirm.ak.yes "Y">
-<!ENTITY gblite.confirm.label.no "否(N)">
-<!ENTITY gblite.confirm.ak.no "N">
 <!ENTITY gblite.formhistory.title "Googlebar Lite: 搜尋記錄警告">
 <!ENTITY gblite.formhistory.warninginfo "Googlebar Lite 偵測到您想要保留搜尋記錄，但 Firefox 選項內的表單記錄現在被停用了。您必須啟用 Firefox 的表單記錄，Googlebar Lite 才能保留搜尋記錄。">
 <!ENTITY gblite.formhistory.prompt "您想要怎麼做呢？">

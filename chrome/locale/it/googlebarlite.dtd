@@ -153,12 +153,6 @@
 <!ENTITY gblite.about.translators "Traduttori">
 <!ENTITY gblite.about.locale "Lingua">
 <!ENTITY gblite.about.translator "Traduttore">
-<!ENTITY gblite.confirm.title "Cancella cronologia ricerche">
-<!ENTITY gblite.confirm.label.usure "Sei sicuro di voler cancellare la cronologia ricerche?">
-<!ENTITY gblite.confirm.label.yes "Sì">
-<!ENTITY gblite.confirm.ak.yes "S">
-<!ENTITY gblite.confirm.label.no "No">
-<!ENTITY gblite.confirm.ak.no "N">
 <!ENTITY gblite.formhistory.title "Googlebar Lite: Avvertenza di cronologia">
 <!ENTITY gblite.formhistory.warninginfo "Googlebar Lite ha rilevato che desideri creare una cronologia delle ricerche, ma la cronologia dei moduli in Firefox è disattivata. La cronologia delle informazioni inserite nei moduli deve essere attivata per permettere a Googlebar Lite di creare la cronologia delle ricerche.">
 <!ENTITY gblite.formhistory.prompt "Cosa preferisci fare?">

@@ -153,12 +153,6 @@
 <!ENTITY gblite.about.translators "Çevirmenler">
 <!ENTITY gblite.about.locale "Yer">
 <!ENTITY gblite.about.translator "Çevirmen">
-<!ENTITY gblite.confirm.title "Arama Geçmişini Temizle">
-<!ENTITY gblite.confirm.label.usure "Arama geçmişini temizlemek istediğinizden emin misiniz?">
-<!ENTITY gblite.confirm.label.yes "Evet">
-<!ENTITY gblite.confirm.ak.yes "Y">
-<!ENTITY gblite.confirm.label.no "Hayır">
-<!ENTITY gblite.confirm.ak.no "N">
 <!ENTITY gblite.formhistory.title "Googlebar Lite: Geçmiş Uyarısı">
 <!ENTITY gblite.formhistory.warninginfo "Googlebar Lite, bir arama geçmişi saklamak istediğinizi algıladı, fakat Firefox&apos;ta form geçmişi seçeneği şu anda devredışıdır. Googlebar Lite&apos;ın bir arama geçmişi saklayabilmesi için form geçmişi etkinleştirilmelidir.">
 <!ENTITY gblite.formhistory.prompt "Ne yapmak istiyorsunuz?">

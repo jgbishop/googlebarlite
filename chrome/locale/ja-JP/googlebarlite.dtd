@@ -153,12 +153,6 @@
 <!ENTITY gblite.about.translators "翻訳者たち">
 <!ENTITY gblite.about.locale "言語">
 <!ENTITY gblite.about.translator "翻訳者">
-<!ENTITY gblite.confirm.title "検索履歴をクリア">
-<!ENTITY gblite.confirm.label.usure "本当に検索履歴をクリアしてもよろしいですか？">
-<!ENTITY gblite.confirm.label.yes "はい">
-<!ENTITY gblite.confirm.ak.yes "Y">
-<!ENTITY gblite.confirm.label.no "いいえ">
-<!ENTITY gblite.confirm.ak.no "N">
 <!ENTITY gblite.formhistory.title "Googlebar Lite:履歴についての警告">
 <!ENTITY gblite.formhistory.warninginfo "検索履歴を保持したいとGooglebar Liteは検出しましたが、現在Firefoxのフォームの入力履歴オプションが無効になっています。Googlebar Liteが検索履歴を保持するためには、フォームの入力履歴が有効になっている必要があります。">
 <!ENTITY gblite.formhistory.prompt "どうしますか？">

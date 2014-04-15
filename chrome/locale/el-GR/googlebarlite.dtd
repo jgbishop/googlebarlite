@@ -153,12 +153,6 @@
 <!ENTITY gblite.about.translators "Μεταφραστές">
 <!ENTITY gblite.about.locale "Τοποθεσία">
 <!ENTITY gblite.about.translator "Μεταφραστής">
-<!ENTITY gblite.confirm.title "Καθαρισμός Ιστορικού Αναζήτησης">
-<!ENTITY gblite.confirm.label.usure "Καθαρισμός ιστορικού αναζήτησης;">
-<!ENTITY gblite.confirm.label.yes "Ναι">
-<!ENTITY gblite.confirm.ak.yes "Ν">
-<!ENTITY gblite.confirm.label.no "Όχι">
-<!ENTITY gblite.confirm.ak.no "Ό">
 <!ENTITY gblite.formhistory.title "Googlebar Lite: Προειδοποίηση Ιστορικού">
 <!ENTITY gblite.formhistory.warninginfo "Το Googlebar Lite εντόπισε ότι θέλετε να διατηρήσετε ένα ιστορικό αναζήτησης αλλά η επιλογή ιστορικού φόρμας στο Firefox είναι απενεργοποιημένη. Το ιστορικό φόρμας πρέπει να είναι ενεργοποιημένο για τη διατήρηση του ιστορικού αναζητήσεων από το Googlebar Lite.">
 <!ENTITY gblite.formhistory.prompt "Τι θέλετε να κάνετε;">

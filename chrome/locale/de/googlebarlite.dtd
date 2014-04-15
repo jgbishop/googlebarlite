@@ -153,12 +153,6 @@
 <!ENTITY gblite.about.translators "Übersetzer">
 <!ENTITY gblite.about.locale "Sprache">
 <!ENTITY gblite.about.translator "Übersetzer">
-<!ENTITY gblite.confirm.title "Such-Chronik löschen">
-<!ENTITY gblite.confirm.label.usure "Sind Sie sicher das Sie die Such-Chronik löschen wollen?">
-<!ENTITY gblite.confirm.label.yes "Ja">
-<!ENTITY gblite.confirm.ak.yes "J">
-<!ENTITY gblite.confirm.label.no "Nein">
-<!ENTITY gblite.confirm.ak.no "N">
 <!ENTITY gblite.formhistory.title "Googlebar Lite: Chronik-Warnung">
 <!ENTITY gblite.formhistory.warninginfo "Ihre Suchbegriffe sollen in einer Such-Chronik gespeichert werden, aber die Option zum Speichern von Formulardaten ist zur Zeit in Firefox deaktiviert. Diese muss jedoch aktiv sein, damit GBL eine Such-Chronik anlegen kann.">
 <!ENTITY gblite.formhistory.prompt "Was möchten Sie tun?">
