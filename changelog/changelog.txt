@@ -3,7 +3,9 @@
 //***************
 [4.9.13]
 + Improved the look and feel of the search box on Windows and Linux
-+ Replaced a custom confirmation dialog with a built-in one from nsIPromptService
++ Replaced the custom clear search history confirmation dialog with a built-in one from nsIPromptService
++ Added a couple of extra presets to the search box width option
++ Search box width presets now list their width in pixels
 + Bug Fix: Fixed a minor warning that was appearing in the browser console on startup
 
 [4.9.12]
