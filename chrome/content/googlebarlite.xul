@@ -75,7 +75,7 @@
 	<toolbarbutton id="GBL-TB-Toggle-Toolbar" tooltiptext="Toggle Googlebar Lite Toolbar" class="toolbarbutton-1"
 				   label="&gblite.toggle.toolbar;" oncommand="objGooglebarLite.ToggleToolbar();" />
 	
-	<toolbaritem id="GBL-Toolbar-MainItem" flex="1" title="&gblite.name;" class="chromeclass-toolbar-additional panel-wide-item">
+	<toolbaritem id="GBL-Toolbar-MainItem" flex="1" title="&gblite.name;" class="chromeclass-toolbar-additional panel-wide-item" align="center">
 		<stack id="GBL-Stack" flex="1">
 			
 			<toolbarbutton id="GBL-TB-Customize" class="GBL-Toolbar-Customize GBL-Toolbar-Button" label="&gblite.name;" mousethrough="never" />

@@ -1333,7 +1333,7 @@ var objGooglebarLite = {
 				// Firefox 20+
 				Components.utils.import("resource://gre/modules/PrivateBrowsingUtils.jsm");
 				if (!PrivateBrowsingUtils.isWindowPrivate(window))
-					FormHistory.update({op: "add", fieldname: "GBL-Search-History", value: originalTerms});
+					FormHistory.update({op: "bump", fieldname: "GBL-Search-History", value: originalTerms});
 			} catch(e) {
 				Components.utils.reportError(e);
 				return;

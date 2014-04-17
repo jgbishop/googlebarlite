@@ -1,6 +1,10 @@
 //***************
 //Version History
 //***************
+[upcoming]
++ Bug Fix: Search terms should no longer be duplicated when they already exist in the search history
++ Bug Fix: The Googlebar Lite toolbar should now look better when using large icons
+
 [4.9.13]
 + Improved the look and feel of the search box on Windows and Linux
 + Replaced the custom clear search history confirmation dialog with a built-in one from nsIPromptService
