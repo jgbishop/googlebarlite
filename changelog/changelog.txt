@@ -1,7 +1,7 @@
 //***************
 //Version History
 //***************
-[upcoming]
+[4.9.14]
 + Bug Fix: Search terms should no longer be duplicated when they already exist in the search history
 + Bug Fix: The Googlebar Lite toolbar should now look better when using large icons
 
