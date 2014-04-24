@@ -31,6 +31,7 @@ pref("extensions.googlebarlite.buttons.dictionary", false);
 // Search history
 pref("extensions.googlebarlite.warn_on_form_history", true);
 pref("extensions.googlebarlite.maintain_history", true);
+pref("extensions.googlebarlite.enable_search_suggest", true);
 pref("extensions.googlebarlite.enable_auto_complete", true);
 pref("extensions.googlebarlite.use_inline_complete", false);
 pref("extensions.googlebarlite.auto_search", false);

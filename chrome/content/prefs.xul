@@ -226,6 +226,7 @@
 		<preferences>
 			<preference id="GBL-Pref-WarnOnFormHistory" name="extensions.googlebarlite.warn_on_form_history" type="bool" />
 			<preference id="GBL-Pref-MaintainHistory" name="extensions.googlebarlite.maintain_history" type="bool" />
+			<preference id="GBL-Pref-EnableSearchSuggest" name="extensions.googlebarlite.enable_search_suggest" type="bool" />
 			<preference id="GBL-Pref-EnableAutoComplete" name="extensions.googlebarlite.enable_auto_complete" type="bool" />
 			<preference id="GBL-Pref-UseInlineComplete" name="extensions.googlebarlite.use_inline_complete" type="bool" />
 			<preference id="GBL-Pref-AutoSearch" name="extensions.googlebarlite.auto_search" type="bool" />
@@ -238,7 +239,8 @@
 				  oncommand="objGooglebarLitePrefs.UpdateSearchHistoryStatus();" />
 		
 		<vbox class="GBL-Indent">
-			<checkbox id="GBL-Opt-EnableAutoComplete" label="&gblite.options.autocomplete;" flex="1" preference="GBL-Pref-EnableAutoComplete"
+			<checkbox id="GBL-Opt-EnableSearchSuggest" label="&gblite.options.searchsuggest;" preference="GBL-Pref-EnableSearchSuggest" />
+			<checkbox id="GBL-Opt-EnableAutoComplete" label="&gblite.options.autocomplete;" preference="GBL-Pref-EnableAutoComplete"
 					  oncommand="objGooglebarLitePrefs.UpdateUseInlineCompleteStatus();" />
 			<checkbox id="GBL-Opt-UseInlineComplete" label="&gblite.options.inlinecomplete;" preference="GBL-Pref-UseInlineComplete" />
 			<checkbox id="GBL-Opt-AutoSearch" label="&gblite.options.autosearchhistory;" preference="GBL-Pref-AutoSearch" />

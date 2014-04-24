@@ -132,6 +132,7 @@
 <!ENTITY gblite.options.usesecuresearch "Use secure search where possible (may override 'Google site to use' setting)">
 <!ENTITY gblite.options.warnonformhistory "Warn me when form history is disabled in Firefox">
 <!ENTITY gblite.options.maintainhistory "Maintain a search history">
+<!ENTITY gblite.options.searchsuggest "Enable Google search suggestions">
 <!ENTITY gblite.options.autocomplete "Enable auto-completion">
 <!ENTITY gblite.options.inlinecomplete "Use inline completion">
 <!ENTITY gblite.options.autosearchhistory "Automatically search when you select from the search history">
