@@ -2,5 +2,6 @@ chrome.manifest
 install.rdf
 LICENSE.txt
 chrome
-defaults\preferences\googlebarlite.js
+components
+defaults
 modules
