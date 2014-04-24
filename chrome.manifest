@@ -8,6 +8,9 @@ skin    googlebarlite-os    classic/1.0     chrome/skin/classic/win/ os=WinNT
 
 style   chrome://global/content/customizeToolbar.xul chrome://googlebarlite/skin/gbl_overlay.css
 
+component {7716e5e0-c9c0-11e3-9c1a-0800200c9a66} components/gbl-autocomplete.js
+contract @mozilla.org/autocomplete/search;1?name=googlebar-lite-autocomplete {7716e5e0-c9c0-11e3-9c1a-0800200c9a66}
+
 locale  googlebarlite   en-US   chrome/locale/en-US/
 locale  googlebarlite   ca-AD   chrome/locale/ca-AD/
 locale  googlebarlite   cs-CZ   chrome/locale/cs-CZ/

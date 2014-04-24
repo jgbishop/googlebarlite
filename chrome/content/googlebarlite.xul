@@ -158,19 +158,22 @@
 				<toolbaritem id="GBL-SearchBox-Container" persist="width">
 				<textbox id="GBL-SearchBox"
 					type="autocomplete"
-					autocompletesearch="form-history"
+					autocompletesearch="googlebar-lite-autocomplete"
 					autocompletesearchparam="GBL-Search-History"
-					autocompletepopup="GBL-PopupAutoComplete"
+					autocompletepopup="PopupAutoComplete"
 					completedefaultindex="false"
 					completeselectedindex="true"
 					disableautocomplete="false"
 					ontextentered="objGooglebarLite.SearchBoxTextEntered(param);"
 					oninput="objGooglebarLite.TermsHaveUpdated();"
+					showcommentcolumn="true"
 					enablehistory="true"
 					tabscrolling="true"
 					flex="1"
 					minwidth="150"
-					width="200" />
+					width="200"
+					timeout="200"
+					maxrows="10" />
 				</toolbaritem>
 
 				<splitter id="GBL-Splitter" state="open" collapse="none" resizebefore="closest"
