@@ -155,8 +155,7 @@ ProviderAutoCompleteResult.prototype = {
  *
  * @implements {nsIAutoCompleteSearch}
  */
-function ProviderAutoCompleteSearch() {
-}
+function ProviderAutoCompleteSearch() {}
 
 ProviderAutoCompleteSearch.prototype = {
 
@@ -257,8 +256,6 @@ ProviderAutoCompleteSearch.prototype = {
 		if(!this._request || this._request.readyState != this._request.DONE)
 			return;
 		
-//		GooglebarLiteCommon.Func.Log("Entered onReadyStateChange (request done)");
-		
 		try {
 			var status = this._request.status;
 		} catch (e) {
@@ -277,7 +274,6 @@ ProviderAutoCompleteSearch.prototype = {
 		
 		this._clearServerErrors();
 		
-//		GooglebarLiteCommon.Func.Log("Parsing server results");
 		try {
 			var serverResults = JSON.parse(responseText);
 		} catch (ex) {
@@ -292,7 +288,7 @@ ProviderAutoCompleteSearch.prototype = {
 		var historyResults = [];
 		var historyComments = [];
 		
-		if(GooglebarLiteCommon.Data.Prefs.MaintainHistory.value && this._formHistoryResult &&
+		if(this._formHistoryResult &&
 		   (this._formHistoryResult.searchResult == Ci.nsIAutoCompleteResult.RESULT_SUCCESS))
 		{
 			var maxHistoryItems = Math.min(this._formHistoryResult.matchCount, this._historyLimit);
@@ -335,6 +331,8 @@ ProviderAutoCompleteSearch.prototype = {
 		this._request = null;
 	},
 	
+	// Send an autocompletion request to the form history service, which will result in
+	// a call to the onSearchResults routine with the local history results
 	_startHistorySearch: function(searchString, searchParam)
 	{
 		var formHistory = Cc["@mozilla.org/autocomplete/search;1?name=form-history"].createInstance(Ci.nsIAutoCompleteSearch);
@@ -395,9 +393,15 @@ ProviderAutoCompleteSearch.prototype = {
 	 */
 	startSearch: function(searchString, searchParam, previousResult, listener)
 	{
-//		GooglebarLiteCommon.Func.Log("Entered startSearch");
 		if (!previousResult)
 			this._formHistoryResult = null;
+		
+		// This is an ugly hack that comes from the official nsSearchSuggestions
+		// file. We hijack the searchParam value through a binding to the search
+		// box, and append a "|private" value if the search was performed in a
+		// private window.
+		var formHistorySearchParam = searchParam.split("|")[0];
+		var privacyMode = (searchParam.split("|")[1] == "private");
 		
 		this.stopSearch(); // Stop any existing search requests
 		
@@ -406,27 +410,34 @@ ProviderAutoCompleteSearch.prototype = {
 		if (!searchString || !GooglebarLiteCommon.Data.Prefs.EnableSearchSuggest.value || 
 			!this._okToRequest())
 		{
+			// If we have an empty search string, search suggest is disabled, or
+			// we're in backoff mode, just search local history
 			this._sentSuggestRequest = false;
-			this._startHistorySearch(searchString, searchParam);
+			this._startHistorySearch(searchString, formHistorySearchParam);
 			return;
 		}
 		
+		// Create the search request and send it
 		this._request = Cc["@mozilla.org/xmlextras/xmlhttprequest;1"].createInstance(Ci.nsIXMLHttpRequest);
 		var myself = this;
+		
+		this._request.open('GET', 'http://www.google.com/complete/search?client=firefox&q=' + encodeURIComponent(searchString), true);
 		
 		this._request.onreadystatechange = function() {
 			myself._onReadyStateChange();
 		};
 		
-		// TODO: Better sanitize the searchString?
-		this._request.open('GET', 'http://www.google.com/complete/search?client=firefox&q=' + encodeURIComponent(searchString), true);
+		// Handle the private browsing case
+		if(this._request.channel instanceof Ci.nsIPrivateBrowsingChannel)
+			this._request.channel.setPrivate(privacyMode);
+		
+		// Handle proxy foolishness
+		this._request.channel.notificationCallbacks = new AuthPromptOverride();
 		this._request.send();
 		
-		if(GooglebarLiteCommon.Data.Prefs.MaintainHistory.value)
-		{
-			this._sentSuggestRequest = true;
-			this._startHistorySearch(searchString, searchParam);
-		}
+		// Search local history
+		this._sentSuggestRequest = true;
+		this._startHistorySearch(searchString, formHistorySearchParam);
 	},
 
 	/**
@@ -442,6 +453,32 @@ ProviderAutoCompleteSearch.prototype = {
 	},
 
 	QueryInterface: XPCOMUtils.generateQI([ Ci.nsIAutoCompleteSearch ])
+};
+
+function AuthPromptOverride() {}
+
+AuthPromptOverride.prototype = {
+	// nsIAuthPromptProvider
+	getAuthPrompt: function(reason, id)
+	{
+		return {
+			promptAuth: function() {
+				throw Cr.NS_ERROR_NOT_IMPLEMENTED;
+			},
+			asyncPromptAuth: function() {
+				throw Cr.NS_ERROR_NOT_IMPLEMENTED;
+			}
+		};
+	},
+	
+	// nsIInterfaceRequestor
+	getInterface: function(iid)
+	{
+		return this.QueryInterface(iid);
+	},
+	
+	// nsISupports
+	QueryInterface: XPCOMUtils.generateQI([Ci.nsIAuthPromptProvider, Ci.nsIInterfaceRequestor])
 };
 
 // The following line is what XPCOM uses to create components

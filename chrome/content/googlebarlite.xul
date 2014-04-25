@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <?xml-stylesheet href="chrome://googlebarlite/skin/gbl_overlay.css" type="text/css"?>
 <?xml-stylesheet href="chrome://googlebarlite-os/skin/gbl_overlay.css" type="text/css"?>
+<?xml-stylesheet href="chrome://googlebarlite/content/searchBox.css" type="text/css"?>
 
 <!DOCTYPE overlay SYSTEM "chrome://googlebarlite/locale/googlebarlite.dtd">
 

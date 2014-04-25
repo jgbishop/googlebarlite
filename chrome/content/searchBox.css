@@ -1,0 +1,3 @@
+#GBL-SearchBox {
+	-moz-binding: url("chrome://googlebarlite/content/searchBoxBinding.xml");
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<bindings id="GBL-SearchBindings"
+          xmlns="http://www.mozilla.org/xbl"
+          xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+          xmlns:xbl="http://www.mozilla.org/xbl">
+    <binding id="GBL-SearchBox" extends="chrome://global/content/bindings/autocomplete.xml#autocomplete">
+        <implementation>
+            <property name="searchParam"
+                    onget="return this.getAttribute('autocompletesearchparam') +
+                           (PrivateBrowsingUtils.isWindowPrivate(window) ? '|private' : '');"
+                    onset="this.setAttribute('autocompletesearchparam', val); return val;" />
+        </implementation>
+    </binding>
+</bindings>
