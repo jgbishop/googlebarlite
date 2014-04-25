@@ -38,6 +38,7 @@ var objGooglebarLitePrefs = {
 	UpdateSearchHistoryStatus: function() {
 		var disabled = ! document.getElementById("GBL-Opt-MaintainHistory").checked;
 
+		document.getElementById("GBL-Opt-EnableSearchSuggest").disabled = disabled;
 		document.getElementById("GBL-Opt-EnableAutoComplete").disabled = disabled;
 		if(document.getElementById("GBL-Opt-EnableAutoComplete").checked)
 			document.getElementById("GBL-Opt-UseInlineComplete").disabled = disabled;
