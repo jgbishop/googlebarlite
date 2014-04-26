@@ -109,6 +109,17 @@ toolbar[iconsize="small"] #GBL-TB-Toggle-Toolbar {
 	list-style-image: url("chrome://googlebarlite/skin/toggle_small.png");
 }
 
+#GBL-ResizeBar {
+	background-image: url("chrome://googlebarlite/skin/gripper.png");
+	min-height: 20px;
+	min-width: 3px;
+}
+
+#GBL-Splitter {
+	background: transparent;
+	border: none;
+}
+
 /* Customization Styles */
 .GBL-Toolbar-Customize {
 	display: none;
