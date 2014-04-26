@@ -24,4 +24,8 @@
 	#GBL-SearchBox:not(:-moz-lwtheme)[focused] {
 		border-color: hsla(206,100%,60%,.65) hsla(206,100%,55%,.65) hsla(206,100%,50%,.65);
 	}
+	
+	#GBL-Splitter {
+		margin-right: 4px;
+	}
 }

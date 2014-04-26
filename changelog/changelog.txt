@@ -1,6 +1,9 @@
 //***************
 //Version History
 //***************
+[4.9.15]
++ Restored the resize gripper
+
 [4.9.14]
 + Bug Fix: Search terms should no longer be duplicated when they already exist in the search history
 + Bug Fix: The Googlebar Lite toolbar should now look better when using large icons

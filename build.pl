@@ -149,11 +149,11 @@ sub usageMessage
 Options:
   --bump
     Bumps the revision version portion of the version string (i.e. the third
-	value: X.Y.Z)
-	
+    value: X.Y.Z)
+    
   --output <FILENAME>
     Explicitly sets the output XPI filename
-	
+    
   --version <VERSION>
     Explicitly sets the version string to use
 USAGE
