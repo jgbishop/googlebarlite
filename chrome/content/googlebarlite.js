@@ -88,7 +88,8 @@ var objGooglebarLite = {
 			else if(data == GooglebarLiteCommon.Data.Prefs.MaintainHistory.name ||
 					data == GooglebarLiteCommon.Data.Prefs.UseInlineComplete.name ||
 					data == GooglebarLiteCommon.Data.Prefs.EnableAutoComplete.name ||
-					data == GooglebarLiteCommon.Data.Prefs.ClickSelectsAll.name)
+					data == GooglebarLiteCommon.Data.Prefs.ClickSelectsAll.name ||
+					data == GooglebarLiteCommon.Data.Prefs.LockSearchBox.name)
 			{
 				objGooglebarLite.UpdateSearchBoxSettings();
 			}
@@ -811,7 +812,7 @@ var objGooglebarLite = {
 	{
 		openUILinkIn(url, openTab ? "tab" : "current", false, null, null);
 	},
-
+	
 	MakeSafe: function(element, index, array)
 	{
 		var safeTerm = encodeURIComponent(element);
@@ -1810,6 +1811,10 @@ var objGooglebarLite = {
 		}
 
 		searchBox.clickSelectsAll = GooglebarLiteCommon.Data.Prefs.ClickSelectsAll.value;
+		
+		// Lock the search box width by hiding the splitter
+		var splitter = document.getElementById("GBL-Splitter");
+		splitter.setAttribute("collapsed", GooglebarLiteCommon.Data.Prefs.LockSearchBox.value);
 	},
 	
 	UpdateSearchWordButtons: function()

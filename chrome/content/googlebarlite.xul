@@ -17,8 +17,6 @@
 	<command id="GBL-Command-PasteAndSearch" oncommand="objGooglebarLite.PasteAndSearch();" />
 </commandset>
 
-<panel id="GBL-PopupAutoComplete" noautofocus="true" hidden="true" />
-
 <window id="main-window">
 	<keyset id="GBL-KeySet">
 		<key id="GBL-Focus-Key" key="S" modifiers="accel,shift" oncommand="objGooglebarLite.SetFocus(event);" />
@@ -178,7 +176,7 @@
 				</toolbaritem>
 
 				<splitter id="GBL-Splitter" state="open" collapse="none" resizebefore="closest"
-						  resizeafter="farthest" tooltiptext="&gblite.tt.splitter;"
+						  resizeafter="farthest" tooltiptext="&gblite.tt.splitter;" collapsed="false"
 						  onmouseup="objGooglebarLite.Resize();">
 					<vbox id="GBL-ResizeBar" />
 				</splitter>
