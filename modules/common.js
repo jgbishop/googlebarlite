@@ -17,7 +17,6 @@ GooglebarLiteCommon.Data = {
 		SearchOnDragDrop: { name: "search_on_drag_drop", value: false},
 		DisableAutoCorrect: { name: "disable_auto_correct", value: false},
 		UseSecureSearch: { name: "use_secure_search", value: false},
-		SearchBoxWidth: { name: "search_box_width", value: 250, type: "int"},
 
 		// Search history
 		WarnOnFormHistory: { name: "warn_on_form_history", value: false},
