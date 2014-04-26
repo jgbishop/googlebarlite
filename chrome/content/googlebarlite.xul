@@ -155,7 +155,7 @@
 					</toolbarbutton>
 				</toolbaritem>
 				
-				<toolbaritem>
+				<toolbaritem id="GBL-SearchBox-Container" persist="width">
 				<textbox id="GBL-SearchBox"
 					type="autocomplete"
 					autocompletesearch="form-history"
@@ -168,8 +168,16 @@
 					oninput="objGooglebarLite.TermsHaveUpdated();"
 					enablehistory="true"
 					tabscrolling="true"
-					flex="1"/>
+					flex="1"
+					minwidth="150"
+					width="200" />
 				</toolbaritem>
+
+				<splitter id="GBL-Splitter" state="open" collapse="none" resizebefore="closest"
+						  resizeafter="farthest" tooltiptext="&gblite.tt.splitter;"
+						  onmouseup="objGooglebarLite.Resize();">
+					<vbox id="GBL-ResizeBar" />
+				</splitter>
 				
 				<toolbaritem id="GBL-Buttons" flex="0" pack="start">
 				<toolbarbutton id="GBL-TB-Combined" class="GBL-Toolbar-Button" type="menu-button" tooltiptext="&gblite.tt.combined;"
