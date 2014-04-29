@@ -1,5 +1,5 @@
 Components.utils.import('resource://gre/modules/Services.jsm');
-Components.utils.import('resource://googlebarlite/common.js');
+Components.utils.import('resource://googlebarlite/gbl-common.js');
 
 var objGooglebarLitePrefs = {
 	DoValidate: function(event) {

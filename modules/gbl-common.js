@@ -16,7 +16,6 @@ GooglebarLiteCommon.Data = {
 		RememberCombined: { name: "remember_combined", value: false},
 		SearchOnDragDrop: { name: "search_on_drag_drop", value: false},
 		DisableAutoCorrect: { name: "disable_auto_correct", value: false},
-		UseSecureSearch: { name: "use_secure_search", value: false},
 
 		// Search history
 		WarnOnFormHistory: { name: "warn_on_form_history", value: false},
