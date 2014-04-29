@@ -1,7 +1,7 @@
 // Import the Services module for future use, if we're not in a browser window where it's already loaded
 Components.utils.import('resource://gre/modules/Services.jsm');
 Components.utils.import('resource://gre/modules/FormHistory.jsm');
-Components.utils.import('resource://googlebarlite/common.js');
+Components.utils.import('resource://googlebarlite/gbl-common.js');
 
 var objGooglebarLite = {
 	PrefBranch: Services.prefs.getBranch("extensions.googlebarlite."),
@@ -114,12 +114,6 @@ var objGooglebarLite = {
 	PreviouslyOnSecureSearchPage: false,
 	ToolbarPresent: false,
 	
-	SecureTLDs: {
-		"google.co.uk": 1,
-		"google.de": 1,
-		"google.fr": 1
-	},
-
 	StylesArray: new Array("-moz-image-region: rect(0px 32px 16px 16px)",
 							"-moz-image-region: rect(0px 48px 16px 32px)",
 							"-moz-image-region: rect(0px 64px 16px 48px)",
@@ -364,41 +358,24 @@ var objGooglebarLite = {
 		this.Resize(null); // Fake a resize to overflow properly
 	},
 	
-	BuildSearchURL: function(prefix, restrict, searchTerms, useSecure, secureType)
+	BuildSearchURL: function(params)
 	{
-		var u = "";
+		params = params || {};
+		params.domain = params.domain || "www";
+		params.homepage = params.homepage || "";
+		params.terms = params.terms || "";
+		params.searchtype = params.searchtype || "";
 		
-		if(useSecure != null && useSecure == true)
+		var u = "https://" + params.domain + "." + GooglebarLiteCommon.Data.Prefs.SiteToUse.value + "/" + params.homepage;
+		if(params.terms.length > 0)
 		{
-			if(this.SecureTLDs.hasOwnProperty(GooglebarLiteCommon.Data.Prefs.SiteToUse.value))
-				u = "https://www." + GooglebarLiteCommon.Data.Prefs.SiteToUse.value + "/";
-			else
-				u = "https://www.google.com/";
-			
-			if (searchTerms.length > 0)
-			{
-				u += "search?q=" + searchTerms;
-				if(GooglebarLiteCommon.Data.Prefs.DisableAutoCorrect.value == true)
-					u += "&nfpr=1";
-				
-				if(secureType != null)
-					u += "&tbs=" + secureType;
-			}
+			u += "?q=" + params.terms + "&ie=UTF-8";
+			if(GooglebarLiteCommon.Data.Prefs.DisableAutoCorrect.value == true)
+				u += "&nfpr=1";
 		}
-		else
-		{
-			if(GooglebarLiteCommon.Data.Prefs.SiteToUse.value.length > 0)
-				u = "http://" + prefix + "." + GooglebarLiteCommon.Data.Prefs.SiteToUse.value + "/" + restrict;
-			else
-				u = "http://" + prefix + ".google.com/" + restrict;
 
-			if(searchTerms.length > 0)
-			{
-				u += "?q=" + searchTerms + "&ie=UTF-8";
-				if(GooglebarLiteCommon.Data.Prefs.DisableAutoCorrect.value == true)
-					u += "&nfpr=1";
-			}
-		}
+		if(params.searchtype != "")
+			u += "&tbm=" + params.searchtype;
 		
 		return u;
 	},
@@ -651,7 +628,6 @@ var objGooglebarLite = {
 	},
 
 	// Reuse the find bar mechanisms in Firefox (we get a bunch of stuff for free that way)
-	// Most of this function's code came from the Google toolbar
     FindInPage: function(term, e)
 	{
 		var findBar = document.defaultView.gFindBar;
@@ -981,10 +957,7 @@ var objGooglebarLite = {
 
 	PrepareSelectedSearch: function(aEvent, searchType)
 	{
-		// ****************************************
 		// Step 1: Get the selected text
-		// ****************************************
-	
 		var node = document.popupNode;
 		var selection = "";
 		var nodeLocalName = node.localName.toLowerCase();
@@ -1001,10 +974,7 @@ var objGooglebarLite = {
 		if(selection.length >= 150)
 			selection = selection.substring(0, 149);
 	
-		// ****************************************
 		// Step 2: Clean up the selected text
-		// ****************************************
-	
 		selection = this.TrimString(selection); // Clean up whitespace
 		
 		var selArray = selection.split(" ");
@@ -1016,16 +986,10 @@ var objGooglebarLite = {
 	
 		selection = selArray.join(" ");
 	
-		// ****************************************
 		// Step 3: Update the search box and search word buttons
-		// ****************************************
-	
 		this.SetSearchTerms(selection);
 	
-		// ****************************************
 		// Step 4: Perform the search
-		// ****************************************
-	
 		var useTab = this.OpenInTab(aEvent, false);
 	
 		this.Search(selection, searchType, useTab);
@@ -1196,135 +1160,127 @@ var objGooglebarLite = {
 		var canIgnore = false;	// True if doing a dictionary search
 		var isEmpty = (searchTerms.length == 0);
 	
-		// ****************************************
 		// Step 1: Convert the search terms into a URI capable string
-		// ****************************************
 		if(isEmpty == false)
 			searchTerms = this.ConvertTermsToURI(searchTerms);
 		
-		// ****************************************
 		// Step 2: Switch on the search type
-		// ****************************************
-	
 		switch(searchType)
 		{
 		case "web":
-			if(isEmpty) { URL = this.BuildSearchURL("www", "", "", GooglebarLiteCommon.Data.Prefs.UseSecureSearch.value); }
-			else		{ URL = this.BuildSearchURL("www", "search", searchTerms, GooglebarLiteCommon.Data.Prefs.UseSecureSearch.value); }
+			if(isEmpty) URL = this.BuildSearchURL();
+			else		URL = this.BuildSearchURL({homepage: "search", terms: searchTerms});
 			break;
 	
 		case "lucky":
-			if(isEmpty) { URL = this.BuildSearchURL("www", "", "", GooglebarLiteCommon.Data.Prefs.UseSecureSearch.value); }
-			else		{ URL = this.BuildSearchURL("www", "search", searchTerms + "&btnI=I%27m+Feeling+Lucky", GooglebarLiteCommon.Data.Prefs.UseSecureSearch.value); }
+			if(isEmpty) URL = this.BuildSearchURL();
+			else		URL = this.BuildSearchURL({homepage: "search", terms: searchTerms + "&btnI=I%27m+Feeling+Lucky"});
 			break;
 	
 		case "site":
-			if(isEmpty) { URL = this.BuildSearchURL("www", "", "", GooglebarLiteCommon.Data.Prefs.UseSecureSearch.value); }
-			else		{ URL = this.BuildSearchURL("www", "search", "site:" + win.location.hostname + "+" + searchTerms, GooglebarLiteCommon.Data.Prefs.UseSecureSearch.value); }
+			if(isEmpty) URL = this.BuildSearchURL();
+			else		URL = this.BuildSearchURL({homepage: "search", terms: "site:" + win.location.hostname + "+" + searchTerms});
 			break;
 	
 		case "images":
-			if(isEmpty) { URL = this.BuildSearchURL("images", "", ""); }
-			else		{ URL = this.BuildSearchURL("images", "images", searchTerms, GooglebarLiteCommon.Data.Prefs.UseSecureSearch.value, "&tbm=isch"); }
+			if(isEmpty) URL = this.BuildSearchURL({homepage: "imghp"});
+			else		URL = this.BuildSearchURL({homepage: "search", terms: searchTerms, searchtype: "isch"});
 			break;
 	
 		case "video":
-			if(isEmpty) { URL = this.BuildSearchURL("video", "", ""); }
-			else		{ URL = this.BuildSearchURL("www", "search", searchTerms + "&tbm=vid", GooglebarLiteCommon.Data.Prefs.UseSecureSearch.value); }
+			if(isEmpty) URL = this.BuildSearchURL({homepage: "videohp"});
+			else		URL = this.BuildSearchURL({homepage: "search", terms: searchTerms, searchtype: "vid"});
 			break;
 	
 		case "news":
 			// For some reason, searches prefer the "www" variant to the "news" variant
-			if(isEmpty) { URL = this.BuildSearchURL("news", "", ""); }
-			else		{ URL = this.BuildSearchURL("www", "search", searchTerms + "&tbm=nws", GooglebarLiteCommon.Data.Prefs.UseSecureSearch.value, "nws:1"); }
+			if(isEmpty) URL = this.BuildSearchURL({domain: "news"});
+			else		URL = this.BuildSearchURL({homepage: "search", terms: searchTerms, searchtype: "nws"});
 			break;
 	
 		case "maps":
-			if(isEmpty) { URL = this.BuildSearchURL("maps", "", ""); }
-			else		{ URL = this.BuildSearchURL("maps", "maps", searchTerms); }
+			if(isEmpty) URL = this.BuildSearchURL({domain: "maps"});
+			else		URL = this.BuildSearchURL({domain: "maps", homepage: "maps", terms: searchTerms});
 			break;
 	
 		case "shopping":
-			if(isEmpty) { URL = this.BuildSearchURL("www", "shopping", ""); }
-			else		{ URL = this.BuildSearchURL("www", "search", searchTerms + "&tbm=shop"); }
+			if(isEmpty) URL = this.BuildSearchURL({homepage: "shopping"});
+			else		URL = this.BuildSearchURL({homepage: "search", terms: searchTerms, searchtype: "shop"});
 			break;
 	
 		case "groups":
-			if(isEmpty) { URL = this.BuildSearchURL("groups", "", ""); }
-			else		{ URL = this.BuildSearchURL("groups", "groups", searchTerms); }
+			if(isEmpty) URL = this.BuildSearchURL({domain: "groups"});
+			else		URL = this.BuildSearchURL({domain: "groups", homepage: "groups", terms: searchTerms});
 			break;
 	
 		case "blog":
-			if(isEmpty) { URL = this.BuildSearchURL("blogsearch", "blogsearch", ""); }
-			else		{ URL = this.BuildSearchURL("blogsearch", "blogsearch", searchTerms, GooglebarLiteCommon.Data.Prefs.UseSecureSearch.value, "blg:1"); }
+			if(isEmpty) URL = this.BuildSearchURL({homepage: "blogsearch"});
+			else		URL = this.BuildSearchURL({homepage: "search", terms: searchTerms, searchtype: "blg"});
 			break;
 	
 		case "book":
-			if(isEmpty) { URL = this.BuildSearchURL("www", "books", ""); }
-			else		{ URL = this.BuildSearchURL("www", "books", searchTerms, GooglebarLiteCommon.Data.Prefs.UseSecureSearch.value, "bks:1"); }
+			if(isEmpty) URL = this.BuildSearchURL({domain: "books", homepage: "books"});
+			else		URL = this.BuildSearchURL({homepage: "search", terms: searchTerms, searchtype: "bks"});
 			break;
 	
 		case "finance":
-			if(isEmpty) { URL = this.BuildSearchURL("www", "finance", ""); }
-			else		{ URL = this.BuildSearchURL("www", "finance", searchTerms); }
+			if(isEmpty) URL = this.BuildSearchURL({homepage: "finance"});
+			else		URL = this.BuildSearchURL({homepage: "finance", terms: searchTerms});
 			break;
 	
 		case "scholar":
-			if(isEmpty) { URL = this.BuildSearchURL("scholar", "", ""); }
-			else		{ URL = this.BuildSearchURL("scholar", "scholar", searchTerms); }
+			if(isEmpty) URL = this.BuildSearchURL({domain: "scholar"});
+			else		URL = this.BuildSearchURL({domain: "scholar", homepage: "scholar", terms: searchTerms});
 			break;
 	
 		case "dictionary":
 			canIgnore = true;
-			if(isEmpty) { URL = this.BuildSearchURL("www", "", ""); }
-			else		{ URL = this.BuildSearchURL("www", "search", "define: " + searchTerms); }
+			if(isEmpty) URL = this.BuildSearchURL();
+			else		URL = this.BuildSearchURL({homepage: "search", terms: "define: " + searchTerms});
 			break;
 			
 		// The following cases are only accessible through the context menu
 		case "backwards":
-			URL = this.BuildSearchURL("www", "search", "link:" + encodeURIComponent(win.location.href));
+			URL = this.BuildSearchURL({homepage: "search", terms: "link:" + encodeURIComponent(win.location.href)});
 			break;
 	
 		case "cached":
-			URL = this.BuildSearchURL("www", "search", "cache:" + encodeURIComponent(win.location.href));
+			URL = this.BuildSearchURL({homepage: "search", terms: "cache:" + encodeURIComponent(win.location.href)});
 			break;
 	
 		case "cachedlink":
-			URL = this.BuildSearchURL("www", "search", "cache:" + gContextMenu.link);
+			URL = this.BuildSearchURL({homepage: "search", terms: "cache:" + gContextMenu.link});
 			break;
 	
 		case "similar":
-			URL = this.BuildSearchURL("www", "search", "related:" + encodeURIComponent(win.location.href));
+			URL = this.BuildSearchURL({homepage: "search", terms: "related:" + encodeURIComponent(win.location.href)});
 			break;
 	
 		case "translate":
 			// Only uses .com (no country customization)
-			URL = "http://translate.google.com/translate?u=" + encodeURIComponent(win.location.href);
+			URL = "https://translate.google.com/translate?u=" + encodeURIComponent(win.location.href);
 			break;
 	
 		// The following cases are only accessible through items on the GBL main menu
 		case "advanced":
-			URL = this.BuildSearchURL("www", "advanced_search", "");
+			URL = this.BuildSearchURL({homepage: "advanced_search"});
 			break;
 	
 		case "searchprefs":
-			URL = this.BuildSearchURL("www", "preferences", "");
+			URL = this.BuildSearchURL({homepage: "preferences"});
 			break;
 	
 		case "languagetools":
-			URL = this.BuildSearchURL("www", "language_tools", "");
+			URL = this.BuildSearchURL({homepage: "language_tools"});
 			break;
 	
 		default:
-			if(isEmpty) { URL = this.BuildSearchURL("www", "", ""); }
-			else		{ URL = this.BuildSearchURL("www", "search", searchTerms); }
+			if(isEmpty) URL = this.BuildSearchURL();
+			else		URL = this.BuildSearchURL({homepage: "search", terms: searchTerms});
 			break;
 		}
 		
-		// ****************************************
 		// Step 3: Add terms to search history
-		// ****************************************
-		
 		if(GooglebarLiteCommon.Data.Prefs.MaintainHistory.value == true && !isEmpty &&
 		   !(canIgnore && GooglebarLiteCommon.Data.Prefs.IgnoreDictionary.value))
 		{
@@ -1334,15 +1290,12 @@ var objGooglebarLite = {
 				if (!PrivateBrowsingUtils.isWindowPrivate(window))
 					FormHistory.update({op: "bump", fieldname: "GBL-Search-History", value: originalTerms});
 			} catch(e) {
-				Components.utils.reportError(e);
+				Components.utils.reportError("ERROR: Saving search terms to form history failed: " + e.message);
 				return;
 			}
 		}
 	
-		// ****************************************
 		// Step 4: Perform search
-		// ****************************************
-		
 		this.LoadURL(URL, useTab);
 	},
 
@@ -1618,12 +1571,12 @@ var objGooglebarLite = {
 	{
 		var res = this.nsTransferable();
 		if ('init' in res) {
-			// When passed a Window object, find a suitable provacy context for it.
-			if (source instanceof Ci.nsIDOMWindow)
+			// When passed a Window object, find a suitable privacy context for it.
+			if (source instanceof Components.interfaces.nsIDOMWindow)
 				// Note: in Gecko versions >16, you can import the PrivateBrowsingUtils.jsm module
 				// and use PrivateBrowsingUtils.privacyContextFromWindow(sourceWindow) instead
-				source = source.QueryInterface(Ci.nsIInterfaceRequestor)
-							   .getInterface(Ci.nsIWebNavigation);
+				source = source.QueryInterface(Components.interfaces.nsIInterfaceRequestor)
+							   .getInterface(Components.interfaces.nsIWebNavigation);
 	 
 			res.init(source);
 		}
