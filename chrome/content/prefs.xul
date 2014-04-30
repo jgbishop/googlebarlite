@@ -19,7 +19,6 @@
 			<preference id="GBL-Pref-SearchDragDrop" name="extensions.googlebarlite.search_on_drag_drop" type="bool" />
 			<preference id="GBL-Pref-DisableAutoCorrect" name="extensions.googlebarlite.disable_auto_correct" type="bool" />
 			<preference id="GBL-Pref-LockSearchBox" name="extensions.googlebarlite.lock_search_box" type="bool" />
-			<preference id="GBL-Pref-UseSecureSearch" name="extensions.googlebarlite.use_secure_search" type="bool" />
 			<preference id="GBL-Pref-SiteToUse" name="extensions.googlebarlite.site_to_use" type="wstring" />
 		</preferences>
 
@@ -35,8 +34,6 @@
 		<groupbox orient="vertical">
 			<caption label="&gblite.options.searchsettings;" />
 			<checkbox id="GBL-Opt-DisableAutoCorrect" label="&gblite.options.disableautocorrect;" preference="GBL-Pref-DisableAutoCorrect" />
-			<checkbox id="GBL-Opt-UseSecureSearch" label="&gblite.options.usesecuresearch;" preference="GBL-Pref-UseSecureSearch" />
-		
 			<hbox align="center">
 				<label value="&gblite.options.label.sitetouse;" />
 				<menulist id="GBL-Opt-SiteToUse" preference="GBL-Pref-SiteToUse">
