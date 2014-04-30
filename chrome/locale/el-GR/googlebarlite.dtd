@@ -128,7 +128,6 @@
 <!ENTITY gblite.options.remembercombined "Απομνημόνευση του τελευταίου τύπου σύνθετης αναζήτησης">
 <!ENTITY gblite.options.searchondragdrop "Αυτόματη αναζήτηση στο σύρσιμο και την εναπόθεση">
 <!ENTITY gblite.options.disableautocorrect "Disable Google search autocorrect">
-<!ENTITY gblite.options.usesecuresearch "Use secure search where possible">
 <!ENTITY gblite.options.warnonformhistory "Ειδοποίηση όταν το ιστορικό φόρμας είναι απενεργοποιημένη στο Firefox">
 <!ENTITY gblite.options.maintainhistory "Διατήρηση ιστορικού αναζήτησης">
 <!ENTITY gblite.options.autocomplete "Ενεργοποίηση αυτο-συμπλήρωσης">

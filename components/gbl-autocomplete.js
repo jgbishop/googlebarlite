@@ -17,7 +17,7 @@ const HTTP_SERVICE_UNAVAILABLE   = 503;
 Cu.import('resource://gre/modules/XPCOMUtils.jsm');
 Cu.import('resource://gre/modules/Services.jsm');
 Cu.import('resource://gre/modules/devtools/Console.jsm');
-Cu.import('resource://googlebarlite/common.js');
+Cu.import('resource://googlebarlite/gbl-common.js');
 
 const CLASS_ID = Components.ID('7716e5e0-c9c0-11e3-9c1a-0800200c9a66');
 const CLASS_NAME = "Googlebar Lite AutoComplete";
@@ -421,7 +421,7 @@ ProviderAutoCompleteSearch.prototype = {
 		this._request = Cc["@mozilla.org/xmlextras/xmlhttprequest;1"].createInstance(Ci.nsIXMLHttpRequest);
 		var myself = this;
 		
-		this._request.open('GET', 'http://www.google.com/complete/search?client=firefox&q=' + encodeURIComponent(searchString), true);
+		this._request.open('GET', 'https://www.google.com/complete/search?client=firefox&q=' + encodeURIComponent(searchString), true);
 		
 		this._request.onreadystatechange = function() {
 			myself._onReadyStateChange();

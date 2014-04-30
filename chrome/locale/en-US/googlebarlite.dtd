@@ -124,12 +124,14 @@
 <!ENTITY gblite.options.label.shiftctrlenter "Ctrl + Shift + Enter performs a">
 <!ENTITY gblite.options.label.searchbuttons "Search Buttons">
 <!ENTITY gblite.options.label.commonbuttons "Common Toolbar Buttons and Settings">
+<!ENTITY gblite.options.toolbarsettings "Toolbar Settings">
+<!ENTITY gblite.options.searchsettings "Search Settings">
 <!ENTITY gblite.options.clickselectsall "Single click in search box selects all search terms">
 <!ENTITY gblite.options.searchintab "Open search results in a new tab (if necessary)">
 <!ENTITY gblite.options.remembercombined "Remember last combined-menu search type">
 <!ENTITY gblite.options.searchondragdrop "Automatically search on drag and drop">
+<!ENTITY gblite.options.locksearchbox "Lock search box width">
 <!ENTITY gblite.options.disableautocorrect "Disable Google search autocorrect">
-<!ENTITY gblite.options.usesecuresearch "Use secure search where possible (may override 'Google site to use' setting)">
 <!ENTITY gblite.options.warnonformhistory "Warn me when form history is disabled in Firefox">
 <!ENTITY gblite.options.maintainhistory "Maintain a search history">
 <!ENTITY gblite.options.searchsuggest "Enable Google search suggestions">

@@ -128,7 +128,6 @@
 <!ENTITY gblite.options.remembercombined "Zapamiętuj ostatni typ menu wyszukiwania">
 <!ENTITY gblite.options.searchondragdrop "Automatycznie wyszukuj po przeciągnięciu i upuszczeniu">
 <!ENTITY gblite.options.disableautocorrect "Wyłącz automatyczną korektę wyszukiwania">
-<!ENTITY gblite.options.usesecuresearch "Używaj bezpiecznego wyszukiwania, jeśli jest możliwe">
 <!ENTITY gblite.options.warnonformhistory "Powiadamiaj, gdy w Firefoksie jest wyłączona historia">
 <!ENTITY gblite.options.maintainhistory "Zachowuj historię wyszukiwania">
 <!ENTITY gblite.options.autocomplete "Włącz autouzupełnianie">

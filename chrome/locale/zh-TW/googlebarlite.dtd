@@ -128,7 +128,6 @@
 <!ENTITY gblite.options.remembercombined "記住最後一次從下拉式選單按鈕所選取的搜尋類型">
 <!ENTITY gblite.options.searchondragdrop "拖放字詞時自動搜尋">
 <!ENTITY gblite.options.disableautocorrect "停用Google的搜尋自動更正">
-<!ENTITY gblite.options.usesecuresearch "盡可能使用安全搜尋">
 <!ENTITY gblite.options.warnonformhistory "當 Firefox 內的表單記錄被停用時，請提醒我">
 <!ENTITY gblite.options.maintainhistory "保留搜尋記錄">
 <!ENTITY gblite.options.autocomplete "啟用自動完成">

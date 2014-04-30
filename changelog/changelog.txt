@@ -1,6 +1,15 @@
 //***************
 //Version History
 //***************
+[5.0.0]
++ Google search suggestions are now offered when typing in the Googlebar Lite search box
++ Searches are now performed over secure (https) channels by default
++ Added an option to control the search suggestions feature (suggestions are enabled by default)
++ Added an option to lock the search box width
++ Removed the option to enable secure search since it is now enabled by default
++ Removed several deprecated strings
++ Removed the nb-NO locale due to it being woefully out of date
+
 [4.9.15]
 + Restored the resize gripper
 

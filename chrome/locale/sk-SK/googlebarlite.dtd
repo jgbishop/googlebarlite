@@ -128,7 +128,6 @@
 <!ENTITY gblite.options.remembercombined "Zapamätať si poslednú kombináciu ponuky vyhľadávania">
 <!ENTITY gblite.options.searchondragdrop "Automaticky vyhľadať po pretiahnutí">
 <!ENTITY gblite.options.disableautocorrect "Disable Google search autocorrect">
-<!ENTITY gblite.options.usesecuresearch "Use secure search where possible">
 <!ENTITY gblite.options.warnonformhistory "Upozorniť ma keď je zapamätanie si histórie formulárov vo Firefoxe zakázané">
 <!ENTITY gblite.options.maintainhistory "Zaznamenávať históriu vyhľadávania">
 <!ENTITY gblite.options.autocomplete "Povoliť automatické dokončovanie">

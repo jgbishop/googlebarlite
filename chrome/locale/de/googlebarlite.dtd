@@ -128,7 +128,6 @@
 <!ENTITY gblite.options.remembercombined "An die letzte Suche aus dem kombinierten Suchmenü erinnern">
 <!ENTITY gblite.options.searchondragdrop "Bei &quot;Drag and Drop&quot; automatisch Suchen">
 <!ENTITY gblite.options.disableautocorrect "Automatische Korrektur der Google-Suche deaktivieren">
-<!ENTITY gblite.options.usesecuresearch "Sichere Suche verwenden wenn möglich">
 <!ENTITY gblite.options.warnonformhistory "Warnen, wenn die Option zum Speichern von Formulardaten im Firefox deaktiviert ist">
 <!ENTITY gblite.options.maintainhistory "Such-Chronik pflegen">
 <!ENTITY gblite.options.autocomplete "Auto-Vervollständigen aktivieren">

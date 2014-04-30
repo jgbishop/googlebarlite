@@ -128,7 +128,6 @@
 <!ENTITY gblite.options.remembercombined "Conserver le dernier type de recherche mixte">
 <!ENTITY gblite.options.searchondragdrop "Chercher automatiquement sur copier-coller">
 <!ENTITY gblite.options.disableautocorrect "Désactiver la correction auto des recherches">
-<!ENTITY gblite.options.usesecuresearch "Utiliser la recherche sécurisée si possible">
 <!ENTITY gblite.options.warnonformhistory "Prévenez-moi si l&apos;historique des formulaires est désactivé dans Firefox">
 <!ENTITY gblite.options.maintainhistory "Conserver l&apos;historique des recherches">
 <!ENTITY gblite.options.autocomplete "Activer l&apos;affichage de l&apos;historique du texte saisi">

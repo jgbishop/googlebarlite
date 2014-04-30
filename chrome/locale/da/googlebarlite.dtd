@@ -128,7 +128,6 @@
 <!ENTITY gblite.options.remembercombined "Husk seneste søgetype i den kombinerede søgemenu">
 <!ENTITY gblite.options.searchondragdrop "Søg automatisk ved træk-og-slip">
 <!ENTITY gblite.options.disableautocorrect "Deaktiver Google-søgning autokorrektur">
-<!ENTITY gblite.options.usesecuresearch "Brug sikker søgning hvor det er muligt">
 <!ENTITY gblite.options.warnonformhistory "Advar mig når formularhistorik er slået fra i Firefox">
 <!ENTITY gblite.options.maintainhistory "Vedligehold en søgehistorik">
 <!ENTITY gblite.options.autocomplete "Aktiver auto-udfyldelse">

@@ -128,7 +128,6 @@
 <!ENTITY gblite.options.remembercombined "En son birleştirilmiş menü arama türünü hatırla">
 <!ENTITY gblite.options.searchondragdrop "Sürükle ve bırakta otomatik ara">
 <!ENTITY gblite.options.disableautocorrect "Disable Google search autocorrect">
-<!ENTITY gblite.options.usesecuresearch "Use secure search where possible">
 <!ENTITY gblite.options.warnonformhistory "Firafox&apos;ta form geçmişi devre dışı olduğunda beni uyar">
 <!ENTITY gblite.options.maintainhistory "Arama geçmişini sakla">
 <!ENTITY gblite.options.autocomplete "Otomatik tamamlamayı etkinleştir">

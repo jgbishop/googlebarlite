@@ -128,7 +128,6 @@
 <!ENTITY gblite.options.remembercombined "最後に使った検索メニューを記憶する">
 <!ENTITY gblite.options.searchondragdrop "ドラッグ&amp;ドロップで自動的に検索">
 <!ENTITY gblite.options.disableautocorrect "Google検索オートコレクトを無効にする">
-<!ENTITY gblite.options.usesecuresearch "可能な限りセキュアな検索を使用">
 <!ENTITY gblite.options.warnonformhistory "Firefoxでフォームの入力履歴が無効になっている時は警告する">
 <!ENTITY gblite.options.maintainhistory "検索履歴を保持する">
 <!ENTITY gblite.options.autocomplete "自動補完を有効にする">

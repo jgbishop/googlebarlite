@@ -128,7 +128,6 @@
 <!ENTITY gblite.options.remembercombined "Het laatste gecombineerd-menu zoek type onthouden">
 <!ENTITY gblite.options.searchondragdrop "Automatisch zoeken na slepen/plakken">
 <!ENTITY gblite.options.disableautocorrect "Google zoeken AutoCorrect uitschakelen">
-<!ENTITY gblite.options.usesecuresearch "Waar mogelijk beveiligd zoeken gebruiken">
 <!ENTITY gblite.options.warnonformhistory "Waarschuwen wanneer &apos;Opgeslagen formulieren&apos; in Firefox is uitgeschakeld">
 <!ENTITY gblite.options.maintainhistory "Zoekgeschiedenis beheren">
 <!ENTITY gblite.options.autocomplete "Auto-aanvullen inschakelen">
