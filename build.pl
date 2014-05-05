@@ -4,9 +4,10 @@ use warnings;
 
 use Cwd;
 use File::Basename;
+use File::Which;
 use Getopt::Long;
 
-our $VERSION = "1.01";
+our $VERSION = "1.02";
 
 # An array of relative file paths in which a version number should be updated
 my @VERSION_FILES = qw/chrome\\content\\about.xul install.rdf/;
@@ -24,6 +25,20 @@ GetOptions("bump" => \$bumpVersion,
 
 print "\nGooglebar Lite Build Script v$VERSION\n";
 print "Written by Jonah Bishop\n\n";
+
+my $zipProg = '7z';
+my $zipPath = which($zipProg);
+if (! defined $zipPath)
+{
+	$zipProg = '7za';
+	$zipPath = which($zipProg);
+	if (! defined $zipPath)
+	{
+		print "ERROR: Unable to locate 7-zip executable (searched for both '7z' and '7za')!\n";
+		exit 1;
+	}
+}
+
 print "Building extension...\n";
 my $homeDir = getcwd();
 
@@ -62,7 +77,7 @@ if (! $outputFilename)
 
 # Create the XPI file
 print "\nCreating XPI file...\n";
-system("zip -r $outputFolder/$outputFilename -\@ < xpizip.txt");
+system("$zipProg a -tzip $outputFolder/$outputFilename \@xpizip.txt");
 
 print "\nExtension package created successfully\n";
 exit 0;
