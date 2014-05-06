@@ -9,6 +9,7 @@
 + Internal search URLs have been tweaked
 + Improved the efficiency of the window resize event listener
 + Removed the option to enable secure search since it is now enabled by default
++ Changed the minimum width of the search box from 150 to 100 pixels
 + Removed several deprecated strings
 + Removed the nb-NO locale due to it being woefully out of date
 + Bug Fix: The search word overflow button is now hidden properly if it was visible and search words were turned off

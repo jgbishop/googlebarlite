@@ -34,8 +34,9 @@ const CONTRACT_ID = '@mozilla.org/autocomplete/search;1?name=googlebar-lite-auto
  * @param {string} errorDescription
  * @param {Array.<string>} results
  * @param {Array.<string>|null=} comments
+ * @param {nsIAutocompleteResult} prevResult 
  */
-function ProviderAutoCompleteResult(searchString, searchResult, defaultIndex, errorDescription, results, comments)
+function ProviderAutoCompleteResult(searchString, searchResult, defaultIndex, errorDescription, results, comments, prevResult)
 {
 	this._searchString = searchString;
 	this._searchResult = searchResult;
@@ -43,6 +44,7 @@ function ProviderAutoCompleteResult(searchString, searchResult, defaultIndex, er
 	this._errorDescription = errorDescription;
 	this._results = results;
 	this._comments = comments;
+	this._formHistResult = prevResult;
 }
 
 ProviderAutoCompleteResult.prototype = {
@@ -52,6 +54,7 @@ ProviderAutoCompleteResult.prototype = {
 	_errorDescription: "",
 	_results: [],
 	_comments: [],
+	_formHistResult: null,
 
 	/**
 	* @return {string} the original search string
@@ -138,6 +141,12 @@ ProviderAutoCompleteResult.prototype = {
 	 * persistent storage as well.
 	 */
 	removeValueAt: function(index, removeFromDb) {
+		if (removeFromDb && this._formHistResult && index < this._formHistResult.matchCount)
+		{
+			// Remove the entry from the form history database
+			this._formHistResult.removeValueAt(index, true);
+		}
+		
 		this._results.splice(index, 1);
 
 		if (this._comments)
@@ -357,7 +366,7 @@ ProviderAutoCompleteSearch.prototype = {
 		if(this._listener)
 		{
 			var result = new ProviderAutoCompleteResult(searchString, Ci.nsIAutoCompleteResult.RESULT_SUCCESS,
-														0, "", results, comments);
+														0, "", results, comments, formHistoryResult);
 			this._listener.onSearchResult(this, result);
 			this._listener = null;
 		}

@@ -53,7 +53,7 @@ var objGooglebarLite = {
 			if(data.indexOf("buttons.") != -1)
 			{
 				if(GooglebarLiteCommon.Data.Prefs[prefID].hasOwnProperty("xulid"))
-					document.getElementById(GooglebarLiteCommon.Data.Prefs[prefID].xulid).setAttribute("collapsed", !prefValue);
+					document.getElementById(GooglebarLiteCommon.Data.Prefs[prefID].xulid).collapsed = !prefValue;
 				
 				switch(data)
 				{
@@ -83,7 +83,7 @@ var objGooglebarLite = {
 						// User just hid the search word buttons, so remove any set width
 						// on the parent container, and hide the overflow button
 						document.getElementById("GBL-TB-SearchWordArea").removeAttribute("width");
-						document.getElementById("GBL-Overflow-Button").setAttribute("collapsed", !prefValue);
+						document.getElementById("GBL-Overflow-Button").collapsed = !prefValue;
 					}
 					break;
 				}
@@ -126,12 +126,20 @@ var objGooglebarLite = {
 	ResizeTimerID: null,
 	ToolbarPresent: false,
 	
-	StylesArray: new Array("-moz-image-region: rect(0px 32px 16px 16px)",
-							"-moz-image-region: rect(0px 48px 16px 32px)",
-							"-moz-image-region: rect(0px 64px 16px 48px)",
-							"-moz-image-region: rect(0px 80px 16px 64px)",
-							"-moz-image-region: rect(0px 96px 16px 80px)",
-							"-moz-image-region: rect(0px 112px 16px 96px)"),
+	SearchOperators: new Array(
+		"allinanchor:", "allintext:", "allintitle:", "allinurl:", "cache:", 
+		"define:", "filetype:", "id:", "inanchor:", "info:", "intext:",
+		"intitle:", "inurl:", "link:", "phonebook:", "related:", "site:"
+	),
+	
+	StylesArray: new Array(
+		"-moz-image-region: rect(0px 32px 16px 16px)",
+		"-moz-image-region: rect(0px 48px 16px 32px)",
+		"-moz-image-region: rect(0px 64px 16px 48px)",
+		"-moz-image-region: rect(0px 80px 16px 64px)",
+		"-moz-image-region: rect(0px 96px 16px 80px)",
+		"-moz-image-region: rect(0px 112px 16px 96px)"
+	),
 
 	ProgressListener: {
 		QueryInterface: function(aIID)
@@ -224,13 +232,13 @@ var objGooglebarLite = {
 	
 				if (url == null || urlHasHostProperty == false || !(/^https?/.test(url.scheme)) || /google/.test(url.host))
 				{
-					searchSiteButton.setAttribute("disabled", true);
-					searchSiteMenuItem.setAttribute("disabled", true);
+					searchSiteButton.disabled = true;
+					searchSiteMenuItem.disabled = true;
 				}
 				else
 				{
-					searchSiteButton.setAttribute("disabled", false);
-					searchSiteMenuItem.setAttribute("disabled", false);
+					searchSiteButton.disabled = false;
+					searchSiteMenuItem.disabled = false;
 				}
 	
 				objGooglebarLite.UpdateUpButton();
@@ -309,27 +317,23 @@ var objGooglebarLite = {
 
 	AddSearchWordButtons: function(inString)
 	{
-		var searchWordsContainer = document.getElementById("GBL-TB-SearchWordsContainer");
-		var highlighter = document.getElementById("GBL-TB-Highlighter");
-		var overflowMenu = document.getElementById("GBL-Overflow-Menu");
+//		var searchWordsContainer = document.getElementById("GBL-TB-SearchWordsContainer");
+//		var highlighter = document.getElementById("GBL-TB-Highlighter");
+//		var overflowMenu = document.getElementById("GBL-Overflow-Menu");
 		var stringBundle = document.getElementById("GBL-String-Bundle");
 	
 		var searchTerms = this.SplitTerms(inString);
 		var tempButton;
 		var tempMenuItem;
 
-		var operators = Array("allinanchor:", "allintext:", "allintitle:", "allinurl:", "cache:", 
-							  "define:", "filetype:", "id:", "inanchor:", "info:", "intext:",
-							  "intitle:", "inurl:", "link:", "phonebook:", "related:", "site:");
-	
 		for(var i=0; i<searchTerms.length; i++)
 		{
 			var thisTerm = searchTerms[i];
 			var containsOperator = false;
 
-			for(var j=0; j<operators.length; j++)
+			for(var j=0; j<this.SearchOperators.length; j++)
 			{
-				if(thisTerm.toLowerCase().indexOf(operators[j]) != -1)
+				if(thisTerm.toLowerCase().indexOf(this.SearchOperators[j]) != -1)
 				{
 					containsOperator = true;
 					break;
@@ -357,14 +361,14 @@ var objGooglebarLite = {
 				'tooltiptext': stringBundle.getFormattedString("GBL_FindNextOccurrence", [thisTerm])
 			});
 			
-			if(highlighter.checked == true)
+			if(document.getElementById("GBL-TB-Highlighter").checked == true)
 			{
 				tempButton.setAttribute("style", this.StylesArray[i%6] + " !important;");
 				tempMenuItem.setAttribute("style", this.StylesArray[i%6] + " !important;");
 			}
 	
-			searchWordsContainer.appendChild(tempButton);
-			overflowMenu.appendChild(tempMenuItem);
+			document.getElementById("GBL-TB-SearchWordsContainer").appendChild(tempButton);
+			document.getElementById("GBL-Overflow-Menu").appendChild(tempMenuItem);
 		}
 	
 		this.Resize(null); // Fake a resize to overflow properly
@@ -409,7 +413,7 @@ var objGooglebarLite = {
 	
 		// If the button container is too large, resize it appropriately
 		if(actualWidth < reportedWidth)
-			c.setAttribute("width", actualWidth);
+			c.width = actualWidth;
 		
 		// Also, update the separator controls as necessary
 		var s1visible = GooglebarLiteCommon.Data.Prefs.TB_ShowCombined.value;
@@ -423,9 +427,9 @@ var objGooglebarLite = {
 		var s3visible = (GooglebarLiteCommon.Data.Prefs.TB_ShowUp.value || GooglebarLiteCommon.Data.Prefs.TB_ShowHighlighter.value);
 		var s4visible = GooglebarLiteCommon.Data.Prefs.TB_ShowSearchWords.value;
 
-		document.getElementById("GBL-TB-Sep1").setAttribute("hidden", !(s1visible && (s2visible || s3visible || s4visible)));
-		document.getElementById("GBL-TB-Sep2").setAttribute("hidden", !(s2visible && (s3visible || s4visible)));
-		document.getElementById("GBL-TB-Sep3").setAttribute("hidden", !(s3visible && s4visible));
+		document.getElementById("GBL-TB-Sep1").hidden = !(s1visible && (s2visible || s3visible || s4visible));
+		document.getElementById("GBL-TB-Sep2").hidden = !(s2visible && (s3visible || s4visible));
+		document.getElementById("GBL-TB-Sep3").hidden = !(s3visible && s4visible);
 	},
 
 	ClearHistory: function()
@@ -569,7 +573,7 @@ var objGooglebarLite = {
 	
 	DelayResize: function() {
 		clearTimeout(objGooglebarLite.ResizeTimerID);
-		objGooglebarLite.ResizeTimerID = setTimeout(objGooglebarLite.ResizeComplete, 250);
+		objGooglebarLite.ResizeTimerID = setTimeout(objGooglebarLite.Resize, 200);
 	},
 
 	DelayedStartup: function()
@@ -776,7 +780,7 @@ var objGooglebarLite = {
 			{
 				if(p.hasOwnProperty("xulid"))
 				{
-					document.getElementById(p.xulid).setAttribute("collapsed", !p.value); // Toggle the physical XUL element's state
+					document.getElementById(p.xulid).collapsed = !p.value; // Toggle the physical XUL element's state
 					
 					if(p.name == GooglebarLiteCommon.Data.Prefs.TB_ShowCombined.name)
 					{
@@ -1128,7 +1132,7 @@ var objGooglebarLite = {
 		}
 	},
 
-	ResizeComplete: function(event)
+	Resize: function(event)
 	{
 		// Sizing issue hack (taken from patch for bug 266737)
 		if(event && event.type == 'focus')
@@ -1152,8 +1156,7 @@ var objGooglebarLite = {
 			var button = buttons.childNodes[i];
 			button.collapsed = overflowed;
 	
-			var offset = button.boxObject.x;
-			if(offset + button.boxObject.width + objGooglebarLite.OverflowButtonWidth > available)
+			if((button.boxObject.x + button.boxObject.width + objGooglebarLite.OverflowButtonWidth) > available)
 			{
 				overflowed = true;
 				// This button doesn't fit, so show it in the menu and hide it in the toolbar.
@@ -1361,9 +1364,9 @@ var objGooglebarLite = {
 	
 		// If the normal "Paste" command is disabled, let's disable ours too
 		if(enabled)
-			cmd.setAttribute("disabled", "false");
+			cmd.disabled = false;
 		else
-			cmd.setAttribute("disabled", "true");
+			cmd.disabled = true;
 	},
 	
 	SetFocus: function(event)
@@ -1535,15 +1538,15 @@ var objGooglebarLite = {
 	{
 		if(this.GetSearchTerms() === "")
 		{
-			document.getElementById("GBL-TB-Dictionary").setAttribute("disabled", "true");
-			document.getElementById("GBL-TB-Combined-Dictionary").setAttribute("disabled", "true");
-			document.getElementById("GBL-TB-Highlighter").setAttribute("disabled", "true");
+			document.getElementById("GBL-TB-Dictionary").disabled = true;
+			document.getElementById("GBL-TB-Combined-Dictionary").disabled = true;
+			document.getElementById("GBL-TB-Highlighter").disabled = true;
 		}
 		else
 		{
-			document.getElementById("GBL-TB-Dictionary").setAttribute("disabled", "false");
-			document.getElementById("GBL-TB-Combined-Dictionary").setAttribute("disabled", "false");
-			document.getElementById("GBL-TB-Highlighter").setAttribute("disabled", "false");
+			document.getElementById("GBL-TB-Dictionary").disabled = false;
+			document.getElementById("GBL-TB-Combined-Dictionary").disabled = false;
+			document.getElementById("GBL-TB-Highlighter").disabled = false;
 		}
 
 		this.UpdateSearchWordButtons();
@@ -1662,27 +1665,27 @@ var objGooglebarLite = {
 		var conSubSep = document.getElementById("GBL-Context-SubSeparator");
 	
 		// Set the collapsed attribute as necessary
-		conWeb.setAttribute("collapsed", !GooglebarLiteCommon.Data.Prefs.CM_Web.value);
-		conSite.setAttribute("collapsed", !GooglebarLiteCommon.Data.Prefs.CM_Site.value);
-		conImages.setAttribute("collapsed", !GooglebarLiteCommon.Data.Prefs.CM_Images.value);
-		conVideo.setAttribute("collapsed", !GooglebarLiteCommon.Data.Prefs.CM_Video.value);
-		conGroups.setAttribute("collapsed", !GooglebarLiteCommon.Data.Prefs.CM_Groups.value);
-		conMaps.setAttribute("collapsed", !GooglebarLiteCommon.Data.Prefs.CM_Maps.value);
-		conDictionary.setAttribute("collapsed", !GooglebarLiteCommon.Data.Prefs.CM_Dictionary.value);
-		conBackward.setAttribute("collapsed", !GooglebarLiteCommon.Data.Prefs.CM_Backward.value);
-		conCached.setAttribute("collapsed", !GooglebarLiteCommon.Data.Prefs.CM_Cached.value);
-		conCachedLink.setAttribute("collapsed", !GooglebarLiteCommon.Data.Prefs.CM_CachedLink.value);
-		conSimilar.setAttribute("collapsed", !GooglebarLiteCommon.Data.Prefs.CM_Similar.value);
-		conTranslate.setAttribute("collapsed", !GooglebarLiteCommon.Data.Prefs.CM_Translate.value);
+		conWeb.collapsed = !GooglebarLiteCommon.Data.Prefs.CM_Web.value;
+		conSite.collapsed = !GooglebarLiteCommon.Data.Prefs.CM_Site.value;
+		conImages.collapsed = !GooglebarLiteCommon.Data.Prefs.CM_Images.value;
+		conVideo.collapsed = !GooglebarLiteCommon.Data.Prefs.CM_Video.value;
+		conGroups.collapsed = !GooglebarLiteCommon.Data.Prefs.CM_Groups.value;
+		conMaps.collapsed = !GooglebarLiteCommon.Data.Prefs.CM_Maps.value;
+		conDictionary.collapsed = !GooglebarLiteCommon.Data.Prefs.CM_Dictionary.value;
+		conBackward.collapsed = !GooglebarLiteCommon.Data.Prefs.CM_Backward.value;
+		conCached.collapsed = !GooglebarLiteCommon.Data.Prefs.CM_Cached.value;
+		conCachedLink.collapsed = !GooglebarLiteCommon.Data.Prefs.CM_CachedLink.value;
+		conSimilar.collapsed = !GooglebarLiteCommon.Data.Prefs.CM_Similar.value;
+		conTranslate.collapsed = !GooglebarLiteCommon.Data.Prefs.CM_Translate.value;
 	
 		// Deal with the separator
-		conSubSep.setAttribute("hidden", !(GooglebarLiteCommon.Data.Prefs.CM_Web.value || GooglebarLiteCommon.Data.Prefs.CM_Site.value ||
-										   GooglebarLiteCommon.Data.Prefs.CM_Images.value || GooglebarLiteCommon.Data.Prefs.CM_Video.value ||
-										   GooglebarLiteCommon.Data.Prefs.CM_Groups.value || GooglebarLiteCommon.Data.Prefs.CM_Maps.value || 
-										   GooglebarLiteCommon.Data.Prefs.CM_Dictionary.value) || 
-							   !(GooglebarLiteCommon.Data.Prefs.CM_Backward.value || GooglebarLiteCommon.Data.Prefs.CM_Cached.value ||
-								 GooglebarLiteCommon.Data.Prefs.CM_CachedLink.value || GooglebarLiteCommon.Data.Prefs.CM_Similar.value ||
-								 GooglebarLiteCommon.Data.Prefs.CM_Translate.value));
+		conSubSep.hidden = !(GooglebarLiteCommon.Data.Prefs.CM_Web.value || GooglebarLiteCommon.Data.Prefs.CM_Site.value ||
+							 GooglebarLiteCommon.Data.Prefs.CM_Images.value || GooglebarLiteCommon.Data.Prefs.CM_Video.value ||
+							 GooglebarLiteCommon.Data.Prefs.CM_Groups.value || GooglebarLiteCommon.Data.Prefs.CM_Maps.value || 
+							 GooglebarLiteCommon.Data.Prefs.CM_Dictionary.value) || 
+			!(GooglebarLiteCommon.Data.Prefs.CM_Backward.value || GooglebarLiteCommon.Data.Prefs.CM_Cached.value ||
+			  GooglebarLiteCommon.Data.Prefs.CM_CachedLink.value || GooglebarLiteCommon.Data.Prefs.CM_Similar.value ||
+			  GooglebarLiteCommon.Data.Prefs.CM_Translate.value);
 	
 		var node = document.popupNode;
 		var selection = "";
@@ -1698,54 +1701,54 @@ var objGooglebarLite = {
 		// Update the selected text search items
 		if(selection.length == 0)
 		{
-			conWeb.setAttribute("disabled", "true");
-			conSite.setAttribute("disabled", "true");
-			conImages.setAttribute("disabled", "true");
-			conVideo.setAttribute("disabled", "true");
-			conGroups.setAttribute("disabled", "true");
-			conMaps.setAttribute("disabled", "true");
-			conDictionary.setAttribute("disabled", "true");
+			conWeb.disabled = true;
+			conSite.disabled = true;
+			conImages.disabled = true;
+			conVideo.disabled = true;
+			conGroups.disabled = true;
+			conMaps.disabled = true;
+			conDictionary.disabled = true;
 		}
 		else
 		{
-			conWeb.setAttribute("disabled", "false");
-			conSite.setAttribute("disabled", "false");
-			conImages.setAttribute("disabled", "false");
-			conVideo.setAttribute("disabled", "false");
-			conGroups.setAttribute("disabled", "false");
-			conMaps.setAttribute("disabled", "false");
-			conDictionary.setAttribute("disabled", "false");
+			conWeb.disabled = false;
+			conSite.disabled = false;
+			conImages.disabled = false;
+			conVideo.disabled = false;
+			conGroups.disabled = false;
+			conMaps.disabled = false;
+			conDictionary.disabled = false;
 		}
 	
 		// Update all of the web-page specific menu items
 		var url = this.ConvertToURL(window.content.document.location.href);
 	
-		if(url == null || url.scheme == "file" || url.scheme == "about")
+		if(url == null || url.scheme == "file" || url.scheme == "about" || url.scheme == "chrome")
 		{
-			conBackward.setAttribute("disabled", "true");
-			conCached.setAttribute("disabled", "true");
-			conSimilar.setAttribute("disabled", "true");
-			conTranslate.setAttribute("disabled", "true");
+			conBackward.disabled = true;
+			conCached.disabled = true;
+			conSimilar.disabled = true;
+			conTranslate.disabled = true;
 		}
 		else
 		{
-			conBackward.setAttribute("disabled", "false");
-			conCached.setAttribute("disabled", "false");
-			conSimilar.setAttribute("disabled", "false");
-			conTranslate.setAttribute("disabled", "false");
+			conBackward.disabled = false;
+			conCached.disabled = false;
+			conSimilar.disabled = false;
+			conTranslate.disabled = false;
 		}
 	
 		if(!gContextMenu.onLink || (/^file:/i.test(gContextMenu.link)) || (/^about:/i.test(gContextMenu.link)))
-			conCachedLink.setAttribute("disabled", "true");
+			conCachedLink.disabled = true;
 		else
-			conCachedLink.setAttribute("disabled", "false");
+			conCachedLink.disabled = false;
 	
 	},
 
 	UpdateContextMenuVisibility: function()
 	{
-		document.getElementById("GBL-Context-Menu").setAttribute("collapsed", !GooglebarLiteCommon.Data.Prefs.CM_ShowContext.value);
-		document.getElementById("GBL-Context-Separator").setAttribute("hidden", !GooglebarLiteCommon.Data.Prefs.CM_ShowContext.value);
+		document.getElementById("GBL-Context-Menu").collapsed = !GooglebarLiteCommon.Data.Prefs.CM_ShowContext.value;
+		document.getElementById("GBL-Context-Separator").hidden = !GooglebarLiteCommon.Data.Prefs.CM_ShowContext.value;
 	},
 	
 	UpdateOverflowMenu: function()
@@ -1783,7 +1786,7 @@ var objGooglebarLite = {
 		
 		// Lock the search box width by hiding the splitter
 		var splitter = document.getElementById("GBL-Splitter");
-		splitter.setAttribute("collapsed", GooglebarLiteCommon.Data.Prefs.LockSearchBox.value);
+		splitter.collapsed = GooglebarLiteCommon.Data.Prefs.LockSearchBox.value;
 	},
 	
 	UpdateSearchWordButtons: function()
@@ -1811,18 +1814,18 @@ var objGooglebarLite = {
 		
 		if(addressArray.length < 3)
 		{
-			document.getElementById("GBL-TB-UpButton").setAttribute("disabled", true);
+			document.getElementById("GBL-TB-UpButton").disabled = true;
 		}
 		else if(addressArray.length == 3)
 		{
 			var hostArray = addressArray[2].split(".");
 			if(hostArray.length >= 3 && (addressArray[0] == "http:" || addressArray[0] == "https:") && hostArray[0] != "www")
-				document.getElementById("GBL-TB-UpButton").setAttribute("disabled", false);
+				document.getElementById("GBL-TB-UpButton").disabled = false;
 			else
-				document.getElementById("GBL-TB-UpButton").setAttribute("disabled", true);
+				document.getElementById("GBL-TB-UpButton").disabled = true;
 		}
 		else
-			document.getElementById("GBL-TB-UpButton").setAttribute("disabled", false);
+			document.getElementById("GBL-TB-UpButton").disabled = false;
 	},
 	
 	UpdateUpMenu: function()
