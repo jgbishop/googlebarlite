@@ -1397,7 +1397,7 @@ var objGooglebarLite = {
 		window.removeEventListener('beforecustomization', objGooglebarLite.CustomizeBefore, false);
 		window.removeEventListener('focus', objGooglebarLite.Resize, false);
 		window.removeEventListener('load', objGooglebarLite.Startup, false);
-		window.removeEventListener('resize', objGooglebarLite.Resize, false);
+		window.removeEventListener('resize', objGooglebarLite.DelayResize, false);
 		window.removeEventListener('unload', objGooglebarLite.Shutdown, false);
 	},
 
