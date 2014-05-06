@@ -76,6 +76,16 @@ var objGooglebarLite = {
 					if(prefValue == false)
 						document.getElementById(GooglebarLiteCommon.Data.Prefs.TB_ShowCombined.xulid).setAttribute("searchType", "web");
 					break;
+
+				case GooglebarLiteCommon.Data.Prefs.TB_ShowSearchWords.name:
+					if(prefValue == false)
+					{
+						// User just hid the search word buttons, so remove any set width
+						// on the parent container, and hide the overflow button
+						document.getElementById("GBL-TB-SearchWordArea").removeAttribute("width");
+						document.getElementById("GBL-Overflow-Button").setAttribute("collapsed", !prefValue);
+					}
+					break;
 				}
 				
 				objGooglebarLite.CheckButtonContainer();
@@ -113,6 +123,7 @@ var objGooglebarLite = {
 	LastHighlightedTerms: "",
 	OverflowButtonWidth: 0,
 	PreviouslyOnSecureSearchPage: false,
+	ResizeTimerID: null,
 	ToolbarPresent: false,
 	
 	StylesArray: new Array("-moz-image-region: rect(0px 32px 16px 16px)",
@@ -554,6 +565,11 @@ var objGooglebarLite = {
 			objGooglebarLite.ToolbarPresent = false;
 		else
 			objGooglebarLite.ToolbarPresent = true;
+	},
+	
+	DelayResize: function() {
+		clearTimeout(objGooglebarLite.ResizeTimerID);
+		objGooglebarLite.ResizeTimerID = setTimeout(objGooglebarLite.ResizeComplete, 250);
 	},
 
 	DelayedStartup: function()
@@ -1112,10 +1128,10 @@ var objGooglebarLite = {
 		}
 	},
 
-	Resize: function(event)
+	ResizeComplete: function(event)
 	{
 		// Sizing issue hack (taken from patch for bug 266737)
-		if(event && event.type == 'focus') 
+		if(event && event.type == 'focus')
 			window.removeEventListener('focus', objGooglebarLite.Resize, false);
 		
 		var buttons = document.getElementById("GBL-TB-SearchWordsContainer");
@@ -1867,7 +1883,7 @@ var objGooglebarLite = {
 };
 
 window.addEventListener('load', objGooglebarLite.Startup, false);
-window.addEventListener('resize', objGooglebarLite.Resize, false);
 window.addEventListener('unload', objGooglebarLite.Shutdown, false);
 window.addEventListener('aftercustomization', objGooglebarLite.CustomizeAfter, false);
 window.addEventListener('beforecustomization', objGooglebarLite.CustomizeBefore, false);
+window.addEventListener('resize', objGooglebarLite.DelayResize, false);

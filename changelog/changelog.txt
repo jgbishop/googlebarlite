@@ -3,12 +3,16 @@
 //***************
 [5.0.0]
 + Google search suggestions are now offered when typing in the Googlebar Lite search box
-+ Searches are now performed over secure (https) channels by default
++ Searches are now performed over secure (https) connections by default
 + Added an option to control the search suggestions feature (suggestions are enabled by default)
 + Added an option to lock the search box width
++ Internal search URLs have been tweaked
++ Improved the efficiency of the window resize event listener
 + Removed the option to enable secure search since it is now enabled by default
 + Removed several deprecated strings
 + Removed the nb-NO locale due to it being woefully out of date
++ Bug Fix: The search word overflow button is now hidden properly if it was visible and search words were turned off
++ Bug Fix: The search word container is now resized properly if search words buttons were present and then turned off
 
 [4.9.15]
 + Restored the resize gripper
