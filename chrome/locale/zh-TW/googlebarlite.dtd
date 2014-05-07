@@ -107,11 +107,6 @@
 <!ENTITY gblite.options.tab.keyboard "鍵盤快捷鍵">
 <!ENTITY gblite.options.tab.context "右鍵選單">
 <!ENTITY gblite.options.label.sitetouse "使用的 Google 網站：">
-<!ENTITY gblite.options.label.searchboxwidth "Search box width:">
-<!ENTITY gblite.options.searchboxwidth.narrow "Narrow">
-<!ENTITY gblite.options.searchboxwidth.medium "Medium">
-<!ENTITY gblite.options.searchboxwidth.wide "Wide">
-<!ENTITY gblite.options.searchboxwidth.custom "Custom">
 <!ENTITY gblite.options.label.shortcutrestartwarning "變更搜尋框焦點快捷鍵需要重新啟動Firefox.">
 <!ENTITY gblite.options.label.searchboxfocus "設定搜尋框焦點">
 <!ENTITY gblite.options.label.shortcutctrl "Ctrl">
@@ -123,13 +118,17 @@
 <!ENTITY gblite.options.label.shiftctrlenter "Shift + Ctrl + Enter 執行">
 <!ENTITY gblite.options.label.searchbuttons "搜尋按鈕">
 <!ENTITY gblite.options.label.commonbuttons "一般設定 / 普通按鈕">
+<!ENTITY gblite.options.toolbarsettings "Toolbar Settings">
+<!ENTITY gblite.options.searchsettings "Search Settings">
 <!ENTITY gblite.options.clickselectsall "單擊搜尋框即可選取全部搜尋字詞">
 <!ENTITY gblite.options.searchintab "在新分頁開啟搜尋結果 (如果需要)">
 <!ENTITY gblite.options.remembercombined "記住最後一次從下拉式選單按鈕所選取的搜尋類型">
 <!ENTITY gblite.options.searchondragdrop "拖放字詞時自動搜尋">
+<!ENTITY gblite.options.locksearchbox "Lock search box width">
 <!ENTITY gblite.options.disableautocorrect "停用Google的搜尋自動更正">
 <!ENTITY gblite.options.warnonformhistory "當 Firefox 內的表單記錄被停用時，請提醒我">
 <!ENTITY gblite.options.maintainhistory "保留搜尋記錄">
+<!ENTITY gblite.options.searchsuggest "Enable Google search suggestions">
 <!ENTITY gblite.options.autocomplete "啟用自動完成">
 <!ENTITY gblite.options.inlinecomplete "使用內嵌完成">
 <!ENTITY gblite.options.autosearchhistory "當您從搜尋記錄中選取項目時便自動搜尋">

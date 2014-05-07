@@ -107,11 +107,6 @@
 <!ENTITY gblite.options.tab.keyboard "Klavye Kısayolları">
 <!ENTITY gblite.options.tab.context "Bağlam Menüsü">
 <!ENTITY gblite.options.label.sitetouse "Kullanılacak Google Sitesi:">
-<!ENTITY gblite.options.label.searchboxwidth "Search box width:">
-<!ENTITY gblite.options.searchboxwidth.narrow "Narrow">
-<!ENTITY gblite.options.searchboxwidth.medium "Medium">
-<!ENTITY gblite.options.searchboxwidth.wide "Wide">
-<!ENTITY gblite.options.searchboxwidth.custom "Custom">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Arama kutusu odağının değiştirilmesi tarayıcıyı yeniden başlatmayı gerektirir.">
 <!ENTITY gblite.options.label.searchboxfocus "Arama Kutusu Odağını Ayarla">
 <!ENTITY gblite.options.label.shortcutctrl "Ctrl">
@@ -123,13 +118,17 @@
 <!ENTITY gblite.options.label.shiftctrlenter "Shift + Ctrl + Enter şunu yapar:">
 <!ENTITY gblite.options.label.searchbuttons "Search Buttons">
 <!ENTITY gblite.options.label.commonbuttons "Genel Ayarlar/ Sık Kullanılan Düğmeler">
+<!ENTITY gblite.options.toolbarsettings "Toolbar Settings">
+<!ENTITY gblite.options.searchsettings "Search Settings">
 <!ENTITY gblite.options.clickselectsall "Arama kutusunda tek tıklama tüm arama terimlerini seçer">
 <!ENTITY gblite.options.searchintab "Arama sonuçlarını yeni bir sekmede aç (gerekliyse)">
 <!ENTITY gblite.options.remembercombined "En son birleştirilmiş menü arama türünü hatırla">
 <!ENTITY gblite.options.searchondragdrop "Sürükle ve bırakta otomatik ara">
+<!ENTITY gblite.options.locksearchbox "Lock search box width">
 <!ENTITY gblite.options.disableautocorrect "Disable Google search autocorrect">
 <!ENTITY gblite.options.warnonformhistory "Firafox&apos;ta form geçmişi devre dışı olduğunda beni uyar">
 <!ENTITY gblite.options.maintainhistory "Arama geçmişini sakla">
+<!ENTITY gblite.options.searchsuggest "Enable Google search suggestions">
 <!ENTITY gblite.options.autocomplete "Otomatik tamamlamayı etkinleştir">
 <!ENTITY gblite.options.inlinecomplete "Satır içi tamamlamayı kullan">
 <!ENTITY gblite.options.autosearchhistory "Arama geçmişinden seçildiğinde otomatik olarak ara">

@@ -107,11 +107,6 @@
 <!ENTITY gblite.options.tab.keyboard "Tipkovničke kratice">
 <!ENTITY gblite.options.tab.context "Kontekstni izbornik">
 <!ENTITY gblite.options.label.sitetouse "Goggle stranica koja će se koristiti:">
-<!ENTITY gblite.options.label.searchboxwidth "Search box width:">
-<!ENTITY gblite.options.searchboxwidth.narrow "Narrow">
-<!ENTITY gblite.options.searchboxwidth.medium "Medium">
-<!ENTITY gblite.options.searchboxwidth.wide "Wide">
-<!ENTITY gblite.options.searchboxwidth.custom "Custom">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Promjena tipkovničke kratice za fokusiranje okvira za pretraživanje zahtijeva ponovno pokretanje preglednika.">
 <!ENTITY gblite.options.label.searchboxfocus "Postavi fokus okvira za pretraživanje">
 <!ENTITY gblite.options.label.shortcutctrl "Ctrl">
@@ -123,13 +118,17 @@
 <!ENTITY gblite.options.label.shiftctrlenter "Shift + Ctrl + Enter izvodi">
 <!ENTITY gblite.options.label.searchbuttons "Search Buttons">
 <!ENTITY gblite.options.label.commonbuttons "Općenite postavke / Obični gumbi">
+<!ENTITY gblite.options.toolbarsettings "Toolbar Settings">
+<!ENTITY gblite.options.searchsettings "Search Settings">
 <!ENTITY gblite.options.clickselectsall "Jedan klik u okviru pretraživanja odabire sve pojmove pretraživanja">
 <!ENTITY gblite.options.searchintab "Otvori rezultate pretraživanja u novoj kartici (ako je potrebno)">
 <!ENTITY gblite.options.remembercombined "Zapamti zadnji kombinirani izbornik tipa pretraživanja">
 <!ENTITY gblite.options.searchondragdrop "Automatski pretraži nakon povlačenja i ispuštanja">
+<!ENTITY gblite.options.locksearchbox "Lock search box width">
 <!ENTITY gblite.options.disableautocorrect "Disable Google search autocorrect">
 <!ENTITY gblite.options.warnonformhistory "Upozori me ako je u Firefoxu onemogućen obrazac povijesti">
 <!ENTITY gblite.options.maintainhistory "Podržavaj povijest pretraživanja">
+<!ENTITY gblite.options.searchsuggest "Enable Google search suggestions">
 <!ENTITY gblite.options.autocomplete "Omogući automatsko dovršavanje">
 <!ENTITY gblite.options.inlinecomplete "Koristi dovršavanje u liniji">
 <!ENTITY gblite.options.autosearchhistory "Automatski pretraži kada odaberete obrazac iz povijesti pretraživanja">

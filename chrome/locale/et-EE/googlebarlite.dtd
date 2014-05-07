@@ -107,11 +107,6 @@
 <!ENTITY gblite.options.tab.keyboard "Kiirklahvid">
 <!ENTITY gblite.options.tab.context "Kontekstimenüü">
 <!ENTITY gblite.options.label.sitetouse "Kasutatav Google lehekülg">
-<!ENTITY gblite.options.label.searchboxwidth "Search box width:">
-<!ENTITY gblite.options.searchboxwidth.narrow "Narrow">
-<!ENTITY gblite.options.searchboxwidth.medium "Medium">
-<!ENTITY gblite.options.searchboxwidth.wide "Wide">
-<!ENTITY gblite.options.searchboxwidth.custom "Custom">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Otsingukasti fookuse otsetee muutmine eeldab brauseri taaskäivitamist.">
 <!ENTITY gblite.options.label.searchboxfocus "Määra otsingukasti fookus">
 <!ENTITY gblite.options.label.shortcutctrl "Ctrl">
@@ -123,13 +118,17 @@
 <!ENTITY gblite.options.label.shiftctrlenter "Ctrl + Shift + Enter sooritab">
 <!ENTITY gblite.options.label.searchbuttons "Search Buttons">
 <!ENTITY gblite.options.label.commonbuttons "Tööriistariba tavanupud ja sätted">
+<!ENTITY gblite.options.toolbarsettings "Toolbar Settings">
+<!ENTITY gblite.options.searchsettings "Search Settings">
 <!ENTITY gblite.options.clickselectsall "Klikkamine otsingukastil märgistab kõik otsisõnad">
 <!ENTITY gblite.options.searchintab "Ava otsitulemused uuel vahekaardil (kui vaja)">
 <!ENTITY gblite.options.remembercombined "Jäta meelde viimane kombineeritud menüüga otsingutüüp">
 <!ENTITY gblite.options.searchondragdrop "Lohistamisel automaatne otsing">
+<!ENTITY gblite.options.locksearchbox "Lock search box width">
 <!ENTITY gblite.options.disableautocorrect "Disable Google search autocorrect">
 <!ENTITY gblite.options.warnonformhistory "Hoiata, kui väljade ajalugu on Firefoxis keelatud">
 <!ENTITY gblite.options.maintainhistory "Hoia otsingute ajalugu">
+<!ENTITY gblite.options.searchsuggest "Enable Google search suggestions">
 <!ENTITY gblite.options.autocomplete "Luba automaatne lõpetamine">
 <!ENTITY gblite.options.inlinecomplete "Kasuta inline lõpetamist">
 <!ENTITY gblite.options.autosearchhistory "Otsi automaatselt, kui valite otsingu ajaloost">

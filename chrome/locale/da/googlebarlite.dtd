@@ -107,11 +107,6 @@
 <!ENTITY gblite.options.tab.keyboard "Tastaturgenveje">
 <!ENTITY gblite.options.tab.context "Genvejsmenu">
 <!ENTITY gblite.options.label.sitetouse "Brug Google-websted:">
-<!ENTITY gblite.options.label.searchboxwidth "Bredde søgeboks:">
-<!ENTITY gblite.options.searchboxwidth.narrow "Smal">
-<!ENTITY gblite.options.searchboxwidth.medium "Medium">
-<!ENTITY gblite.options.searchboxwidth.wide "Bred">
-<!ENTITY gblite.options.searchboxwidth.custom "Tilpasset">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Ændring af tastaturgenvejen for søgefeltet kræver genstart af browseren.">
 <!ENTITY gblite.options.label.searchboxfocus "Sæt søgeboks-fokus">
 <!ENTITY gblite.options.label.shortcutctrl "Ctrl">
@@ -123,13 +118,17 @@
 <!ENTITY gblite.options.label.shiftctrlenter "Ctrl + Skift + Enter udfører en">
 <!ENTITY gblite.options.label.searchbuttons "Søgeknapper">
 <!ENTITY gblite.options.label.commonbuttons "Generelle værktøjslinjeknapper og indstillinger">
+<!ENTITY gblite.options.toolbarsettings "Indstillinger af værktøjslinje">
+<!ENTITY gblite.options.searchsettings "Indstillinger af søgning">
 <!ENTITY gblite.options.clickselectsall "Enkeltklik i søgeboksen vælger alle søgeord">
 <!ENTITY gblite.options.searchintab "Åbn søgeresultat i nyt faneblad (hvis nødvendigt)">
 <!ENTITY gblite.options.remembercombined "Husk seneste søgetype i den kombinerede søgemenu">
 <!ENTITY gblite.options.searchondragdrop "Søg automatisk ved træk-og-slip">
+<!ENTITY gblite.options.locksearchbox "Lås bredden af søgeboksen">
 <!ENTITY gblite.options.disableautocorrect "Deaktiver Google-søgning autokorrektur">
 <!ENTITY gblite.options.warnonformhistory "Advar mig når formularhistorik er slået fra i Firefox">
 <!ENTITY gblite.options.maintainhistory "Vedligehold en søgehistorik">
+<!ENTITY gblite.options.searchsuggest "Aktiver Google søgeforslag">
 <!ENTITY gblite.options.autocomplete "Aktiver auto-udfyldelse">
 <!ENTITY gblite.options.inlinecomplete "Brug intern udfyldelse">
 <!ENTITY gblite.options.autosearchhistory "Udfør automatisk søgning når du vælger fra søgehistorikken">

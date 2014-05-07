@@ -107,11 +107,6 @@
 <!ENTITY gblite.options.tab.keyboard "Raccourcis clavier">
 <!ENTITY gblite.options.tab.context "Menu contextuel">
 <!ENTITY gblite.options.label.sitetouse "Utiliser le site Google:">
-<!ENTITY gblite.options.label.searchboxwidth "Largeur du champ de recherche:">
-<!ENTITY gblite.options.searchboxwidth.narrow "Étroit">
-<!ENTITY gblite.options.searchboxwidth.medium "Moyen">
-<!ENTITY gblite.options.searchboxwidth.wide "Large">
-<!ENTITY gblite.options.searchboxwidth.custom "Personnaliser">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Un changement du raccourci de la mise à l&apos;avant de la boîte de recherche nécessite un redémarrage du navigateur.">
 <!ENTITY gblite.options.label.searchboxfocus "Activer la mise à l&apos;avant de la boîte de recherche">
 <!ENTITY gblite.options.label.shortcutctrl "Ctrl">
@@ -123,13 +118,17 @@
 <!ENTITY gblite.options.label.shiftctrlenter "Maj + Ctrl + Entrée produisent une">
 <!ENTITY gblite.options.label.searchbuttons "Boutons de recherche">
 <!ENTITY gblite.options.label.commonbuttons "Paramètres généraux / Boutons communs">
+<!ENTITY gblite.options.toolbarsettings "Paramètres de la barre">
+<!ENTITY gblite.options.searchsettings "Paramètres de recherche">
 <!ENTITY gblite.options.clickselectsall "Un simple clic sur la boîte de recherche sélectionne tous les termes recherchés">
 <!ENTITY gblite.options.searchintab "Afficher les résultats de recherche dans un nouvel onglet (si nécessaire)">
 <!ENTITY gblite.options.remembercombined "Conserver le dernier type de recherche mixte">
 <!ENTITY gblite.options.searchondragdrop "Chercher automatiquement sur copier-coller">
+<!ENTITY gblite.options.locksearchbox "Fixer la largeur du champs de recherche">
 <!ENTITY gblite.options.disableautocorrect "Désactiver la correction auto des recherches">
 <!ENTITY gblite.options.warnonformhistory "Prévenez-moi si l&apos;historique des formulaires est désactivé dans Firefox">
 <!ENTITY gblite.options.maintainhistory "Conserver l&apos;historique des recherches">
+<!ENTITY gblite.options.searchsuggest "Activer les suggestions de recherche">
 <!ENTITY gblite.options.autocomplete "Activer l&apos;affichage de l&apos;historique du texte saisi">
 <!ENTITY gblite.options.inlinecomplete "Compléter automatiquement le texte saisi">
 <!ENTITY gblite.options.autosearchhistory "Chercher automatiquement lorsque vous sélectionnez un élément   de l&apos;historique des recherches">

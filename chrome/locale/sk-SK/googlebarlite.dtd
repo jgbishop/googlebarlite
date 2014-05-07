@@ -107,11 +107,6 @@
 <!ENTITY gblite.options.tab.keyboard "Klávesové skratky">
 <!ENTITY gblite.options.tab.context "Kontextová ponuka">
 <!ENTITY gblite.options.label.sitetouse "Použiť stránku Google:">
-<!ENTITY gblite.options.label.searchboxwidth "Search box width:">
-<!ENTITY gblite.options.searchboxwidth.narrow "Narrow">
-<!ENTITY gblite.options.searchboxwidth.medium "Medium">
-<!ENTITY gblite.options.searchboxwidth.wide "Wide">
-<!ENTITY gblite.options.searchboxwidth.custom "Custom">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Zmena skratky pre záber vyhľadávacieho poľa vyžaduje reštart prehliadača">
 <!ENTITY gblite.options.label.searchboxfocus "Nastaviť záber vyhľadávacieho poľa">
 <!ENTITY gblite.options.label.shortcutctrl "Ctrl">
@@ -123,13 +118,17 @@
 <!ENTITY gblite.options.label.shiftctrlenter "Shift + Ctrl + Enter vykonáva">
 <!ENTITY gblite.options.label.searchbuttons "Search Buttons">
 <!ENTITY gblite.options.label.commonbuttons "Všeobecné nastavenia / Obvyklé tlačidlá">
+<!ENTITY gblite.options.toolbarsettings "Toolbar Settings">
+<!ENTITY gblite.options.searchsettings "Search Settings">
 <!ENTITY gblite.options.clickselectsall "Označiť všetky hľadané výrazy vo vyhľadávacom ráme jediným kliknutím">
 <!ENTITY gblite.options.searchintab "Otvoriť výsledky vyhľadávania na novej karte">
 <!ENTITY gblite.options.remembercombined "Zapamätať si poslednú kombináciu ponuky vyhľadávania">
 <!ENTITY gblite.options.searchondragdrop "Automaticky vyhľadať po pretiahnutí">
+<!ENTITY gblite.options.locksearchbox "Lock search box width">
 <!ENTITY gblite.options.disableautocorrect "Disable Google search autocorrect">
 <!ENTITY gblite.options.warnonformhistory "Upozorniť ma keď je zapamätanie si histórie formulárov vo Firefoxe zakázané">
 <!ENTITY gblite.options.maintainhistory "Zaznamenávať históriu vyhľadávania">
+<!ENTITY gblite.options.searchsuggest "Enable Google search suggestions">
 <!ENTITY gblite.options.autocomplete "Povoliť automatické dokončovanie">
 <!ENTITY gblite.options.inlinecomplete "Povoliť dokončovanie priamo v riadku s hľadaným textom">
 <!ENTITY gblite.options.autosearchhistory "Automaticky vyhľadať po zvolení z histórie vyhľadávania">

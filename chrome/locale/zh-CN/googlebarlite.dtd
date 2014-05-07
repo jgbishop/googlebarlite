@@ -107,11 +107,6 @@
 <!ENTITY gblite.options.tab.keyboard "键盘快捷键">
 <!ENTITY gblite.options.tab.context "右键菜单">
 <!ENTITY gblite.options.label.sitetouse "Google 站点使用:">
-<!ENTITY gblite.options.label.searchboxwidth "Search box width:">
-<!ENTITY gblite.options.searchboxwidth.narrow "Narrow">
-<!ENTITY gblite.options.searchboxwidth.medium "Medium">
-<!ENTITY gblite.options.searchboxwidth.wide "Wide">
-<!ENTITY gblite.options.searchboxwidth.custom "Custom">
 <!ENTITY gblite.options.label.shortcutrestartwarning "改变搜索栏焦点设置需要重启浏览器">
 <!ENTITY gblite.options.label.searchboxfocus "设置搜索栏焦点">
 <!ENTITY gblite.options.label.shortcutctrl "Ctrl">
@@ -123,13 +118,17 @@
 <!ENTITY gblite.options.label.shiftctrlenter "Shift + Ctrl + Enter 执行">
 <!ENTITY gblite.options.label.searchbuttons "Search Buttons">
 <!ENTITY gblite.options.label.commonbuttons "常规设置/普通按钮">
+<!ENTITY gblite.options.toolbarsettings "Toolbar Settings">
+<!ENTITY gblite.options.searchsettings "Search Settings">
 <!ENTITY gblite.options.clickselectsall "在搜索框中单击选择全部搜索条目">
 <!ENTITY gblite.options.searchintab "在新建标签中打开搜索结果(在有必要的情况下)">
 <!ENTITY gblite.options.remembercombined "记住最后一次组合菜单搜索类型">
 <!ENTITY gblite.options.searchondragdrop "拖拽自动搜索">
+<!ENTITY gblite.options.locksearchbox "Lock search box width">
 <!ENTITY gblite.options.disableautocorrect "Disable Google search autocorrect">
 <!ENTITY gblite.options.warnonformhistory "在 Firefox [选项] 中禁用 [历史] 时提示我">
 <!ENTITY gblite.options.maintainhistory "保留搜索历史">
+<!ENTITY gblite.options.searchsuggest "Enable Google search suggestions">
 <!ENTITY gblite.options.autocomplete "启用自动完成">
 <!ENTITY gblite.options.inlinecomplete "启用 inline 完成">
 <!ENTITY gblite.options.autosearchhistory "从搜索历史中选择条目后自动开始搜索">

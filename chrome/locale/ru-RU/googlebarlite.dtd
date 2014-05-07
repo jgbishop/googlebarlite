@@ -107,11 +107,6 @@
 <!ENTITY gblite.options.tab.keyboard "Клавиатурные сокращения">
 <!ENTITY gblite.options.tab.context "Контекстное меню">
 <!ENTITY gblite.options.label.sitetouse "Использовать сайт Google">
-<!ENTITY gblite.options.label.searchboxwidth "Search box width:">
-<!ENTITY gblite.options.searchboxwidth.narrow "Narrow">
-<!ENTITY gblite.options.searchboxwidth.medium "Medium">
-<!ENTITY gblite.options.searchboxwidth.wide "Wide">
-<!ENTITY gblite.options.searchboxwidth.custom "Custom">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Изменение режима активности поля поиска требует перезагрузки приложения">
 <!ENTITY gblite.options.label.searchboxfocus "Установить активным поле поиска">
 <!ENTITY gblite.options.label.shortcutctrl "Ctrl">
@@ -123,13 +118,17 @@
 <!ENTITY gblite.options.label.shiftctrlenter "по нажатию Shift + Ctrl + Enter запускать">
 <!ENTITY gblite.options.label.searchbuttons "Search Buttons">
 <!ENTITY gblite.options.label.commonbuttons "Основные кнопки и настройки">
+<!ENTITY gblite.options.toolbarsettings "Toolbar Settings">
+<!ENTITY gblite.options.searchsettings "Search Settings">
 <!ENTITY gblite.options.clickselectsall "Отметить вхождения контекста поиска по одиночному клику в поле поиска">
 <!ENTITY gblite.options.searchintab "Открыть результаты поиска в новой вкладке (при необходимости)">
 <!ENTITY gblite.options.remembercombined "Запомнить вариант последнего поиска">
 <!ENTITY gblite.options.searchondragdrop "Начинать поиск сразу после переноса контекста">
+<!ENTITY gblite.options.locksearchbox "Lock search box width">
 <!ENTITY gblite.options.disableautocorrect "Disable Google search autocorrect">
 <!ENTITY gblite.options.warnonformhistory "Предупредить об отключении в Firefox сохранения данных форм">
 <!ENTITY gblite.options.maintainhistory "Включить историю запросов">
+<!ENTITY gblite.options.searchsuggest "Enable Google search suggestions">
 <!ENTITY gblite.options.autocomplete "Включить автодополнение">
 <!ENTITY gblite.options.inlinecomplete "Использовать встроенный механизм">
 <!ENTITY gblite.options.autosearchhistory "Запускать поиск автоматически после выбора из истории запросов">

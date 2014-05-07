@@ -107,11 +107,6 @@
 <!ENTITY gblite.options.tab.keyboard "Sneltoetsen">
 <!ENTITY gblite.options.tab.context "Contextmenu">
 <!ENTITY gblite.options.label.sitetouse "Te gebruiken Google site:">
-<!ENTITY gblite.options.label.searchboxwidth "Search box width:">
-<!ENTITY gblite.options.searchboxwidth.narrow "Narrow">
-<!ENTITY gblite.options.searchboxwidth.medium "Medium">
-<!ENTITY gblite.options.searchboxwidth.wide "Wide">
-<!ENTITY gblite.options.searchboxwidth.custom "Custom">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Het wijzigen van de zoekvenster activering vereist het opnieuw starten van de browser.">
 <!ENTITY gblite.options.label.searchboxfocus "Zoekvenster actief maken">
 <!ENTITY gblite.options.label.shortcutctrl "Ctrl">
@@ -123,13 +118,17 @@
 <!ENTITY gblite.options.label.shiftctrlenter "Ctrl + Shift + Enter zoekt in:">
 <!ENTITY gblite.options.label.searchbuttons "Zoek knoppen">
 <!ENTITY gblite.options.label.commonbuttons "Algemene werkbalk knoppen en instellingen">
+<!ENTITY gblite.options.toolbarsettings "Toolbar Settings">
+<!ENTITY gblite.options.searchsettings "Search Settings">
 <!ENTITY gblite.options.clickselectsall "Alle zoektermen selecteren door een enkele klik in het zoekvenster">
 <!ENTITY gblite.options.searchintab "Zoekresultaten in een nieuwe tab openen (indien nodig)">
 <!ENTITY gblite.options.remembercombined "Het laatste gecombineerd-menu zoek type onthouden">
 <!ENTITY gblite.options.searchondragdrop "Automatisch zoeken na slepen/plakken">
+<!ENTITY gblite.options.locksearchbox "Lock search box width">
 <!ENTITY gblite.options.disableautocorrect "Google zoeken AutoCorrect uitschakelen">
 <!ENTITY gblite.options.warnonformhistory "Waarschuwen wanneer &apos;Opgeslagen formulieren&apos; in Firefox is uitgeschakeld">
 <!ENTITY gblite.options.maintainhistory "Zoekgeschiedenis beheren">
+<!ENTITY gblite.options.searchsuggest "Enable Google search suggestions">
 <!ENTITY gblite.options.autocomplete "Auto-aanvullen inschakelen">
 <!ENTITY gblite.options.inlinecomplete "Inline aanvullen gebruiken">
 <!ENTITY gblite.options.autosearchhistory "Automatisch zoeken bij selecteren vanuit de zoekgeschiedenis">

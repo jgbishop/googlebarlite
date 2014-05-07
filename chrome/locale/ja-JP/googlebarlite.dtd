@@ -107,11 +107,6 @@
 <!ENTITY gblite.options.tab.keyboard "キーボードショートカット">
 <!ENTITY gblite.options.tab.context "コンテキストメニュー">
 <!ENTITY gblite.options.label.sitetouse "使用するグーグルサイト:">
-<!ENTITY gblite.options.label.searchboxwidth "検索ボックスの幅：">
-<!ENTITY gblite.options.searchboxwidth.narrow "狭い">
-<!ENTITY gblite.options.searchboxwidth.medium "中間">
-<!ENTITY gblite.options.searchboxwidth.wide "広い">
-<!ENTITY gblite.options.searchboxwidth.custom "カスタム">
 <!ENTITY gblite.options.label.shortcutrestartwarning "検索ボックスへのフォーカスのショートカットを変更するには再起動する必要があります">
 <!ENTITY gblite.options.label.searchboxfocus "検索ボックスにフォーカスする">
 <!ENTITY gblite.options.label.shortcutctrl "Ctrl">
@@ -123,13 +118,17 @@
 <!ENTITY gblite.options.label.shiftctrlenter "Shift + Ctrl + Enter">
 <!ENTITY gblite.options.label.searchbuttons "検索ボタン">
 <!ENTITY gblite.options.label.commonbuttons "一般設定 / 主要ボタン">
+<!ENTITY gblite.options.toolbarsettings "ツールバーの設定">
+<!ENTITY gblite.options.searchsettings "検索の設定">
 <!ENTITY gblite.options.clickselectsall "検索ボックスをクリックした時、すべての検索単語を選択する">
 <!ENTITY gblite.options.searchintab "検索結果を新しいタブで開く">
 <!ENTITY gblite.options.remembercombined "最後に使った検索メニューを記憶する">
 <!ENTITY gblite.options.searchondragdrop "ドラッグ&amp;ドロップで自動的に検索">
-<!ENTITY gblite.options.disableautocorrect "Google検索オートコレクトを無効にする">
+<!ENTITY gblite.options.locksearchbox "検索ボックスの幅を固定する">
+<!ENTITY gblite.options.disableautocorrect "Google検索のオートコレクト機能を無効にする">
 <!ENTITY gblite.options.warnonformhistory "Firefoxでフォームの入力履歴が無効になっている時は警告する">
 <!ENTITY gblite.options.maintainhistory "検索履歴を保持する">
+<!ENTITY gblite.options.searchsuggest "Googleの検索候補を有効にする">
 <!ENTITY gblite.options.autocomplete "自動補完を有効にする">
 <!ENTITY gblite.options.inlinecomplete "インライン補完を使用する">
 <!ENTITY gblite.options.autosearchhistory "検索履歴から選択した時、自動的に検索を始める">

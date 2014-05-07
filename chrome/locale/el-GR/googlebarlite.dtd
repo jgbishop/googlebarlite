@@ -107,11 +107,6 @@
 <!ENTITY gblite.options.tab.keyboard "Συντομεύσεις Πληκτρολογίου">
 <!ENTITY gblite.options.tab.context "Μενού Περιεχομένων">
 <!ENTITY gblite.options.label.sitetouse "Ιστοσελίδα του Google προς χρήση:">
-<!ENTITY gblite.options.label.searchboxwidth "Search box width:">
-<!ENTITY gblite.options.searchboxwidth.narrow "Narrow">
-<!ENTITY gblite.options.searchboxwidth.medium "Medium">
-<!ENTITY gblite.options.searchboxwidth.wide "Wide">
-<!ENTITY gblite.options.searchboxwidth.custom "Custom">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Η αλλαγή της συντόμευσης για την εστίαση στο πεδίο αναζήτησης απαιτεί επανεκκίνηση του προγράμματος περιήγησης.">
 <!ENTITY gblite.options.label.searchboxfocus "Ορισμός Εστίασης Πεδίου Αναζήτησης">
 <!ENTITY gblite.options.label.shortcutctrl "Ctrl">
@@ -123,13 +118,17 @@
 <!ENTITY gblite.options.label.shiftctrlenter "Ctrl + Shift + Enter εκτελεί το α">
 <!ENTITY gblite.options.label.searchbuttons "Search Buttons">
 <!ENTITY gblite.options.label.commonbuttons "Κοινές Ρυθμίσεις Κουμπιών Μπάρας">
+<!ENTITY gblite.options.toolbarsettings "Toolbar Settings">
+<!ENTITY gblite.options.searchsettings "Search Settings">
 <!ENTITY gblite.options.clickselectsall "Με μονό κλικ στο πεδίο αναζήτησης επιλέγονται όλοι οι όροι αναζήτησης">
 <!ENTITY gblite.options.searchintab "Άνοιγμα αποτελεσμάτων αναζήτησης σε νέα καρτέλα (εάν είναι απαραίτητο)">
 <!ENTITY gblite.options.remembercombined "Απομνημόνευση του τελευταίου τύπου σύνθετης αναζήτησης">
 <!ENTITY gblite.options.searchondragdrop "Αυτόματη αναζήτηση στο σύρσιμο και την εναπόθεση">
+<!ENTITY gblite.options.locksearchbox "Lock search box width">
 <!ENTITY gblite.options.disableautocorrect "Disable Google search autocorrect">
 <!ENTITY gblite.options.warnonformhistory "Ειδοποίηση όταν το ιστορικό φόρμας είναι απενεργοποιημένη στο Firefox">
 <!ENTITY gblite.options.maintainhistory "Διατήρηση ιστορικού αναζήτησης">
+<!ENTITY gblite.options.searchsuggest "Enable Google search suggestions">
 <!ENTITY gblite.options.autocomplete "Ενεργοποίηση αυτο-συμπλήρωσης">
 <!ENTITY gblite.options.inlinecomplete "Χρήση συμπλήρωσης μέσα στη γραμμή">
 <!ENTITY gblite.options.autosearchhistory "Αυτόματη αναζήτηση στην περίπτωση επιλογής από το ιστορικό αναζήτησης">

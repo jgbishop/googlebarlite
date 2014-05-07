@@ -107,11 +107,6 @@
 <!ENTITY gblite.options.tab.keyboard "Atajos de teclado">
 <!ENTITY gblite.options.tab.context "Menú contextual">
 <!ENTITY gblite.options.label.sitetouse "Sitio Google que quieres usar:">
-<!ENTITY gblite.options.label.searchboxwidth "Ancho de la caja de búsqueda:">
-<!ENTITY gblite.options.searchboxwidth.narrow "Estrecha">
-<!ENTITY gblite.options.searchboxwidth.medium "Intermedia">
-<!ENTITY gblite.options.searchboxwidth.wide "Ancha">
-<!ENTITY gblite.options.searchboxwidth.custom "Personalizada">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Para cambiar el atajo para el foco de la caja de búsqueda, es preciso reiniciar el navegador">
 <!ENTITY gblite.options.label.searchboxfocus "Establecer el foco en la caja de búsqueda">
 <!ENTITY gblite.options.label.shortcutctrl "Ctrl">
@@ -123,13 +118,17 @@
 <!ENTITY gblite.options.label.shiftctrlenter "Mayús. + Ctrl + Enter hace">
 <!ENTITY gblite.options.label.searchbuttons "Botones de búsqueda">
 <!ENTITY gblite.options.label.commonbuttons "Opciones generales / Botones comunes">
+<!ENTITY gblite.options.toolbarsettings "Opciones de la barra de herramientas">
+<!ENTITY gblite.options.searchsettings "Opciones de búsqueda">
 <!ENTITY gblite.options.clickselectsall "Un clic sencillo en la caja de búsqueda selecciona todos sus términos">
 <!ENTITY gblite.options.searchintab "Mostrar resultados en una pestaña nueva (si es preciso)">
 <!ENTITY gblite.options.remembercombined "Recordar el tipo de la última búsqueda del menú combinado">
 <!ENTITY gblite.options.searchondragdrop "Buscar automáticamente al arrastrar y soltar">
+<!ENTITY gblite.options.locksearchbox "Bloquear el ancho de la caja de búsqueda">
 <!ENTITY gblite.options.disableautocorrect "Desactivar la autocorrección en búsquedas de Google">
 <!ENTITY gblite.options.warnonformhistory "Avisarme si el historial de formularios está desactivado en Firefox">
 <!ENTITY gblite.options.maintainhistory "Mantener un historial de búsquedas">
+<!ENTITY gblite.options.searchsuggest "Permitir sugerencias de búsqueda de Google">
 <!ENTITY gblite.options.autocomplete "Autocompletar activado">
 <!ENTITY gblite.options.inlinecomplete "Completar en línea activado">
 <!ENTITY gblite.options.autosearchhistory "Buscar automáticamente cuando se elija desde el historial de búsqueda">

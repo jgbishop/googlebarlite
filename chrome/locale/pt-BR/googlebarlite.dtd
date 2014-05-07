@@ -107,11 +107,6 @@
 <!ENTITY gblite.options.tab.keyboard "Atalhos de teclado">
 <!ENTITY gblite.options.tab.context "Menu de contexto">
 <!ENTITY gblite.options.label.sitetouse "Site do Google a ser utilizado:">
-<!ENTITY gblite.options.label.searchboxwidth "Search box width:">
-<!ENTITY gblite.options.searchboxwidth.narrow "Narrow">
-<!ENTITY gblite.options.searchboxwidth.medium "Medium">
-<!ENTITY gblite.options.searchboxwidth.wide "Wide">
-<!ENTITY gblite.options.searchboxwidth.custom "Custom">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Modificar a tecla de atalho para foco na caixa de pesquisa requer uma reinicialização do navegador.">
 <!ENTITY gblite.options.label.searchboxfocus "Dar foco à caixa de pesquisa">
 <!ENTITY gblite.options.label.shortcutctrl "Ctrl">
@@ -123,13 +118,17 @@
 <!ENTITY gblite.options.label.shiftctrlenter "Shift + Ctrl + Enter executa">
 <!ENTITY gblite.options.label.searchbuttons "Search Buttons">
 <!ENTITY gblite.options.label.commonbuttons "Configurações e botões da barra de ferramentas comuns">
+<!ENTITY gblite.options.toolbarsettings "Toolbar Settings">
+<!ENTITY gblite.options.searchsettings "Search Settings">
 <!ENTITY gblite.options.clickselectsall "Um clique na caixa de pesquisa seleciona todos os termos de pesquisa">
 <!ENTITY gblite.options.searchintab "Abrir resultados de pesquisa em uma nova aba (se necessário)">
 <!ENTITY gblite.options.remembercombined "Lembrar o último tipo de pesquisa combinada">
 <!ENTITY gblite.options.searchondragdrop "Pesquisar automaticamente ao arrastar e soltar">
+<!ENTITY gblite.options.locksearchbox "Lock search box width">
 <!ENTITY gblite.options.disableautocorrect "Disable Google search autocorrect">
 <!ENTITY gblite.options.warnonformhistory "Avisar-me quando o histórico de formulários estiver desabilitado no Firefox">
 <!ENTITY gblite.options.maintainhistory "Mater um histórico de pesquisas">
+<!ENTITY gblite.options.searchsuggest "Enable Google search suggestions">
 <!ENTITY gblite.options.autocomplete "Habilitar auto-complemento">
 <!ENTITY gblite.options.inlinecomplete "Utilizar complemento inline">
 <!ENTITY gblite.options.autosearchhistory "Pesquisar automaticamente quando você selecionar no histórico de pesquisas">

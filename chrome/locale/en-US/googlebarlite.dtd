@@ -108,11 +108,6 @@
 <!ENTITY gblite.options.tab.keyboard "Keyboard Shortcuts">
 <!ENTITY gblite.options.tab.context "Context Menu">
 <!ENTITY gblite.options.label.sitetouse "Google site to use:">
-<!ENTITY gblite.options.label.searchboxwidth "Search box width:">
-<!ENTITY gblite.options.searchboxwidth.narrow "Narrow">
-<!ENTITY gblite.options.searchboxwidth.medium "Medium">
-<!ENTITY gblite.options.searchboxwidth.wide "Wide">
-<!ENTITY gblite.options.searchboxwidth.custom "Custom">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Changing the search box focus shortcut requires a restart of the browser.">
 <!ENTITY gblite.options.label.searchboxfocus "Set Search Box Focus">
 <!ENTITY gblite.options.label.shortcutctrl "Ctrl">

@@ -107,11 +107,6 @@
 <!ENTITY gblite.options.tab.keyboard "Klávesové zkratky">
 <!ENTITY gblite.options.tab.context "Kontextové menu">
 <!ENTITY gblite.options.label.sitetouse "Používat Google stránku">
-<!ENTITY gblite.options.label.searchboxwidth "Šířka vyhledávacího pole:">
-<!ENTITY gblite.options.searchboxwidth.narrow "Úzké">
-<!ENTITY gblite.options.searchboxwidth.medium "Střední">
-<!ENTITY gblite.options.searchboxwidth.wide "Široké">
-<!ENTITY gblite.options.searchboxwidth.custom "Vlastní">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Změna klávesové zkratky vyžaduje restart prohlížeče.">
 <!ENTITY gblite.options.label.searchboxfocus "Přejde do vyhledávacího okénka">
 <!ENTITY gblite.options.label.shortcutctrl "Ctrl">
@@ -123,13 +118,17 @@
 <!ENTITY gblite.options.label.shiftctrlenter "Ctrl + Shift + Enter">
 <!ENTITY gblite.options.label.searchbuttons "Search Buttons">
 <!ENTITY gblite.options.label.commonbuttons "Další tlačítka a nastavení">
+<!ENTITY gblite.options.toolbarsettings "Nastavení toolbaru">
+<!ENTITY gblite.options.searchsettings "Nastavení vyhledávání">
 <!ENTITY gblite.options.clickselectsall "Kliknutím vybrat předchozí vyhledávaný výraz">
 <!ENTITY gblite.options.searchintab "Otevřít výsledky hledání v novém panelu">
 <!ENTITY gblite.options.remembercombined "Zapamatovat si poslední kombinaci vyhledávací nabídky">
 <!ENTITY gblite.options.searchondragdrop "Text vyhledat automaticky při přetažení do vyhledávacího okénka">
+<!ENTITY gblite.options.locksearchbox "Uzamknout šířku vyhledávacího pole">
 <!ENTITY gblite.options.disableautocorrect "Disable Google search autocorrect">
 <!ENTITY gblite.options.warnonformhistory "Varovat pokud je vypnuta historie ve Firefoxu">
 <!ENTITY gblite.options.maintainhistory "Údržba historie hledání">
+<!ENTITY gblite.options.searchsuggest "Povolit našeptávání">
 <!ENTITY gblite.options.autocomplete "Povolit automatické dokončování">
 <!ENTITY gblite.options.inlinecomplete "Povolit dokončování přímo ve vyhledávacím okénku">
 <!ENTITY gblite.options.autosearchhistory "Automaticky vyhledávat při výberu z historie">

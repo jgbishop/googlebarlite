@@ -107,11 +107,6 @@
 <!ENTITY gblite.options.tab.keyboard "Tastaturkürzel">
 <!ENTITY gblite.options.tab.context "Kontextmenü">
 <!ENTITY gblite.options.label.sitetouse "Google-Website verwenden:">
-<!ENTITY gblite.options.label.searchboxwidth "Suchfeldbreite:">
-<!ENTITY gblite.options.searchboxwidth.narrow "Schmal">
-<!ENTITY gblite.options.searchboxwidth.medium "Mittel">
-<!ENTITY gblite.options.searchboxwidth.wide "Breit">
-<!ENTITY gblite.options.searchboxwidth.custom "Benutzerdefiniert">
 <!ENTITY gblite.options.label.shortcutrestartwarning "Ändern des Tastaturkürzels zum Fokussieren der Suchleiste erfordert einen Neustart des Browsers.">
 <!ENTITY gblite.options.label.searchboxfocus "Suchleiste fokussieren">
 <!ENTITY gblite.options.label.shortcutctrl "Strg">
@@ -123,13 +118,17 @@
 <!ENTITY gblite.options.label.shiftctrlenter "Umschalt + Strg + Eingabe startet eine">
 <!ENTITY gblite.options.label.searchbuttons "Such-Anbieter">
 <!ENTITY gblite.options.label.commonbuttons "Allgemeine Schaltflächen-Einstellungen">
+<!ENTITY gblite.options.toolbarsettings "Symbolleisten-Einstellungen">
+<!ENTITY gblite.options.searchsettings "Sucheinstellungen">
 <!ENTITY gblite.options.clickselectsall "Einfacher Klick in die Suchleiste wählt alle Suchbegriffe aus">
 <!ENTITY gblite.options.searchintab "Suchergebnisse (wenn erforderlich) in einem neuen Tab öffnen">
 <!ENTITY gblite.options.remembercombined "An die letzte Suche aus dem kombinierten Suchmenü erinnern">
 <!ENTITY gblite.options.searchondragdrop "Bei &quot;Drag and Drop&quot; automatisch Suchen">
+<!ENTITY gblite.options.locksearchbox "Breite des Suchfeldes sperren">
 <!ENTITY gblite.options.disableautocorrect "Automatische Korrektur der Google-Suche deaktivieren">
 <!ENTITY gblite.options.warnonformhistory "Warnen, wenn die Option zum Speichern von Formulardaten im Firefox deaktiviert ist">
 <!ENTITY gblite.options.maintainhistory "Such-Chronik pflegen">
+<!ENTITY gblite.options.searchsuggest "Google Suchvorschläge aktivieren">
 <!ENTITY gblite.options.autocomplete "Auto-Vervollständigen aktivieren">
 <!ENTITY gblite.options.inlinecomplete "Inline-Vervollständigung verwenden">
 <!ENTITY gblite.options.autosearchhistory "Automatisch suchen, wenn aus der Chronik gewählt wird">
