@@ -243,10 +243,12 @@
 				  oncommand="objGooglebarLitePrefs.UpdateSearchHistoryStatus();" />
 		
 		<vbox class="GBL-Indent">
-			<checkbox id="GBL-Opt-EnableSearchSuggest" label="&gblite.options.searchsuggest;" preference="GBL-Pref-EnableSearchSuggest" />
 			<checkbox id="GBL-Opt-EnableAutoComplete" label="&gblite.options.autocomplete;" preference="GBL-Pref-EnableAutoComplete"
-					  oncommand="objGooglebarLitePrefs.UpdateUseInlineCompleteStatus();" />
-			<checkbox id="GBL-Opt-UseInlineComplete" label="&gblite.options.inlinecomplete;" preference="GBL-Pref-UseInlineComplete" />
+					  oncommand="objGooglebarLitePrefs.UpdateAutoCompleteSubOptions();" />
+			<vbox class="GBL-Indent">
+				<checkbox id="GBL-Opt-EnableSearchSuggest" label="&gblite.options.searchsuggest;" preference="GBL-Pref-EnableSearchSuggest" />
+				<checkbox id="GBL-Opt-UseInlineComplete" label="&gblite.options.inlinecomplete;" preference="GBL-Pref-UseInlineComplete" />
+			</vbox>
 			<checkbox id="GBL-Opt-AutoSearch" label="&gblite.options.autosearchhistory;" preference="GBL-Pref-AutoSearch" />
 			<checkbox id="GBL-Opt-PromptToClearHistory" label="&gblite.options.prompttoclear;" preference="GBL-Pref-PromptToClear" />
 			<checkbox id="GBL-Opt-IgnoreDictionary" label="&gblite.options.ignoredictionary;" preference="GBL-Pref-IgnoreDictionary" />

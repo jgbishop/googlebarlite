@@ -13,7 +13,7 @@ var objGooglebarLitePrefs = {
 	},
 	
 	InitUI: function() {
-		this.UpdateUseInlineCompleteStatus();
+		this.UpdateAutoCompleteSubOptions();
 		this.UpdateSearchHistoryStatus();
 		this.UpdateShowContextMenuStatus();
 	},
@@ -30,9 +30,10 @@ var objGooglebarLitePrefs = {
 		return isValid;
 	},
 	
-	UpdateUseInlineCompleteStatus: function() {
+	UpdateAutoCompleteSubOptions: function() {
 		var disabled = ! document.getElementById("GBL-Opt-EnableAutoComplete").checked;
 		document.getElementById("GBL-Opt-UseInlineComplete").disabled = disabled;
+		document.getElementById("GBL-Opt-EnableSearchSuggest").disabled = disabled;
 	},
 	
 	UpdateSearchHistoryStatus: function() {

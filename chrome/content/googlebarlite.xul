@@ -169,7 +169,7 @@
 					enablehistory="true"
 					tabscrolling="true"
 					flex="1"
-					minwidth="150"
+					minwidth="100"
 					width="200"
 					timeout="200"
 					maxrows="10" />
