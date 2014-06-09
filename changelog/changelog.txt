@@ -1,6 +1,9 @@
 //***************
 //Version History
 //***************
+[5.0.1]
++ Bug Fix: Implemented a workaround to prevent the search site button, up button, and Google Dictionary menu item from getting stuck in the "disabled" state
+
 [5.0.0]
 + Google search suggestions are now offered when typing in the Googlebar Lite search box
 + Searches are now performed over secure (https) connections by default

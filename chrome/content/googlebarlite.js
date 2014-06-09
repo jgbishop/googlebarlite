@@ -239,6 +239,11 @@ var objGooglebarLite = {
 				{
 					searchSiteButton.disabled = false;
 					searchSiteMenuItem.disabled = false;
+					// HACK: For some reason, starting in Firefox 28, setting the disabled property to false no longer
+					// actually does that (at least after visiting about:customizing). Explicitly removing the attribute
+					// from the element actually does the trick.
+					searchSiteButton.removeAttribute("disabled");
+					searchSiteMenuItem.removeAttribute("disabled");
 				}
 	
 				objGooglebarLite.UpdateUpButton();
@@ -1498,7 +1503,7 @@ var objGooglebarLite = {
 		{
 			objGooglebarLite.Initialized = true;
 			objGooglebarLite.PrefObserver.register();
-	
+			
 			window.getBrowser().addProgressListener(objGooglebarLite.ProgressListener);
 			
 			var chevron = document.getElementById("GBL-Overflow-Button");
@@ -1546,6 +1551,10 @@ var objGooglebarLite = {
 		{
 			document.getElementById("GBL-TB-Dictionary").disabled = false;
 			document.getElementById("GBL-TB-Combined-Dictionary").disabled = false;
+			// HACK: For some reason, starting in Firefox 28, setting the disabled property to false no longer
+			// actually does that (at least after visiting about:customizing). Explicitly removing the attribute
+			// from the element actually does the trick.
+			document.getElementById("GBL-TB-Combined-Dictionary").removeAttribute("disabled");
 			document.getElementById("GBL-TB-Highlighter").disabled = false;
 		}
 
@@ -1820,12 +1829,24 @@ var objGooglebarLite = {
 		{
 			var hostArray = addressArray[2].split(".");
 			if(hostArray.length >= 3 && (addressArray[0] == "http:" || addressArray[0] == "https:") && hostArray[0] != "www")
+			{
 				document.getElementById("GBL-TB-UpButton").disabled = false;
+				// HACK: For some reason, starting in Firefox 28, setting the disabled property to false no longer
+				// actually does that (at least after visiting about:customizing). Explicitly removing the attribute
+				// from the element actually does the trick.
+				document.getElementById("GBL-TB-UpButton").removeAttribute("disabled");
+			}
 			else
 				document.getElementById("GBL-TB-UpButton").disabled = true;
 		}
 		else
+		{
 			document.getElementById("GBL-TB-UpButton").disabled = false;
+			// HACK: For some reason, starting in Firefox 28, setting the disabled property to false no longer
+			// actually does that (at least after visiting about:customizing). Explicitly removing the attribute
+			// from the element actually does the trick.
+			document.getElementById("GBL-TB-UpButton").removeAttribute("disabled");
+		}
 	},
 	
 	UpdateUpMenu: function()
