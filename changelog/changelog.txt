@@ -1,6 +1,9 @@
 //***************
 //Version History
 //***************
+[5.0.2]
++ Bug Fix: Fixed an issue caused by a change in Firefox 31 that prevented search suggestions from being clicked
+
 [5.0.1]
 + Bug Fix: Implemented a workaround to prevent the search site button, up button, and Google Dictionary menu item from getting stuck in the "disabled" state
 

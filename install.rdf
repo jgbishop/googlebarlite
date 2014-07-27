@@ -13,7 +13,7 @@
 	<em:name>Googlebar Lite</em:name>
 	<em:optionsURL>chrome://googlebarlite/content/prefs.xul</em:optionsURL>
 	<em:type>2</em:type>
-	<em:version>5.0.1</em:version>
+	<em:version>5.0.2</em:version>
 
 	<em:updateURL>http://www.borngeek.com/downloads/update.rdf</em:updateURL>
 	
