@@ -104,6 +104,14 @@ ProviderAutoCompleteResult.prototype = {
 	},
 
 	/**
+	 * Get the final value that should be completed when the user confirms
+	 * the match at the given index.
+	 */
+	getFinalCompleteValueAt: function(index) {
+		return this._results[index];
+	},
+
+	/**
 	 * @return {string} the comment of the result at the given index
 	 */
 	getCommentAt: function(index) {
@@ -301,9 +309,12 @@ ProviderAutoCompleteSearch.prototype = {
 		   (this._formHistoryResult.searchResult == Ci.nsIAutoCompleteResult.RESULT_SUCCESS))
 		{
 			var maxHistoryItems = Math.min(this._formHistoryResult.matchCount, this._historyLimit);
+			var hasFinalValue = ('getFinalCompleteValueAt' in this._formHistoryResult);
 			for(var i=0; i<maxHistoryItems; i++)
 			{
-				var term = this._formHistoryResult.getValueAt(i);
+				var term = hasFinalValue ?
+					this._formHistoryResult.getFinalCompleteValueAt(i) :
+					this._formHistoryResult.getValueAt(i);
 				var dupIndex = results.indexOf(term);
 				if(dupIndex != -1)
 					results.splice(dupIndex, 1);
