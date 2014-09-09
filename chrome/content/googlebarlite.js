@@ -122,7 +122,6 @@ var objGooglebarLite = {
 	Initialized: false,
 	LastHighlightedTerms: "",
 	OverflowButtonWidth: 0,
-	PreviouslyOnSecureSearchPage: false,
 	ResizeTimerID: null,
 	ToolbarPresent: false,
 	
@@ -200,24 +199,13 @@ var objGooglebarLite = {
 					if(terms != null)
 					{
 						// If all of the following conditions are true, don't change the search terms (stupid forwarding trick from Google)
-						// 1. User was previously on https google query
-						// 2. User is now on http google query
-						// 3. Query string is empty
-						// 4. Parameter "esrc=s" is present
-						if(! (objGooglebarLite.PreviouslyOnSecureSearchPage == true && 
-						   url.scheme == "http" && 
-						   queryParts.hasOwnProperty("esrc") &&
-						   queryParts["esrc"] == "s" &&
-						   terms == ""))
+						//  - Query string is empty
+						//  - Parameter "esrc=s" is present
+						if(! (queryParts.hasOwnProperty("esrc") && queryParts["esrc"] == "s" && terms == ""))
 						{
 							if(objGooglebarLite.GetSearchTerms(false) != terms)
 								objGooglebarLite.SetSearchTerms(terms);
 						}
-						
-						if(url.scheme == "https")
-							objGooglebarLite.PreviouslyOnSecureSearchPage = true;
-						else
-							objGooglebarLite.PreviouslyOnSecureSearchPage = false;
 					}
 				}
 	
@@ -322,11 +310,7 @@ var objGooglebarLite = {
 
 	AddSearchWordButtons: function(inString)
 	{
-//		var searchWordsContainer = document.getElementById("GBL-TB-SearchWordsContainer");
-//		var highlighter = document.getElementById("GBL-TB-Highlighter");
-//		var overflowMenu = document.getElementById("GBL-Overflow-Menu");
 		var stringBundle = document.getElementById("GBL-String-Bundle");
-	
 		var searchTerms = this.SplitTerms(inString);
 		var tempButton;
 		var tempMenuItem;

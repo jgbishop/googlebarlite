@@ -1,6 +1,9 @@
 //***************
 //Version History
 //***************
+[5.0.3]
++ Bug Fix: Simplified logic in the ProgressListener routines that caused search terms to occasionally be removed in some circumstances
+
 [5.0.2]
 + Bug Fix: Fixed an issue caused by a change in Firefox 31 that prevented search suggestions from being clicked
 
