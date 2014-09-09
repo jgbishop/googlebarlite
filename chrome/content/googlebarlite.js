@@ -81,10 +81,15 @@ var objGooglebarLite = {
 					if(prefValue == false)
 					{
 						// User just hid the search word buttons, so remove any set width
-						// on the parent container, and hide the overflow button
+						// on the parent container, hide the overflow button, and clean up
 						document.getElementById("GBL-TB-SearchWordArea").removeAttribute("width");
 						document.getElementById("GBL-Overflow-Button").collapsed = !prefValue;
+						objGooglebarLite.RemoveAllChildren("GBL-TB-SearchWordsContainer");
+						objGooglebarLite.RemoveAllChildren("GBL-Overflow-Menu");
 					}
+					else
+						objGooglebarLite.UpdateSearchWordButtons();
+					
 					break;
 				}
 				
@@ -132,12 +137,12 @@ var objGooglebarLite = {
 	),
 	
 	StylesArray: new Array(
-		"-moz-image-region: rect(0px 32px 16px 16px)",
-		"-moz-image-region: rect(0px 48px 16px 32px)",
-		"-moz-image-region: rect(0px 64px 16px 48px)",
-		"-moz-image-region: rect(0px 80px 16px 64px)",
-		"-moz-image-region: rect(0px 96px 16px 80px)",
-		"-moz-image-region: rect(0px 112px 16px 96px)"
+		"-moz-image-region: rect(32px 48px 48px 32px)",
+		"-moz-image-region: rect(32px 64px 48px 48px)",
+		"-moz-image-region: rect(32px 80px 48px 64px)",
+		"-moz-image-region: rect(32px 96px 48px 80px)",
+		"-moz-image-region: rect(32px 112px 48px 96px)",
+		"-moz-image-region: rect(32px 128px 48px 112px)"
 	),
 
 	ProgressListener: {
@@ -225,11 +230,6 @@ var objGooglebarLite = {
 				}
 				else
 				{
-					searchSiteButton.disabled = false;
-					searchSiteMenuItem.disabled = false;
-					// HACK: For some reason, starting in Firefox 28, setting the disabled property to false no longer
-					// actually does that (at least after visiting about:customizing). Explicitly removing the attribute
-					// from the element actually does the trick.
 					searchSiteButton.removeAttribute("disabled");
 					searchSiteMenuItem.removeAttribute("disabled");
 				}
@@ -346,6 +346,7 @@ var objGooglebarLite = {
 			
 			tempMenuItem = this.CreateXULElement("menuitem", {
 				'label': thisTerm,
+				'class': 'menuitem-iconic',
 				'collapsed': "true",
 				'tooltiptext': stringBundle.getFormattedString("GBL_FindNextOccurrence", [thisTerm])
 			});
@@ -1005,6 +1006,15 @@ var objGooglebarLite = {
 		this.Search(selection, searchType, useTab);
 	},
 	
+	RemoveAllChildren: function(id)
+	{
+		var node = document.getElementById(id);
+		while(node.hasChildNodes())
+		{
+			node.removeChild(node.lastChild);
+		}
+	},
+	
 	RemoveHighlighting: function(win)
 	{
 		// Remove highlighting.  We use the find API again rather than
@@ -1353,7 +1363,7 @@ var objGooglebarLite = {
 	
 		// If the normal "Paste" command is disabled, let's disable ours too
 		if(enabled)
-			cmd.disabled = false;
+			cmd.removeAttribute("disabled");
 		else
 			cmd.disabled = true;
 	},
@@ -1533,13 +1543,9 @@ var objGooglebarLite = {
 		}
 		else
 		{
-			document.getElementById("GBL-TB-Dictionary").disabled = false;
-			document.getElementById("GBL-TB-Combined-Dictionary").disabled = false;
-			// HACK: For some reason, starting in Firefox 28, setting the disabled property to false no longer
-			// actually does that (at least after visiting about:customizing). Explicitly removing the attribute
-			// from the element actually does the trick.
+			document.getElementById("GBL-TB-Dictionary").removeAttribute("disabled");
 			document.getElementById("GBL-TB-Combined-Dictionary").removeAttribute("disabled");
-			document.getElementById("GBL-TB-Highlighter").disabled = false;
+			document.getElementById("GBL-TB-Highlighter").removeAttribute("disabled");
 		}
 
 		this.UpdateSearchWordButtons();
@@ -1704,13 +1710,13 @@ var objGooglebarLite = {
 		}
 		else
 		{
-			conWeb.disabled = false;
-			conSite.disabled = false;
-			conImages.disabled = false;
-			conVideo.disabled = false;
-			conGroups.disabled = false;
-			conMaps.disabled = false;
-			conDictionary.disabled = false;
+			conWeb.removeAttribute("disabled");
+			conSite.removeAttribute("disabled");
+			conImages.removeAttribute("disabled");
+			conVideo.removeAttribute("disabled");
+			conGroups.removeAttribute("disabled");
+			conMaps.removeAttribute("disabled");
+			conDictionary.removeAttribute("disabled");
 		}
 	
 		// Update all of the web-page specific menu items
@@ -1725,16 +1731,16 @@ var objGooglebarLite = {
 		}
 		else
 		{
-			conBackward.disabled = false;
-			conCached.disabled = false;
-			conSimilar.disabled = false;
-			conTranslate.disabled = false;
+			conBackward.removeAttribute("disabled");
+			conCached.removeAttribute("disabled");
+			conSimilar.removeAttribute("disabled");
+			conTranslate.removeAttribute("disabled");
 		}
 	
 		if(!gContextMenu.onLink || (/^file:/i.test(gContextMenu.link)) || (/^about:/i.test(gContextMenu.link)))
 			conCachedLink.disabled = true;
 		else
-			conCachedLink.disabled = false;
+			conCachedLink.removeAttribute("disabled");
 	
 	},
 
@@ -1784,20 +1790,15 @@ var objGooglebarLite = {
 	
 	UpdateSearchWordButtons: function()
 	{
-		// Step 1: Clear existing search word buttons
-		var searchWordsContainer = document.getElementById("GBL-TB-SearchWordsContainer");
-		while(searchWordsContainer.hasChildNodes())
-		{
-			searchWordsContainer.removeChild(searchWordsContainer.lastChild);
-		}
+		// Don't bother doing anything if the search words aren't visible
+		if(GooglebarLiteCommon.Data.Prefs.TB_ShowSearchWords.value === false)
+			return;
 		
-		var overflowMenu = document.getElementById("GBL-Overflow-Menu");
-		while(overflowMenu.hasChildNodes())
-		{
-			overflowMenu.removeChild(overflowMenu.lastChild);
-		}
+		// Clear existing search word buttons
+		this.RemoveAllChildren("GBL-TB-SearchWordsContainer");
+		this.RemoveAllChildren("GBL-Overflow-Menu");
 		
-		// Step 2: Add the new search word buttons
+		// Add the new search word buttons
 		this.AddSearchWordButtons(this.GetSearchTerms());
 	},
 
@@ -1813,24 +1814,12 @@ var objGooglebarLite = {
 		{
 			var hostArray = addressArray[2].split(".");
 			if(hostArray.length >= 3 && (addressArray[0] == "http:" || addressArray[0] == "https:") && hostArray[0] != "www")
-			{
-				document.getElementById("GBL-TB-UpButton").disabled = false;
-				// HACK: For some reason, starting in Firefox 28, setting the disabled property to false no longer
-				// actually does that (at least after visiting about:customizing). Explicitly removing the attribute
-				// from the element actually does the trick.
 				document.getElementById("GBL-TB-UpButton").removeAttribute("disabled");
-			}
 			else
 				document.getElementById("GBL-TB-UpButton").disabled = true;
 		}
 		else
-		{
-			document.getElementById("GBL-TB-UpButton").disabled = false;
-			// HACK: For some reason, starting in Firefox 28, setting the disabled property to false no longer
-			// actually does that (at least after visiting about:customizing). Explicitly removing the attribute
-			// from the element actually does the trick.
 			document.getElementById("GBL-TB-UpButton").removeAttribute("disabled");
-		}
 	},
 	
 	UpdateUpMenu: function()
@@ -1842,11 +1831,7 @@ var objGooglebarLite = {
 			return;
 	
 		// Clean up what's currently in the up menu
-		var upMenu = document.getElementById("GBL-TB-UpMenu");
-		while(upMenu.hasChildNodes())
-		{
-			upMenu.removeChild(upMenu.lastChild);
-		}
+		this.RemoveAllChildren("GBL-TB-UpMenu");
 
 		var i=0; // Avoid multiple redeclaration warnings
 	

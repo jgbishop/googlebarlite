@@ -1,6 +1,8 @@
 #GBL-TB-Combined-Popup .menuitem-iconic,
 .GBL-Toolbar-Button,
-.GBL-Toolbar-Button-NoLabel { list-style-image: url("chrome://googlebarlite/skin/buttonsheet.png"); }
+.GBL-Toolbar-Button-NoLabel,
+.GBL-TB-SearchWordButton,
+#GBL-Overflow-Menu > menuitem { list-style-image: url("chrome://googlebarlite/skin/buttonsheet.png"); }
 
 	.GBL-Toolbar-Button-NoLabel { -moz-box-orient: vertical; }
 	.GBL-Toolbar-Button-NoLabel .toolbarbutton-icon { margin-left: 2px; margin-right: 2px; }
@@ -86,9 +88,9 @@
 	padding: 3px;
 }
 
-.GBL-TB-SearchWordButton {
-	list-style-image: url("chrome://googlebarlite/skin/searchwordsheet.png");
-	-moz-image-region: rect(0px 16px 16px 0px);
+.GBL-TB-SearchWordButton,
+#GBL-Overflow-Menu > menuitem {
+	-moz-image-region: rect(32px 16px 48px 0px);
 }
 
 .GBL-TB-SearchWordButton .toolbarbutton-text,

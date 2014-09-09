@@ -3,6 +3,9 @@
 //***************
 [5.0.3]
 + Bug Fix: Simplified logic in the ProgressListener routines that caused search terms to occasionally be removed in some circumstances
++ Bug Fix: The Googlebar Lite toolbar should no longer permanently overflow if it's placed on the navigation toolbar and search words are enabled
++ Bug Fix: Overflowed search terms should now properly display an icon, indicating their highlighted color
++ Bug Fix: Search word buttons are no longer created when the search word area is hidden
 
 [5.0.2]
 + Bug Fix: Fixed an issue caused by a change in Firefox 31 that prevented search suggestions from being clicked
