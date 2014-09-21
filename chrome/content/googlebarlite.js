@@ -1838,6 +1838,8 @@ var objGooglebarLite = {
 		var tempItem = null;
 		var currentPath = "";
 		var endPoint = (addressArray[0] == "file:" ? 3 : 2);
+
+		var upMenu = document.getElementById("GBL-TB-UpMenu");
 	
 		for(i=(addressArray.length - 1); i > endPoint; i--)
 		{

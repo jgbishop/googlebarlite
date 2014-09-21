@@ -1,6 +1,9 @@
 //***************
 //Version History
 //***************
+[5.0.4]
++ Bug Fix: Corrected an issue introduced in 5.0.3 that caused the up menu from working properly
+
 [5.0.3]
 + Bug Fix: Simplified logic in the ProgressListener routines that caused search terms to occasionally be removed in some circumstances
 + Bug Fix: The Googlebar Lite toolbar should no longer permanently overflow if it's placed on the navigation toolbar and search words are enabled
