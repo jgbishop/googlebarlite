@@ -405,17 +405,29 @@ var objGooglebarLite = {
 		if(actualWidth < reportedWidth)
 			c.width = actualWidth;
 		
+		var s1visible, s2visible, s3visible, s4visible;
+		
 		// Also, update the separator controls as necessary
-		var s1visible = GooglebarLiteCommon.Data.Prefs.TB_ShowCombined.value;
-		var s2visible = (GooglebarLiteCommon.Data.Prefs.TB_ShowWeb.value || GooglebarLiteCommon.Data.Prefs.TB_ShowLucky.value ||
+		if(GooglebarLiteCommon.Data.Prefs.TB_HideSeparators.value == true)
+		{
+			s1visible = false;
+			s2visible = false;
+			s3visible = false;
+			s4visible = false;
+		}
+		else
+		{
+			s1visible = GooglebarLiteCommon.Data.Prefs.TB_ShowCombined.value;
+			s2visible = (GooglebarLiteCommon.Data.Prefs.TB_ShowWeb.value || GooglebarLiteCommon.Data.Prefs.TB_ShowLucky.value ||
 						 GooglebarLiteCommon.Data.Prefs.TB_ShowSite.value || GooglebarLiteCommon.Data.Prefs.TB_ShowImages.value ||
 						 GooglebarLiteCommon.Data.Prefs.TB_ShowVideo.value || GooglebarLiteCommon.Data.Prefs.TB_ShowNews.value ||
 						 GooglebarLiteCommon.Data.Prefs.TB_ShowMaps.value || GooglebarLiteCommon.Data.Prefs.TB_ShowGroups.value ||
 						 GooglebarLiteCommon.Data.Prefs.TB_ShowBlog.value || GooglebarLiteCommon.Data.Prefs.TB_ShowBook.value ||
 						 GooglebarLiteCommon.Data.Prefs.TB_ShowScholar.value || GooglebarLiteCommon.Data.Prefs.TB_ShowDictionary.value ||
 						 GooglebarLiteCommon.Data.Prefs.TB_ShowFinance.value || GooglebarLiteCommon.Data.Prefs.TB_ShowShopping.value);
-		var s3visible = (GooglebarLiteCommon.Data.Prefs.TB_ShowUp.value || GooglebarLiteCommon.Data.Prefs.TB_ShowHighlighter.value);
-		var s4visible = GooglebarLiteCommon.Data.Prefs.TB_ShowSearchWords.value;
+			s3visible = (GooglebarLiteCommon.Data.Prefs.TB_ShowUp.value || GooglebarLiteCommon.Data.Prefs.TB_ShowHighlighter.value);
+			s4visible = GooglebarLiteCommon.Data.Prefs.TB_ShowSearchWords.value;
+		}
 
 		document.getElementById("GBL-TB-Sep1").hidden = !(s1visible && (s2visible || s3visible || s4visible));
 		document.getElementById("GBL-TB-Sep2").hidden = !(s2visible && (s3visible || s4visible));
@@ -1220,6 +1232,10 @@ var objGooglebarLite = {
 		case "maps":
 			if(isEmpty) URL = this.BuildSearchURL({domain: "maps"});
 			else		URL = this.BuildSearchURL({domain: "maps", homepage: "maps", terms: searchTerms});
+
+			if(GooglebarLiteCommon.Data.Prefs.ForceClassicMaps.value == true)
+				URL += "&output=classic&dg=optperm";
+			
 			break;
 	
 		case "shopping":

@@ -6,9 +6,11 @@ pref("extensions.googlebarlite.remember_combined", false);
 pref("extensions.googlebarlite.search_on_drag_drop", false);
 pref("extensions.googlebarlite.disable_auto_correct", false);
 pref("extensions.googlebarlite.lock_search_box", false);
+pref("extensions.googlebarlite.force_classic_maps", false);
 
 // Toolbar Buttons
 pref("extensions.googlebarlite.buttons.showlabels", true);
+pref("extensions.googlebarlite.buttons.hideseparators", false);
 pref("extensions.googlebarlite.buttons.up", true);
 pref("extensions.googlebarlite.buttons.highlighter", true);
 pref("extensions.googlebarlite.buttons.searchwords", true);

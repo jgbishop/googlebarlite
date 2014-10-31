@@ -19,6 +19,7 @@
 			<preference id="GBL-Pref-SearchDragDrop" name="extensions.googlebarlite.search_on_drag_drop" type="bool" />
 			<preference id="GBL-Pref-DisableAutoCorrect" name="extensions.googlebarlite.disable_auto_correct" type="bool" />
 			<preference id="GBL-Pref-LockSearchBox" name="extensions.googlebarlite.lock_search_box" type="bool" />
+			<preference id="GBL-Pref-ForceClassicMaps" name="extensions.googlebarlite.force_classic_maps" type="bool" />
 			<preference id="GBL-Pref-SiteToUse" name="extensions.googlebarlite.site_to_use" type="wstring" />
 		</preferences>
 
@@ -34,6 +35,7 @@
 		<groupbox orient="vertical">
 			<caption label="&gblite.options.searchsettings;" />
 			<checkbox id="GBL-Opt-DisableAutoCorrect" label="&gblite.options.disableautocorrect;" preference="GBL-Pref-DisableAutoCorrect" />
+			<checkbox id="GBL-Opt-ForceClassicMaps" label="&gblite.options.forceclassicmaps;" preference="GBL-Pref-ForceClassicMaps" />
 			<hbox align="center">
 				<label value="&gblite.options.label.sitetouse;" />
 				<menulist id="GBL-Opt-SiteToUse" preference="GBL-Pref-SiteToUse">
@@ -142,6 +144,7 @@
 	<prefpane id="GBL-PrefPane-Buttons" label="&gblite.options.tab.buttons;">
 		<preferences>
 			<preference id="GBL-Pref-TB-ShowLabels" name="extensions.googlebarlite.buttons.showlabels" type="bool" />
+			<preference id="GBL-Pref-TB-HideSeparators" name="extensions.googlebarlite.buttons.hideseparators" type="bool" />
 			<preference id="GBL-Pref-TB-Up" name="extensions.googlebarlite.buttons.up" type="bool" />
 			<preference id="GBL-Pref-TB-Highlighter" name="extensions.googlebarlite.buttons.highlighter" type="bool" />
 			<preference id="GBL-Pref-TB-SearchWords" name="extensions.googlebarlite.buttons.searchwords" type="bool" />
@@ -207,6 +210,7 @@
 			<caption label="&gblite.options.label.commonbuttons;" />
 			
 			<checkbox id="GBL-Opt-TB-ShowLabels" label="&gblite.options.showlabels;" preference="GBL-Pref-TB-ShowLabels" />
+			<checkbox id="GBL-Opt-TB-HideSeparators" label="&gblite.options.hideseparators;" preference="GBL-Pref-TB-HideSeparators" />
 
 			<grid flex="1">
 				<columns>

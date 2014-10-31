@@ -17,6 +17,7 @@ GooglebarLiteCommon.Data = {
 		SearchOnDragDrop: { name: "search_on_drag_drop", value: false },
 		DisableAutoCorrect: { name: "disable_auto_correct", value: false },
 		LockSearchBox: { name: "lock_search_box", value: false },
+		ForceClassicMaps: { name: "force_classic_maps", value: false },
 
 		// Search history
 		WarnOnFormHistory: { name: "warn_on_form_history", value: false },
@@ -30,6 +31,7 @@ GooglebarLiteCommon.Data = {
 
 		// Toolbar buttons
 		TB_ShowLabels: { name: "buttons.showlabels", value: false },
+		TB_HideSeparators: { name: "buttons.hideseparators", value: false },
 		TB_ShowUp: { name: "buttons.up", value: false, xulid: "GBL-TB-UpButton" },
 		TB_ShowHighlighter: { name: "buttons.highlighter", value: false, xulid: "GBL-TB-Highlighter" },
 		TB_ShowSearchWords: { name: "buttons.searchwords", value: false, xulid: "GBL-TB-SearchWordsContainer" },
