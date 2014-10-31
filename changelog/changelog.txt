@@ -1,6 +1,11 @@
 //***************
 //Version History
 //***************
+[5.0.5]
++ Added an option to hide all toolbar separators
++ Added an option to force the classic Google Maps interface when performing a Maps search
++ Bug Fix: External toolbar buttons placed on the Googlebar Lite toolbar should no longer display their label
+
 [5.0.4]
 + Bug Fix: Corrected an issue introduced in 5.0.3 that caused the up menu from working properly
 
