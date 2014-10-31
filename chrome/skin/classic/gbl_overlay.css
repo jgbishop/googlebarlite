@@ -93,8 +93,10 @@
 	-moz-image-region: rect(32px 16px 48px 0px);
 }
 
-.GBL-TB-SearchWordButton .toolbarbutton-text,
-.GBL-Toolbar-Button .toolbarbutton-text { display: -moz-box; }
+#GBL-Toolbar .toolbarbutton-text { display: none; }
+
+#GBL-Toolbar .GBL-TB-SearchWordButton .toolbarbutton-text,
+#GBL-Toolbar .GBL-Toolbar-Button .toolbarbutton-text { display: -moz-box; }
 
 	toolbar[mode="icons"] .GBL-TB-SearchWordButton .toolbarbutton-text { display: -moz-box !important; }
 	toolbar[mode="text"] .GBL-Toolbar-Button .toolbarbutton-icon { display: -moz-box; }
