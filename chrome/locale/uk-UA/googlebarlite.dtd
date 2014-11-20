@@ -1,0 +1,166 @@
+<!ENTITY gblite.name "Googlebar Lite">
+<!ENTITY gblite.toolbar.name "Панель інструментів Googlebar Lite">
+<!ENTITY gblite.ak.name "П">
+<!ENTITY gblite.toggle.toolbar "Перемикач панелі GBL">
+<!ENTITY gblite.searchtype.web "Пошук у Інтернеті">
+<!ENTITY gblite.searchtype.lucky "Мені пощастить">
+<!ENTITY gblite.searchtype.site "Пошук на сайті">
+<!ENTITY gblite.searchtype.image "Пошук зображень">
+<!ENTITY gblite.searchtype.video "Пошук відео">
+<!ENTITY gblite.searchtype.news "Пошук новин">
+<!ENTITY gblite.searchtype.maps "Пошук на мапах Google">
+<!ENTITY gblite.searchtype.shopping "Пошук продуктів">
+<!ENTITY gblite.searchtype.group "Пошук Груп">
+<!ENTITY gblite.searchtype.blog "Пошук по блоґах">
+<!ENTITY gblite.searchtype.book "Пошук книг">
+<!ENTITY gblite.searchtype.finance "Пошук фінансової інформації">
+<!ENTITY gblite.searchtype.scholar "Пошук наукової інформації">
+<!ENTITY gblite.searchtype.dictionary "Словник Google">
+<!ENTITY gblite.context.web "Шукати вибраний текст у Інтернеті">
+<!ENTITY gblite.context.ak.web "І">
+<!ENTITY gblite.context.site "Шукати вибраний текст на Цьому сайті">
+<!ENTITY gblite.context.ak.site "Ц">
+<!ENTITY gblite.context.images "Шукати вибраний текст у Зображеннях">
+<!ENTITY gblite.context.ak.images "З">
+<!ENTITY gblite.context.video "Шукати вибраний текст у Відео">
+<!ENTITY gblite.context.ak.video "В">
+<!ENTITY gblite.context.groups "Шукати вибраний текст у Групах">
+<!ENTITY gblite.context.ak.groups "Г">
+<!ENTITY gblite.context.maps "Шукати вибраний текст у Мапах Google">
+<!ENTITY gblite.context.ak.maps "М">
+<!ENTITY gblite.context.dictionary "Шукати вибраний текст у Словнику Google">
+<!ENTITY gblite.context.ak.dictionary "C">
+<!ENTITY gblite.context.backwardlinks "Зворотні посилання">
+<!ENTITY gblite.context.ak.backwardlinks "п">
+<!ENTITY gblite.context.cached "Кешувати знімок цієї сторінки">
+<!ENTITY gblite.context.ak.cached "с">
+<!ENTITY gblite.context.cachedlink "Кешувати знімок цього посилання">
+<!ENTITY gblite.context.ak.cachedlink "л">
+<!ENTITY gblite.context.similar "Шукати схожі сторінки">
+<!ENTITY gblite.context.ak.similar "Ш">
+<!ENTITY gblite.context.translate "Перекласти на Англійську">
+<!ENTITY gblite.context.ak.translate "А">
+<!ENTITY gblite.mainmenu.label.homepage "Домашня сторінка Google">
+<!ENTITY gblite.mainmenu.ak.homepage "Д">
+<!ENTITY gblite.mainmenu.label.googlelinks "Посилання Google">
+<!ENTITY gblite.mainmenu.ak.googlelinks "П">
+<!ENTITY gblite.mainmenu.label.advanced "Розширений пошук">
+<!ENTITY gblite.mainmenu.ak.advanced "Р">
+<!ENTITY gblite.mainmenu.label.images "Google Зображення">
+<!ENTITY gblite.mainmenu.ak.images "З">
+<!ENTITY gblite.mainmenu.label.video "Google Відео">
+<!ENTITY gblite.mainmenu.ak.video "В">
+<!ENTITY gblite.mainmenu.label.news "Google Новини">
+<!ENTITY gblite.mainmenu.ak.news "Н">
+<!ENTITY gblite.mainmenu.label.maps "Google Мапи">
+<!ENTITY gblite.mainmenu.ak.maps "М">
+<!ENTITY gblite.mainmenu.label.shopping "Google Пошук продуктів">
+<!ENTITY gblite.mainmenu.ak.shopping "П">
+<!ENTITY gblite.mainmenu.label.groups "Google Групи">
+<!ENTITY gblite.mainmenu.ak.groups "Г">
+<!ENTITY gblite.mainmenu.label.blog "Google Пошук по блоґах">
+<!ENTITY gblite.mainmenu.ak.blog "б">
+<!ENTITY gblite.mainmenu.label.book "Google Пошук книг">
+<!ENTITY gblite.mainmenu.ak.book "к">
+<!ENTITY gblite.mainmenu.label.finance "Google Фінанси">
+<!ENTITY gblite.mainmenu.ak.finance "Ф">
+<!ENTITY gblite.mainmenu.label.scholar "Google Наука">
+<!ENTITY gblite.mainmenu.ak.scholar "а">
+<!ENTITY gblite.mainmenu.label.gmail "Google GMail">
+<!ENTITY gblite.mainmenu.ak.gmail "M">
+<!ENTITY gblite.mainmenu.label.searchprefs "Пошукові вподобання">
+<!ENTITY gblite.mainmenu.ak.searchprefs "в">
+<!ENTITY gblite.mainmenu.label.languagetools "Мовні інструменти">
+<!ENTITY gblite.mainmenu.ak.languagetools "і">
+<!ENTITY gblite.mainmenu.label.options "Параметри...">
+<!ENTITY gblite.mainmenu.ak.options "е">
+<!ENTITY gblite.mainmenu.label.clearhistory "Очистити історію пошуків">
+<!ENTITY gblite.mainmenu.ak.clearhistory "О">
+<!ENTITY gblite.mainmenu.label.help "Допомога">
+<!ENTITY gblite.mainmenu.ak.help "Д">
+<!ENTITY gblite.mainmenu.label.about "Про..">
+<!ENTITY gblite.mainmenu.ak.about "П">
+<!ENTITY gblite.tt.mainmenu "Головне меню Googlebar Lite">
+<!ENTITY gblite.tt.combined "Варіанти пошуку">
+<!ENTITY gblite.tt.web "Шукати у веб">
+<!ENTITY gblite.tt.lucky "Виконати пошук &quot;Мені пощастить&quot;">
+<!ENTITY gblite.tt.site "Шукати сайт">
+<!ENTITY gblite.tt.image "Шукати зображення у веб">
+<!ENTITY gblite.tt.shopping "Шукати товари">
+<!ENTITY gblite.tt.group "Шукати Групи Google">
+<!ENTITY gblite.tt.book "Шукати книги">
+<!ENTITY gblite.tt.news "Шукати новини">
+<!ENTITY gblite.tt.blog "Шукати блоги">
+<!ENTITY gblite.tt.finance "Шукати фінанси">
+<!ENTITY gblite.tt.video "Шукати у Google відео">
+<!ENTITY gblite.tt.maps "Шукати у Google карти">
+<!ENTITY gblite.tt.scholar "Шукати наукові праці">
+<!ENTITY gblite.tt.dictionary "Шукати у Google словник">
+<!ENTITY gblite.tt.up "Піднятись на один рівень">
+<!ENTITY gblite.tt.highlighter "Увімкнути/вимкнути виділення пошукового контексту на цій сторінці">
+<!ENTITY gblite.tt.overflow "Пошукові контексти (продовження)">
+<!ENTITY gblite.tt.splitter "Змінити розмір Пошукового вікна">
+<!ENTITY gblite.options.title "Параметри Googlebar Lite">
+<!ENTITY gblite.options.tab.general "Загальні">
+<!ENTITY gblite.options.tab.buttons "Кнопки панелі інструментів">
+<!ENTITY gblite.options.tab.searchhistory "Історія пошуку">
+<!ENTITY gblite.options.tab.keyboard "Гарячі клавіші">
+<!ENTITY gblite.options.tab.context "Контекстне меню">
+<!ENTITY gblite.options.label.sitetouse "Використовувати сайт Google:">
+<!ENTITY gblite.options.label.shortcutrestartwarning "Зміна режиму активності поля пошуку потребує перезавантаження браузеру.">
+<!ENTITY gblite.options.label.searchboxfocus "Встановити активним поле пошуку">
+<!ENTITY gblite.options.label.shortcutctrl "Ctrl">
+<!ENTITY gblite.options.label.shortcutalt "Alt">
+<!ENTITY gblite.options.label.shortcutshift "Shift">
+<!ENTITY gblite.options.label.shortcuterror "Зазначене поєднання клавіш є недійсним. Оберіть принаймні одну клавішу-модифікатор і запропонуйте літеру на клавіатурі.">
+<!ENTITY gblite.options.label.shiftenter "Shift + Enter виконує">
+<!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter виконує">
+<!ENTITY gblite.options.label.shiftctrlenter "Ctrl + Shift + Enter виконує">
+<!ENTITY gblite.options.label.searchbuttons "Кнопки пошуку">
+<!ENTITY gblite.options.label.commonbuttons "Основні кнопки та налаштування панелі інструментів">
+<!ENTITY gblite.options.toolbarsettings "Налаштування панелі інструментів">
+<!ENTITY gblite.options.searchsettings "Налаштування пошуку">
+<!ENTITY gblite.options.clickselectsall "Один клік в поле пошуку вибирає всі пошукові запити">
+<!ENTITY gblite.options.searchintab "Відкрити результати пошуку у новій вкладці (за необхідності)">
+<!ENTITY gblite.options.remembercombined "Запам'ятати варіант останнього пошуку">
+<!ENTITY gblite.options.searchondragdrop "Автоматично шукати після переносу контексту">
+<!ENTITY gblite.options.locksearchbox "Зафіксувати розмір поля пошуку">
+<!ENTITY gblite.options.disableautocorrect "Вимкнути автокорегування пошуку Google">
+<!ENTITY gblite.options.forceclassicmaps "Змусити Пошук у Google Maps використовувати класичний інтерфейс">
+<!ENTITY gblite.options.warnonformhistory "Попередити про відключення у Firefox збереження даних форм">
+<!ENTITY gblite.options.maintainhistory "Підтримувати історію пошуку">
+<!ENTITY gblite.options.searchsuggest "Включити пропозицію варіантів пошуку Google">
+<!ENTITY gblite.options.autocomplete "Включити автозаповнення">
+<!ENTITY gblite.options.inlinecomplete "Використовувати вбудований механізм заповнення">
+<!ENTITY gblite.options.autosearchhistory "Автоматично шукати після вибору із історії пошуків">
+<!ENTITY gblite.options.ignoredictionary "Ігнорувати Google Dictionary у історії пошуку">
+<!ENTITY gblite.options.prompttoclear "Запитувати перед очищенням історії пошуку">
+<!ENTITY gblite.options.showlabels "Показати написи на кнопках (вибірково тільки текст)">
+<!ENTITY gblite.options.hideseparators "Приховати розділювачі панелі інструментів">
+<!ENTITY gblite.options.showsearchwords "Пошукові слова">
+<!ENTITY gblite.options.showhighlighter "Виділення">
+<!ENTITY gblite.options.showup "Вгору">
+<!ENTITY gblite.options.showcombined "Меню варіантів пошуку">
+<!ENTITY gblite.options.showcontext "Показувати Googlebar Lite у контекстному меню">
+<!ENTITY gblite.about.title "Про Googlebar Lite">
+<!ENTITY gblite.about.extdesc "Легка пошукова панель Google для Firefox.">
+<!ENTITY gblite.about.createdby "Автор:">
+<!ENTITY gblite.about.ontheweb "У Інтернет:">
+<!ENTITY gblite.about.visithomepage "Домашня сторінка Googlebar Lite">
+<!ENTITY gblite.about.visitdocumentation "Документація Googlebar Lite">
+<!ENTITY gblite.about.disclaimer "Необхідні застереження">
+<!ENTITY gblite.about.disclaimerinfo "Googlebar Lite не розроблювалась та не підтримується компанією Google, Inc. Терміни 'Google', 'Панель інструментів Google' и 'Vtys gjofcnbnm' є зареєстрованими торговими марками компанії Google, Inc.">
+<!ENTITY gblite.about.translators "Перекладачі">
+<!ENTITY gblite.about.locale "Локаль">
+<!ENTITY gblite.about.translator "Перекладач">
+<!ENTITY gblite.formhistory.title "Googlebar Lite: Попередження історії запитів">
+<!ENTITY gblite.formhistory.warninginfo "Googlebar Lite зафіксував, що ви запросили підтримку історії запитів, але опція збереження даних форм у Firefox наразі вимкнена. Для забезпечення підтримки історії запитів ця опція повинна бути увімкнена у Firefox.">
+<!ENTITY gblite.formhistory.prompt "Що б ви хотіли зробити?">
+<!ENTITY gblite.formhistory.donotdisplay "Не показувати цей діалог наступного разу">
+<!ENTITY gblite.formhistory.ak.donotdisplay "Н">
+<!ENTITY gblite.formhistory.enableformhistory "Увімкнути історію форм">
+<!ENTITY gblite.formhistory.ak.enableformhistory "У">
+<!ENTITY gblite.formhistory.disablesearchhistory "Вимкнути історію запитів">
+<!ENTITY gblite.formhistory.ak.disablesearchhistory "В">
+<!ENTITY gblite.formhistory.cancel "Скасувати">
+<!ENTITY gblite.formhistory.ak.cancel "С">
