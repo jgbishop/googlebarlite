@@ -126,6 +126,7 @@
 <!ENTITY gblite.options.searchondragdrop "Bei &quot;Drag and Drop&quot; automatisch Suchen">
 <!ENTITY gblite.options.locksearchbox "Breite des Suchfeldes sperren">
 <!ENTITY gblite.options.disableautocorrect "Automatische Korrektur der Google-Suche deaktivieren">
+<!ENTITY gblite.options.forceclassicmaps "Google Maps-Suche zwingen, die klassische Oberfläche zu verwenden">
 <!ENTITY gblite.options.warnonformhistory "Warnen, wenn die Option zum Speichern von Formulardaten im Firefox deaktiviert ist">
 <!ENTITY gblite.options.maintainhistory "Such-Chronik pflegen">
 <!ENTITY gblite.options.searchsuggest "Google Suchvorschläge aktivieren">
@@ -135,6 +136,7 @@
 <!ENTITY gblite.options.ignoredictionary "Suchen im Google Wörterbuch nicht in Chronik aufnehmen">
 <!ENTITY gblite.options.prompttoclear "Vor dem Löschen der Chronik nachfragen">
 <!ENTITY gblite.options.showlabels "Schaltflächen-Beschriftung anzeigen (nur vorgewählter Text)">
+<!ENTITY gblite.options.hideseparators "Trennlinien der Symbolleiste ausblenden">
 <!ENTITY gblite.options.showsearchwords "Suchbegriffe">
 <!ENTITY gblite.options.showhighlighter "Markierer">
 <!ENTITY gblite.options.showup "Aufwärts">

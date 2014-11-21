@@ -126,15 +126,17 @@
 <!ENTITY gblite.options.searchondragdrop "Automatycznie wyszukuj po przeciągnięciu i upuszczeniu">
 <!ENTITY gblite.options.locksearchbox "Zablokuj szerokość paska wyszukiwania">
 <!ENTITY gblite.options.disableautocorrect "Wyłącz automatyczną korektę wyszukiwania">
+<!ENTITY gblite.options.forceclassicmaps "Narzuć wyszukiwaniu w Mapach Google używanie interfejsu klasycznego">
 <!ENTITY gblite.options.warnonformhistory "Powiadamiaj, gdy w Firefoksie jest wyłączona historia">
 <!ENTITY gblite.options.maintainhistory "Zachowuj historię wyszukiwania">
 <!ENTITY gblite.options.searchsuggest "Wyświetlaj podpowiedzi Google">
 <!ENTITY gblite.options.autocomplete "Włącz autouzupełnianie">
 <!ENTITY gblite.options.inlinecomplete "Uzupełniaj w wierszu">
 <!ENTITY gblite.options.autosearchhistory "Automatycznie rozpoczynaj wyszukiwanie, gdy element zostanie wybrany z historii">
-<!ENTITY gblite.options.ignoredictionary "Pomijaj  w historii wyszukiwania słownika Google">
+<!ENTITY gblite.options.ignoredictionary "Pomijaj w historii wyszukiwania słownika Google">
 <!ENTITY gblite.options.prompttoclear "Ostrzegaj przed czyszczeniem historii wyszukiwania">
 <!ENTITY gblite.options.showlabels "Wyświetlaj etykiety przycisków">
+<!ENTITY gblite.options.hideseparators "Nie wyświetlaj separatorów na pasku narzędzi">
 <!ENTITY gblite.options.showsearchwords "Szukany tekst">
 <!ENTITY gblite.options.showhighlighter "Wyróżnij">
 <!ENTITY gblite.options.showup "W górę">
