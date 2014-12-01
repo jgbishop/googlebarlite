@@ -126,6 +126,7 @@
 <!ENTITY gblite.options.searchondragdrop "Lohistamisel automaatne otsing">
 <!ENTITY gblite.options.locksearchbox "Lock search box width">
 <!ENTITY gblite.options.disableautocorrect "Disable Google search autocorrect">
+<!ENTITY gblite.options.forceclassicmaps "Force Google Maps searches to use the classic interface">
 <!ENTITY gblite.options.warnonformhistory "Hoiata, kui väljade ajalugu on Firefoxis keelatud">
 <!ENTITY gblite.options.maintainhistory "Hoia otsingute ajalugu">
 <!ENTITY gblite.options.searchsuggest "Enable Google search suggestions">
@@ -135,6 +136,7 @@
 <!ENTITY gblite.options.ignoredictionary "Ignoreeri Google sõnastiku otsinguid ajaloos">
 <!ENTITY gblite.options.prompttoclear "Teata enne otsingute ajaloo kustutamist">
 <!ENTITY gblite.options.showlabels "Näita nuppude nimesid (valimisel)">
+<!ENTITY gblite.options.hideseparators "Hide toolbar separators">
 <!ENTITY gblite.options.showsearchwords "Otsingusõnad">
 <!ENTITY gblite.options.showhighlighter "Marker">
 <!ENTITY gblite.options.showup "Mine üles">

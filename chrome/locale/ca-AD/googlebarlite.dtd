@@ -126,6 +126,7 @@
 <!ENTITY gblite.options.searchondragdrop "Cerca automaticament al arrossegar i deixar anar (Drag &amp; Drop)">
 <!ENTITY gblite.options.locksearchbox "Lock search box width">
 <!ENTITY gblite.options.disableautocorrect "Desactiva la autocorrecció de Google">
+<!ENTITY gblite.options.forceclassicmaps "Force Google Maps searches to use the classic interface">
 <!ENTITY gblite.options.warnonformhistory "Avisa&apos;m quan l&apos;Historial de formularis estigui deshabilitat a Firefox">
 <!ENTITY gblite.options.maintainhistory "Mantenir l&apos;historial de cerca">
 <!ENTITY gblite.options.searchsuggest "Enable Google search suggestions">
@@ -135,6 +136,7 @@
 <!ENTITY gblite.options.ignoredictionary "Ignore Google Dictionary searches in history">
 <!ENTITY gblite.options.prompttoclear "Demana abans de netejar l&apos;historial">
 <!ENTITY gblite.options.showlabels "Mostra el text a les etiquetes (Només text selectiu)">
+<!ENTITY gblite.options.hideseparators "Hide toolbar separators">
 <!ENTITY gblite.options.showsearchwords "Cerca Paraules">
 <!ENTITY gblite.options.showhighlighter "Ressaltador">
 <!ENTITY gblite.options.showup "Amunt">

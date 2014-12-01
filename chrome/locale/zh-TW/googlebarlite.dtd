@@ -126,6 +126,7 @@
 <!ENTITY gblite.options.searchondragdrop "拖放字詞時自動搜尋">
 <!ENTITY gblite.options.locksearchbox "Lock search box width">
 <!ENTITY gblite.options.disableautocorrect "停用Google的搜尋自動更正">
+<!ENTITY gblite.options.forceclassicmaps "Force Google Maps searches to use the classic interface">
 <!ENTITY gblite.options.warnonformhistory "當 Firefox 內的表單記錄被停用時，請提醒我">
 <!ENTITY gblite.options.maintainhistory "保留搜尋記錄">
 <!ENTITY gblite.options.searchsuggest "Enable Google search suggestions">
@@ -135,6 +136,7 @@
 <!ENTITY gblite.options.ignoredictionary "忽略 Google 字典的歷史紀錄">
 <!ENTITY gblite.options.prompttoclear "清除搜尋記錄之前，先詢問">
 <!ENTITY gblite.options.showlabels "顯示按鈕文字">
+<!ENTITY gblite.options.hideseparators "Hide toolbar separators">
 <!ENTITY gblite.options.showsearchwords "尋字鈕">
 <!ENTITY gblite.options.showhighlighter "標記鈕">
 <!ENTITY gblite.options.showup "上層">

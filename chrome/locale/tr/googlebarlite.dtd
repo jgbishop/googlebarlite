@@ -126,6 +126,7 @@
 <!ENTITY gblite.options.searchondragdrop "Sürükle ve bırakta otomatik ara">
 <!ENTITY gblite.options.locksearchbox "Lock search box width">
 <!ENTITY gblite.options.disableautocorrect "Disable Google search autocorrect">
+<!ENTITY gblite.options.forceclassicmaps "Force Google Maps searches to use the classic interface">
 <!ENTITY gblite.options.warnonformhistory "Firafox&apos;ta form geçmişi devre dışı olduğunda beni uyar">
 <!ENTITY gblite.options.maintainhistory "Arama geçmişini sakla">
 <!ENTITY gblite.options.searchsuggest "Enable Google search suggestions">
@@ -135,6 +136,7 @@
 <!ENTITY gblite.options.ignoredictionary "Ignore Google Dictionary searches in history">
 <!ENTITY gblite.options.prompttoclear "Arama geçmişini silmeden önce sor">
 <!ENTITY gblite.options.showlabels "Düğme etiketlerini göster (yalnızca seçilebilir metin)">
+<!ENTITY gblite.options.hideseparators "Hide toolbar separators">
 <!ENTITY gblite.options.showsearchwords "Sözcükleri Ara">
 <!ENTITY gblite.options.showhighlighter "Vurgulayıcı">
 <!ENTITY gblite.options.showup "Yukarı Çık">

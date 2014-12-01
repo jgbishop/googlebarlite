@@ -126,6 +126,7 @@
 <!ENTITY gblite.options.searchondragdrop "拖拽自动搜索">
 <!ENTITY gblite.options.locksearchbox "Lock search box width">
 <!ENTITY gblite.options.disableautocorrect "Disable Google search autocorrect">
+<!ENTITY gblite.options.forceclassicmaps "Force Google Maps searches to use the classic interface">
 <!ENTITY gblite.options.warnonformhistory "在 Firefox [选项] 中禁用 [历史] 时提示我">
 <!ENTITY gblite.options.maintainhistory "保留搜索历史">
 <!ENTITY gblite.options.searchsuggest "Enable Google search suggestions">
@@ -135,6 +136,7 @@
 <!ENTITY gblite.options.ignoredictionary "Ignore Google Dictionary searches in history">
 <!ENTITY gblite.options.prompttoclear "清除搜索历史前询问">
 <!ENTITY gblite.options.showlabels "显示按钮标签 (仅对某些文字才显示)">
+<!ENTITY gblite.options.hideseparators "Hide toolbar separators">
 <!ENTITY gblite.options.showsearchwords "搜索关键字">
 <!ENTITY gblite.options.showhighlighter "高亮">
 <!ENTITY gblite.options.showup "向上">

@@ -126,6 +126,7 @@
 <!ENTITY gblite.options.searchondragdrop "Automaticky vyhľadať po pretiahnutí">
 <!ENTITY gblite.options.locksearchbox "Lock search box width">
 <!ENTITY gblite.options.disableautocorrect "Disable Google search autocorrect">
+<!ENTITY gblite.options.forceclassicmaps "Force Google Maps searches to use the classic interface">
 <!ENTITY gblite.options.warnonformhistory "Upozorniť ma keď je zapamätanie si histórie formulárov vo Firefoxe zakázané">
 <!ENTITY gblite.options.maintainhistory "Zaznamenávať históriu vyhľadávania">
 <!ENTITY gblite.options.searchsuggest "Enable Google search suggestions">
@@ -135,6 +136,7 @@
 <!ENTITY gblite.options.ignoredictionary "Ignore Google Dictionary searches in history">
 <!ENTITY gblite.options.prompttoclear "Opýtať sa pred vymazaním histórie vyhľadávania">
 <!ENTITY gblite.options.showlabels "Zobraziť popisy tlačidiel">
+<!ENTITY gblite.options.hideseparators "Hide toolbar separators">
 <!ENTITY gblite.options.showsearchwords "Vyhľadať slová">
 <!ENTITY gblite.options.showhighlighter "Zvýrazňovač">
 <!ENTITY gblite.options.showup "Prejsť nahor">

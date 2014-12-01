@@ -126,6 +126,7 @@
 <!ENTITY gblite.options.searchondragdrop "Automatisch zoeken na slepen/plakken">
 <!ENTITY gblite.options.locksearchbox "Lock search box width">
 <!ENTITY gblite.options.disableautocorrect "Google zoeken AutoCorrect uitschakelen">
+<!ENTITY gblite.options.forceclassicmaps "Force Google Maps searches to use the classic interface">
 <!ENTITY gblite.options.warnonformhistory "Waarschuwen wanneer &apos;Opgeslagen formulieren&apos; in Firefox is uitgeschakeld">
 <!ENTITY gblite.options.maintainhistory "Zoekgeschiedenis beheren">
 <!ENTITY gblite.options.searchsuggest "Enable Google search suggestions">
@@ -135,6 +136,7 @@
 <!ENTITY gblite.options.ignoredictionary "Google Woordenboek zoekopdrachten in geschiedenis negeren">
 <!ENTITY gblite.options.prompttoclear "Bevestiging vragen voordat de zoekgeschiedenis gewist wordt">
 <!ENTITY gblite.options.showlabels "Labelsknop weergeven (alleen selectieve tekst)">
+<!ENTITY gblite.options.hideseparators "Hide toolbar separators">
 <!ENTITY gblite.options.showsearchwords "Zoekwoorden">
 <!ENTITY gblite.options.showhighlighter "Markerenknop">
 <!ENTITY gblite.options.showup "Ga omhoog">

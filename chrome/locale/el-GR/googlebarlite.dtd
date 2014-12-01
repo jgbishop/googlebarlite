@@ -126,6 +126,7 @@
 <!ENTITY gblite.options.searchondragdrop "Αυτόματη αναζήτηση στο σύρσιμο και την εναπόθεση">
 <!ENTITY gblite.options.locksearchbox "Lock search box width">
 <!ENTITY gblite.options.disableautocorrect "Disable Google search autocorrect">
+<!ENTITY gblite.options.forceclassicmaps "Force Google Maps searches to use the classic interface">
 <!ENTITY gblite.options.warnonformhistory "Ειδοποίηση όταν το ιστορικό φόρμας είναι απενεργοποιημένη στο Firefox">
 <!ENTITY gblite.options.maintainhistory "Διατήρηση ιστορικού αναζήτησης">
 <!ENTITY gblite.options.searchsuggest "Enable Google search suggestions">
@@ -135,6 +136,7 @@
 <!ENTITY gblite.options.ignoredictionary "Ignore Google Dictionary searches in history">
 <!ENTITY gblite.options.prompttoclear "Ερώτηση πριν τον καθαρισμό του ιστορικού αναζήτησης">
 <!ENTITY gblite.options.showlabels "Εμφάνιση κειμένου επεξήγησης κουμπιών (μόνο επιλεκτικό κείμενο)">
+<!ENTITY gblite.options.hideseparators "Hide toolbar separators">
 <!ENTITY gblite.options.showsearchwords "Λέξεις Αναζήτησης">
 <!ENTITY gblite.options.showhighlighter "Μαρκάρισμα">
 <!ENTITY gblite.options.showup "Πάνω">

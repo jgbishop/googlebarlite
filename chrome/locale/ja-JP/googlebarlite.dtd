@@ -126,6 +126,7 @@
 <!ENTITY gblite.options.searchondragdrop "ドラッグ&amp;ドロップで自動的に検索">
 <!ENTITY gblite.options.locksearchbox "検索ボックスの幅を固定する">
 <!ENTITY gblite.options.disableautocorrect "Google検索のオートコレクト機能を無効にする">
+<!ENTITY gblite.options.forceclassicmaps "Force Google Maps searches to use the classic interface">
 <!ENTITY gblite.options.warnonformhistory "Firefoxでフォームの入力履歴が無効になっている時は警告する">
 <!ENTITY gblite.options.maintainhistory "検索履歴を保持する">
 <!ENTITY gblite.options.searchsuggest "Googleの検索候補を有効にする">
@@ -135,6 +136,7 @@
 <!ENTITY gblite.options.ignoredictionary "履歴のGoogle辞書検索を無視する">
 <!ENTITY gblite.options.prompttoclear "検索履歴をクリアする前に確認する">
 <!ENTITY gblite.options.showlabels "ボタンのラベルを表示する(選択されたボタンのみ)">
+<!ENTITY gblite.options.hideseparators "Hide toolbar separators">
 <!ENTITY gblite.options.showsearchwords "検索単語">
 <!ENTITY gblite.options.showhighlighter "ハイライト">
 <!ENTITY gblite.options.showup "上へ">

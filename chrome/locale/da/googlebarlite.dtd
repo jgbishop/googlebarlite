@@ -126,7 +126,8 @@
 <!ENTITY gblite.options.searchondragdrop "Søg automatisk ved træk-og-slip">
 <!ENTITY gblite.options.locksearchbox "Lås bredden af søgeboksen">
 <!ENTITY gblite.options.disableautocorrect "Deaktiver Google-søgning autokorrektur">
-<!ENTITY gblite.options.warnonformhistory "Advar mig når formularhistorik er slået fra i Firefox">
+<!ENTITY gblite.options.forceclassicmaps "Tving Google Maps-søgninger til at bruge den klassiske brugerflade">
+<!ENTITY gblite.options.warnonformhistory "Advar mig, når formularhistorik er slået fra i Firefox">
 <!ENTITY gblite.options.maintainhistory "Vedligehold en søgehistorik">
 <!ENTITY gblite.options.searchsuggest "Aktiver Google søgeforslag">
 <!ENTITY gblite.options.autocomplete "Aktiver auto-udfyldelse">
@@ -135,6 +136,7 @@
 <!ENTITY gblite.options.ignoredictionary "Ignorer Google ordbogsøgninger i historikken">
 <!ENTITY gblite.options.prompttoclear "Spørg inden søgehistorikken slettes">
 <!ENTITY gblite.options.showlabels "Vis knapteksterne (kun udvalgte tekster)">
+<!ENTITY gblite.options.hideseparators "Skjul separatorer i værktøjslinjer">
 <!ENTITY gblite.options.showsearchwords "Søg efter ord">
 <!ENTITY gblite.options.showhighlighter "Fremhæv">
 <!ENTITY gblite.options.showup "Et niveau op">
