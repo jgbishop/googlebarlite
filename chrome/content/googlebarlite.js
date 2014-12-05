@@ -1234,7 +1234,12 @@ var objGooglebarLite = {
 			else		URL = this.BuildSearchURL({domain: "maps", homepage: "maps", terms: searchTerms});
 
 			if(GooglebarLiteCommon.Data.Prefs.ForceClassicMaps.value == true)
-				URL += "&output=classic&dg=optperm";
+			{
+				if(isEmpty)
+					URL += "?output=classic&dg=optperm";
+				else
+					URL += "&output=classic&dg=optperm";
+			}
 			
 			break;
 	

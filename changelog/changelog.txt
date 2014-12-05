@@ -1,6 +1,9 @@
 //***************
 //Version History
 //***************
+[5.0.6]
++ Bug Fix: Performing an empty Maps search with the force classic Google Maps search option checked no longer results in a 404
+
 [5.0.5]
 + Added an option to hide all toolbar separators
 + Added an option to force the classic Google Maps interface when performing a Maps search
