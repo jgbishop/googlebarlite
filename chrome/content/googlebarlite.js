@@ -1236,9 +1236,9 @@ var objGooglebarLite = {
 			if(GooglebarLiteCommon.Data.Prefs.ForceClassicMaps.value == true)
 			{
 				if(isEmpty)
-					URL += "?output=classic&dg=optperm";
+					URL += "?output=classic&dg=oo";
 				else
-					URL += "&output=classic&dg=optperm";
+					URL += "&output=classic&dg=oo";
 			}
 			
 			break;
