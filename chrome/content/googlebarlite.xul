@@ -71,7 +71,7 @@
 </menupopup>
 
 <toolbarpalette id="BrowserToolbarPalette">
-	<toolbarbutton id="GBL-TB-Toggle-Toolbar" tooltiptext="Toggle Googlebar Lite Toolbar" class="toolbarbutton-1"
+	<toolbarbutton id="GBL-TB-Toggle-Toolbar" tooltiptext="&gblite.toggle.toolbar;" class="toolbarbutton-1"
 				   label="&gblite.toggle.toolbar;" oncommand="objGooglebarLite.ToggleToolbar();" />
 	
 	<toolbaritem id="GBL-Toolbar-MainItem" flex="1" title="&gblite.name;" class="chromeclass-toolbar-additional panel-wide-item" align="center" overflows="false">

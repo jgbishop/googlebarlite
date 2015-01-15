@@ -1,7 +1,7 @@
 <!ENTITY gblite.name "Googlebar Lite">
 <!ENTITY gblite.toolbar.name "Googlebar Lite Toolbar">
 <!ENTITY gblite.ak.name "G">
-<!ENTITY gblite.toggle.toolbar "Toggle GBL Toolbar">
+<!ENTITY gblite.toggle.toolbar "Toggle Googlebar Lite Toolbar">
 <!ENTITY gblite.searchtype.web "Web Search">
 <!ENTITY gblite.searchtype.lucky "I'm Feeling Lucky">
 <!ENTITY gblite.searchtype.site "Site Search">
