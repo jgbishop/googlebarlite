@@ -127,6 +127,7 @@ var objGooglebarLite = {
 	Initialized: false,
 	LastHighlightedTerms: "",
 	OverflowButtonWidth: 0,
+	ParentToolbar: null,
 	ResizeTimerID: null,
 	ToolbarPresent: false,
 	
@@ -561,7 +562,10 @@ var objGooglebarLite = {
 			if(document.getElementById("GBL-Toolbar-MainItem") == null)
 				objGooglebarLite.Shutdown();
 			else
+			{
+				objGooglebarLite.ParentToolbar = objGooglebarLite.GetParentToolbar();
 				objGooglebarLite.SetSearchTerms(""); // Always clear search terms after customizing the toolbar
+			}
 		}
 	},
 	
@@ -702,6 +706,27 @@ var objGooglebarLite = {
 			if(shiftKey)
 				findObj.findPrevious();
 		}
+	},
+
+	GetParentToolbar: function()
+	{
+		var mainItem = document.getElementById("GBL-Toolbar-MainItem");
+		var parent = null;
+
+		if(mainItem)
+		{
+			var e = mainItem;
+			while((e = e.parentNode))
+			{
+				if(e.nodeName == "toolbar")
+				{
+					parent = e.id;
+					break;
+				}
+			}
+		}
+		GooglebarLiteCommon.Func.Log("Parent Toolbar: " + parent);
+		return parent;
 	},
 	
 	GetSearchTerms: function(trimString)
@@ -1160,27 +1185,39 @@ var objGooglebarLite = {
 		if(available == 0)
 			window.addEventListener('focus', objGooglebarLite.Resize, false);
 	
-		var overflowed = false;
-
-		for(var i=0; i<buttons.childNodes.length; i++)
+		// If we're on the nav-bar, it's a special case; show the chevron, hide all buttons
+		if(objGooglebarLite.ParentToolbar == "nav-bar")
 		{
-			var button = buttons.childNodes[i];
-			button.collapsed = overflowed;
-	
-			if((button.boxObject.x + button.boxObject.width + objGooglebarLite.OverflowButtonWidth) > available)
+			chevron.collapsed = false;
+			for(var i=0; i<buttons.childNodes.length; i++)
 			{
-				overflowed = true;
-				// This button doesn't fit, so show it in the menu and hide it in the toolbar.
-				if(!button.collapsed)
-					button.collapsed = true;
-				if(chevron.collapsed)
-					chevron.collapsed = false;
+				buttons.childNodes[i].collapsed = true;
 			}
 		}
+		else
+		{
+			var overflowed = false;
 
-		// If we never overflowed, make sure the overflow button is hidden from view
-		if(overflowed == false)
-			chevron.collapsed = true;
+			for(var i=0; i<buttons.childNodes.length; i++)
+			{
+				var button = buttons.childNodes[i];
+				button.collapsed = overflowed;
+
+				if((button.boxObject.x + button.boxObject.width + objGooglebarLite.OverflowButtonWidth) > available)
+				{
+					overflowed = true;
+					// This button doesn't fit, so show it in the menu and hide it in the toolbar.
+					if(!button.collapsed)
+						button.collapsed = true;
+					if(chevron.collapsed)
+						chevron.collapsed = false;
+				}
+			}
+
+			// If we never overflowed, make sure the overflow button is hidden from view
+			if(overflowed == false)
+				chevron.collapsed = true;
+		}
 	},
 
 	Search: function(searchTerms, searchType, useTab)
@@ -1518,7 +1555,8 @@ var objGooglebarLite = {
 		{
 			objGooglebarLite.Initialized = true;
 			objGooglebarLite.PrefObserver.register();
-			
+			objGooglebarLite.ParentToolbar = objGooglebarLite.GetParentToolbar();
+
 			window.getBrowser().addProgressListener(objGooglebarLite.ProgressListener);
 			
 			var chevron = document.getElementById("GBL-Overflow-Button");
@@ -1561,12 +1599,14 @@ var objGooglebarLite = {
 			document.getElementById("GBL-TB-Dictionary").disabled = true;
 			document.getElementById("GBL-TB-Combined-Dictionary").disabled = true;
 			document.getElementById("GBL-TB-Highlighter").disabled = true;
+			document.getElementById("GBL-Overflow-Button").disabled = true; // Handle the chevron so it's disabled when on the nav-bar
 		}
 		else
 		{
 			document.getElementById("GBL-TB-Dictionary").removeAttribute("disabled");
 			document.getElementById("GBL-TB-Combined-Dictionary").removeAttribute("disabled");
 			document.getElementById("GBL-TB-Highlighter").removeAttribute("disabled");
+			document.getElementById("GBL-Overflow-Button").removeAttribute("disabled"); // Handle the chevron so it's enabled when on the nav-bar
 		}
 
 		this.UpdateSearchWordButtons();
