@@ -81,6 +81,7 @@
 #GBL-TB-Highlighter						{ -moz-image-region: rect(16px 144px 32px 128px); }
 #GBL-TB-Highlighter[disabled="true"]	{ -moz-image-region: rect(16px 160px 32px 144px); }
 #GBL-Overflow-Button 					{ -moz-image-region: rect(16px 176px 32px 160px); }
+#GBL-Overflow-Button[disabled="true"]   { -moz-image-region: rect(32px 176px 48px 160px); }
 
 #GBL-TB-Combined > .toolbarbutton-menubutton-button,
 #GBL-TB-UpButton > .toolbarbutton-menubutton-button {
