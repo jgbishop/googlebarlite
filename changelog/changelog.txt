@@ -2,8 +2,10 @@
 //Version History
 //***************
 [5.0.7]
-+ Changed the "optperm" parameter in the classic Google Maps option to "oo" instead
++ Search words now appear as menu items under the overflow toolbar button when Googlebar Lite is placed on the nav-bar in Firefox
++ Changed the underlying search parameter in the classic Google Maps option from "optperm" to "oo" instead
 + Minor locale updates
++ Bug Fix: Removed a hard-coded tooltip, replacing it with the appropriate localized variant
 
 [5.0.6]
 + Bug Fix: Performing an empty Maps search with the force classic Google Maps search option checked no longer results in a 404
