@@ -142,6 +142,18 @@
 						
 						<menuitem label="&gblite.mainmenu.label.options;" accesskey="&gblite.mainmenu.ak.options;"
 								  oncommand="objGooglebarLite.OpenOptions();" />
+
+						<menu label="&gblite.mainmenu.label.backup;" accesskey="&gblite.mainmenu.ak.backup;">
+						<menupopup>
+							<menuitem label="&gblite.mainmenu.label.export;" accesskey="&gblite.mainmenu.ak.export;"
+									  oncommand="objGooglebarLite.ExportOptions();" />
+
+							<menuitem label="&gblite.mainmenu.label.import;" accesskey="&gblite.mainmenu.ak.import;"
+									  oncommand="objGooglebarLite.ImportOptions();" />
+						</menupopup>
+						</menu>
+
+						<menuseparator/>
 								  
 						<menuitem label="&gblite.mainmenu.label.clearhistory;" accesskey="&gblite.mainmenu.ak.clearhistory;"
 								  oncommand="objGooglebarLite.ClearHistoryPrompt();" />
