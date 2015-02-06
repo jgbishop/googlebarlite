@@ -21,6 +21,8 @@ var objGooglebarLite = {
 		
 		observe: function(subject, topic, data) {
 			if(topic != "nsPref:changed") return;
+
+			GooglebarLiteCommon.Func.Log("Observed preference change: " + data);
 			
 			var prefID = null;
 			var prefValue = null;
@@ -813,7 +815,7 @@ var objGooglebarLite = {
 		var retval = fp.show();
 		if(retval == nsIFilePicker.returnOK)
 		{
-			GooglebarLiteCommon.Func.LoadOptions(fp.file.path, objGooglebarLite.OptionsLoaded);
+			GooglebarLiteCommon.Func.LoadOptions(fp.file.path, objGooglebarLite.OptionsImported);
 		}
 	},
 
@@ -948,6 +950,34 @@ var objGooglebarLite = {
 	OpenOptions: function()
 	{
 		window.openDialog("chrome://googlebarlite/content/prefs.xul", "Googlebar Lite Options", "centerscreen,chrome,modal,toolbar");
+	},
+
+	OptionsImported: function(opts)
+	{
+		for(var pid in opts)
+		{
+			var p = opts[pid];
+			if(p.hasOwnProperty("type"))
+			{
+				if(p.type == "string")
+					objGooglebarLite.PrefBranch.setCharPref(p.name, p.value);
+				else if(p.type == "int")
+					objGooglebarLite.PrefBranch.setIntPref(p.name, p.value);
+				else if(p.type == "complex")
+				{
+					try {
+						var pls = Components.classes["@mozilla.org/pref-localizedstring;1"].
+									createInstance(Components.interfaces.nsIPrefLocalizedString);
+						pls.data = p.value;
+						objGooglebarLite.PrefBranch.setComplexValue(p.name, Components.interfaces.nsIPrefLocalizedString, pls);
+					} catch(e) {}
+				}
+			}
+			else
+				objGooglebarLite.PrefBranch.setBoolPref(p.name, p.value);
+		}
+
+		objGooglebarLite.LoadPrefsAndInitUI();
 	},
 	
 	ParseQueryString: function(query)
