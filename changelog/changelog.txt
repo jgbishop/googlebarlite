@@ -2,8 +2,11 @@
 //Version History
 //***************
 [5.0.7]
-+ Search words now appear as menu items under the overflow toolbar button when Googlebar Lite is placed on the nav-bar in Firefox
++ Search words are now grouped together under one toolbar button when Googlebar Lite is placed on the nav-bar
++ Googlebar Lite options can now be exported and imported, making it much easier to migrate options from one install to another
 + Changed the underlying search parameter in the classic Google Maps option from "optperm" to "oo" instead
++ Bumped the supported minVersion to 31.0
++ Removed a few deprecated code paths
 + Minor locale updates
 + Bug Fix: Removed a hard-coded tooltip, replacing it with the appropriate localized variant
 
