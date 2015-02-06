@@ -22,8 +22,6 @@ var objGooglebarLite = {
 		observe: function(subject, topic, data) {
 			if(topic != "nsPref:changed") return;
 
-			GooglebarLiteCommon.Func.Log("Observed preference change: " + data);
-			
 			var prefID = null;
 			var prefValue = null;
 			
@@ -683,13 +681,7 @@ var objGooglebarLite = {
 		if ("_find" in findBar)
 		{
 			findObj = {
-				find: Services.vc.compare(Services.appinfo.version, "25.0") < 0 ?
-				function(t) {
-					// TODO: Remove this function (and the test above) once minVersion > 24
-					findBar._find(t);
-				} :
-				function(t) {
-					// We use this variant for FF 25.0 and up
+				find: function(t) {
 					findBar._find(findBar._findField.value = t);
 				},
 				findNext: function() {
@@ -700,10 +692,7 @@ var objGooglebarLite = {
 				}
 			};
 			
-			// TODO: Remove this test (and the true portion) once minVersion > 24
-			cachedFindTerm = Services.vc.compare(Services.appinfo.version, "25.0") < 0 ?
-				getBrowser().fastFind.searchString :
-				gFindBar._findField.value;
+			cachedFindTerm = gFindBar._findField.value;
 		}
 		else
 		{
@@ -743,7 +732,6 @@ var objGooglebarLite = {
 				}
 			}
 		}
-		GooglebarLiteCommon.Func.Log("Parent Toolbar: " + parent);
 		return parent;
 	},
 	
