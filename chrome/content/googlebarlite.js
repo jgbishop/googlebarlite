@@ -643,6 +643,22 @@ var objGooglebarLite = {
 			this.PrefBranch.setBoolPref(GooglebarLiteCommon.Data.Prefs.WarnOnFormHistory.name, false);
 	},
 
+	ExportOptions: function()
+	{
+		const nsIFilePicker = Components.interfaces.nsIFilePicker;
+		var fp = Components.classes["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
+		fp.init(window, "Export Options", nsIFilePicker.modeSave);
+		fp.appendFilter("JSON Files", "*.json");
+		fp.appendFilters(nsIFilePicker.filterAll);
+		fp.defaultExtension = "json";
+
+		var retval = fp.show();
+		if(retval == nsIFilePicker.returnOK || retval == nsIFilePicker.returnReplace)
+		{
+			GooglebarLiteCommon.Func.SaveOptions(fp.file.path);
+		}
+	},
+
 	ExtractQuery: function(url)
 	{
 		// Test for the AJAX-style query first (Google apparently gives it higher priority)
@@ -782,6 +798,23 @@ var objGooglebarLite = {
 	{
 		var newTab = getBrowser().addTab("http://www.borngeek.com/firefox/googlebarlite/doc/");
 		getBrowser().selectedTab = newTab;
+	},
+
+	ImportOptions: function()
+	{
+		const nsIFilePicker = Components.interfaces.nsIFilePicker;
+		var fp = Components.classes["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
+		fp.init(window, "Import Options", nsIFilePicker.modeOpen);
+		fp.appendFilter("JSON Files", "*.json");
+		fp.appendFilters(nsIFilePicker.filterAll);
+		fp.defaultExtension = "json";
+
+		var importData = [];
+		var retval = fp.show();
+		if(retval == nsIFilePicker.returnOK)
+		{
+			GooglebarLiteCommon.Func.LoadOptions(fp.file.path, objGooglebarLite.OptionsLoaded);
+		}
 	},
 
 	LoadPrefsAndInitUI: function()

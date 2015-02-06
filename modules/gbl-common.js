@@ -1,6 +1,8 @@
 var EXPORTED_SYMBOLS = ["GooglebarLiteCommon"];
 
 Components.utils.import('resource://gre/modules/devtools/Console.jsm');
+Components.utils.import('resource://gre/modules/FileUtils.jsm');
+Components.utils.import('resource://gre/modules/NetUtil.jsm');
 
 if (typeof(GooglebarLiteCommon) === "undefined")
 {
@@ -8,6 +10,7 @@ if (typeof(GooglebarLiteCommon) === "undefined")
 }
 
 GooglebarLiteCommon.Data = {
+	OptionsFile: "googlebar-lite-options.json",
 	Prefs: {
 		// General
 		SiteToUse: { name: "site_to_use", value: "", type: "complex" },
@@ -86,5 +89,79 @@ GooglebarLiteCommon.Func = {
 	LogRaw: function(data)
 	{
 		console.log(data);
+	},
+
+	LoadOptions: function(path, isLoadedCallback)
+	{
+		var file = null;
+		if(typeof path === "undefined")
+			file = FileUtils.getFile("ProfD", [GooglebarLiteCommon.Data.OptionsFile]);
+		else
+			file = new FileUtils.File(path);
+
+		if(file.exists())
+		{
+			var channel = NetUtil.newChannel(file);
+			channel.contentType = "application/json";
+
+			NetUtil.asyncFetch(channel, function(inputStream, status) {
+				if(!Components.isSuccessCode(status))
+				{
+					Components.utils.reportError("ERROR: Failed to open input stream on options file (return code was " + status + ")!");
+					return null;
+				}
+
+				var data = NetUtil.readInputStreamToString(inputStream, inputStream.available());
+				var converter = Components.classes["@mozilla.org/intl/scriptableunicodeconverter"].
+									createInstance(Components.interfaces.nsIScriptableUnicodeConverter);
+				converter.charset = "UTF-8";
+				var convertedData = converter.ConvertToUnicode(data);
+				var options;
+				try
+				{
+					options = JSON.parse(convertedData);
+				}
+				catch(e)
+				{
+					Components.utils.reportError("ERROR: Failed to parse JSON file. Exception: " + e.message);
+					return null;
+				}
+
+				if(typeof isLoadedCallback === 'function')
+					isLoadedCallback(options);
+				else
+					return options;
+			});
+		}
+		else
+		{
+			if(typeof isLoadedCallback === 'function')
+				isLoadedCallback(null);
+			else
+				return null;
+		}
+	},
+
+	SaveOptions: function(path)
+	{
+		var file = null;
+		if(typeof path === "undefined")
+			file = FileUtils.getFile("ProfD", [GooglebarLiteCommon.Data.OptionsFile]);
+		else
+			file = new FileUtils.File(path);
+
+		var ostream = FileUtils.openSafeFileOutputStream(file, FileUtils.MODE_WRONLY | FileUtils.MODE_CREATE | FileUtils.MODE_TRUNCATE);
+		var converter = Components.classes["@mozilla.org/intl/scriptableunicodeconverter"].
+							createInstance(Components.interfaces.nsIScriptableUnicodeConverter);
+		converter.charset = "UTF-8";
+		var istream = converter.convertToInputStream(JSON.stringify(GooglebarLiteCommon.Data.Prefs, null, 4));
+		NetUtil.asyncCopy(istream, ostream, function(status) {
+			// Both streams are automatically closed when the copy operation is completed
+			if(! Components.isSuccessCode(status))
+			{
+				Components.utils.reportError("ERROR: Failed to perform async copy operation (return code was " + status + ")!");
+				return null;
+			}
+		});
 	}
 };
