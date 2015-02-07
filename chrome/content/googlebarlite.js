@@ -645,9 +645,11 @@ var objGooglebarLite = {
 
 	ExportOptions: function()
 	{
+		var stringBundle = document.getElementById("GBL-String-Bundle");
+
 		const nsIFilePicker = Components.interfaces.nsIFilePicker;
 		var fp = Components.classes["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
-		fp.init(window, "Export Options", nsIFilePicker.modeSave);
+		fp.init(window, stringBundle.getString("GBL_ExportTitle"), nsIFilePicker.modeSave);
 		fp.appendFilter("JSON Files", "*.json");
 		fp.appendFilters(nsIFilePicker.filterAll);
 		fp.defaultExtension = "json";
@@ -792,9 +794,11 @@ var objGooglebarLite = {
 
 	ImportOptions: function()
 	{
+		var stringBundle = document.getElementById("GBL-String-Bundle");
+
 		const nsIFilePicker = Components.interfaces.nsIFilePicker;
 		var fp = Components.classes["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
-		fp.init(window, "Import Options", nsIFilePicker.modeOpen);
+		fp.init(window, stringBundle.getString("GBL_ImportTitle"), nsIFilePicker.modeOpen);
 		fp.appendFilter("JSON Files", "*.json");
 		fp.appendFilters(nsIFilePicker.filterAll);
 		fp.defaultExtension = "json";
