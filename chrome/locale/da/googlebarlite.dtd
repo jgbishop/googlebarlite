@@ -74,6 +74,12 @@
 <!ENTITY gblite.mainmenu.ak.languagetools "p">
 <!ENTITY gblite.mainmenu.label.options "Indstillinger…">
 <!ENTITY gblite.mainmenu.ak.options "I">
+<!ENTITY gblite.mainmenu.label.backup "Backupindstillinger">
+<!ENTITY gblite.mainmenu.ak.backup "B">
+<!ENTITY gblite.mainmenu.label.export "Eksporter…">
+<!ENTITY gblite.mainmenu.ak.export "E">
+<!ENTITY gblite.mainmenu.label.import "Importer…">
+<!ENTITY gblite.mainmenu.ak.import "I">
 <!ENTITY gblite.mainmenu.label.clearhistory "Slet søgehistorik">
 <!ENTITY gblite.mainmenu.ak.clearhistory "S">
 <!ENTITY gblite.mainmenu.label.help "Hjælp">

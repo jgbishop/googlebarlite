@@ -74,6 +74,12 @@
 <!ENTITY gblite.mainmenu.ak.languagetools "H">
 <!ENTITY gblite.mainmenu.label.options "Opciones...">
 <!ENTITY gblite.mainmenu.ak.options "O">
+<!ENTITY gblite.mainmenu.label.backup "Opciones de copia de seguridad">
+<!ENTITY gblite.mainmenu.ak.backup "S">
+<!ENTITY gblite.mainmenu.label.export "Exportar...">
+<!ENTITY gblite.mainmenu.ak.export "E">
+<!ENTITY gblite.mainmenu.label.import "Importar...">
+<!ENTITY gblite.mainmenu.ak.import "I">
 <!ENTITY gblite.mainmenu.label.clearhistory "Borrar el historial de búsqueda">
 <!ENTITY gblite.mainmenu.ak.clearhistory "B">
 <!ENTITY gblite.mainmenu.label.help "Ayuda">

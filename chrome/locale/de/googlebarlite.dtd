@@ -74,6 +74,12 @@
 <!ENTITY gblite.mainmenu.ak.languagetools "T">
 <!ENTITY gblite.mainmenu.label.options "Einstellungen...">
 <!ENTITY gblite.mainmenu.ak.options "E">
+<!ENTITY gblite.mainmenu.label.backup "Einstellungen sichern/wiederherstellen">
+<!ENTITY gblite.mainmenu.ak.backup "D">
+<!ENTITY gblite.mainmenu.label.export "Exportieren…">
+<!ENTITY gblite.mainmenu.ak.export "E">
+<!ENTITY gblite.mainmenu.label.import "Importieren…">
+<!ENTITY gblite.mainmenu.ak.import "I">
 <!ENTITY gblite.mainmenu.label.clearhistory "Such-Chronik löschen">
 <!ENTITY gblite.mainmenu.ak.clearhistory "l">
 <!ENTITY gblite.mainmenu.label.help "Hilfe (engl.)">
