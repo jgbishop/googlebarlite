@@ -74,6 +74,12 @@
 <!ENTITY gblite.mainmenu.ak.languagetools "і">
 <!ENTITY gblite.mainmenu.label.options "Параметри...">
 <!ENTITY gblite.mainmenu.ak.options "е">
+<!ENTITY gblite.mainmenu.label.backup "Параметри резервного копіювання">
+<!ENTITY gblite.mainmenu.ak.backup "П">
+<!ENTITY gblite.mainmenu.label.export "Експорт…">
+<!ENTITY gblite.mainmenu.ak.export "Е">
+<!ENTITY gblite.mainmenu.label.import "Імпорт…">
+<!ENTITY gblite.mainmenu.ak.import "І">
 <!ENTITY gblite.mainmenu.label.clearhistory "Очистити історію пошуків">
 <!ENTITY gblite.mainmenu.ak.clearhistory "О">
 <!ENTITY gblite.mainmenu.label.help "Допомога">
@@ -149,7 +155,7 @@
 <!ENTITY gblite.about.visithomepage "Домашня сторінка Googlebar Lite">
 <!ENTITY gblite.about.visitdocumentation "Документація Googlebar Lite">
 <!ENTITY gblite.about.disclaimer "Необхідні застереження">
-<!ENTITY gblite.about.disclaimerinfo "Googlebar Lite не розроблювалась та не підтримується компанією Google, Inc. Терміни 'Google', 'Панель інструментів Google' и 'Vtys gjofcnbnm' є зареєстрованими торговими марками компанії Google, Inc.">
+<!ENTITY gblite.about.disclaimerinfo "Googlebar Lite не розроблювалась та не підтримується компанією Google, Inc. Терміни 'Google', 'Панель інструментів Google' и 'Мені пощастить' є зареєстрованими торговими марками компанії Google, Inc.">
 <!ENTITY gblite.about.translators "Перекладачі">
 <!ENTITY gblite.about.locale "Локаль">
 <!ENTITY gblite.about.translator "Перекладач">
