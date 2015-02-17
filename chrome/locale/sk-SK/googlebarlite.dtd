@@ -74,6 +74,12 @@
 <!ENTITY gblite.mainmenu.ak.languagetools "T">
 <!ENTITY gblite.mainmenu.label.options "Možnosti">
 <!ENTITY gblite.mainmenu.ak.options "O">
+<!ENTITY gblite.mainmenu.label.backup "Backup Options">
+<!ENTITY gblite.mainmenu.ak.backup "B">
+<!ENTITY gblite.mainmenu.label.export "Export...">
+<!ENTITY gblite.mainmenu.ak.export "E">
+<!ENTITY gblite.mainmenu.label.import "Import...">
+<!ENTITY gblite.mainmenu.ak.import "I">
 <!ENTITY gblite.mainmenu.label.clearhistory "Vyčistiť históriu vyhľadávania">
 <!ENTITY gblite.mainmenu.ak.clearhistory "C">
 <!ENTITY gblite.mainmenu.label.help "Pomocník">

@@ -74,6 +74,12 @@
 <!ENTITY gblite.mainmenu.ak.languagetools "Γ">
 <!ENTITY gblite.mainmenu.label.options "Επιλογές...">
 <!ENTITY gblite.mainmenu.ak.options "Ε">
+<!ENTITY gblite.mainmenu.label.backup "Backup Options">
+<!ENTITY gblite.mainmenu.ak.backup "B">
+<!ENTITY gblite.mainmenu.label.export "Export...">
+<!ENTITY gblite.mainmenu.ak.export "E">
+<!ENTITY gblite.mainmenu.label.import "Import...">
+<!ENTITY gblite.mainmenu.ak.import "I">
 <!ENTITY gblite.mainmenu.label.clearhistory "Καθαρισμός Ιστορικού Αναζήτησης">
 <!ENTITY gblite.mainmenu.ak.clearhistory "Κ">
 <!ENTITY gblite.mainmenu.label.help "Βοήθεια">
