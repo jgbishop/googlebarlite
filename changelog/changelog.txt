@@ -7,6 +7,7 @@
 + Changed the underlying search parameter in the classic Google Maps option from "optperm" to "oo" instead
 + Bumped the supported minVersion to 31.0
 + Removed a few deprecated code paths
++ Removed four locales due to their being very out of date: el-GR, hr-HR, pt-BR, and sk-SK
 + Minor locale updates
 + Bug Fix: Removed a hard-coded tooltip, replacing it with the appropriate localized variant
 
