@@ -1340,9 +1340,9 @@ var objGooglebarLite = {
 			if(GooglebarLiteCommon.Data.Prefs.ForceClassicMaps.value == true)
 			{
 				if(isEmpty)
-					URL += "?output=classic&dg=oo";
+					URL += "?force=lite";
 				else
-					URL += "&output=classic&dg=oo";
+					URL += "&force=lite";
 			}
 			
 			break;
