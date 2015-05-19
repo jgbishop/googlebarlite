@@ -265,9 +265,15 @@
 			<preference id="GBL-Pref-Shortcut-Alt" name="extensions.googlebarlite.shortcut_alt" type="bool" />
 			<preference id="GBL-Pref-Shortcut-Shift" name="extensions.googlebarlite.shortcut_shift" type="bool" />
 			<preference id="GBL-Pref-FocusKey" name="extensions.googlebarlite.focus_key" type="string" />
+			<preference id="GBL-Pref-ShiftSearchEnabled" name="extensions.googlebarlite.shift_search_enabled" type="bool" />
 			<preference id="GBL-Pref-ShiftSearch" name="extensions.googlebarlite.shift_search" type="string" />
+			<preference id="GBL-Pref-ShiftSearchNewTab" name="extensions.googlebarlite.shift_search_new_tab" type="bool" />
+			<preference id="GBL-Pref-CtrlSearchEnabled" name="extensions.googlebarlite.ctrl_search_enabled" type="bool" />
 			<preference id="GBL-Pref-CtrlSearch" name="extensions.googlebarlite.ctrl_search" type="string" />
+			<preference id="GBL-Pref-CtrlSearchNewTab" name="extensions.googlebarlite.ctrl_search_new_tab" type="bool" />
+			<preference id="GBL-Pref-ShiftCtrlSearchEnabled" name="extensions.googlebarlite.shift_ctrl_search_enabled" type="bool" />
 			<preference id="GBL-Pref-ShiftCtrlSearch" name="extensions.googlebarlite.shift_ctrl_search" type="string" />
+			<preference id="GBL-Pref-ShiftCtrlSearchNewTab" name="extensions.googlebarlite.shift_ctrl_search_new_tab" type="bool" />
 		</preferences>
 		
 		<grid>
@@ -278,9 +284,12 @@
 			
 			<rows>
 			<row align="center">
-				<label value="&gblite.options.label.shiftenter;" />
+				<checkbox id="GBL-Opt-ShiftSearchEnabled" preference="GBL-Pref-ShiftSearchEnabled"
+					label="&gblite.options.label.shiftenter;" oncommand="objGooglebarLitePrefs.UpdateShiftSearch();" />
+				<hbox>
 				<menulist id="GBL-Opt-ShiftSearch" preference="GBL-Pref-ShiftSearch">
 					<menupopup>
+					<menuitem label="&gblite.searchtype.web;" value="web" />
 					<menuitem label="&gblite.searchtype.lucky;" value="lucky" />
 					<menuitem label="&gblite.searchtype.site;" value="site" selected="true" />
 					<menuitem label="&gblite.searchtype.image;" value="images" />
@@ -296,12 +305,17 @@
 					<menuitem label="&gblite.searchtype.dictionary;" value="dictionary" />
 					</menupopup>
 				</menulist>
+				<checkbox id="GBL-Opt-ShiftSearchNewTab" preference="GBL-Pref-ShiftSearchNewTab" label="&gblite.options.label.newtab;" />
+				</hbox>
 			</row>
 			
 			<row align="center">
-				<label value="&gblite.options.label.ctrlenter;" />
+				<checkbox id="GBL-Opt-CtrlSearchEnabled" preference="GBL-Pref-CtrlSearchEnabled"
+					label="&gblite.options.label.ctrlenter;" oncommand="objGooglebarLitePrefs.UpdateCtrlSearch();" />
+				<hbox>
 				<menulist id="GBL-Opt-CtrlSearch" preference="GBL-Pref-CtrlSearch">
 					<menupopup>
+					<menuitem label="&gblite.searchtype.web;" value="web" />
 					<menuitem label="&gblite.searchtype.lucky;" value="lucky" />
 					<menuitem label="&gblite.searchtype.site;" value="site" />
 					<menuitem label="&gblite.searchtype.image;" value="images" selected="true" />
@@ -317,12 +331,17 @@
 					<menuitem label="&gblite.searchtype.dictionary;" value="dictionary" />
 					</menupopup>
 				</menulist>
+				<checkbox id="GBL-Opt-CtrlSearchNewTab" preference="GBL-Pref-CtrlSearchNewTab" label="&gblite.options.label.newtab;" />
+				</hbox>
 			</row>
 			
 			<row align="center">
-				<label value="&gblite.options.label.shiftctrlenter;" />
+				<checkbox id="GBL-Opt-ShiftCtrlSearchEnabled" preference="GBL-Pref-ShiftCtrlSearchEnabled"
+					label="&gblite.options.label.shiftctrlenter;" oncommand="objGooglebarLitePrefs.UpdateShiftCtrlSearch();" />
+				<hbox>
 				<menulist id="GBL-Opt-ShiftCtrlSearch" preference="GBL-Pref-ShiftCtrlSearch">
 					<menupopup>
+					<menuitem label="&gblite.searchtype.web;" value="web" />
 					<menuitem label="&gblite.searchtype.lucky;" value="lucky" />
 					<menuitem label="&gblite.searchtype.site;" value="site" />
 					<menuitem label="&gblite.searchtype.image;" value="images" />
@@ -338,6 +357,8 @@
 					<menuitem label="&gblite.searchtype.dictionary;" value="dictionary" />
 					</menupopup>
 				</menulist>
+				<checkbox id="GBL-Opt-ShiftCtrlSearchNewTab" preference="GBL-Pref-ShiftCtrlSearchNewTab" label="&gblite.options.label.newtab;" />
+				</hbox>
 			</row>
 			
 			<separator />

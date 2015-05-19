@@ -16,6 +16,10 @@ var objGooglebarLitePrefs = {
 		this.UpdateAutoCompleteSubOptions();
 		this.UpdateSearchHistoryStatus();
 		this.UpdateShowContextMenuStatus();
+		
+		this.UpdateCtrlSearch();
+		this.UpdateShiftSearch();
+		this.UpdateShiftCtrlSearch();
 	},
 	
 	ShortcutIsValid: function() {
@@ -36,6 +40,13 @@ var objGooglebarLitePrefs = {
 		document.getElementById("GBL-Opt-EnableSearchSuggest").disabled = disabled;
 	},
 	
+	UpdateCtrlSearch: function() {
+		var disabled = ! document.getElementById("GBL-Opt-CtrlSearchEnabled").checked;
+
+		document.getElementById("GBL-Opt-CtrlSearch").disabled = disabled;
+		document.getElementById("GBL-Opt-CtrlSearchNewTab").disabled = disabled;
+	},
+
 	UpdateSearchHistoryStatus: function() {
 		var disabled = ! document.getElementById("GBL-Opt-MaintainHistory").checked;
 
@@ -46,6 +57,20 @@ var objGooglebarLitePrefs = {
 		document.getElementById("GBL-Opt-AutoSearch").disabled = disabled;
 		document.getElementById("GBL-Opt-PromptToClearHistory").disabled = disabled;
 		document.getElementById("GBL-Opt-IgnoreDictionary").disabled = disabled;
+	},
+
+	UpdateShiftSearch: function() {
+		var disabled = ! document.getElementById("GBL-Opt-ShiftSearchEnabled").checked;
+
+		document.getElementById("GBL-Opt-ShiftSearch").disabled = disabled;
+		document.getElementById("GBL-Opt-ShiftSearchNewTab").disabled = disabled;
+	},
+
+	UpdateShiftCtrlSearch: function() {
+		var disabled = ! document.getElementById("GBL-Opt-ShiftCtrlSearchEnabled").checked;
+
+		document.getElementById("GBL-Opt-ShiftCtrlSearch").disabled = disabled;
+		document.getElementById("GBL-Opt-ShiftCtrlSearchNewTab").disabled = disabled;
 	},
 	
 	UpdateShowContextMenuStatus: function() {

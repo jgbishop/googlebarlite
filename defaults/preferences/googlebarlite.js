@@ -45,9 +45,15 @@ pref("extensions.googlebarlite.shortcut_ctrl", true);
 pref("extensions.googlebarlite.shortcut_alt", false);
 pref("extensions.googlebarlite.shortcut_shift", true);
 pref("extensions.googlebarlite.focus_key", "O");
+pref("extensions.googlebarlite.shift_search_enabled", true);
 pref("extensions.googlebarlite.shift_search", "site");
+pref("extensions.googlebarlite.shift_search_new_tab", false);
+pref("extensions.googlebarlite.ctrl_search_enabled", true);
 pref("extensions.googlebarlite.ctrl_search", "images");
+pref("extensions.googlebarlite.ctrl_search_new_tab", false);
+pref("extensions.googlebarlite.shift_ctrl_search_enabled", true);
 pref("extensions.googlebarlite.shift_ctrl_search", "groups");
+pref("extensions.googlebarlite.shift_ctrl_search_new_tab", false);
 
 // Context Menu
 pref("extensions.googlebarlite.context.showcontext", true);

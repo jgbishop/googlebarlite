@@ -59,9 +59,15 @@ GooglebarLiteCommon.Data = {
 		ShortcutAlt: { name: "shortcut_alt", value: false },
 		ShortcutShift: { name: "shortcut_shift", value: false },
 		FocusKey: { name: "focus_key", value: "", type: "string" },
+		ShiftSearchEnabled: { name: "shift_search_enabled", value: true },
 		ShiftSearch: { name: "shift_search", value: "", type: "string" },
+		ShiftSearchNewTab: { name: "shift_search_new_tab", value: false },
+		CtrlSearchEnabled: { name: "ctrl_search_enabled", value: true },
 		CtrlSearch: { name: "ctrl_search", value: "", type: "string" },
+		CtrlSearchNewTab: { name: "ctrl_search_new_tab", value: false },
+		ShiftCtrlSearchEnabled: { name: "shift_ctrl_search_enabled", value: true },
 		ShiftCtrlSearch: { name: "shift_ctrl_search", value: "", type: "string" },
+		ShiftCtrlSearchNewTab: { name: "shift_ctrl_search_new_tab", value: false },
 
 		// Context menu
 		CM_ShowContext: { name: "context.showcontext", value: false },

@@ -748,26 +748,34 @@ var objGooglebarLite = {
 	
 	GetSearchType: function(event)
 	{
-		// Return the default value if the event is null
+		var stype = "web";
+		var tab = false;
+
+		// Return the default values if the event is null
 		if(!event)
-			return "web";
-		
-		if(event.shiftKey)
+			return { searchType: stype, newTab: tab };
+
+		if(event.shiftKey && event.ctrlKey && GooglebarLiteCommon.Data.Prefs.ShiftCtrlSearchEnabled.value == true)
 		{
-			if(event.ctrlKey)
-				return GooglebarLiteCommon.Data.Prefs.ShiftCtrlSearch.value;
-			else
-				return GooglebarLiteCommon.Data.Prefs.ShiftSearch.value;
+			stype = GooglebarLiteCommon.Data.Prefs.ShiftCtrlSearch.value;
+			tab = GooglebarLiteCommon.Data.Prefs.ShiftCtrlSearchNewTab.value;
 		}
-	
-		if(event.ctrlKey)
-			return GooglebarLiteCommon.Data.Prefs.CtrlSearch.value;
-	
+		else if(event.shiftKey && GooglebarLiteCommon.Data.Prefs.ShiftSearchEnabled.value == true)
+		{
+			stype = GooglebarLiteCommon.Data.Prefs.ShiftSearch.value;
+			tab = GooglebarLiteCommon.Data.Prefs.ShiftSearchNewTab.value;
+		}
+		else if(event.ctrlKey && GooglebarLiteCommon.Data.Prefs.CtrlSearchEnabled.value == true)
+		{
+			stype = GooglebarLiteCommon.Data.Prefs.CtrlSearch.value;
+			tab = GooglebarLiteCommon.Data.Prefs.CtrlSearchNewTab.value;
+		}
+		
 		// Are we remembering the combined search type? If so, return that value
 		if(GooglebarLiteCommon.Data.Prefs.RememberCombined.value == true)
-			return document.getElementById("GBL-TB-Combined").getAttribute("searchType");
+			stype = document.getElementById("GBL-TB-Combined").getAttribute("searchType");
 	
-		return "web"; // Return the default if no search type modifiers were caught.
+		return { searchType: stype, newTab: tab };
 	},
 
 	GetTextContent: function(node)
@@ -1037,12 +1045,16 @@ var objGooglebarLite = {
 		// Step 1: Get the search terms
 		var searchTerms = this.GetSearchTerms();
 	
-		// Step 2: Check the search type (if necessary)
+		// Step 2: Check the search type and any associated new tab options
+		var opts = this.GetSearchType(event);
+
 		if(searchType == "")
-			searchType = this.GetSearchType(event);
-	
-		// Step 3: Determine if we need to open search results in a new tab
-		var useTab = this.OpenInTab(event, false);
+			searchType = opts.searchType;
+
+		// Step 3: If the new tab option isn't already set, check the other triggers
+		var useTab = opts.newTab;
+		if(useTab == false)
+			useTab = this.OpenInTab(event, false);
 		
 		// Step 4: Perform the search
 		this.Search(searchTerms, searchType, useTab);
@@ -1435,16 +1447,18 @@ var objGooglebarLite = {
 	{
 		// Step 1: Get the search terms
 		var terms = this.GetSearchTerms();
+
+		// Step 2: Get search type and new tab settings
+		var opts = this.GetSearchType(aTriggeringEvent);
 	
-		// Step 2: Do we need to open a new tab?
-		var useTab = this.OpenInTab(aTriggeringEvent, true);
-	
-		// Step 3: Get the search type
-		var searchType = this.GetSearchType(aTriggeringEvent);
+		// Step 3: Do we need to open a new tab?
+		var useTab = opts.newTab;
+		if(useTab == false)
+			useTab = this.OpenInTab(aTriggeringEvent, true);
 	
 		// Step 4: Search
 		if(aTriggeringEvent != null || (aTriggeringEvent == null && GooglebarLiteCommon.Data.Prefs.AutoSearch.value))
-			this.Search(terms, searchType, useTab);
+			this.Search(terms, opts.searchType, useTab);
 	},
 
 	SearchContextOnPopupShowing: function(e)

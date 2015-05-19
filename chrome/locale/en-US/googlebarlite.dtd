@@ -123,6 +123,7 @@
 <!ENTITY gblite.options.label.shiftenter "Shift + Enter performs a">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter performs a">
 <!ENTITY gblite.options.label.shiftctrlenter "Ctrl + Shift + Enter performs a">
+<!ENTITY gblite.options.label.newtab "Open new tab">
 <!ENTITY gblite.options.label.searchbuttons "Search Buttons">
 <!ENTITY gblite.options.label.commonbuttons "Common Toolbar Buttons and Settings">
 <!ENTITY gblite.options.toolbarsettings "Toolbar Settings">
