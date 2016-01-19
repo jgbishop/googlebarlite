@@ -82,8 +82,8 @@
 				<listcell label="&gblite.tx.ruru;" />
 			</listitem>
 			<listitem>
-				<listcell label="sk-SK" />
-				<listcell label="&gblite.tx.sksk;" />
+				<listcell label="tr" />
+				<listcell label="&gblite.tx.trtr;;" />
 			</listitem>
 			<listitem>
 				<listcell label="uk-UA" />

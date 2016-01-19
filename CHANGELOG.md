@@ -1,5 +1,8 @@
 ## Googlebar Lite Revision History
 
+### 5.1.1
+* Fixed a mangled entity in the about dialog XUL
+
 ### 5.1.0
 * Search words are now grouped together under one toolbar button when Googlebar Lite is placed on the nav-bar
 * Googlebar Lite options can now be exported and imported, making it much easier to migrate options from one install to another
