@@ -1,6 +1,6 @@
 ## Googlebar Lite Revision History
 
-### 5.0.7
+### 5.1.0
 * Search words are now grouped together under one toolbar button when Googlebar Lite is placed on the nav-bar
 * Googlebar Lite options can now be exported and imported, making it much easier to migrate options from one install to another
 * Keyboard search modifiers (Ctrl+Enter, Shift+Enter, etc.) can now be toggled on or off
