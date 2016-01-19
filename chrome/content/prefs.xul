@@ -9,7 +9,7 @@
 		onload="objGooglebarLitePrefs.InitUI();"
 		ondialogaccept="return objGooglebarLitePrefs.DoValidate(event);">
 	
-	<script type="application/x-javascript" src="chrome://googlebarlite/content/prefs.js"/>
+	<script type="application/javascript" src="chrome://googlebarlite/content/prefs.js"/>
 	
 	<prefpane id="GBL-PrefPane-General" label="&gblite.options.tab.general;">
 		<preferences>

@@ -7,7 +7,7 @@
 
 <overlay id="GBL-Overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
-<script type="application/x-javascript" src="chrome://googlebarlite/content/googlebarlite.js"/>
+<script type="application/javascript" src="chrome://googlebarlite/content/googlebarlite.js"/>
 
 <stringbundleset id="stringbundleset">
 	<stringbundle id="GBL-String-Bundle" src="chrome://googlebarlite/locale/googlebarlite.properties" />
