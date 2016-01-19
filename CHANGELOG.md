@@ -7,7 +7,8 @@
 * Keyboard search modifiers (Ctrl+Enter, Shift+Enter, etc.) now have the option of opening in a new tab
 * The basic web search type is now available for each keyboard search modifier
 * The "classic Maps" option has been renamed and now toggles "Lite mode" when performing Google Maps searches
-* Bumped the supported minVersion to 31.0
+* Bumped the supported minVersion to 38.0
+* Simplified the extension's about dialog
 * Removed a few deprecated code paths
 * Removed four locales due to their being very out of date: el-GR, hr-HR, pt-BR, and sk-SK
 * Minor locale updates
