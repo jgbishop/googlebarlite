@@ -50,10 +50,6 @@
 				<listcell label="&gblite.tx.dede;" />
 			</listitem>
 			<listitem>
-				<listcell label="el-GR" />
-				<listcell label="&gblite.tx.elgr;" />
-			</listitem>
-			<listitem>
 				<listcell label="es-ES" />
 				<listcell label="&gblite.tx.eses;" />
 			</listitem>
@@ -64,10 +60,6 @@
 			<listitem>
 				<listcell label="fr" />
 				<listcell label="&gblite.tx.frfr;" />
-			</listitem>
-			<listitem>
-				<listcell label="hr-HR" />
-				<listcell label="&gblite.tx.hrhr;" />
 			</listitem>
 			<listitem>
 				<listcell label="it" />
@@ -86,20 +78,12 @@
 				<listcell label="&gblite.tx.plpl;" />
 			</listitem>
 			<listitem>
-				<listcell label="pt-BR" />
-				<listcell label="&gblite.tx.ptbr;" />
-			</listitem>
-			<listitem>
 				<listcell label="ru-RU" />
 				<listcell label="&gblite.tx.ruru;" />
 			</listitem>
 			<listitem>
 				<listcell label="sk-SK" />
 				<listcell label="&gblite.tx.sksk;" />
-			</listitem>
-			<listitem>
-				<listcell label="tr" />
-				<listcell label="&gblite.tx.trtr;" />
 			</listitem>
 			<listitem>
 				<listcell label="uk-UA" />
