@@ -122,6 +122,7 @@
 <!ENTITY gblite.options.label.shiftenter "Shift + Enter">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter">
 <!ENTITY gblite.options.label.shiftctrlenter "Ctrl + Shift + Enter">
+<!ENTITY gblite.options.label.newtab "Open new tab">
 <!ENTITY gblite.options.label.searchbuttons "Search Buttons">
 <!ENTITY gblite.options.label.commonbuttons "Další tlačítka a nastavení">
 <!ENTITY gblite.options.toolbarsettings "Nastavení toolbaru">

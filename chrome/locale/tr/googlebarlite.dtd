@@ -122,6 +122,7 @@
 <!ENTITY gblite.options.label.shiftenter "Shift + Enter şunu yapar:">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter şunu yapar:">
 <!ENTITY gblite.options.label.shiftctrlenter "Shift + Ctrl + Enter şunu yapar:">
+<!ENTITY gblite.options.label.newtab "Open new tab">
 <!ENTITY gblite.options.label.searchbuttons "Search Buttons">
 <!ENTITY gblite.options.label.commonbuttons "Genel Ayarlar/ Sık Kullanılan Düğmeler">
 <!ENTITY gblite.options.toolbarsettings "Toolbar Settings">

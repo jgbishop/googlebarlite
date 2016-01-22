@@ -122,6 +122,7 @@
 <!ENTITY gblite.options.label.shiftenter "Shift + Enter fa">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter fa">
 <!ENTITY gblite.options.label.shiftctrlenter "Shift + Ctrl + Enter fa">
+<!ENTITY gblite.options.label.newtab "Open new tab">
 <!ENTITY gblite.options.label.searchbuttons "Botons de Cerca">
 <!ENTITY gblite.options.label.commonbuttons "Ajustaments Generals / Buttons comuns">
 <!ENTITY gblite.options.toolbarsettings "Toolbar Settings">

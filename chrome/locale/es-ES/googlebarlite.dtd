@@ -122,6 +122,7 @@
 <!ENTITY gblite.options.label.shiftenter "Mayús. + Enter hace">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter hace">
 <!ENTITY gblite.options.label.shiftctrlenter "Mayús. + Ctrl + Enter hace">
+<!ENTITY gblite.options.label.newtab "Open new tab">
 <!ENTITY gblite.options.label.searchbuttons "Botones de búsqueda">
 <!ENTITY gblite.options.label.commonbuttons "Opciones generales / Botones comunes">
 <!ENTITY gblite.options.toolbarsettings "Opciones de la barra de herramientas">

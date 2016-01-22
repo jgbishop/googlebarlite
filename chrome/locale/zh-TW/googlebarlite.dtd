@@ -122,6 +122,7 @@
 <!ENTITY gblite.options.label.shiftenter "Shift + Enter 執行">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter 執行">
 <!ENTITY gblite.options.label.shiftctrlenter "Shift + Ctrl + Enter 執行">
+<!ENTITY gblite.options.label.newtab "Open new tab">
 <!ENTITY gblite.options.label.searchbuttons "搜尋按鈕">
 <!ENTITY gblite.options.label.commonbuttons "一般設定 / 普通按鈕">
 <!ENTITY gblite.options.toolbarsettings "Toolbar Settings">

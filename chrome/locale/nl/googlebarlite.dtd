@@ -122,6 +122,7 @@
 <!ENTITY gblite.options.label.shiftenter "Shift + Enter zoekt in:">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter zoekt in:">
 <!ENTITY gblite.options.label.shiftctrlenter "Ctrl + Shift + Enter zoekt in:">
+<!ENTITY gblite.options.label.newtab "Open new tab">
 <!ENTITY gblite.options.label.searchbuttons "Zoekknoppen">
 <!ENTITY gblite.options.label.commonbuttons "Algemene werkbalkknoppen en instellingen">
 <!ENTITY gblite.options.toolbarsettings "Werbalkinstellingen">

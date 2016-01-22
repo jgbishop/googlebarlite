@@ -122,6 +122,7 @@
 <!ENTITY gblite.options.label.shiftenter "Skift + Enter udfører en">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter udfører en">
 <!ENTITY gblite.options.label.shiftctrlenter "Ctrl + Skift + Enter udfører en">
+<!ENTITY gblite.options.label.newtab "Open new tab">
 <!ENTITY gblite.options.label.searchbuttons "Søgeknapper">
 <!ENTITY gblite.options.label.commonbuttons "Generelle værktøjslinjeknapper og indstillinger">
 <!ENTITY gblite.options.toolbarsettings "Indstillinger af værktøjslinje">

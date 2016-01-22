@@ -122,6 +122,7 @@
 <!ENTITY gblite.options.label.shiftenter "Umschalt + Eingabe startet eine">
 <!ENTITY gblite.options.label.ctrlenter "Strg + Eingabe startet eine">
 <!ENTITY gblite.options.label.shiftctrlenter "Umschalt + Strg + Eingabe startet eine">
+<!ENTITY gblite.options.label.newtab "Open new tab">
 <!ENTITY gblite.options.label.searchbuttons "Such-Anbieter">
 <!ENTITY gblite.options.label.commonbuttons "Allgemeine Schaltflächen-Einstellungen">
 <!ENTITY gblite.options.toolbarsettings "Symbolleisten-Einstellungen">

@@ -122,6 +122,7 @@
 <!ENTITY gblite.options.label.shiftenter "Shift + Enter виконує">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter виконує">
 <!ENTITY gblite.options.label.shiftctrlenter "Ctrl + Shift + Enter виконує">
+<!ENTITY gblite.options.label.newtab "Open new tab">
 <!ENTITY gblite.options.label.searchbuttons "Кнопки пошуку">
 <!ENTITY gblite.options.label.commonbuttons "Основні кнопки та налаштування панелі інструментів">
 <!ENTITY gblite.options.toolbarsettings "Налаштування панелі інструментів">

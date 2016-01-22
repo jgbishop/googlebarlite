@@ -122,6 +122,7 @@
 <!ENTITY gblite.options.label.shiftenter "по нажатию Shift + Enter запускать">
 <!ENTITY gblite.options.label.ctrlenter "по нажатию Ctrl + Enter запускать">
 <!ENTITY gblite.options.label.shiftctrlenter "по нажатию Shift + Ctrl + Enter запускать">
+<!ENTITY gblite.options.label.newtab "Open new tab">
 <!ENTITY gblite.options.label.searchbuttons "Search Buttons">
 <!ENTITY gblite.options.label.commonbuttons "Основные кнопки и настройки">
 <!ENTITY gblite.options.toolbarsettings "Toolbar Settings">

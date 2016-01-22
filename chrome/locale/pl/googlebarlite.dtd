@@ -122,6 +122,7 @@
 <!ENTITY gblite.options.label.shiftenter "Shift + Enter wywołuje">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter wywołuje">
 <!ENTITY gblite.options.label.shiftctrlenter "Ctrl + Shift + Enter wywołuje">
+<!ENTITY gblite.options.label.newtab "Open new tab">
 <!ENTITY gblite.options.label.searchbuttons "Przyciski wyszukiwania">
 <!ENTITY gblite.options.label.commonbuttons "Wyświetlaj na pasku narzędzi i w ustawieniach przyciski:">
 <!ENTITY gblite.options.toolbarsettings "Ustawienia paska narzędzi">

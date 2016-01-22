@@ -122,6 +122,7 @@
 <!ENTITY gblite.options.label.shiftenter "Maj + Entrée produisent une">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Entrée produisent une">
 <!ENTITY gblite.options.label.shiftctrlenter "Maj + Ctrl + Entrée produisent une">
+<!ENTITY gblite.options.label.newtab "Open new tab">
 <!ENTITY gblite.options.label.searchbuttons "Boutons de recherche">
 <!ENTITY gblite.options.label.commonbuttons "Paramètres généraux / Boutons communs">
 <!ENTITY gblite.options.toolbarsettings "Paramètres de la barre">

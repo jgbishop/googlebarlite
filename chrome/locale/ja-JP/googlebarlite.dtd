@@ -122,6 +122,7 @@
 <!ENTITY gblite.options.label.shiftenter "Shift + Enter">
 <!ENTITY gblite.options.label.ctrlenter "Ctrl + Enter">
 <!ENTITY gblite.options.label.shiftctrlenter "Shift + Ctrl + Enter">
+<!ENTITY gblite.options.label.newtab "Open new tab">
 <!ENTITY gblite.options.label.searchbuttons "検索ボタン">
 <!ENTITY gblite.options.label.commonbuttons "一般設定 / 主要ボタン">
 <!ENTITY gblite.options.toolbarsettings "ツールバーの設定">
