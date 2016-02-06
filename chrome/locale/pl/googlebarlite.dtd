@@ -132,6 +132,7 @@
 <!ENTITY gblite.options.remembercombined "Zapamiętuj ostatni typ menu wyszukiwania">
 <!ENTITY gblite.options.searchondragdrop "Automatycznie wyszukuj po przeciągnięciu i upuszczeniu">
 <!ENTITY gblite.options.locksearchbox "Zablokuj szerokość paska wyszukiwania">
+<!ENTITY gblite.options.combinesearchwords "Combine search word buttons when Googlebar Lite is on nav-bar">
 <!ENTITY gblite.options.disableautocorrect "Wyłącz automatyczną korektę wyszukiwania">
 <!ENTITY gblite.options.forceclassicmaps "Narzuć wyszukiwaniu w Mapach Google używanie interfejsu klasycznego">
 <!ENTITY gblite.options.warnonformhistory "Powiadamiaj, gdy w Firefoksie jest wyłączona historia">

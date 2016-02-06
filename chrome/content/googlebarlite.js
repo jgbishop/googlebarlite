@@ -118,6 +118,19 @@ var objGooglebarLite = {
 			{
 				objGooglebarLite.ValidateSearchHistorySetting();
 			}
+			else if(data == GooglebarLiteCommon.Data.Prefs.CombineSearchWords.name)
+			{
+				if(prefValue == false)
+				{
+					document.getElementById("GBL-Overflow-Button").collapsed = true;
+				}
+				else
+				{
+					document.getElementById("GBL-Overflow-Button").collapsed = false;
+				}
+
+				objGooglebarLite.Resize(null); // Fake a resize to toggle the overflow chevron
+			}
 		}
 	},
 	
@@ -1253,7 +1266,7 @@ var objGooglebarLite = {
 			window.addEventListener('focus', objGooglebarLite.Resize, false);
 	
 		// If we're on the nav-bar, it's a special case; show the chevron, hide all buttons
-		if(objGooglebarLite.ParentToolbar == "nav-bar")
+		if(objGooglebarLite.ParentToolbar == "nav-bar" && GooglebarLiteCommon.Data.Prefs.CombineSearchWords.value == true)
 		{
 			chevron.collapsed = false;
 			for(var i=0; i<buttons.childNodes.length; i++)

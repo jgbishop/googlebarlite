@@ -132,6 +132,7 @@
 <!ENTITY gblite.options.remembercombined "记住最后一次组合菜单搜索类型">
 <!ENTITY gblite.options.searchondragdrop "拖拽自动搜索">
 <!ENTITY gblite.options.locksearchbox "Lock search box width">
+<!ENTITY gblite.options.combinesearchwords "Combine search word buttons when Googlebar Lite is on nav-bar">
 <!ENTITY gblite.options.disableautocorrect "Disable Google search autocorrect">
 <!ENTITY gblite.options.forceclassicmaps "Force Google Maps searches to use the classic interface">
 <!ENTITY gblite.options.warnonformhistory "在 Firefox [选项] 中禁用 [历史] 时提示我">

@@ -133,6 +133,7 @@
 <!ENTITY gblite.options.remembercombined "Remember last combined-menu search type">
 <!ENTITY gblite.options.searchondragdrop "Automatically search on drag and drop">
 <!ENTITY gblite.options.locksearchbox "Lock search box width">
+<!ENTITY gblite.options.combinesearchwords "Combine search word buttons when Googlebar Lite is on nav-bar">
 <!ENTITY gblite.options.disableautocorrect "Disable Google search autocorrect">
 <!ENTITY gblite.options.forceclassicmaps "Force Google Maps searches to use the Lite Mode interface">
 <!ENTITY gblite.options.warnonformhistory "Warn me when form history is disabled in Firefox">

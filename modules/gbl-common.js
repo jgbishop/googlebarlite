@@ -20,6 +20,7 @@ GooglebarLiteCommon.Data = {
 		SearchOnDragDrop: { name: "search_on_drag_drop", value: false },
 		DisableAutoCorrect: { name: "disable_auto_correct", value: false },
 		LockSearchBox: { name: "lock_search_box", value: false },
+		CombineSearchWords: { name: "combine_search_words", value: true },
 		ForceClassicMaps: { name: "force_classic_maps", value: false },
 
 		// Search history

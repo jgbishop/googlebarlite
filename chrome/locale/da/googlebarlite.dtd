@@ -132,6 +132,7 @@
 <!ENTITY gblite.options.remembercombined "Husk seneste søgetype i den kombinerede søgemenu">
 <!ENTITY gblite.options.searchondragdrop "Søg automatisk ved træk-og-slip">
 <!ENTITY gblite.options.locksearchbox "Lås bredden af søgeboksen">
+<!ENTITY gblite.options.combinesearchwords "Combine search word buttons when Googlebar Lite is on nav-bar">
 <!ENTITY gblite.options.disableautocorrect "Deaktiver Google-søgning autokorrektur">
 <!ENTITY gblite.options.forceclassicmaps "Tving Google Maps-søgninger til at bruge den klassiske brugerflade">
 <!ENTITY gblite.options.warnonformhistory "Advar mig, når formularhistorik er slået fra i Firefox">

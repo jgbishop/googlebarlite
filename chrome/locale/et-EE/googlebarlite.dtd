@@ -132,6 +132,7 @@
 <!ENTITY gblite.options.remembercombined "Jäta meelde viimane kombineeritud menüüga otsingutüüp">
 <!ENTITY gblite.options.searchondragdrop "Lohistamisel automaatne otsing">
 <!ENTITY gblite.options.locksearchbox "Lock search box width">
+<!ENTITY gblite.options.combinesearchwords "Combine search word buttons when Googlebar Lite is on nav-bar">
 <!ENTITY gblite.options.disableautocorrect "Disable Google search autocorrect">
 <!ENTITY gblite.options.forceclassicmaps "Force Google Maps searches to use the classic interface">
 <!ENTITY gblite.options.warnonformhistory "Hoiata, kui väljade ajalugu on Firefoxis keelatud">

@@ -132,6 +132,7 @@
 <!ENTITY gblite.options.remembercombined "Recordar el tipo de la última búsqueda del menú combinado">
 <!ENTITY gblite.options.searchondragdrop "Buscar automáticamente al arrastrar y soltar">
 <!ENTITY gblite.options.locksearchbox "Bloquear el ancho de la caja de búsqueda">
+<!ENTITY gblite.options.combinesearchwords "Combine search word buttons when Googlebar Lite is on nav-bar">
 <!ENTITY gblite.options.disableautocorrect "Desactivar la autocorrección en búsquedas de Google">
 <!ENTITY gblite.options.forceclassicmaps "Forzar que las búsquedas en Mapas de Google usen la interfaz clásica">
 <!ENTITY gblite.options.warnonformhistory "Avisarme si el historial de formularios está desactivado en Firefox">

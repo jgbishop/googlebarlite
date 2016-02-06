@@ -132,6 +132,7 @@
 <!ENTITY gblite.options.remembercombined "最後に使った検索メニューを記憶する">
 <!ENTITY gblite.options.searchondragdrop "ドラッグ&amp;ドロップで自動的に検索">
 <!ENTITY gblite.options.locksearchbox "検索ボックスの幅を固定する">
+<!ENTITY gblite.options.combinesearchwords "Combine search word buttons when Googlebar Lite is on nav-bar">
 <!ENTITY gblite.options.disableautocorrect "Google検索のオートコレクト機能を無効にする">
 <!ENTITY gblite.options.forceclassicmaps "Force Google Maps searches to use the classic interface">
 <!ENTITY gblite.options.warnonformhistory "Firefoxでフォームの入力履歴が無効になっている時は警告する">

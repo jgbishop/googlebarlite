@@ -19,6 +19,7 @@
 			<preference id="GBL-Pref-SearchDragDrop" name="extensions.googlebarlite.search_on_drag_drop" type="bool" />
 			<preference id="GBL-Pref-DisableAutoCorrect" name="extensions.googlebarlite.disable_auto_correct" type="bool" />
 			<preference id="GBL-Pref-LockSearchBox" name="extensions.googlebarlite.lock_search_box" type="bool" />
+			<preference id="GBL-Pref-CombineSearchWords" name="extensions.googlebarlite.combine_search_words" type="bool" />
 			<preference id="GBL-Pref-ForceClassicMaps" name="extensions.googlebarlite.force_classic_maps" type="bool" />
 			<preference id="GBL-Pref-SiteToUse" name="extensions.googlebarlite.site_to_use" type="wstring" />
 		</preferences>
@@ -30,6 +31,7 @@
 			<checkbox id="GBL-Opt-RememberCombined" label="&gblite.options.remembercombined;" preference="GBL-Pref-RememberCombined" />
 			<checkbox id="GBL-Opt-SearchOnDragDrop" label="&gblite.options.searchondragdrop;" preference="GBL-Pref-SearchDragDrop" />
 			<checkbox id="GBL-Opt-LockSearchBox" label="&gblite.options.locksearchbox;" preference="GBL-Pref-LockSearchBox" />
+			<checkbox id="GBL-Opt-CombineSearchWords" label="&gblite.options.combinesearchwords;" preference="GBL-Pref-CombineSearchWords" />
 		</groupbox>
 
 		<groupbox orient="vertical">

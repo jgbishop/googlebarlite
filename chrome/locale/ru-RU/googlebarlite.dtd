@@ -132,6 +132,7 @@
 <!ENTITY gblite.options.remembercombined "Запомнить вариант последнего поиска">
 <!ENTITY gblite.options.searchondragdrop "Начинать поиск сразу после переноса контекста">
 <!ENTITY gblite.options.locksearchbox "Lock search box width">
+<!ENTITY gblite.options.combinesearchwords "Combine search word buttons when Googlebar Lite is on nav-bar">
 <!ENTITY gblite.options.disableautocorrect "Disable Google search autocorrect">
 <!ENTITY gblite.options.forceclassicmaps "Force Google Maps searches to use the classic interface">
 <!ENTITY gblite.options.warnonformhistory "Предупредить об отключении в Firefox сохранения данных форм">

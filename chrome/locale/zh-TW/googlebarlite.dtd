@@ -132,6 +132,7 @@
 <!ENTITY gblite.options.remembercombined "記住最後一次從下拉式選單按鈕所選取的搜尋類型">
 <!ENTITY gblite.options.searchondragdrop "拖放字詞時自動搜尋">
 <!ENTITY gblite.options.locksearchbox "Lock search box width">
+<!ENTITY gblite.options.combinesearchwords "Combine search word buttons when Googlebar Lite is on nav-bar">
 <!ENTITY gblite.options.disableautocorrect "停用Google的搜尋自動更正">
 <!ENTITY gblite.options.forceclassicmaps "Force Google Maps searches to use the classic interface">
 <!ENTITY gblite.options.warnonformhistory "當 Firefox 內的表單記錄被停用時，請提醒我">

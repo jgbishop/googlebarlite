@@ -132,6 +132,7 @@
 <!ENTITY gblite.options.remembercombined "Het laatste gecombineerd-menu-zoektype onthouden">
 <!ENTITY gblite.options.searchondragdrop "Automatisch zoeken na slepen/plakken">
 <!ENTITY gblite.options.locksearchbox "Breedte zoekveld vastzetten">
+<!ENTITY gblite.options.combinesearchwords "Combine search word buttons when Googlebar Lite is on nav-bar">
 <!ENTITY gblite.options.disableautocorrect "Automatische correctie Google-zoeken uitschakelen">
 <!ENTITY gblite.options.forceclassicmaps "Bij zoekopdrachten Google Maps klassieke interface gebruiken">
 <!ENTITY gblite.options.warnonformhistory "Waarschuwen wanneer de formuliergeschiedenis in Firefox is uitgeschakeld">
