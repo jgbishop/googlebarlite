@@ -16,7 +16,7 @@
 <vbox>
 	<vbox align="center" flex="1">
 		<label id="GBL-About-Name" crop="right" value="&gblite.name;" />
-		<label id="GBL-About-Version" crop="right" value="Version 5.1.1" class="strong" />
+		<label id="GBL-About-Version" crop="right" value="Version 5.1.2" class="strong" />
 		<label value="&gblite.about.createdby; Jonah Bishop" class="strong" />
 	</vbox>
 	

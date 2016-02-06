@@ -1,6 +1,6 @@
 var EXPORTED_SYMBOLS = ["GooglebarLiteCommon"];
 
-Components.utils.import('resource://gre/modules/devtools/Console.jsm');
+// Components.utils.import('resource://gre/modules/Console.jsm');
 Components.utils.import('resource://gre/modules/FileUtils.jsm');
 Components.utils.import('resource://gre/modules/NetUtil.jsm');
 
@@ -87,15 +87,15 @@ GooglebarLiteCommon.Data = {
 };
 
 GooglebarLiteCommon.Func = {
-	Log: function(aMessage)
-	{
-		console.log('Googlebar_Lite: ' + aMessage);
-	},
+	// Log: function(aMessage)
+	// {
+	// 	console.log('Googlebar_Lite: ' + aMessage);
+	// },
 	
-	LogRaw: function(data)
-	{
-		console.log(data);
-	},
+	// LogRaw: function(data)
+	// {
+	// 	console.log(data);
+	// },
 
 	LoadOptions: function(path, isLoadedCallback)
 	{

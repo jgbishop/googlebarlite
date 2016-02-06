@@ -16,7 +16,7 @@ const HTTP_SERVICE_UNAVAILABLE   = 503;
 
 Cu.import('resource://gre/modules/XPCOMUtils.jsm');
 Cu.import('resource://gre/modules/Services.jsm');
-Cu.import('resource://gre/modules/devtools/Console.jsm');
+// Cu.import('resource://gre/modules/Console.jsm');
 Cu.import('resource://googlebarlite/gbl-common.js');
 
 const CLASS_ID = Components.ID('7716e5e0-c9c0-11e3-9c1a-0800200c9a66');

@@ -1,5 +1,9 @@
 ## Googlebar Lite Revision History
 
+### 5.1.2
+* Fixed a missing entity in all non-English locales
+* Commented out a couple of unused devtool JavaScript module paths preventing compatibility with Firefox 44
+
 ### 5.1.1
 * Fixed a mangled entity in the about dialog XUL
 
