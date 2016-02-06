@@ -1,5 +1,8 @@
 ## Googlebar Lite Revision History
 
+### 5.1.3
+* Added a preference for collapsing search words when Googlebar Lite is placed on the nav-bar toolbar (enabled by default). Disable this preference to get the old search word button behavior.
+
 ### 5.1.2
 * Fixed a missing entity in all non-English locales
 * Commented out a couple of unused devtool JavaScript module paths preventing compatibility with Firefox 44
